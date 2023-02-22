@@ -1,8 +1,8 @@
 from web3 import Web3
-
+from web3.middleware import geth_poa_middleware
 # 连接到 Goerli 网络
 w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/69b30b8f90e344ecbfe7509a436b8784'))
-
+w3.middleware_onion.inject(geth_poa_middleware,layer=0)
 # 获取最新区块号
 latest_block_number = w3.eth.blockNumber
 
