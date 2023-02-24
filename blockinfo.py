@@ -6,8 +6,8 @@ w3.middleware_onion.inject(geth_poa_middleware,layer=0)
 
 
 # 设置起始区块和结束区块
-start_block = 5539577
-end_block = 5539578
+start_block = 5539578
+end_block = 5539678
 
 # 定义智能合约 ABI 获取函数
 def get_contract_abi(contract_address):

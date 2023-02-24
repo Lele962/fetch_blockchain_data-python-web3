@@ -8,7 +8,7 @@ w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/69b30b8f90e344ecbfe7509
 w3.middleware_onion.inject(geth_poa_middleware,layer=0)
 # 获取指定区块的信息
 start_block = 5539575
-end_block = start_block+10
+end_block = start_block+1000
 
 # 定义智能合约 ABI 获取函数
 def get_contract_abi(contract_address):
