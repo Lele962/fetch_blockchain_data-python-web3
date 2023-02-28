@@ -1,63 +1,69 @@
-from web3 import Web3
-from web3.middleware import geth_poa_middleware
-from web3.exceptions import InvalidAddress
+# 导入所需的模块
 import requests
-from lxml import etree
-# 连接到 Goerli 网络
-w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/69b30b8f90e344ecbfe7509a436b8784'))
-w3.middleware_onion.inject(geth_poa_middleware,layer=0)
-# 获取指定区块的信息
-start_block = 5539575
-end_block = start_block+1000
+from bs4 import BeautifulSoup
+import json
 
-# 定义智能合约 ABI 获取函数
-def get_contract_abi(contract_address):
-    try:
-        contract_abi = w3.eth.contract(address=contract_address).abi
-    except InvalidAddress:
-        contract_abi = None
-    return contract_abi
+# 定义一个函数来爬取一页已验证合约
+def scrape_one_page(page):
+  # 构造请求的url
+  url = f'https://etherscan.io/contractsVerified/{page}'
+  # 发送get请求并获取响应
+  response = requests.get(url)
+  # 加载响应的html内容
+  soup = BeautifulSoup(response.text, 'html.parser')
+  # 定义一个列表来存储爬取到的信息
+  contracts = []
+  # 遍历表格中的每一行
+  for row in soup.find('table').find('tbody').find_all('tr'):
+    # 获取合约地址、名称、余额、交易数和编译器版本等信息
+    address = row.find('td', {'class': 'address'}).text.strip()
+    name = row.find('td', {'class': 'name'}).text.strip()
+    balance = row.find('td', {'class': 'balance'}).text.strip()
+    txns = row.find('td', {'class': 'txns'}).text.strip()
+    compiler = row.find('td', {'class': 'compiler'}).text.strip()
+    # 将信息存入列表中
+    contracts.append({'address': address, 'name': name, 'balance': balance, 'txns': txns, 'compiler': compiler})
+  # 返回列表
+  return contracts
 
-# 定义获取合约函数签名对应的 ABI 函数
-def get_function_abi(contract_address, function_signature):
-    contract_abi = get_contract_abi(contract_address)
-    if contract_abi is not None:
-        contract_instance = w3.eth.contract(address=contract_address, abi=contract_abi)
-        function_abi = next((x for x in contract_instance.abi if x['type'] == 'function' and function_signature in w3.sha3(text=x['name'] + '(' + ','.join([y['type'] for y in x['inputs']]) + ')').hex()), None)
-    else:
-        function_abi = None
-    return function_abi
+# 定义一个函数来爬取所有已验证合约
+def scrape_all_pages():
+  # 定义一个变量来存储当前页码，默认为1
+   page = 1 
+   # 定义一个变量来存储总页数，默认为0 
+   total_pages=0 
+   # 定义一个列表来存储所有爬取到的信息 
+   all_contracts=[] 
+  
+   while True: 
+     try: 
+       # print(f'正在爬取第{page}页...') 
+       # 调用函数爬取一页已验证合约，并将结果添加到列表中 
+       contracts=scrape_one_page(page) 
+       all_contracts.extend(contracts) 
+       print(f'第{page}页爬取完成，共{len(contracts)}条数据。') 
+        
+       if total_pages==0: 
+         # 如果是第一次爬取，则获取总页数，并打印出来。 
+         total_pages=int(soup.find('ul', {'class':'pagination'}).find_all('li')[-1].find('a')['href'].split('/')[2]) 
+         print(f'总共有{total_pages}页。') 
+        
+       if page==total_pages: 
+         break 
+        
+       page+=1 
+    
+     except Exception as e: 
+       print(e) 
+  
+   print(f'所有页面爬取完成，共{len(all_contracts)}条数据。') 
+  
+   print(f'正在将数据写入文件...') 
+  
+   with open('./contracts.json','w') as f:  
+     json.dump(all_contracts,f) 
+  
+   print(f'数据写入完成。')
 
-# 将输出结果写入文件中
-with open('output.txt', 'w') as f:
-    # 遍历指定区块并获取智能合约信息
-    for block_number in range(start_block, end_block+1):
-        block = w3.eth.getBlock(block_number, True)
-        if block is not None and 'transactions' in block:
-            for tx in block['transactions']:
-                if tx['to'] is not None:
-                    # 获取智能合约地址和函数签名
-                    contract_address = tx['to']
-                    function_signature = tx['input'][:10]
-                    
-                    # 获取智能合约 ABI 和函数 ABI
-                    contract_abi = get_contract_abi(contract_address)
-                    function_abi = get_function_abi(contract_address, function_signature)
-                    
-                    # 如果智能合约 ABI 和函数 ABI 都存在，则输出相应信息
-                    if contract_abi is not None and function_abi is not None:
-                        output_str = f'Block: {block_number}\n' \
-                                     f'Contract Address: {contract_address}\n' \
-                                     f'Function Signature: {function_signature}\n' \
-                                     f'Function Name: {function_abi["name"]}\n' \
-                                     f'Function Inputs: {function_abi["inputs"]}\n' \
-                                     f'Function Outputs: {function_abi["outputs"]}\n' \
-                                     f'Transaction Hash: {tx["hash"].hex()}\n' \
-                                     f'Transaction Index: {tx["transactionIndex"]}\n' \
-                                     f'From Address: {tx["from"]}\n' \
-                                     f'Gas Price: {tx["gasPrice"]}\n' \
-                                     f'Gas Used: {tx["gas"]}\n' \
-                                     f'Value: {tx["value"]}\n' \
-                                     '---------------------------------------\n'
-                        f.write(output_str)
-                        print(output_str)
+# 调用函数开始爬虫程序。
+scrape_all_pages()
