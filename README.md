@@ -1,5 +1,11 @@
 # 功能说明如下
 
+```powershell
+python .\smartcontract_info.py
+```
+
+_that's all_ **Fetch the latest 500 smart contracts**
+
 This is a Python script that scrapes verified smart contract addresses from the etherscan.io website and then downloads the corresponding smart contract source code.
 
 The script first defines a function askURL() that loops through the first 20 pages of the "contractsVerified" section on etherscan.io and retrieves the HTML code of each page. Within each page, the script searches for links to smart contract addresses and stores them in a list called addresses. It then generates the full URL for each smart contract and requests the corresponding HTML page. The script searches the HTML code of each smart contract page for the smart contract source code and stores it in a string called result. Finally, it creates a directory called "output" and writes the smart contract source code to a separate file in this directory, with the filename corresponding to the smart contract address.
