@@ -13,7 +13,7 @@ end_block = 5539678
 def get_contract_abi(contract_address):
     try:
         contract_abi = w3.eth.contract(address=contract_address).abi
-    except InvalidAddress:
+    except ValueError:
         contract_abi = None
     return contract_abi
 
