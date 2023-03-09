@@ -21,10 +21,6 @@ def askURL():                                   # 获取当前页的智能合约
         html=response.read().decode("gbk")      # 以gbk的方式解码，添加在列表里
         Parse_html(html)                        # 在每一个合约中抓取源代码
 
-
-
-
-
 def Parse_html(html):
     bs = BeautifulSoup(html,"html.parser")      # 解析每个html文件，
     with open("html.txt", 'w',encoding='utf-8') as file_object:

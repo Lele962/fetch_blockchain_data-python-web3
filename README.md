@@ -1,5 +1,13 @@
 # 功能说明如下
 
+This is a Python script that scrapes verified smart contract addresses from the etherscan.io website and then downloads the corresponding smart contract source code.
+
+The script first defines a function askURL() that loops through the first 20 pages of the "contractsVerified" section on etherscan.io and retrieves the HTML code of each page. Within each page, the script searches for links to smart contract addresses and stores them in a list called addresses. It then generates the full URL for each smart contract and requests the corresponding HTML page. The script searches the HTML code of each smart contract page for the smart contract source code and stores it in a string called result. Finally, it creates a directory called "output" and writes the smart contract source code to a separate file in this directory, with the filename corresponding to the smart contract address.
+
+The Parse_html(html) function is called within askURL() to extract the smart contract addresses and download the source code. Within this function, BeautifulSoup is used to parse the HTML code of each page and locate the smart contract addresses and source code.
+
+Overall, this script demonstrates how web scraping can be used to retrieve information from websites and automate the process of downloading smart contract source code. However, it is important to note that web scraping can violate website terms of service and may be illegal in some jurisdictions. It is always important to consider ethical and legal implications when engaging in web scraping activities.
+
 在上面的代码中，我们首先使用`Web3.py`库连接到`Goerli`网络，并获取最新区块号。
 然后，我们使用一个循环遍历所有区块，获取当前区块的信息，并输出它的区块号、时间戳、哈希、父哈希和交易列表。
 接下来，我们遍历当前区块的所有交易，并获取每个交易的信息，并输出它的哈希、发送者、接收者和价值。
@@ -15,7 +23,7 @@
 
 解释一下新增的部分：
 
-首先，我们通过 ds.find_all('span', {'id': 'ContentPlaceHolder1_contractCodeDiv'})[0].text.strip() 获取合约名称，然后将其存储在 contract_name 变量中。
+首先，我们通过 `ds.find_all('span', {'id': 'ContentPlaceHolder1_contractCodeDiv'})[0].text.strip`() 获取合约名称，然后将其存储在 contract_name 变量中。
 
 接着，我们构造输出文件的名称，这里以合约名称作为文件名，并在 output/ 目录下创建该文件。
 
