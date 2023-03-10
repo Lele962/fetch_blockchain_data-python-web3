@@ -4,6 +4,8 @@
 python .\smartcontract_info.py
 ```
 
+可以直接运行
+
 _that's all_ **Fetch the latest 500 smart contracts**
 
 This is a Python script that scrapes verified smart contract addresses from the etherscan.io website and then downloads the corresponding smart contract source code.
