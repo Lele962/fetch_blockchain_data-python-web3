@@ -6,64 +6,66 @@ addresses = []
 names = []
 count = 0
 
-def askURL():                                   # 获取当前页的智能合约地址
-    head={                                      # 模拟浏览器头部信息
+def askURL():
+    head={
         "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
     }
-    #用户代理，告诉服务器机器类型。
-    baseURL="https://etherscan.io/contractsVerified/" # 获取智能合约地址页面 基地址
-    for i in range(1,21):
-        url=baseURL+str(i)                      #1-9页 加在基地址后面
+
+    baseURL="https://etherscan.io/contractsVerified/"
+    for i in range(4,21):
+        url=baseURL+str(i)
         print(url)
-        request = urllib.request.Request(url,headers=head,method="GET") # 封装访问信息
-        response = urllib.request.urlopen(request,timeout=30) # 必须设置
-        html=response.read().decode("gbk")      # 以gbk的方式解码，添加在列表里
-        Parse_html(html)                        # 在每一个合约中抓取源代码
+        request = urllib.request.Request(url,headers=head,method="GET")
+        response = urllib.request.urlopen(request,timeout=30)
+        html=response.read().decode("gbk")
+        Parse_html(html)
 
 def Parse_html(html):
-    bs = BeautifulSoup(html,"html.parser")      # 解析每个html文件，
+    bs = BeautifulSoup(html,"html.parser")
     with open("html.txt", 'w',encoding='utf-8') as file_object:
             file_object.write(str(bs))
-    # 模拟浏览器头部信息，向服务器发送消息
+    
     head = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
     }
 
-    for a in bs.find_all('a', href=True):
-        if 'address' in a['href']:
-            addresses.append(a['href'].split('/')[-1])
+    for tr in bs.find_all('tr'): # 修改遍历的标签为tr
+        name = tr.select('td:nth-of-type(2)') # 获取第二个td
+        if len(name) > 0:
+            names.append(name[0].text.strip()) # 添加td内文本到names列表中
+        for a in tr.find_all('a', href=True):
+            if 'address' in a['href']:
+                addresses.append(a['href'].split('/')[-1])
 
-    
-    str1="https://etherscan.io/address/"        # 合约页面基地址
-    str2="#code"                                # 合约页面地址的最后部分，合约地址在str1、str2中间
+    str1="https://etherscan.io/address/"
+    str2="#code"
 
-    for item in addresses:
-        
-        url=str1+item+str2                      # 拼全合约地址
-        url = url.split("#")[0]                 # 将字符串按照 "#" 分割，取第一个元素
-        request = urllib.request.Request(url, headers=head, method="GET") # 打包访问信息
+    for index, item in enumerate(addresses): # 添加索引值，以便获取对应的合约名
+        url=str1+item+str2
+        url = url.split("#")[0]
+        request = urllib.request.Request(url, headers=head, method="GET")
 
         print("contract:"+url)
-        response = urllib.request.urlopen(request,timeout=30) # 访问合约页面
-        contract = response.read().decode("utf-8")  # 解析合约页面
+        response = urllib.request.urlopen(request,timeout=30)
+        contract = response.read().decode("utf-8")
 
-        ds = BeautifulSoup(contract, "html.parser") # 用html解析打开
+        ds = BeautifulSoup(contract, "html.parser")
 
-        contract = ds.find_all(class_="js-sourcecopyarea editor") # 定位页面中的合约信息
+        contract = ds.find_all(class_="js-sourcecopyarea editor")
         if len(contract) > 0:
             text = contract[0].get_text()
-            result = text.strip() # 转成string返回给result  因为write只能写string
+            result = text.strip()
         else:
             result = ''
-        
 
         # 输出文件
         output_dir = 'output'
         if not os.path.exists(output_dir):
             os.mkdir(output_dir)
-        filename = item.split("#")[0] + '.sol'
+        filename = names[index] + '.sol' # 根据索引值获取对应的合约名
         filepath = os.path.join(output_dir, filename)
 
         with open(filepath, 'w', encoding='utf-8') as file_object:
             file_object.write(str(result))
+
 askURL()
