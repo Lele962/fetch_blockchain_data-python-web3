@@ -66,7 +66,6 @@ import "./manifold/ERC721Creator.sol";
 //                                                                                            //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 contract FUSED is ERC721Creator {
     constructor() ERC721Creator("Fused", "FUSED") {}
 }
