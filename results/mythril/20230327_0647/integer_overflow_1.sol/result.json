@@ -1,0 +1,72 @@
+{
+    "errors": [],
+    "fails": [],
+    "findings": [
+        {
+            "address": 229,
+            "contract": "Overflow",
+            "exploit": {
+                "initialState": {
+                    "accounts": {
+                        "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {
+                            "balance": "0x0",
+                            "code": "",
+                            "nonce": 0,
+                            "storage": "{}"
+                        },
+                        "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {
+                            "balance": "0x0",
+                            "code": "",
+                            "nonce": 0,
+                            "storage": "{}"
+                        }
+                    }
+                },
+                "steps": [
+                    {
+                        "address": "",
+                        "calldata": "",
+                        "input": "0x60806040526000805534801561001457600080fd5b50610147806100246000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631003e2d2146100515780633e127e7614610096575b600080fd5b34801561005d57600080fd5b5061007c600480360381019080803590602001909291905050506100db565b604051808215151515815260200191505060405180910390f35b3480156100a257600080fd5b506100c1600480360381019080803590602001909291905050506100f1565b604051808215151515815260200191505060405180910390f35b6000816000808282540192505081905550919050565b6000805460005483011015151561010757600080fd5b8160008082825401925050819055509190505600a165627a7a7230582065e725136d4ceebbe0976ae09fed9742eda6276150858e1e991aa9b264168f780029",
+                        "name": "unknown",
+                        "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe",
+                        "value": "0x0"
+                    },
+                    {
+                        "address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f",
+                        "calldata": "0x3e127e7688",
+                        "input": "0x3e127e7688",
+                        "name": "safe_add(uint256)",
+                        "origin": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                        "resolved_input": [
+                            61514547407324228818772085785865451047049679353621549645961841504203850121216
+                        ],
+                        "value": "0x0"
+                    },
+                    {
+                        "address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f",
+                        "calldata": "0x1003e2d278",
+                        "input": "0x1003e2d278",
+                        "name": "add(uint256)",
+                        "origin": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                        "resolved_input": [
+                            54277541829991966604798899222822456806220305312019014393495742503709279518720
+                        ],
+                        "value": "0x0"
+                    }
+                ]
+            },
+            "filename": "samples/integer_overflow_1.sol",
+            "function": "add(uint256)",
+            "line": 7,
+            "message": "The arithmetic operator can overflow.\nIt is possible to cause an integer overflow or underflow in the arithmetic operation. \nClassification: SWC-101",
+            "name": "Integer Arithmetic Bugs (SWC 101)",
+            "severity": "High"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "mythril",
+        "mode": "solidity",
+        "version": "2023/01/20"
+    }
+}
