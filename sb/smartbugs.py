@@ -131,8 +131,7 @@ def main(settings: sb.settings.Settings):
     settings.freeze()
     sb.logging.quiet = settings.quiet
     sb.logging.message(
-        sb.colors.success(f"yl's Graduation_Project {sb.cfg.VERSION}!"),
-        f"Settings: {settings}")
+        sb.colors.success(f"yl's Graduation_Project !"))
 
     tools = sb.tools.load(settings.tools)
     if not tools:
