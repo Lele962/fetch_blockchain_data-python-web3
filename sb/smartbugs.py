@@ -131,7 +131,7 @@ def main(settings: sb.settings.Settings):
     settings.freeze()
     sb.logging.quiet = settings.quiet
     sb.logging.message(
-        sb.colors.success(f"Welcome to SmartBugs {sb.cfg.VERSION}!"),
+        sb.colors.success(f"yl's Graduation_Project {sb.cfg.VERSION}!"),
         f"Settings: {settings}")
 
     tools = sb.tools.load(settings.tools)

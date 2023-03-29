@@ -1,0 +1,50 @@
+{
+    "docker": {
+        "command": null,
+        "detach": true,
+        "entrypoint": "'/sb/bin/do_solidity.sh' '/sb/ChatGPTLand.sol' '600' '/sb/bin'",
+        "image": "smartbugs/slither",
+        "user": 0,
+        "volumes": {
+            "/tmp/tmpmle0tx3w": {
+                "bind": "/sb",
+                "mode": "rw"
+            }
+        }
+    },
+    "filename": "output/ChatGPTLand.sol",
+    "platform": {
+        "cpu": "AMD Ryzen 7 4800H with Radeon Graphics",
+        "python": "3.10.6.final.0 (64 bit)",
+        "release": "5.10.16.3-microsoft-standard-WSL2",
+        "smartbugs": "2.0.7",
+        "system": "Linux",
+        "version": "#1 SMP Fri Apr 2 22:23:49 UTC 2021"
+    },
+    "result": {
+        "duration": 19.038634777069092,
+        "exit_code": 1,
+        "logs": "result.log",
+        "output": null,
+        "start": 1680098713.8616369
+    },
+    "runid": "20230329_1359",
+    "solc": "0.8.19",
+    "tool": {
+        "bin": "scripts",
+        "command": null,
+        "cpu_quota": null,
+        "entrypoint": "'$BIN/do_solidity.sh' '$FILENAME' '$TIMEOUT' '$BIN'",
+        "id": "slither",
+        "image": "smartbugs/slither",
+        "info": "Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors and prints visual information about contract details. Slither enables developers to find vulnerabilities, enhance their code comphrehension, and quickly prototype custom analyses.",
+        "mem_limit": null,
+        "mode": "solidity",
+        "name": "Slither",
+        "origin": "https://github.com/crytic/slither",
+        "output": "/output.json",
+        "parser": "parser.py",
+        "solc": true,
+        "version": null
+    }
+}
