@@ -1,0 +1,404 @@
+{
+    "errors": [
+        "EXIT_CODE_42"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 11,
+            "line_end": 282,
+            "message": "POWHClone (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#11-282) has incorrect ERC20 function interface(s):\n\t-transfer (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124-125)\n\t-transferFrom (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#125-133)\n\t-approve (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#133-143)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 46,
+            "line_end": 47,
+            "message": "POWHClone.balanceOf.balance (local variable @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#46-47) shadows:\n\t- POWHClone.balance (function @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 54,
+            "message": "POWHClone.withdraw.balance (local variable @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#54) shadows:\n\t- POWHClone.balance (function @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 62,
+            "message": "POWHClone.sellMyTokensDaddy.balance (local variable @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#62) shadows:\n\t- POWHClone.balance (function @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 150,
+            "line_end": 153,
+            "message": "POWHClone.withdrawOld.balance (local variable @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#150-153) shadows:\n\t- POWHClone.balance (function @ 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "getMeOutOfHere",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 73,
+            "message": "POWHClone.getMeOutOfHere (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#67-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "fund",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 84,
+            "message": "POWHClone.fund (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#74-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "buyPrice",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 88,
+            "message": "POWHClone.buyPrice (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#84-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "sellPrice",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 95,
+            "message": "POWHClone.sellPrice (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#88-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "POWHClone.transfer (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 133,
+            "message": "POWHClone.transferFrom (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#125-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 143,
+            "message": "POWHClone.approve (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#133-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POWHClone",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "POWHClone.fallback (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:\n\t- pragma solidity^0.4.18 (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 44,
+            "message": "Function 'POWHClone.POWHClone' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#41-44) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 45,
+            "message": "Parameter '_owner' of POWHClone.balanceOf (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_from' of POWHClone.transferTokens (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_to' of POWHClone.transferTokens (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter '_value' of POWHClone.transferTokens (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_to' of POWHClone.transfer (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_value' of POWHClone.transfer (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_from' of POWHClone.transferFrom (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "Parameter '_to' of POWHClone.transferFrom (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#126-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 128,
+            "message": "Parameter '_value' of POWHClone.transferFrom (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#127-128) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_spender' of POWHClone.approve (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_value' of POWHClone.approve (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_owner' of POWHClone.dividends (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 224,
+            "message": "Constant 'POWHClone.one' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#223-224) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 225,
+            "message": "Constant 'POWHClone.sqrt2' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#224-225) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 226,
+            "message": "Constant 'POWHClone.sqrtdot5' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#225-226) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 227,
+            "message": "Constant 'POWHClone.ln2' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#226-227) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 228,
+            "message": "Constant 'POWHClone.ln2_64dot5' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#227-228) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 229,
+            "message": "Constant 'POWHClone.c1' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#228-229) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 231,
+            "message": "Constant 'POWHClone.c3' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#229-231) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 232,
+            "message": "Constant 'POWHClone.c5' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#231-232) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 235,
+            "message": "Constant 'POWHClone.c7' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#232-235) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 239,
+            "message": "Constant 'POWHClone.c9' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#235-239) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 241,
+            "message": "Constant 'POWHClone.c11' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#239-241) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 256,
+            "line_end": 257,
+            "message": "Constant 'POWHClone.c2' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#256-257) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Constant 'POWHClone.c4' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#257-258) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 259,
+            "message": "Constant 'POWHClone.c6' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#258-259) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 260,
+            "message": "Constant 'POWHClone.c8' (0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#259-260) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

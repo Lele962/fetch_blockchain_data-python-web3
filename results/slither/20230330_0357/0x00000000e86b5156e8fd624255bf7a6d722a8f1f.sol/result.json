@@ -1,0 +1,43 @@
+{
+    "errors": [
+        "EXIT_CODE_3"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol",
+            "impact": "Medium",
+            "line": 33,
+            "line_end": 40,
+            "message": "ARIYAX.isContract (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#33-40) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ARIYAX",
+            "filename": "output/0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 40,
+            "message": "ARIYAX.isContract uses assembly (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#33-40)\n\t- 0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#36-40\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 25,
+            "message": "ARIYAX.decimals should be constant (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#24-25)\nARIYAX.name should be constant (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#25-26)\nARIYAX.symbol should be constant (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#26-27)\nARIYAX.totalSupply should be constant (0x00000000e86b5156e8fd624255bf7a6d722a8f1f.sol#27-28)\n",
+            "name": "constable-states"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

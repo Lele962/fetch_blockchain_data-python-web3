@@ -1,0 +1,437 @@
+{
+    "errors": [
+        "EXIT_CODE_45"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 122,
+            "line_end": 229,
+            "message": "PDOne.fallback (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#122-229) does not use the value returned by external calls:\n\t-this.transfer(msg.sender,total_token) (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#228-229)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 291,
+            "message": "PDOne.totalSupply (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#286-291) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 41,
+            "message": "ERC20.totalSupply (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#40-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 42,
+            "message": "ERC20.balanceOf (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#41-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 297,
+            "message": "PDOne.balanceOf (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#295-297) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 326,
+            "line_end": 333,
+            "message": "PDOne.allowance (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#326-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "ERC20.allowance (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#42-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 44,
+            "message": "ERC20.transferFrom (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#43-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 311,
+            "message": "PDOne.transferFrom (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#297-311) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 45,
+            "message": "ERC20.approve (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#44-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 313,
+            "line_end": 326,
+            "message": "PDOne.approve (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#313-326) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 335,
+            "line_end": 344,
+            "message": "PDOne.transfer (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#335-344) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 47,
+            "message": "ERC20.transfer (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#45-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FiatContract",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "USD",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 60,
+            "message": "FiatContract.USD (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#54-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 229,
+            "message": "PDOne.fallback (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#122-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "start_ICO",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 244,
+            "message": "PDOne.start_ICO (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#230-244) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PDOne",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "message": "PDOne.transferOwnership (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 8,
+            "message": "Detected issues with version pragma in 0x21fa491fdbbf9f471e09513360563a9798e8f112.sol:\n\t- pragma solidity0.4.19 (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#6-8): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 60,
+            "message": "Function 'FiatContract.USD' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#54-60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 295,
+            "message": "Parameter '_owner' of PDOne.balanceOf (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 328,
+            "message": "Parameter '_owner' of PDOne.allowance (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#328) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 328,
+            "message": "Parameter '_spender' of PDOne.allowance (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#328) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 298,
+            "message": "Parameter '_from' of PDOne.transferFrom (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#297-298) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 298,
+            "line_end": 299,
+            "message": "Parameter '_to' of PDOne.transferFrom (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#298-299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 299,
+            "message": "Parameter '_amount' of PDOne.transferFrom (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 316,
+            "message": "Parameter '_spender' of PDOne.approve (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#314-316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 316,
+            "message": "Parameter '_amount' of PDOne.approve (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 336,
+            "message": "Parameter '_to' of PDOne.transfer (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 336,
+            "message": "Parameter '_amount' of PDOne.transfer (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 122,
+            "message": "Function 'PDOne.PDOne' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#113-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 244,
+            "message": "Function 'PDOne.start_ICO' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#230-244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 251,
+            "message": "Function 'PDOne.StopICO' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#244-251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 264,
+            "message": "Function 'PDOne.end_ICO' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#260-264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_amount' of PDOne.burn (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 279,
+            "line_end": 284,
+            "message": "Function 'PDOne.set_centralAccount' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#279-284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 283,
+            "message": "Parameter 'central_Acccount' of PDOne.set_centralAccount (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#280-283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 345,
+            "line_end": 346,
+            "message": "Parameter '_from' of PDOne.transferby (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#345-346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 346,
+            "message": "Parameter '_to' of PDOne.transferby (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 346,
+            "message": "Parameter '_amount' of PDOne.transferby (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 71,
+            "message": "Variable 'PDOne._totalsupply' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#69-71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Variable 'PDOne.ico_first' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 77,
+            "message": "Variable 'PDOne.ico_second' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#77) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 78,
+            "message": "Variable 'PDOne.ico_third' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 79,
+            "message": "Variable 'PDOne.ico_fourth' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#78-79) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol",
+            "impact": "Informational",
+            "line": 79,
+            "message": "Variable 'PDOne.central_account' (0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#79) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

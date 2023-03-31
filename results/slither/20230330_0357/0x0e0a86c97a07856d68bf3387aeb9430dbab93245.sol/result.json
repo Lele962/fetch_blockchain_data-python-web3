@@ -1,0 +1,83 @@
+{
+    "errors": [
+        "EXIT_CODE_9"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "InterbetCore",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "function": "payTaker",
+            "impact": "High",
+            "line": 405,
+            "line_end": 447,
+            "message": "InterbetCore.payTaker (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol#405-447) sends eth to arbitrary user\n\tDangerous calls:\n\t- ! taker.send(payout) (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol#430-447)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_a' of InterbetCore.mul (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_b' of InterbetCore.mul (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_a' of InterbetCore.sub (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_b' of InterbetCore.sub (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_a' of InterbetCore.add (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "message": "Parameter '_b' of InterbetCore.add (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "line": 6,
+            "message": "Constant 'InterbetCore.oddsDecimals' (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol#6) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol",
+            "impact": "Informational",
+            "line": 7,
+            "message": "Constant 'InterbetCore.feeRateDecimals' (0x0e0a86c97a07856d68bf3387aeb9430dbab93245.sol#7) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

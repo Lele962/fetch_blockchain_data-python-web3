@@ -1,0 +1,25 @@
+INFO:Detectors:[92m
+MetamorphicContractFactory.deployMetamorphicContract uses assembly (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#178-252)
+	- /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#203-216
+	- /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#223-238
+MetamorphicContractFactory.deployMetamorphicContractFromExistingImplementation uses assembly (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#272-325)
+	- /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#295-311
+MetamorphicContractFactory.deployMetamorphicContractWithConstructor uses assembly (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#343-392)
+	- /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#361-379
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol:
+	- pragma solidity0.5.6 (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MetamorphicContractFactory.deployMetamorphicContract (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#178-252):
+	-(success) = deployedMetamorphicContract.call.value(msg.value)(data) /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#246-247
+Low level call in MetamorphicContractFactory.deployMetamorphicContractFromExistingImplementation (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#272-325):
+	-(success) = metamorphicContractAddress.call.value(msg.value)(data) /sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#320-322
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'MetamorphicContractFactory._getMetamorphicContractAddress' (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#529-552) is not in mixedCase
+Function 'MetamorphicContractFactory._getTransientContractAddress' (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#553-575) is not in mixedCase
+Function 'MetamorphicContractFactory._getMetamorphicContractAddressWithConstructor' (/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol#578-600) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x00000000e82eb0431756271f0d00cfb143685e7b.sol analyzed (1 contracts), 9 result(s) found

@@ -1,0 +1,46 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:8:28: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        if(responseHash == keccak256(_response) && msg.value > 3 ether)
+                           ^------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:8:28: Warning: The provided argument of type string calldata is not implicitly convertible to expected type bytes memory.
+        if(responseHash == keccak256(_response) && msg.value > 3 ether)
+                           ^------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:10:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            msg.sender.transfer(this.balance);
+                                ^----------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:23:12: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        if(keccak256(_questionerPin)==questionerPin) 
+           ^-----------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:23:12: Warning: The provided argument of type bytes32 is not implicitly convertible to expected type bytes memory.
+        if(keccak256(_questionerPin)==questionerPin) 
+           ^-----------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:25:28: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            responseHash = keccak256(_response);
+                           ^------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:25:28: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+            responseHash = keccak256(_response);
+                           ^------------------^
+/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol:34:29: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        msg.sender.transfer(this.balance);
+                            ^----------^
+
+INFO:Detectors:[92m
+ENIGMA.ActivateContract (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#22-32) should be declared external
+ENIGMA.StopGame (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#32-37) should be declared external
+ENIGMA.NewQuestion (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#37-44) should be declared external
+ENIGMA.newQuestioner (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#44-50) should be declared external
+ENIGMA.fallback (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Function 'ENIGMA.Try' (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#5-14) is not in mixedCase
+Parameter '_response' of ENIGMA.Try (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#5) is not in mixedCase
+Function 'ENIGMA.ActivateContract' (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#22-32) is not in mixedCase
+Parameter '_questionerPin' of ENIGMA.ActivateContract (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#22) is not in mixedCase
+Parameter '_question' of ENIGMA.ActivateContract (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#22) is not in mixedCase
+Parameter '_response' of ENIGMA.ActivateContract (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#22-23) is not in mixedCase
+Function 'ENIGMA.StopGame' (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#32-37) is not in mixedCase
+Function 'ENIGMA.NewQuestion' (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#37-44) is not in mixedCase
+Parameter '_question' of ENIGMA.NewQuestion (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#37) is not in mixedCase
+Parameter '_responseHash' of ENIGMA.NewQuestion (/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol#37-38) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x115bdbcc47c0fe7ed08c21badc3efcfdc5c76e4c.sol analyzed (1 contracts), 15 result(s) found

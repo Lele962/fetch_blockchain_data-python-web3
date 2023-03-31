@@ -1,0 +1,158 @@
+{
+    "errors": [
+        "EXIT_CODE_15"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "High",
+            "line": 22,
+            "line_end": 23,
+            "message": "TimeCapsuleEvent.Owner (0x68563d2a5fc58f88db8140a981170989f001b746.sol#22-23) shadows:\n\t- Ownable.Owner (0x68563d2a5fc58f88db8140a981170989f001b746.sol#4-5)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeCapsuleEvent",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "kill",
+            "impact": "Medium",
+            "line": 55,
+            "line_end": 58,
+            "message": "TimeCapsuleEvent.kill (0x68563d2a5fc58f88db8140a981170989f001b746.sol#55-58) uses a dangerous strict equality:\n\t- this.balance == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "transferOwner",
+            "impact": "Medium",
+            "line": 55,
+            "line_end": 58,
+            "message": "TimeCapsuleEvent.kill (0x68563d2a5fc58f88db8140a981170989f001b746.sol#55-58) uses a dangerous strict equality:\n\t- this.balance == 0\nOwnable.transferOwner (0x68563d2a5fc58f88db8140a981170989f001b746.sol#14-21) uses a dangerous strict equality:\n\t- this.balance == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Deprecated standard detected @ 0x68563d2a5fc58f88db8140a981170989f001b746.sol#43:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x68563d2a5fc58f88db8140a981170989f001b746.sol:\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "transferOwner",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 21,
+            "message": "Ownable.transferOwner (0x68563d2a5fc58f88db8140a981170989f001b746.sol#14-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeCapsuleEvent",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "initCapsule",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 33,
+            "message": "TimeCapsuleEvent.initCapsule (0x68563d2a5fc58f88db8140a981170989f001b746.sol#27-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeCapsuleEvent",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 35,
+            "message": "TimeCapsuleEvent.fallback (0x68563d2a5fc58f88db8140a981170989f001b746.sol#33-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeCapsuleEvent",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 55,
+            "message": "TimeCapsuleEvent.withdraw (0x68563d2a5fc58f88db8140a981170989f001b746.sol#44-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeCapsuleEvent",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "function": "kill",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 58,
+            "message": "TimeCapsuleEvent.kill (0x68563d2a5fc58f88db8140a981170989f001b746.sol#55-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x68563d2a5fc58f88db8140a981170989f001b746.sol:\n\t- pragma solidity^0.4.16 (0x68563d2a5fc58f88db8140a981170989f001b746.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 8,
+            "message": "Function 'Ownable.Ownable' (0x68563d2a5fc58f88db8140a981170989f001b746.sol#6-8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 14,
+            "message": "Parameter '_owner' of Ownable.transferOwner (0x68563d2a5fc58f88db8140a981170989f001b746.sol#14) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "Variable 'Ownable.Owner' (0x68563d2a5fc58f88db8140a981170989f001b746.sol#4-5) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68563d2a5fc58f88db8140a981170989f001b746.sol",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "Variable 'TimeCapsuleEvent.Owner' (0x68563d2a5fc58f88db8140a981170989f001b746.sol#22-23) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

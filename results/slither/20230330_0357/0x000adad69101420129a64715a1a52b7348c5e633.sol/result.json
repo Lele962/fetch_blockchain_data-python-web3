@@ -1,0 +1,125 @@
+{
+    "errors": [
+        "EXIT_CODE_12"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "DIP_Team_Transfer",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "function": "getMyTokens",
+            "impact": "Medium",
+            "line": 134,
+            "line_end": 148,
+            "message": "DIP_Team_Transfer.getMyTokens (0x000adad69101420129a64715a1a52b7348c5e633.sol#134-148) does not use the value returned by external calls:\n\t-DIP_Token.transferFrom(myGrant.pool,msg.sender,amount) (0x000adad69101420129a64715a1a52b7348c5e633.sol#142-145)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 112,
+            "message": "DIP_Team_Transfer.Pool_B should be constant (0x000adad69101420129a64715a1a52b7348c5e633.sol#111-112)\nDIP_Team_Transfer.Pool_C should be constant (0x000adad69101420129a64715a1a52b7348c5e633.sol#115)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 82,
+            "message": "Ownable.renounceOwnership (0x000adad69101420129a64715a1a52b7348c5e633.sol#77-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 91,
+            "message": "Ownable.transferOwnership (0x000adad69101420129a64715a1a52b7348c5e633.sol#86-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DIP_Team_Transfer",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "function": "cleanUp",
+            "impact": "Informational",
+            "message": "DIP_Team_Transfer.cleanUp (0x000adad69101420129a64715a1a52b7348c5e633.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x000adad69101420129a64715a1a52b7348c5e633.sol:\n\t- pragma solidity^0.5.0 (0x000adad69101420129a64715a1a52b7348c5e633.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 104,
+            "message": "Function 'Ownable._transferOwnership' (0x000adad69101420129a64715a1a52b7348c5e633.sol#94-104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 199,
+            "message": "Contract 'DIP_Team_Transfer' (0x000adad69101420129a64715a1a52b7348c5e633.sol#105-199) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 130,
+            "message": "Struct 'DIP_Team_Transfer.grant' (0x000adad69101420129a64715a1a52b7348c5e633.sol#126-130) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Variable 'DIP_Team_Transfer.DIP_Token' (0x000adad69101420129a64715a1a52b7348c5e633.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 112,
+            "message": "Variable 'DIP_Team_Transfer.Pool_B' (0x000adad69101420129a64715a1a52b7348c5e633.sol#111-112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000adad69101420129a64715a1a52b7348c5e633.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Variable 'DIP_Team_Transfer.Pool_C' (0x000adad69101420129a64715a1a52b7348c5e633.sol#115) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

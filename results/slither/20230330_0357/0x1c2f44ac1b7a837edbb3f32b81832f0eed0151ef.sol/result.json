@@ -1,0 +1,646 @@
+{
+    "errors": [
+        "EXIT_CODE_66"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 141,
+            "line_end": 146,
+            "message": "ERC20 (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#141-146) has incorrect ERC20 function interface(s):\n\t-transfer (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#143-145)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "Withdrawable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "isWithdrawable",
+            "impact": "Low",
+            "line": 542,
+            "line_end": 543,
+            "message": "HenaSale.buyToken.isWithdrawable (local variable @ 0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#542-543) shadows:\n\t- Withdrawable.isWithdrawable (function @ 0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#136-141)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 434,
+            "line_end": 438,
+            "message": "HenaSale.oneEther should be constant (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#434-438)\nHenaSale.tokenDecimal should be constant (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#430-433)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 51,
+            "message": "Ownable.transferOwnership (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#41-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Manager",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getManagers",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 67,
+            "message": "Manager.getManagers (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#63-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 110,
+            "message": "Pausable.pause (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#106-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 118,
+            "message": "Pausable.unpause (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#112-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Withdrawable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "pauseWithdraw",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 129,
+            "message": "Withdrawable.pauseWithdraw (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#125-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Withdrawable",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "unpauseWithdraw",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 136,
+            "message": "Withdrawable.unpauseWithdraw (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#130-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaleRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPropertyKeyCount",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 192,
+            "message": "SaleRecord.getPropertyKeyCount (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#190-192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaleRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPropertyInfo",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 230,
+            "message": "SaleRecord.getPropertyInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#192-230) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaleRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPropertyValue",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 248,
+            "message": "SaleRecord.getPropertyValue (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#230-248) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PageViewRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setPage",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 263,
+            "message": "PageViewRecord.setPage (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#261-263) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PageViewRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPageItemValue",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 300,
+            "message": "PageViewRecord.getPageItemValue (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#271-300) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PageViewRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPageItemInfo",
+            "impact": "Informational",
+            "line": 311,
+            "line_end": 351,
+            "message": "PageViewRecord.getPageItemInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#311-351) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PageViewRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPageNotWithdrawCount",
+            "impact": "Informational",
+            "line": 352,
+            "line_end": 366,
+            "message": "PageViewRecord.getPageNotWithdrawCount (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#352-366) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PageViewRecord",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPageNotWithdrawInfo",
+            "impact": "Informational",
+            "line": 366,
+            "line_end": 425,
+            "message": "PageViewRecord.getPageNotWithdrawInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#366-425) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "withdrawEther",
+            "impact": "Informational",
+            "line": 556,
+            "line_end": 560,
+            "message": "HenaSale.withdrawEther (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#556-560) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "withdrawToken",
+            "impact": "Informational",
+            "line": 560,
+            "line_end": 564,
+            "message": "HenaSale.withdrawToken (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#560-564) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setTime",
+            "impact": "Informational",
+            "line": 565,
+            "line_end": 566,
+            "message": "HenaSale.setTime (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#565-566) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setPriceTokenEthUSD",
+            "impact": "Informational",
+            "line": 566,
+            "line_end": 587,
+            "message": "HenaSale.setPriceTokenEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#566-587) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setEthUSD",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 591,
+            "message": "HenaSale.setEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#590-591) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setCapMaximumToken",
+            "impact": "Informational",
+            "line": 592,
+            "line_end": 596,
+            "message": "HenaSale.setCapMaximumToken (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#592-596) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "setWithdrawTokens",
+            "impact": "Informational",
+            "line": 596,
+            "line_end": 604,
+            "message": "HenaSale.setWithdrawTokens (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#596-604) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getRemainWithdrawEth",
+            "impact": "Informational",
+            "line": 605,
+            "line_end": 607,
+            "message": "HenaSale.getRemainWithdrawEth (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#605-607) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getPriceTokenEthUSD",
+            "impact": "Informational",
+            "line": 607,
+            "line_end": 613,
+            "message": "HenaSale.getPriceTokenEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#607-613) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getCapToken",
+            "impact": "Informational",
+            "line": 613,
+            "line_end": 614,
+            "message": "HenaSale.getCapToken (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#613-614) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getTokenToEth",
+            "impact": "Informational",
+            "line": 614,
+            "line_end": 627,
+            "message": "HenaSale.getTokenToEth (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#614-627) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getTokenInfo",
+            "impact": "Informational",
+            "message": "HenaSale.getTokenInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HenaSale",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "function": "getTimeICO",
+            "impact": "Informational",
+            "message": "HenaSale.getTimeICO (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 68,
+            "message": "Parameter '_to' of Manager.existManager (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 78,
+            "message": "Parameter '_to' of Manager.addManager (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#77-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 156,
+            "message": "Struct 'SaleRecord.sProperty' (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#148-156) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_sender' of SaleRecord.recordPropertyWithdraw (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_token' of SaleRecord.recordPropertyWithdraw (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 166,
+            "message": "Parameter '_sender' of SaleRecord.recordProperty (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 166,
+            "message": "Parameter '_amount' of SaleRecord.recordProperty (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 167,
+            "message": "Parameter '_token' of SaleRecord.recordProperty (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166-167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 167,
+            "message": "Parameter '_priceToken' of SaleRecord.recordProperty (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 168,
+            "message": "Parameter '_withdraw' of SaleRecord.recordProperty (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#167-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 180,
+            "message": "Parameter '_addr' of SaleRecord.contains (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#179-180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 193,
+            "message": "Parameter '_addr' of SaleRecord.getPropertyInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#192-193) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 232,
+            "message": "Parameter '_addr' of SaleRecord.getPropertyValue (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#230-232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 262,
+            "message": "Parameter '_itemCount' of PageViewRecord.setPage (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#261-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 272,
+            "message": "Parameter '_pageIndex' of PageViewRecord.getPageItemValue (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#271-272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 311,
+            "message": "Parameter '_pageIndex' of PageViewRecord.getPageItemInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#311) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_pageIndex' of PageViewRecord.getPageNotWithdrawInfo (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 463,
+            "message": "Parameter '_tokenAddress' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#461-463) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 463,
+            "line_end": 465,
+            "message": "Parameter '_priceTokenUSD' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#463-465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 465,
+            "line_end": 467,
+            "message": "Parameter '_priceTokenSaleCount' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#465-467) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 467,
+            "line_end": 469,
+            "message": "Parameter '_priceEthUSD' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#467-469) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 471,
+            "message": "Parameter '_capMaximumToken' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#471) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 472,
+            "line_end": 473,
+            "message": "Parameter '_timeEnd' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#472-473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 475,
+            "message": "Parameter '_managers' of HenaSale. (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#473-475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 514,
+            "line_end": 515,
+            "message": "Parameter '_sender' of HenaSale.validPurchase (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#514-515) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 515,
+            "message": "Parameter '_token' of HenaSale.validPurchase (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#515) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 561,
+            "line_end": 562,
+            "message": "Parameter '_amountToken' of HenaSale.withdrawToken (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#561-562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 565,
+            "message": "Parameter '_timeEnd' of HenaSale.setTime (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 566,
+            "line_end": 568,
+            "message": "Parameter '_priceTokenUSD' of HenaSale.setPriceTokenEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#566-568) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 568,
+            "line_end": 569,
+            "message": "Parameter '_priceTokenSaleCount' of HenaSale.setPriceTokenEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#568-569) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 569,
+            "line_end": 570,
+            "message": "Parameter '_priceEthUSD' of HenaSale.setPriceTokenEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#569-570) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 590,
+            "message": "Parameter '_priceEthUSD' of HenaSale.setEthUSD (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 594,
+            "line_end": 595,
+            "message": "Parameter '_capMaximumToken' of HenaSale.setCapMaximumToken (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#594-595) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 599,
+            "message": "Parameter '_user' of HenaSale.setWithdrawTokens (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#599) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "line": 599,
+            "message": "Parameter '_token' of HenaSale.setWithdrawTokens (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#599) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol",
+            "impact": "Informational",
+            "message": "Parameter '_priceUSD' of HenaSale.getOneTokenToEth (0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

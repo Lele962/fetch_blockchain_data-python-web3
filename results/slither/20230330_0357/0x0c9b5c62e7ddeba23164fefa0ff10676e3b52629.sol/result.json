@@ -1,0 +1,533 @@
+{
+    "errors": [
+        "EXIT_CODE_61"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Low",
+            "line": 924,
+            "message": "CryptoArt.getCanvasInfo.owner (local variable @ 0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#924) shadows:\n\t- Ownable.owner (state variable @ 0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#9-11)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 44,
+            "message": "Ownable.transferOwnership (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#35-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CanvasFactory",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "function": "getCanvasPaintedPixelsCount",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 220,
+            "message": "CanvasFactory.getCanvasPaintedPixelsCount (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#213-220) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CanvasFactory",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "function": "getPixelAuthor",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 242,
+            "message": "CanvasFactory.getPixelAuthor (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#239-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol:\n\t- pragma solidity0.4.23 (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 72,
+            "message": "Parameter '_address' of Withdrawable.getPendingWithdrawal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#72) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Parameter '_address' of Withdrawable.addPendingWithdrawal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#80-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Parameter '_amount' of Withdrawable.addPendingWithdrawal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Parameter '_canvasId' of CanvasFactory.setPixel (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 170,
+            "message": "Parameter '_index' of CanvasFactory.setPixel (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#169-170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 170,
+            "message": "Parameter '_color' of CanvasFactory.setPixel (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_canvasId' of CanvasFactory.getCanvasBitmap (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "Parameter '_canvasId' of CanvasFactory.getCanvasPaintedPixelsCount (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#217-218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 234,
+            "message": "Parameter '_canvasId' of CanvasFactory.isCanvasFinished (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 240,
+            "message": "Parameter '_canvasId' of CanvasFactory.getPixelAuthor (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#239-240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_pixelIndex' of CanvasFactory.getPixelAuthor (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Parameter '_address' of CanvasFactory.getPaintedPixelsCountByAddress (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#246-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_canvasId' of CanvasFactory.getPaintedPixelsCountByAddress (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 251,
+            "line_end": 260,
+            "message": "Function 'CanvasFactory._isCanvasFinished' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#251-260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 269,
+            "message": "Function 'CanvasFactory._getCanvas' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#260-269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 262,
+            "message": "Parameter '_canvasId' of CanvasFactory._getCanvas (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#261-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 368,
+            "line_end": 369,
+            "message": "Parameter '_canvasId' of BiddableCanvas.makeBid (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#368-369) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 402,
+            "message": "Parameter '_canvasId' of BiddableCanvas.getLastBidForCanvas (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#402) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 411,
+            "message": "Parameter '_canvasId' of BiddableCanvas.getCanvasState (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#411) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 439,
+            "message": "Parameter '_state' of BiddableCanvas.getCanvasByState (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#439) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_canvasId' of BiddableCanvas.calculateReward (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_address' of BiddableCanvas.calculateReward (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 490,
+            "line_end": 492,
+            "message": "Parameter '_canvasId' of BiddableCanvas.addRewardToPendingWithdrawals (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#490-492) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 515,
+            "line_end": 516,
+            "message": "Parameter '_canvasId' of BiddableCanvas.calculateCommission (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#515-516) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 535,
+            "line_end": 536,
+            "message": "Parameter '_canvasId' of BiddableCanvas.addCommissionToPendingWithdrawals (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#535-536) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 553,
+            "line_end": 554,
+            "message": "Parameter '_owner' of BiddableCanvas.balanceOf (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#553-554) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 561,
+            "message": "Parameter '_amount' of BiddableCanvas.setMinimumBidAmount (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 562,
+            "line_end": 569,
+            "message": "Function 'BiddableCanvas._calculatePricePerPixel' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#562-569) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 564,
+            "message": "Parameter '_totalPrice' of BiddableCanvas._calculatePricePerPixel (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#564) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 569,
+            "line_end": 575,
+            "message": "Function 'BiddableCanvas._calculateCommission' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#569-575) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 571,
+            "message": "Parameter '_amount' of BiddableCanvas._calculateCommission (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#571) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 586,
+            "line_end": 596,
+            "message": "Function 'BiddableCanvas._slice' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#586-596) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 586,
+            "line_end": 587,
+            "message": "Parameter '_array' of BiddableCanvas._slice (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#586-587) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 587,
+            "message": "Parameter '_start' of BiddableCanvas._slice (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#587) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 587,
+            "message": "Parameter '_end' of BiddableCanvas._slice (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#587) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 635,
+            "message": "Parameter '_canvasId' of CanvasMarket.acceptSellOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#635) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 682,
+            "message": "Parameter '_canvasId' of CanvasMarket.offerCanvasForSale (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#682) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 682,
+            "line_end": 684,
+            "message": "Parameter '_minPrice' of CanvasMarket.offerCanvasForSale (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#682-684) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 691,
+            "line_end": 692,
+            "message": "Parameter '_canvasId' of CanvasMarket.offerCanvasForSaleToAddress (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#691-692) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 692,
+            "line_end": 693,
+            "message": "Parameter '_minPrice' of CanvasMarket.offerCanvasForSaleToAddress (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#692-693) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 693,
+            "message": "Parameter '_receiver' of CanvasMarket.offerCanvasForSaleToAddress (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#693) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 701,
+            "message": "Parameter '_canvasId' of CanvasMarket.cancelSellOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#701) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 711,
+            "line_end": 712,
+            "message": "Parameter '_canvasId' of CanvasMarket.makeBuyOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#711-712) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 732,
+            "message": "Parameter '_canvasId' of CanvasMarket.cancelBuyOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#732) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 752,
+            "message": "Parameter '_canvasId' of CanvasMarket.acceptBuyOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#752) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 752,
+            "message": "Parameter '_minPrice' of CanvasMarket.acceptBuyOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#752) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 787,
+            "message": "Parameter '_canvasId' of CanvasMarket.getCurrentBuyOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#787) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 795,
+            "message": "Parameter '_canvasId' of CanvasMarket.getCurrentSellOffer (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#795) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 804,
+            "line_end": 821,
+            "message": "Function 'CanvasMarket._offerCanvasForSaleInternal' (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#804-821) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 805,
+            "message": "Parameter '_canvasId' of CanvasMarket._offerCanvasForSaleInternal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 805,
+            "message": "Parameter '_minPrice' of CanvasMarket._offerCanvasForSaleInternal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 805,
+            "line_end": 807,
+            "message": "Parameter '_receiver' of CanvasMarket._offerCanvasForSaleInternal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805-807) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 823,
+            "message": "Parameter '_canvasId' of CanvasMarket.cancelSellOfferInternal (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_canvasId' of CryptoArt.getCanvasInfo (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "line": 930,
+            "message": "Parameter '_owner' of CryptoArt.getCanvasByOwner (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#930) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol",
+            "impact": "Informational",
+            "message": "Parameter '_canvasId' of CryptoArt.getCanvasPainters (0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

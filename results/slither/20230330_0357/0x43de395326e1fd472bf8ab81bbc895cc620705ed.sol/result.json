@@ -1,0 +1,64 @@
+{
+    "errors": [
+        "EXIT_CODE_5"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TwoForOne",
+            "filename": "output/0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol",
+            "function": "Get",
+            "impact": "High",
+            "line": 7,
+            "line_end": 16,
+            "message": "TwoForOne.Get (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#7-16) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#13-14)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "TwoForOne",
+            "filename": "output/0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "TwoForOne.fallback (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TwoForOne",
+            "filename": "output/0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol",
+            "function": "Get",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 16,
+            "message": "TwoForOne.Get (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#7-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol:\n\t- pragma solidity^0.4.19 (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 16,
+            "message": "Function 'TwoForOne.Get' (0x43de395326e1fd472bf8ab81bbc895cc620705ed.sol#7-16) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

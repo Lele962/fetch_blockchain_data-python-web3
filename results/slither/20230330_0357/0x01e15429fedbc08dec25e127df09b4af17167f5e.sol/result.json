@@ -1,0 +1,306 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "impact": "High",
+            "line": 191,
+            "message": "VOXTrader.owner (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#191) shadows:\n\t- HorizonContractBase.owner (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#52-53)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "execute",
+            "impact": "Low",
+            "line": 289,
+            "line_end": 333,
+            "message": "Reentrancy in VOXTrader.execute (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#289-333):\n\tExternal calls:\n\t- ! ERC20Interface(tokenContract).transferFrom(seller,msg.sender,tradeQuantity) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#316-324)\n\tExternal calls sending eth:\n\t- seller.transfer(cost.sub(etherFee)) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#327)\n\t- owner.transfer(etherFee) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#329)\n\tState variables written after the call(s):\n\t- lastSellPrice (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#330)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "offer",
+            "impact": "Low",
+            "line": 265,
+            "line_end": 287,
+            "message": "Reentrancy in VOXTrader.offer (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287):\n\tExternal calls:\n\t- allowed = ERC20Interface(tokenContract).allowance(msg.sender,this) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#274)\n\t- balance = ERC20Interface(tokenContract).balanceOf(msg.sender) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#277-281)\n\tState variables written after the call(s):\n\t- orderBook (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#284-285)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setOfferSize",
+            "impact": "Low",
+            "line": 387,
+            "line_end": 407,
+            "message": "Reentrancy in VOXTrader.setOfferSize (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#387-407):\n\tExternal calls:\n\t- balance = ERC20Interface(tokenContract).balanceOf(msg.sender) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#391-392)\n\t- allowed = ERC20Interface(tokenContract).allowance(msg.sender,this) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#395-399)\n\tState variables written after the call(s):\n\t- orderBook (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#404-405)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "offer",
+            "impact": "Low",
+            "line": 265,
+            "line_end": 287,
+            "message": "VOXTrader.offer (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(expiry > block.timestamp,Cannot have an expiry date in the past.) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#270)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "execute",
+            "impact": "Low",
+            "line": 289,
+            "line_end": 333,
+            "message": "VOXTrader.execute (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#289-333) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp < order.expiry,Sell order has expired.) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#295-296)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setOfferExpiry",
+            "impact": "Low",
+            "line": 411,
+            "line_end": 425,
+            "message": "VOXTrader.setOfferExpiry (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#411-425) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(expiry > block.timestamp,Cannot have an expiry date in the past.) (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#417-418)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 32,
+            "message": "ERC20Interface.totalSupply (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#31-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "ERC20Interface.balanceOf (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 34,
+            "message": "ERC20Interface.allowance (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#33-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "ERC20Interface.transfer (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#34-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ERC20Interface.approve (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 38,
+            "message": "ERC20Interface.transferFrom (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#36-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "getOrder",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 259,
+            "message": "VOXTrader.getOrder (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#255-259) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "offer",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 287,
+            "message": "VOXTrader.offer (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "cancel",
+            "impact": "Informational",
+            "line": 335,
+            "line_end": 343,
+            "message": "VOXTrader.cancel (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#335-343) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setEnforceKyc",
+            "impact": "Informational",
+            "line": 366,
+            "line_end": 367,
+            "message": "VOXTrader.setEnforceKyc (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#366-367) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setOfferPrice",
+            "impact": "Informational",
+            "line": 370,
+            "line_end": 385,
+            "message": "VOXTrader.setOfferPrice (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#370-385) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setOfferSize",
+            "impact": "Informational",
+            "line": 387,
+            "line_end": 407,
+            "message": "VOXTrader.setOfferSize (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#387-407) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setOfferExpiry",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 425,
+            "message": "VOXTrader.setOfferExpiry (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#411-425) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setEtherFeePercent",
+            "impact": "Informational",
+            "line": 430,
+            "line_end": 437,
+            "message": "VOXTrader.setEtherFeePercent (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#430-437) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setEtherFeeMin",
+            "impact": "Informational",
+            "line": 440,
+            "line_end": 442,
+            "message": "VOXTrader.setEtherFeeMin (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#440-442) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "redeemVoucherSingle",
+            "impact": "Informational",
+            "line": 494,
+            "line_end": 504,
+            "message": "VOXTrader.redeemVoucherSingle (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#494-504) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "redeemVoucher",
+            "impact": "Informational",
+            "line": 513,
+            "line_end": 536,
+            "message": "VOXTrader.redeemVoucher (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#513-536) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setSellCeiling",
+            "impact": "Informational",
+            "line": 538,
+            "line_end": 539,
+            "message": "VOXTrader.setSellCeiling (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#538-539) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "setSellFloor",
+            "impact": "Informational",
+            "line": 544,
+            "line_end": 546,
+            "message": "VOXTrader.setSellFloor (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#544-546) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VOXTrader",
+            "filename": "output/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol",
+            "function": "retire",
+            "impact": "Informational",
+            "message": "VOXTrader.retire (0x01e15429fedbc08dec25e127df09b4af17167f5e.sol) should be declared external\n",
+            "name": "external-function"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

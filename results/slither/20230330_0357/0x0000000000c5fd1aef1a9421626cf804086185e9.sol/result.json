@@ -1,0 +1,366 @@
+{
+    "errors": [
+        "EXIT_CODE_38"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Medium",
+            "line": 48,
+            "line_end": 88,
+            "message": "ECDSA.recover (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#48-88) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Medium",
+            "message": "ExtendedJurisdiction.secondaryHasAttribute (0x0000000000c5fd1aef1a9421626cf804086185e9.sol) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 341,
+            "line_end": 342,
+            "message": "Ownable.constructor.owner (local variable @ 0x0000000000c5fd1aef1a9421626cf804086185e9.sol#341-342) shadows:\n\t- Ownable.owner (function @ 0x0000000000c5fd1aef1a9421626cf804086185e9.sol#349-354)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 1036,
+            "line_end": 1037,
+            "message": "ExtendedJurisdiction.constructor.owner (local variable @ 0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1036-1037) shadows:\n\t- Ownable.owner (function @ 0x0000000000c5fd1aef1a9421626cf804086185e9.sol#349-354)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ECDSA",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "recover",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 88,
+            "message": "ECDSA.recover uses assembly (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#48-88)\n\t- 0x0000000000c5fd1aef1a9421626cf804086185e9.sol#68-77\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExtendedJurisdiction",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "secondaryHasAttribute",
+            "impact": "Informational",
+            "message": "ExtendedJurisdiction.secondaryHasAttribute uses assembly (0x0000000000c5fd1aef1a9421626cf804086185e9.sol)\n\t- 0x0000000000c5fd1aef1a9421626cf804086185e9.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 247,
+            "message": "PauserRole.addPauser (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#243-247) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 254,
+            "message": "PauserRole.renouncePauser (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#248-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 286,
+            "message": "Pausable.paused (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#284-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 311,
+            "message": "Pausable.pause (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#307-311) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 318,
+            "message": "Pausable.unpause (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#314-318) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 369,
+            "line_end": 374,
+            "message": "Ownable.renounceOwnership (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#369-374) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 385,
+            "message": "Ownable.transferOwnership (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#378-385) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExtendedJurisdiction",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "recoverableFunds",
+            "impact": "Informational",
+            "line": 2506,
+            "line_end": 2512,
+            "message": "ExtendedJurisdiction.recoverableFunds (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#2506-2512) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExtendedJurisdiction",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "recoverableTokens",
+            "impact": "Informational",
+            "line": 2518,
+            "line_end": 2524,
+            "message": "ExtendedJurisdiction.recoverableTokens (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#2518-2524) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExtendedJurisdiction",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "recoverFunds",
+            "impact": "Informational",
+            "line": 2546,
+            "line_end": 2554,
+            "message": "ExtendedJurisdiction.recoverFunds (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#2546-2554) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExtendedJurisdiction",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "function": "recoverTokens",
+            "impact": "Informational",
+            "line": 2566,
+            "line_end": 2569,
+            "message": "ExtendedJurisdiction.recoverTokens (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#2566-2569) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0000000000c5fd1aef1a9421626cf804086185e9.sol:\n\t- pragma solidity0.4.26 (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 258,
+            "message": "Function 'PauserRole._addPauser' (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#255-258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 264,
+            "message": "Function 'PauserRole._removePauser' (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#258-264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 390,
+            "line_end": 392,
+            "message": "Function 'Ownable._transferOwnership' (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#390-392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 495,
+            "message": "Parameter 'ID' of BasicJurisdictionInterface.addAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#495) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 503,
+            "message": "Parameter 'ID' of BasicJurisdictionInterface.removeAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#503) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 716,
+            "line_end": 717,
+            "message": "Parameter 'ID' of ExtendedJurisdictionInterface.addRestrictedAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#716-717) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 723,
+            "message": "Parameter 'ID' of ExtendedJurisdictionInterface.setAttributeTypeOnlyPersonal (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#723) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 743,
+            "message": "Parameter 'ID' of ExtendedJurisdictionInterface.setAttributeTypeSecondarySource (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#743) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 762,
+            "message": "Parameter 'ID' of ExtendedJurisdictionInterface.setAttributeTypeMinimumRequiredStake (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 773,
+            "message": "Parameter 'ID' of ExtendedJurisdictionInterface.setAttributeTypeJurisdictionFee (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#773) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 957,
+            "message": "Parameter '' of IERC20.balanceOf (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 960,
+            "message": "Parameter '' of IERC20.transfer (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#960) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 960,
+            "message": "Parameter '_scope_0' of IERC20.transfer (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#960) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1050,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.addAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1050) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1256,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.removeAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1110,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.addRestrictedAttributeType (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1158,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.setAttributeTypeOnlyPersonal (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1187,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.setAttributeTypeSecondarySource (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1216,
+            "line_end": 1219,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.setAttributeTypeMinimumRequiredStake (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1216-1219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000c5fd1aef1a9421626cf804086185e9.sol",
+            "impact": "Informational",
+            "line": 1238,
+            "message": "Parameter 'ID' of ExtendedJurisdiction.setAttributeTypeJurisdictionFee (0x0000000000c5fd1aef1a9421626cf804086185e9.sol#1238) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,607 @@
+{
+    "errors": [
+        "EXIT_CODE_62"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 591,
+            "line_end": 612,
+            "message": "Reentrancy in OneledgerTokenVesting.release (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612):\n\tExternal calls:\n\t- require(bool)(token.balanceOf(this) >= 0 && now >= startFrom) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#593-597)\n\t- tokensReadyToRelease > token.balanceOf(this) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#605-609)\n\t- amountToTransfer = token.balanceOf(this) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#605-609)\n\tState variables written after the call(s):\n\t- elapsedPeriods (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#610-612)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "buyTokens",
+            "impact": "Medium",
+            "line": 474,
+            "line_end": 484,
+            "message": "ICO.buyTokens (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#474-484) does not use the value returned by external calls:\n\t-token.mint(msg.sender,tokenToBuy) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#479)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "mintToken",
+            "impact": "Medium",
+            "line": 505,
+            "line_end": 508,
+            "message": "ICO.mintToken (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#505-508) does not use the value returned by external calls:\n\t-token.mint(target,tokenToMint) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#507-508)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "closeSale",
+            "impact": "Medium",
+            "line": 509,
+            "line_end": 514,
+            "message": "ICO.closeSale (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#509-514) does not use the value returned by external calls:\n\t-token.mint(owner,TOTAL_TOKEN_SUPPLY.sub(token.totalSupply())) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#511-512)\n\t-token.finishMinting() (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#513)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 591,
+            "line_end": 612,
+            "message": "OneledgerTokenVesting.release (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612) does not use the value returned by external calls:\n\t-token.transfer(beneficiary,amountToTransfer) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "close",
+            "impact": "Medium",
+            "message": "OneledgerTokenVesting.close (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) does not use the value returned by external calls:\n\t-token.transfer(reservedAccount,tokenLeft) (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 421,
+            "line_end": 422,
+            "message": "ICO.TOTAL_TOKEN_SUPPLY should be constant (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#421-422)\nOneledgerToken.decimals should be constant (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#380)\nOneledgerToken.name should be constant (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#375-376)\nOneledgerToken.symbol should be constant (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#376-380)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 90,
+            "message": "Ownable.renounceOwnership (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#85-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 99,
+            "message": "Ownable.transferOwnership (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#94-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 111,
+            "message": "ERC20Basic.totalSupply (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#110-111) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 151,
+            "message": "BasicToken.totalSupply (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#150-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 112,
+            "message": "ERC20Basic.balanceOf (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#111-112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 179,
+            "message": "BasicToken.balanceOf (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#177-179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 122,
+            "message": "ERC20.allowance (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#119-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 245,
+            "line_end": 248,
+            "message": "StandardToken.allowance (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#245-248) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 131,
+            "message": "ERC20.approve (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#125-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 231,
+            "message": "StandardToken.approve (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 263,
+            "line_end": 272,
+            "message": "StandardToken.increaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#263-272) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 300,
+            "message": "StandardToken.decreaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#288-300) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 357,
+            "message": "MintableToken.mint (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342-357) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 361,
+            "line_end": 365,
+            "message": "MintableToken.finishMinting (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#361-365) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OneledgerToken",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 387,
+            "line_end": 389,
+            "message": "OneledgerToken.activate (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#387-389) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "updateRate",
+            "impact": "Informational",
+            "line": 463,
+            "line_end": 466,
+            "message": "ICO.updateRate (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#463-466) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "updateWeiCap",
+            "impact": "Informational",
+            "line": 467,
+            "line_end": 473,
+            "message": "ICO.updateWeiCap (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#467-473) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "addToWhiteList",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 499,
+            "message": "ICO.addToWhiteList (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#489-499) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 505,
+            "line_end": 508,
+            "message": "ICO.mintToken (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#505-508) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICO",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "closeSale",
+            "impact": "Informational",
+            "line": 509,
+            "line_end": 514,
+            "message": "ICO.closeSale (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#509-514) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "getToken",
+            "impact": "Informational",
+            "line": 588,
+            "line_end": 589,
+            "message": "OneledgerTokenVesting.getToken (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#588-589) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 591,
+            "line_end": 612,
+            "message": "OneledgerTokenVesting.release (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "assignReservedAccount",
+            "impact": "Informational",
+            "message": "OneledgerTokenVesting.assignReservedAccount (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OneledgerTokenVesting",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "function": "close",
+            "impact": "Informational",
+            "message": "OneledgerTokenVesting.close (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 98,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 110,
+            "message": "Function 'Ownable._transferOwnership' (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#103-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 104,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#103-104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 157,
+            "message": "Parameter '_to' of BasicToken.transfer (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 157,
+            "message": "Parameter '_value' of BasicToken.transfer (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_owner' of StandardToken.allowance (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_spender' of StandardToken.allowance (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 204,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#203-204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 204,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 228,
+            "message": "Parameter '_spender' of StandardToken.approve (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 228,
+            "message": "Parameter '_value' of StandardToken.approve (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 268,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#264-268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 268,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 288,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 289,
+            "line_end": 290,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#289-290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_to' of MintableToken.mint (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 343,
+            "message": "Parameter '_amount' of MintableToken.mint (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342-343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 434,
+            "line_end": 435,
+            "message": "Parameter '_wallet' of ICO. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#434-435) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 435,
+            "message": "Parameter '_rate' of ICO. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 435,
+            "message": "Parameter '_startDate' of ICO. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 435,
+            "line_end": 437,
+            "message": "Parameter '_weiCap' of ICO. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435-437) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 421,
+            "line_end": 422,
+            "message": "Variable 'ICO.TOTAL_TOKEN_SUPPLY' (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#421-422) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 567,
+            "message": "Parameter '_beneficiary' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#567) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 568,
+            "line_end": 571,
+            "message": "Parameter '_startFrom' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#568-571) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 571,
+            "message": "Parameter '_period' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#571) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 571,
+            "line_end": 572,
+            "message": "Parameter '_tokensReleasedPerPeriod' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#571-572) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 572,
+            "message": "Parameter '_reservedAccount' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#572) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "line": 572,
+            "line_end": 573,
+            "message": "Parameter '_token' of OneledgerTokenVesting. (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#572-573) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newReservedAccount' of OneledgerTokenVesting.assignReservedAccount (0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

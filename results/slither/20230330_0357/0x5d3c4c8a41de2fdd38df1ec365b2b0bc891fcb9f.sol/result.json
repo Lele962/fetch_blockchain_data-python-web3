@@ -1,0 +1,334 @@
+{
+    "errors": [
+        "EXIT_CODE_34"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MMTA",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 191,
+            "line_end": 192,
+            "message": "Contract locking ether found in 0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol:\n\tContract MMTA has payable functions:\n\t - fallback (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#191-192)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Medium",
+            "line": 184,
+            "line_end": 185,
+            "message": "MMTA.totalSupply (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#184-185) shadows:\n\t- ERC20Token.totalSupply (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#87-88)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 88,
+            "message": "ERC20Token.totalSupply should be constant (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#87-88)\nMMTA.decimals should be constant (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#183-184)\nMMTA.name should be constant (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#182-183)\nMMTA.symbol should be constant (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#183)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 31,
+            "message": "Owned.changeOwner (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#25-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "acceptNewOwner",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 40,
+            "message": "Owned.acceptNewOwner (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#32-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 75,
+            "message": "tokenRecipient.receiveApproval (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#71-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 92,
+            "message": "ERC20Token.balanceOf (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#91-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "standardToken",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 130,
+            "message": "standardToken.balanceOf (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#127-130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 97,
+            "message": "ERC20Token.transfer (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "standardToken",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 141,
+            "message": "standardToken.transfer (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#132-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "ERC20Token.transferFrom (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#104-105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "standardToken",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 170,
+            "message": "standardToken.transferFrom (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#158-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "standardToken",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 180,
+            "message": "standardToken.allowance (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#175-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "ERC20Token.allowance (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#115-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "standardToken",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 158,
+            "message": "standardToken.approveAndCall (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#150-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MMTA",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 192,
+            "message": "MMTA.fallback (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#191-192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 24,
+            "message": "Event 'Owned.updateOwner' (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#22-24) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 25,
+            "message": "Parameter '_newOwner' of Owned.changeOwner (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 75,
+            "message": "Contract 'tokenRecipient' (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#71-75) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 180,
+            "message": "Contract 'standardToken' (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#121-180) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_owner' of standardToken.balanceOf (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 132,
+            "message": "Parameter '_to' of standardToken.transfer (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 132,
+            "message": "Parameter '_value' of standardToken.transfer (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_from' of standardToken.transferFrom (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_to' of standardToken.transferFrom (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_value' of standardToken.transferFrom (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_spender' of standardToken.approve (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_value' of standardToken.approve (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 176,
+            "message": "Parameter '_owner' of standardToken.allowance (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#175-176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Parameter '_spender' of standardToken.allowance (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Parameter '_spender' of standardToken.approveAndCall (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Parameter '_value' of standardToken.approveAndCall (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Parameter '_extraData' of standardToken.approveAndCall (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol",
+            "impact": "Informational",
+            "line": 193,
+            "line_end": 195,
+            "message": "Parameter '_tokenAlloc' of MMTA. (0x5d3c4c8a41de2fdd38df1ec365b2b0bc891fcb9f.sol#193-195) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

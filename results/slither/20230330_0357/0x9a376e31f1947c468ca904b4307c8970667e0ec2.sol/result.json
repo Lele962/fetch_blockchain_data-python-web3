@@ -1,0 +1,729 @@
+{
+    "errors": [
+        "EXIT_CODE_77"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Low",
+            "line": 276,
+            "message": "EtheremonTradeData.getBorrowBasicInfo.owner (local variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#276) shadows:\n\t- BasicAccessControl.owner (state variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#35)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Low",
+            "line": 278,
+            "message": "EtheremonTradeData.getBorrowInfo.owner (local variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#278) shadows:\n\t- BasicAccessControl.owner (state variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#35)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Low",
+            "line": 308,
+            "message": "EtheremonTradeData.getBorrowInfoByIndex.owner (local variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#308) shadows:\n\t- BasicAccessControl.owner (state variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#35)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Low",
+            "line": 318,
+            "message": "EtheremonTradeData.getLendingInfo.owner (local variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#318) shadows:\n\t- BasicAccessControl.owner (state variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#35)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Low",
+            "line": 328,
+            "message": "EtheremonTradeData.getTradingInfo.owner (local variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#328) shadows:\n\t- BasicAccessControl.owner (state variable @ 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#35)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "EtheremonDataBase.totalClass should be constant (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#114)\nEtheremonDataBase.totalMonster should be constant (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#114)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicAccessControl",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "ChangeOwner",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 66,
+            "message": "BasicAccessControl.ChangeOwner (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#59-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicAccessControl",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "AddModerator",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 73,
+            "message": "BasicAccessControl.AddModerator (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#67-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicAccessControl",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "RemoveModerator",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 81,
+            "message": "BasicAccessControl.RemoveModerator (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#74-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicAccessControl",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "UpdateMaintaining",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 89,
+            "message": "BasicAccessControl.UpdateMaintaining (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#81-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "addElementToArrayType",
+            "impact": "Informational",
+            "line": 115,
+            "message": "EtheremonDataBase.addElementToArrayType (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "removeElementOfArrayType",
+            "impact": "Informational",
+            "line": 116,
+            "message": "EtheremonDataBase.removeElementOfArrayType (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "setMonsterClass",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 117,
+            "message": "EtheremonDataBase.setMonsterClass (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#116-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "addMonsterObj",
+            "impact": "Informational",
+            "line": 118,
+            "message": "EtheremonDataBase.addMonsterObj (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "setMonsterObj",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 120,
+            "message": "EtheremonDataBase.setMonsterObj (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#118-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "increaseMonsterExp",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "EtheremonDataBase.increaseMonsterExp (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#120-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "decreaseMonsterExp",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "EtheremonDataBase.decreaseMonsterExp (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#121-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "removeMonsterIdMapping",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 123,
+            "message": "EtheremonDataBase.removeMonsterIdMapping (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#122-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "addMonsterIdMapping",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 124,
+            "message": "EtheremonDataBase.addMonsterIdMapping (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#123-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "clearMonsterReturnBalance",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "EtheremonDataBase.clearMonsterReturnBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#124-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "collectAllReturnBalance",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 126,
+            "message": "EtheremonDataBase.collectAllReturnBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#125-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "transferMonster",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "EtheremonDataBase.transferMonster (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#126-127) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "addExtraBalance",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 128,
+            "message": "EtheremonDataBase.addExtraBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#127-128) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "deductExtraBalance",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 131,
+            "message": "EtheremonDataBase.deductExtraBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#128-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "setExtraBalance",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 132,
+            "message": "EtheremonDataBase.setExtraBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#131-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getSizeArrayType",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "EtheremonDataBase.getSizeArrayType (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getElementInArrayType",
+            "impact": "Informational",
+            "line": 133,
+            "message": "EtheremonDataBase.getElementInArrayType (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterClass",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "EtheremonDataBase.getMonsterClass (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#133-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterObj",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 136,
+            "message": "EtheremonDataBase.getMonsterObj (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#134-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterName",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "EtheremonDataBase.getMonsterName (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#136-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getExtraBalance",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "EtheremonDataBase.getExtraBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#137-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterDexSize",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 139,
+            "message": "EtheremonDataBase.getMonsterDexSize (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#138-139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterObjId",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "EtheremonDataBase.getMonsterObjId (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#139-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getExpectedBalance",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 143,
+            "message": "EtheremonDataBase.getExpectedBalance (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#140-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtheremonDataBase",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "function": "getMonsterReturn",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 147,
+            "message": "EtheremonDataBase.getMonsterReturn (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#144-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol:\n\t- pragma solidity^0.4.16 (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 45,
+            "message": "Function 'BasicAccessControl.BasicAccessControl' (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#41-45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 66,
+            "message": "Function 'BasicAccessControl.ChangeOwner' (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#59-66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_newOwner' of BasicAccessControl.ChangeOwner (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 73,
+            "message": "Function 'BasicAccessControl.AddModerator' (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#67-73) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_newModerator' of BasicAccessControl.AddModerator (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 81,
+            "message": "Function 'BasicAccessControl.RemoveModerator' (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#74-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 75,
+            "message": "Parameter '_oldModerator' of BasicAccessControl.RemoveModerator (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#74-75) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 89,
+            "message": "Function 'BasicAccessControl.UpdateMaintaining' (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#81-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 85,
+            "message": "Parameter '_isMaintaining' of BasicAccessControl.UpdateMaintaining (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#81-85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_itemId' of EtheremonTradeData.removeSellingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 195,
+            "message": "Parameter '_itemId' of EtheremonTradeData.addSellingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#194-195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 196,
+            "message": "Parameter '_price' of EtheremonTradeData.addSellingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#195-196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_createTime' of EtheremonTradeData.addSellingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 208,
+            "message": "Parameter '_itemId' of EtheremonTradeData.removeBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#207-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 219,
+            "message": "Parameter '_owner' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#218-219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_itemId' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_price' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 220,
+            "message": "Parameter '_borrower' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#219-220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 220,
+            "message": "Parameter '_lent' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_releaseTime' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 222,
+            "message": "Parameter '_createTime' of EtheremonTradeData.addBorrowingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#221-222) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 237,
+            "message": "Parameter '_trainer' of EtheremonTradeData.addItemLendingList (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#236-237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 237,
+            "message": "Parameter '_objId' of EtheremonTradeData.addItemLendingList (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_trainer' of EtheremonTradeData.removeItemLendingList (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 240,
+            "message": "Parameter '_objId' of EtheremonTradeData.removeItemLendingList (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 259,
+            "message": "Parameter '_objId' of EtheremonTradeData.isOnBorrow (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 263,
+            "message": "Parameter '_objId' of EtheremonTradeData.isOnSell (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#263) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 267,
+            "message": "Parameter '_objId' of EtheremonTradeData.isOnLent (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#267) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 271,
+            "message": "Parameter '_objId' of EtheremonTradeData.getSellPrice (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#269-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_objId' of EtheremonTradeData.isOnTrade (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 276,
+            "message": "Parameter '_objId' of EtheremonTradeData.getBorrowBasicInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 278,
+            "message": "Parameter '_objId' of EtheremonTradeData.getBorrowInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#278) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_objId' of EtheremonTradeData.getSellInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "Parameter '_trainer' of EtheremonTradeData.getTotalLendingItem (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_index' of EtheremonTradeData.getSellingInfoByIndex (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Parameter '_index' of EtheremonTradeData.getBorrowInfoByIndex (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 315,
+            "line_end": 316,
+            "message": "Parameter '_trainer' of EtheremonTradeData.getLendingObjId (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#315-316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 316,
+            "message": "Parameter '_index' of EtheremonTradeData.getLendingObjId (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_trainer' of EtheremonTradeData.getLendingInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_index' of EtheremonTradeData.getLendingInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol",
+            "impact": "Informational",
+            "line": 325,
+            "message": "Parameter '_objId' of EtheremonTradeData.getTradingInfo (0x9a376e31f1947c468ca904b4307c8970667e0ec2.sol#325) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

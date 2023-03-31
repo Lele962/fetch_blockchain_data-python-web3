@@ -1,0 +1,148 @@
+{
+    "errors": [
+        "EXIT_CODE_13"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "MultiTransfer",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 97,
+            "line_end": 103,
+            "message": "MultiTransfer.transfer (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#97-103) does not use the value returned by external calls:\n\t-gctAddress.transferFrom(owner,to[i],value[i]) (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MultiTransfer",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transfer",
+            "impact": "Low",
+            "line": 97,
+            "line_end": 103,
+            "message": "MultiTransfer.transfer has external calls inside a loop:\n\t- gctAddress.transferFrom(owner,to[i],value[i]) (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "ERC20Basic.totalSupply should be constant (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#12-13)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "ERC20Basic.balanceOf (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#13-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "ERC20Basic.transfer (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#14-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 31,
+            "message": "ERC20.allowance (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#30-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 32,
+            "message": "ERC20.transferFrom (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#31-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "ERC20.approve (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 91,
+            "message": "Ownable.transferOwnership (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#75-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiTransfer",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 103,
+            "message": "MultiTransfer.transfer (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#97-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol:\n\t- pragma solidity^0.4.16 (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 62,
+            "message": "Function 'Ownable.Ownable' (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#58-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 97,
+            "message": "Function 'MultiTransfer.MultiTransfer' (0xd50304878ea48b2904982a41f5fe9d2afb99dc9a.sol#96-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

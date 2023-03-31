@@ -1,0 +1,791 @@
+{
+    "errors": [
+        "EXIT_CODE_86"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Medium",
+            "line": 124,
+            "line_end": 189,
+            "message": "NameFilter.nameFilter (0xb58470a0ec113f823757993182131b4f0be4042d.sol#124-189) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 569,
+            "message": "_eth in Imkg.withdraw (0xb58470a0ec113f823757993182131b4f0be4042d.sol#569) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getPreviousProfit",
+            "impact": "Medium",
+            "line": 1083,
+            "line_end": 1084,
+            "message": "_eth in Imkg.getPreviousProfit (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1083-1084) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 189,
+            "message": "NameFilter.nameFilter uses assembly (0xb58470a0ec113f823757993182131b4f0be4042d.sol#124-189)\n\t- 0xb58470a0ec113f823757993182131b4f0be4042d.sol#187-188\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 467,
+            "line_end": 474,
+            "message": "Imkg.fallback (0xb58470a0ec113f823757993182131b4f0be4042d.sol#467-474) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 564,
+            "line_end": 600,
+            "message": "Imkg.withdraw (0xb58470a0ec113f823757993182131b4f0be4042d.sol#564-600) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "registerNameXID",
+            "impact": "Informational",
+            "line": 621,
+            "line_end": 655,
+            "message": "Imkg.registerNameXID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#621-655) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "setTeamName",
+            "impact": "Informational",
+            "line": 668,
+            "line_end": 715,
+            "message": "Imkg.setTeamName (0xb58470a0ec113f823757993182131b4f0be4042d.sol#668-715) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 716,
+            "line_end": 726,
+            "message": "Imkg.deposit (0xb58470a0ec113f823757993182131b4f0be4042d.sol#716-726) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "checkIfNameValid",
+            "impact": "Informational",
+            "line": 732,
+            "line_end": 740,
+            "message": "Imkg.checkIfNameValid (0xb58470a0ec113f823757993182131b4f0be4042d.sol#732-740) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getNextOutAfter",
+            "impact": "Informational",
+            "line": 743,
+            "line_end": 755,
+            "message": "Imkg.getNextOutAfter (0xb58470a0ec113f823757993182131b4f0be4042d.sol#743-755) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getPlayerInfoByAddress",
+            "impact": "Informational",
+            "line": 771,
+            "line_end": 791,
+            "message": "Imkg.getPlayerInfoByAddress (0xb58470a0ec113f823757993182131b4f0be4042d.sol#771-791) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getPlayerRoundTeamBought",
+            "impact": "Informational",
+            "line": 797,
+            "line_end": 807,
+            "message": "Imkg.getPlayerRoundTeamBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#797-807) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getPlayerRoundBought",
+            "impact": "Informational",
+            "line": 815,
+            "line_end": 833,
+            "message": "Imkg.getPlayerRoundBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#815-833) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getPlayerRounds",
+            "impact": "Informational",
+            "line": 839,
+            "line_end": 861,
+            "message": "Imkg.getPlayerRounds (0xb58470a0ec113f823757993182131b4f0be4042d.sol#839-861) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getLastRoundInfo",
+            "impact": "Informational",
+            "line": 870,
+            "line_end": 887,
+            "message": "Imkg.getLastRoundInfo (0xb58470a0ec113f823757993182131b4f0be4042d.sol#870-887) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Informational",
+            "line": 906,
+            "line_end": 930,
+            "message": "Imkg.getCurrentRoundInfo (0xb58470a0ec113f823757993182131b4f0be4042d.sol#906-930) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getTeamInfoByID",
+            "impact": "Informational",
+            "line": 940,
+            "line_end": 951,
+            "message": "Imkg.getTeamInfoByID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#940-951) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getTeamsInfo",
+            "impact": "Informational",
+            "line": 960,
+            "line_end": 1004,
+            "message": "Imkg.getTeamsInfo (0xb58470a0ec113f823757993182131b4f0be4042d.sol#960-1004) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getTeamLeaders",
+            "impact": "Informational",
+            "line": 1015,
+            "line_end": 1051,
+            "message": "Imkg.getTeamLeaders (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1015-1051) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getNextKeyPrice",
+            "impact": "Informational",
+            "line": 1110,
+            "line_end": 1120,
+            "message": "Imkg.getNextKeyPrice (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1110-1120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getEthFromKeys",
+            "impact": "Informational",
+            "line": 1124,
+            "line_end": 1135,
+            "message": "Imkg.getEthFromKeys (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1124-1135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "getKeysFromEth",
+            "impact": "Informational",
+            "line": 1136,
+            "line_end": 1144,
+            "message": "Imkg.getKeysFromEth (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1136-1144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 1433,
+            "line_end": 1460,
+            "message": "Imkg.activate (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1433-1460) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "timeCountdown",
+            "impact": "Informational",
+            "message": "Imkg.timeCountdown (0xb58470a0ec113f823757993182131b4f0be4042d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "setMinTms",
+            "impact": "Informational",
+            "message": "Imkg.setMinTms (0xb58470a0ec113f823757993182131b4f0be4042d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "setMaxTms",
+            "impact": "Informational",
+            "message": "Imkg.setMaxTms (0xb58470a0ec113f823757993182131b4f0be4042d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "setRoundGap",
+            "impact": "Informational",
+            "message": "Imkg.setRoundGap (0xb58470a0ec113f823757993182131b4f0be4042d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Imkg",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "function": "setOutGap",
+            "impact": "Informational",
+            "message": "Imkg.setOutGap (0xb58470a0ec113f823757993182131b4f0be4042d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "Parameter '_input' of NameFilter.nameFilter (0xb58470a0ec113f823757993182131b4f0be4042d.sol#124-125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_curEth' of ImkgKeysCalc.keysRec (0xb58470a0ec113f823757993182131b4f0be4042d.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_newEth' of ImkgKeysCalc.keysRec (0xb58470a0ec113f823757993182131b4f0be4042d.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 205,
+            "message": "Parameter '_curKeys' of ImkgKeysCalc.ethRec (0xb58470a0ec113f823757993182131b4f0be4042d.sol#205) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 205,
+            "message": "Parameter '_sellKeys' of ImkgKeysCalc.ethRec (0xb58470a0ec113f823757993182131b4f0be4042d.sol#205) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 211,
+            "message": "Parameter '_eth' of ImkgKeysCalc.keys (0xb58470a0ec113f823757993182131b4f0be4042d.sol#211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 220,
+            "message": "Parameter '_keys' of ImkgKeysCalc.eth (0xb58470a0ec113f823757993182131b4f0be4042d.sol#220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 252,
+            "message": "Event 'Imkg.onNewNameEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#244-252) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 265,
+            "message": "Event 'Imkg.onNewTeamNameEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#255-265) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 267,
+            "line_end": 276,
+            "message": "Event 'Imkg.onTxEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#267-276) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 291,
+            "message": "Event 'Imkg.onAffPayoutEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#280-291) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 299,
+            "message": "Event 'Imkg.onOutEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#292-299) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 300,
+            "line_end": 309,
+            "message": "Event 'Imkg.onEndRoundEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#300-309) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 312,
+            "line_end": 321,
+            "message": "Event 'Imkg.onWithdrawEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#312-321) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 325,
+            "message": "Event 'Imkg.onOutInitialEvent' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#322-325) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 480,
+            "message": "Parameter '_team' of Imkg.buy (0xb58470a0ec113f823757993182131b4f0be4042d.sol#480) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 480,
+            "message": "Parameter '_affCode' of Imkg.buy (0xb58470a0ec113f823757993182131b4f0be4042d.sol#480) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 621,
+            "line_end": 623,
+            "message": "Parameter '_nameString' of Imkg.registerNameXID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#621-623) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 668,
+            "message": "Parameter '_tID' of Imkg.setTeamName (0xb58470a0ec113f823757993182131b4f0be4042d.sol#668) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 668,
+            "line_end": 669,
+            "message": "Parameter '_nameString' of Imkg.setTeamName (0xb58470a0ec113f823757993182131b4f0be4042d.sol#668-669) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 733,
+            "message": "Parameter '_nameStr' of Imkg.checkIfNameValid (0xb58470a0ec113f823757993182131b4f0be4042d.sol#733) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 771,
+            "message": "Parameter '_addr' of Imkg.getPlayerInfoByAddress (0xb58470a0ec113f823757993182131b4f0be4042d.sol#771) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 797,
+            "line_end": 799,
+            "message": "Parameter '_pID' of Imkg.getPlayerRoundTeamBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#797-799) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 799,
+            "message": "Parameter '_roundID' of Imkg.getPlayerRoundTeamBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#799) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 799,
+            "message": "Parameter '_tID' of Imkg.getPlayerRoundTeamBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#799) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 816,
+            "message": "Parameter '_pID' of Imkg.getPlayerRoundBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#816) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 816,
+            "message": "Parameter '_roundID' of Imkg.getPlayerRoundBought (0xb58470a0ec113f823757993182131b4f0be4042d.sol#816) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 841,
+            "message": "Parameter '_pID' of Imkg.getPlayerRounds (0xb58470a0ec113f823757993182131b4f0be4042d.sol#841) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 940,
+            "message": "Parameter '_tID' of Imkg.getTeamInfoByID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#940) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1053,
+            "message": "Parameter '_pID' of Imkg.getProfit (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1053) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1079,
+            "line_end": 1080,
+            "message": "Parameter '_pID' of Imkg.getPreviousProfit (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1079-1080) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1111,
+            "message": "Parameter '_tID' of Imkg.getNextKeyPrice (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1124,
+            "message": "Parameter '_tID' of Imkg.getEthFromKeys (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1124,
+            "message": "Parameter '_keys' of Imkg.getEthFromKeys (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1138,
+            "line_end": 1139,
+            "message": "Parameter '_tID' of Imkg.getKeysFromEth (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1138-1139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1139,
+            "message": "Parameter '_eth' of Imkg.getKeysFromEth (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1152,
+            "message": "Parameter '_pID' of Imkg.buyCore (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1152,
+            "message": "Parameter '_affID' of Imkg.buyCore (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1152,
+            "line_end": 1153,
+            "message": "Parameter '_tID' of Imkg.buyCore (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1152-1153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1153,
+            "message": "Parameter '_eth' of Imkg.buyCore (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1206,
+            "line_end": 1207,
+            "message": "Parameter '_rID' of Imkg.distribute (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1206-1207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1208,
+            "message": "Parameter '_pID' of Imkg.distribute (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1208,
+            "message": "Parameter '_eth' of Imkg.distribute (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1209,
+            "message": "Parameter '_affID' of Imkg.distribute (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1288,
+            "message": "Parameter '_pID' of Imkg.refund (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1288,
+            "line_end": 1289,
+            "message": "Parameter '_value' of Imkg.refund (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1288-1289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1297,
+            "line_end": 1299,
+            "message": "Parameter '_pID' of Imkg.createTeam (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1297-1299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1299,
+            "message": "Parameter '_eth' of Imkg.createTeam (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1389,
+            "message": "Parameter '_addr' of Imkg.determinePID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1389) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1408,
+            "message": "Parameter '_team' of Imkg.determinTID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1408) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 1409,
+            "message": "Parameter '_pID' of Imkg.determinTID (0xb58470a0ec113f823757993182131b4f0be4042d.sol#1409) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tms' of Imkg.setMinTms (0xb58470a0ec113f823757993182131b4f0be4042d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tms' of Imkg.setMaxTms (0xb58470a0ec113f823757993182131b4f0be4042d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_gap' of Imkg.setRoundGap (0xb58470a0ec113f823757993182131b4f0be4042d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_gap' of Imkg.setOutGap (0xb58470a0ec113f823757993182131b4f0be4042d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 379,
+            "message": "Variable 'Imkg.OutGap_' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb58470a0ec113f823757993182131b4f0be4042d.sol",
+            "impact": "Informational",
+            "line": 379,
+            "line_end": 380,
+            "message": "Constant 'Imkg.registrationFee_' (0xb58470a0ec113f823757993182131b4f0be4042d.sol#379-380) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,45 @@
+INFO:Detectors:[92m
+AlkionToken.allowance.owner (local variable @ /sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#334-337) shadows:
+	- Ownable.owner (function @ /sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#198-203)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+PauserRole.addPauser (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#93-99) should be declared external
+PauserRole.renouncePauser (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#99-101) should be declared external
+Pausable.paused (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#134-136) should be declared external
+Pausable.pause (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#158-161) should be declared external
+Pausable.unpause (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#166-170) should be declared external
+Ownable.owner (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#198-203) should be declared external
+Ownable.renounceOwnership (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#221-224) should be declared external
+Ownable.transferOwnership (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#230-233) should be declared external
+AlkionToken.transfer (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#342-351) should be declared external
+IERC20.transfer (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#10-12) should be declared external
+AlkionToken.approve (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#351-360) should be declared external
+IERC20.approve (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#12-14) should be declared external
+IERC20.transferFrom (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#14-16) should be declared external
+AlkionToken.transferFrom (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#360-372) should be declared external
+AlkionToken.totalSupply (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#323-328) should be declared external
+IERC20.totalSupply (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#16-18) should be declared external
+IERC20.balanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#18-20) should be declared external
+AlkionToken.balanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#329-334) should be declared external
+IERC20.allowance (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#20-22) should be declared external
+AlkionToken.allowance (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#334-342) should be declared external
+AlkionToken.impl (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#301-313) should be declared external
+AlkionToken.addressImpl (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#314-323) should be declared external
+AlkionToken.burn (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#372-380) should be declared external
+AlkionToken.burnFrom (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#380-387) should be declared external
+AlkionToken.totalBalanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) should be declared external
+AlkionToken.lockedBalanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol:
+	- pragma solidity^0.5.0 (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'PauserRole._addPauser' (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#101-106) is not in mixedCase
+Function 'PauserRole._removePauser' (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#106-114) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#242-247) is not in mixedCase
+Parameter '_of' of AlkionToken.totalBalanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) is not in mixedCase
+Parameter '_of' of AlkionToken.lockedBalanceOf (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) is not in mixedCase
+Variable 'AlkionToken._tokenImpl' (/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#292-295) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol analyzed (7 contracts), 34 result(s) found

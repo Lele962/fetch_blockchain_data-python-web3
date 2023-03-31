@@ -1,0 +1,290 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Medium",
+            "line": 26,
+            "line_end": 86,
+            "message": "GasToken2.mk_contract_address (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#26-86) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "free",
+            "impact": "Medium",
+            "line": 261,
+            "line_end": 269,
+            "message": "Reentrancy in GasToken2.free (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#261-269):\n\tExternal calls:\n\t- destroyChildren(value) (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#268)\n\tState variables written after the call(s):\n\t- s_balances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#268-269)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeFrom",
+            "impact": "Medium",
+            "line": 294,
+            "line_end": 311,
+            "message": "Reentrancy in GasToken2.freeFrom (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#294-311):\n\tExternal calls:\n\t- destroyChildren(value) (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#309-310)\n\tState variables written after the call(s):\n\t- s_allowances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#310-311)\n\t- s_balances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#310)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeFromUpTo",
+            "impact": "Medium",
+            "line": 319,
+            "line_end": 332,
+            "message": "Reentrancy in GasToken2.freeFromUpTo (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#319-332):\n\tExternal calls:\n\t- destroyChildren(value) (0x0000000000b3f879cb30fe243b4dfee438691c04.sol)\n\tState variables written after the call(s):\n\t- s_allowances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol)\n\t- s_balances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeUpTo",
+            "impact": "Medium",
+            "line": 278,
+            "line_end": 286,
+            "message": "Reentrancy in GasToken2.freeUpTo (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#278-286):\n\tExternal calls:\n\t- destroyChildren(value) (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#285)\n\tState variables written after the call(s):\n\t- s_balances (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#285-286)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "destroyChildren",
+            "impact": "Low",
+            "line": 250,
+            "message": "GasToken2.destroyChildren has external calls inside a loop:\n\t- mk_contract_address(this,i).call() (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#250)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "mk_contract_address",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 86,
+            "message": "GasToken2.mk_contract_address uses assembly (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#26-86)\n\t- 0x0000000000b3f879cb30fe243b4dfee438691c04.sol#74-86\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "makeChild",
+            "impact": "Informational",
+            "line": 186,
+            "line_end": 219,
+            "message": "GasToken2.makeChild uses assembly (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#186-219)\n\t- 0x0000000000b3f879cb30fe243b4dfee438691c04.sol#186-219\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 104,
+            "message": "GasToken2.balanceOf (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#101-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 122,
+            "message": "GasToken2.transfer (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#118-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 133,
+            "message": "GasToken2.transferFrom (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#123-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 147,
+            "message": "GasToken2.approve (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#137-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 156,
+            "message": "GasToken2.allowance (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#154-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 185,
+            "message": "GasToken2.totalSupply (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#182-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 230,
+            "message": "GasToken2.mint (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#227-230) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "free",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 269,
+            "message": "GasToken2.free (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#261-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeUpTo",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 286,
+            "message": "GasToken2.freeUpTo (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#278-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeFrom",
+            "impact": "Informational",
+            "line": 294,
+            "line_end": 311,
+            "message": "GasToken2.freeFrom (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#294-311) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "freeFromUpTo",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 332,
+            "message": "GasToken2.freeFromUpTo (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#319-332) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0000000000b3f879cb30fe243b4dfee438691c04.sol:\n\t- pragma solidity^0.4.10 (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "GasToken2",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "function": "destroyChildren",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 251,
+            "message": "Low level call in GasToken2.destroyChildren (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#242-251):\n\t-mk_contract_address(this,i).call() 0x0000000000b3f879cb30fe243b4dfee438691c04.sol#250\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 26,
+            "message": "Function 'GasToken2.count_bytes' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#15-26) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 86,
+            "message": "Function 'GasToken2.mk_contract_address' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#26-86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Variable 'GasToken2.s_balances' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 97,
+            "message": "Variable 'GasToken2.s_allowances' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#95-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Variable 'GasToken2.s_head' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0000000000b3f879cb30fe243b4dfee438691c04.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Variable 'GasToken2.s_tail' (0x0000000000b3f879cb30fe243b4dfee438691c04.sol#177) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

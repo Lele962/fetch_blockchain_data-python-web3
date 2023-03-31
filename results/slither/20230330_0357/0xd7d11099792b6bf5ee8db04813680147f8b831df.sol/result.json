@@ -1,0 +1,484 @@
+{
+    "errors": [
+        "EXIT_CODE_49"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 219,
+            "line_end": 220,
+            "message": "Contract locking ether found in 0xd7d11099792b6bf5ee8db04813680147f8b831df.sol:\n\tContract POPKOIN has payable functions:\n\t - fallback (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#219-220)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 99,
+            "message": "POPKOIN.LOCKUP_TERM should be constant (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#98-99)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 63,
+            "message": "Ownable.transferOwnership (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#58-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 71,
+            "message": "Ownable.acceptOwnership (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#63-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 291,
+            "message": "POPKOIN.acceptOwnership (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#284-291) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 124,
+            "message": "POPKOIN.totalSupply (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#122-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 76,
+            "message": "ERC20.totalSupply (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#75-76) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 151,
+            "message": "POPKOIN.balanceOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#146-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 76,
+            "message": "ERC20.balanceOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#76) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 78,
+            "message": "ERC20.allowance (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#76-78) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 217,
+            "message": "POPKOIN.allowance (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#211-217) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 142,
+            "message": "POPKOIN.transfer (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#128-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 78,
+            "message": "ERC20.transfer (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#78) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 189,
+            "message": "POPKOIN.transferFrom (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#175-189) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 80,
+            "message": "ERC20.transferFrom (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#78-80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 201,
+            "message": "POPKOIN.approve (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#194-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 81,
+            "message": "ERC20.approve (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "lockupBalanceOf",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 160,
+            "message": "POPKOIN.lockupBalanceOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#158-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "unlockTimeOf",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 169,
+            "message": "POPKOIN.unlockTimeOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#167-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 220,
+            "message": "POPKOIN.fallback (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#219-220) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 231,
+            "message": "POPKOIN.burn (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#223-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "distribute",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 267,
+            "message": "POPKOIN.distribute (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#238-267) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "POPKOIN",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "function": "unlock",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 283,
+            "message": "POPKOIN.unlock (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#271-283) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7d11099792b6bf5ee8db04813680147f8b831df.sol:\n\t- pragma solidity^0.4.18 (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 49,
+            "message": "Function 'Ownable.Ownable' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#44-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_holder' of POPKOIN.balanceOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 212,
+            "message": "Parameter '_holder' of POPKOIN.allowance (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#211-212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 213,
+            "message": "Parameter '_spender' of POPKOIN.allowance (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#212-213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 129,
+            "message": "Parameter '_to' of POPKOIN.transfer (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#128-129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 129,
+            "message": "Parameter '_value' of POPKOIN.transfer (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 176,
+            "message": "Parameter '_from' of POPKOIN.transferFrom (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#175-176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Parameter '_to' of POPKOIN.transferFrom (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Parameter '_value' of POPKOIN.transferFrom (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 195,
+            "message": "Parameter '_spender' of POPKOIN.approve (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 198,
+            "message": "Parameter '_value' of POPKOIN.approve (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#195-198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 122,
+            "message": "Function 'POPKOIN.POPKOIN' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#109-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_holder' of POPKOIN.lockupBalanceOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 168,
+            "message": "Parameter '_holder' of POPKOIN.unlockTimeOf (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#167-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 223,
+            "message": "Parameter '_value' of POPKOIN.burn (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#223) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Parameter '_to' of POPKOIN.distribute (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 239,
+            "message": "Parameter '_value' of POPKOIN.distribute (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#238-239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_lockupRate' of POPKOIN.distribute (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 96,
+            "message": "Variable 'POPKOIN._totalSupply' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#96) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 99,
+            "message": "Variable 'POPKOIN.LOCKUP_TERM' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#98-99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 101,
+            "message": "Variable 'POPKOIN._balances' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#99-101) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 102,
+            "message": "Variable 'POPKOIN._allowed' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#101-102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 105,
+            "message": "Variable 'POPKOIN._lockupBalances' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#102-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7d11099792b6bf5ee8db04813680147f8b831df.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 107,
+            "message": "Variable 'POPKOIN._lockupExpireTime' (0xd7d11099792b6bf5ee8db04813680147f8b831df.sol#105-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

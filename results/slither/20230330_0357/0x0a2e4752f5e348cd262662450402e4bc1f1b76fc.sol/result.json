@@ -1,0 +1,142 @@
+{
+    "errors": [
+        "EXIT_CODE_14"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "DGCASH",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 5,
+            "line_end": 79,
+            "message": "DGCASH (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#5-79) has incorrect ERC20 function interface(s):\n\t-transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#61-66)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DGCASH",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 70,
+            "message": "amountRaised in DGCASH.fallback (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#70) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "DGCASH.buyPrice should be constant (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#13-14)\nDGCASH.datboiSupply should be constant (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#12-13)\nDGCASH.decimals should be constant (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#9-10)\nDGCASH.name should be constant (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#7-8)\nDGCASH.symbol should be constant (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#8-9)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 3,
+            "message": "tokenRecipient.receiveApproval (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#3) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DGCASH",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 66,
+            "message": "DGCASH.transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#61-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol:\n\t- pragma solidity^0.4.16 (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Contract 'tokenRecipient' (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#3-5) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 35,
+            "message": "Function 'DGCASH.DGCASH' (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#30-35) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 55,
+            "message": "Function 'DGCASH._transfer' (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#37-55) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 37,
+            "message": "Parameter '_from' of DGCASH._transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#37) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 38,
+            "message": "Parameter '_to' of DGCASH._transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#37-38) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 38,
+            "message": "Parameter '_value' of DGCASH._transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#38) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_to' of DGCASH.transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "Parameter '_value' of DGCASH.transfer (0x0a2e4752f5e348cd262662450402e4bc1f1b76fc.sol#61-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

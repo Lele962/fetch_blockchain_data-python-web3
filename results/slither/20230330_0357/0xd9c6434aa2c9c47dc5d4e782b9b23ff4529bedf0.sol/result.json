@@ -1,0 +1,365 @@
+{
+    "errors": [
+        "EXIT_CODE_34"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 334,
+            "line_end": 337,
+            "message": "AlkionToken.allowance.owner (local variable @ 0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#334-337) shadows:\n\t- Ownable.owner (function @ 0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#198-203)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 93,
+            "line_end": 99,
+            "message": "PauserRole.addPauser (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#93-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 101,
+            "message": "PauserRole.renouncePauser (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#99-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 136,
+            "message": "Pausable.paused (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#134-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 161,
+            "message": "Pausable.pause (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#158-161) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 170,
+            "message": "Pausable.unpause (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#166-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 203,
+            "message": "Ownable.owner (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#198-203) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 224,
+            "message": "Ownable.renounceOwnership (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#221-224) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 233,
+            "message": "Ownable.transferOwnership (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#230-233) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 351,
+            "message": "AlkionToken.transfer (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#342-351) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 12,
+            "message": "IERC20.transfer (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#10-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 351,
+            "line_end": 360,
+            "message": "AlkionToken.approve (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#351-360) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 14,
+            "message": "IERC20.approve (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#12-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 16,
+            "message": "IERC20.transferFrom (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#14-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 360,
+            "line_end": 372,
+            "message": "AlkionToken.transferFrom (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#360-372) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 328,
+            "message": "AlkionToken.totalSupply (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#323-328) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "IERC20.totalSupply (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#16-18) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 20,
+            "message": "IERC20.balanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#18-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 334,
+            "message": "AlkionToken.balanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#329-334) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "IERC20.allowance (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 334,
+            "line_end": 342,
+            "message": "AlkionToken.allowance (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#334-342) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "impl",
+            "impact": "Informational",
+            "line": 301,
+            "line_end": 313,
+            "message": "AlkionToken.impl (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#301-313) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "addressImpl",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 323,
+            "message": "AlkionToken.addressImpl (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#314-323) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 380,
+            "message": "AlkionToken.burn (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#372-380) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 380,
+            "line_end": 387,
+            "message": "AlkionToken.burnFrom (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#380-387) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "totalBalanceOf",
+            "impact": "Informational",
+            "message": "AlkionToken.totalBalanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AlkionToken",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "function": "lockedBalanceOf",
+            "impact": "Informational",
+            "message": "AlkionToken.lockedBalanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol:\n\t- pragma solidity^0.5.0 (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 106,
+            "message": "Function 'PauserRole._addPauser' (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#101-106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 114,
+            "message": "Function 'PauserRole._removePauser' (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#106-114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 247,
+            "message": "Function 'Ownable._transferOwnership' (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#242-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "message": "Parameter '_of' of AlkionToken.totalBalanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "message": "Parameter '_of' of AlkionToken.lockedBalanceOf (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 295,
+            "message": "Variable 'AlkionToken._tokenImpl' (0xd9c6434aa2c9c47dc5d4e782b9b23ff4529bedf0.sol#292-295) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,346 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "LocalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "LocalToken",
+            "impact": "Low",
+            "line": 176,
+            "line_end": 209,
+            "message": "Reentrancy in LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#176-209):\n\tExternal calls:\n\t- require(bool)(msg.sender == universalToken.owner()) (0x344005c29af957567f0b40950b425ed018b92170.sol#191-193)\n\tState variables written after the call(s):\n\t- _balances (0x344005c29af957567f0b40950b425ed018b92170.sol#207-209)\n\t- _supply (0x344005c29af957567f0b40950b425ed018b92170.sol#197-198)\n\t- decimals (0x344005c29af957567f0b40950b425ed018b92170.sol#193-194)\n\t- govtAccount (0x344005c29af957567f0b40950b425ed018b92170.sol#199-201)\n\t- localityCode (0x344005c29af957567f0b40950b425ed018b92170.sol#196)\n\t- name (0x344005c29af957567f0b40950b425ed018b92170.sol#195)\n\t- owner (0x344005c29af957567f0b40950b425ed018b92170.sol#201-202)\n\t- pmtAccount (0x344005c29af957567f0b40950b425ed018b92170.sol#201)\n\t- symbol (0x344005c29af957567f0b40950b425ed018b92170.sol#194-195)\n\t- taxRateNumerator (0x344005c29af957567f0b40950b425ed018b92170.sol#205-207)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 55,
+            "message": "Token.totalSupply (0x344005c29af957567f0b40950b425ed018b92170.sol#51-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 59,
+            "message": "Token.balanceOf (0x344005c29af957567f0b40950b425ed018b92170.sol#55-59) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 63,
+            "message": "Token.allowance (0x344005c29af957567f0b40950b425ed018b92170.sol#59-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 74,
+            "message": "Token.transfer (0x344005c29af957567f0b40950b425ed018b92170.sol#63-74) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 88,
+            "message": "Token.transferFrom (0x344005c29af957567f0b40950b425ed018b92170.sol#74-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 97,
+            "message": "Token.approve (0x344005c29af957567f0b40950b425ed018b92170.sol#88-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 106,
+            "message": "Token.mint (0x344005c29af957567f0b40950b425ed018b92170.sol#97-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 110,
+            "message": "Token.setOwner (0x344005c29af957567f0b40950b425ed018b92170.sol#106-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UniversalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyTransFee",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 156,
+            "message": "UniversalToken.modifyTransFee (0x344005c29af957567f0b40950b425ed018b92170.sol#146-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UniversalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyFeeShare",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 166,
+            "message": "UniversalToken.modifyFeeShare (0x344005c29af957567f0b40950b425ed018b92170.sol#156-166) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LocalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyLocality",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 214,
+            "message": "LocalToken.modifyLocality (0x344005c29af957567f0b40950b425ed018b92170.sol#209-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LocalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyTaxRate",
+            "impact": "Informational",
+            "line": 215,
+            "line_end": 217,
+            "message": "LocalToken.modifyTaxRate (0x344005c29af957567f0b40950b425ed018b92170.sol#215-217) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LocalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyGovtAccount",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 231,
+            "message": "LocalToken.modifyGovtAccount (0x344005c29af957567f0b40950b425ed018b92170.sol#226-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LocalToken",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "function": "modifyPMTAccount",
+            "impact": "Informational",
+            "message": "LocalToken.modifyPMTAccount (0x344005c29af957567f0b40950b425ed018b92170.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x344005c29af957567f0b40950b425ed018b92170.sol:\n\t- pragma solidity^0.4.21 (0x344005c29af957567f0b40950b425ed018b92170.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 51,
+            "message": "Function 'Token.Token' (0x344005c29af957567f0b40950b425ed018b92170.sol#48-51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Variable 'Token._supply' (0x344005c29af957567f0b40950b425ed018b92170.sol#35) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "Variable 'Token._balances' (0x344005c29af957567f0b40950b425ed018b92170.sol#35-36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 146,
+            "message": "Function 'UniversalToken.UniversalToken' (0x344005c29af957567f0b40950b425ed018b92170.sol#130-146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 148,
+            "message": "Parameter '_xactionFeeMult' of UniversalToken.modifyTransFee (0x344005c29af957567f0b40950b425ed018b92170.sol#148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 161,
+            "message": "Parameter '_share' of UniversalToken.modifyFeeShare (0x344005c29af957567f0b40950b425ed018b92170.sol#157-161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 209,
+            "message": "Function 'LocalToken.LocalToken' (0x344005c29af957567f0b40950b425ed018b92170.sol#176-209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_maxTokens' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 179,
+            "message": "Parameter '_taxRateMult' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#178-179) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 180,
+            "message": "Parameter '_tokenSymbol' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#179-180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 180,
+            "message": "Parameter '_tokenName' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_localityCode' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_govt' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_pmt' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_universalToken' of LocalToken.LocalToken (0x344005c29af957567f0b40950b425ed018b92170.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 215,
+            "message": "Parameter '_taxMult' of LocalToken.modifyTaxRate (0x344005c29af957567f0b40950b425ed018b92170.sol#215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "message": "Parameter '_pmt' of LocalToken.modifyPMTAccount (0x344005c29af957567f0b40950b425ed018b92170.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "DSMath.DENOMINATOR (0x344005c29af957567f0b40950b425ed018b92170.sol#5-6) is never used in UniversalToken\n",
+            "name": "unused-state"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x344005c29af957567f0b40950b425ed018b92170.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "DSMath.DENOMINATOR (0x344005c29af957567f0b40950b425ed018b92170.sol#5-6) is never used in LocalToken\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

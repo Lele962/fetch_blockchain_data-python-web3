@@ -1,0 +1,259 @@
+{
+    "errors": [
+        "EXIT_CODE_26"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "Collect",
+            "impact": "High",
+            "line": 43,
+            "line_end": 59,
+            "message": "Reentrancy in PERSONAL_BANK.Collect (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#43-59):\n\tExternal calls:\n\t- msg.sender.call.value(_am)() (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#48-57)\n\tState variables written after the call(s):\n\t- balances (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#50)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "SetMinSum",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 20,
+            "message": "PERSONAL_BANK.SetMinSum (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#13-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "SetLogFile",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 27,
+            "message": "PERSONAL_BANK.SetLogFile (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#20-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "Initialized",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 34,
+            "message": "PERSONAL_BANK.Initialized (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#28-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "Collect",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 59,
+            "message": "PERSONAL_BANK.Collect (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#43-59) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 70,
+            "message": "PERSONAL_BANK.fallback (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#59-70) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LogFile",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "AddMessage",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 89,
+            "message": "LogFile.AddMessage (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#83-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol:\n\t- pragma solidity^0.4.19 (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "PERSONAL_BANK",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "function": "Collect",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 59,
+            "message": "Low level call in PERSONAL_BANK.Collect (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#43-59):\n\t-msg.sender.call.value(_am)() 0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#48-57\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 70,
+            "message": "Contract 'PERSONAL_BANK' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#3-70) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 20,
+            "message": "Function 'PERSONAL_BANK.SetMinSum' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#13-20) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 14,
+            "message": "Parameter '_val' of PERSONAL_BANK.SetMinSum (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#14) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 27,
+            "message": "Function 'PERSONAL_BANK.SetLogFile' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#20-27) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 23,
+            "message": "Parameter '_log' of PERSONAL_BANK.SetLogFile (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#21-23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 34,
+            "message": "Function 'PERSONAL_BANK.Initialized' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#28-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 42,
+            "message": "Function 'PERSONAL_BANK.Deposit' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#35-42) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 59,
+            "message": "Function 'PERSONAL_BANK.Collect' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#43-59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 45,
+            "message": "Parameter '_am' of PERSONAL_BANK.Collect (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "Variable 'PERSONAL_BANK.MinSum' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#7-8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "Variable 'PERSONAL_BANK.Log' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#9-11) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 89,
+            "message": "Function 'LogFile.AddMessage' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#83-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 84,
+            "message": "Parameter '_adr' of LogFile.AddMessage (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#83-84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Parameter '_val' of LogFile.AddMessage (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 85,
+            "message": "Parameter '_data' of LogFile.AddMessage (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#84-85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Variable 'LogFile.History' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Variable 'LogFile.LastMsg' (0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol#80-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

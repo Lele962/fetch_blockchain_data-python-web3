@@ -1,0 +1,626 @@
+{
+    "errors": [
+        "EXIT_CODE_64"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "gameOp",
+            "impact": "High",
+            "line": 330,
+            "message": "Win1Million.gameOpUint (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#330) is never initialized. It is used in:\n\t- gameOp (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#330-333)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "constructor",
+            "impact": "Medium",
+            "line": 136,
+            "line_end": 138,
+            "message": "_addressList in Win1Million.constructor (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#136-138) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "playGame",
+            "impact": "Medium",
+            "line": 191,
+            "line_end": 192,
+            "message": "_addressList in Win1Million.playGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#191-192) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 57,
+            "message": "Win1Million.charityPercent should be constant (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#56-57)\nWin1Million.gameOpUint should be constant (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#330)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "getWinnersLen",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 114,
+            "message": "Win1Million.getWinnersLen (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#113-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "getGamesPlayers",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 118,
+            "message": "Win1Million.getGamesPlayers (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#115-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "getGamesPlayerBids",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 126,
+            "message": "Win1Million.getGamesPlayerBids (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#119-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "playGameCheckBid",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 170,
+            "message": "Win1Million.playGameCheckBid (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#148-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "playGame",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 228,
+            "message": "Win1Million.playGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#170-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "completeGame",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 277,
+            "message": "Win1Million.completeGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#241-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "player_cancelGame",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 312,
+            "message": "Win1Million.player_cancelGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#285-312) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "player_withdrawPendingTransactions",
+            "impact": "Informational",
+            "line": 313,
+            "line_end": 330,
+            "message": "Win1Million.player_withdrawPendingTransactions (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#313-330) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "gameOp",
+            "impact": "Informational",
+            "line": 330,
+            "line_end": 333,
+            "message": "Win1Million.gameOp (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#330-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_SetPause",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 336,
+            "message": "Win1Million.private_SetPause (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#333-336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_AddGameBar",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 343,
+            "message": "Win1Million.private_AddGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#336-343) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_DelGameBar",
+            "impact": "Informational",
+            "line": 343,
+            "line_end": 349,
+            "message": "Win1Million.private_DelGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#343-349) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_UpdateGameBarLimit",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 353,
+            "message": "Win1Million.private_UpdateGameBarLimit (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#350-353) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_setHousePercent",
+            "impact": "Informational",
+            "line": 353,
+            "line_end": 356,
+            "message": "Win1Million.private_setHousePercent (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#353-356) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_setMinGamePlayAmount",
+            "impact": "Informational",
+            "line": 356,
+            "line_end": 360,
+            "message": "Win1Million.private_setMinGamePlayAmount (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#356-360) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_setBankAddress",
+            "impact": "Informational",
+            "line": 360,
+            "line_end": 365,
+            "message": "Win1Million.private_setBankAddress (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#360-365) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_withdrawBankFunds",
+            "impact": "Informational",
+            "line": 365,
+            "line_end": 370,
+            "message": "Win1Million.private_withdrawBankFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#365-370) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_withdrawBankFunds",
+            "impact": "Informational",
+            "line": 370,
+            "line_end": 375,
+            "message": "Win1Million.private_withdrawBankFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#370-375) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_setCharityAddress",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 378,
+            "message": "Win1Million.private_setCharityAddress (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#375-378) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_sendCharityFunds",
+            "impact": "Informational",
+            "line": 384,
+            "line_end": 395,
+            "message": "Win1Million.private_sendCharityFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#384-395) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "private_sendCharityFunds",
+            "impact": "Informational",
+            "line": 395,
+            "line_end": 405,
+            "message": "Win1Million.private_sendCharityFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#395-405) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol:\n\t- pragma solidity^0.4.22 (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "Win1Million",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "function": "player_withdrawPendingTransactions",
+            "impact": "Informational",
+            "line": 313,
+            "line_end": 330,
+            "message": "Low level call in Win1Million.player_withdrawPendingTransactions (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#313-330):\n\t-msg.sender.call.value(withdrawAmount)() 0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#316-330\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Event 'Win1Million.uintEvent' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#144) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Event 'Win1Million.gameComplete' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#145) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 235,
+            "message": "Event 'Win1Million.completeGameResult' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#228-235) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 281,
+            "message": "Event 'Win1Million.cancelGame' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#277-281) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 384,
+            "message": "Event 'Win1Million.charityDonation' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#378-384) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_winningNumber' of Win1Million.completeGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 242,
+            "message": "Parameter '_proof' of Win1Million.completeGame (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#241-242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 312,
+            "message": "Function 'Win1Million.player_cancelGame' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#285-312) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 313,
+            "line_end": 330,
+            "message": "Function 'Win1Million.player_withdrawPendingTransactions' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#313-330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 336,
+            "message": "Function 'Win1Million.private_SetPause' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#333-336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 335,
+            "message": "Parameter '_gamePaused' of Win1Million.private_SetPause (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#333-335) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 343,
+            "message": "Function 'Win1Million.private_AddGameBar' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#336-343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 337,
+            "message": "Parameter '_limit' of Win1Million.private_AddGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#336-337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 337,
+            "message": "Parameter '_answer1' of Win1Million.private_AddGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 338,
+            "message": "Parameter '_answer2' of Win1Million.private_AddGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#337-338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 338,
+            "line_end": 339,
+            "message": "Parameter '_answer3' of Win1Million.private_AddGameBar (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#338-339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 343,
+            "line_end": 349,
+            "message": "Function 'Win1Million.private_DelGameBar' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#343-349) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 353,
+            "message": "Function 'Win1Million.private_UpdateGameBarLimit' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#350-353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 352,
+            "message": "Parameter '_limit' of Win1Million.private_UpdateGameBarLimit (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#352) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 353,
+            "line_end": 356,
+            "message": "Function 'Win1Million.private_setHousePercent' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#353-356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 355,
+            "message": "Parameter '_housePercent' of Win1Million.private_setHousePercent (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#355) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 356,
+            "line_end": 360,
+            "message": "Function 'Win1Million.private_setMinGamePlayAmount' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#356-360) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 357,
+            "line_end": 359,
+            "message": "Parameter '_minGamePlayAmount' of Win1Million.private_setMinGamePlayAmount (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#357-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 360,
+            "line_end": 365,
+            "message": "Function 'Win1Million.private_setBankAddress' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#360-365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 361,
+            "message": "Parameter '_bankAddress' of Win1Million.private_setBankAddress (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 365,
+            "line_end": 370,
+            "message": "Function 'Win1Million.private_withdrawBankFunds' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#365-370) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 365,
+            "message": "Parameter '_whereTo' of Win1Million.private_withdrawBankFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 370,
+            "line_end": 375,
+            "message": "Function 'Win1Million.private_withdrawBankFunds' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#370-375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 371,
+            "message": "Parameter '_whereTo' of Win1Million.private_withdrawBankFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#371) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 372,
+            "message": "Parameter '_amount' of Win1Million.private_withdrawBankFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 378,
+            "message": "Function 'Win1Million.private_setCharityAddress' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#375-378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 376,
+            "message": "Parameter '_charityAddress' of Win1Million.private_setCharityAddress (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#376) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 384,
+            "line_end": 395,
+            "message": "Function 'Win1Million.private_sendCharityFunds' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#384-395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_charityName' of Win1Million.private_sendCharityFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 395,
+            "line_end": 405,
+            "message": "Function 'Win1Million.private_sendCharityFunds' (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#395-405) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 398,
+            "message": "Parameter '_charityName' of Win1Million.private_sendCharityFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#397-398) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 401,
+            "message": "Parameter '_amount' of Win1Million.private_sendCharityFunds (0xd7e2ba67eda20e4d055fa4b73b658b0eb6d6b379.sol#398-401) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "errors": [
+        "EXIT_CODE_21"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "RTDAirdrop",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "setting",
+            "impact": "Medium",
+            "line": 50,
+            "line_end": 72,
+            "message": "Reentrancy in RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50-72):\n\tExternal calls:\n\t- (addr,amount) = c.getOwner(i) (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#65)\n\tState variables written after the call(s):\n\t- round (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#65-72)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RTDAirdrop",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "setting",
+            "impact": "Low",
+            "line": 62,
+            "line_end": 72,
+            "message": "RTDAirdrop.setting has external calls inside a loop:\n\t- i < c.getOwnerCount() (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#62-72)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RTDAirdrop",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "setting",
+            "impact": "Low",
+            "line": 65,
+            "message": "RTDAirdrop.setting has external calls inside a loop:\n\t- (addr,amount) = c.getOwner(i) (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#65)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 7,
+            "message": "owned.manager should be constant (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#5-7)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Coin",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "getOwner",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 19,
+            "message": "Coin.getOwner (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#18-19) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Coin",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "getOwnerCount",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 22,
+            "message": "Coin.getOwnerCount (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#19-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RTDAirdrop",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "setting",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 72,
+            "message": "RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RTDAirdrop",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "function": "getAirDrop",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 81,
+            "message": "RTDAirdrop.getAirDrop (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#73-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol:\n\t- pragma solidity>=0.4.0<0.6.0 (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 17,
+            "message": "Contract 'owned' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#3-17) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "Event 'RTDAirdrop.console' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#23-24) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 50,
+            "message": "Parameter 'new_detail' of RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 50,
+            "message": "Parameter 'new_eth_price_per_usd' of RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 50,
+            "message": "Parameter 'new_rtd_price_per_eth' of RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "Parameter 'new_date_start' of RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#50-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter 'new_date_end' of RTDAirdrop.setting (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "Variable 'RTDAirdrop.eth_price_per_usd' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#26-27) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 28,
+            "message": "Variable 'RTDAirdrop.rtd_price_per_eth' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#27-28) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 29,
+            "message": "Variable 'RTDAirdrop.date_start' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#29) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 30,
+            "message": "Variable 'RTDAirdrop.date_end' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#30) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "Variable 'RTDAirdrop.active_round' (0x1a788aa1470dcb268efe613bc3620767abd4b4da.sol#32-33) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

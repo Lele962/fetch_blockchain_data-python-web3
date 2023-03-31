@@ -1,0 +1,982 @@
+{
+    "errors": [
+        "EXIT_CODE_106"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "doFinalizeSale",
+            "impact": "High",
+            "line": 843,
+            "line_end": 863,
+            "message": "BouleICO.doFinalizeSale (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#843-863) sends eth to arbitrary user\n\tDangerous calls:\n\t- ! wallet.send(this.balance) (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#849-853)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 88,
+            "line_end": 100,
+            "message": "ERC20Basic (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#88-100) has incorrect ERC20 function interface(s):\n\t-transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#90-93)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 103,
+            "line_end": 116,
+            "message": "ERC20 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#103-116) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#105-106)\n\t-approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#106-109)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 124,
+            "line_end": 154,
+            "message": "BasicToken (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#124-154) has incorrect ERC20 function interface(s):\n\t-transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#130-137)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 163,
+            "line_end": 219,
+            "message": "StandardToken (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#163-219) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#171-183)\n\t-approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#188-200)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 287,
+            "line_end": 289,
+            "message": "Contract locking ether found in 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\tContract BouleToken has payable functions:\n\t - fallback (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#287-289)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Low",
+            "line": 520,
+            "line_end": 523,
+            "message": "MultiSigWallet.executeTransaction.tx (local variable @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#520-523) shadows built-in symbol \"tx\"\n",
+            "name": "shadowing-builtin"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "doFinalizeSale",
+            "impact": "Low",
+            "line": 843,
+            "line_end": 863,
+            "message": "Reentrancy in BouleICO.doFinalizeSale (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#843-863):\n\tExternal calls:\n\t- token.transfer(bouleDevMultisig,getTokensLeft()) (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#854-858)\n\tExternal calls sending eth:\n\t- ! wallet.send(this.balance) (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#849-853)\n\tState variables written after the call(s):\n\t- saleFinalized (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#859)\n\t- saleStopped (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#860-863)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "doPayment",
+            "impact": "Low",
+            "line": 778,
+            "line_end": 807,
+            "message": "Reentrancy in BouleICO.doPayment (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#778-807):\n\tExternal calls:\n\t- token.transfer(_owner,tokenAmount) (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#798-799)\n\tState variables written after the call(s):\n\t- totalCollected (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#800-803)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 284,
+            "message": "BouleToken.decimals should be constant (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#284)\nBouleToken.name should be constant (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#283)\nBouleToken.symbol should be constant (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#283)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Different versions of Solidity is used in 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Version used: ['^0.4.11', '^0.4.4']\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#1 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#38-39 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#83-84 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#100-101 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#116-118 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#154 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#219 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#269 declares pragma solidity^0.4.11\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#289 declares pragma solidity^0.4.4\n\t- 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#665-666 declares pragma solidity^0.4.11\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#67:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 199,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#198-199:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#238:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#287:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 404,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#404:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 332,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#332:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 337,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#337:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 343,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#343:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 349,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#349:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 355,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#355:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 362,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#362:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 366,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#366:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 373,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#372-373:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 382,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#382:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 713,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#713:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 793,
+            "line_end": 794,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#793-794:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 841,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#841:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 853,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#853:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 869,
+            "line_end": 870,
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#869-870:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 83,
+            "message": "Ownable.transferOwnership (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#71-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 154,
+            "message": "BasicToken.balanceOf (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#150-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 90,
+            "message": "ERC20Basic.balanceOf (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#89-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 137,
+            "message": "BasicToken.transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#130-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 93,
+            "message": "ERC20Basic.transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#90-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "ERC20.allowance (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#104-105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "StandardToken.allowance (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#217-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 183,
+            "message": "StandardToken.transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#171-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 106,
+            "message": "ERC20.transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#105-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 200,
+            "message": "StandardToken.approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#188-200) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 109,
+            "message": "ERC20.approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#106-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 258,
+            "message": "MintableToken.mint (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#248-258) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 268,
+            "message": "MintableToken.finishMinting (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#265-268) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleToken",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 287,
+            "line_end": 289,
+            "message": "BouleToken.fallback (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#287-289) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 384,
+            "line_end": 388,
+            "message": "MultiSigWallet.fallback (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#384-388) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "addOwner",
+            "impact": "Informational",
+            "line": 413,
+            "line_end": 422,
+            "message": "MultiSigWallet.addOwner (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#413-422) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "removeOwner",
+            "impact": "Informational",
+            "line": 426,
+            "line_end": 440,
+            "message": "MultiSigWallet.removeOwner (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#426-440) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "replaceOwner",
+            "impact": "Informational",
+            "line": 447,
+            "line_end": 462,
+            "message": "MultiSigWallet.replaceOwner (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#447-462) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "submitTransaction",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 487,
+            "message": "MultiSigWallet.submitTransaction (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#479-487) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "revokeConfirmation",
+            "impact": "Informational",
+            "line": 503,
+            "line_end": 511,
+            "message": "MultiSigWallet.revokeConfirmation (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#503-511) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "getConfirmationCount",
+            "impact": "Informational",
+            "line": 578,
+            "line_end": 586,
+            "message": "MultiSigWallet.getConfirmationCount (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#578-586) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "getTransactionCount",
+            "impact": "Informational",
+            "line": 599,
+            "line_end": 608,
+            "message": "MultiSigWallet.getTransactionCount (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#599-608) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "getOwners",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 613,
+            "message": "MultiSigWallet.getOwners (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#611-613) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "getConfirmations",
+            "impact": "Informational",
+            "line": 620,
+            "line_end": 634,
+            "message": "MultiSigWallet.getConfirmations (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#620-634) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "getTransactionIds",
+            "impact": "Informational",
+            "line": 643,
+            "line_end": 665,
+            "message": "MultiSigWallet.getTransactionIds (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#643-665) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "setWhitelistStatus",
+            "impact": "Informational",
+            "line": 734,
+            "line_end": 738,
+            "message": "BouleICO.setWhitelistStatus (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#734-738) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 768,
+            "line_end": 769,
+            "message": "BouleICO.fallback (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#768-769) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "emergencyStopSale",
+            "impact": "Informational",
+            "line": 815,
+            "line_end": 818,
+            "message": "BouleICO.emergencyStopSale (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#815-818) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "restartSale",
+            "impact": "Informational",
+            "line": 822,
+            "line_end": 830,
+            "message": "BouleICO.restartSale (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#822-830) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "moveFunds",
+            "impact": "Informational",
+            "line": 836,
+            "line_end": 841,
+            "message": "BouleICO.moveFunds (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#836-841) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BouleICO",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "finalizeSale",
+            "impact": "Informational",
+            "line": 842,
+            "line_end": 843,
+            "message": "BouleICO.finalizeSale (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#842-843) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol:\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#1): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#38-39): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#83-84): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#100-101): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#116-118): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#154): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#219): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#269): it allows old versions\n\t- pragma solidity^0.4.4 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#289): it allows old versions\n\t- pragma solidity^0.4.11 (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#665-666): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiSigWallet",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "function": "executeTransaction",
+            "impact": "Informational",
+            "line": 517,
+            "line_end": 535,
+            "message": "Low level call in MultiSigWallet.executeTransaction (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#517-535):\n\t-tx.destination.call.value(tx.value)(tx.data) 0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#526-535\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 56,
+            "message": "Function 'Ownable.Ownable' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#53-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 130,
+            "message": "Parameter '_to' of BasicToken.transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 131,
+            "message": "Parameter '_value' of BasicToken.transfer (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 171,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#171) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 171,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#171) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 172,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#171-172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 189,
+            "message": "Parameter '_spender' of StandardToken.approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#188-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_value' of StandardToken.approve (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 248,
+            "message": "Parameter '_to' of MintableToken.mint (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 249,
+            "message": "Parameter '_amount' of MintableToken.mint (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#248-249) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 408,
+            "message": "Function 'MultiSigWallet.MultiSigWallet' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#397-408) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 397,
+            "message": "Parameter '_owners' of MultiSigWallet.MultiSigWallet (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 397,
+            "message": "Parameter '_required' of MultiSigWallet.MultiSigWallet (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_required' of MultiSigWallet.changeRequirement (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 706,
+            "line_end": 728,
+            "message": "Function 'BouleICO.BouleICO' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#706-728) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 706,
+            "line_end": 707,
+            "message": "Parameter '_token' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#706-707) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 707,
+            "message": "Parameter '_bouleDevMultisig' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#707) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 707,
+            "message": "Parameter '_startTime' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#707) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 708,
+            "line_end": 709,
+            "message": "Parameter '_secondPriceTime' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#708-709) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 709,
+            "line_end": 710,
+            "message": "Parameter '_thirdPriceTime' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#709-710) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 710,
+            "message": "Parameter '_fourthPriceTime' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#710) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 711,
+            "line_end": 713,
+            "message": "Parameter '_endTime' of BouleICO.BouleICO (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#711-713) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 779,
+            "message": "Parameter '_owner' of BouleICO.doPayment (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#779) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "line": 693,
+            "line_end": 695,
+            "message": "Constant 'BouleICO.minInvestment' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol#693-695) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.only_during_sale_period' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.only_during_sale_period_or_whitelisted' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.only_after_sale' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.only_sale_stopped' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.only_sale_not_stopped' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.non_zero_address' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol",
+            "impact": "Informational",
+            "message": "Modifier 'BouleICO.minimum_value' (0x341027eccd7449ce0058ca5ef7ae17cb15a29ae7.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,500 @@
+{
+    "errors": [
+        "EXIT_CODE_50"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Medium",
+            "line": 66,
+            "message": "Elsevier.totalSupply (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#66) shadows:\n\t- ERC20Basic.totalSupply (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#34)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "ERC20Basic.totalSupply should be constant (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#34)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 29,
+            "message": "ForeignToken.balanceOf (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#28-29) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 33,
+            "message": "ForeignToken.transfer (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#29-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 228,
+            "message": "Elsevier.balanceOf (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#224-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "ERC20Basic.balanceOf (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#34-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ERC20Basic.transfer (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 243,
+            "message": "Elsevier.transfer (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#233-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 270,
+            "message": "Elsevier.allowance (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#265-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 41,
+            "message": "ERC20.allowance (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#40-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 42,
+            "message": "ERC20.transferFrom (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#41-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 255,
+            "message": "Elsevier.transferFrom (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#243-255) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 265,
+            "message": "Elsevier.approve (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#255-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "ERC20.approve (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#42-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "distr",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "Token.distr (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "Token.totalSupply (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 54,
+            "message": "Token.balanceOf (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#49-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "setParameters",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 111,
+            "message": "Elsevier.setParameters (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#107-111) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 117,
+            "message": "Elsevier.transferOwnership (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#112-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "enableWhitelist",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 123,
+            "message": "Elsevier.enableWhitelist (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#117-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "disableWhitelist",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 130,
+            "message": "Elsevier.disableWhitelist (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#124-130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "finishDistribution",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 135,
+            "message": "Elsevier.finishDistribution (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#130-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "airdrop",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 165,
+            "message": "Elsevier.airdrop (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#150-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "distribution",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 180,
+            "message": "Elsevier.distribution (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#165-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "distributeAmounts",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 198,
+            "message": "Elsevier.distributeAmounts (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#180-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "getTokenBalance",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 277,
+            "message": "Elsevier.getTokenBalance (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#271-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 278,
+            "message": "Elsevier.withdraw (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#277-278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 294,
+            "message": "Elsevier.burn (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#278-294) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Elsevier",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "message": "Elsevier.withdrawForeignTokens (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol:\n\t- pragma solidity^0.4.19 (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 225,
+            "message": "Parameter '_owner' of Elsevier.balanceOf (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#224-225) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 233,
+            "message": "Parameter '_to' of Elsevier.transfer (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 234,
+            "message": "Parameter '_amount' of Elsevier.transfer (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#233-234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 266,
+            "message": "Parameter '_owner' of Elsevier.allowance (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#265-266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 266,
+            "message": "Parameter '_spender' of Elsevier.allowance (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 245,
+            "message": "Parameter '_from' of Elsevier.transferFrom (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#243-245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_to' of Elsevier.transferFrom (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_amount' of Elsevier.transferFrom (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 256,
+            "message": "Parameter '_spender' of Elsevier.approve (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#255-256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 256,
+            "message": "Parameter '_value' of Elsevier.approve (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 106,
+            "message": "Function 'Elsevier.Elsevier' (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#100-106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 101,
+            "message": "Parameter '_value' of Elsevier.Elsevier (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#101) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 102,
+            "message": "Parameter '_minReq' of Elsevier.Elsevier (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#101-102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 110,
+            "message": "Parameter '_value' of Elsevier.setParameters (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#108-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Parameter '_minReq' of Elsevier.setParameters (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_to' of Elsevier.distr (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_amount' of Elsevier.distr (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 280,
+            "message": "Parameter '_value' of Elsevier.burn (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#280) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of Elsevier.withdrawForeignTokens (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Elsevier.totalReserved (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#67) is never used in Elsevier\nElsevier.totalBounties (0x342156c8d3ba54abc67920d35ba1d1e67201ac9c.sol#68) is never used in Elsevier\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

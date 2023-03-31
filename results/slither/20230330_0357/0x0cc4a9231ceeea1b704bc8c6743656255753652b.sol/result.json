@@ -1,0 +1,263 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 182,
+            "message": "Contract locking ether found in 0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol:\n\tContract FunWorldCoinToken has payable functions:\n\t - fallback (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#182)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 32,
+            "message": "Owned.transferOwnership (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#27-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 42,
+            "message": "Owned.acceptOwnership (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#32-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 133,
+            "message": "FunWorldCoinToken.totalSupply (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#131-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 66,
+            "message": "ERC20Interface.totalSupply (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 67,
+            "message": "ERC20Interface.balanceOf (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#66-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "FunWorldCoinToken.balanceOf (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#137-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 169,
+            "message": "FunWorldCoinToken.allowance (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#167-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 68,
+            "message": "ERC20Interface.allowance (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#67-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 69,
+            "message": "ERC20Interface.transfer (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#68-69) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 148,
+            "message": "FunWorldCoinToken.transfer (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#138-148) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 154,
+            "message": "FunWorldCoinToken.approve (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#148-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 70,
+            "message": "ERC20Interface.approve (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#69-70) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 72,
+            "message": "ERC20Interface.transferFrom (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#70-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 166,
+            "message": "FunWorldCoinToken.transferFrom (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#155-166) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 93,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#83-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 181,
+            "message": "FunWorldCoinToken.approveAndCall (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#169-181) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 182,
+            "message": "FunWorldCoinToken.fallback (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#182) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FunWorldCoinToken",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 185,
+            "message": "FunWorldCoinToken.transferAnyERC20Token (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#183-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol:\n\t- pragma solidity^0.4.18 (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 21,
+            "message": "Function 'Owned.Owned' (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#16-21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 28,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#27-28) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 130,
+            "message": "Function 'FunWorldCoinToken.FunWorldCoinToken' (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#119-130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol",
+            "impact": "Informational",
+            "line": 109,
+            "message": "Variable 'FunWorldCoinToken._totalSupply' (0x0cc4a9231ceeea1b704bc8c6743656255753652b.sol#109) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,375 @@
+{
+    "errors": [
+        "EXIT_CODE_40"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "REKT",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "emergencyERC20Drain",
+            "impact": "Medium",
+            "message": "REKT.emergencyERC20Drain (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol) does not use the value returned by external calls:\n\t-token.transfer(owner,amount) (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 102,
+            "message": "BasicToken.balanceOf (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#96-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 66,
+            "message": "ERC20Basic.balanceOf (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 104,
+            "message": "ERC20.allowance (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#103-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 172,
+            "message": "StandardToken.allowance (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#167-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "ERC20.approve (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#106-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 157,
+            "message": "StandardToken.approve (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#144-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKTTokenSale",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "setHaltSale",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 196,
+            "message": "REKTTokenSale.setHaltSale (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#194-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKTTokenSale",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 198,
+            "message": "REKTTokenSale.fallback (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#196-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKTTokenSale",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "emergencyDrain",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 238,
+            "message": "REKTTokenSale.emergencyDrain (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#223-238) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKT",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "setTokenSaleContract",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 273,
+            "message": "REKT.setTokenSaleContract (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#268-273) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKT",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 292,
+            "message": "REKT.burnFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#291-292) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "REKT",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "function": "emergencyERC20Drain",
+            "impact": "Informational",
+            "message": "REKT.emergencyERC20Drain (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol:\n\t- pragma solidity^0.4.13 (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 43,
+            "message": "Function 'Ownable.Ownable' (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#38-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 101,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#99-101) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Parameter '_to' of BasicToken.transfer (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Parameter '_value' of BasicToken.transfer (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 168,
+            "line_end": 170,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#168-170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Parameter '_spender' of StandardToken.approve (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#145) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Parameter '_value' of StandardToken.approve (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#145) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 194,
+            "message": "Function 'REKTTokenSale.REKTTokenSale' (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#182-194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 185,
+            "message": "Parameter '_admin' of REKTTokenSale.REKTTokenSale (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#183-185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 186,
+            "message": "Parameter '_REKTMultiSigWallet' of REKTTokenSale.REKTTokenSale (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#185-186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 186,
+            "message": "Parameter '_token' of REKTTokenSale.REKTTokenSale (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 177,
+            "message": "Variable 'REKTTokenSale.REKTMultiSigWallet' (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#175-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 265,
+            "message": "Parameter '_to' of REKT.transfer (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 265,
+            "message": "Parameter '_value' of REKT.transfer (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_from' of REKT.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_to' of REKT.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_value' of REKT.transferFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 262,
+            "message": "Function 'REKT.REKT' (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#248-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 271,
+            "message": "Parameter '_tokenSaleContract' of REKT.setTokenSaleContract (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#268-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "line": 282,
+            "message": "Parameter '_value' of REKT.burn (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol#282) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_from' of REKT.burnFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_value' of REKT.burnFrom (0x22db56bfe6347bdfe4a8a45be5f18e0b10f5650d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

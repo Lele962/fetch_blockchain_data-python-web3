@@ -1,0 +1,24 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol:
+/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol:53:29: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member.
+        msg.sender.transfer(this.balance);
+                            ^----------^
+
+INFO:Detectors:[92m
+RACEFORETH.SCORE_TO_WIN should be constant (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#9-10)
+RACEFORETH.speed_limit should be constant (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#15-17)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+RACEFORETH.fallback (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#45-48) should be declared external
+RACEFORETH.endRace (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#50-55) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol:
+	- pragma solidity0.4.21 (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'RACEFORETH.RACEFORETH' (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#24-29) is not in mixedCase
+Variable 'RACEFORETH.SCORE_TO_WIN' (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#9-10) is not in mixedCase
+Variable 'RACEFORETH.PRIZE' (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#10-12) is not in mixedCase
+Variable 'RACEFORETH.speed_limit' (/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol#15-17) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd9ccd56914539ea310827e3037932df8dde3f557.sol analyzed (1 contracts), 8 result(s) found

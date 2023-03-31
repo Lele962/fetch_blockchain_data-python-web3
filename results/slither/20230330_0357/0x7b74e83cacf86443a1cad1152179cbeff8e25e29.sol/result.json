@@ -1,0 +1,160 @@
+{
+    "errors": [
+        "EXIT_CODE_14"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "donate",
+            "impact": "Low",
+            "line": 45,
+            "line_end": 63,
+            "message": "RaiseFundsForACause.donate (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#45-63) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp < (timeStarted + expirationInSeconds)) (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#48-50)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "receiverWithdraw",
+            "impact": "Low",
+            "line": 76,
+            "line_end": 91,
+            "message": "RaiseFundsForACause.receiverWithdraw (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#76-91) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp < (timeStarted + expirationInSeconds)) (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#80-83)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "withdraw",
+            "impact": "Low",
+            "line": 91,
+            "line_end": 106,
+            "message": "RaiseFundsForACause.withdraw (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#91-106) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp > (timeStarted + expirationInSeconds)) (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#93-96)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "expirationTimestamp",
+            "impact": "Low",
+            "line": 118,
+            "line_end": 121,
+            "message": "RaiseFundsForACause.expirationTimestamp (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#118-121) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- assert(bool)((timeStarted + expirationInSeconds) >= timeStarted) (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#120-121)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "impact": "Informational",
+            "line": 44,
+            "message": "Deprecated standard detected @ 0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#44:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 45,
+            "message": "RaiseFundsForACause.fallback (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#40-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "donate",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 63,
+            "message": "RaiseFundsForACause.donate (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#45-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "receiverSetAmountRequired",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 76,
+            "message": "RaiseFundsForACause.receiverSetAmountRequired (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#64-76) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "receiverWithdraw",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 91,
+            "message": "RaiseFundsForACause.receiverWithdraw (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#76-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 106,
+            "message": "RaiseFundsForACause.withdraw (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#91-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "currentTotalExcess",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 118,
+            "message": "RaiseFundsForACause.currentTotalExcess (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#106-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RaiseFundsForACause",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "function": "expirationTimestamp",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 121,
+            "message": "RaiseFundsForACause.expirationTimestamp (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#118-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol:\n\t- pragma solidity^0.4.17 (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 39,
+            "message": "Function 'RaiseFundsForACause.RaiseFundsForACause' (0x7b74e83cacf86443a1cad1152179cbeff8e25e29.sol#19-39) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,2124 @@
+{
+    "errors": [
+        "EXIT_CODE_219"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "buyNac",
+            "impact": "High",
+            "line": 1423,
+            "line_end": 1479,
+            "message": "Reentrancy in NamiExchange.buyNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1423-1479):\n\tExternal calls:\n\t- previousBalances = namiToken.balanceOf(msg.sender) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1435-1436)\n\t- namiToken.transfer(msg.sender,ask[_seller].volume) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1445)\n\tExternal calls sending eth:\n\t- _seller.send(maxEth) && msg.sender.send(msg.value.sub(maxEth)) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1437-1455)\n\tState variables written after the call(s):\n\t- ask (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1450)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "buyNac",
+            "impact": "High",
+            "line": 1423,
+            "line_end": 1479,
+            "message": "Reentrancy in NamiExchange.buyNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1423-1479):\n\tExternal calls:\n\t- previousBalances = namiToken.balanceOf(msg.sender) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1435-1436)\n\t- namiToken.transfer(msg.sender,nac) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1458-1460)\n\tExternal calls sending eth:\n\t- _seller.send(msg.value) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1456-1479)\n\tState variables written after the call(s):\n\t- ask (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1461-1462)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "High",
+            "line": 1219,
+            "line_end": 1278,
+            "message": "Reentrancy in BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1219-1278):\n\tExternal calls:\n\t- price = namiContract.getPrice() (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1232-1237)\n\t- namiContract.buy.value(etherToBuy)(session.investor[i]) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1259)\n\tExternal calls sending eth:\n\t- (session.investor[i]).transfer(etherReturn) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1254-1255)\n\t- namiContract.buy.value(etherToBuy)(session.investor[i]) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1259)\n\tState variables written after the call(s):\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1259-1260)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1260)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1260)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "sellNac",
+            "impact": "High",
+            "line": 1349,
+            "line_end": 1390,
+            "message": "Reentrancy in NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1349-1390):\n\tExternal calls:\n\t- require(bool)(namiToken.allowance(msg.sender,this) >= _value && _value > 0 && ethOfBuyer != 0 && _buyer != 0x0) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1362-1364)\n\t- msg.sender.send(ethOfBuyer) && namiToken.transferFrom(msg.sender,_buyer,maxToken) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1368-1376)\n\tExternal calls sending eth:\n\t- msg.sender.send(ethOfBuyer) && namiToken.transferFrom(msg.sender,_buyer,maxToken) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1368-1376)\n\tState variables written after the call(s):\n\t- bid (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1371)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "sellNac",
+            "impact": "High",
+            "line": 1349,
+            "line_end": 1390,
+            "message": "Reentrancy in NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1349-1390):\n\tExternal calls:\n\t- require(bool)(namiToken.allowance(msg.sender,this) >= _value && _value > 0 && ethOfBuyer != 0 && _buyer != 0x0) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1362-1364)\n\t- msg.sender.send(eth) && namiToken.transferFrom(msg.sender,_buyer,_value) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1377-1389)\n\tExternal calls sending eth:\n\t- msg.sender.send(eth) && namiToken.transferFrom(msg.sender,_buyer,_value) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1377-1389)\n\tState variables written after the call(s):\n\t- bid (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1383-1384)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 452,
+            "line_end": 942,
+            "message": "NamiCrowdSale (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#452-942) has incorrect ERC20 function interface(s):\n\t-transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#590-592)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "_transfer",
+            "impact": "Medium",
+            "line": 547,
+            "line_end": 571,
+            "message": "NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547-571) uses a dangerous strict equality:\n\t- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "burnTokens",
+            "impact": "Medium",
+            "line": 547,
+            "line_end": 571,
+            "message": "NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547-571) uses a dangerous strict equality:\n\t- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)\nNamiCrowdSale.burnTokens (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#771-780) uses a dangerous strict equality:\n\t- totalSupply == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "setPresalePhase",
+            "impact": "Medium",
+            "line": 547,
+            "line_end": 571,
+            "message": "NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547-571) uses a dangerous strict equality:\n\t- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)\nNamiCrowdSale.burnTokens (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#771-780) uses a dangerous strict equality:\n\t- totalSupply == 0\nNamiCrowdSale.setPresalePhase (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#781-817) uses a dangerous strict equality:\n\t- canSwitchPhase = (currentPhase == Phase.Created && _nextPhase == Phase.Running) || (currentPhase == Phase.Running && _nextPhase == Phase.Paused) || ((currentPhase == Phase.Running || currentPhase == Phase.Paused) && _nextPhase == Phase.Migrating && crowdsaleManager != 0x0) || (currentPhase == Phase.Paused && _nextPhase == Phase.Running) || (currentPhase == Phase.Migrating && _nextPhase == Phase.Migrated && totalSupply == 0)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Medium",
+            "line": 1219,
+            "line_end": 1278,
+            "message": "BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1219-1278) uses a dangerous strict equality:\n\t- session.win[i] == result\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "_withdrawNAC",
+            "impact": "Medium",
+            "line": 326,
+            "line_end": 344,
+            "message": "Reentrancy in NamiPool._withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#326-344):\n\tExternal calls:\n\t- previousBalances = namiToken.balanceOf(this) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#330-331)\n\t- namiToken.transfer(_shareAddress,namiPool[_roundIndex][_shareAddress].stake) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#331-337)\n\tState variables written after the call(s):\n\t- namiPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#344)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeAskOrder",
+            "impact": "Medium",
+            "line": 1409,
+            "line_end": 1422,
+            "message": "Reentrancy in NamiExchange.closeAskOrder (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1409-1422):\n\tExternal calls:\n\t- previousBalances = namiToken.balanceOf(msg.sender) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1413-1414)\n\t- namiToken.transfer(msg.sender,ask[msg.sender].volume) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1417)\n\tState variables written after the call(s):\n\t- ask (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1418-1419)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Medium",
+            "line": 1219,
+            "line_end": 1278,
+            "message": "Reentrancy in BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1219-1278):\n\tExternal calls:\n\t- price = namiContract.getPrice() (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1232-1237)\n\tState variables written after the call(s):\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1238-1265)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1265)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1273-1276)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1276)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1276-1277)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1277)\n\t- session (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1277-1278)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getAmount",
+            "impact": "Medium",
+            "line": 1146,
+            "line_end": 1147,
+            "message": "listAmount in BinaryOption.getAmount (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1146-1147) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getChooses",
+            "impact": "Medium",
+            "line": 1136,
+            "line_end": 1137,
+            "message": "listChooses in BinaryOption.getChooses (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1136-1137) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getInvestors",
+            "impact": "Medium",
+            "line": 1127,
+            "message": "listInvestor in BinaryOption.getInvestors (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1127) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToExchange",
+            "impact": "Medium",
+            "line": 886,
+            "line_end": 904,
+            "message": "NamiCrowdSale.transferToExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#886-904) does not use the value returned by external calls:\n\t-receiver.tokenFallbackExchange(msg.sender,_value,_price) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#901-902)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToBuyer",
+            "impact": "Medium",
+            "line": 921,
+            "line_end": 940,
+            "message": "NamiCrowdSale.transferToBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#921-940) does not use the value returned by external calls:\n\t-receiver.tokenFallbackBuyer(msg.sender,_value,_buyer) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#936-938)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Low",
+            "line": 1254,
+            "line_end": 1255,
+            "message": "BinaryOption.closeSession has external calls inside a loop:\n\t- (session.investor[i]).transfer(etherReturn) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1254-1255)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Low",
+            "line": 1259,
+            "message": "BinaryOption.closeSession has external calls inside a loop:\n\t- namiContract.buy.value(etherToBuy)(session.investor[i]) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1259)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "_migrateToken",
+            "impact": "Low",
+            "line": 843,
+            "line_end": 857,
+            "message": "Reentrancy in NamiCrowdSale._migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#843-857):\n\tExternal calls:\n\t- newToken = presale.balanceOf(_from) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#849)\n\t- presale.burnTokens(_from) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#850)\n\tState variables written after the call(s):\n\t- balanceOf (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#854)\n\t- totalSupply (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#855-856)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "_withdrawNAC",
+            "impact": "Low",
+            "line": 326,
+            "line_end": 344,
+            "message": "Reentrancy in NamiPool._withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#326-344):\n\tExternal calls:\n\t- previousBalances = namiToken.balanceOf(this) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#330-331)\n\t- namiToken.transfer(_shareAddress,namiPool[_roundIndex][_shareAddress].stake) (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#331-337)\n\tState variables written after the call(s):\n\t- round (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#339-343)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Low",
+            "line": 1219,
+            "line_end": 1278,
+            "message": "Reentrancy in BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1219-1278):\n\tExternal calls:\n\t- price = namiContract.getPrice() (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1232-1237)\n\tState variables written after the call(s):\n\t- sessionId (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1269-1270)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToExchange",
+            "impact": "Informational",
+            "line": 886,
+            "line_end": 904,
+            "message": "NamiCrowdSale.transferToExchange uses assembly (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#886-904)\n\t- 0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#889-891\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToBuyer",
+            "impact": "Informational",
+            "line": 921,
+            "line_end": 940,
+            "message": "NamiCrowdSale.transferToBuyer uses assembly (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#921-940)\n\t- 0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#925-929\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 475,
+            "line_end": 477,
+            "message": "NamiCrowdSale.decimals should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#475-477)\nNamiCrowdSale.name should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#474-475)\nNamiCrowdSale.symbol should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#475)\nNamiExchange.name should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1328-1329)\nNamiExchange.price should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1331)\nNamiPool.name should be constant (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#62)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 51,
+            "message": "tokenRecipient.receiveApproval (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#48-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeEscrow",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 131,
+            "message": "NamiPool.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#124-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawEther",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 140,
+            "message": "NamiPool.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#132-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawNAC",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 153,
+            "message": "NamiPool.withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#141-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "activateRound",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 186,
+            "message": "NamiPool.activateRound (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#175-186) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "deactivateRound",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 194,
+            "message": "NamiPool.deactivateRound (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#187-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "tokenFallbackExchange",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 211,
+            "message": "NamiPool.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#196-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "activateUser",
+            "impact": "Informational",
+            "line": 214,
+            "line_end": 225,
+            "message": "NamiPool.activateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#214-225) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "deactivateUser",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 241,
+            "message": "NamiPool.deactivateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#226-241) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeActive",
+            "impact": "Informational",
+            "line": 245,
+            "line_end": 253,
+            "message": "NamiPool.closeActive (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#245-253) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeWithdrawable",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 268,
+            "message": "NamiPool.changeWithdrawable (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#254-268) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeTopWithdrawable",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 282,
+            "message": "NamiPool.changeTopWithdrawable (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#269-282) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "depositEthPool",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 298,
+            "message": "NamiPool.depositEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#284-298) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawEthPool",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 313,
+            "message": "NamiPool.withdrawEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#299-313) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeEthPool",
+            "impact": "Informational",
+            "line": 318,
+            "line_end": 324,
+            "message": "NamiPool.closeEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#318-324) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawTopForTeam",
+            "impact": "Informational",
+            "line": 346,
+            "line_end": 377,
+            "message": "NamiPool.withdrawTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#346-377) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawNonTopForTeam",
+            "impact": "Informational",
+            "line": 379,
+            "line_end": 401,
+            "message": "NamiPool.withdrawNonTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#379-401) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawTop",
+            "impact": "Informational",
+            "line": 402,
+            "line_end": 425,
+            "message": "NamiPool.withdrawTop (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#402-425) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiPool",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawNonTop",
+            "impact": "Informational",
+            "line": 426,
+            "line_end": 452,
+            "message": "NamiPool.withdrawNonTop (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#426-452) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferForTeam",
+            "impact": "Informational",
+            "line": 579,
+            "line_end": 582,
+            "message": "NamiCrowdSale.transferForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#579-582) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 592,
+            "message": "NamiCrowdSale.transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#590-592) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 603,
+            "line_end": 615,
+            "message": "NamiCrowdSale.transferFrom (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#603-615) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 644,
+            "line_end": 662,
+            "message": "NamiCrowdSale.approveAndCall (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#644-662) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeTransferable",
+            "impact": "Informational",
+            "line": 662,
+            "line_end": 668,
+            "message": "NamiCrowdSale.changeTransferable (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#662-668) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeEscrow",
+            "impact": "Informational",
+            "line": 670,
+            "line_end": 674,
+            "message": "NamiCrowdSale.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#670-674) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeBinary",
+            "impact": "Informational",
+            "line": 676,
+            "line_end": 678,
+            "message": "NamiCrowdSale.changeBinary (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#676-678) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeBinaryAddress",
+            "impact": "Informational",
+            "line": 678,
+            "line_end": 682,
+            "message": "NamiCrowdSale.changeBinaryAddress (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#678-682) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 738,
+            "line_end": 742,
+            "message": "NamiCrowdSale.fallback (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#738-742) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 771,
+            "line_end": 780,
+            "message": "NamiCrowdSale.burnTokens (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#771-780) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "setPresalePhase",
+            "impact": "Informational",
+            "line": 781,
+            "line_end": 817,
+            "message": "NamiCrowdSale.setPresalePhase (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#781-817) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawEther",
+            "impact": "Informational",
+            "line": 817,
+            "line_end": 824,
+            "message": "NamiCrowdSale.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#817-824) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "safeWithdraw",
+            "impact": "Informational",
+            "line": 824,
+            "line_end": 831,
+            "message": "NamiCrowdSale.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#824-831) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "setCrowdsaleManager",
+            "impact": "Informational",
+            "line": 831,
+            "line_end": 842,
+            "message": "NamiCrowdSale.setCrowdsaleManager (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#831-842) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "migrateToken",
+            "impact": "Informational",
+            "line": 858,
+            "line_end": 861,
+            "message": "NamiCrowdSale.migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#858-861) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "migrateForInvestor",
+            "impact": "Informational",
+            "line": 862,
+            "line_end": 865,
+            "message": "NamiCrowdSale.migrateForInvestor (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#862-865) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToExchange",
+            "impact": "Informational",
+            "line": 886,
+            "line_end": 904,
+            "message": "NamiCrowdSale.transferToExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#886-904) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiCrowdSale",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transferToBuyer",
+            "impact": "Informational",
+            "line": 921,
+            "line_end": 940,
+            "message": "NamiCrowdSale.transferToBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#921-940) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 973,
+            "line_end": 974,
+            "message": "BinaryOption.fallback (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#973-974) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeEscrow",
+            "impact": "Informational",
+            "line": 1027,
+            "line_end": 1031,
+            "message": "BinaryOption.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1027-1031) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeMinEth",
+            "impact": "Informational",
+            "line": 1033,
+            "line_end": 1041,
+            "message": "BinaryOption.changeMinEth (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1033-1041) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeTimeInvest",
+            "impact": "Informational",
+            "line": 1054,
+            "line_end": 1059,
+            "message": "BinaryOption.changeTimeInvest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1054-1059) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeTimeOneSession",
+            "impact": "Informational",
+            "line": 1059,
+            "line_end": 1066,
+            "message": "BinaryOption.changeTimeOneSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1059-1066) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeRateWin",
+            "impact": "Informational",
+            "line": 1068,
+            "line_end": 1072,
+            "message": "BinaryOption.changeRateWin (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1068-1072) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeRateLoss",
+            "impact": "Informational",
+            "line": 1072,
+            "line_end": 1079,
+            "message": "BinaryOption.changeRateLoss (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1072-1079) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "changeRateFee",
+            "impact": "Informational",
+            "line": 1079,
+            "line_end": 1086,
+            "message": "BinaryOption.changeRateFee (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1079-1086) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "withdrawEther",
+            "impact": "Informational",
+            "line": 1092,
+            "line_end": 1104,
+            "message": "BinaryOption.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1092-1104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "safeWithdraw",
+            "impact": "Informational",
+            "line": 1110,
+            "line_end": 1119,
+            "message": "BinaryOption.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1110-1119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getInvestors",
+            "impact": "Informational",
+            "line": 1123,
+            "line_end": 1131,
+            "message": "BinaryOption.getInvestors (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1123-1131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getChooses",
+            "impact": "Informational",
+            "line": 1131,
+            "line_end": 1142,
+            "message": "BinaryOption.getChooses (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1131-1142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getAmount",
+            "impact": "Informational",
+            "line": 1143,
+            "line_end": 1151,
+            "message": "BinaryOption.getAmount (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1143-1151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "resetSession",
+            "impact": "Informational",
+            "line": 1154,
+            "line_end": 1164,
+            "message": "BinaryOption.resetSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1154-1164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "openSession",
+            "impact": "Informational",
+            "line": 1167,
+            "line_end": 1176,
+            "message": "BinaryOption.openSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1167-1176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "invest",
+            "impact": "Informational",
+            "line": 1181,
+            "line_end": 1201,
+            "message": "BinaryOption.invest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1181-1201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeInvest",
+            "impact": "Informational",
+            "line": 1203,
+            "line_end": 1210,
+            "message": "BinaryOption.closeInvest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1203-1210) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getEtherToBuy",
+            "impact": "Informational",
+            "line": 1212,
+            "line_end": 1216,
+            "message": "BinaryOption.getEtherToBuy (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1212-1216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BinaryOption",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeSession",
+            "impact": "Informational",
+            "line": 1219,
+            "line_end": 1278,
+            "message": "BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1219-1278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresaleToken",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 1279,
+            "message": "PresaleToken.burnTokens (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1279) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223ReceivingContract",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 1293,
+            "line_end": 1300,
+            "message": "ERC223ReceivingContract.tokenFallback (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1293-1300) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223ReceivingContract",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "tokenFallbackBuyer",
+            "impact": "Informational",
+            "line": 1301,
+            "line_end": 1305,
+            "message": "ERC223ReceivingContract.tokenFallbackBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1301-1305) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223ReceivingContract",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "tokenFallbackExchange",
+            "impact": "Informational",
+            "line": 1305,
+            "line_end": 1310,
+            "message": "ERC223ReceivingContract.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1305-1310) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 1334,
+            "line_end": 1336,
+            "message": "NamiExchange.fallback (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1334-1336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "placeBuyOrder",
+            "impact": "Informational",
+            "line": 1344,
+            "line_end": 1349,
+            "message": "NamiExchange.placeBuyOrder (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1344-1349) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "sellNac",
+            "impact": "Informational",
+            "line": 1349,
+            "line_end": 1390,
+            "message": "NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1349-1390) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeBidOrder",
+            "impact": "Informational",
+            "line": 1390,
+            "line_end": 1397,
+            "message": "NamiExchange.closeBidOrder (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1390-1397) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "tokenFallbackExchange",
+            "impact": "Informational",
+            "line": 1401,
+            "line_end": 1408,
+            "message": "NamiExchange.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1401-1408) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "closeAskOrder",
+            "impact": "Informational",
+            "line": 1409,
+            "line_end": 1422,
+            "message": "NamiExchange.closeAskOrder (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1409-1422) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiExchange",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "buyNac",
+            "impact": "Informational",
+            "line": 1423,
+            "line_end": 1479,
+            "message": "NamiExchange.buyNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1423-1479) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC23",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 1480,
+            "line_end": 1484,
+            "message": "ERC23.balanceOf (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1480-1484) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC23",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 1484,
+            "line_end": 1489,
+            "message": "ERC23.transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1484-1489) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 1571,
+            "line_end": 1576,
+            "message": "NamiMultiSigWallet.fallback (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1571-1576) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "addOwner",
+            "impact": "Informational",
+            "line": 1601,
+            "line_end": 1607,
+            "message": "NamiMultiSigWallet.addOwner (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1601-1607) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "removeOwner",
+            "impact": "Informational",
+            "line": 1612,
+            "line_end": 1625,
+            "message": "NamiMultiSigWallet.removeOwner (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1612-1625) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "replaceOwner",
+            "impact": "Informational",
+            "line": 1630,
+            "line_end": 1644,
+            "message": "NamiMultiSigWallet.replaceOwner (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1630-1644) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "submitTransaction",
+            "impact": "Informational",
+            "line": 1660,
+            "line_end": 1669,
+            "message": "NamiMultiSigWallet.submitTransaction (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1660-1669) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "revokeConfirmation",
+            "impact": "Informational",
+            "line": 1689,
+            "line_end": 1694,
+            "message": "NamiMultiSigWallet.revokeConfirmation (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1689-1694) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getConfirmationCount",
+            "impact": "Informational",
+            "line": 1769,
+            "line_end": 1777,
+            "message": "NamiMultiSigWallet.getConfirmationCount (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1769-1777) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getTransactionCount",
+            "impact": "Informational",
+            "line": 1782,
+            "line_end": 1790,
+            "message": "NamiMultiSigWallet.getTransactionCount (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1782-1790) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getOwners",
+            "impact": "Informational",
+            "line": 1793,
+            "line_end": 1797,
+            "message": "NamiMultiSigWallet.getOwners (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1793-1797) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getConfirmations",
+            "impact": "Informational",
+            "message": "NamiMultiSigWallet.getConfirmations (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "getTransactionIds",
+            "impact": "Informational",
+            "message": "NamiMultiSigWallet.getTransactionIds (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol:\n\t- pragma solidity^0.4.18 (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "NamiMultiSigWallet",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "function": "executeTransaction",
+            "impact": "Informational",
+            "line": 1699,
+            "line_end": 1722,
+            "message": "Low level call in NamiMultiSigWallet.executeTransaction (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1699-1722):\n\t-transactions[transactionId].destination.call.value(transactions[transactionId].value)(transactions[transactionId].data) 0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1713-1722\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 51,
+            "message": "Contract 'tokenRecipient' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#48-51) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 62,
+            "message": "Function 'NamiPool.NamiPool' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#53-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 53,
+            "message": "Parameter '_escrow' of NamiPool.NamiPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 54,
+            "message": "Parameter '_namiMultiSigWallet' of NamiPool.NamiPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#53-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_namiAddress' of NamiPool.NamiPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 127,
+            "message": "Parameter '_escrow' of NamiPool.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#124-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "Parameter '_amount' of NamiPool.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#132-133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_amount' of NamiPool.withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 175,
+            "message": "Parameter '_roundIndex' of NamiPool.activateRound (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_roundIndex' of NamiPool.deactivateRound (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 197,
+            "message": "Parameter '_from' of NamiPool.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#196-197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 197,
+            "message": "Parameter '_value' of NamiPool.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 197,
+            "line_end": 198,
+            "message": "Parameter '_price' of NamiPool.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#197-198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 215,
+            "message": "Parameter '_shareAddress' of NamiPool.activateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 215,
+            "message": "Parameter '_roundId' of NamiPool.activateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_shareAddress' of NamiPool.deactivateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_roundId' of NamiPool.deactivateUser (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_roundId' of NamiPool.closeActive (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 260,
+            "message": "Parameter '_roundIndex' of NamiPool.changeWithdrawable (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#257-260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 274,
+            "line_end": 275,
+            "message": "Parameter '_roundIndex' of NamiPool.changeTopWithdrawable (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#274-275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 284,
+            "message": "Parameter '_roundIndex' of NamiPool.depositEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 300,
+            "message": "Parameter '_roundIndex' of NamiPool.withdrawEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#299-300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "Parameter '_amount' of NamiPool.withdrawEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 318,
+            "line_end": 319,
+            "message": "Parameter '_roundIndex' of NamiPool.closeEthPool (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#318-319) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 326,
+            "line_end": 344,
+            "message": "Function 'NamiPool._withdrawNAC' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#326-344) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 326,
+            "line_end": 327,
+            "message": "Parameter '_shareAddress' of NamiPool._withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#326-327) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 327,
+            "message": "Parameter '_roundIndex' of NamiPool._withdrawNAC (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#327) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 346,
+            "line_end": 347,
+            "message": "Parameter '_shareAddress' of NamiPool.withdrawTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#346-347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 347,
+            "message": "Parameter '_roundIndex' of NamiPool.withdrawTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 379,
+            "line_end": 380,
+            "message": "Parameter '_shareAddress' of NamiPool.withdrawNonTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#379-380) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 380,
+            "message": "Parameter '_roundIndex' of NamiPool.withdrawNonTopForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#380) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 403,
+            "message": "Parameter '_roundIndex' of NamiPool.withdrawTop (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 428,
+            "message": "Parameter '_roundIndex' of NamiPool.withdrawNonTop (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#428) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 73,
+            "message": "Variable 'NamiPool.NamiAddr' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#73) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 456,
+            "line_end": 470,
+            "message": "Function 'NamiCrowdSale.NamiCrowdSale' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#456-470) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 456,
+            "line_end": 458,
+            "message": "Parameter '_escrow' of NamiCrowdSale.NamiCrowdSale (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#456-458) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 458,
+            "message": "Parameter '_namiMultiSigWallet' of NamiCrowdSale.NamiCrowdSale (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#458) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 458,
+            "message": "Parameter '_namiPresale' of NamiCrowdSale.NamiCrowdSale (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#458) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 547,
+            "line_end": 571,
+            "message": "Function 'NamiCrowdSale._transfer' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547-571) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 547,
+            "message": "Parameter '_from' of NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 547,
+            "line_end": 548,
+            "message": "Parameter '_to' of NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#547-548) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 548,
+            "message": "Parameter '_value' of NamiCrowdSale._transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#548) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 579,
+            "message": "Parameter '_to' of NamiCrowdSale.transferForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#579) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 579,
+            "line_end": 581,
+            "message": "Parameter '_value' of NamiCrowdSale.transferForTeam (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#579-581) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 590,
+            "message": "Parameter '_to' of NamiCrowdSale.transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 590,
+            "message": "Parameter '_value' of NamiCrowdSale.transfer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 604,
+            "message": "Parameter '_from' of NamiCrowdSale.transferFrom (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 604,
+            "message": "Parameter '_to' of NamiCrowdSale.transferFrom (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 604,
+            "message": "Parameter '_value' of NamiCrowdSale.transferFrom (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 621,
+            "message": "Parameter '_spender' of NamiCrowdSale.approve (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#621) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 621,
+            "message": "Parameter '_value' of NamiCrowdSale.approve (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#621) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 644,
+            "line_end": 645,
+            "message": "Parameter '_spender' of NamiCrowdSale.approveAndCall (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#644-645) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 645,
+            "line_end": 646,
+            "message": "Parameter '_value' of NamiCrowdSale.approveAndCall (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#645-646) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 646,
+            "line_end": 648,
+            "message": "Parameter '_extraData' of NamiCrowdSale.approveAndCall (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#646-648) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 670,
+            "line_end": 671,
+            "message": "Parameter '_escrow' of NamiCrowdSale.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#670-671) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 676,
+            "message": "Parameter '_binary' of NamiCrowdSale.changeBinary (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#676) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 679,
+            "message": "Parameter '_binaryAddress' of NamiCrowdSale.changeBinaryAddress (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#679) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 743,
+            "message": "Parameter '_buyer' of NamiCrowdSale.buy (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#743) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 772,
+            "message": "Parameter '_owner' of NamiCrowdSale.burnTokens (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#772) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 783,
+            "line_end": 784,
+            "message": "Parameter '_nextPhase' of NamiCrowdSale.setPresalePhase (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#783-784) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 817,
+            "line_end": 818,
+            "message": "Parameter '_amount' of NamiCrowdSale.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#817-818) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 825,
+            "message": "Parameter '_withdraw' of NamiCrowdSale.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#825) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 825,
+            "line_end": 826,
+            "message": "Parameter '_amount' of NamiCrowdSale.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#825-826) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 834,
+            "message": "Parameter '_mgr' of NamiCrowdSale.setCrowdsaleManager (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#834) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 843,
+            "line_end": 857,
+            "message": "Function 'NamiCrowdSale._migrateToken' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#843-857) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 845,
+            "line_end": 846,
+            "message": "Parameter '_from' of NamiCrowdSale._migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#845-846) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 846,
+            "message": "Parameter '_to' of NamiCrowdSale._migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#846) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 858,
+            "message": "Parameter '_from' of NamiCrowdSale.migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#858) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 858,
+            "line_end": 859,
+            "message": "Parameter '_to' of NamiCrowdSale.migrateToken (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#858-859) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 886,
+            "line_end": 887,
+            "message": "Parameter '_to' of NamiCrowdSale.transferToExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#886-887) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 887,
+            "message": "Parameter '_value' of NamiCrowdSale.transferToExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#887) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 887,
+            "message": "Parameter '_price' of NamiCrowdSale.transferToExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#887) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 921,
+            "line_end": 922,
+            "message": "Parameter '_to' of NamiCrowdSale.transferToBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#921-922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_value' of NamiCrowdSale.transferToBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 922,
+            "line_end": 923,
+            "message": "Parameter '_buyer' of NamiCrowdSale.transferToBuyer (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#922-923) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 477,
+            "message": "Variable 'NamiCrowdSale.TRANSFERABLE' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1009,
+            "line_end": 1016,
+            "message": "Function 'BinaryOption.BinaryOption' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1009-1016) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1009,
+            "line_end": 1010,
+            "message": "Parameter '_namiCrowdSale' of BinaryOption.BinaryOption (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1009-1010) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1010,
+            "message": "Parameter '_escrow' of BinaryOption.BinaryOption (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1010) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1010,
+            "message": "Parameter '_namiMultiSigWallet' of BinaryOption.BinaryOption (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1010) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1027,
+            "message": "Parameter '_escrow' of BinaryOption.changeEscrow (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1027) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1034,
+            "message": "Parameter '_minimunEth' of BinaryOption.changeMinEth (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1034) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1054,
+            "message": "Parameter '_timeInvest' of BinaryOption.changeTimeInvest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1054) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1060,
+            "line_end": 1061,
+            "message": "Parameter '_timeOneSession' of BinaryOption.changeTimeOneSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1060-1061) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "message": "Parameter '_rateWin' of BinaryOption.changeRateWin (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1069) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1073,
+            "message": "Parameter '_rateLoss' of BinaryOption.changeRateLoss (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1073) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1080,
+            "line_end": 1081,
+            "message": "Parameter '_rateFee' of BinaryOption.changeRateFee (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1080-1081) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1093,
+            "line_end": 1094,
+            "message": "Parameter '_amount' of BinaryOption.withdrawEther (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1093-1094) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1110,
+            "line_end": 1111,
+            "message": "Parameter '_withdraw' of BinaryOption.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1110-1111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1111,
+            "message": "Parameter '_amount' of BinaryOption.safeWithdraw (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1181,
+            "message": "Parameter '_choose' of BinaryOption.invest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1203,
+            "message": "Parameter '_priceOpen' of BinaryOption.closeInvest (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1212,
+            "message": "Parameter '_ether' of BinaryOption.getEtherToBuy (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1212,
+            "message": "Parameter '_status' of BinaryOption.getEtherToBuy (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1220,
+            "message": "Parameter '_priceClose' of BinaryOption.closeSession (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1317,
+            "line_end": 1318,
+            "message": "Function 'NamiExchange.NamiExchange' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1317-1318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1317,
+            "line_end": 1318,
+            "message": "Parameter '_namiAddress' of NamiExchange.NamiExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1317-1318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1344,
+            "message": "Parameter '_price' of NamiExchange.placeBuyOrder (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1344) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1350,
+            "message": "Parameter '_value' of NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1350) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1350,
+            "line_end": 1351,
+            "message": "Parameter '_buyer' of NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1350-1351) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1351,
+            "line_end": 1352,
+            "message": "Parameter '_price' of NamiExchange.sellNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1351-1352) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1402,
+            "message": "Parameter '_from' of NamiExchange.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1402) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1402,
+            "message": "Parameter '_value' of NamiExchange.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1402) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1402,
+            "line_end": 1403,
+            "message": "Parameter '_price' of NamiExchange.tokenFallbackExchange (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1402-1403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1423,
+            "message": "Parameter '_seller' of NamiExchange.buyNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1423,
+            "message": "Parameter '_price' of NamiExchange.buyNac (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1330,
+            "message": "Variable 'NamiExchange.NamiAddr' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1582,
+            "line_end": 1595,
+            "message": "Function 'NamiMultiSigWallet.NamiMultiSigWallet' (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1582-1595) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1583,
+            "message": "Parameter '_owners' of NamiMultiSigWallet.NamiMultiSigWallet (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1583) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1583,
+            "message": "Parameter '_required' of NamiMultiSigWallet.NamiMultiSigWallet (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1583) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol",
+            "impact": "Informational",
+            "line": 1650,
+            "line_end": 1651,
+            "message": "Parameter '_required' of NamiMultiSigWallet.changeRequirement (0x0e33ca464b1c76a384039eb1b7e9dc3b0416b5ae.sol#1650-1651) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

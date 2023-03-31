@@ -1,0 +1,211 @@
+{
+    "errors": [
+        "EXIT_CODE_20"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 190,
+            "line_end": 191,
+            "message": "Contract locking ether found in 0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol:\n\tContract Eben has payable functions:\n\t - fallback (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#190-191)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 131,
+            "message": "Eben.balanceOf (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#130-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "ERC20Interface.balanceOf (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#46-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 184,
+            "message": "Eben.allowance (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#182-184) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20Interface.allowance (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 158,
+            "message": "Eben.approve (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#152-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Interface.approve (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 176,
+            "message": "Eben.transferFrom (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#167-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "ERC20Interface.transferFrom (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#50-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 79,
+            "message": "Owned.transferOwnership (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#76-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 87,
+            "message": "Owned.acceptOwnership (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#80-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 191,
+            "message": "Eben.fallback (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#190-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Eben",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "function": "multipleTokensSend",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 198,
+            "message": "Eben.multipleTokensSend (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#191-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "line": 78,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 195,
+            "message": "Parameter '_addresses' of Eben.multipleTokensSend (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#194-195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "line": 195,
+            "message": "Parameter '_values' of Eben.multipleTokensSend (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "message": "Function 'Eben._transfer' (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "message": "Parameter '_beneficiary' of Eben._transfer (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokens' of Eben._transfer (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Variable 'Eben._totalSupply' (0x00a702d881267ee6f8a52ae3311965d9f7e63c78.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

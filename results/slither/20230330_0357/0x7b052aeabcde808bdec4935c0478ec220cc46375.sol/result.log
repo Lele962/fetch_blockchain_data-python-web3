@@ -1,0 +1,44 @@
+INFO:Detectors:[92m
+RevertedMatryoshka.name should be constant (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#51-52)
+RevertedMatryoshka.stakingRequirement should be constant (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#61)
+RevertedMatryoshka.symbol should be constant (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#52-53)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+RevertedMatryoshka.buy (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#67-72) should be declared external
+RevertedMatryoshka.fallback (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#73-76) should be declared external
+RevertedMatryoshka.reinvest (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#76-87) should be declared external
+RevertedMatryoshka.exit (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#87-93) should be declared external
+RevertedMatryoshka.transfer (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#123-149) should be declared external
+RevertedMatryoshka.totalEthereumBalance (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#149-153) should be declared external
+RevertedMatryoshka.totalSupply (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#154-156) should be declared external
+RevertedMatryoshka.sellPrice (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#174-188) should be declared external
+RevertedMatryoshka.calculateTokensReceived (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#198-206) should be declared external
+RevertedMatryoshka.calculateEthereumReceived (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#207-215) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Event 'RevertedMatryoshka.onTokenPurchase' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#16-25) is not in CapWords
+Event 'RevertedMatryoshka.onTokenSell' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#26-34) is not in CapWords
+Event 'RevertedMatryoshka.onReinvestment' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#34-40) is not in CapWords
+Event 'RevertedMatryoshka.onWithdraw' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#40-45) is not in CapWords
+Parameter '_referredBy' of RevertedMatryoshka.buy (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#68) is not in mixedCase
+Parameter '_amountOfTokens' of RevertedMatryoshka.sell (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#104) is not in mixedCase
+Parameter '_toAddress' of RevertedMatryoshka.transfer (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#123-124) is not in mixedCase
+Parameter '_amountOfTokens' of RevertedMatryoshka.transfer (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#124) is not in mixedCase
+Parameter '_includeReferralBonus' of RevertedMatryoshka.myDividends (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#160) is not in mixedCase
+Parameter '_customerAddress' of RevertedMatryoshka.balanceOf (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#167) is not in mixedCase
+Parameter '_customerAddress' of RevertedMatryoshka.dividendsOf (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#168) is not in mixedCase
+Parameter '_ethereumToSpend' of RevertedMatryoshka.calculateTokensReceived (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#198) is not in mixedCase
+Parameter '_tokensToSell' of RevertedMatryoshka.calculateEthereumReceived (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#207) is not in mixedCase
+Parameter '_incomingEthereum' of RevertedMatryoshka.purchaseTokens (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#215-216) is not in mixedCase
+Parameter '_referredBy' of RevertedMatryoshka.purchaseTokens (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#216) is not in mixedCase
+Parameter '_ethereum' of RevertedMatryoshka.ethereumToTokens_ (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#258) is not in mixedCase
+Parameter '_tokens' of RevertedMatryoshka.tokensToEthereum_ (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#283) is not in mixedCase
+Constant 'RevertedMatryoshka.entryFee_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#54-55) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.transferFee_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#55-56) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.exitFee_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#56-57) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.refferalFee_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#57) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.tokenPriceInitial_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#57-58) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.tokenPriceIncremental_' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#58-60) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'RevertedMatryoshka.magnitude' (/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol#60-61) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x7b052aeabcde808bdec4935c0478ec220cc46375.sol analyzed (2 contracts), 35 result(s) found

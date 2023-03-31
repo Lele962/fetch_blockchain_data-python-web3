@@ -1,0 +1,70 @@
+{
+    "errors": [
+        "EXIT_CODE_6"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "function": "setCompleted",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 21,
+            "message": "Migrations.setCompleted (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#17-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "function": "upgrade",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 25,
+            "message": "Migrations.upgrade (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#21-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x9a506a484f2935a699ceace6922e6322ea4288f9.sol:\n\t- pragma solidity^0.4.17 (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 17,
+            "message": "Function 'Migrations.Migrations' (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#13-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "impact": "Informational",
+            "line": 21,
+            "message": "Parameter 'new_address' of Migrations.upgrade (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a506a484f2935a699ceace6922e6322ea4288f9.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 9,
+            "message": "Variable 'Migrations.last_completed_migration' (0x9a506a484f2935a699ceace6922e6322ea4288f9.sol#7-9) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

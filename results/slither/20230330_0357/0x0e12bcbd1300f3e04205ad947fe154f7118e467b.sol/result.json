@@ -1,0 +1,262 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "LockToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "_transfer",
+            "impact": "Low",
+            "line": 208,
+            "line_end": 221,
+            "message": "LockToken._transfer (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#208-221) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp < item.endtime && remain < item.remain (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#219-220)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MintToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "mint",
+            "impact": "Low",
+            "line": 263,
+            "line_end": 284,
+            "message": "MintToken.mint (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#263-284) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp >= mintBegintime) (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#265-268)\n\t- mintMax > 0 && mintTotal > mintMax (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#280-283)\n\t- require(bool)(leave >= value) (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#278)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MintToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "mintToMax",
+            "impact": "Low",
+            "line": 284,
+            "line_end": 307,
+            "message": "MintToken.mintToMax (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#284-307) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- value > leave (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#302)\n\t- require(bool)(value > 0) (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#304-306)\n\t- require(bool)(block.timestamp >= mintBegintime) (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#286-287)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 54,
+            "message": "Ownable.transferOwnership (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#48-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 61,
+            "message": "Ownable.renounceOwnership (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#55-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 87,
+            "message": "Pausable.pause (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#82-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 94,
+            "message": "Pausable.unpause (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#87-94) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 134,
+            "message": "BaseToken.transferFrom (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#127-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 141,
+            "message": "BaseToken.approve (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#134-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "increaseAllowance",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 148,
+            "message": "BaseToken.increaseAllowance (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#141-148) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "decreaseAllowance",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 157,
+            "message": "BaseToken.decreaseAllowance (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#148-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 166,
+            "message": "BurnToken.burn (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#159-166) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 176,
+            "message": "BurnToken.burnFrom (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#166-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BatchToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "batchTransfer",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 198,
+            "message": "BatchToken.batchTransfer (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#177-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "lock",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 256,
+            "message": "LockToken.lock (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#221-256) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 263,
+            "line_end": 284,
+            "message": "MintToken.mint (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#263-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintToken",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "function": "mintToMax",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 307,
+            "message": "MintToken.mintToMax (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#284-307) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 115,
+            "message": "Function 'BaseToken._transfer' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#108-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 122,
+            "message": "Function 'BaseToken._mint' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#115-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 101,
+            "message": "Constant 'BaseToken._totalLimit' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#101) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 221,
+            "message": "Function 'LockToken._transfer' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#208-221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Constant 'MintToken.mintMax' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#258) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 262,
+            "message": "Constant 'MintToken.mintBegintime' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#259-262) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 263,
+            "message": "Constant 'MintToken.mintPerday' (0x0e12bcbd1300f3e04205ad947fe154f7118e467b.sol#262-263) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

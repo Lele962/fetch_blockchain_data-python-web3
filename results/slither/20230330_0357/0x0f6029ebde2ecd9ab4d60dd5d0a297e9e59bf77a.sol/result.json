@@ -1,0 +1,705 @@
+{
+    "errors": [
+        "EXIT_CODE_74"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "onlyBidAceptee",
+            "impact": "Medium",
+            "line": 405,
+            "line_end": 412,
+            "message": "ADXExchange.onlyBidAceptee (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#405-412) uses a dangerous strict equality:\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "onlyBidOwner",
+            "impact": "Medium",
+            "line": 405,
+            "line_end": 412,
+            "message": "ADXExchange.onlyBidAceptee (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#405-412) uses a dangerous strict equality:\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\nADXExchange.onlyBidOwner (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#398-405) uses a dangerous strict equality:\n\t- require(bool)(msg.sender == bidsById[_bidId].advertiser)\n\t- require(bool)(msg.sender == bidsById[_bidId].advertiser)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "onlyBidState",
+            "impact": "Medium",
+            "line": 405,
+            "line_end": 412,
+            "message": "ADXExchange.onlyBidAceptee (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#405-412) uses a dangerous strict equality:\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\n\t- require(bool)(msg.sender == bidsById[_bidId].publisher)\nADXExchange.onlyBidOwner (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#398-405) uses a dangerous strict equality:\n\t- require(bool)(msg.sender == bidsById[_bidId].advertiser)\n\t- require(bool)(msg.sender == bidsById[_bidId].advertiser)\nADXExchange.onlyBidState (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#412-417) uses a dangerous strict equality:\n\t- require(bool)(bidsById[_bidId].state == _state)\n\t- require(bool)(bidsById[_bidId].state == _state)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "placeBid",
+            "impact": "Medium",
+            "line": 448,
+            "message": "bid in ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#448) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Drainable",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "withdrawToken",
+            "impact": "Medium",
+            "line": 107,
+            "line_end": 119,
+            "message": "Drainable.withdrawToken (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#107-119) does not use the value returned by external calls:\n\t-token.transfer(msg.sender,bal) (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#114-119)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "acceptBid",
+            "impact": "Low",
+            "line": 486,
+            "line_end": 523,
+            "message": "Reentrancy in ADXExchange.acceptBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#486-523):\n\tExternal calls:\n\t- (publisher,adSlotIpfs,None,None) = registry.getItem(ADSLOT,_slotId) (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#499-503)\n\t- (publisherWallet,None,None,None) = registry.getAccount(publisher) (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#503-505)\n\tState variables written after the call(s):\n\t- bidsByAdslot (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#517-518)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#509)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#510-511)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#511-512)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#513)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#514)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#514-516)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#516-517)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "placeBid",
+            "impact": "Low",
+            "line": 427,
+            "line_end": 471,
+            "message": "Reentrancy in ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427-471):\n\tExternal calls:\n\t- (advertiser,adIpfs,None,None) = registry.getItem(ADUNIT,_adunitId) (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#433-435)\n\t- (advertiserWallet,None,None,None) = registry.getAccount(advertiser) (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#437-438)\n\tState variables written after the call(s):\n\t- bidsByAdunit (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#464-465)\n\t- bidsById (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#463-464)\n\t- bidsCount (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#449)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 310,
+            "message": "ADXExchange.name should be constant (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#310)\nADXRegistry.name should be constant (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#124)\nERC20Basic.totalSupply should be constant (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#82-83)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 46,
+            "message": "Ownable.transferOwnership (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#35-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 84,
+            "message": "ERC20Basic.balanceOf (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#83-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 90,
+            "message": "ERC20Basic.transfer (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#84-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 97,
+            "message": "ERC20.allowance (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#96-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 98,
+            "message": "ERC20.transferFrom (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#97-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 102,
+            "message": "ERC20.approve (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#98-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Drainable",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "withdrawToken",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 119,
+            "message": "Drainable.withdrawToken (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#107-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Drainable",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "withdrawEther",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 123,
+            "message": "Drainable.withdrawEther (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#119-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "registerItem",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 242,
+            "message": "ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#206-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "isRegistered",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 254,
+            "message": "ADXRegistry.isRegistered (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#249-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "getAccount",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 273,
+            "message": "ADXRegistry.getAccount (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#260-273) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "getAccountItems",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 280,
+            "message": "ADXRegistry.getAccountItems (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#273-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "getItem",
+            "impact": "Informational",
+            "line": 281,
+            "line_end": 290,
+            "message": "ADXRegistry.getItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#281-290) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXRegistry",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "hasItem",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 293,
+            "message": "ADXRegistry.hasItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#291-293) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "placeBid",
+            "impact": "Informational",
+            "line": 427,
+            "line_end": 471,
+            "message": "ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427-471) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "cancelBid",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 482,
+            "message": "ADXExchange.cancelBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#473-482) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "acceptBid",
+            "impact": "Informational",
+            "line": 486,
+            "line_end": 523,
+            "message": "ADXExchange.acceptBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#486-523) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "giveupBid",
+            "impact": "Informational",
+            "line": 527,
+            "line_end": 539,
+            "message": "ADXExchange.giveupBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#527-539) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "verifyBid",
+            "impact": "Informational",
+            "line": 543,
+            "line_end": 566,
+            "message": "ADXExchange.verifyBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#543-566) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "claimBidReward",
+            "impact": "Informational",
+            "line": 567,
+            "line_end": 578,
+            "message": "ADXExchange.claimBidReward (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#567-578) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ADXExchange",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "function": "refundBid",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 613,
+            "message": "ADXExchange.refundBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#590-613) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol:\n\t- pragma solidity^0.4.15 (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 23,
+            "message": "Function 'Ownable.Ownable' (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#17-23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 179,
+            "message": "Parameter '_name' of ADXRegistry.register (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#177-179) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 179,
+            "message": "Parameter '_wallet' of ADXRegistry.register (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#179) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_ipfs' of ADXRegistry.register (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_sig' of ADXRegistry.register (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_meta' of ADXRegistry.register (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 207,
+            "message": "Parameter '_type' of ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#206-207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 208,
+            "message": "Parameter '_id' of ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#207-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_ipfs' of ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_name' of ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_meta' of ADXRegistry.registerItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 262,
+            "message": "Parameter '_acc' of ADXRegistry.getAccount (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#261-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 275,
+            "message": "Parameter '_acc' of ADXRegistry.getAccountItems (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#273-275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_type' of ADXRegistry.getAccountItems (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 282,
+            "line_end": 283,
+            "message": "Parameter '_type' of ADXRegistry.getItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#282-283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 283,
+            "line_end": 284,
+            "message": "Parameter '_id' of ADXRegistry.getItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#283-284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 291,
+            "message": "Parameter '_type' of ADXRegistry.hasItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#291) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 291,
+            "message": "Parameter '_id' of ADXRegistry.hasItem (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#291) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 423,
+            "line_end": 425,
+            "message": "Function 'ADXExchange.ADXExchange' (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#423-425) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 423,
+            "message": "Parameter '_token' of ADXExchange.ADXExchange (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 423,
+            "message": "Parameter '_registry' of ADXExchange.ADXExchange (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_adunitId' of ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_target' of ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_rewardAmount' of ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_timeout' of ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_peer' of ADXExchange.placeBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_bidId' of ADXExchange.cancelBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 486,
+            "message": "Parameter '_bidId' of ADXExchange.acceptBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#486) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 486,
+            "line_end": 488,
+            "message": "Parameter '_slotId' of ADXExchange.acceptBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#486-488) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 488,
+            "message": "Parameter '_peer' of ADXExchange.acceptBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#488) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 527,
+            "line_end": 529,
+            "message": "Parameter '_bidId' of ADXExchange.giveupBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#527-529) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 543,
+            "line_end": 544,
+            "message": "Parameter '_bidId' of ADXExchange.verifyBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#543-544) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 544,
+            "message": "Parameter '_report' of ADXExchange.verifyBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#544) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 568,
+            "message": "Parameter '_bidId' of ADXExchange.claimBidReward (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#568) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 592,
+            "message": "Parameter '_bidId' of ADXExchange.refundBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#590-592) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 618,
+            "message": "Parameter '_state' of ADXExchange.getBidsFromArr (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#618) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 647,
+            "line_end": 648,
+            "message": "Parameter '_adunitId' of ADXExchange.getAllBidsByAdunit (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#647-648) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 653,
+            "message": "Parameter '_adunitId' of ADXExchange.getBidsByAdunit (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#653) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 653,
+            "message": "Parameter '_state' of ADXExchange.getBidsByAdunit (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#653) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 659,
+            "message": "Parameter '_adslotId' of ADXExchange.getAllBidsByAdslot (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 663,
+            "line_end": 665,
+            "message": "Parameter '_adslotId' of ADXExchange.getBidsByAdslot (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#663-665) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 665,
+            "message": "Parameter '_state' of ADXExchange.getBidsByAdslot (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#665) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 671,
+            "line_end": 674,
+            "message": "Parameter '_bidId' of ADXExchange.getBid (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#671-674) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol",
+            "impact": "Informational",
+            "line": 685,
+            "message": "Parameter '_bidId' of ADXExchange.getBidReports (0x0f6029ebde2ecd9ab4d60dd5d0a297e9e59bf77a.sol#685) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

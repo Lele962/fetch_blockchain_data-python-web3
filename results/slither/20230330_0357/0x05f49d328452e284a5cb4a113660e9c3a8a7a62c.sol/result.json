@@ -1,0 +1,449 @@
+{
+    "errors": [
+        "EXIT_CODE_46"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Medium",
+            "line": 90,
+            "line_end": 91,
+            "message": "VibeXChainToken.totalSupply (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#90-91) shadows:\n\t- ERC20Basic.totalSupply (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#65)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "ERC20Basic.totalSupply should be constant (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#65)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 60,
+            "message": "ForeignToken.balanceOf (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#59-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 65,
+            "message": "ForeignToken.transfer (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#60-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 212,
+            "message": "VibeXChainToken.balanceOf (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#208-212) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 66,
+            "message": "ERC20Basic.balanceOf (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#65-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 67,
+            "message": "ERC20Basic.transfer (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#66-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 227,
+            "message": "VibeXChainToken.transfer (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#217-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 254,
+            "message": "VibeXChainToken.allowance (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#249-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 72,
+            "message": "ERC20.allowance (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#71-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 73,
+            "message": "ERC20.transferFrom (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#72-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 238,
+            "message": "VibeXChainToken.transferFrom (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#227-238) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 248,
+            "message": "VibeXChainToken.approve (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#239-248) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 74,
+            "message": "ERC20.approve (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#74) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 133,
+            "message": "VibeXChainToken.transferOwnership (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#126-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "finishDistribution",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 138,
+            "message": "VibeXChainToken.finishDistribution (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#133-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "adminClaimAirdrop",
+            "impact": "Informational",
+            "line": 168,
+            "line_end": 169,
+            "message": "VibeXChainToken.adminClaimAirdrop (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#168-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "adminClaimAirdropMultiple",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 175,
+            "message": "VibeXChainToken.adminClaimAirdropMultiple (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#169-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "updateTokensPerEth",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 184,
+            "message": "VibeXChainToken.updateTokensPerEth (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#176-184) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "getTokenBalance",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 261,
+            "message": "VibeXChainToken.getTokenBalance (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#254-261) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 263,
+            "message": "VibeXChainToken.withdraw (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#261-263) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 263,
+            "line_end": 277,
+            "message": "VibeXChainToken.burn (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#263-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VibeXChainToken",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "message": "VibeXChainToken.withdrawForeignTokens (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol:\n\t- pragma solidity^0.4.23 (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_owner' of VibeXChainToken.balanceOf (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_to' of VibeXChainToken.transfer (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_amount' of VibeXChainToken.transfer (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 249,
+            "message": "Parameter '_owner' of VibeXChainToken.allowance (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#249) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 250,
+            "message": "Parameter '_spender' of VibeXChainToken.allowance (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#249-250) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_from' of VibeXChainToken.transferFrom (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 229,
+            "message": "Parameter '_to' of VibeXChainToken.transferFrom (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#227-229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 229,
+            "message": "Parameter '_amount' of VibeXChainToken.transferFrom (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_spender' of VibeXChainToken.approve (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 240,
+            "message": "Parameter '_value' of VibeXChainToken.approve (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#239-240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 126,
+            "message": "Function 'VibeXChainToken.VibeXChainToken' (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#123-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 139,
+            "message": "Parameter '_to' of VibeXChainToken.distr (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 139,
+            "message": "Parameter '_amount' of VibeXChainToken.distr (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 152,
+            "message": "Parameter '_participant' of VibeXChainToken.doAirdrop (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#151-152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_amount' of VibeXChainToken.doAirdrop (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '_participant' of VibeXChainToken.adminClaimAirdrop (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '_amount' of VibeXChainToken.adminClaimAirdrop (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 172,
+            "message": "Parameter '_addresses' of VibeXChainToken.adminClaimAirdropMultiple (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 172,
+            "message": "Parameter '_amount' of VibeXChainToken.adminClaimAirdropMultiple (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_tokensPerEth' of VibeXChainToken.updateTokensPerEth (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "line": 263,
+            "line_end": 265,
+            "message": "Parameter '_value' of VibeXChainToken.burn (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol#263-265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of VibeXChainToken.withdrawForeignTokens (0x05f49d328452e284a5cb4a113660e9c3a8a7a62c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,154 @@
+{
+    "errors": [
+        "EXIT_CODE_14"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "getDAI",
+            "impact": "Medium",
+            "line": 50,
+            "line_end": 57,
+            "message": "Exchanger.getDAI (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#50-57) does not use the value returned by external calls:\n\t-usdt.transferFrom(msg.sender,this,_amountInDollars * (10 ** 6)) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#52-53)\n\t-dai.transfer(msg.sender,_amountInDollars.mul(((10 ** 18) - feeDAI))) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#53-57)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "getUSDT",
+            "impact": "Medium",
+            "line": 57,
+            "line_end": 64,
+            "message": "Exchanger.getUSDT (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#57-64) does not use the value returned by external calls:\n\t-dai.transferFrom(msg.sender,this,_amountInDollars * (10 ** 18)) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#59-60)\n\t-usdt.transfer(msg.sender,_amountInDollars.mul(((10 ** 6) - feeUSDT))) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#60-64)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "withdrawEquity",
+            "impact": "Medium",
+            "line": 64,
+            "line_end": 73,
+            "message": "Exchanger.withdrawEquity (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#64-73) does not use the value returned by external calls:\n\t-usdt.transfer(creator,_amountInDollars * (10 ** 6)) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#68-69)\n\t-dai.transfer(creator,_amountInDollars * (10 ** 18)) (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#71-73)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 48,
+            "message": "Exchanger.creator should be constant (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#46-48)\nExchanger.feeDAI should be constant (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#48-50)\nExchanger.feeUSDT should be constant (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#50)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "ERC20Interface.balanceOf (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#34-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ERC20Interface.transfer (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 40,
+            "message": "ERC20Interface.transferFrom (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#36-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "getDAI",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 57,
+            "message": "Exchanger.getDAI (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#50-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "getUSDT",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 64,
+            "message": "Exchanger.getUSDT (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#57-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Exchanger",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "function": "withdrawEquity",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 73,
+            "message": "Exchanger.withdrawEquity (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#64-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol:\n\t- pragma solidity^0.4.18 (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "impact": "Informational",
+            "line": 51,
+            "message": "Parameter '_amountInDollars' of Exchanger.getDAI (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Parameter '_amountInDollars' of Exchanger.getUSDT (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Parameter '_amountInDollars' of Exchanger.withdrawEquity (0xb8fff47cb1fa9425c6d0677f4acb84db8e93c885.sol#65) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,331 @@
+{
+    "errors": [
+        "EXIT_CODE_33"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "PenniHungary",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 128,
+            "line_end": 141,
+            "message": "Contract locking ether found in 0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol:\n\tContract PenniHungary has payable functions:\n\t - fallback (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#128-141)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 111,
+            "message": "PenniHungary.version should be constant (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#110-111)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 151,
+            "message": "Deprecated standard detected @ 0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#149-151:\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 16,
+            "message": "Token.totalSupply (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#14-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 81,
+            "message": "StandardToken.balanceOf (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#78-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 21,
+            "message": "Token.balanceOf (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#19-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 65,
+            "message": "StandardToken.transfer (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#52-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 27,
+            "message": "Token.transfer (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#25-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 34,
+            "message": "Token.transferFrom (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#32-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 77,
+            "message": "StandardToken.transferFrom (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#65-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 40,
+            "message": "Token.approve (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#38-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 87,
+            "message": "StandardToken.approve (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#82-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 45,
+            "message": "Token.allowance (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#43-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 92,
+            "message": "StandardToken.allowance (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#87-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PenniHungary",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 141,
+            "message": "PenniHungary.fallback (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#128-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PenniHungary",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 151,
+            "message": "PenniHungary.approveAndCall (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#142-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "Detected issues with version pragma in 0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol:\n\t- pragma solidity^0.4.12 (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#9-11): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "PenniHungary",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 151,
+            "message": "Low level call in PenniHungary.approveAndCall (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#142-151):\n\t-! _spender.call(bytes4(bytes32(sha3()(receiveApproval(address,uint256,address,bytes)))),msg.sender,_value,this,_extraData) 0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#149-151\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 79,
+            "message": "Parameter '_owner' of StandardToken.balanceOf (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#78-79) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 53,
+            "message": "Parameter '_to' of StandardToken.transfer (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#52-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 53,
+            "message": "Parameter '_value' of StandardToken.transfer (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 66,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#65-66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_spender' of StandardToken.approve (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 83,
+            "message": "Parameter '_value' of StandardToken.approve (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#82-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 88,
+            "message": "Parameter '_owner' of StandardToken.allowance (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#88) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 89,
+            "message": "Parameter '_spender' of StandardToken.allowance (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#88-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 128,
+            "message": "Function 'PenniHungary.PenniHungary' (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#117-128) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_spender' of PenniHungary.approveAndCall (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_value' of PenniHungary.approveAndCall (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Parameter '_extraData' of PenniHungary.approveAndCall (0xd7de455acaff66370f91d90dd0df8f07d3c84fe7.sol#145) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

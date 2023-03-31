@@ -1,0 +1,284 @@
+{
+    "errors": [
+        "EXIT_CODE_28"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "URUNToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 242,
+            "line_end": 243,
+            "message": "Contract locking ether found in 0x01a9a2b8638451d447f0027179b19e8843963a88.sol:\n\tContract URUNToken has payable functions:\n\t - fallback (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#242-243)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 241,
+            "message": "URUNToken.decimals should be constant (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#237-241)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 77,
+            "message": "Ownable.transferOwnership (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#69-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 147,
+            "message": "BasicToken.balanceOf (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#144-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 86,
+            "message": "ERC20Basic.balanceOf (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#86) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 91,
+            "message": "ERC20Basic.transfer (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#88-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 135,
+            "message": "BasicToken.transfer (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#122-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 208,
+            "message": "StandardToken.allowance (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#204-208) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 98,
+            "message": "ERC20.allowance (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#97-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 102,
+            "message": "ERC20.transferFrom (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#98-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 177,
+            "message": "StandardToken.transferFrom (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#163-177) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 193,
+            "message": "StandardToken.approve (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#187-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 106,
+            "message": "ERC20.approve (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#102-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 234,
+            "message": "BurnableToken.burn (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#217-234) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "URUNToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 243,
+            "message": "URUNToken.fallback (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#242-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "URUNToken",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "function": "getTokenDetail",
+            "impact": "Informational",
+            "message": "URUNToken.getTokenDetail (0x01a9a2b8638451d447f0027179b19e8843963a88.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x01a9a2b8638451d447f0027179b19e8843963a88.sol:\n\t- pragma solidity0.4.23 (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 146,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 122,
+            "message": "Parameter '_to' of BasicToken.transfer (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 122,
+            "message": "Parameter '_amount' of BasicToken.transfer (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 204,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 205,
+            "line_end": 206,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#205-206) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 164,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 164,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 165,
+            "message": "Parameter '_amount' of StandardToken.transferFrom (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#164-165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 191,
+            "message": "Parameter '_spender' of StandardToken.approve (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#189-191) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 191,
+            "message": "Parameter '_amount' of StandardToken.approve (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#191) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01a9a2b8638451d447f0027179b19e8843963a88.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_value' of BurnableToken.burn (0x01a9a2b8638451d447f0027179b19e8843963a88.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

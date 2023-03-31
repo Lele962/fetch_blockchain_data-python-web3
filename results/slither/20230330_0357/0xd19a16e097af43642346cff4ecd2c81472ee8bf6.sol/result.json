@@ -1,0 +1,780 @@
+{
+    "errors": [
+        "EXIT_CODE_83"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Object",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "withdrawnTokens",
+            "impact": "Medium",
+            "line": 140,
+            "line_end": 151,
+            "message": "Object.withdrawnTokens (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#140-151) does not use the value returned by external calls:\n\t-ERC20Interface(token).transfer(_to,balance) (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#148-149)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 227,
+            "message": "ERC20.symbol should be constant (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#226-227)\nERC20Interface.symbol should be constant (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#121)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Deprecated standard detected @ 0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#80-81:\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "isTransferAllowed",
+            "impact": "Informational",
+            "line": 484,
+            "line_end": 487,
+            "message": "Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#484-487) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ServiceAllowance",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "isTransferAllowed",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 41,
+            "message": "ServiceAllowance.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#37-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "destroy",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 81,
+            "message": "Owned.destroy (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#76-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "changeContractOwnership",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 100,
+            "message": "Owned.changeContractOwnership (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#88-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "claimContractOwnership",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 117,
+            "message": "Owned.claimContractOwnership (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#105-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "ERC20Interface.totalSupply (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#121-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 123,
+            "message": "ERC20Interface.balanceOf (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#122-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 124,
+            "message": "ERC20Interface.transfer (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#123-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "ERC20Interface.transferFrom (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#124-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 129,
+            "message": "ERC20Interface.approve (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#125-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 133,
+            "message": "ERC20Interface.allowance (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#129-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Object",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "withdrawnTokens",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 151,
+            "message": "Object.withdrawnTokens (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#140-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 227,
+            "message": "ERC20.totalSupply (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 228,
+            "message": "ERC20.balanceOf (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#227-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 229,
+            "message": "ERC20.transfer (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#228-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 236,
+            "message": "ERC20.transferFrom (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#229-236) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 237,
+            "message": "ERC20.approve (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#236-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 238,
+            "message": "ERC20.allowance (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#237-238) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "init",
+            "impact": "Informational",
+            "line": 305,
+            "line_end": 311,
+            "message": "Treasury.init (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#305-311) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 312,
+            "message": "Treasury.fallback (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#312) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "getSharesPercentForPeriod",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 410,
+            "message": "Treasury.getSharesPercentForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#398-410) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "getLockedUserBalance",
+            "impact": "Informational",
+            "line": 431,
+            "line_end": 433,
+            "message": "Treasury.getLockedUserBalance (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#431-433) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "getLockedUserDeposits",
+            "impact": "Informational",
+            "line": 439,
+            "line_end": 459,
+            "message": "Treasury.getLockedUserDeposits (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#439-459) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "getTotalBmcDaysAmount",
+            "impact": "Informational",
+            "line": 462,
+            "line_end": 465,
+            "message": "Treasury.getTotalBmcDaysAmount (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#462-465) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treasury",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "function": "addDistributionPeriod",
+            "impact": "Informational",
+            "line": 467,
+            "line_end": 484,
+            "message": "Treasury.addDistributionPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#467-484) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol:\n\t- pragma solidity^0.4.18 (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 64,
+            "message": "Function 'Owned.Owned' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#59-64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '_to' of Owned.changeContractOwnership (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_to' of Object.withdrawnTokens (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 183,
+            "message": "Parameter '_whitelist' of OracleContractAdapter.addOracles (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#182-183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 197,
+            "message": "Parameter '_blacklist' of OracleContractAdapter.removeOracles (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 214,
+            "line_end": 216,
+            "message": "Function 'OracleContractAdapter._emitOracleAdded' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#214-216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 215,
+            "message": "Parameter '_oracle' of OracleContractAdapter._emitOracleAdded (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 220,
+            "message": "Function 'OracleContractAdapter._emitOracleRemoved' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#216-220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_oracle' of OracleContractAdapter._emitOracleRemoved (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 485,
+            "message": "Parameter '' of Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 485,
+            "message": "Parameter '_scope_0' of Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 485,
+            "message": "Parameter '_scope_1' of Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 485,
+            "message": "Parameter '_scope_2' of Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 485,
+            "message": "Parameter '_scope_3' of Treasury.isTransferAllowed (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 305,
+            "message": "Function 'Treasury.Treasury' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#296-305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 298,
+            "message": "Parameter '_token' of Treasury.Treasury (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#297-298) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 307,
+            "message": "Parameter '_profiterole' of Treasury.init (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#307) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 323,
+            "message": "Parameter '_userKey' of Treasury.deposit (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 324,
+            "message": "Parameter '_value' of Treasury.deposit (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#323-324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_feeAmount' of Treasury.deposit (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_feeAddress' of Treasury.deposit (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 324,
+            "line_end": 325,
+            "message": "Parameter '_lockupDate' of Treasury.deposit (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#324-325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 363,
+            "message": "Parameter '_userKey' of Treasury.withdraw (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 363,
+            "message": "Parameter '_value' of Treasury.withdraw (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 363,
+            "line_end": 364,
+            "message": "Parameter '_withdrawAddress' of Treasury.withdraw (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#363-364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 364,
+            "message": "Parameter '_feeAmount' of Treasury.withdraw (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 366,
+            "message": "Parameter '_feeAddress' of Treasury.withdraw (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#364-366) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_userKey' of Treasury.getSharesPercentForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_date' of Treasury.getSharesPercentForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 419,
+            "message": "Parameter '_userKey' of Treasury.getUserBalance (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#419) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 432,
+            "message": "Parameter '_userKey' of Treasury.getLockedUserBalance (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#432) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 439,
+            "line_end": 440,
+            "message": "Parameter '_userKey' of Treasury.getLockedUserDeposits (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#439-440) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 464,
+            "message": "Parameter '_date' of Treasury.getTotalBmcDaysAmount (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#464) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 487,
+            "line_end": 506,
+            "message": "Function 'Treasury._makeDepositForPeriod' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#487-506) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 488,
+            "message": "Parameter '_userKey' of Treasury._makeDepositForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#488) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 488,
+            "message": "Parameter '_value' of Treasury._makeDepositForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#488) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 488,
+            "line_end": 489,
+            "message": "Parameter '_lockupDate' of Treasury._makeDepositForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#488-489) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 506,
+            "line_end": 528,
+            "message": "Function 'Treasury._makeWithdrawForPeriod' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#506-528) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 506,
+            "message": "Parameter '_userKey' of Treasury._makeWithdrawForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#506) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 506,
+            "line_end": 507,
+            "message": "Parameter '_value' of Treasury._makeWithdrawForPeriod (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#506-507) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 528,
+            "line_end": 543,
+            "message": "Function 'Treasury._registerLockedDeposits' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#528-543) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 528,
+            "line_end": 529,
+            "message": "Parameter '_userKey' of Treasury._registerLockedDeposits (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#528-529) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 530,
+            "message": "Parameter '_amount' of Treasury._registerLockedDeposits (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#529-530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 530,
+            "message": "Parameter '_lockupDate' of Treasury._registerLockedDeposits (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 543,
+            "line_end": 564,
+            "message": "Function 'Treasury._syncLockedDepositsAmount' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#543-564) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 543,
+            "line_end": 544,
+            "message": "Parameter '_userKey' of Treasury._syncLockedDepositsAmount (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#543-544) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 564,
+            "line_end": 582,
+            "message": "Function 'Treasury._getBmcDaysAmountForUser' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#564-582) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 564,
+            "line_end": 565,
+            "message": "Parameter '_userKey' of Treasury._getBmcDaysAmountForUser (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#564-565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 565,
+            "message": "Parameter '_date' of Treasury._getBmcDaysAmountForUser (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 565,
+            "message": "Parameter '_periodIdx' of Treasury._getBmcDaysAmountForUser (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 582,
+            "line_end": 586,
+            "message": "Function 'Treasury._getTotalBmcDaysAmount' (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#582-586) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 583,
+            "message": "Parameter '_date' of Treasury._getTotalBmcDaysAmount (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#583) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 583,
+            "message": "Parameter '_periodIdx' of Treasury._getTotalBmcDaysAmount (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#583) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol",
+            "impact": "Informational",
+            "line": 252,
+            "line_end": 253,
+            "message": "Treasury.TREASURY_ERROR_SCOPE (0xd19a16e097af43642346cff4ecd2c81472ee8bf6.sol#252-253) is never used in Treasury\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

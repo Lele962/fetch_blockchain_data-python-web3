@@ -1,0 +1,201 @@
+{
+    "errors": [
+        "EXIT_CODE_20"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "LockTokenContract",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "calculateUnlockAmount",
+            "impact": "Medium",
+            "line": 217,
+            "line_end": 235,
+            "message": "LockTokenContract.calculateUnlockAmount (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#217-235) uses a dangerous strict equality:\n\t- unlockable == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockTokenContract",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 190,
+            "line_end": 217,
+            "message": "Contract locking ether found in 0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol:\n\tContract LockTokenContract has payable functions:\n\t - fallback (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#190-217)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LockTokenContract",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 201,
+            "message": "stage in LockTokenContract.fallback (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#201) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LockTokenContract",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "fallback",
+            "impact": "Low",
+            "line": 190,
+            "line_end": 217,
+            "message": "Reentrancy in LockTokenContract.fallback (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#190-217):\n\tExternal calls:\n\t- balance = token.balanceOf(address(this)) (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#199-200)\n\tState variables written after the call(s):\n\t- AddressWithdrawals (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#213-214)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 174,
+            "message": "LockTokenContract.FoundationAddress should be constant (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#173-174)\nLockTokenContract.GubiTokenAddress should be constant (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#179-184)\nLockTokenContract.TeamAndAdviserAddreesOne should be constant (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#174-175)\nLockTokenContract.TeamAndAdviserAddreesTwo should be constant (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#175-179)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "Token.balanceOf (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 36,
+            "message": "Token.transfer (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#33-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol:\n\t- pragma solidity0.5.4 (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 219,
+            "message": "Parameter '_now' of LockTokenContract.calculateUnlockAmount (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#218-219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_balance' of LockTokenContract.calculateUnlockAmount (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 94,
+            "message": "Variable 'LockTokenContract.FoundationReleaseStage' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#39-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 137,
+            "message": "Variable 'LockTokenContract.TeamAndAdviserAddreesOneStage' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#95-137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 173,
+            "message": "Variable 'LockTokenContract.TeamAndAdviserAddreesTwoStage' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#138-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 174,
+            "message": "Variable 'LockTokenContract.FoundationAddress' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#173-174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 175,
+            "message": "Variable 'LockTokenContract.TeamAndAdviserAddreesOne' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#174-175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 179,
+            "message": "Variable 'LockTokenContract.TeamAndAdviserAddreesTwo' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#175-179) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 184,
+            "message": "Variable 'LockTokenContract.GubiTokenAddress' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#179-184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 188,
+            "message": "Constant 'LockTokenContract.StageSection' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#185-188) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Variable 'LockTokenContract.StartTime' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Variable 'LockTokenContract.AddressWithdrawals' (0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

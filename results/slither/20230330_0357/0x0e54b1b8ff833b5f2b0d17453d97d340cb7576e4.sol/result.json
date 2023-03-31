@@ -1,0 +1,394 @@
+{
+    "errors": [
+        "EXIT_CODE_40"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Medium",
+            "line": 135,
+            "line_end": 142,
+            "message": "ERC223Token.isContract (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#135-142) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Medium",
+            "line": 66,
+            "line_end": 67,
+            "message": "ERC223Token.totalSupply (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#66-67) shadows:\n\t- IERC223.totalSupply (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#4-5)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 127,
+            "message": "empty in ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#127) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 142,
+            "message": "ERC223Token.isContract uses assembly (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#135-142)\n\t- 0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#136-142\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 66,
+            "message": "ERC223Token.decimals should be constant (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#64-66)\nERC223Token.name should be constant (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#62-63)\nERC223Token.symbol should be constant (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#64)\nERC223Token.totalSupply should be constant (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#66-67)\nIERC223.totalSupply should be constant (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#4-5)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 75,
+            "message": "ERC223Token.name (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#72-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "IERC223.name (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "IERC223.symbol (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#8-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 79,
+            "message": "ERC223Token.symbol (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#76-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "IERC223.decimals (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#9-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 83,
+            "message": "ERC223Token.decimals (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#80-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 88,
+            "message": "ERC223Token.totalSupply (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#84-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 12,
+            "message": "IERC223.totalSupply (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#10-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "IERC223.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#12-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 132,
+            "message": "ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#120-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 117,
+            "message": "ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#108-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "IERC223.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#13-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC223",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 16,
+            "message": "IERC223.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#14-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 106,
+            "message": "ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#89-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractReceiver",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 59,
+            "message": "ContractReceiver.tokenFallback (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#54-59) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol:\n\t- pragma solidity^0.4.13 (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Token",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 106,
+            "message": "Low level call in ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#89-106):\n\t-assert(bool)(_to.call.value(0)(bytes4(keccak256()(_custom_fallback)),msg.sender,_value,_data)) 0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#96-100\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 14,
+            "message": "Parameter 'custom_fallback' of IERC223.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#14) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of ERC223Token.balanceOf (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_to' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "Parameter '_value' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#120-121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 109,
+            "message": "Parameter '_to' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 109,
+            "message": "Parameter '_value' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 109,
+            "message": "Parameter '_data' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 90,
+            "message": "Parameter '_to' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#89-90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 91,
+            "message": "Parameter '_value' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#90-91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_data' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 92,
+            "message": "Parameter '_custom_fallback' of ERC223Token.transfer (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#91-92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 71,
+            "message": "Function 'ERC223Token.ERC223Token' (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#67-71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Parameter '_to' of ERC223Token.transferToAddress (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#144) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Parameter '_value' of ERC223Token.transferToAddress (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#144) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Parameter '_data' of ERC223Token.transferToAddress (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#144) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Parameter '_to' of ERC223Token.transferToContract (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Parameter '_value' of ERC223Token.transferToContract (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Parameter '_data' of ERC223Token.transferToContract (0x0e54b1b8ff833b5f2b0d17453d97d340cb7576e4.sol#153) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

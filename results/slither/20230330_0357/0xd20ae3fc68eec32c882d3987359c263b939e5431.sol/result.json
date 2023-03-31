@@ -1,0 +1,496 @@
+{
+    "errors": [
+        "EXIT_CODE_52"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Medium",
+            "message": "YesCoin.isContract (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 187,
+            "line_end": 190,
+            "message": "Contract locking ether found in 0xd20ae3fc68eec32c882d3987359c263b939e5431.sol:\n\tContract YesCoin has payable functions:\n\t - fallback (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#187-190)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "message": "YesCoin.isContract uses assembly (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol)\n\t- 0xd20ae3fc68eec32c882d3987359c263b939e5431.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 119,
+            "message": "Ownable.transferOwnership (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#112-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 132,
+            "message": "Ownable.acceptOwnership (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#121-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 193,
+            "message": "YesCoin.totalSupply (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#192-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 133,
+            "message": "ERC20.totalSupply (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "ERC20.balanceOf (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#133-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 243,
+            "message": "YesCoin.balanceOf (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#238-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 135,
+            "message": "ERC20.allowance (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#134-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 310,
+            "line_end": 318,
+            "message": "YesCoin.allowance (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#310-318) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 230,
+            "message": "YesCoin.transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#218-230) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "ERC20.transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#135-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "ERC20.transferFrom (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#136-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 277,
+            "message": "YesCoin.transferFrom (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#272-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 294,
+            "message": "YesCoin.approve (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#292-294) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "ERC20.approve (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#137-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 190,
+            "message": "YesCoin.fallback (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#187-190) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "sendwithgas",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 260,
+            "message": "YesCoin.sendwithgas (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#244-260) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 328,
+            "message": "YesCoin.freezeAccount (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#320-328) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "YesCoin",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "function": "unfreezeAccount",
+            "impact": "Informational",
+            "line": 331,
+            "line_end": 335,
+            "message": "YesCoin.unfreezeAccount (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#331-335) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 13,
+            "message": "Parameter '_a' of SafeMath.mul (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#13) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 13,
+            "message": "Parameter '_b' of SafeMath.mul (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#13) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 31,
+            "message": "Parameter '_a' of SafeMath.div (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#31) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 31,
+            "message": "Parameter '_b' of SafeMath.div (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#31) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 44,
+            "message": "Parameter '_a' of SafeMath.sub (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#44) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 46,
+            "message": "Parameter '_b' of SafeMath.sub (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#44-46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 56,
+            "message": "Parameter '_a' of SafeMath.add (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#54-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 56,
+            "message": "Parameter '_b' of SafeMath.add (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 116,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 240,
+            "message": "Parameter '_holder' of YesCoin.balanceOf (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#238-240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 312,
+            "line_end": 315,
+            "message": "Parameter '_holder' of YesCoin.allowance (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#312-315) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 315,
+            "line_end": 317,
+            "message": "Parameter '_spender' of YesCoin.allowance (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#315-317) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_to' of YesCoin.transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_value' of YesCoin.transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_from' of YesCoin.transferFrom (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_to' of YesCoin.transferFrom (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_value' of YesCoin.transferFrom (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 292,
+            "message": "Parameter '_spender' of YesCoin.approve (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 293,
+            "message": "Parameter '_value' of YesCoin.approve (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#292-293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 214,
+            "message": "Function 'YesCoin._transfer' (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#201-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 201,
+            "message": "Parameter '_from' of YesCoin._transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#201) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 202,
+            "message": "Parameter '_to' of YesCoin._transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#201-202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_value' of YesCoin._transfer (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_from' of YesCoin.sendwithgas (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 245,
+            "message": "Parameter '_to' of YesCoin.sendwithgas (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#244-245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_value' of YesCoin.sendwithgas (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_fee' of YesCoin.sendwithgas (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_holder' of YesCoin.freezeAccount (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 331,
+            "message": "Parameter '_holder' of YesCoin.unfreezeAccount (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#331) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_value' of YesCoin.burn (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae3fc68eec32c882d3987359c263b939e5431.sol",
+            "impact": "Informational",
+            "line": 359,
+            "line_end": 360,
+            "message": "Parameter '_amount' of YesCoin.mint (0xd20ae3fc68eec32c882d3987359c263b939e5431.sol#359-360) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,262 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 141,
+            "line_end": 142,
+            "message": "Contract locking ether found in 0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol:\n\tContract MBIToken has payable functions:\n\t - fallback (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#141-142)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "safeMul",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 17,
+            "message": "SafeMath.safeMul (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#13-17) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "safeDiv",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 24,
+            "message": "SafeMath.safeDiv (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#17-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 95,
+            "message": "MBIToken.totalSupply (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#90-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 26,
+            "message": "ERC20Interface.totalSupply (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#25-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "ERC20Interface.balanceOf (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#26-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 100,
+            "message": "MBIToken.balanceOf (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#95-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 129,
+            "message": "MBIToken.allowance (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#124-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 28,
+            "message": "ERC20Interface.allowance (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#27-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 108,
+            "message": "MBIToken.transfer (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#100-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 29,
+            "message": "ERC20Interface.transfer (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#28-29) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 30,
+            "message": "ERC20Interface.approve (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#29-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 115,
+            "message": "MBIToken.approve (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#108-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 32,
+            "message": "ERC20Interface.transferFrom (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#30-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 124,
+            "message": "MBIToken.transferFrom (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#115-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 43,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#38-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 61,
+            "message": "Owned.transferOwnership (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#57-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 70,
+            "message": "Owned.acceptOwnership (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#61-70) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 141,
+            "message": "MBIToken.approveAndCall (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#129-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 142,
+            "message": "MBIToken.fallback (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#141-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MBIToken",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 144,
+            "message": "MBIToken.transferAnyERC20Token (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#142-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 59,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#58-59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Variable 'MBIToken._totalSupply' (0x00a77b5b45d477cbf0438b9d0d8e8ab6a58ca99a.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

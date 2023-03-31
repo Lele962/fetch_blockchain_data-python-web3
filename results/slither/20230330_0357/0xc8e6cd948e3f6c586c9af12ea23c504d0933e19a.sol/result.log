@@ -1,0 +1,54 @@
+INFO:Detectors:[93m
+IcoToken.transferOwnership (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#337-345) does not use the value returned by external calls:
+	-this.approve(msg.sender,0) (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#343)
+	-this.approve(newOwner,0) (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#343)
+	-this.approve(newOwner,balances[this]) (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#343-345)
+IcoToken.burnUnused (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol) does not use the value returned by external calls:
+	-this.approve(msg.sender,0) (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ERC20Basic.totalSupply (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#102-103) should be declared external
+BasicToken.totalSupply (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#128-130) should be declared external
+ERC20Basic.balanceOf (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#103-104) should be declared external
+BasicToken.balanceOf (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#153-157) should be declared external
+BasicToken.transfer (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#134-145) should be declared external
+ERC20Basic.transfer (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#104-107) should be declared external
+BurnableToken.burn (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#172-173) should be declared external
+StandardToken.allowance (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#257-259) should be declared external
+ERC20.allowance (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#192-193) should be declared external
+ERC20.transferFrom (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#193-196) should be declared external
+StandardToken.transferFrom (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#221-232) should be declared external
+StandardToken.approve (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#245-248) should be declared external
+ERC20.approve (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#196-201) should be declared external
+StandardToken.increaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#269-275) should be declared external
+StandardToken.decreaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#285-303) should be declared external
+IcoToken.burnUnused (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol) should be declared external
+IcoToken.destroy (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol:
+	- pragma solidity0.4.21 (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#21-26) is not in mixedCase
+Parameter '_owner' of BasicToken.balanceOf (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#153-156) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#136) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#136) is not in mixedCase
+Parameter '_value' of BurnableToken.burn (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#173) is not in mixedCase
+Function 'BurnableToken._burn' (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#174-189) is not in mixedCase
+Parameter '_who' of BurnableToken._burn (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#174) is not in mixedCase
+Parameter '_value' of BurnableToken._burn (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#174) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#257) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#257-258) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#221) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#221) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#222) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#245) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#245-246) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#271) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#271) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#286-287) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#287) is not in mixedCase
+Function 'IcoToken.IcoToken' (/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol#319-328) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xc8e6cd948e3f6c586c9af12ea23c504d0933e19a.sol analyzed (8 contracts), 40 result(s) found

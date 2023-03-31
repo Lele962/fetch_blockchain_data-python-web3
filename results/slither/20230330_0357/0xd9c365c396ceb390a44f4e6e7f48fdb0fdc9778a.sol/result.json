@@ -1,0 +1,633 @@
+{
+    "errors": [
+        "EXIT_CODE_66"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 199,
+            "line_end": 218,
+            "message": "Reentrancy in KvantorSaleToken.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218):\n\tExternal calls:\n\t- require(bool)(kvtToken.transfer(msg.sender,_value)) (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#203-205)\n\tState variables written after the call(s):\n\t- balances (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#205)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 218,
+            "line_end": 237,
+            "message": "Reentrancy in KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237):\n\tExternal calls:\n\t- require(bool)(kvtToken.transfer(_from,_value)) (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)\n\tState variables written after the call(s):\n\t- allowed (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#235-236)\n\t- balances (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "returnKVTToSomeone",
+            "impact": "Low",
+            "line": 306,
+            "line_end": 318,
+            "message": "Reentrancy in KvantorSaleToken.returnKVTToSomeone (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#306-318):\n\tExternal calls:\n\t- require(bool)(kvtToken.transfer(_to,tokens)) (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#314-316)\n\tState variables written after the call(s):\n\t- balances (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#318)\n\t- totalSupply_ (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#318)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transfer",
+            "impact": "Low",
+            "line": 199,
+            "line_end": 218,
+            "message": "Reentrancy in KvantorSaleToken.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218):\n\tExternal calls:\n\t- require(bool)(kvtToken.transfer(msg.sender,_value)) (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#203-205)\n\tState variables written after the call(s):\n\t- totalSupply_ (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#205)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transferFrom",
+            "impact": "Low",
+            "line": 218,
+            "line_end": 237,
+            "message": "Reentrancy in KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237):\n\tExternal calls:\n\t- require(bool)(kvtToken.transfer(_from,_value)) (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)\n\tState variables written after the call(s):\n\t- totalSupply_ (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 177,
+            "message": "KvantorSaleToken.crowdsaleFinishTime should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#175-177)\nKvantorSaleToken.crowdsaleStartTime should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#175)\nKvantorSaleToken.decimals should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#174)\nKvantorSaleToken.kvtOwner should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#177-179)\nKvantorSaleToken.name should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#171-174)\nKvantorSaleToken.symbol should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#174)\nKvantorSaleToken.wallet should be constant (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#194-195)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 48,
+            "message": "Ownable.renounceOwnership (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#42-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 56,
+            "message": "Ownable.transferOwnership (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#51-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 363,
+            "message": "KvantorSaleToken.totalSupply (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#358-363) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "ERC20.totalSupply (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#139-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 142,
+            "message": "ERC20.balanceOf (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#140-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 366,
+            "line_end": 369,
+            "message": "KvantorSaleToken.balanceOf (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#366-369) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 145,
+            "message": "ERC20.allowance (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#142-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 381,
+            "line_end": 383,
+            "message": "KvantorSaleToken.allowance (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#381-383) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 147,
+            "message": "ERC20.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#145-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 218,
+            "message": "KvantorSaleToken.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 151,
+            "message": "ERC20.approve (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#147-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 402,
+            "message": "KvantorSaleToken.approve (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398-402) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 237,
+            "message": "KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 157,
+            "message": "ERC20.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#151-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "returnKVTToOwner",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 306,
+            "message": "KvantorSaleToken.returnKVTToOwner (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#297-306) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "returnKVTToSomeone",
+            "impact": "Informational",
+            "line": 306,
+            "line_end": 318,
+            "message": "KvantorSaleToken.returnKVTToSomeone (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#306-318) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "finishHim",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 321,
+            "message": "KvantorSaleToken.finishHim (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#319-321) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "setRate",
+            "impact": "Informational",
+            "line": 321,
+            "line_end": 323,
+            "message": "KvantorSaleToken.setRate (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#321-323) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "setTokenCap",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 327,
+            "message": "KvantorSaleToken.setTokenCap (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#323-327) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 418,
+            "line_end": 424,
+            "message": "KvantorSaleToken.increaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#418-424) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KvantorSaleToken",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 439,
+            "line_end": 452,
+            "message": "KvantorSaleToken.decreaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#439-452) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 68,
+            "message": "Function 'Ownable._transferOwnership' (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#60-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#60-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_a' of SafeMath.mul (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_b' of SafeMath.mul (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_a' of SafeMath.div (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_b' of SafeMath.div (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 105,
+            "message": "Parameter '_a' of SafeMath.sub (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "Parameter '_b' of SafeMath.sub (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#106-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 117,
+            "message": "Parameter '_a' of SafeMath.add (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#115-117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 118,
+            "message": "Parameter '_b' of SafeMath.add (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#117-118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 366,
+            "message": "Parameter '_owner' of KvantorSaleToken.balanceOf (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#366) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 381,
+            "line_end": 382,
+            "message": "Parameter '_owner' of KvantorSaleToken.allowance (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#381-382) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 382,
+            "message": "Parameter '_spender' of KvantorSaleToken.allowance (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#382) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_to' of KvantorSaleToken.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_value' of KvantorSaleToken.transfer (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 398,
+            "message": "Parameter '_spender' of KvantorSaleToken.approve (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 398,
+            "message": "Parameter '_value' of KvantorSaleToken.approve (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_from' of KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 220,
+            "message": "Parameter '_to' of KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#219-220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_value' of KvantorSaleToken.transferFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_weiAmount' of KvantorSaleToken.calculateTokens (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 271,
+            "message": "Parameter '_beneficiary' of KvantorSaleToken.buyTokens (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#270-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 307,
+            "message": "Parameter '_to' of KvantorSaleToken.returnKVTToSomeone (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#307) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 322,
+            "message": "Parameter '_rate' of KvantorSaleToken.setRate (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#322) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_tokenCap' of KvantorSaleToken.setTokenCap (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 419,
+            "message": "Parameter '_spender' of KvantorSaleToken.increaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#419) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 419,
+            "message": "Parameter '_addedValue' of KvantorSaleToken.increaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#419) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 439,
+            "line_end": 440,
+            "message": "Parameter '_spender' of KvantorSaleToken.decreaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#439-440) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 441,
+            "line_end": 444,
+            "message": "Parameter '_subtractedValue' of KvantorSaleToken.decreaseApproval (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#441-444) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 468,
+            "message": "Function 'KvantorSaleToken._mint' (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#461-468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 462,
+            "message": "Parameter '_account' of KvantorSaleToken._mint (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#461-462) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 462,
+            "line_end": 463,
+            "message": "Parameter '_amount' of KvantorSaleToken._mint (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#462-463) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 474,
+            "line_end": 482,
+            "message": "Function 'KvantorSaleToken._burn' (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#474-482) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 475,
+            "message": "Parameter '_account' of KvantorSaleToken._burn (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "line": 475,
+            "line_end": 476,
+            "message": "Parameter '_amount' of KvantorSaleToken._burn (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#475-476) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "message": "Function 'KvantorSaleToken._burnFrom' (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "message": "Parameter '_account' of KvantorSaleToken._burnFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of KvantorSaleToken._burnFrom (0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

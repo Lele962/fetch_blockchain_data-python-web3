@@ -1,0 +1,964 @@
+{
+    "errors": [
+        "EXIT_CODE_105"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "transferOnBehalf",
+            "impact": "Medium",
+            "line": 509,
+            "line_end": 532,
+            "message": "Reentrancy in EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#509-532):\n\tExternal calls:\n\t- fee = comissionList.calcTransfer(_amount) (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#521-522)\n\tState variables written after the call(s):\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#526)\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#526-527)\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#527-528)\n\t- lastUsedNonce (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#528)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "withdrawOnBehalf",
+            "impact": "Medium",
+            "line": 532,
+            "line_end": 551,
+            "message": "Reentrancy in EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#532-551):\n\tExternal calls:\n\t- fee = comissionList.calcWidthraw(_paySystem,_amount) (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#544-548)\n\tState variables written after the call(s):\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#549-551)\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "refill",
+            "impact": "Low",
+            "message": "Reentrancy in EvaCurrency.refill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol):\n\tExternal calls:\n\t- fee = comissionList.calcRefill(_paySystem,_amount) (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n\tState variables written after the call(s):\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n\t- balances (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n\t- totalSupply_ (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "withdrawOnBehalf",
+            "impact": "Low",
+            "line": 532,
+            "line_end": 551,
+            "message": "Reentrancy in EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#532-551):\n\tExternal calls:\n\t- fee = comissionList.calcWidthraw(_paySystem,_amount) (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#544-548)\n\tState variables written after the call(s):\n\t- totalSupply_ (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 101,
+            "message": "Claimable.transferOwnership (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#96-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 84,
+            "message": "Ownable.transferOwnership (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#73-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "claimOwnership",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 115,
+            "message": "Claimable.claimOwnership (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#103-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 143,
+            "message": "Pausable.pause (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#140-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 153,
+            "message": "Pausable.unpause (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#150-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 194,
+            "message": "BasicToken.totalSupply (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#192-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 157,
+            "message": "ERC20Basic.totalSupply (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#156-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 160,
+            "message": "ERC20Basic.balanceOf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#157-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 224,
+            "message": "BasicToken.balanceOf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#221-224) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 295,
+            "message": "StandardToken.allowance (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#292-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 167,
+            "message": "ERC20.allowance (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#165-167) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 231,
+            "message": "BurnableToken.burn (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#230-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "setRefillFor",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 386,
+            "message": "ComissionList.setRefillFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#378-386) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "setWidthrawFor",
+            "impact": "Informational",
+            "line": 390,
+            "line_end": 398,
+            "message": "ComissionList.setWidthrawFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#390-398) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "setTransfer",
+            "impact": "Informational",
+            "line": 400,
+            "line_end": 405,
+            "message": "ComissionList.setTransfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#400-405) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getRefillStatFor",
+            "impact": "Informational",
+            "line": 409,
+            "line_end": 413,
+            "message": "ComissionList.getRefillStatFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#409-413) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getRefillPercFor",
+            "impact": "Informational",
+            "line": 415,
+            "line_end": 420,
+            "message": "ComissionList.getRefillPercFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#415-420) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getWidthrawStatFor",
+            "impact": "Informational",
+            "line": 424,
+            "line_end": 426,
+            "message": "ComissionList.getWidthrawStatFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#424-426) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getWidthrawPercFor",
+            "impact": "Informational",
+            "line": 431,
+            "line_end": 432,
+            "message": "ComissionList.getWidthrawPercFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#431-432) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getTransferPerc",
+            "impact": "Informational",
+            "line": 434,
+            "line_end": 436,
+            "message": "ComissionList.getTransferPerc (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#434-436) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getTransferStat",
+            "impact": "Informational",
+            "line": 440,
+            "line_end": 441,
+            "message": "ComissionList.getTransferStat (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#440-441) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "calcWidthraw",
+            "impact": "Informational",
+            "line": 448,
+            "line_end": 460,
+            "message": "ComissionList.calcWidthraw (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#448-460) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "calcRefill",
+            "impact": "Informational",
+            "line": 464,
+            "line_end": 474,
+            "message": "ComissionList.calcRefill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#464-474) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ComissionList",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "calcTransfer",
+            "impact": "Informational",
+            "line": 483,
+            "line_end": 486,
+            "message": "ComissionList.calcTransfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#483-486) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "changeName",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 505,
+            "message": "EvaCurrency.changeName (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#500-505) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "setComissionList",
+            "impact": "Informational",
+            "line": 505,
+            "message": "EvaCurrency.setComissionList (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#505) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "transferOnBehalf",
+            "impact": "Informational",
+            "line": 509,
+            "line_end": 532,
+            "message": "EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#509-532) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "withdrawOnBehalf",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 551,
+            "message": "EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#532-551) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "refill",
+            "impact": "Informational",
+            "message": "EvaCurrency.refill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "changeStaker",
+            "impact": "Informational",
+            "message": "EvaCurrency.changeStaker (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EvaCurrency",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "function": "getNullAddress",
+            "impact": "Informational",
+            "message": "EvaCurrency.getNullAddress (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x21fcf6e1046f7de62557e64470447f8e516919ac.sol:\n\t- pragma solidity^0.4.23 (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 62,
+            "message": "Function 'Ownable.Ownable' (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#60-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_to' of BasicToken.transfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_value' of BasicToken.transfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 231,
+            "message": "Parameter '_value' of BurnableToken.burn (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#230-231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 247,
+            "message": "Function 'BurnableToken._burn' (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#231-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 231,
+            "message": "Parameter '_who' of BurnableToken._burn (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 233,
+            "message": "Parameter '_value' of BurnableToken._burn (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#231-233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 293,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 293,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 257,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#257) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 257,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#257) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#257-258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 281,
+            "message": "Parameter '_spender' of StandardToken.approve (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#281) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 281,
+            "message": "Parameter '_value' of StandardToken.approve (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#281) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 307,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#307) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 308,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#307-308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 323,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 323,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 338,
+            "message": "Parameter '_to' of PausableToken.transfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 338,
+            "message": "Parameter '_value' of PausableToken.transfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_from' of PausableToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_to' of PausableToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_value' of PausableToken.transferFrom (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 346,
+            "message": "Parameter '_spender' of PausableToken.approve (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 346,
+            "message": "Parameter '_value' of PausableToken.approve (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 352,
+            "message": "Parameter '_spender' of PausableToken.increaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#352) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 352,
+            "line_end": 353,
+            "message": "Parameter '_addedValue' of PausableToken.increaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#352-353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 361,
+            "message": "Parameter '_spender' of PausableToken.decreaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 361,
+            "message": "Parameter '_subtractedValue' of PausableToken.decreaseApproval (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 379,
+            "message": "Parameter '_paySystem' of ComissionList.setRefillFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#378-379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 379,
+            "message": "Parameter '_stat' of ComissionList.setRefillFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 379,
+            "message": "Parameter '_perc' of ComissionList.setRefillFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 390,
+            "line_end": 393,
+            "message": "Parameter '_paySystem' of ComissionList.setWidthrawFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#390-393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 393,
+            "message": "Parameter '_stat' of ComissionList.setWidthrawFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 393,
+            "message": "Parameter '_perc' of ComissionList.setWidthrawFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 400,
+            "message": "Parameter '_stat' of ComissionList.setTransfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#400) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 400,
+            "line_end": 401,
+            "message": "Parameter '_perc' of ComissionList.setTransfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#400-401) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 409,
+            "message": "Parameter '_paySystem' of ComissionList.getRefillStatFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#409) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 418,
+            "message": "Parameter '_paySystem' of ComissionList.getRefillPercFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#418) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 424,
+            "message": "Parameter '_paySystem' of ComissionList.getWidthrawStatFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#424) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 431,
+            "message": "Parameter '_paySystem' of ComissionList.getWidthrawPercFor (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#431) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 448,
+            "message": "Parameter '_paySystem' of ComissionList.calcWidthraw (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#448) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 448,
+            "line_end": 449,
+            "message": "Parameter '_value' of ComissionList.calcWidthraw (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#448-449) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 465,
+            "message": "Parameter '_paySystem' of ComissionList.calcRefill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 466,
+            "line_end": 468,
+            "message": "Parameter '_value' of ComissionList.calcRefill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#466-468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 483,
+            "message": "Parameter '_value' of ComissionList.calcTransfer (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#483) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 496,
+            "line_end": 500,
+            "message": "Function 'EvaCurrency.EvaCurrency' (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#496-500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 496,
+            "line_end": 497,
+            "message": "Parameter '_name' of EvaCurrency.EvaCurrency (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#496-497) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 497,
+            "message": "Parameter '_symbol' of EvaCurrency.EvaCurrency (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#497) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 501,
+            "message": "Parameter '_name' of EvaCurrency.changeName (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#500-501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 501,
+            "message": "Parameter '_symbol' of EvaCurrency.changeName (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 505,
+            "message": "Parameter '_comissionList' of EvaCurrency.setComissionList (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#505) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 509,
+            "line_end": 511,
+            "message": "Parameter '_to' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#509-511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 511,
+            "message": "Parameter '_amount' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 511,
+            "message": "Parameter '_nonce' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 511,
+            "message": "Parameter '_v' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 512,
+            "message": "Parameter '_r' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#512) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 512,
+            "message": "Parameter '_s' of EvaCurrency.transferOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#512) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 532,
+            "message": "Parameter '_amount' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 533,
+            "message": "Parameter '_paySystem' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#532-533) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 533,
+            "message": "Parameter '_nonce' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#533) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 533,
+            "line_end": 534,
+            "message": "Parameter '_v' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#533-534) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 535,
+            "message": "Parameter '_r' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#535) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "line": 535,
+            "message": "Parameter '_s' of EvaCurrency.withdrawOnBehalf (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol#535) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "message": "Parameter '_to' of EvaCurrency.refill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of EvaCurrency.refill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "message": "Parameter '_paySystem' of EvaCurrency.refill (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fcf6e1046f7de62557e64470447f8e516919ac.sol",
+            "impact": "Informational",
+            "message": "Parameter '_staker' of EvaCurrency.changeStaker (0x21fcf6e1046f7de62557e64470447f8e516919ac.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

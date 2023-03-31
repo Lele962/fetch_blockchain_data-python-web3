@@ -1,0 +1,36 @@
+mythril.mythril.mythril_analyzer [CRITICAL]: Exception occurred, aborting analysis. Please report this issue to the Mythril GitHub page.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/mythril/mythril_analyzer.py", line 141, in fire_lasers
+    sym = SymExecWrapper(
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/analysis/symbolic.py", line 172, in __init__
+    self.laser.sym_exec(
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/svm.py", line 201, in sym_exec
+    self.execute_transactions(created_account.address)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/svm.py", line 226, in execute_transactions
+    self._execute_transactions(address)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/svm.py", line 272, in _execute_transactions
+    execute_message_call(self, address, func_hashes=func_hashes)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/transaction/symbolic.py", line 151, in execute_message_call
+    laser_evm.exec()
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/svm.py", line 314, in exec
+    new_states, op_code = self.execute_state(global_state)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/svm.py", line 410, in execute_state
+    new_global_states = Instruction(
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/instructions.py", line 264, in evaluate
+    result = instruction_mutator(global_state)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/instructions.py", line 195, in wrapper
+    new_global_states = self.call_on_state_copy(func, func_obj, global_state)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/instructions.py", line 130, in call_on_state_copy
+    return func(func_obj, global_state_copy)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/ethereum/instructions.py", line 376, in and_
+    stack.append(op1 & op2)
+  File "/usr/local/lib/python3.8/dist-packages/mythril-0.23.15-py3.8.egg/mythril/laser/smt/bitvec.py", line 114, in __and__
+    return BitVec(self.raw & other.raw, annotations=union)
+  File "/usr/local/lib/python3.8/dist-packages/z3/z3.py", line 3615, in __and__
+    return BitVecRef(Z3_mk_bvand(self.ctx_ref(), a.as_ast(), b.as_ast()), self.ctx)
+  File "/usr/local/lib/python3.8/dist-packages/z3/z3core.py", line 1944, in Z3_mk_bvand
+    _elems.Check(a0)
+  File "/usr/local/lib/python3.8/dist-packages/z3/z3core.py", line 1482, in Check
+    raise self.Exception(self.get_error_message(ctx, err))
+z3.z3types.Z3Exception: b'Argument (concat (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000024)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000024))\n        (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000025)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000025))\n        (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000026)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000026))\n        (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000027)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000027))\n        (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000028)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000028))\n        (ite (bvsle |9_calldatasize|\n                    #x0000000000000000000000000000000000000000000000000000000000000029)\n             #x00\n             (select |9_calldata|\n                     #x0000000000000000000000000000000000000000000000000000000000000029))\n        (ite (bvsle |9_calldatasize|\n                    #x000000000000000000000000000000000000000000000000000000000000002a)\n             #x00\n             (select |9_calldata|\n                     #x000000000000000000000000000000000000000000000000000000000000002a))\n        (ite (bvsle |9_calldatasize|\n                    #x000000000000000000000000000000000000000000000000000000000000002b)\n             #x00\n             (select |9_calldata|\n                     #x000000000000000000000000000000000000000000000000000000000000002b))\n        (ite (bvsle |9_calldatasize|\n                    #x000000000000000000000000000000000000000000000000000000000000002c)\n             #x00\n             (select |9_calldata|\n                     #x000000000000000000000000000000000000000000000000000000000000002c))\n        (ite (bvsle |9_calldatasize|\n                    #x000000000000000000000000000000000000000000000000000000000000002d)\n             #x00\n             (select |9_calldata|\n                     #x000000000000000000000000000000000000000000000000000000000000002d))) at position 1 has sort (_ BitVec 80) it does does not match declaration (declare-fun bvand ((_ BitVec 256) (_ BitVec 256)) (_ BitVec 256))'
+

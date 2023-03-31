@@ -1,0 +1,227 @@
+INFO:Detectors:[91m
+AOIonInterface.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-868) sends eth to arbitrary user
+	Dangerous calls:
+	- _recipient.transfer(_amount) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#867)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+TAO.transferERC20 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#342-344) does not use the value returned by external calls:
+	-_erc20.transfer(_recipient,_amount) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#344)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in AOIonInterface.constructor (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-799):
+	External calls:
+	- setNameTAOPositionAddress(_nameTAOPositionAddress) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#789-790)
+	- setNamePublicKeyAddress(_namePublicKeyAddress) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)
+	State variables written after the call(s):
+	- _namePublicKey (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)
+Reentrancy in AOIonInterface.constructor (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-799):
+	External calls:
+	- setNameTAOPositionAddress(_nameTAOPositionAddress) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#789-790)
+	- setNamePublicKeyAddress(_namePublicKeyAddress) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)
+	- setNameAccountRecoveryAddress(_nameAccountRecoveryAddress) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795)
+	State variables written after the call(s):
+	- _nameAccountRecovery (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795)
+	- decimals (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#799)
+	- name (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795-796)
+	- powerOfTen (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#799)
+	- symbol (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#797)
+Reentrancy in AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1038-1049):
+	External calls:
+	- require(bool)(_nameTAOPosition.senderIsAdvocate(msg.sender,_nameId)) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1042-1043)
+	- require(bool)(! _nameAccountRecovery.isCompromised(_nameId)) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1044)
+	- require(bool)(_namePublicKey.isKeyExist(_nameId,_from)) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1046)
+	- require(bool)(_namePublicKey.isKeyExist(_nameId,_to)) (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1047-1048)
+	State variables written after the call(s):
+	- balanceOf (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1048-1049)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+TokenERC20.decimals should be constant (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#105-107)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+TokenERC20.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#167-172) should be declared external
+TokenERC20.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177-188) should be declared external
+TokenERC20.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208-221) should be declared external
+TokenERC20.burn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#223-236) should be declared external
+TokenERC20.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#238-256) should be declared external
+TAO.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#322-326) should be declared external
+TAO.transferERC20 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#342-344) should be declared external
+AOLibrary.isValidERC20TokenAddress (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#395-401) should be declared external
+AOLibrary.isTheAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#412-422) should be declared external
+AOLibrary.PERCENTAGE_DIVISOR (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#431-433) should be declared external
+AOLibrary.MULTIPLIER_DIVISOR (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#436-439) should be declared external
+AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#453-460) should be declared external
+AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472-476) should be declared external
+AOLibrary.calculateWeightedMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#482-500) should be declared external
+AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514-544) should be declared external
+AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#590-607) should be declared external
+AOLibrary.calculateMaximumBurnAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#620-624) should be declared external
+AOLibrary.calculateMultiplierAfterBurn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#637-641) should be declared external
+AOLibrary.calculateMultiplierAfterConversion (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#664-677) should be declared external
+AOLibrary.numDigits (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#684-689) should be declared external
+TheAO.transferOwnership (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#715-721) should be declared external
+AOIonInterface.transferOwnership (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#811-816) should be declared external
+TheAO.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#726-734) should be declared external
+AOIonInterface.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#820-826) should be declared external
+AOIonInterface.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-868) should be declared external
+AOIonInterface.freezeAccount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#871-878) should be declared external
+AOIonInterface.setPrices (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#883-885) should be declared external
+AOIonInterface.mint (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#894-897) should be declared external
+AOIonInterface.stakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899-911) should be declared external
+AOIonInterface.unstakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913-924) should be declared external
+AOIonInterface.escrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#929-939) should be declared external
+AOIonInterface.mintEscrow (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#945-952) should be declared external
+AOIonInterface.unescrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#954-969) should be declared external
+AOIonInterface.whitelistBurnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#979-995) should be declared external
+AOIonInterface.whitelistTransferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1000-1007) should be declared external
+AOIonInterface.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1011-1014) should be declared external
+AOIonInterface.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1018-1029) should be declared external
+AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1038-1049) should be declared external
+AOIonInterface.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1077-1081) should be declared external
+AOIonInterface.burn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1082-1098) should be declared external
+AOIonInterface.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1104-1118) should be declared external
+AOIonInterface.buy (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1119-1121) should be declared external
+AOIonInterface.sell (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1123-1130) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol:
+	- pragma solidity>=0.5.4<0.6.0 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Contract 'tokenRecipient' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#3-5) is not in CapWords
+Function 'TokenERC20._transfer' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#137-159) is not in mixedCase
+Parameter '_from' of TokenERC20._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#137-138) is not in mixedCase
+Parameter '_to' of TokenERC20._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#138) is not in mixedCase
+Parameter '_value' of TokenERC20._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#138) is not in mixedCase
+Parameter '_to' of TokenERC20.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#167-169) is not in mixedCase
+Parameter '_value' of TokenERC20.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#169) is not in mixedCase
+Parameter '_from' of TokenERC20.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177) is not in mixedCase
+Parameter '_to' of TokenERC20.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177-178) is not in mixedCase
+Parameter '_value' of TokenERC20.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#178) is not in mixedCase
+Parameter '_spender' of TokenERC20.approve (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#197) is not in mixedCase
+Parameter '_value' of TokenERC20.approve (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#197) is not in mixedCase
+Parameter '_spender' of TokenERC20.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208) is not in mixedCase
+Parameter '_value' of TokenERC20.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208) is not in mixedCase
+Parameter '_extraData' of TokenERC20.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208-209) is not in mixedCase
+Parameter '_value' of TokenERC20.burn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#223) is not in mixedCase
+Parameter '_from' of TokenERC20.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#239) is not in mixedCase
+Parameter '_value' of TokenERC20.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#239) is not in mixedCase
+Parameter '_name' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#285-286) is not in mixedCase
+Parameter '_originId' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#286) is not in mixedCase
+Parameter '_datHash' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#288-289) is not in mixedCase
+Parameter '_database' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#289-291) is not in mixedCase
+Parameter '_keyValue' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#291-295) is not in mixedCase
+Parameter '_contentId' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#295) is not in mixedCase
+Parameter '_vaultAddress' of TAO. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#295-296) is not in mixedCase
+Parameter '_recipient' of TAO.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#322-323) is not in mixedCase
+Parameter '_amount' of TAO.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#323) is not in mixedCase
+Parameter '_erc20TokenAddress' of TAO.transferERC20 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase
+Parameter '_recipient' of TAO.transferERC20 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase
+Parameter '_amount' of TAO.transferERC20 (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase
+Parameter '_taoId' of AOLibrary.isTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#374) is not in mixedCase
+Parameter '_nameId' of AOLibrary.isName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#382-384) is not in mixedCase
+Parameter '_tokenAddress' of AOLibrary.isValidERC20TokenAddress (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#395) is not in mixedCase
+Parameter '_sender' of AOLibrary.isTheAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413) is not in mixedCase
+Parameter '_theAO' of AOLibrary.isTheAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413) is not in mixedCase
+Parameter '_nameTAOPositionAddress' of AOLibrary.isTheAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413-414) is not in mixedCase
+Function 'AOLibrary.PERCENTAGE_DIVISOR' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#431-433) is not in mixedCase
+Function 'AOLibrary.MULTIPLIER_DIVISOR' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#436-439) is not in mixedCase
+Parameter '_name' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#454) is not in mixedCase
+Parameter '_originId' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#454) is not in mixedCase
+Parameter '_datHash' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#455) is not in mixedCase
+Parameter '_database' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#455-456) is not in mixedCase
+Parameter '_keyValue' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456) is not in mixedCase
+Parameter '_contentId' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456) is not in mixedCase
+Parameter '_nameTAOVaultAddress' of AOLibrary.deployTAO (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456-457) is not in mixedCase
+Parameter '_name' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472) is not in mixedCase
+Parameter '_originId' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472) is not in mixedCase
+Parameter '_datHash' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472-473) is not in mixedCase
+Parameter '_database' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473) is not in mixedCase
+Parameter '_keyValue' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473) is not in mixedCase
+Parameter '_contentId' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473-474) is not in mixedCase
+Parameter '_nameTAOVaultAddress' of AOLibrary.deployName (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#474) is not in mixedCase
+Parameter '_currentWeightedMultiplier' of AOLibrary.calculateWeightedMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#483-484) is not in mixedCase
+Parameter '_currentPrimordialBalance' of AOLibrary.calculateWeightedMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#484-485) is not in mixedCase
+Parameter '_additionalWeightedMultiplier' of AOLibrary.calculateWeightedMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#485-490) is not in mixedCase
+Parameter '_additionalPrimordialAmount' of AOLibrary.calculateWeightedMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#490) is not in mixedCase
+Parameter '_purchaseAmount' of AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514) is not in mixedCase
+Parameter '_totalPrimordialMintable' of AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514-515) is not in mixedCase
+Parameter '_totalPrimordialMinted' of AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515) is not in mixedCase
+Parameter '_startingMultiplier' of AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515) is not in mixedCase
+Parameter '_endingMultiplier' of AOLibrary.calculatePrimordialMultiplier (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515-516) is not in mixedCase
+Parameter '_purchaseAmount' of AOLibrary.calculateNetworkBonusPercentage (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558) is not in mixedCase
+Parameter '_totalPrimordialMintable' of AOLibrary.calculateNetworkBonusPercentage (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558) is not in mixedCase
+Parameter '_totalPrimordialMinted' of AOLibrary.calculateNetworkBonusPercentage (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558-559) is not in mixedCase
+Parameter '_startingMultiplier' of AOLibrary.calculateNetworkBonusPercentage (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#559) is not in mixedCase
+Parameter '_endingMultiplier' of AOLibrary.calculateNetworkBonusPercentage (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#559) is not in mixedCase
+Parameter '_purchaseAmount' of AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#590-591) is not in mixedCase
+Parameter '_totalPrimordialMintable' of AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#591-595) is not in mixedCase
+Parameter '_totalPrimordialMinted' of AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595) is not in mixedCase
+Parameter '_startingMultiplier' of AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595) is not in mixedCase
+Parameter '_endingMultiplier' of AOLibrary.calculateNetworkBonusAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595-596) is not in mixedCase
+Parameter '_primordialBalance' of AOLibrary.calculateMaximumBurnAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#620-621) is not in mixedCase
+Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMaximumBurnAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#621) is not in mixedCase
+Parameter '_maximumMultiplier' of AOLibrary.calculateMaximumBurnAmount (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#621-622) is not in mixedCase
+Parameter '_primordialBalance' of AOLibrary.calculateMultiplierAfterBurn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#638) is not in mixedCase
+Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMultiplierAfterBurn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#638-639) is not in mixedCase
+Parameter '_amountToBurn' of AOLibrary.calculateMultiplierAfterBurn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#639-641) is not in mixedCase
+Parameter '_primordialBalance' of AOLibrary.calculateMultiplierAfterConversion (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#666) is not in mixedCase
+Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMultiplierAfterConversion (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#666-667) is not in mixedCase
+Parameter '_amountToConvert' of AOLibrary.calculateMultiplierAfterConversion (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#667-668) is not in mixedCase
+Parameter '_theAO' of TheAO.transferOwnership (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#716) is not in mixedCase
+Parameter '_account' of TheAO.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#727-728) is not in mixedCase
+Parameter '_whitelist' of TheAO.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#728-729) is not in mixedCase
+Contract 'ionRecipient' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#735-739) is not in CapWords
+Parameter '_theAO' of AOIonInterface.transferOwnership (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#811-814) is not in mixedCase
+Parameter '_account' of AOIonInterface.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#820-821) is not in mixedCase
+Parameter '_whitelist' of AOIonInterface.setWhitelist (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#821) is not in mixedCase
+Parameter '_name' of AOIonInterface. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784) is not in mixedCase
+Parameter '_symbol' of AOIonInterface. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-786) is not in mixedCase
+Parameter '_nameTAOPositionAddress' of AOIonInterface. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#786) is not in mixedCase
+Parameter '_namePublicKeyAddress' of AOIonInterface. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#786-787) is not in mixedCase
+Parameter '_nameAccountRecoveryAddress' of AOIonInterface. (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#787-789) is not in mixedCase
+Parameter '_nameTAOPositionAddress' of AOIonInterface.setNameTAOPositionAddress (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#828-829) is not in mixedCase
+Parameter '_namePublicKeyAddress' of AOIonInterface.setNamePublicKeyAddress (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#839) is not in mixedCase
+Parameter '_nameAccountRecoveryAddress' of AOIonInterface.setNameAccountRecoveryAddress (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#850-851) is not in mixedCase
+Parameter '_recipient' of AOIonInterface.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-865) is not in mixedCase
+Parameter '_amount' of AOIonInterface.transferEth (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#865-866) is not in mixedCase
+Parameter '_from' of AOIonInterface.stakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899) is not in mixedCase
+Parameter '_value' of AOIonInterface.stakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899) is not in mixedCase
+Parameter '_from' of AOIonInterface.unstakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913) is not in mixedCase
+Parameter '_value' of AOIonInterface.unstakeFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913) is not in mixedCase
+Parameter '_from' of AOIonInterface.escrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932) is not in mixedCase
+Parameter '_to' of AOIonInterface.escrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932) is not in mixedCase
+Parameter '_value' of AOIonInterface.escrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932-933) is not in mixedCase
+Parameter '_from' of AOIonInterface.unescrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#955) is not in mixedCase
+Parameter '_value' of AOIonInterface.unescrowFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#955) is not in mixedCase
+Parameter '_from' of AOIonInterface.whitelistBurnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#980) is not in mixedCase
+Parameter '_value' of AOIonInterface.whitelistBurnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#980-981) is not in mixedCase
+Parameter '_from' of AOIonInterface.whitelistTransferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1001-1005) is not in mixedCase
+Parameter '_to' of AOIonInterface.whitelistTransferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1005) is not in mixedCase
+Parameter '_value' of AOIonInterface.whitelistTransferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1005) is not in mixedCase
+Parameter '_to' of AOIonInterface.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1012) is not in mixedCase
+Parameter '_value' of AOIonInterface.transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1012) is not in mixedCase
+Parameter '_from' of AOIonInterface.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1019) is not in mixedCase
+Parameter '_to' of AOIonInterface.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1019-1020) is not in mixedCase
+Parameter '_value' of AOIonInterface.transferFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1020-1024) is not in mixedCase
+Parameter '_nameId' of AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase
+Parameter '_from' of AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase
+Parameter '_to' of AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase
+Parameter '_value' of AOIonInterface.transferBetweenPublicKeys (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase
+Parameter '_spender' of AOIonInterface.approve (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1062) is not in mixedCase
+Parameter '_value' of AOIonInterface.approve (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1062) is not in mixedCase
+Parameter '_spender' of AOIonInterface.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1077-1078) is not in mixedCase
+Parameter '_value' of AOIonInterface.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1078) is not in mixedCase
+Parameter '_extraData' of AOIonInterface.approveAndCall (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1078) is not in mixedCase
+Parameter '_value' of AOIonInterface.burn (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1083) is not in mixedCase
+Parameter '_from' of AOIonInterface.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1105) is not in mixedCase
+Parameter '_value' of AOIonInterface.burnFrom (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1105) is not in mixedCase
+Function 'AOIonInterface._transfer' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1134-1151) is not in mixedCase
+Parameter '_from' of AOIonInterface._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135) is not in mixedCase
+Parameter '_to' of AOIonInterface._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135) is not in mixedCase
+Parameter '_value' of AOIonInterface._transfer (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135-1136) is not in mixedCase
+Function 'AOIonInterface._mint' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol) is not in mixedCase
+Variable 'AOIonInterface._nameTAOPosition' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#743-745) is not in mixedCase
+Variable 'AOIonInterface._namePublicKey' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#745) is not in mixedCase
+Variable 'AOIonInterface._nameAccountRecovery' (/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#745-746) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol analyzed (13 contracts), 186 result(s) found

@@ -1,0 +1,772 @@
+{
+    "errors": [
+        "EXIT_CODE_82"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "SirinCrowdsale",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "deleteGrantee",
+            "impact": "Medium",
+            "line": 1072,
+            "line_end": 1075,
+            "message": "index in SirinCrowdsale.deleteGrantee (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1072-1075) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 662,
+            "line_end": 686,
+            "message": "RefundVault.claimTokens (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#662-686) does not use the value returned by external calls:\n\t-token.transfer(investor,tokensToClaim) (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#680-682)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "claimAllInvestorTokensByOwner",
+            "impact": "Medium",
+            "line": 699,
+            "line_end": 706,
+            "message": "RefundVault.claimAllInvestorTokensByOwner (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#699-706) does not use the value returned by external calls:\n\t-token.transfer(investor,depositedTokenValue) (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#702)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SirinCrowdsale",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "finalization",
+            "impact": "Low",
+            "line": 986,
+            "line_end": 987,
+            "message": "SirinCrowdsale.finalization has external calls inside a loop:\n\t- token.issue(presaleGranteesMapKeys[i],presaleGranteesMap[presaleGranteesMapKeys[i]]) (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#986-987)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 506,
+            "message": "SirinSmartToken.decimals should be constant (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#500-506)\nSirinSmartToken.name should be constant (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#499)\nSirinSmartToken.symbol should be constant (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#499-500)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 82,
+            "message": "Ownable.transferOwnership (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#70-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 107,
+            "message": "Claimable.transferOwnership (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#102-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "claimOwnership",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 118,
+            "message": "Claimable.claimOwnership (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#109-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 300,
+            "message": "StandardToken.allowance (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#296-300) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "ERC20.allowance (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#136-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 146,
+            "message": "ERC20.approve (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#138-146) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 288,
+            "message": "StandardToken.approve (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#286-288) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 306,
+            "line_end": 311,
+            "message": "StandardToken.increaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#306-311) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 311,
+            "line_end": 329,
+            "message": "StandardToken.decreaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#311-329) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 375,
+            "message": "MintableToken.finishMinting (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#372-375) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LimitedTransferBancorSmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "disableTransfers",
+            "impact": "Informational",
+            "line": 452,
+            "line_end": 455,
+            "message": "LimitedTransferBancorSmartToken.disableTransfers (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#452-455) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ISmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "disableTransfers",
+            "impact": "Informational",
+            "line": 403,
+            "line_end": 404,
+            "message": "ISmartToken.disableTransfers (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#403-404) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ISmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "issue",
+            "impact": "Informational",
+            "line": 404,
+            "line_end": 405,
+            "message": "ISmartToken.issue (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#404-405) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LimitedTransferBancorSmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "issue",
+            "impact": "Informational",
+            "line": 455,
+            "line_end": 459,
+            "message": "LimitedTransferBancorSmartToken.issue (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#455-459) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LimitedTransferBancorSmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "destroy",
+            "impact": "Informational",
+            "line": 459,
+            "line_end": 466,
+            "message": "LimitedTransferBancorSmartToken.destroy (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#459-466) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ISmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "destroy",
+            "impact": "Informational",
+            "line": 405,
+            "message": "ISmartToken.destroy (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#405) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LimitedTransferBancorSmartToken",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "setDestroyEnabled",
+            "impact": "Informational",
+            "line": 437,
+            "line_end": 439,
+            "message": "LimitedTransferBancorSmartToken.setDestroyEnabled (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#437-439) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 615,
+            "line_end": 623,
+            "message": "RefundVault.deposit (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#615-623) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "close",
+            "impact": "Informational",
+            "line": 625,
+            "line_end": 628,
+            "message": "RefundVault.close (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#625-628) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "enableRefunds",
+            "impact": "Informational",
+            "line": 630,
+            "line_end": 634,
+            "message": "RefundVault.enableRefunds (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#630-634) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "refundETH",
+            "impact": "Informational",
+            "line": 635,
+            "line_end": 657,
+            "message": "RefundVault.refundETH (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#635-657) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "claimAllInvestorTokensByOwner",
+            "impact": "Informational",
+            "line": 699,
+            "line_end": 706,
+            "message": "RefundVault.claimAllInvestorTokensByOwner (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#699-706) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "claimAllTokens",
+            "impact": "Informational",
+            "line": 711,
+            "line_end": 719,
+            "message": "RefundVault.claimAllTokens (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#711-719) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FinalizableCrowdsale",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 842,
+            "line_end": 846,
+            "message": "FinalizableCrowdsale.finalize (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#842-846) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SirinCrowdsale",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "getTotalFundsRaised",
+            "impact": "Informational",
+            "line": 1026,
+            "line_end": 1030,
+            "message": "SirinCrowdsale.getTotalFundsRaised (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1026-1030) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SirinCrowdsale",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "function": "buyTokensWithGuarantee",
+            "impact": "Informational",
+            "message": "SirinCrowdsale.buyTokensWithGuarantee (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol:\n\t- pragma solidity^0.4.18 (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 57,
+            "message": "Function 'Ownable.Ownable' (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#52-57) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 183,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 162,
+            "message": "Parameter '_to' of BasicToken.transfer (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 162,
+            "message": "Parameter '_value' of BasicToken.transfer (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_to' of LimitedTransferToken.transfer (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_value' of LimitedTransferToken.transfer (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_from' of LimitedTransferToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_to' of LimitedTransferToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_value' of LimitedTransferToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 297,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#297) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 298,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#297-298) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 263,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#262-263) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_spender' of StandardToken.approve (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_value' of StandardToken.approve (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 313,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#313) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 313,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#313) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 357,
+            "line_end": 358,
+            "message": "Parameter '_to' of MintableToken.mint (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#357-358) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 359,
+            "message": "Parameter '_amount' of MintableToken.mint (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#358-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 452,
+            "message": "Parameter '_disable' of LimitedTransferBancorSmartToken.disableTransfers (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#452) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_to' of LimitedTransferBancorSmartToken.issue (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_amount' of LimitedTransferBancorSmartToken.issue (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 460,
+            "message": "Parameter '_from' of LimitedTransferBancorSmartToken.destroy (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#460) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 460,
+            "message": "Parameter '_amount' of LimitedTransferBancorSmartToken.destroy (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#460) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 437,
+            "message": "Parameter '_enable' of LimitedTransferBancorSmartToken.setDestroyEnabled (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#437) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 509,
+            "line_end": 514,
+            "message": "Function 'SirinSmartToken.SirinSmartToken' (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#509-514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 599,
+            "line_end": 604,
+            "message": "Function 'RefundVault.RefundVault' (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#599-604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 599,
+            "message": "Parameter '_etherWallet' of RefundVault.RefundVault (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#599) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 599,
+            "message": "Parameter '_token' of RefundVault.RefundVault (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#599) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 637,
+            "message": "Parameter 'ETHToRefundAmountWei' of RefundVault.refundETH (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#637) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 756,
+            "line_end": 773,
+            "message": "Function 'Crowdsale.Crowdsale' (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#756-773) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 758,
+            "message": "Parameter '_startTime' of Crowdsale.Crowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#758) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 758,
+            "message": "Parameter '_endTime' of Crowdsale.Crowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#758) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 760,
+            "message": "Parameter '_rate' of Crowdsale.Crowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#760) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 760,
+            "message": "Parameter '_wallet' of Crowdsale.Crowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#760) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 760,
+            "line_end": 761,
+            "message": "Parameter '_token' of Crowdsale.Crowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#760-761) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 934,
+            "line_end": 948,
+            "message": "Function 'SirinCrowdsale.SirinCrowdsale' (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#934-948) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 935,
+            "message": "Parameter '_walletTeam' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#935) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 935,
+            "line_end": 936,
+            "message": "Parameter '_walletOEM' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#935-936) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 936,
+            "message": "Parameter '_walletBounties' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#936) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 936,
+            "message": "Parameter '_walletReserve' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#936) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 936,
+            "message": "Parameter '_sirinSmartToken' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#936) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 936,
+            "line_end": 938,
+            "message": "Parameter '_refundVault' of SirinCrowdsale.SirinCrowdsale (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#936-938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 1053,
+            "message": "Parameter '_grantee' of SirinCrowdsale.addUpdateGrantee (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1053) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 1053,
+            "line_end": 1054,
+            "message": "Parameter '_value' of SirinCrowdsale.addUpdateGrantee (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1053-1054) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "message": "Parameter '_grantee' of SirinCrowdsale.deleteGrantee (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1069) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol",
+            "impact": "Informational",
+            "line": 1095,
+            "line_end": 1097,
+            "message": "Parameter '_fiatRaisedConvertedToWei' of SirinCrowdsale.setFiatRaisedConvertedToWei (0x313f29ea49a9e6ca3b3e254335d4ec32ef5045f8.sol#1095-1097) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

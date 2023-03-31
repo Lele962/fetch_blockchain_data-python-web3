@@ -1,0 +1,2251 @@
+{
+    "errors": [
+        "EXIT_CODE_253"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Reputation",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "balanceOfAt",
+            "impact": "High",
+            "line": 247,
+            "message": "Reputation.balances (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#247) is never initialized. It is used in:\n\t- balanceOfAt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279-288)\n\t- mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306-315)\n\t- burn (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321-332)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Medium",
+            "line": 733,
+            "line_end": 744,
+            "message": "Address.isContract (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#733-744) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Medium",
+            "line": 1231,
+            "line_end": 1262,
+            "message": "ECDSA.recover (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1231-1262) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_isVotable",
+            "impact": "Medium",
+            "line": 2162,
+            "line_end": 2169,
+            "message": "GenesisProtocolLogic._isVotable (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162-2169) uses a dangerous strict equality:\n\t- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))\n\t- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))\n\t- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))\n\t- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_execute",
+            "impact": "Medium",
+            "line": 1912,
+            "line_end": 2025,
+            "message": "Reentrancy in GenesisProtocolLogic._execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):\n\tExternal calls:\n\t- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1933)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1938)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1939)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1945)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1947)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1948)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1991)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_execute",
+            "impact": "Medium",
+            "line": 1912,
+            "line_end": 2025,
+            "message": "Reentrancy in GenesisProtocolLogic._execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):\n\tExternal calls:\n\t- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)\n\t- ProposalExecuteInterface(proposal.callbacks).executeProposal(_proposalId,int256(proposal.winningVote)) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2018)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2019)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_stake",
+            "impact": "Medium",
+            "line": 2035,
+            "line_end": 2074,
+            "message": "Reentrancy in GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074):\n\tExternal calls:\n\t- require(bool,string)(stakingToken.transferFrom(_staker,address(this),amount),fail transfer from staker) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2057)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2058)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2071)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_stake",
+            "impact": "Medium",
+            "line": 2035,
+            "line_end": 2074,
+            "message": "Reentrancy in GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074):\n\tExternal calls:\n\t- require(bool,string)(stakingToken.transferFrom(_staker,address(this),amount),fail transfer from staker) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2057)\n\t- _execute(_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)\n\tState variables written after the call(s):\n\t- averagesDownstakesOfBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)\n\t- orgBoostedProposalsCnt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "executeBoosted",
+            "impact": "Medium",
+            "line": 1626,
+            "line_end": 1640,
+            "message": "Reentrancy in GenesisProtocolLogic.executeBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1626-1640):\n\tExternal calls:\n\t- require(bool,string)(_execute(_proposalId),proposal need to expire) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1630)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1632-1634)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1637)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "internalVote",
+            "impact": "Medium",
+            "line": 2088,
+            "line_end": 2143,
+            "message": "Reentrancy in GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143):\n\tExternal calls:\n\t- reputation = VotingMachineCallbacksInterface(proposal.callbacks).reputationOf(_voter,_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2098)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2110)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2122)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2123)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2127)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2129)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2131-2135)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2137)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "internalVote",
+            "impact": "Medium",
+            "line": 2088,
+            "line_end": 2143,
+            "message": "Reentrancy in GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143):\n\tExternal calls:\n\t- reputation = VotingMachineCallbacksInterface(proposal.callbacks).reputationOf(_voter,_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2098)\n\t- VotingMachineCallbacksInterface(proposal.callbacks).burnReputation(reputationDeposit,_voter,_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2139)\n\t- _execute(_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)\n\tState variables written after the call(s):\n\t- averagesDownstakesOfBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)\n\t- orgBoostedProposalsCnt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Medium",
+            "line": 2874,
+            "line_end": 2894,
+            "message": "Reentrancy in ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):\n\tExternal calls:\n\t- reputationReward = redeemReputation(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)\n\t- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Medium",
+            "line": 2874,
+            "line_end": 2894,
+            "message": "Reentrancy in ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):\n\tExternal calls:\n\t- reputationReward = redeemReputation(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)\n\t- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)\n\t- etherReward = redeemEther(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Medium",
+            "line": 2874,
+            "line_end": 2894,
+            "message": "Reentrancy in ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):\n\tExternal calls:\n\t- reputationReward = redeemReputation(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)\n\t- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)\n\t- etherReward = redeemEther(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)\n\t- externalTokenReward = redeemExternalToken(_proposalId,_avatar) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2892)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2892)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemDaoBounty",
+            "impact": "Medium",
+            "line": 1804,
+            "line_end": 1830,
+            "message": "Reentrancy in GenesisProtocolLogic.redeemDaoBounty (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804-1830):\n\tExternal calls:\n\t- (potentialAmount != 0) && (VotingMachineCallbacksInterface(proposal.callbacks).balanceOfStakingToken(stakingToken,_proposalId) >= potentialAmount) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1819-1829)\n\tState variables written after the call(s):\n\t- proposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1823)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemEther",
+            "impact": "Medium",
+            "line": 2813,
+            "line_end": 2831,
+            "message": "Reentrancy in ContributionReward.redeemEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813-2831):\n\tExternal calls:\n\t- require(bool)(ControllerInterface(_avatar.owner()).sendEther(amount,_proposal.beneficiary,_avatar)) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2824)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2825)\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2830)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemExternalToken",
+            "impact": "Medium",
+            "line": 2839,
+            "line_end": 2861,
+            "message": "Reentrancy in ContributionReward.redeemExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839-2861):\n\tExternal calls:\n\t- require(bool)(ControllerInterface(_avatar.owner()).externalTokenTransfer(_proposal.externalToken,_proposal.beneficiary,amount,_avatar)) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2851-2854)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2855)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemNativeToken",
+            "impact": "Medium",
+            "line": 2787,
+            "line_end": 2805,
+            "message": "Reentrancy in ContributionReward.redeemNativeToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787-2805):\n\tExternal calls:\n\t- require(bool)(ControllerInterface(_avatar.owner()).mintTokens(amount,_proposal.beneficiary,address(_avatar))) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2798)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2799)\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2804)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemReputation",
+            "impact": "Medium",
+            "line": 2754,
+            "line_end": 2779,
+            "message": "Reentrancy in ContributionReward.redeemReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754-2779):\n\tExternal calls:\n\t- require(bool)(ControllerInterface(_avatar.owner()).mintReputation(uint256(reputation),_proposal.beneficiary,address(_avatar))) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2765-2767)\n\t- require(bool)(ControllerInterface(_avatar.owner()).burnReputation(uint256(reputation * (- 1)),_proposal.beneficiary,address(_avatar))) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2769-2771)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2774)\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2778)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "propose",
+            "impact": "Medium",
+            "line": 1589,
+            "message": "proposal in GenesisProtocolLogic.propose (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1589) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getPeriodsToPay",
+            "impact": "Medium",
+            "line": 2913,
+            "message": "periodsFromExecution in ContributionReward.getPeriodsToPay (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2913) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Medium",
+            "line": 1715,
+            "line_end": 1793,
+            "message": "GenesisProtocolLogic.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715-1793) does not use the value returned by external calls:\n\t-VotingMachineCallbacksInterface(proposal.callbacks).mintReputation(rewards[1].add(rewards[2]),_beneficiary,_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1784-1785)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_execute",
+            "impact": "Medium",
+            "line": 1912,
+            "line_end": 2025,
+            "message": "GenesisProtocolLogic._execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025) does not use the value returned by external calls:\n\t-ProposalExecuteInterface(proposal.callbacks).executeProposal(_proposalId,int256(proposal.winningVote)) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2018)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "internalVote",
+            "impact": "Medium",
+            "line": 2088,
+            "line_end": 2143,
+            "message": "GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143) does not use the value returned by external calls:\n\t-VotingMachineCallbacksInterface(proposal.callbacks).burnReputation(reputationDeposit,_voter,_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2139)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Low",
+            "line": 271,
+            "message": "Reputation.balanceOf._owner (local variable @ 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#271) shadows:\n\t- Ownable._owner (state variable @ 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#144)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Low",
+            "line": 279,
+            "message": "Reputation.balanceOfAt._owner (local variable @ 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) shadows:\n\t- Ownable._owner (state variable @ 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#144)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "_execute",
+            "impact": "Low",
+            "line": 1912,
+            "line_end": 2025,
+            "message": "Reentrancy in GenesisProtocolLogic._execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):\n\tExternal calls:\n\t- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)\n\tState variables written after the call(s):\n\t- averagesDownstakesOfBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1967-1970)\n\t- averagesDownstakesOfBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2004)\n\t- averagesDownstakesOfBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2007-2008)\n\t- orgBoostedProposalsCnt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1963)\n\t- orgBoostedProposalsCnt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1999-2000)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "proposeContributionReward",
+            "impact": "Low",
+            "line": 2690,
+            "line_end": 2746,
+            "message": "Reentrancy in ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2690-2746):\n\tExternal calls:\n\t- controllerParams = parameters[getParametersFromController(_avatar)] (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2702)\n\t- contributionId = controllerParams.intVote.propose(2,controllerParams.voteApproveParams,msg.sender,address(_avatar)) (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2704-2709)\n\tState variables written after the call(s):\n\t- organizationsProposals (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2728)\n\t- proposalsInfo (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2741-2744)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Address",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 733,
+            "line_end": 744,
+            "message": "Address.isContract uses assembly (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#733-744)\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#742\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ECDSA",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "recover",
+            "impact": "Informational",
+            "line": 1231,
+            "line_end": 1262,
+            "message": "ECDSA.recover uses assembly (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1231-1262)\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1245-1249\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Reputation.decimals should be constant (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#226)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 4,
+            "message": "Different versions of Solidity is used in 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol:\n\t- Version used: ['^0.5.0', '^0.5.4']\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#4 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#92 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#118 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#136 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#211 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#388 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#456 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#645 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#673 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#720 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#763 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#823 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#962 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#973 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#991 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1197 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1216 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1278 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1367 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1375 declares pragma solidity^0.5.0\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1409 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2174 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2464 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2551 declares pragma solidity^0.5.4\n\t- 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2998 declares pragma solidity^0.5.4\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 162,
+            "message": "Ownable.owner (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#160-162) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 188,
+            "message": "Ownable.renounceOwnership (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#185-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 196,
+            "message": "Ownable.transferOwnership (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#194-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Reputation",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 306,
+            "line_end": 315,
+            "message": "Reputation.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306-315) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Reputation",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 321,
+            "line_end": 332,
+            "message": "Reputation.burn (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321-332) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 512,
+            "line_end": 515,
+            "message": "ERC20.transfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#512-515) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 99,
+            "message": "IERC20.transfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 526,
+            "line_end": 532,
+            "message": "ERC20.approve (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#526-532) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 101,
+            "message": "IERC20.approve (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 103,
+            "message": "IERC20.transferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 542,
+            "line_end": 547,
+            "message": "ERC20.transferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#542-547) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 493,
+            "line_end": 495,
+            "message": "ERC20.balanceOf (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#493-495) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 107,
+            "message": "IERC20.balanceOf (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 503,
+            "line_end": 505,
+            "message": "ERC20.allowance (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#503-505) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 109,
+            "message": "IERC20.allowance (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "increaseAllowance",
+            "impact": "Informational",
+            "line": 559,
+            "line_end": 565,
+            "message": "ERC20.increaseAllowance (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#559-565) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "decreaseAllowance",
+            "impact": "Informational",
+            "line": 577,
+            "line_end": 583,
+            "message": "ERC20.decreaseAllowance (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#577-583) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 657,
+            "line_end": 659,
+            "message": "ERC20Burnable.burn (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#657-659) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 666,
+            "line_end": 668,
+            "message": "ERC20Burnable.burnFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#666-668) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DAOToken",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 710,
+            "line_end": 715,
+            "message": "DAOToken.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710-715) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "genericCall",
+            "impact": "Informational",
+            "line": 874,
+            "line_end": 881,
+            "message": "Avatar.genericCall (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874-881) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "sendEther",
+            "impact": "Informational",
+            "line": 889,
+            "line_end": 893,
+            "message": "Avatar.sendEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889-893) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "externalTokenTransfer",
+            "impact": "Informational",
+            "line": 902,
+            "line_end": 908,
+            "message": "Avatar.externalTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902-908) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "externalTokenTransferFrom",
+            "impact": "Informational",
+            "line": 918,
+            "line_end": 929,
+            "message": "Avatar.externalTokenTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#918-929) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "externalTokenApproval",
+            "impact": "Informational",
+            "line": 939,
+            "line_end": 945,
+            "message": "Avatar.externalTokenApproval (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939-945) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "metaData",
+            "impact": "Informational",
+            "line": 952,
+            "line_end": 955,
+            "message": "Avatar.metaData (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#952-955) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GlobalConstraintInterface",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "pre",
+            "impact": "Informational",
+            "line": 980,
+            "message": "GlobalConstraintInterface.pre (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#980) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GlobalConstraintInterface",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "post",
+            "impact": "Informational",
+            "line": 981,
+            "message": "GlobalConstraintInterface.post (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#981) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GlobalConstraintInterface",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "when",
+            "impact": "Informational",
+            "line": 986,
+            "message": "GlobalConstraintInterface.when (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#986) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Informational",
+            "line": 1715,
+            "line_end": 1793,
+            "message": "GenesisProtocolLogic.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715-1793) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeemDaoBounty",
+            "impact": "Informational",
+            "line": 1804,
+            "line_end": 1830,
+            "message": "GenesisProtocolLogic.redeemDaoBounty (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804-1830) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GenesisProtocolLogic",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "shouldBoost",
+            "impact": "Informational",
+            "line": 1849,
+            "line_end": 1852,
+            "message": "GenesisProtocolLogic.shouldBoost (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1849-1852) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GenesisProtocol",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "score",
+            "impact": "Informational",
+            "line": 2457,
+            "line_end": 2459,
+            "message": "GenesisProtocol.score (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2457-2459) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "setParameters",
+            "impact": "Informational",
+            "line": 2648,
+            "line_end": 2660,
+            "message": "ContributionReward.setParameters (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2648-2660) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "proposeContributionReward",
+            "impact": "Informational",
+            "line": 2690,
+            "line_end": 2746,
+            "message": "ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2690-2746) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "redeem",
+            "impact": "Informational",
+            "line": 2874,
+            "line_end": 2894,
+            "message": "ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getRedeemedPeriods",
+            "impact": "Informational",
+            "line": 2938,
+            "line_end": 2943,
+            "message": "ContributionReward.getRedeemedPeriods (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938-2943) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getProposalEthReward",
+            "impact": "Informational",
+            "line": 2945,
+            "line_end": 2947,
+            "message": "ContributionReward.getProposalEthReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945-2947) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getProposalExternalTokenReward",
+            "impact": "Informational",
+            "line": 2949,
+            "line_end": 2951,
+            "message": "ContributionReward.getProposalExternalTokenReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949-2951) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getProposalExternalToken",
+            "impact": "Informational",
+            "line": 2953,
+            "line_end": 2955,
+            "message": "ContributionReward.getProposalExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953-2955) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContributionReward",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "getProposalExecutionTime",
+            "impact": "Informational",
+            "line": 2957,
+            "line_end": 2959,
+            "message": "ContributionReward.getProposalExecutionTime (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957-2959) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 4,
+            "message": "Detected issues with version pragma in 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol:\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#4): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#92): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#118): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#136): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#211): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#388): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#456): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#645): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#673): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#720): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#763): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#823): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#962): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#973): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#991): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1197): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1216): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1278): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1367): it allows old versions\n\t- pragma solidity^0.5.0 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1375): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1409): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2174): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2464): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2551): it allows old versions\n\t- pragma solidity^0.5.4 (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2998): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "safeTransfer",
+            "impact": "Informational",
+            "line": 774,
+            "line_end": 786,
+            "message": "Low level call in SafeERC20.safeTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774-786):\n\t-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(TRANSFER_SELECTOR,_to,_value)) 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#779-781\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 788,
+            "line_end": 800,
+            "message": "Low level call in SafeERC20.safeTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788-800):\n\t-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(TRANSFERFROM_SELECTOR,_from,_to,_value)) 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#793-795\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeERC20",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "safeApprove",
+            "impact": "Informational",
+            "line": 802,
+            "line_end": 818,
+            "message": "Low level call in SafeERC20.safeApprove (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802-818):\n\t-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(APPROVE_SELECTOR,_spender,_value)) 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#811-813\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "Avatar",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "function": "genericCall",
+            "impact": "Informational",
+            "line": 874,
+            "line_end": 881,
+            "message": "Low level call in Avatar.genericCall (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874-881):\n\t-(success,returnValue) = _contract.call.value(_value)(_data) 0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#879\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 206,
+            "message": "Function 'Ownable._transferOwnership' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#202-206) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 271,
+            "message": "Parameter '_owner' of Reputation.balanceOf (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_owner' of Reputation.balanceOfAt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_blockNumber' of Reputation.balanceOfAt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 293,
+            "message": "Parameter '_blockNumber' of Reputation.totalSupplyAt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_user' of Reputation.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_amount' of Reputation.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_user' of Reputation.burn (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_amount' of Reputation.burn (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_block' of Reputation.getValueAt (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 373,
+            "message": "Parameter '_value' of Reputation.updateValueAtNow (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#373) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 591,
+            "line_end": 597,
+            "message": "Function 'ERC20._transfer' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#591-597) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 606,
+            "line_end": 612,
+            "message": "Function 'ERC20._mint' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#606-612) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 620,
+            "line_end": 626,
+            "message": "Function 'ERC20._burn' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#620-626) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 636,
+            "line_end": 640,
+            "message": "Function 'ERC20._burnFrom' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#636-640) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 698,
+            "message": "Parameter '_name' of DAOToken. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 698,
+            "message": "Parameter '_symbol' of DAOToken. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 698,
+            "message": "Parameter '_cap' of DAOToken. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 710,
+            "message": "Parameter '_to' of DAOToken.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 710,
+            "message": "Parameter '_amount' of DAOToken.mint (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 774,
+            "message": "Parameter '_erc20Addr' of SafeERC20.safeTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 774,
+            "message": "Parameter '_to' of SafeERC20.safeTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 774,
+            "message": "Parameter '_value' of SafeERC20.safeTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 788,
+            "message": "Parameter '_erc20Addr' of SafeERC20.safeTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 788,
+            "message": "Parameter '_from' of SafeERC20.safeTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 788,
+            "message": "Parameter '_to' of SafeERC20.safeTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 788,
+            "message": "Parameter '_value' of SafeERC20.safeTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 802,
+            "message": "Parameter '_erc20Addr' of SafeERC20.safeApprove (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 802,
+            "message": "Parameter '_spender' of SafeERC20.safeApprove (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 802,
+            "message": "Parameter '_value' of SafeERC20.safeApprove (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 853,
+            "message": "Parameter '_orgName' of Avatar. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 853,
+            "message": "Parameter '_nativeToken' of Avatar. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 853,
+            "message": "Parameter '_nativeReputation' of Avatar. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 874,
+            "message": "Parameter '_contract' of Avatar.genericCall (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 874,
+            "message": "Parameter '_data' of Avatar.genericCall (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 874,
+            "message": "Parameter '_value' of Avatar.genericCall (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 889,
+            "message": "Parameter '_amountInWei' of Avatar.sendEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 889,
+            "message": "Parameter '_to' of Avatar.sendEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 902,
+            "message": "Parameter '_externalToken' of Avatar.externalTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 902,
+            "message": "Parameter '_to' of Avatar.externalTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 902,
+            "message": "Parameter '_value' of Avatar.externalTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 919,
+            "message": "Parameter '_externalToken' of Avatar.externalTokenTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#919) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 920,
+            "message": "Parameter '_from' of Avatar.externalTokenTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#920) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 921,
+            "message": "Parameter '_to' of Avatar.externalTokenTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#921) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_value' of Avatar.externalTokenTransferFrom (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 939,
+            "message": "Parameter '_externalToken' of Avatar.externalTokenApproval (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 939,
+            "message": "Parameter '_spender' of Avatar.externalTokenApproval (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 939,
+            "message": "Parameter '_value' of Avatar.externalTokenApproval (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 952,
+            "message": "Parameter '_metaData' of Avatar.metaData (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#952) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1207,
+            "message": "Parameter '_avatar' of UniversalScheme.getParametersFromController (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1577,
+            "message": "Parameter '' of GenesisProtocolLogic.propose (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1577,
+            "message": "Parameter '_paramsHash' of GenesisProtocolLogic.propose (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1577,
+            "message": "Parameter '_proposer' of GenesisProtocolLogic.propose (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1577,
+            "message": "Parameter '_organization' of GenesisProtocolLogic.propose (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1547,
+            "message": "Parameter '_stakingToken' of GenesisProtocolLogic. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1547) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1626,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.executeBoosted (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1626) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1660,
+            "message": "Parameter '_params' of GenesisProtocolLogic.setParameters (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1660) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1661,
+            "message": "Parameter '_voteOnBehalf' of GenesisProtocolLogic.setParameters (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1661) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1715,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1715,
+            "message": "Parameter '_beneficiary' of GenesisProtocolLogic.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1804,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.redeemDaoBounty (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1804,
+            "message": "Parameter '_beneficiary' of GenesisProtocolLogic.redeemDaoBounty (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1837,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.calcExecuteCallBounty (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1837) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1849,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.shouldBoost (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1849) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1862,
+            "message": "Parameter '_paramsHash' of GenesisProtocolLogic.threshold (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1862) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1862,
+            "message": "Parameter '_organizationId' of GenesisProtocolLogic.threshold (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1862) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1877,
+            "message": "Parameter '_params' of GenesisProtocolLogic.getParametersHash (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1877) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1878,
+            "message": "Parameter '_voteOnBehalf' of GenesisProtocolLogic.getParametersHash (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1878) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1912,
+            "line_end": 2025,
+            "message": "Function 'GenesisProtocolLogic._execute' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1912,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic._execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2035,
+            "line_end": 2074,
+            "message": "Function 'GenesisProtocolLogic._stake' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2035,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2035,
+            "message": "Parameter '_vote' of GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2035,
+            "message": "Parameter '_amount' of GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2035,
+            "message": "Parameter '_staker' of GenesisProtocolLogic._stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2088,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2088,
+            "message": "Parameter '_voter' of GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2088,
+            "message": "Parameter '_vote' of GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2088,
+            "message": "Parameter '_rep' of GenesisProtocolLogic.internalVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2151,
+            "line_end": 2155,
+            "message": "Function 'GenesisProtocolLogic._score' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2151-2155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2151,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic._score (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2162,
+            "line_end": 2169,
+            "message": "Function 'GenesisProtocolLogic._isVotable' (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162-2169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2162,
+            "message": "Parameter '_proposalId' of GenesisProtocolLogic._isVotable (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2286,
+            "message": "Parameter '_proposalId' of GenesisProtocol.vote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2286,
+            "message": "Parameter '_vote' of GenesisProtocol.vote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2286,
+            "message": "Parameter '_amount' of GenesisProtocol.vote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2286,
+            "message": "Parameter '_voter' of GenesisProtocol.vote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2326,
+            "message": "Parameter '' of GenesisProtocol.getNumberOfChoices (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2366,
+            "message": "Parameter '_proposalId' of GenesisProtocol.isVotable (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2366) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2357,
+            "message": "Parameter '_proposalId' of GenesisProtocol.voteStatus (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2357,
+            "message": "Parameter '_choice' of GenesisProtocol.voteStatus (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2215,
+            "message": "Parameter '_proposalId' of GenesisProtocol.stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2215,
+            "message": "Parameter '_vote' of GenesisProtocol.stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2215,
+            "message": "Parameter '_amount' of GenesisProtocol.stake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2234,
+            "message": "Parameter '_proposalId' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2235,
+            "message": "Parameter '_vote' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2236,
+            "message": "Parameter '_amount' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2237,
+            "message": "Parameter '_nonce' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2238,
+            "message": "Parameter '_signatureType' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2239,
+            "message": "Parameter '_signature' of GenesisProtocol.stakeWithSignature (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2318,
+            "message": "Parameter '_proposalId' of GenesisProtocol.execute (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2335,
+            "message": "Parameter '_proposalId' of GenesisProtocol.getProposalTimes (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2335) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2346,
+            "message": "Parameter '_proposalId' of GenesisProtocol.voteInfo (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2346,
+            "message": "Parameter '_voter' of GenesisProtocol.voteInfo (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2346) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2378,
+            "message": "Parameter '_proposalId' of GenesisProtocol.proposalStatus (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2392,
+            "message": "Parameter '_proposalId' of GenesisProtocol.getProposalOrganization (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2403,
+            "message": "Parameter '_proposalId' of GenesisProtocol.getStaker (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2403,
+            "message": "Parameter '_staker' of GenesisProtocol.getStaker (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2413,
+            "message": "Parameter '_proposalId' of GenesisProtocol.voteStake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2413,
+            "message": "Parameter '_vote' of GenesisProtocol.voteStake (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2422,
+            "message": "Parameter '_proposalId' of GenesisProtocol.winningVote (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2422) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2431,
+            "message": "Parameter '_proposalId' of GenesisProtocol.state (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2431) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2457,
+            "message": "Parameter '_proposalId' of GenesisProtocol.score (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2457) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2484,
+            "message": "Parameter '_amount' of VotingMachineCallbacks.mintReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2484,
+            "message": "Parameter '_beneficiary' of VotingMachineCallbacks.mintReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2484,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.mintReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2496,
+            "message": "Parameter '_amount' of VotingMachineCallbacks.burnReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2496,
+            "message": "Parameter '_beneficiary' of VotingMachineCallbacks.burnReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2496,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.burnReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2509,
+            "message": "Parameter '_stakingToken' of VotingMachineCallbacks.stakingTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2509) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2510,
+            "message": "Parameter '_beneficiary' of VotingMachineCallbacks.stakingTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2510) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2511,
+            "message": "Parameter '_amount' of VotingMachineCallbacks.stakingTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2512,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.stakingTokenTransfer (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2512) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2532,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.getTotalReputationSupply (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2540,
+            "message": "Parameter '_owner' of VotingMachineCallbacks.reputationOf (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2540) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2540,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.reputationOf (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2540) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2524,
+            "message": "Parameter '_stakingToken' of VotingMachineCallbacks.balanceOfStakingToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2524) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2524,
+            "message": "Parameter '_proposalId' of VotingMachineCallbacks.balanceOfStakingToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2524) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2632,
+            "message": "Parameter '_proposalId' of ContributionReward.executeProposal (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2632) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2632,
+            "message": "Parameter '_param' of ContributionReward.executeProposal (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2632) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2649,
+            "message": "Parameter '_voteApproveParams' of ContributionReward.setParameters (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2650,
+            "message": "Parameter '_intVote' of ContributionReward.setParameters (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2650) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2669,
+            "message": "Parameter '_voteApproveParams' of ContributionReward.getParametersHash (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2669) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2670,
+            "message": "Parameter '_intVote' of ContributionReward.getParametersHash (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2670) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2691,
+            "message": "Parameter '_avatar' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2691) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2692,
+            "message": "Parameter '_descriptionHash' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2692) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2693,
+            "message": "Parameter '_reputationChange' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2693) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2694,
+            "message": "Parameter '_rewards' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2694) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2695,
+            "message": "Parameter '_externalToken' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2695) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2696,
+            "message": "Parameter '_beneficiary' of ContributionReward.proposeContributionReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2696) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2754,
+            "message": "Parameter '_proposalId' of ContributionReward.redeemReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2754,
+            "message": "Parameter '_avatar' of ContributionReward.redeemReputation (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2787,
+            "message": "Parameter '_proposalId' of ContributionReward.redeemNativeToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2787,
+            "message": "Parameter '_avatar' of ContributionReward.redeemNativeToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2813,
+            "message": "Parameter '_proposalId' of ContributionReward.redeemEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2813,
+            "message": "Parameter '_avatar' of ContributionReward.redeemEther (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2839,
+            "message": "Parameter '_proposalId' of ContributionReward.redeemExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2839,
+            "message": "Parameter '_avatar' of ContributionReward.redeemExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2874,
+            "message": "Parameter '_proposalId' of ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2874,
+            "message": "Parameter '_avatar' of ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2874,
+            "message": "Parameter '_whatToRedeem' of ContributionReward.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2908,
+            "message": "Parameter '_proposalId' of ContributionReward.getPeriodsToPay (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2908,
+            "message": "Parameter '_avatar' of ContributionReward.getPeriodsToPay (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2908,
+            "message": "Parameter '_redeemType' of ContributionReward.getPeriodsToPay (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2938,
+            "message": "Parameter '_proposalId' of ContributionReward.getRedeemedPeriods (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2938,
+            "message": "Parameter '_avatar' of ContributionReward.getRedeemedPeriods (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2938,
+            "message": "Parameter '_redeemType' of ContributionReward.getRedeemedPeriods (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2945,
+            "message": "Parameter '_proposalId' of ContributionReward.getProposalEthReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2945,
+            "message": "Parameter '_avatar' of ContributionReward.getProposalEthReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2949,
+            "message": "Parameter '_proposalId' of ContributionReward.getProposalExternalTokenReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2949,
+            "message": "Parameter '_avatar' of ContributionReward.getProposalExternalTokenReward (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2953,
+            "message": "Parameter '_proposalId' of ContributionReward.getProposalExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2953,
+            "message": "Parameter '_avatar' of ContributionReward.getProposalExternalToken (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2957,
+            "message": "Parameter '_proposalId' of ContributionReward.getProposalExecutionTime (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2957,
+            "message": "Parameter '_avatar' of ContributionReward.getProposalExecutionTime (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2973,
+            "message": "Parameter '_reputationChange' of ContributionReward.validateProposalParams (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2973) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 2973,
+            "message": "Parameter '_rewards' of ContributionReward.validateProposalParams (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2973) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3010,
+            "message": "Parameter '_contributionReward' of Redeemer. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3010) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3010,
+            "message": "Parameter '_genesisProtocol' of Redeemer. (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3010) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3043,
+            "message": "Parameter '_proposalId' of Redeemer.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3043,
+            "message": "Parameter '_avatar' of Redeemer.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3043,
+            "message": "Parameter '_beneficiary' of Redeemer.redeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3076,
+            "message": "Parameter '_proposalId' of Redeemer.contributionRewardRedeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3076) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 3076,
+            "message": "Parameter '_avatar' of Redeemer.contributionRewardRedeem (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3076) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol",
+            "impact": "Informational",
+            "line": 1296,
+            "message": "RealMath.REAL_BITS (0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1296) is never used in RealMath\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

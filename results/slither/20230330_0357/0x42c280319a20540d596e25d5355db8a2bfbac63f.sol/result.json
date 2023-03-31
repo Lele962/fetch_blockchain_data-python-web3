@@ -1,0 +1,176 @@
+{
+    "errors": [
+        "EXIT_CODE_17"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Medium",
+            "line": 17,
+            "line_end": 86,
+            "message": "NameFilter.nameFilter (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#17-86) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 86,
+            "message": "NameFilter.nameFilter uses assembly (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#17-86)\n\t- 0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#78-85\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 131,
+            "message": "PlayerBook.registrationFee_ should be constant (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#130-131)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 129,
+            "message": "Ownable.transferOwnership (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#118-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "checkIfNameValid",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 153,
+            "message": "PlayerBook.checkIfNameValid (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#145-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "getPlayerAddr",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 159,
+            "message": "PlayerBook.getPlayerAddr (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#154-159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "getPlayerName",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 164,
+            "message": "PlayerBook.getPlayerName (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#159-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "registerName",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 176,
+            "message": "PlayerBook.registerName (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#164-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "registerNameByOwner",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 186,
+            "message": "PlayerBook.registerNameByOwner (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#176-186) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayerBook",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "function": "withdrawBalance",
+            "impact": "Informational",
+            "message": "PlayerBook.withdrawBalance (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 18,
+            "message": "Parameter '_input' of NameFilter.nameFilter (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#18) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 147,
+            "message": "Parameter '_nameStr' of PlayerBook.checkIfNameValid (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#146-147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 156,
+            "message": "Parameter '_nameStr' of PlayerBook.getPlayerAddr (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#156) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 166,
+            "message": "Parameter '_nameString' of PlayerBook.registerName (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#164-166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Parameter '_nameString' of PlayerBook.registerNameByOwner (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 177,
+            "message": "Parameter '_addr' of PlayerBook.registerNameByOwner (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol#176-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42c280319a20540d596e25d5355db8a2bfbac63f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_to' of PlayerBook.withdrawBalance (0x42c280319a20540d596e25d5355db8a2bfbac63f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

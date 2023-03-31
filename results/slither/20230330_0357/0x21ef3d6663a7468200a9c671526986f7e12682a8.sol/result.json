@@ -1,0 +1,299 @@
+{
+    "errors": [
+        "EXIT_CODE_29"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "signBuyer",
+            "impact": "Low",
+            "line": 205,
+            "line_end": 206,
+            "message": "realestate.getSigns.signBuyer (local variable @ 0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#205-206) shadows:\n\t- realestate.signBuyer (function @ 0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#337-357)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "signSeller",
+            "impact": "Low",
+            "line": 206,
+            "line_end": 207,
+            "message": "realestate.getSigns.signSeller (local variable @ 0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#206-207) shadows:\n\t- realestate.signSeller (function @ 0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#358-369)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 69,
+            "message": "Ownable.transferOwnership (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#63-69) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "confirmOwnership",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 78,
+            "message": "Ownable.confirmOwnership (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#71-78) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "changeAgencyOwner",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 186,
+            "message": "realestate.changeAgencyOwner (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#182-186) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "changeAgencyReceiver",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 194,
+            "message": "realestate.changeAgencyReceiver (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#188-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "getSigns",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 216,
+            "message": "realestate.getSigns (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#202-216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "getDealByNumber",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 239,
+            "message": "realestate.getDealByNumber (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#216-239) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "getDealsLength",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 243,
+            "message": "realestate.getDealsLength (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#239-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "getDealById",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 264,
+            "message": "realestate.getDealById (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#243-264) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "getDealDataByNumber",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 275,
+            "message": "realestate.getDealDataByNumber (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#264-275) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "addDeal",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 336,
+            "message": "realestate.addDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#278-336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "signBuyer",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 357,
+            "message": "realestate.signBuyer (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#337-357) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "signSeller",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 369,
+            "message": "realestate.signSeller (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#358-369) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "finishDeal",
+            "impact": "Informational",
+            "line": 420,
+            "line_end": 464,
+            "message": "realestate.finishDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#420-464) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "realestate",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "function": "cancelDeal",
+            "impact": "Informational",
+            "message": "realestate.cancelDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 464,
+            "message": "Contract 'realestate' (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#95-464) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 129,
+            "message": "Struct 'realestate._sdeal' (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#103-129) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 133,
+            "message": "Struct 'realestate._sSigns' (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#129-133) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 188,
+            "message": "Parameter '_agencyReceiver' of realestate.changeAgencyReceiver (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 203,
+            "message": "Parameter '_dealNumber' of realestate.getSigns (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "Parameter '_dealNumber' of realestate.getDealByNumber (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#217-218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_dealNumber' of realestate.getDealDataByNumber (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 284,
+            "message": "Parameter '_dealNumber' of realestate.addDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 339,
+            "message": "Parameter '_dealNumber' of realestate.signBuyer (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#337-339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 360,
+            "message": "Parameter '_dealNumber' of realestate.signSeller (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#358-360) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 421,
+            "line_end": 422,
+            "message": "Parameter '_dealNumber' of realestate.finishDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#421-422) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "message": "Parameter '_dealNumber' of realestate.cancelDeal (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21ef3d6663a7468200a9c671526986f7e12682a8.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 103,
+            "message": "Enum 'realestate.statuses' (0x21ef3d6663a7468200a9c671526986f7e12682a8.sol#100-103) is not in CapWords\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

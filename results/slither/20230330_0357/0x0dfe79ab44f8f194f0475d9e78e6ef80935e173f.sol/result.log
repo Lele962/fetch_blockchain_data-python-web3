@@ -1,0 +1,97 @@
+INFO:Detectors:[91m
+ERC721._ownedTokensCount (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#380-381) is never initialized. It is used in:
+	- balanceOf (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#412-416)
+	- _mint (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#567-577)
+	- _transferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#612-621)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Address.isContract (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#240-257) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+IERC721 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#35-83) has incorrect ERC20 function interface(s):
+	-transferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#70-72)
+	-approve (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#72)
+ERC721 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#363-666) has incorrect ERC20 function interface(s):
+	-transferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#494-499)
+	-approve (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#442-449)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[92m
+ERC721Metadata.constructor.name (local variable @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#713) shadows:
+	- ERC721Metadata.name (function @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#722-723)
+	- IERC721Metadata.name (function @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#677-678)
+ERC721Metadata.constructor.symbol (local variable @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#713) shadows:
+	- ERC721Metadata.symbol (function @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#725-727)
+	- IERC721Metadata.symbol (function @ /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#678-680)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Address.isContract uses assembly (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#240-257)
+	- /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#257
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+IERC721.balanceOf (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#42-45) should be declared external
+ERC721.balanceOf (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#412-416) should be declared external
+IERC721.safeTransferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#61-63) should be declared external
+ERC721.safeTransferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#512-514) should be declared external
+ERC721.approve (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#442-449) should be declared external
+IERC721.approve (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#72) should be declared external
+ERC721.setApprovalForAll (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#469-474) should be declared external
+IERC721.setApprovalForAll (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#75) should be declared external
+IERC721Receiver.onERC721Received (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#106-114) should be declared external
+PauserRole.addPauser (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#844-845) should be declared external
+PauserRole.renouncePauser (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#845-847) should be declared external
+Pausable.paused (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#905-910) should be declared external
+Pausable.pause (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#924-929) should be declared external
+Pausable.unpause (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#931-937) should be declared external
+Ownable.owner (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#969-970) should be declared external
+Ownable.renounceOwnership (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1012-1015) should be declared external
+Ownable.transferOwnership (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1019-1024) should be declared external
+SuperplayerEquipmentInterface.createEquip (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1099-1106) should be declared external
+SuperplayerRandomEquipmentInterface.getRandomEquipment (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1110-1114) should be declared external
+SuperplayerEquipmentV001.totalSupply (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1143-1144) should be declared external
+SuperplayerEquipmentV001.addEquipmentGenerator (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1144-1150) should be declared external
+SuperplayerEquipmentV001.removeEquipmentGenerator (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1150-1152) should be declared external
+SuperplayerEquipmentV001.setLimit (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1152-1159) should be declared external
+SuperplayerEquipmentV001.setLimits (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1159-1172) should be declared external
+SuperplayerEquipmentV001.getLimit (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1172-1179) should be declared external
+SuperplayerEquipmentV001.createEquip (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1185-1201) should be declared external
+SuperplayerEquipmentV001.accquireAdvancedProps (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol) should be declared external
+SuperplayerEquipmentV001.getEquip (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol:
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#3-5): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#31-32): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#87): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#115-117): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#230): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#258): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#301-303): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#361): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#670-672): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#687): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#780-781): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#823-824): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#861): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#942): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1035): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'ERC165._registerInterface' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#353-359) is not in mixedCase
+Parameter '_data' of ERC721.safeTransferFrom (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#530) is not in mixedCase
+Function 'ERC721._exists' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#540-541) is not in mixedCase
+Function 'ERC721._isApprovedOrOwner' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#550-559) is not in mixedCase
+Function 'ERC721._mint' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#567-577) is not in mixedCase
+Function 'ERC721._burn' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#586-594) is not in mixedCase
+Function 'ERC721._burn' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#597-598) is not in mixedCase
+Function 'ERC721._transferFrom' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#612-621) is not in mixedCase
+Function 'ERC721._checkOnERC721Received' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#638-653) is not in mixedCase
+Parameter '_data' of ERC721._checkOnERC721Received (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#643) is not in mixedCase
+Function 'ERC721._clearApproval' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#655-665) is not in mixedCase
+Function 'ERC721Metadata._burn' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#768-775) is not in mixedCase
+Function 'ERC721Metadata._setTokenURI' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#747-758) is not in mixedCase
+Function 'PauserRole._addPauser' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#848-851) is not in mixedCase
+Function 'PauserRole._removePauser' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#853-858) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1026-1034) is not in mixedCase
+Variable 'SuperplayerEquipmentV001.TotalEquipNum' (/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1136-1137) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol analyzed (18 contracts), 53 result(s) found

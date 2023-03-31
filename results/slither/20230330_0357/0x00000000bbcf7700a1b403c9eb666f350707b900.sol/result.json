@@ -1,0 +1,211 @@
+{
+    "errors": [
+        "EXIT_CODE_20"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Medium",
+            "line": 58,
+            "line_end": 66,
+            "message": "UpgradeabilityProxy.implementation (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#58-66) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Medium",
+            "line": 143,
+            "line_end": 151,
+            "message": "TGBPController.proxyOwner (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#143-151) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Medium",
+            "line": 154,
+            "line_end": 162,
+            "message": "TGBPController.pendingProxyOwner (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#154-162) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 21,
+            "line_end": 38,
+            "message": "Contract locking ether found in 0x00000000bbcf7700a1b403c9eb666f350707b900.sol:\n\tContract TGBPController has payable functions:\n\t - fallback (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#21-38)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "implementation",
+            "impact": "Low",
+            "line": 58,
+            "line_end": 66,
+            "message": "TGBPController.upgradeTo.implementation (local variable @ 0x00000000bbcf7700a1b403c9eb666f350707b900.sol) shadows:\n\t- UpgradeabilityProxy.implementation (function @ 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#58-66)\n\t- Proxy.implementation (function @ 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#15-18)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 38,
+            "message": "Proxy.fallback uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#21-38)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#25-38\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "implementation",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 66,
+            "message": "UpgradeabilityProxy.implementation uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#58-66)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#63-66\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "_setImplementation",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 78,
+            "message": "UpgradeabilityProxy._setImplementation uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#70-78)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#74-78\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TGBPController",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "proxyOwner",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 151,
+            "message": "TGBPController.proxyOwner uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#143-151)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#149-151\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TGBPController",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "pendingProxyOwner",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 162,
+            "message": "TGBPController.pendingProxyOwner uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#154-162)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#161-162\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TGBPController",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "_setUpgradeabilityOwner",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 172,
+            "message": "TGBPController._setUpgradeabilityOwner uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#164-172)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#171-172\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TGBPController",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "function": "_setPendingUpgradeabilityOwner",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 181,
+            "message": "TGBPController._setPendingUpgradeabilityOwner uses assembly (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#174-181)\n\t- 0x00000000bbcf7700a1b403c9eb666f350707b900.sol#179-181\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x00000000bbcf7700a1b403c9eb666f350707b900.sol:\n\t- pragma solidity^0.4.23 (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 78,
+            "message": "Function 'UpgradeabilityProxy._setImplementation' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#70-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 91,
+            "message": "Function 'UpgradeabilityProxy._upgradeTo' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#81-91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 54,
+            "message": "Constant 'UpgradeabilityProxy.implementationPosition' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#52-54) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 172,
+            "message": "Function 'TGBPController._setUpgradeabilityOwner' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#164-172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 181,
+            "message": "Function 'TGBPController._setPendingUpgradeabilityOwner' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#174-181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 111,
+            "message": "Constant 'TGBPController.proxyOwnerPosition' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#110-111) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000bbcf7700a1b403c9eb666f350707b900.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 114,
+            "message": "Constant 'TGBPController.pendingProxyOwnerPosition' (0x00000000bbcf7700a1b403c9eb666f350707b900.sol#111-114) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

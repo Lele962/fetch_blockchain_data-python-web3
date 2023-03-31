@@ -1,0 +1,66 @@
+INFO:Detectors:[93m
+TokenController.finishMinting (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) does not use the value returned by external calls:
+	-token.finishMinting() (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ERC20.totalSupply (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#162-163) should be declared external
+IERC20.totalSupply (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#117-119) should be declared external
+ERC20.balanceOf (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#170-172) should be declared external
+IERC20.balanceOf (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#119-121) should be declared external
+ERC20.allowance (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#180-184) should be declared external
+IERC20.allowance (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#121-123) should be declared external
+MinterRole.addMinter (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#322-324) should be declared external
+MinterRole.renounceMinter (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#324-329) should be declared external
+PauserRole.addPauser (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#362-370) should be declared external
+PauserRole.renouncePauser (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#370-371) should be declared external
+Pausable.paused (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#402-407) should be declared external
+Pausable.pause (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#428-429) should be declared external
+Pausable.unpause (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#433-434) should be declared external
+MintableToken.mint (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#486-491) should be declared external
+MintableToken.finishMinting (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#494-497) should be declared external
+multiowned.getOwners (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#719-725) should be declared external
+TokenController.mint (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+TokenController.pause (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+TokenController.unpause (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+TokenController.addMinter (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+TokenController.addPauser (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+TokenController.finishMinting (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol:
+	- pragma solidity^0.5.6 (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'ERC20._transfer' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#271-275) is not in mixedCase
+Function 'ERC20._mint' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#288-300) is not in mixedCase
+Function 'MinterRole._addMinter' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#331-334) is not in mixedCase
+Function 'MinterRole._removeMinter' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#336-341) is not in mixedCase
+Function 'PauserRole._addPauser' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#371-375) is not in mixedCase
+Function 'PauserRole._removePauser' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#377-384) is not in mixedCase
+Contract 'multiowned' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#532-925) is not in CapWords
+Parameter '_owners' of multiowned. (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#607) is not in mixedCase
+Parameter '_required' of multiowned. (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#607-608) is not in mixedCase
+Parameter '_from' of multiowned.changeOwner (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#640-641) is not in mixedCase
+Parameter '_to' of multiowned.changeOwner (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#641) is not in mixedCase
+Parameter '_owner' of multiowned.addOwner (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#663) is not in mixedCase
+Parameter '_owner' of multiowned.removeOwner (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#680) is not in mixedCase
+Parameter '_newRequired' of multiowned.changeRequirement (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#702-703) is not in mixedCase
+Parameter '_addr' of multiowned.isOwner (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#731) is not in mixedCase
+Parameter '_operation' of multiowned.revoke (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#747) is not in mixedCase
+Parameter '_operation' of multiowned.hasConfirmed (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#768) is not in mixedCase
+Parameter '_owner' of multiowned.hasConfirmed (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#768) is not in mixedCase
+Parameter '_operation' of multiowned.confirmAndCheck (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#774) is not in mixedCase
+Parameter '_operation' of multiowned.isOperationActive (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#875-876) is not in mixedCase
+Parameter '_operation' of multiowned.assertOperationIsConsistent (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#887) is not in mixedCase
+Constant 'multiowned.c_maxOwners' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#897-898) is not in UPPER_CASE_WITH_UNDERSCORES
+Variable 'multiowned.m_multiOwnedRequired' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#902) is not in mixedCase
+Variable 'multiowned.m_numOwners' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#903-904) is not in mixedCase
+Variable 'multiowned.m_owners' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#912-913) is not in mixedCase
+Variable 'multiowned.m_ownerIndex' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#917-920) is not in mixedCase
+Variable 'multiowned.m_multiOwnedPending' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#920-924) is not in mixedCase
+Variable 'multiowned.m_multiOwnedPendingIndex' (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#924) is not in mixedCase
+Parameter '_tokenAddress' of TokenController. (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase
+Parameter '_to' of TokenController.mint (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase
+Parameter '_amount' of TokenController.mint (/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol analyzed (12 contracts), 55 result(s) found

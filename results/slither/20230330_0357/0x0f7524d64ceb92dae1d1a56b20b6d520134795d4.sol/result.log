@@ -1,0 +1,126 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:40:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function POWHClone() public {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:53:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = dividends(msg.sender);
+		^---------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:61:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = balanceOf(msg.sender);
+		^---------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:125:9: Warning: Use of the "var" keyword is deprecated.
+        var _allowance = allowance[_from][msg.sender];
+        ^------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:147:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = dividends(msg.sender);
+		^---------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:164:3: Warning: Use of the "var" keyword is deprecated.
+		var sender = msg.sender;
+		^--------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:166:3: Warning: Use of the "var" keyword is deprecated.
+		var fee = (uint)(msg.value / 10);
+		^-----^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:169:3: Warning: Use of the "var" keyword is deprecated.
+		var numEther = msg.value - fee;
+		^----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:170:3: Warning: Use of the "var" keyword is deprecated.
+		var numTokens = getTokensForEther(numEther);
+		^-----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:172:3: Warning: Use of the "var" keyword is deprecated.
+		var buyerfee = fee * PRECISION;
+		^----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:176:4: Warning: Use of the "var" keyword is deprecated.
+			var holderreward =
+			^--------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:179:4: Warning: Use of the "var" keyword is deprecated.
+			var holderfee = fee * holderreward;
+			^-----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:183:4: Warning: Use of the "var" keyword is deprecated.
+			var feePerShare = holderfee / totalSupply;
+			^-------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:192:3: Warning: Use of the "var" keyword is deprecated.
+		var payoutDiff = (int256) ((earningsPerShare * numTokens) - buyerfee);
+		^------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:198:3: Warning: Use of the "var" keyword is deprecated.
+		var numEthers = getEtherForTokens(amount);
+		^-----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:204:3: Warning: Use of the "var" keyword is deprecated.
+		var payoutDiff = (int256) (earningsPerShare * amount + (numEthers * PRECISION));
+		^------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:245:3: Warning: Use of the "var" keyword is deprecated.
+		var z = (s*s) / one;
+		^---^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:117:3: Warning: Invoking events without "emit" prefix is deprecated.
+		Transfer(_from, _to, _value);
+		^--------------------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:139:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:154:10: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		return this.balance - msg.value;
+		       ^----------^
+/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:49:20: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function withdraw(uint tokenCount) // the parameter is ignored, yes
+	                  ^-------------^
+
+INFO:Detectors:[93m
+POWHClone (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#11-282) has incorrect ERC20 function interface(s):
+	-transfer (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124-125)
+	-transferFrom (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#125-133)
+	-approve (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#133-143)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[92m
+POWHClone.balanceOf.balance (local variable @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#46-47) shadows:
+	- POWHClone.balance (function @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)
+POWHClone.withdraw.balance (local variable @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#54) shadows:
+	- POWHClone.balance (function @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)
+POWHClone.sellMyTokensDaddy.balance (local variable @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#62) shadows:
+	- POWHClone.balance (function @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)
+POWHClone.withdrawOld.balance (local variable @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#150-153) shadows:
+	- POWHClone.balance (function @ /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#156-158)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+POWHClone.getMeOutOfHere (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#67-73) should be declared external
+POWHClone.fund (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#74-84) should be declared external
+POWHClone.buyPrice (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#84-88) should be declared external
+POWHClone.sellPrice (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#88-95) should be declared external
+POWHClone.transfer (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124-125) should be declared external
+POWHClone.transferFrom (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#125-133) should be declared external
+POWHClone.approve (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#133-143) should be declared external
+POWHClone.fallback (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol:
+	- pragma solidity^0.4.18 (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'POWHClone.POWHClone' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#41-44) is not in mixedCase
+Parameter '_owner' of POWHClone.balanceOf (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#45) is not in mixedCase
+Parameter '_from' of POWHClone.transferTokens (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108) is not in mixedCase
+Parameter '_to' of POWHClone.transferTokens (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108) is not in mixedCase
+Parameter '_value' of POWHClone.transferTokens (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#108-109) is not in mixedCase
+Parameter '_to' of POWHClone.transfer (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124) is not in mixedCase
+Parameter '_value' of POWHClone.transfer (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#124) is not in mixedCase
+Parameter '_from' of POWHClone.transferFrom (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#126) is not in mixedCase
+Parameter '_to' of POWHClone.transferFrom (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#126-127) is not in mixedCase
+Parameter '_value' of POWHClone.transferFrom (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#127-128) is not in mixedCase
+Parameter '_spender' of POWHClone.approve (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#134) is not in mixedCase
+Parameter '_value' of POWHClone.approve (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#134) is not in mixedCase
+Parameter '_owner' of POWHClone.dividends (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#143) is not in mixedCase
+Constant 'POWHClone.one' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#223-224) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.sqrt2' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#224-225) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.sqrtdot5' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#225-226) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.ln2' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#226-227) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.ln2_64dot5' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#227-228) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c1' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#228-229) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c3' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#229-231) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c5' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#231-232) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c7' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#232-235) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c9' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#235-239) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c11' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#239-241) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c2' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#256-257) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c4' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#257-258) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c6' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#258-259) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'POWHClone.c8' (/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol#259-260) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0f7524d64ceb92dae1d1a56b20b6d520134795d4.sol analyzed (1 contracts), 42 result(s) found

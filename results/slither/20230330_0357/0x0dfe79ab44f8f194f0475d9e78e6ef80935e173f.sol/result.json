@@ -1,0 +1,549 @@
+{
+    "errors": [
+        "EXIT_CODE_53"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "_mint",
+            "impact": "High",
+            "line": 380,
+            "line_end": 381,
+            "message": "ERC721._ownedTokensCount (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#380-381) is never initialized. It is used in:\n\t- balanceOf (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#412-416)\n\t- _mint (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#567-577)\n\t- _transferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#612-621)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Medium",
+            "line": 240,
+            "line_end": 257,
+            "message": "Address.isContract (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#240-257) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 35,
+            "line_end": 83,
+            "message": "IERC721 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#35-83) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#70-72)\n\t-approve (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#72)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 363,
+            "line_end": 666,
+            "message": "ERC721 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#363-666) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#494-499)\n\t-approve (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#442-449)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 713,
+            "message": "ERC721Metadata.constructor.name (local variable @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#713) shadows:\n\t- ERC721Metadata.name (function @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#722-723)\n\t- IERC721Metadata.name (function @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#677-678)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "symbol",
+            "impact": "Low",
+            "line": 713,
+            "message": "ERC721Metadata.constructor.symbol (local variable @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#713) shadows:\n\t- ERC721Metadata.symbol (function @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#725-727)\n\t- IERC721Metadata.symbol (function @ 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#678-680)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Address",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 257,
+            "message": "Address.isContract uses assembly (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#240-257)\n\t- 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#257\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 45,
+            "message": "IERC721.balanceOf (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#42-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 412,
+            "line_end": 416,
+            "message": "ERC721.balanceOf (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#412-416) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 63,
+            "message": "IERC721.safeTransferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#61-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 512,
+            "line_end": 514,
+            "message": "ERC721.safeTransferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#512-514) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 449,
+            "message": "ERC721.approve (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#442-449) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 72,
+            "message": "IERC721.approve (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 469,
+            "line_end": 474,
+            "message": "ERC721.setApprovalForAll (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#469-474) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 75,
+            "message": "IERC721.setApprovalForAll (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721Receiver",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "onERC721Received",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 114,
+            "message": "IERC721Receiver.onERC721Received (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#106-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 844,
+            "line_end": 845,
+            "message": "PauserRole.addPauser (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#844-845) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 845,
+            "line_end": 847,
+            "message": "PauserRole.renouncePauser (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#845-847) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 905,
+            "line_end": 910,
+            "message": "Pausable.paused (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#905-910) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 924,
+            "line_end": 929,
+            "message": "Pausable.pause (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#924-929) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 931,
+            "line_end": 937,
+            "message": "Pausable.unpause (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#931-937) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 969,
+            "line_end": 970,
+            "message": "Ownable.owner (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#969-970) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 1012,
+            "line_end": 1015,
+            "message": "Ownable.renounceOwnership (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1012-1015) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 1019,
+            "line_end": 1024,
+            "message": "Ownable.transferOwnership (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1019-1024) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentInterface",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "createEquip",
+            "impact": "Informational",
+            "line": 1099,
+            "line_end": 1106,
+            "message": "SuperplayerEquipmentInterface.createEquip (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1099-1106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerRandomEquipmentInterface",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "getRandomEquipment",
+            "impact": "Informational",
+            "line": 1110,
+            "line_end": 1114,
+            "message": "SuperplayerRandomEquipmentInterface.getRandomEquipment (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1110-1114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 1143,
+            "line_end": 1144,
+            "message": "SuperplayerEquipmentV001.totalSupply (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1143-1144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "addEquipmentGenerator",
+            "impact": "Informational",
+            "line": 1144,
+            "line_end": 1150,
+            "message": "SuperplayerEquipmentV001.addEquipmentGenerator (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1144-1150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "removeEquipmentGenerator",
+            "impact": "Informational",
+            "line": 1150,
+            "line_end": 1152,
+            "message": "SuperplayerEquipmentV001.removeEquipmentGenerator (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1150-1152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "setLimit",
+            "impact": "Informational",
+            "line": 1152,
+            "line_end": 1159,
+            "message": "SuperplayerEquipmentV001.setLimit (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1152-1159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "setLimits",
+            "impact": "Informational",
+            "line": 1159,
+            "line_end": 1172,
+            "message": "SuperplayerEquipmentV001.setLimits (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1159-1172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "getLimit",
+            "impact": "Informational",
+            "line": 1172,
+            "line_end": 1179,
+            "message": "SuperplayerEquipmentV001.getLimit (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1172-1179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "createEquip",
+            "impact": "Informational",
+            "line": 1185,
+            "line_end": 1201,
+            "message": "SuperplayerEquipmentV001.createEquip (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1185-1201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "accquireAdvancedProps",
+            "impact": "Informational",
+            "message": "SuperplayerEquipmentV001.accquireAdvancedProps (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SuperplayerEquipmentV001",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "function": "getEquip",
+            "impact": "Informational",
+            "message": "SuperplayerEquipmentV001.getEquip (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Detected issues with version pragma in 0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol:\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#3-5): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#31-32): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#87): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#115-117): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#230): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#258): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#301-303): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#361): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#670-672): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#687): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#780-781): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#823-824): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#861): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#942): it allows old versions\n\t- pragma solidity^0.5.0 (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1035): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 353,
+            "line_end": 359,
+            "message": "Function 'ERC165._registerInterface' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#353-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 530,
+            "message": "Parameter '_data' of ERC721.safeTransferFrom (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 540,
+            "line_end": 541,
+            "message": "Function 'ERC721._exists' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#540-541) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 550,
+            "line_end": 559,
+            "message": "Function 'ERC721._isApprovedOrOwner' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#550-559) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 567,
+            "line_end": 577,
+            "message": "Function 'ERC721._mint' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#567-577) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 586,
+            "line_end": 594,
+            "message": "Function 'ERC721._burn' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#586-594) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 597,
+            "line_end": 598,
+            "message": "Function 'ERC721._burn' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#597-598) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 612,
+            "line_end": 621,
+            "message": "Function 'ERC721._transferFrom' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#612-621) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 638,
+            "line_end": 653,
+            "message": "Function 'ERC721._checkOnERC721Received' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#638-653) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 643,
+            "message": "Parameter '_data' of ERC721._checkOnERC721Received (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#643) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 655,
+            "line_end": 665,
+            "message": "Function 'ERC721._clearApproval' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#655-665) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 768,
+            "line_end": 775,
+            "message": "Function 'ERC721Metadata._burn' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#768-775) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 747,
+            "line_end": 758,
+            "message": "Function 'ERC721Metadata._setTokenURI' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#747-758) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 848,
+            "line_end": 851,
+            "message": "Function 'PauserRole._addPauser' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#848-851) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 853,
+            "line_end": 858,
+            "message": "Function 'PauserRole._removePauser' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#853-858) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 1026,
+            "line_end": 1034,
+            "message": "Function 'Ownable._transferOwnership' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1026-1034) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol",
+            "impact": "Informational",
+            "line": 1136,
+            "line_end": 1137,
+            "message": "Variable 'SuperplayerEquipmentV001.TotalEquipNum' (0x0dfe79ab44f8f194f0475d9e78e6ef80935e173f.sol#1136-1137) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

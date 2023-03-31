@@ -1,0 +1,468 @@
+{
+    "errors": [
+        "EXIT_CODE_48"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Medium",
+            "line": 80,
+            "line_end": 81,
+            "message": "RasthenToken.totalSupply (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#80-81) shadows:\n\t- ERC20Basic.totalSupply (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 55,
+            "message": "ERC20Basic.totalSupply should be constant (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "AltcoinToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "AltcoinToken.balanceOf (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AltcoinToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 54,
+            "message": "AltcoinToken.transfer (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#50-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 56,
+            "message": "ERC20Basic.balanceOf (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 201,
+            "message": "RasthenToken.balanceOf (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#196-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 57,
+            "message": "ERC20Basic.transfer (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#56-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 215,
+            "message": "RasthenToken.transfer (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206-215) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 243,
+            "message": "RasthenToken.allowance (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#237-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "ERC20.allowance (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#61-62) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 227,
+            "message": "RasthenToken.transferFrom (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 63,
+            "message": "ERC20.transferFrom (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#62-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 64,
+            "message": "ERC20.approve (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#63-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 237,
+            "message": "RasthenToken.approve (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#227-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "Rasthen",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 117,
+            "message": "RasthenToken.Rasthen (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#112-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 123,
+            "message": "RasthenToken.transferOwnership (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#117-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "finishDistribution",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 129,
+            "message": "RasthenToken.finishDistribution (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#124-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "adminClaimAirdrop",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 160,
+            "message": "RasthenToken.adminClaimAirdrop (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "adminClaimAirdropMultiple",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 165,
+            "message": "RasthenToken.adminClaimAirdropMultiple (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#160-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "updateTokensPerEth",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 175,
+            "message": "RasthenToken.updateTokensPerEth (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#166-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "getTokenBalance",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 250,
+            "message": "RasthenToken.getTokenBalance (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#243-250) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 254,
+            "message": "RasthenToken.withdraw (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#250-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 262,
+            "message": "RasthenToken.burn (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#255-262) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RasthenToken",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "function": "withdrawAltcoinTokens",
+            "impact": "Informational",
+            "line": 264,
+            "message": "RasthenToken.withdrawAltcoinTokens (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#264) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol:\n\t- pragma solidity^0.4.18 (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 197,
+            "message": "Parameter '_owner' of RasthenToken.balanceOf (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 206,
+            "message": "Parameter '_to' of RasthenToken.transfer (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 206,
+            "message": "Parameter '_amount' of RasthenToken.transfer (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Parameter '_owner' of RasthenToken.allowance (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Parameter '_spender' of RasthenToken.allowance (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_from' of RasthenToken.transferFrom (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_to' of RasthenToken.transferFrom (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "Parameter '_amount' of RasthenToken.transferFrom (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#217-218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 228,
+            "message": "Parameter '_spender' of RasthenToken.approve (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#228) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 229,
+            "message": "Parameter '_value' of RasthenToken.approve (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#228-229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 117,
+            "message": "Function 'RasthenToken.Rasthen' (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#112-117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 130,
+            "message": "Parameter '_to' of RasthenToken.distr (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#129-130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 130,
+            "message": "Parameter '_amount' of RasthenToken.distr (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 143,
+            "message": "Parameter '_participant' of RasthenToken.doAirdrop (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#141-143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 143,
+            "message": "Parameter '_amount' of RasthenToken.doAirdrop (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_participant' of RasthenToken.adminClaimAirdrop (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_amount' of RasthenToken.adminClaimAirdrop (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_addresses' of RasthenToken.adminClaimAirdropMultiple (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_amount' of RasthenToken.adminClaimAirdropMultiple (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '_tokensPerEth' of RasthenToken.updateTokensPerEth (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 255,
+            "message": "Parameter '_value' of RasthenToken.burn (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#255) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of RasthenToken.withdrawAltcoinTokens (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Constant 'RasthenToken.minContribution' (0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#84) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,854 @@
+{
+    "errors": [
+        "EXIT_CODE_100"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Works",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 220,
+            "line_end": 223,
+            "message": "Contract locking ether found in 0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol:\n\tContract Works has payable functions:\n\t - fallback (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#220-223)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Works",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "function": "updateDebris",
+            "impact": "Medium",
+            "line": 693,
+            "line_end": 704,
+            "message": "Reentrancy in Works.updateDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#693-704):\n\tExternal calls:\n\t- debris[_worksID][_debrisID].lastPrice = this.getDebrisPrice(_worksID,_debrisID) (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#695-698)\n\tState variables written after the call(s):\n\t- debris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#698-699)\n\t- debris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#699-700)\n\t- debris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#700-701)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Works",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "function": "getDebrisPrice",
+            "impact": "Medium",
+            "line": 536,
+            "message": "lastPrice in Works.getDebrisPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#536) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Works",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "function": "finish",
+            "impact": "Low",
+            "line": 486,
+            "line_end": 487,
+            "message": "Works.isFinish.finish (local variable @ 0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#486-487) shadows:\n\t- Works.finish (function @ 0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721-724)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol:\n\t- pragma solidity^0.5.0 (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 211,
+            "message": "Parameter '_teamAddress' of Works. (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#210-211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 213,
+            "message": "Parameter '_artistAddress' of Works. (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#211-213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 287,
+            "message": "Parameter '_teamAddress' of Works.upgrade (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#285-287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 289,
+            "message": "Parameter '_artistAddress' of Works.upgrade (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#288-289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 301,
+            "message": "Parameter '_worksID' of Works.addWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#301) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 302,
+            "message": "Parameter '_artistID' of Works.addWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 302,
+            "message": "Parameter '_debrisNum' of Works.addWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 303,
+            "message": "Parameter '_price' of Works.addWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#303) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 303,
+            "line_end": 304,
+            "message": "Parameter '_beginTime' of Works.addWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#303-304) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 337,
+            "message": "Parameter '_worksID' of Works.initDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#336-337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 337,
+            "message": "Parameter '_price' of Works.initDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 338,
+            "message": "Parameter '_debrisNum' of Works.initDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#337-338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 355,
+            "line_end": 356,
+            "message": "Parameter '_worksID' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#355-356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 357,
+            "message": "Parameter '_firstBuyLimit' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 360,
+            "line_end": 361,
+            "message": "Parameter '_freezeGap' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#360-361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 361,
+            "message": "Parameter '_protectGap' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 363,
+            "message": "Parameter '_increaseRatio' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#362-363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 363,
+            "line_end": 364,
+            "message": "Parameter '_discountGap' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#363-364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 365,
+            "message": "Parameter '_discountRatio' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#364-365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 365,
+            "line_end": 366,
+            "message": "Parameter '_firstAllot' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#365-366) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 366,
+            "line_end": 367,
+            "message": "Parameter '_againAllot' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#366-367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 367,
+            "line_end": 370,
+            "message": "Parameter '_lastAllot' of Works.configRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#367-370) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_worksID' of Works.publish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_beginTime' of Works.publish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 409,
+            "line_end": 411,
+            "message": "Parameter '_worksID' of Works.close (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#409-411) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 414,
+            "message": "Parameter '_worksID' of Works.getWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#414) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_worksID' of Works.getDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_debrisID' of Works.getDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 437,
+            "message": "Parameter '_worksID' of Works.getRule (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#437) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 449,
+            "message": "Parameter '_worksID' of Works.hasWorks (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#449) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 453,
+            "message": "Parameter '_worksID' of Works.hasDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#453) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 453,
+            "message": "Parameter '_debrisID' of Works.hasDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#453) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 457,
+            "message": "Parameter '_worksID' of Works.isPublish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#457) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 461,
+            "message": "Parameter '_worksID' of Works.isStart (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#461) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 462,
+            "line_end": 465,
+            "message": "Parameter '_worksID' of Works.isProtect (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#462-465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 465,
+            "message": "Parameter '_debrisID' of Works.isProtect (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 473,
+            "message": "Parameter '_worksID' of Works.isSecond (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 473,
+            "message": "Parameter '_debrisID' of Works.isSecond (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 482,
+            "message": "Parameter '_worksID' of Works.isGameOver (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#479-482) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 483,
+            "message": "Parameter '_worksID' of Works.isFinish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#483) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 483,
+            "line_end": 484,
+            "message": "Parameter '_unionID' of Works.isFinish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#483-484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 496,
+            "message": "Parameter '_worksID' of Works.hasFirstUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 497,
+            "message": "Parameter '_unionID' of Works.hasFirstUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#497) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 510,
+            "line_end": 511,
+            "message": "Parameter '_worksID' of Works.hasSecondUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#510-511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 511,
+            "message": "Parameter '_unionID' of Works.hasSecondUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 523,
+            "message": "Parameter '_worksID' of Works.getFirstUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#523) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 525,
+            "line_end": 526,
+            "message": "Parameter '_worksID' of Works.getSecondUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#525-526) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 528,
+            "line_end": 530,
+            "message": "Parameter '_worksID' of Works.getPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#528-530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_worksID' of Works.getDebrisPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_debrisID' of Works.getDebrisPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 565,
+            "message": "Parameter '_worksID' of Works.getDebrisStatus (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 565,
+            "message": "Parameter '_debrisID' of Works.getDebrisStatus (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#565) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 593,
+            "line_end": 594,
+            "message": "Parameter '_worksID' of Works.getInitPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#593-594) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 595,
+            "line_end": 596,
+            "message": "Parameter '_debrisID' of Works.getInitPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#595-596) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 600,
+            "message": "Parameter '_worksID' of Works.getLastPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#600) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 600,
+            "message": "Parameter '_debrisID' of Works.getLastPrice (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#600) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 604,
+            "message": "Parameter '_worksID' of Works.getLastBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 604,
+            "message": "Parameter '_debrisID' of Works.getLastBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#604) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 609,
+            "message": "Parameter '_worksID' of Works.getLastUnionId (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#609) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 609,
+            "message": "Parameter '_debrisID' of Works.getLastUnionId (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#609) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 613,
+            "line_end": 614,
+            "message": "Parameter '_worksID' of Works.getFreezeGap (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#613-614) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 617,
+            "message": "Parameter '_worksID' of Works.getFirstBuyLimit (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#617) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 623,
+            "message": "Parameter '_worksID' of Works.getArtistId (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#623) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 625,
+            "message": "Parameter '_worksID' of Works.getDebrisNum (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#625) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 628,
+            "message": "Parameter '_worksID' of Works.getAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#628) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 628,
+            "message": "Parameter '_flag' of Works.getAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#628) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 639,
+            "message": "Parameter '_worksID' of Works.getAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 639,
+            "message": "Parameter '_flag' of Works.getAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 639,
+            "line_end": 640,
+            "message": "Parameter '_element' of Works.getAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639-640) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 647,
+            "message": "Parameter '_worksID' of Works.getPools (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#647) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 650,
+            "line_end": 651,
+            "message": "Parameter '_worksID' of Works.getPoolsAllot (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#650-651) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 664,
+            "message": "Parameter '_worksID' of Works.getStartHourglass (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#664) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 671,
+            "message": "Parameter '_worksID' of Works.getWorksStatus (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#671) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 676,
+            "message": "Parameter '_worksID' of Works.getProtectHourglass (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#676) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 676,
+            "message": "Parameter '_debrisID' of Works.getProtectHourglass (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#676) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 684,
+            "message": "Parameter '_worksID' of Works.getDiscountHourglass (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#684) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 684,
+            "message": "Parameter '_debrisID' of Works.getDiscountHourglass (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#684) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 693,
+            "line_end": 694,
+            "message": "Parameter '_worksID' of Works.updateDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#693-694) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 694,
+            "message": "Parameter '_debrisID' of Works.updateDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 694,
+            "message": "Parameter '_unionID' of Works.updateDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 694,
+            "line_end": 695,
+            "message": "Parameter '_sender' of Works.updateDebris (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694-695) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 704,
+            "line_end": 705,
+            "message": "Parameter '_worksID' of Works.updateFirstBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#704-705) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 705,
+            "message": "Parameter '_debrisID' of Works.updateFirstBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#705) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 705,
+            "message": "Parameter '_unionID' of Works.updateFirstBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#705) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 706,
+            "message": "Parameter '_sender' of Works.updateFirstBuyer (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#706) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 714,
+            "line_end": 715,
+            "message": "Parameter '_worksID' of Works.updateBuyNum (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#714-715) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 715,
+            "message": "Parameter '_debrisID' of Works.updateBuyNum (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#715) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 721,
+            "message": "Parameter '_worksID' of Works.finish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 721,
+            "message": "Parameter '_unionID' of Works.finish (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 724,
+            "line_end": 725,
+            "message": "Parameter '_worksID' of Works.updatePools (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#724-725) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "line": 726,
+            "line_end": 728,
+            "message": "Parameter '_value' of Works.updatePools (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#726-728) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "message": "Parameter '_worksID' of Works.updateFirstUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "message": "Parameter '_unionID' of Works.updateFirstUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "message": "Parameter '_worksID' of Works.updateSecondUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol",
+            "impact": "Informational",
+            "message": "Parameter '_unionID' of Works.updateSecondUnionIds (0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

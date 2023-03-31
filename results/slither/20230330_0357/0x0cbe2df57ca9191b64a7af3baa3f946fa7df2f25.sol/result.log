@@ -1,0 +1,320 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:996:13: Warning: Return value of low-level calls not used.
+            recipient.call(abi.encodeWithSignature("tokenFallback(address,uint256,bytes)", sender, amount, data));
+            ^---------------------------------------------------------------------------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:1034:1: Warning: Base constructor arguments given twice.
+contract ExternStateToken is SelfDestructible, Proxyable, TokenFallbackCaller {
+^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:456:9: First constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:858:9: Second constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:1645:40: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant MAX_ISSUANCE_RATIO = SafeDecimalMath.unit();
+                                       ^--------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:2329:1: Warning: Base constructor arguments given twice.
+contract Synthetix is ExternStateToken {
+^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:456:9: First constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:858:9: Second constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:2342:38: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant SYNTHETIX_SUPPLY = 1e8 * SafeDecimalMath.unit();
+                                     ^--------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3182:1: Warning: Base constructor arguments given twice.
+contract FeePool is Proxyable, SelfDestructible {
+^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:858:9: First constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:456:9: Second constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3193:50: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant public MAX_TRANSFER_FEE_RATE = SafeDecimalMath.unit() / 10;
+                                                 ^-------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3199:50: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant public MAX_EXCHANGE_FEE_RATE = SafeDecimalMath.unit() / 10;
+                                                 ^-------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3241:36: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant TWENTY_PERCENT = (20 * SafeDecimalMath.unit()) / 100;
+                                   ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3242:41: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant TWENTY_FIVE_PERCENT = (25 * SafeDecimalMath.unit()) / 100;
+                                        ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3243:36: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant THIRTY_PERCENT = (30 * SafeDecimalMath.unit()) / 100;
+                                   ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3244:36: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant FOURTY_PERCENT = (40 * SafeDecimalMath.unit()) / 100;
+                                   ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3245:35: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant FIFTY_PERCENT = (50 * SafeDecimalMath.unit()) / 100;
+                                  ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3246:42: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    uint constant SEVENTY_FIVE_PERCENT = (75 * SafeDecimalMath.unit()) / 100;
+                                         ^---------------------------------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:3809:1: Warning: Base constructor arguments given twice.
+contract Synth is ExternStateToken {
+^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:456:9: First constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:858:9: Second constructor call is here: 
+        Owned(_owner)
+        ^-----------^
+
+
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:
+	Contract Proxy has payable functions:
+	 - fallback (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#776-810)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+Reentrancy in FeePool.claimFees (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3411-3431):
+	External calls:
+	- availableFees = feesAvailable(messageSender,XDR) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3416)
+	State variables written after the call(s):
+	- lastFeeWithdrawal (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3420)
+	- recentFeePeriods (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3423)
+Reentrancy in FeePool.closeCurrentFeePeriod (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3361-3405):
+	External calls:
+	- recentFeePeriods[0].startingDebtIndex = synthetix.synthetixState().debtLedgerLength() (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3399)
+	State variables written after the call(s):
+	- nextFeePeriodId (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3402)
+	- recentFeePeriods (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3400)
+Reentrancy in Synthetix.issueMaxSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2856-2865):
+	External calls:
+	- maxIssuable = remainingIssuableSynths(messageSender,currencyKey) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2861)
+	- issueSynths(currencyKey,maxIssuable) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2864)
+	State variables written after the call(s):
+	- messageSender (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2864)
+Reentrancy in Synthetix.issueSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2836-2849):
+	External calls:
+	- require(bool,string)(amount <= remainingIssuableSynths(messageSender,currencyKey),Amount too large) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2842)
+	- _addToDebtRegister(currencyKey,amount) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2845)
+	State variables written after the call(s):
+	- messageSender (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2845)
+Reentrancy in Synthetix.removeSynth (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2390-2422):
+	External calls:
+	- require(bool,string)(synths[currencyKey].totalSupply() == 0,Synth supply exists) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2395)
+	State variables written after the call(s):
+	- synths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2419)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+empty in Synth.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3922) is a local variable never initialiazed
+empty in Synth.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3877) is a local variable never initialiazed
+empty in Synthetix.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2586) is a local variable never initialiazed
+result in FeePool.feesByPeriod (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3674) is a local variable never initialiazed
+empty in Synth.triggerTokenFallbackIfNeeded (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4078) is a local variable never initialiazed
+empty in Synth.transferSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3964) is a local variable never initialiazed
+empty in Synth.transferFromSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4002) is a local variable never initialiazed
+empty in Synthetix.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2555) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+SynthetixEscrow.withdrawSynthetix (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1450-1456) does not use the value returned by external calls:
+	-synthetix.transfer(synthetix,quantity) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1455)
+SynthetixEscrow.vest (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1534-1560) does not use the value returned by external calls:
+	-synthetix.transfer(msg.sender,total) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1557)
+Synth.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3864-3879) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3874)
+Synth.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3885-3899) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3895)
+Synth.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3905-3924) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3920)
+Synth.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3930-3948) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3945)
+Synth.transferSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3952-3966) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3961)
+Synth.transferSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3970-3983) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3979)
+Synth.transferFromSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3987-4004) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4000)
+Synth.transferFromSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4008-4024) does not use the value returned by external calls:
+	-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4021)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ExternStateToken.allowance.owner (local variable @ /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1081) shadows:
+	- Owned.owner (state variable @ /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#369)
+ExternStateToken.emitApproval.owner (local variable @ /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1188) shadows:
+	- Owned.owner (state variable @ /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#369)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Synthetix.totalIssuedSynths has external calls inside a loop:
+	- require(bool,string)(! exchangeRates.rateIsStale(availableSynths[i].currencyKey()),Rate is stale) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2520)
+Synthetix.totalIssuedSynths has external calls inside a loop:
+	- synthValue = availableSynths[i].totalSupply().multiplyDecimalRound(exchangeRates.rateForCurrency(availableSynths[i].currencyKey())).divideDecimalRound(currencyRate) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2526-2528)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in SynthetixState._addToDebtRegister (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823):
+	External calls:
+	- xdrValue = synthetix.effectiveValue(sUSD,amount,XDR) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1778)
+	State variables written after the call(s):
+	- importedXDRAmount (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1787)
+Reentrancy in SynthetixState._addToDebtRegister (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823):
+	External calls:
+	- xdrValue = synthetix.effectiveValue(sUSD,amount,XDR) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1778)
+	- existingDebt = synthetix.debtBalanceOf(account,XDR) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1798)
+	State variables written after the call(s):
+	- debtLedger (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1817-1819)
+	- debtLedger (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1821)
+	- issuanceData (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1811)
+	- issuanceData (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1812)
+	- totalIssuerCount (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1807)
+Reentrancy in Synthetix.addSynth (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2372-2384):
+	External calls:
+	- currencyKey = synth.currencyKey() (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2376)
+	State variables written after the call(s):
+	- availableSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2380)
+	- synths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2381)
+Reentrancy in SynthetixEscrow.appendVestingEntry (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1484-1511):
+	External calls:
+	- require(bool,string)(totalVestedBalance <= synthetix.balanceOf(this),Must be enough balance in the contract to provide for the vesting entry) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1495)
+	State variables written after the call(s):
+	- totalVestedAccountBalance (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1502)
+	- totalVestedAccountBalance (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1507)
+	- vestingSchedules (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1510)
+Reentrancy in Synth.burn (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4054-4062):
+	External calls:
+	- tokenState.setBalanceOf(account,tokenState.balanceOf(account).sub(amount)) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4058)
+	State variables written after the call(s):
+	- totalSupply (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4059)
+Reentrancy in Synth.constructor (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823-3838):
+	External calls:
+	- require(bool,string)(_synthetix.synths(_currencyKey) == Synth(0),Currency key is already in use) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3833)
+	State variables written after the call(s):
+	- currencyKey (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3837)
+	- feePool (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3835)
+	- synthetix (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3836)
+Reentrancy in FeePool.feePaid (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3348-3356):
+	External calls:
+	- xdrAmount = synthetix.effectiveValue(currencyKey,amount,XDR) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3352)
+	State variables written after the call(s):
+	- recentFeePeriods (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3355)
+Reentrancy in Synth.issue (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4043-4051):
+	External calls:
+	- tokenState.setBalanceOf(account,tokenState.balanceOf(account).add(amount)) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4047)
+	State variables written after the call(s):
+	- totalSupply (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4048)
+Reentrancy in Synthetix.removeSynth (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2390-2422):
+	External calls:
+	- require(bool,string)(synths[currencyKey].totalSupply() == 0,Synth supply exists) (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2395)
+	State variables written after the call(s):
+	- availableSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2404)
+	- availableSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2409)
+	- availableSynths (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2412)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Proxy._emit uses assembly (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#744-774)
+	- /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#751-774
+Proxy.fallback uses assembly (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#776-810)
+	- /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#781-794
+	- /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#798-809
+TokenFallbackCaller.callTokenFallbackIfNeeded uses assembly (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#968-1000)
+	- /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#985-991
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+ExternStateToken.allowance (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1081-1087) should be declared external
+ExternStateToken.balanceOf (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1092-1098) should be declared external
+ExternStateToken.approve (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1166-1176) should be declared external
+SynthetixEscrow.balanceOf (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1336-1342) should be declared external
+ExchangeRates.rateForCurrency (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2099-2105) should be declared external
+ExchangeRates.ratesForCurrencies (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2110-2122) should be declared external
+ExchangeRates.lastRateUpdateTimeForCurrency (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2127-2133) should be declared external
+ExchangeRates.lastRateUpdateTimesForCurrencies (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2138-2150) should be declared external
+Synthetix.availableSynthCount (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2538-2544) should be declared external
+Synthetix.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2551-2557) should be declared external
+Synthetix.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2582-2588) should be declared external
+Synthetix.collateralisationRatio (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2964-2974) should be declared external
+Synth.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3864-3879) should be declared external
+Synth.transfer (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3885-3899) should be declared external
+Synth.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3905-3924) should be declared external
+Synth.transferFrom (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3930-3948) should be declared external
+Synth.transferSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3952-3966) should be declared external
+Synth.transferSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3970-3983) should be declared external
+Synth.transferFromSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3987-4004) should be declared external
+Synth.transferFromSenderPaysFee (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4008-4024) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in TokenFallbackCaller.callTokenFallbackIfNeeded (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#968-1000):
+	-recipient.call(abi.encodeWithSignature(tokenFallback(address,uint256,bytes),sender,amount,data)) /sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#996
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'SafeDecimalMath._multiplyDecimalRound' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#176-189) is not in mixedCase
+Function 'SafeDecimalMath._divideDecimalRound' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#257-269) is not in mixedCase
+Constant 'SafeDecimalMath.highPrecisionDecimals' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#115) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_owner' of Owned. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#375) is not in mixedCase
+Parameter '_owner' of Owned.nominateNewOwner (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#387) is not in mixedCase
+Parameter '_owner' of SelfDestructible. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#455) is not in mixedCase
+Parameter '_beneficiary' of SelfDestructible.setSelfDestructBeneficiary (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#469) is not in mixedCase
+Parameter '_associatedContract' of State. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#567) is not in mixedCase
+Parameter '_associatedContract' of State.setAssociatedContract (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#578) is not in mixedCase
+Parameter '_target' of Proxy.setTarget (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#729) is not in mixedCase
+Function 'Proxy._emit' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#744-774) is not in mixedCase
+Parameter '_proxy' of Proxyable. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#857) is not in mixedCase
+Parameter '_proxy' of Proxyable.setProxy (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#865) is not in mixedCase
+Modifier 'Proxyable.optionalProxy_onlyOwner' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#893-900) is not in mixedCase
+Parameter '_tokenState' of ExternStateToken. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1059) is not in mixedCase
+Parameter '_name' of ExternStateToken. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase
+Parameter '_symbol' of ExternStateToken. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase
+Parameter '_totalSupply' of ExternStateToken. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase
+Parameter '_decimals' of ExternStateToken. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1061) is not in mixedCase
+Parameter '_tokenState' of ExternStateToken.setTokenState (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1107) is not in mixedCase
+Function 'ExternStateToken._internalTransfer' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1115-1137) is not in mixedCase
+Function 'ExternStateToken._transfer_byProxy' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1143-1148) is not in mixedCase
+Function 'ExternStateToken._transferFrom_byProxy' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1154-1161) is not in mixedCase
+Parameter '_synthetix' of SynthetixEscrow. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1312) is not in mixedCase
+Parameter '_synthetix' of SynthetixEscrow.setSynthetix (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1322) is not in mixedCase
+Parameter '_issuanceRatio' of SynthetixState.setIssuanceRatio (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1741) is not in mixedCase
+Function 'SynthetixState._addToDebtRegister' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823) is not in mixedCase
+Parameter '_oracle' of ExchangeRates. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1934) is not in mixedCase
+Parameter '_currencyKeys' of ExchangeRates. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1935) is not in mixedCase
+Parameter '_newRates' of ExchangeRates. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1936) is not in mixedCase
+Parameter '_oracle' of ExchangeRates.setOracle (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2074) is not in mixedCase
+Parameter '_time' of ExchangeRates.setRateStalePeriod (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2086) is not in mixedCase
+Parameter '_synthetixState' of Synthetix. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2355) is not in mixedCase
+Parameter '_exchangeRates' of Synthetix. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2356) is not in mixedCase
+Parameter '_feePool' of Synthetix. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2356) is not in mixedCase
+Parameter '_escrow' of Synthetix.setEscrow (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2428) is not in mixedCase
+Parameter '_exchangeRates' of Synthetix.setExchangeRates (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2442) is not in mixedCase
+Parameter '_synthetixState' of Synthetix.setSynthetixState (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2456) is not in mixedCase
+Function 'Synthetix._internalExchange' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2720-2773) is not in mixedCase
+Function 'Synthetix._addToDebtRegister' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2781-2828) is not in mixedCase
+Function 'Synthetix._removeFromDebtRegister' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2899-2935) is not in mixedCase
+Parameter '_synthetix' of FeePool. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase
+Parameter '_feeAuthority' of FeePool. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase
+Parameter '_transferFeeRate' of FeePool. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase
+Parameter '_exchangeFeeRate' of FeePool. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase
+Parameter '_exchangeFeeRate' of FeePool.setExchangeFeeRate (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3277) is not in mixedCase
+Parameter '_transferFeeRate' of FeePool.setTransferFeeRate (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3292) is not in mixedCase
+Parameter '_feeAuthority' of FeePool.setFeeAuthority (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3307) is not in mixedCase
+Parameter '_feePeriodDuration' of FeePool.setFeePeriodDuration (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3319) is not in mixedCase
+Parameter '_synthetix' of FeePool.setSynthetix (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3334) is not in mixedCase
+Function 'FeePool._recordFeePayment' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3437-3464) is not in mixedCase
+Function 'FeePool._payFees' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3472-3502) is not in mixedCase
+Function 'Synth._internalTransfer' (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4027-4040) is not in mixedCase
+Parameter '_proxy' of Synth. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase
+Parameter '_synthetix' of Synth. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase
+Parameter '_feePool' of Synth. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase
+Parameter '_owner' of Synth. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3824) is not in mixedCase
+Parameter '_currencyKey' of Synth. (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3824) is not in mixedCase
+Parameter '_synthetix' of Synth.setSynthetix (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3842) is not in mixedCase
+Parameter '_feePool' of Synth.setFeePool (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3850) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+Synthetix.SYNTHETIX_SUPPLY (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2342) is never used in Synthetix
+Synthetix.TOKEN_NAME (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2343) is never used in Synthetix
+Synthetix.TOKEN_SYMBOL (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2344) is never used in Synthetix
+Synthetix.DECIMALS (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2345) is never used in Synthetix
+Synth.DECIMALS (/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3819) is never used in Synth
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/sb/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol analyzed (18 contracts), 123 result(s) found

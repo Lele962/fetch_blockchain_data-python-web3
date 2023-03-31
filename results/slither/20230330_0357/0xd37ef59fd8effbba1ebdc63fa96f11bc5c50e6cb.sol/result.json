@@ -1,0 +1,414 @@
+{
+    "errors": [
+        "EXIT_CODE_42"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 26,
+            "line_end": 33,
+            "message": "ERC20Basic (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#26-33) has incorrect ERC20 function interface(s):\n\t-transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#28-29)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 90,
+            "line_end": 128,
+            "message": "BasicToken (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#90-128) has incorrect ERC20 function interface(s):\n\t-transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#108-115)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 130,
+            "line_end": 139,
+            "message": "ERC20 (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#130-139) has incorrect ERC20 function interface(s):\n\t-transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#132-133)\n\t-approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#135-138)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 147,
+            "line_end": 195,
+            "message": "StandardToken (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#147-195) has incorrect ERC20 function interface(s):\n\t-transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#155-166)\n\t-approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#172-184)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "assert",
+            "impact": "Low",
+            "line": 78,
+            "line_end": 85,
+            "message": "SafeMath.assert (function @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#78-85) shadows built-in symbol \"assert\"\n",
+            "name": "shadowing-builtin"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#85:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 104,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#104:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#182:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 365,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#364-365:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 409,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#409:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 314,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#314:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#324:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 333,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#333:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 338,
+            "message": "Deprecated standard detected @ 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#337-338:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 28,
+            "message": "ERC20Basic.balanceOf (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#27-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 128,
+            "message": "BasicToken.balanceOf (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#125-128) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 29,
+            "message": "ERC20Basic.transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#28-29) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 115,
+            "message": "BasicToken.transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#108-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 132,
+            "message": "ERC20.allowance (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#130-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 195,
+            "message": "StandardToken.allowance (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#194-195) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "ERC20.transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 166,
+            "message": "StandardToken.transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#155-166) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 138,
+            "message": "ERC20.approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#135-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 184,
+            "message": "StandardToken.approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#172-184) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LoopringToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "start",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 368,
+            "message": "LoopringToken.start (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#358-368) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LoopringToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "close",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 378,
+            "message": "LoopringToken.close (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#372-378) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LoopringToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "price",
+            "impact": "Informational",
+            "line": 379,
+            "line_end": 380,
+            "message": "LoopringToken.price (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#379-380) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LoopringToken",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 384,
+            "line_end": 385,
+            "message": "LoopringToken.fallback (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#384-385) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 21,
+            "message": "Detected issues with version pragma in 0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol:\n\t- pragma solidity^0.4.11 (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#18-21): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter '_to' of BasicToken.transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 109,
+            "message": "Parameter '_value' of BasicToken.transfer (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 194,
+            "message": "Parameter '_owner' of StandardToken.allowance (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 194,
+            "message": "Parameter '_spender' of StandardToken.allowance (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 173,
+            "message": "Parameter '_spender' of StandardToken.approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#172-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 173,
+            "message": "Parameter '_value' of StandardToken.approve (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 349,
+            "line_end": 353,
+            "message": "Function 'LoopringToken.LoopringToken' (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#349-353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 349,
+            "message": "Parameter '_target' of LoopringToken.LoopringToken (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#349) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 359,
+            "message": "Parameter '_firstblock' of LoopringToken.start (0xd37ef59fd8effbba1ebdc63fa96f11bc5c50e6cb.sol#358-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

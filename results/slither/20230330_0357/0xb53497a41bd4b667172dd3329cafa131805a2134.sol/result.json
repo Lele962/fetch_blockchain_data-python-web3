@@ -1,0 +1,374 @@
+{
+    "errors": [
+        "EXIT_CODE_38"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Medium",
+            "line": 145,
+            "line_end": 152,
+            "message": "MDFToken.isContract (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#145-152) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 179,
+            "line_end": 180,
+            "message": "Contract locking ether found in 0xb53497a41bd4b667172dd3329cafa131805a2134.sol:\n\tContract MDFToken has payable functions:\n\t - fallback (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#179-180)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 152,
+            "message": "MDFToken.isContract uses assembly (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#145-152)\n\t- 0xb53497a41bd4b667172dd3329cafa131805a2134.sol#149-151\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 73,
+            "message": "Ownable.transferOwnership (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#64-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 119,
+            "message": "MDFToken.totalSupply (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#115-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 74,
+            "message": "ERC20.totalSupply (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#74) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 75,
+            "message": "ERC20.balanceOf (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#74-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 122,
+            "message": "MDFToken.balanceOf (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#119-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 77,
+            "message": "ERC20.allowance (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#76-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 179,
+            "message": "MDFToken.allowance (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#175-179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 78,
+            "message": "ERC20.approve (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#77-78) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 175,
+            "message": "MDFToken.approve (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#165-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 85,
+            "message": "ERC223.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#84-85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 144,
+            "message": "MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#133-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223ReceivingContract",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 96,
+            "message": "ERC223ReceivingContract.tokenFallback (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#92-96) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 180,
+            "message": "MDFToken.fallback (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#179-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "multiTransfer",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 195,
+            "message": "MDFToken.multiTransfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#185-195) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MDFToken",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "function": "multiTransferFrom",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 204,
+            "message": "MDFToken.multiTransferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#195-204) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 53,
+            "message": "Function 'Ownable.Ownable' (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#49-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 133,
+            "message": "Parameter '_to' of MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 133,
+            "message": "Parameter '_value' of MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "Parameter '_data' of MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#133-134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 119,
+            "message": "Parameter '_owner' of MDFToken.balanceOf (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 154,
+            "message": "Parameter '_from' of MDFToken.transferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#154) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 154,
+            "message": "Parameter '_to' of MDFToken.transferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#154) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 155,
+            "message": "Parameter '_value' of MDFToken.transferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#154-155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 178,
+            "message": "Parameter '_owner' of MDFToken.allowance (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 178,
+            "message": "Parameter '_spender' of MDFToken.allowance (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 165,
+            "message": "Parameter '_spender' of MDFToken.approve (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 166,
+            "message": "Parameter '_value' of MDFToken.approve (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#165-166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_to' of MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_value' of MDFToken.transfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 186,
+            "message": "Parameter '_toAddresses' of MDFToken.multiTransfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 186,
+            "message": "Parameter '_amounts' of MDFToken.multiTransfer (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_from' of MDFToken.multiTransferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_toAddresses' of MDFToken.multiTransferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_amounts' of MDFToken.multiTransferFrom (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb53497a41bd4b667172dd3329cafa131805a2134.sol",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 100,
+            "message": "Constant 'MDFToken._totalSupply' (0xb53497a41bd4b667172dd3329cafa131805a2134.sol#99-100) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

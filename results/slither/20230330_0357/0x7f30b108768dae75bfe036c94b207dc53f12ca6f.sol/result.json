@@ -1,0 +1,361 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "setup",
+            "impact": "Medium",
+            "line": 128,
+            "line_end": 140,
+            "message": "DutchAuction.setup (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140) uses a dangerous strict equality:\n\t- require(bool)(virtuePlayerPoints.balanceOf(this) == MAX_TOKENS_SOLD)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "timedTransitions",
+            "impact": "Medium",
+            "line": 93,
+            "line_end": 104,
+            "message": "Reentrancy in DutchAuction.timedTransitions (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#93-104):\n\tExternal calls:\n\t- finalizeAuction() (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#95-96)\n\tState variables written after the call(s):\n\t- stage (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#103)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 338,
+            "line_end": 354,
+            "message": "DutchAuction.claimTokens (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#338-354) does not use the value returned by external calls:\n\t-virtuePlayerPoints.transfer(receiver,tokenCount) (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#352-353)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "finalizeAuction",
+            "impact": "Medium",
+            "line": 374,
+            "line_end": 377,
+            "message": "DutchAuction.finalizeAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#374-377) does not use the value returned by external calls:\n\t-virtuePlayerPoints.transfer(wallet,MAX_TOKENS_SOLD - soldTokens) (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "finalizeAuction",
+            "impact": "Low",
+            "line": 374,
+            "line_end": 377,
+            "message": "Reentrancy in DutchAuction.finalizeAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#374-377):\n\tExternal calls:\n\t- virtuePlayerPoints.transfer(wallet,MAX_TOKENS_SOLD - soldTokens) (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)\n\tState variables written after the call(s):\n\t- endTime (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "setup",
+            "impact": "Low",
+            "line": 128,
+            "line_end": 140,
+            "message": "Reentrancy in DutchAuction.setup (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140):\n\tExternal calls:\n\t- require(bool)(virtuePlayerPoints.balanceOf(this) == MAX_TOKENS_SOLD) (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#138-139)\n\tState variables written after the call(s):\n\t- stage (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#140)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "Token.transfer (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "Token.transferFrom (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#8-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "Token.approve (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#9-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "Token.balanceOf (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#13-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 16,
+            "message": "Token.allowance (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#14-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "setup",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 140,
+            "message": "DutchAuction.setup (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "addArrayToWhitelist",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 169,
+            "message": "DutchAuction.addArrayToWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#160-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "removeFromWhitelist",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 185,
+            "message": "DutchAuction.removeFromWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#174-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "whitelistEntries",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 251,
+            "message": "DutchAuction.whitelistEntries (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#218-251) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "startAuction",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 256,
+            "message": "DutchAuction.startAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#253-256) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "changeSettings",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 272,
+            "message": "DutchAuction.changeSettings (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#266-272) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "calcCurrentTokenPrice",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 284,
+            "message": "DutchAuction.calcCurrentTokenPrice (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#277-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "updateStage",
+            "impact": "Informational",
+            "line": 290,
+            "line_end": 295,
+            "message": "DutchAuction.updateStage (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#290-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "bid",
+            "impact": "Informational",
+            "line": 298,
+            "line_end": 335,
+            "message": "DutchAuction.bid (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#298-335) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DutchAuction",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "function": "claimTokens",
+            "impact": "Informational",
+            "line": 338,
+            "line_end": 354,
+            "message": "DutchAuction.claimTokens (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#338-354) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 2,
+            "line_end": 3,
+            "message": "Detected issues with version pragma in 0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol:\n\t- pragma solidity0.4.15 (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#2-3): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 122,
+            "message": "Function 'DutchAuction.DutchAuction' (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#110-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 111,
+            "message": "Parameter '_wallet' of DutchAuction.DutchAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 111,
+            "message": "Parameter '_ceiling' of DutchAuction.DutchAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 112,
+            "message": "Parameter '_priceFactor' of DutchAuction.DutchAuction (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 128,
+            "message": "Parameter '_virtuePlayerPoints' of DutchAuction.setup (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 146,
+            "message": "Parameter '_bidderAddr' of DutchAuction.addToWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_bidderAddrs' of DutchAuction.addArrayToWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_bidderAddr' of DutchAuction.removeFromWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 191,
+            "message": "Parameter '_addr' of DutchAuction.isInWhitelist (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#190-191) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_startIdx' of DutchAuction.whitelistEntries (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 219,
+            "message": "Parameter '_count' of DutchAuction.whitelistEntries (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 267,
+            "message": "Parameter '_ceiling' of DutchAuction.changeSettings (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#266-267) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol",
+            "impact": "Informational",
+            "line": 267,
+            "message": "Parameter '_priceFactor' of DutchAuction.changeSettings (0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#267) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

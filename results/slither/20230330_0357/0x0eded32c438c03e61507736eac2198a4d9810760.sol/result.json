@@ -1,0 +1,335 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "TravelHelperToken",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 99,
+            "line_end": 108,
+            "message": "TravelHelperToken (0x0eded32c438c03e61507736eac2198a4d9810760.sol#99-108) has incorrect ERC20 function interface(s):\n\t-transfer (0x0eded32c438c03e61507736eac2198a4d9810760.sol#99-100)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "_getTokenAmount",
+            "impact": "Medium",
+            "line": 274,
+            "message": "tokens in Crowdsale._getTokenAmount (0x0eded32c438c03e61507736eac2198a4d9810760.sol#274) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 127,
+            "message": "Crowdsale.discountedIcoTokensSold should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#125-127)\nCrowdsale.discountedSaleDuration should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#140-143)\nCrowdsale.discountedTokensPerDollar should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#131-133)\nCrowdsale.hardCapInCents should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#133-134)\nCrowdsale.icoCap should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#121-122)\nCrowdsale.mainSaleDuration should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#145-147)\nCrowdsale.mainTokensPerDollar should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#128-129)\nCrowdsale.preIcoCap should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#119-121)\nCrowdsale.preSaleDuration should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#137-140)\nCrowdsale.presaleTokensPerDollar should be constant (0x0eded32c438c03e61507736eac2198a4d9810760.sol#130-131)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "TravelHelperToken",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 100,
+            "message": "TravelHelperToken.transfer (0x0eded32c438c03e61507736eac2198a4d9810760.sol#99-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TravelHelperToken",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "burnTokensForSale",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 101,
+            "message": "TravelHelperToken.burnTokensForSale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#100-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TravelHelperToken",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "saleTransfer",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 105,
+            "message": "TravelHelperToken.saleTransfer (0x0eded32c438c03e61507736eac2198a4d9810760.sol#101-105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TravelHelperToken",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 108,
+            "message": "TravelHelperToken.finalize (0x0eded32c438c03e61507736eac2198a4d9810760.sol#105-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "startCrowdsale",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 185,
+            "message": "Crowdsale.startCrowdsale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#174-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "setEthPriceInDollar",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 231,
+            "message": "Crowdsale.setEthPriceInDollar (0x0eded32c438c03e61507736eac2198a4d9810760.sol#225-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "getStage",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 316,
+            "message": "Crowdsale.getStage (0x0eded32c438c03e61507736eac2198a4d9810760.sol#292-316) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 327,
+            "message": "Crowdsale.burnTokens (0x0eded32c438c03e61507736eac2198a4d9810760.sol#319-327) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "function": "finalizeSale",
+            "impact": "Informational",
+            "message": "Crowdsale.finalizeSale (0x0eded32c438c03e61507736eac2198a4d9810760.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 80,
+            "message": "Function 'Ownable.Ownable' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#68-80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_owner' of Ownable.Ownable (0x0eded32c438c03e61507736eac2198a4d9810760.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 100,
+            "message": "Parameter '' of TravelHelperToken.transfer (0x0eded32c438c03e61507736eac2198a4d9810760.sol#100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 100,
+            "message": "Parameter '_scope_0' of TravelHelperToken.transfer (0x0eded32c438c03e61507736eac2198a4d9810760.sol#100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 161,
+            "line_end": 173,
+            "message": "Function 'Crowdsale.Crowdsale' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#161-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 162,
+            "message": "Parameter '_newOwner' of Crowdsale.Crowdsale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 163,
+            "message": "Parameter '_wallet' of Crowdsale.Crowdsale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#162-163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_token' of Crowdsale.Crowdsale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 165,
+            "message": "Parameter '_ethPriceInCents' of Crowdsale.Crowdsale (0x0eded32c438c03e61507736eac2198a4d9810760.sol#163-165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 201,
+            "message": "Parameter '_beneficiary' of Crowdsale.buyTokens (0x0eded32c438c03e61507736eac2198a4d9810760.sol#199-201) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_ethPriceInCents' of Crowdsale.setEthPriceInDollar (0x0eded32c438c03e61507736eac2198a4d9810760.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 250,
+            "message": "Function 'Crowdsale._validateTokensLimits' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#236-250) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 236,
+            "message": "Parameter '_tokens' of Crowdsale._validateTokensLimits (0x0eded32c438c03e61507736eac2198a4d9810760.sol#236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 261,
+            "message": "Function 'Crowdsale._deliverTokens' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#257-261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_beneficiary' of Crowdsale._deliverTokens (0x0eded32c438c03e61507736eac2198a4d9810760.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_tokenAmount' of Crowdsale._deliverTokens (0x0eded32c438c03e61507736eac2198a4d9810760.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 271,
+            "message": "Function 'Crowdsale._processPurchase' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#268-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 270,
+            "message": "Parameter '_beneficiary' of Crowdsale._processPurchase (0x0eded32c438c03e61507736eac2198a4d9810760.sol#268-270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 270,
+            "message": "Parameter '_tokenAmount' of Crowdsale._processPurchase (0x0eded32c438c03e61507736eac2198a4d9810760.sol#270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 274,
+            "line_end": 288,
+            "message": "Function 'Crowdsale._getTokenAmount' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#274-288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 274,
+            "message": "Parameter '_usdCents' of Crowdsale._getTokenAmount (0x0eded32c438c03e61507736eac2198a4d9810760.sol#274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "message": "Function 'Crowdsale._forwardFunds' (0x0eded32c438c03e61507736eac2198a4d9810760.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0eded32c438c03e61507736eac2198a4d9810760.sol",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 149,
+            "message": "Modifier 'Crowdsale.CrowdsaleStarted' (0x0eded32c438c03e61507736eac2198a4d9810760.sol#147-149) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

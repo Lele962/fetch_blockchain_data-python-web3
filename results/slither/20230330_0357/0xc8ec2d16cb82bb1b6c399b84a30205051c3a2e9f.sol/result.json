@@ -1,0 +1,241 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 299,
+            "line_end": 312,
+            "message": "Reentrancy in TRYTokenVesting.release (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#299-312):\n\tExternal calls:\n\t- require(bool,string)(TRYToken.balanceOf(address(this)) >= vesting.amount,INSUFFICIENT_BALANCE) (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#305-308)\n\tState variables written after the call(s):\n\t- vestings (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#308-309)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "release",
+            "impact": "Low",
+            "line": 299,
+            "line_end": 312,
+            "message": "Reentrancy in TRYTokenVesting.release (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#299-312):\n\tExternal calls:\n\t- require(bool,string)(TRYToken.balanceOf(address(this)) >= vesting.amount,INSUFFICIENT_BALANCE) (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#305-308)\n\tState variables written after the call(s):\n\t- tokensToVest (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#309)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "release",
+            "impact": "Low",
+            "line": 299,
+            "line_end": 312,
+            "message": "TRYTokenVesting.release (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#299-312) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp >= vesting.releaseTime,NOT_VESTED) (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#304-305)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 62,
+            "message": "Ownable.renounceOwnership (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#57-62) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 70,
+            "message": "Ownable.transferOwnership (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#66-70) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "token",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 265,
+            "message": "TRYTokenVesting.token (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#264-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "beneficiary",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 270,
+            "message": "TRYTokenVesting.beneficiary (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#266-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "releaseTime",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 274,
+            "message": "TRYTokenVesting.releaseTime (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#272-274) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "vestingAmount",
+            "impact": "Informational",
+            "line": 274,
+            "line_end": 276,
+            "message": "TRYTokenVesting.vestingAmount (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#274-276) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "removeVesting",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 285,
+            "message": "TRYTokenVesting.removeVesting (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#276-285) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 312,
+            "message": "TRYTokenVesting.release (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#299-312) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TRYTokenVesting",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "function": "retrieveExcessTokens",
+            "impact": "Informational",
+            "message": "TRYTokenVesting.retrieveExcessTokens (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 83,
+            "message": "Function 'Ownable._transferOwnership' (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#74-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 249,
+            "message": "Parameter '_token' of TRYTokenVesting. (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#249) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 268,
+            "message": "Parameter '_vestingId' of TRYTokenVesting.beneficiary (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_vestingId' of TRYTokenVesting.releaseTime (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 274,
+            "message": "Parameter '_vestingId' of TRYTokenVesting.vestingAmount (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 277,
+            "message": "Parameter '_vestingId' of TRYTokenVesting.removeVesting (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_beneficiary' of TRYTokenVesting.addVesting (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 287,
+            "message": "Parameter '_releaseTime' of TRYTokenVesting.addVesting (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#286-287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_amount' of TRYTokenVesting.addVesting (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 299,
+            "message": "Parameter '_vestingId' of TRYTokenVesting.release (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of TRYTokenVesting.retrieveExcessTokens (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol",
+            "impact": "Informational",
+            "line": 225,
+            "message": "Variable 'TRYTokenVesting.TRYToken' (0xc8ec2d16cb82bb1b6c399b84a30205051c3a2e9f.sol#225) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

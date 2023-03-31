@@ -1,0 +1,130 @@
+{
+    "errors": [
+        "EXIT_CODE_11"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "produceWiner",
+            "impact": "High",
+            "line": 22,
+            "line_end": 42,
+            "message": "Game01.produceWiner (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#22-42) sends eth to arbitrary user\n\tDangerous calls:\n\t- teamAddress.transfer(tempTeam) (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#37)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "goWiner",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 47,
+            "message": "Game01.goWiner (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#44-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "betYours",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 56,
+            "message": "Game01.betYours (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#47-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getTeamAddress",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 73,
+            "message": "Game01.getTeamAddress (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#70-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getLowPrice",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 77,
+            "message": "Game01.getLowPrice (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#74-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getPlayerAddress",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 81,
+            "message": "Game01.getPlayerAddress (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#78-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getSumOfPlayers",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 85,
+            "message": "Game01.getSumOfPlayers (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#82-85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getBlockNumber",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 89,
+            "message": "Game01.getBlockNumber (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#86-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Game01",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "function": "getBalances",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 92,
+            "message": "Game01.getBalances (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#90-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_blockNumber' of Game01. (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 61,
+            "message": "Modifier 'Game01.OnlyBet' (0xd20ae1b3c922b4e8ae9eb6e3f4302e71b8c12970.sol#57-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

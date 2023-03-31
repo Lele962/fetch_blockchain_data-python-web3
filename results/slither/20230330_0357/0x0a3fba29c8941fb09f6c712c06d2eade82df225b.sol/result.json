@@ -1,0 +1,1231 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_CMD_NOT_EXECUTABLE"
+    ],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Affiliate",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "payout",
+            "impact": "High",
+            "line": 569,
+            "line_end": 578,
+            "message": "Affiliate.payout (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#569-578) sends eth to arbitrary user\n\tDangerous calls:\n\t- affiliateBeneficiary.transfer(SafeMath.div(SafeMath.mul(address(this).balance,affiliatePercentage),getTotalFeePercentage())) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#573-576)\n\t- companyBeneficiary.transfer(address(this).balance) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#576-578)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performRebalance",
+            "impact": "High",
+            "line": 1499,
+            "line_end": 1513,
+            "message": "TotleProxyPrimary.performRebalance (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1499-1513) sends eth to arbitrary user\n\tDangerous calls:\n\t- paymentReceiver.transfer(address(this).balance) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1512)\n\t- msg.sender.transfer(address(this).balance) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1512-1513)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Medium",
+            "line": 424,
+            "line_end": 456,
+            "message": "Utils.getDecimals (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#424-456) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Medium",
+            "line": 718,
+            "line_end": 753,
+            "message": "ExchangeHandler.getAmountToGive (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Medium",
+            "line": 758,
+            "line_end": 791,
+            "message": "ExchangeHandler.staticExchangeChecks (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticChecks",
+            "impact": "Medium",
+            "line": 1152,
+            "message": "i in TotlePrimary.staticChecks (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1152) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticChecks",
+            "impact": "Medium",
+            "line": 1188,
+            "message": "j in TotlePrimary.staticChecks (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1188) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performRebalance",
+            "impact": "Medium",
+            "line": 1062,
+            "message": "i in TotlePrimary.performRebalance (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1062) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Medium",
+            "line": 1252,
+            "message": "j in TotlePrimary.performTrade (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1252) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferTokensOut",
+            "impact": "Medium",
+            "message": "TotleProxyPrimary.transferTokensOut (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) does not use the value returned by external calls:\n\t-ERC20SafeTransfer.safeTransfer(trades[i].tokenAddress,receiver,balance) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)\n\t-ERC20SafeTransfer.safeTransfer(trades[i].tokenAddress,msg.sender,balance) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performRebalance",
+            "impact": "Low",
+            "line": 1100,
+            "line_end": 1102,
+            "message": "TotlePrimary.performRebalance has external calls inside a loop:\n\t- errorReporter.revertTx(Amounts spent/received in trade not acceptable) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1100-1102)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticChecks",
+            "impact": "Low",
+            "line": 1157,
+            "message": "TotlePrimary.staticChecks has external calls inside a loop:\n\t- errorReporter.revertTx(A buy has occured before this sell) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1157)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticChecks",
+            "impact": "Low",
+            "line": 1162,
+            "line_end": 1165,
+            "message": "TotlePrimary.staticChecks has external calls inside a loop:\n\t- errorReporter.revertTx(Taker has not sent allowance/balance on a non-optional trade) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1162-1165)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Low",
+            "line": 1276,
+            "line_end": 1280,
+            "message": "TotlePrimary.performTrade has external calls inside a loop:\n\t- amountToGiveForOrder = Utils.min(thisHandler.getAmountToGive(thisOrder.genericPayload),amounts.amountLeftToSpendOnTrade) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1276-1280)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Low",
+            "line": 1288,
+            "line_end": 1289,
+            "message": "TotlePrimary.performTrade has external calls inside a loop:\n\t- ! thisHandler.staticExchangeChecks(thisOrder.genericPayload) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1288-1289)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Low",
+            "line": 1295,
+            "message": "TotlePrimary.performTrade has external calls inside a loop:\n\t- errorReporter.revertTx(Unable to transfer tokens to handler) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1295)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Low",
+            "line": 1300,
+            "line_end": 1302,
+            "message": "TotlePrimary.performTrade has external calls inside a loop:\n\t- (amountSpentOnOrder,amountReceivedFromOrder) = thisHandler.performSellOrder(thisOrder.genericPayload,amountToGiveForOrder) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1300-1302)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performTrade",
+            "impact": "Low",
+            "line": 1312,
+            "line_end": 1314,
+            "message": "TotlePrimary.performTrade has external calls inside a loop:\n\t- (amountSpentOnOrder,amountReceivedFromOrder) = thisHandler.performBuyOrder.value(amountToGiveForOrder)(thisOrder.genericPayload,amountToGiveForOrder) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1312-1314)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferTokens",
+            "impact": "Low",
+            "line": 1395,
+            "line_end": 1402,
+            "message": "TotlePrimary.transferTokens has external calls inside a loop:\n\t- ! tokenTransferProxy.transferFrom(trades[i].tokenAddress,msg.sender,address(this),trades[i].tokenAmount) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1395-1402)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferTokens",
+            "impact": "Low",
+            "line": 1401,
+            "line_end": 1402,
+            "message": "TotlePrimary.transferTokens has external calls inside a loop:\n\t- errorReporter.revertTx(TTP unable to transfer tokens to primary) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1401-1402)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferTokensIn",
+            "impact": "Low",
+            "line": 1513,
+            "line_end": 1520,
+            "message": "TotleProxyPrimary.transferTokensIn has external calls inside a loop:\n\t- ! tokenTransferProxy.transferFrom(trades[i].tokenAddress,msg.sender,address(this),trades[i].tokenAmount) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "overrideRegisterAffiliate",
+            "impact": "Low",
+            "line": 600,
+            "line_end": 611,
+            "message": "Reentrancy in AffiliateRegistry.overrideRegisterAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#600-611):\n\tExternal calls:\n\t- newAffiliate.init(_companyBeneficiary,_companyPercentage,affiliateBeneficiary,affiliatePercentage) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#604-606)\n\tState variables written after the call(s):\n\t- affiliateContracts (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#606)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "registerAffiliate",
+            "impact": "Low",
+            "line": 590,
+            "line_end": 598,
+            "message": "Reentrancy in AffiliateRegistry.registerAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#590-598):\n\tExternal calls:\n\t- newAffiliate.init(companyBeneficiary,companyPercentage,affiliateBeneficiary,affiliatePercentage) (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#592-596)\n\tState variables written after the call(s):\n\t- affiliateContracts (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#596)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20SafeTransfer",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "fetchReturnData",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 107,
+            "message": "ERC20SafeTransfer.fetchReturnData uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#90-107)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#92-107\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Utils",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "getDecimals",
+            "impact": "Informational",
+            "line": 424,
+            "line_end": 456,
+            "message": "Utils.getDecimals uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#424-456)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#433-456\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "createClone",
+            "impact": "Informational",
+            "line": 615,
+            "line_end": 625,
+            "message": "AffiliateRegistry.createClone uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#615-625)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#616-625\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "getAmountToGive",
+            "impact": "Informational",
+            "line": 718,
+            "line_end": 753,
+            "message": "ExchangeHandler.getAmountToGive uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#724-753\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticExchangeChecks",
+            "impact": "Informational",
+            "line": 758,
+            "line_end": 791,
+            "message": "ExchangeHandler.staticExchangeChecks uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#764-791\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performBuyOrder",
+            "impact": "Informational",
+            "line": 800,
+            "line_end": 843,
+            "message": "ExchangeHandler.performBuyOrder uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#800-843)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#808-843\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performSellOrder",
+            "impact": "Informational",
+            "line": 853,
+            "line_end": 916,
+            "message": "ExchangeHandler.performSellOrder uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#853-916)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#861-916\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 1452,
+            "line_end": 1464,
+            "message": "TotlePrimary.fallback uses assembly (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1452-1464)\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1456-1460\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Different versions of Solidity is used in 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:\n\t- Version used: ['0.4.25', 'ABIEncoderV2']\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1 declares pragma solidity0.4.25\n\t- 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#2-3 declares pragma experimentalABIEncoderV2\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 48,
+            "message": "Ownable.renounceOwnership (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#42-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 56,
+            "message": "Ownable.transferOwnership (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#51-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "ERC20.totalSupply (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#135-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 138,
+            "message": "ERC20.balanceOf (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#136-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 141,
+            "message": "ERC20.allowance (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#138-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 143,
+            "message": "ERC20.transfer (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#141-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 146,
+            "message": "ERC20.approve (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#143-146) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 152,
+            "message": "ERC20.transferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#146-152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 156,
+            "message": "ERC20.decimals (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#154-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTransferProxy",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "addAuthorizedAddress",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 226,
+            "message": "TokenTransferProxy.addAuthorizedAddress (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#218-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTransferProxy",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "removeAuthorizedAddress",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 243,
+            "message": "TokenTransferProxy.removeAuthorizedAddress (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#230-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTransferProxy",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 269,
+            "message": "TokenTransferProxy.transferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#254-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTransferProxy",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "getAuthorizedAddresses",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 284,
+            "message": "TokenTransferProxy.getAuthorizedAddresses (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#277-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 301,
+            "message": "Pausable.paused (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#299-301) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 325,
+            "line_end": 330,
+            "message": "Pausable.pause (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#325-330) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 332,
+            "line_end": 333,
+            "message": "Pausable.unpause (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#332-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ErrorReporter",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "revertTx",
+            "impact": "Informational",
+            "line": 545,
+            "line_end": 546,
+            "message": "ErrorReporter.revertTx (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#545-546) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Affiliate",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "init",
+            "impact": "Informational",
+            "line": 553,
+            "line_end": 569,
+            "message": "Affiliate.init (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553-569) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Affiliate",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "payout",
+            "impact": "Informational",
+            "line": 569,
+            "line_end": 578,
+            "message": "Affiliate.payout (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#569-578) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Affiliate",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 578,
+            "line_end": 579,
+            "message": "Affiliate.fallback (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#578-579) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "deleteAffiliate",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 613,
+            "message": "AffiliateRegistry.deleteAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#611-613) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "isValidAffiliate",
+            "impact": "Informational",
+            "line": 625,
+            "line_end": 628,
+            "message": "AffiliateRegistry.isValidAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#625-628) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateRegistry",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "updateCompanyInfo",
+            "impact": "Informational",
+            "line": 628,
+            "line_end": 635,
+            "message": "AffiliateRegistry.updateCompanyInfo (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#628-635) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "getAmountToGive",
+            "impact": "Informational",
+            "line": 718,
+            "line_end": 753,
+            "message": "ExchangeHandler.getAmountToGive (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "staticExchangeChecks",
+            "impact": "Informational",
+            "line": 758,
+            "line_end": 791,
+            "message": "ExchangeHandler.staticExchangeChecks (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performBuyOrder",
+            "impact": "Informational",
+            "line": 800,
+            "line_end": 843,
+            "message": "ExchangeHandler.performBuyOrder (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#800-843) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeHandler",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performSellOrder",
+            "impact": "Informational",
+            "line": 853,
+            "line_end": 916,
+            "message": "ExchangeHandler.performSellOrder (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#853-916) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "updateDefaultFeeAccount",
+            "impact": "Informational",
+            "line": 994,
+            "line_end": 996,
+            "message": "TotlePrimary.updateDefaultFeeAccount (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#994-996) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "addHandlerToWhitelist",
+            "impact": "Informational",
+            "line": 1004,
+            "line_end": 1011,
+            "message": "TotlePrimary.addHandlerToWhitelist (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1004-1011) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "removeHandlerFromWhitelist",
+            "impact": "Informational",
+            "line": 1019,
+            "line_end": 1036,
+            "message": "TotlePrimary.removeHandlerFromWhitelist (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1019-1036) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performRebalance",
+            "impact": "Informational",
+            "line": 1040,
+            "line_end": 1139,
+            "message": "TotlePrimary.performRebalance (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1040-1139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotlePrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 1452,
+            "line_end": 1464,
+            "message": "TotlePrimary.fallback (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1452-1464) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "performRebalance",
+            "impact": "Informational",
+            "line": 1499,
+            "line_end": 1513,
+            "message": "TotleProxyPrimary.performRebalance (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1499-1513) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "setTokenTransferProxy",
+            "impact": "Informational",
+            "message": "TotleProxyPrimary.setTokenTransferProxy (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TotleProxyPrimary",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "setTotlePrimary",
+            "impact": "Informational",
+            "message": "TotleProxyPrimary.setTotlePrimary (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20SafeTransfer",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "safeTransfer",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 74,
+            "message": "Low level call in ERC20SafeTransfer.safeTransfer (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#67-74):\n\t-require(bool)(_tokenAddress.call(bytes4(keccak256()(transfer(address,uint256))),_to,_value)) 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69-74\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20SafeTransfer",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 81,
+            "message": "Low level call in ERC20SafeTransfer.safeTransferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74-81):\n\t-require(bool)(_tokenAddress.call(bytes4(keccak256()(transferFrom(address,address,uint256))),_from,_to,_value)) 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76-81\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20SafeTransfer",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "function": "safeApprove",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 90,
+            "message": "Low level call in ERC20SafeTransfer.safeApprove (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#81-90):\n\t-require(bool)(_tokenAddress.call(bytes4(keccak256()(approve(address,uint256))),_spender,_value)) 0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83-88\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 67,
+            "message": "Function 'Ownable._transferOwnership' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#60-67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#60-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 69,
+            "message": "Parameter '_tokenAddress' of ERC20SafeTransfer.safeTransfer (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#67-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_to' of ERC20SafeTransfer.safeTransfer (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_value' of ERC20SafeTransfer.safeTransfer (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Parameter '_tokenAddress' of ERC20SafeTransfer.safeTransferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 76,
+            "message": "Parameter '_from' of ERC20SafeTransfer.safeTransferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74-76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_to' of ERC20SafeTransfer.safeTransferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_value' of ERC20SafeTransfer.safeTransferFrom (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 83,
+            "message": "Parameter '_tokenAddress' of ERC20SafeTransfer.safeApprove (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#81-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 83,
+            "message": "Parameter '_spender' of ERC20SafeTransfer.safeApprove (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 83,
+            "message": "Parameter '_value' of ERC20SafeTransfer.safeApprove (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Parameter '_token' of Withdrawable.withdrawToken (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "Parameter '_amount' of Withdrawable.withdrawToken (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#115-116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 128,
+            "message": "Parameter '_amount' of Withdrawable.withdrawETH (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#128) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 341,
+            "message": "Parameter '_a' of SafeMath.mul (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#341) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 341,
+            "message": "Parameter '_b' of SafeMath.mul (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#341) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 358,
+            "message": "Parameter '_a' of SafeMath.div (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#358) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 358,
+            "message": "Parameter '_b' of SafeMath.div (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#358) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 378,
+            "message": "Parameter '_a' of SafeMath.sub (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 378,
+            "message": "Parameter '_b' of SafeMath.sub (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 386,
+            "line_end": 388,
+            "message": "Parameter '_a' of SafeMath.add (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#386-388) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 388,
+            "message": "Parameter '_b' of SafeMath.add (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#388) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 408,
+            "message": "Function 'Utils.max_qty' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#408) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 409,
+            "message": "Function 'Utils.max_rate' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#409) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 409,
+            "line_end": 411,
+            "message": "Function 'Utils.max_decimals' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#409-411) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 412,
+            "message": "Function 'Utils.eth_decimals' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#411-412) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 412,
+            "line_end": 413,
+            "message": "Function 'Utils.max_uint' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#412-413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 553,
+            "message": "Parameter '_companyBeneficiary' of Affiliate.init (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 553,
+            "message": "Parameter '_companyPercentage' of Affiliate.init (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 553,
+            "message": "Parameter '_affiliateBeneficiary' of Affiliate.init (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 553,
+            "line_end": 554,
+            "message": "Parameter '_affiliatePercentage' of Affiliate.init (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553-554) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 586,
+            "line_end": 589,
+            "message": "Parameter '_target' of AffiliateRegistry. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#586-589) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 589,
+            "message": "Parameter '_companyBeneficiary' of AffiliateRegistry. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#589) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 589,
+            "message": "Parameter '_companyPercentage' of AffiliateRegistry. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#589) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 600,
+            "line_end": 601,
+            "message": "Parameter '_companyBeneficiary' of AffiliateRegistry.overrideRegisterAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#600-601) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 601,
+            "message": "Parameter '_companyPercentage' of AffiliateRegistry.overrideRegisterAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#601) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 611,
+            "message": "Parameter '_affiliateAddress' of AffiliateRegistry.deleteAffiliate (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#611) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 657,
+            "line_end": 658,
+            "message": "Parameter '_totlePrimary' of TotleControl. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#657-658) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 661,
+            "message": "Parameter '_totlePrimary' of TotleControl.addTotle (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#661) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 666,
+            "line_end": 667,
+            "message": "Parameter '_totlePrimary' of TotleControl.removeTotle (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#666-667) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 673,
+            "line_end": 676,
+            "message": "Constant 'SelectorProvider.getAmountToGiveSelector' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#673-676) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 677,
+            "line_end": 680,
+            "message": "Constant 'SelectorProvider.staticExchangeChecksSelector' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#677-680) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 681,
+            "line_end": 683,
+            "message": "Constant 'SelectorProvider.performBuyOrderSelector' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#681-683) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 683,
+            "line_end": 687,
+            "message": "Constant 'SelectorProvider.performSellOrderSelector' (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#683-687) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 706,
+            "line_end": 707,
+            "message": "Parameter '_errorReporter' of ExchangeHandler. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#706-707) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 975,
+            "message": "Parameter '_tokenTransferProxy' of TotlePrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#975) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 975,
+            "line_end": 976,
+            "message": "Parameter '_affiliateRegistry' of TotlePrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#975-976) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 976,
+            "message": "Parameter '_errorReporter' of TotlePrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#976) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 976,
+            "message": "Parameter '_defaultFeeAccount' of TotlePrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#976) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 1496,
+            "message": "Parameter '_tokenTransferProxy' of TotleProxyPrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 1496,
+            "message": "Parameter '_totlePrimary' of TotleProxyPrimary. (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newTokenTransferProxy' of TotleProxyPrimary.setTokenTransferProxy (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newTotlePrimary' of TotleProxyPrimary.setTotlePrimary (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol",
+            "impact": "Informational",
+            "line": 673,
+            "line_end": 676,
+            "message": "SelectorProvider.getAmountToGiveSelector (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#673-676) is never used in ExchangeHandler\nSelectorProvider.staticExchangeChecksSelector (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#677-680) is never used in ExchangeHandler\nSelectorProvider.performBuyOrderSelector (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#681-683) is never used in ExchangeHandler\nSelectorProvider.performSellOrderSelector (0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#683-687) is never used in ExchangeHandler\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

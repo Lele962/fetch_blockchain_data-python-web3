@@ -1,0 +1,224 @@
+{
+    "errors": [
+        "EXIT_CODE_22"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "currentState",
+            "impact": "Medium",
+            "line": 129,
+            "line_end": 140,
+            "message": "PresalerVoting.currentState (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#129-140) uses a dangerous strict equality:\n\t- VOTING_START_BLOCKNR == 0 || block.number < VOTING_START_BLOCKNR\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "votingEndsInHHMM",
+            "impact": "Medium",
+            "line": 129,
+            "line_end": 140,
+            "message": "PresalerVoting.currentState (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#129-140) uses a dangerous strict equality:\n\t- VOTING_START_BLOCKNR == 0 || block.number < VOTING_START_BLOCKNR\nPresalerVoting.votingEndsInHHMM (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#125-129) uses a dangerous strict equality:\n\t- VOTING_END_TIME == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "state",
+            "impact": "Low",
+            "line": 152,
+            "line_end": 153,
+            "message": "PresalerVoting.onlyState.state (local variable @ 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#152-153) shadows:\n\t- PresalerVoting.state (function @ 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#143-146)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "fallback",
+            "impact": "Low",
+            "line": 76,
+            "line_end": 102,
+            "message": "Reentrancy in PresalerVoting.fallback (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#76-102):\n\tExternal calls:\n\t- bonus = PRESALE_CONTRACT.balances(msg.sender) (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#78-79)\n\tExternal calls sending eth:\n\t- msg.value > 1000000000000000000 || ! msg.sender.send(msg.value) (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#80-81)\n\tState variables written after the call(s):\n\t- rawVotes (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#92-93)\n\t- rawVotes (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#92-93)\n\t- stakeConfirmed_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#89-90)\n\t- stakeConfirmed_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#96-98)\n\t- stakeRemainingToVote_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#100-102)\n\t- stakeVoted_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#84)\n\t- stakeWaived_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#87-89)\n\t- stakeWaived_Eth (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#94-96)\n\t- voters (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#83-84)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Deprecated standard detected @ 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#81:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenStorage",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "balances",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 38,
+            "message": "TokenStorage.balances (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#33-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 102,
+            "message": "PresalerVoting.fallback (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#76-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "startVoting",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 113,
+            "message": "PresalerVoting.startVoting (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#107-113) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 114,
+            "message": "PresalerVoting.setOwner (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#113-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "votingEndsInHHMM",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 129,
+            "message": "PresalerVoting.votingEndsInHHMM (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#125-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PresalerVoting",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "function": "state",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 146,
+            "message": "PresalerVoting.state (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#143-146) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol:\n\t- pragma solidity^0.4.11 (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 74,
+            "message": "Function 'PresalerVoting.PresalerVoting' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#72-74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Variable 'PresalerVoting.VOTING_START_BLOCKNR' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 45,
+            "message": "Variable 'PresalerVoting.VOTING_END_TIME' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 49,
+            "message": "Variable 'PresalerVoting.PRESALE_CONTRACT' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#47-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 64,
+            "message": "Variable 'PresalerVoting.stakeVoted_Eth' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#63-64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "Variable 'PresalerVoting.stakeRemainingToVote_Eth' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#64-65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 68,
+            "message": "Variable 'PresalerVoting.stakeWaived_Eth' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#65-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 69,
+            "message": "Variable 'PresalerVoting.stakeConfirmed_Eth' (0x0ba0d4399c80fa14a25f91b1584ba59823b12c2a.sol#68-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

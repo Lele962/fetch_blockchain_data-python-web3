@@ -1,0 +1,26 @@
+INFO:Detectors:[92m
+EpilogueToken.allowance (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol) should be declared external
+ERC20Interface.allowance (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#38-39) should be declared external
+ERC20Interface.approve (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#39-41) should be declared external
+EpilogueToken.approve (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol) should be declared external
+EpilogueToken.transfer (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#180-193) should be declared external
+ERC20Interface.transfer (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#41-42) should be declared external
+EpilogueToken.transferFrom (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#193-201) should be declared external
+ERC20Interface.transferFrom (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#42-45) should be declared external
+Owned.changeOwner (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#80-90) should be declared external
+Owned.acceptOwnership (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#94-99) should be declared external
+Controlled.enableTransfer (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#124-130) should be declared external
+Controlled.disableLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#130-136) should be declared external
+Controlled.addLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#137-147) should be declared external
+Controlled.removeLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#153-156) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Owned.changeOwner (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#81) is not in mixedCase
+Parameter '_enable' of Controlled.enableTransfer (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#125) is not in mixedCase
+Parameter '_enable' of Controlled.disableLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#131) is not in mixedCase
+Parameter '_addr' of Controlled.addLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#137-138) is not in mixedCase
+Parameter '_addr' of Controlled.setExclude (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#149) is not in mixedCase
+Parameter '_enable' of Controlled.setExclude (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#149) is not in mixedCase
+Parameter '_addr' of Controlled.removeLock (/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol#154) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x43d2cd6c33b2b6504bcc218ed717a0db2659f1fc.sol analyzed (5 contracts), 21 result(s) found

@@ -1,0 +1,381 @@
+{
+    "errors": [
+        "EXIT_CODE_39"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "withdrawnTokens",
+            "impact": "Medium",
+            "line": 131,
+            "line_end": 145,
+            "message": "SafeGiftTokens.withdrawnTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#131-145) does not use the value returned by external calls:\n\t-ERC20Interface(tokenErc20).transfer(_to,balanceErc20) (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "allowance",
+            "impact": "Low",
+            "line": 81,
+            "message": "SafeGiftTokens.transferFrom.allowance (local variable @ 0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#81) shadows:\n\t- SafeGiftTokens.allowance (function @ 0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#100-108)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "promo",
+            "impact": "Low",
+            "line": 113,
+            "message": "SafeGiftTokens.promo has external calls inside a loop:\n\t- _recipients[i].transfer(7777777777) (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#113)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "withdrawnTokens",
+            "impact": "Low",
+            "line": 135,
+            "line_end": 143,
+            "message": "SafeGiftTokens.withdrawnTokens has external calls inside a loop:\n\t- balanceErc20 = ERC20Interface(tokenErc20).balanceOf(this) (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#135-143)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "withdrawnTokens",
+            "impact": "Low",
+            "line": 131,
+            "line_end": 145,
+            "message": "SafeGiftTokens.withdrawnTokens has external calls inside a loop:\n\t- ERC20Interface(tokenErc20).transfer(_to,balanceErc20) (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 41,
+            "message": "SafeGiftTokens.url should be constant (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#39-41)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "ERC20Interface.balanceOf (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 39,
+            "message": "ERC20Interface.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#33-39) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 68,
+            "message": "SafeGiftTokens.balanceOf (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#62-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 78,
+            "message": "SafeGiftTokens.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#68-78) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 91,
+            "message": "SafeGiftTokens.transferFrom (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#78-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 100,
+            "message": "SafeGiftTokens.approve (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#91-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 108,
+            "message": "SafeGiftTokens.allowance (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#100-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "promo",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 123,
+            "message": "SafeGiftTokens.promo (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#108-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "setInfo",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 131,
+            "message": "SafeGiftTokens.setInfo (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#124-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "withdrawnTokens",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 145,
+            "message": "SafeGiftTokens.withdrawnTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#131-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeGiftTokens",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "SafeGiftTokens.fallback (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 31,
+            "message": "Detected issues with version pragma in 0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol:\n\t- pragma solidity^0.4.18 (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#30-31): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 32,
+            "message": "Parameter '' of ERC20Interface.balanceOf (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 33,
+            "message": "Parameter '' of ERC20Interface.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#33) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 37,
+            "message": "Parameter '_scope_0' of ERC20Interface.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#34-37) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 62,
+            "message": "Function 'SafeGiftTokens.SafeGiftTokens' (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#52-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 54,
+            "message": "Parameter '_totalSupply' of SafeGiftTokens.SafeGiftTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#52-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_tokenName' of SafeGiftTokens.SafeGiftTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 55,
+            "message": "Parameter '_tokenSymbol' of SafeGiftTokens.SafeGiftTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#54-55) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_address' of SafeGiftTokens.balanceOf (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_to' of SafeGiftTokens.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_value' of SafeGiftTokens.transfer (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Parameter '_from' of SafeGiftTokens.transferFrom (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Parameter '_to' of SafeGiftTokens.transferFrom (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Parameter '_value' of SafeGiftTokens.transferFrom (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#80-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_spender' of SafeGiftTokens.approve (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 92,
+            "message": "Parameter '_value' of SafeGiftTokens.approve (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#91-92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 104,
+            "message": "Parameter '_owner' of SafeGiftTokens.allowance (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#100-104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 104,
+            "message": "Parameter '_spender' of SafeGiftTokens.allowance (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 110,
+            "message": "Parameter '_recipients' of SafeGiftTokens.promo (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#108-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_name' of SafeGiftTokens.setInfo (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 133,
+            "message": "Parameter '_tokens' of SafeGiftTokens.withdrawnTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#131-133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol",
+            "impact": "Informational",
+            "line": 133,
+            "message": "Parameter '_to' of SafeGiftTokens.withdrawnTokens (0xd8c91afa243a3e40b0a3d2d80d81bec4f1e7fe2c.sol#133) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

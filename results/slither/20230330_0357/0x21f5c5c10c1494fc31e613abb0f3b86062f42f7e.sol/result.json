@@ -1,0 +1,56 @@
+{
+    "errors": [
+        "EXIT_CODE_4"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "Btcpower.decimals should be constant (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#9-11)\nBtcpower.name should be constant (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#7-8)\nBtcpower.symbol should be constant (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#8-9)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Btcpower",
+            "filename": "output/0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 30,
+            "message": "Btcpower.transfer (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#21-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Btcpower",
+            "filename": "output/0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 43,
+            "message": "Btcpower.approve (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#34-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Btcpower",
+            "filename": "output/0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 56,
+            "message": "Btcpower.transferFrom (0x21f5c5c10c1494fc31e613abb0f3b86062f42f7e.sol#43-56) should be declared external\n",
+            "name": "external-function"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

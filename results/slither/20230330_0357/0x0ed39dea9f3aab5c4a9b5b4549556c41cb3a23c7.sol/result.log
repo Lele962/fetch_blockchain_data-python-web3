@@ -1,0 +1,94 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:19:3: Warning: No visibility specified. Defaulting to "public".
+  function Ownable() {
+  ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:57:5: Warning: No visibility specified. Defaulting to "public".
+    function setValue(bytes32 _container, bytes32 _key, uint256 _value) onlyOwner {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:61:5: Warning: No visibility specified. Defaulting to "public".
+    function setAddress(bytes32 _container, bytes32 _key, address _value) onlyOwner {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:65:5: Warning: No visibility specified. Defaulting to "public".
+    function setBool(bytes32 _container, bytes32 _key, bool _value) onlyOwner {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:69:5: Warning: No visibility specified. Defaulting to "public".
+    function setBalanace(bytes32 _container, address _key, uint256 _value) onlyOwner {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:74:5: Warning: No visibility specified. Defaulting to "public".
+    function setConstraint(bytes32 _container, address _source, address _key, uint256 _value) onlyOwner {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:79:5: Warning: No visibility specified. Defaulting to "public".
+    function getValue(bytes32 _container, bytes32 _key) constant returns(uint256) {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:83:5: Warning: No visibility specified. Defaulting to "public".
+    function getAddress(bytes32 _container, bytes32 _key) constant returns(address) {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:87:5: Warning: No visibility specified. Defaulting to "public".
+    function getBool(bytes32 _container, bytes32 _key) constant returns(bool) {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:91:5: Warning: No visibility specified. Defaulting to "public".
+    function getBalanace(bytes32 _container, address _key) constant returns(uint256) {
+    ^
+Spanning multiple lines.
+/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:95:5: Warning: No visibility specified. Defaulting to "public".
+    function getConstraint(bytes32 _container, address _source, address _key) constant returns(uint256) {
+    ^
+Spanning multiple lines.
+
+INFO:Detectors:[92m
+Ownable.transferOwnership (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#37-46) should be declared external
+DataCentre.setValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#57-61) should be declared external
+DataCentre.setAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#61-65) should be declared external
+DataCentre.setBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#65-69) should be declared external
+DataCentre.setBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#69-74) should be declared external
+DataCentre.setConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#74-79) should be declared external
+DataCentre.getValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#79-83) should be declared external
+DataCentre.getAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#84-88) should be declared external
+DataCentre.getBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#88-91) should be declared external
+DataCentre.getBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#92-95) should be declared external
+DataCentre.getConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#95-98) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol:
+	- pragma solidity0.4.19 (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#19-25) is not in mixedCase
+Parameter '_container' of DataCentre.setValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#57-58) is not in mixedCase
+Parameter '_key' of DataCentre.setValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#58) is not in mixedCase
+Parameter '_value' of DataCentre.setValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#58) is not in mixedCase
+Parameter '_container' of DataCentre.setAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#61-62) is not in mixedCase
+Parameter '_key' of DataCentre.setAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#62) is not in mixedCase
+Parameter '_value' of DataCentre.setAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#62) is not in mixedCase
+Parameter '_container' of DataCentre.setBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#66) is not in mixedCase
+Parameter '_key' of DataCentre.setBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#66) is not in mixedCase
+Parameter '_value' of DataCentre.setBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#66) is not in mixedCase
+Parameter '_container' of DataCentre.setBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#70) is not in mixedCase
+Parameter '_key' of DataCentre.setBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#70) is not in mixedCase
+Parameter '_value' of DataCentre.setBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#70) is not in mixedCase
+Parameter '_container' of DataCentre.setConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#74-75) is not in mixedCase
+Parameter '_source' of DataCentre.setConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#75) is not in mixedCase
+Parameter '_key' of DataCentre.setConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#75) is not in mixedCase
+Parameter '_value' of DataCentre.setConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#75) is not in mixedCase
+Parameter '_container' of DataCentre.getValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#80) is not in mixedCase
+Parameter '_key' of DataCentre.getValue (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#80) is not in mixedCase
+Parameter '_container' of DataCentre.getAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#84) is not in mixedCase
+Parameter '_key' of DataCentre.getAddress (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#84) is not in mixedCase
+Parameter '_container' of DataCentre.getBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#88) is not in mixedCase
+Parameter '_key' of DataCentre.getBool (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#88-89) is not in mixedCase
+Parameter '_container' of DataCentre.getBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#92) is not in mixedCase
+Parameter '_key' of DataCentre.getBalanace (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#92-94) is not in mixedCase
+Parameter '_container' of DataCentre.getConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#96) is not in mixedCase
+Parameter '_source' of DataCentre.getConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#96) is not in mixedCase
+Parameter '_key' of DataCentre.getConstraint (/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol#96) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0ed39dea9f3aab5c4a9b5b4549556c41cb3a23c7.sol analyzed (2 contracts), 40 result(s) found

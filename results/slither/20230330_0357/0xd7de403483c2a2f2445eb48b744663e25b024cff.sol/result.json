@@ -1,0 +1,504 @@
+{
+    "errors": [
+        "EXIT_CODE_53"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Crowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "_deliverTokens",
+            "impact": "Medium",
+            "line": 200,
+            "line_end": 202,
+            "message": "Crowdsale._deliverTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#200-202) does not use the value returned by external calls:\n\t-token.transfer(_beneficiary,_tokenAmount) (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#201-202)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "postCrowdsaleWithdraw",
+            "impact": "Medium",
+            "line": 412,
+            "line_end": 414,
+            "message": "VeetuneCrowdsale.postCrowdsaleWithdraw (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#412-414) does not use the value returned by external calls:\n\t-token.transfer(wallet,_tokenAmount) (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#414)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 11,
+            "message": "ERC20Basic.totalSupply (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#10-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 12,
+            "message": "ERC20Basic.balanceOf (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#11-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "ERC20Basic.transfer (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#12-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "ERC20.allowance (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#22-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "ERC20.transferFrom (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#23-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 25,
+            "message": "ERC20.approve (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#24-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 284,
+            "message": "Ownable.transferOwnership (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#278-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "withdrawTokens",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 344,
+            "message": "VeetuneCrowdsale.withdrawTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#342-344) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "withdrawTokensFor",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 375,
+            "message": "VeetuneCrowdsale.withdrawTokensFor (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#372-375) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "closeCrowdsale",
+            "impact": "Informational",
+            "line": 389,
+            "line_end": 394,
+            "message": "VeetuneCrowdsale.closeCrowdsale (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#389-394) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "setBonusMultiplier",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 402,
+            "message": "VeetuneCrowdsale.setBonusMultiplier (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#396-402) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "setRate",
+            "impact": "Informational",
+            "line": 403,
+            "line_end": 408,
+            "message": "VeetuneCrowdsale.setRate (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#403-408) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "setWallet",
+            "impact": "Informational",
+            "line": 409,
+            "line_end": 410,
+            "message": "VeetuneCrowdsale.setWallet (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#409-410) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "postCrowdsaleWithdraw",
+            "impact": "Informational",
+            "line": 412,
+            "line_end": 414,
+            "message": "VeetuneCrowdsale.postCrowdsaleWithdraw (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#412-414) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "addTokens",
+            "impact": "Informational",
+            "line": 421,
+            "line_end": 426,
+            "message": "VeetuneCrowdsale.addTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#421-426) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VeetuneCrowdsale",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "function": "transferTokens",
+            "impact": "Informational",
+            "line": 435,
+            "line_end": 442,
+            "message": "VeetuneCrowdsale.transferTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#435-442) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7de403483c2a2f2445eb48b744663e25b024cff.sol:\n\t- pragma solidity^0.4.23 (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 129,
+            "message": "Function 'Crowdsale.Crowdsale' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#119-129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_rate' of Crowdsale.Crowdsale (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_wallet' of Crowdsale.Crowdsale (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_token' of Crowdsale.Crowdsale (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 147,
+            "message": "Parameter '_beneficiary' of Crowdsale.buyTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 183,
+            "message": "Function 'Crowdsale._preValidatePurchase' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#181-183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_beneficiary' of Crowdsale._preValidatePurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_weiAmount' of Crowdsale._preValidatePurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 192,
+            "message": "Function 'Crowdsale._postValidatePurchase' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#191-192) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 202,
+            "message": "Function 'Crowdsale._deliverTokens' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#200-202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_beneficiary' of Crowdsale._deliverTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_tokenAmount' of Crowdsale._deliverTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 211,
+            "message": "Function 'Crowdsale._processPurchase' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#209-211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_beneficiary' of Crowdsale._processPurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_tokenAmount' of Crowdsale._processPurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 220,
+            "message": "Function 'Crowdsale._updatePurchasingState' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#219-220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 237,
+            "message": "Function 'Crowdsale._getTokenAmount' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#229-237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_weiAmount' of Crowdsale._getTokenAmount (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 241,
+            "message": "Function 'Crowdsale._forwardFunds' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#238-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Function 'Ownable.Ownable' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 354,
+            "message": "Function 'VeetuneCrowdsale._processPurchase' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#350-354) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 350,
+            "message": "Parameter '_beneficiary' of VeetuneCrowdsale._processPurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#350) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 351,
+            "message": "Parameter '_tokenAmount' of VeetuneCrowdsale._processPurchase (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#351) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 368,
+            "message": "Function 'VeetuneCrowdsale._getTokenAmount' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#364-368) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 365,
+            "message": "Parameter '_weiAmount' of VeetuneCrowdsale._getTokenAmount (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 332,
+            "line_end": 340,
+            "message": "Function 'VeetuneCrowdsale.VeetuneCrowdsale' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#332-340) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 338,
+            "message": "Parameter '_bonusMultiplier' of VeetuneCrowdsale.VeetuneCrowdsale (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 413,
+            "message": "Parameter '_tokenAmount' of VeetuneCrowdsale.postCrowdsaleWithdraw (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_beneficiary' of VeetuneCrowdsale.addTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 422,
+            "message": "Parameter '_tokenAmount' of VeetuneCrowdsale.addTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#422) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 436,
+            "message": "Parameter '_from' of VeetuneCrowdsale.transferTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#436) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 436,
+            "message": "Parameter '_to' of VeetuneCrowdsale.transferTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#436) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "line": 436,
+            "line_end": 437,
+            "message": "Parameter '_tokenAmount' of VeetuneCrowdsale.transferTokens (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol#436-437) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de403483c2a2f2445eb48b744663e25b024cff.sol",
+            "impact": "Informational",
+            "message": "Function 'VeetuneCrowdsale._withdrawTokensFor' (0xd7de403483c2a2f2445eb48b744663e25b024cff.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

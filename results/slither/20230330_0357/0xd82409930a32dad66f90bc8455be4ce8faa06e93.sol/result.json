@@ -1,0 +1,1505 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_RECEIVED_SIGNAL_34"
+    ],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyCore",
+            "impact": "High",
+            "line": 928,
+            "line_end": 979,
+            "message": "Reentrancy in PlayCoinKey.buyCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#928-979):\n\tExternal calls:\n\t- _eventData_ = endRound(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#949-950)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#976-978)\n\t- rID_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#953)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#953)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "core",
+            "impact": "High",
+            "line": 1039,
+            "line_end": 1154,
+            "message": "Reentrancy in PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1039-1154):\n\tExternal calls:\n\t- _eventData_ = distributeExternal(_rID,_pID,_eth,_affID,_team,_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1141-1143)\n\tState variables written after the call(s):\n\t- airDropPot_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1144-1146)\n\t- plyrRnds_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1144-1146)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1144-1146)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "endRound",
+            "impact": "High",
+            "line": 1339,
+            "line_end": 1418,
+            "message": "Reentrancy in PlayCoinKey.endRound (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1339-1418):\n\tExternal calls:\n\t- ! address(Pro_Inc).call.value(_com)(bytes4(keccak256()(deposit()))) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1366-1388)\n\tState variables written after the call(s):\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1390)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "endRound",
+            "impact": "High",
+            "line": 1339,
+            "line_end": 1418,
+            "message": "Reentrancy in PlayCoinKey.endRound (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1339-1418):\n\tExternal calls:\n\t- ! address(Pro_Inc).call.value(_com)(bytes4(keccak256()(deposit()))) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1366-1388)\n\t- PCGod.deposit.value(_p3d)() (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1391-1394)\n\tState variables written after the call(s):\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1411-1412)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1413)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1413-1415)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1416)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadCore",
+            "impact": "High",
+            "line": 982,
+            "line_end": 1036,
+            "message": "Reentrancy in PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#982-1036):\n\tExternal calls:\n\t- _eventData_ = endRound(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1014-1016)\n\tState variables written after the call(s):\n\t- rID_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1016)\n\t- round_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1016)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "withdraw",
+            "impact": "High",
+            "line": 580,
+            "line_end": 640,
+            "message": "Reentrancy in PlayCoinKey.withdraw (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#580-640):\n\tExternal calls:\n\t- _eventData_ = endRound(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#600-602)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#604)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Medium",
+            "line": 1912,
+            "line_end": 2021,
+            "message": "NameFilter.nameFilter (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1912-2021) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXaddr",
+            "impact": "Medium",
+            "line": 357,
+            "line_end": 400,
+            "message": "Reentrancy in PlayCoinKey.buyXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#357-400):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#364-367)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#393-395)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXid",
+            "impact": "Medium",
+            "line": 322,
+            "line_end": 356,
+            "message": "Reentrancy in PlayCoinKey.buyXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#322-356):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#329-332)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#350-351)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXname",
+            "impact": "Medium",
+            "line": 401,
+            "line_end": 438,
+            "message": "Reentrancy in PlayCoinKey.buyXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#401-438):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#408-410)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#434-435)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "determinePID",
+            "impact": "Medium",
+            "line": 1257,
+            "line_end": 1297,
+            "message": "Reentrancy in PlayCoinKey.determinePID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1257-1297):\n\tExternal calls:\n\t- _pID = PlayerBook.getPlayerID(msg.sender) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1273)\n\t- _name = PlayerBook.getPlayerName(_pID) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1274-1275)\n\t- _laff = PlayerBook.getPlayerLAff(_pID) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1275-1277)\n\tState variables written after the call(s):\n\t- pIDxAddr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1279)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXname",
+            "impact": "Medium",
+            "line": 538,
+            "line_end": 539,
+            "message": "_eventData_ in PlayCoinKey.reLoadXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#538-539) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "distributeExternal",
+            "impact": "Medium",
+            "line": 1497,
+            "message": "_p3d in PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1497) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXid",
+            "impact": "Medium",
+            "line": 461,
+            "message": "_eventData_ in PlayCoinKey.reLoadXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#461) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXaddr",
+            "impact": "Medium",
+            "line": 495,
+            "line_end": 497,
+            "message": "_eventData_ in PlayCoinKey.reLoadXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#495-497) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "core",
+            "impact": "Medium",
+            "line": 1080,
+            "message": "_prize in PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1080) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 596,
+            "line_end": 597,
+            "message": "_eventData_ in PlayCoinKey.withdraw (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#596-597) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "determinePID",
+            "impact": "Low",
+            "line": 1257,
+            "line_end": 1297,
+            "message": "Reentrancy in PlayCoinKey.determinePID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1257-1297):\n\tExternal calls:\n\t- _pID = PlayerBook.getPlayerID(msg.sender) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1273)\n\t- _name = PlayerBook.getPlayerName(_pID) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1274-1275)\n\t- _laff = PlayerBook.getPlayerLAff(_pID) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1275-1277)\n\tState variables written after the call(s):\n\t- pIDxName_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1282)\n\t- plyrNames_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1284-1285)\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1279-1280)\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1283-1284)\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1288)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "distributeExternal",
+            "impact": "Low",
+            "line": 1485,
+            "line_end": 1546,
+            "message": "Reentrancy in PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1485-1546):\n\tExternal calls:\n\t- ! address(Pro_Inc).call.value(_com)(bytes4(keccak256()(deposit()))) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1497-1518)\n\t- otherPCK_.potSwap.value(_long)() (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1522-1523)\n\tState variables written after the call(s):\n\t- plyr_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1529-1530)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "withdraw",
+            "impact": "Low",
+            "line": 580,
+            "line_end": 640,
+            "message": "Reentrancy in PlayCoinKey.withdraw (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#580-640):\n\tExternal calls:\n\t- _eventData_ = endRound(_eventData_) (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#600-602)\n\tState variables written after the call(s):\n\t- plyrRnds_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#604)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "airdrop",
+            "impact": "Low",
+            "line": 1469,
+            "line_end": 1485,
+            "message": "PlayCoinKey.airdrop (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1469-1485) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (seed - ((seed / 1000) * 1000)) < airDropTracker_ (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1482-1484)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "line": 1912,
+            "line_end": 2021,
+            "message": "NameFilter.nameFilter uses assembly (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1912-2021)\n\t- 0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#2015-2020\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 145,
+            "message": "PlayCoinKey.rndExtra_ should be constant (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#144-145)\nPlayCoinKey.rndGap_ should be constant (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#145)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "kill",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 265,
+            "message": "PlayCoinKey.kill (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#260-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getRoundStatus",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 270,
+            "message": "PlayCoinKey.getRoundStatus (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#266-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "setThreshold",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 276,
+            "message": "PlayCoinKey.setThreshold (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#270-276) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "setEnforce",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 295,
+            "message": "PlayCoinKey.setEnforce (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#276-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 310,
+            "message": "PlayCoinKey.fallback (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#296-310) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXid",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 356,
+            "message": "PlayCoinKey.buyXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#322-356) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXaddr",
+            "impact": "Informational",
+            "line": 357,
+            "line_end": 400,
+            "message": "PlayCoinKey.buyXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#357-400) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "buyXname",
+            "impact": "Informational",
+            "line": 401,
+            "line_end": 438,
+            "message": "PlayCoinKey.buyXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#401-438) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXid",
+            "impact": "Informational",
+            "line": 455,
+            "line_end": 489,
+            "message": "PlayCoinKey.reLoadXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#455-489) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXaddr",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 530,
+            "message": "PlayCoinKey.reLoadXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#489-530) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "reLoadXname",
+            "impact": "Informational",
+            "line": 531,
+            "line_end": 578,
+            "message": "PlayCoinKey.reLoadXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#531-578) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 580,
+            "line_end": 640,
+            "message": "PlayCoinKey.withdraw (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#580-640) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "registerNameXID",
+            "impact": "Informational",
+            "line": 668,
+            "line_end": 684,
+            "message": "PlayCoinKey.registerNameXID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#668-684) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "registerNameXaddr",
+            "impact": "Informational",
+            "line": 684,
+            "line_end": 699,
+            "message": "PlayCoinKey.registerNameXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#684-699) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "registerNameXname",
+            "impact": "Informational",
+            "line": 699,
+            "line_end": 720,
+            "message": "PlayCoinKey.registerNameXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#699-720) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getBuyPrice",
+            "impact": "Informational",
+            "line": 729,
+            "line_end": 753,
+            "message": "PlayCoinKey.getBuyPrice (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#729-753) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getTimeLeft",
+            "impact": "Informational",
+            "line": 761,
+            "line_end": 775,
+            "message": "PlayCoinKey.getTimeLeft (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#761-775) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getPlayerVaults",
+            "impact": "Informational",
+            "line": 778,
+            "line_end": 820,
+            "message": "PlayCoinKey.getPlayerVaults (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#778-820) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Informational",
+            "line": 849,
+            "line_end": 885,
+            "message": "PlayCoinKey.getCurrentRoundInfo (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#849-885) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "getPlayerInfoByAddress",
+            "impact": "Informational",
+            "line": 895,
+            "line_end": 916,
+            "message": "PlayCoinKey.getPlayerInfoByAddress (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#895-916) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "calcKeysReceived",
+            "impact": "Informational",
+            "line": 1179,
+            "line_end": 1191,
+            "message": "PlayCoinKey.calcKeysReceived (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1179-1191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "iWantXKeys",
+            "impact": "Informational",
+            "line": 1197,
+            "line_end": 1214,
+            "message": "PlayCoinKey.iWantXKeys (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1197-1214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 1691,
+            "line_end": 1709,
+            "message": "PlayCoinKey.activate (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1691-1709) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "setOtherPCK",
+            "impact": "Informational",
+            "line": 1709,
+            "line_end": 1720,
+            "message": "PlayCoinKey.setOtherPCK (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1709-1720) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "endRound",
+            "impact": "Informational",
+            "line": 1339,
+            "line_end": 1418,
+            "message": "Low level call in PlayCoinKey.endRound (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1339-1418):\n\t-! address(Pro_Inc).call.value(_com)(bytes4(keccak256()(deposit()))) 0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1366-1388\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "PlayCoinKey",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "function": "distributeExternal",
+            "impact": "Informational",
+            "line": 1485,
+            "line_end": 1546,
+            "message": "Low level call in PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1485-1546):\n\t-! address(Pro_Inc).call.value(_com)(bytes4(keccak256()(deposit()))) 0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1497-1518\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 23,
+            "message": "Event 'PCKevents.onNewName' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#10-23) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 42,
+            "message": "Event 'PCKevents.onEndTx' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#26-42) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 52,
+            "message": "Event 'PCKevents.onWithdraw' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#45-52) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 68,
+            "message": "Event 'PCKevents.onWithdrawAndDistribute' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#55-68) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 85,
+            "message": "Event 'PCKevents.onBuyAndDistribute' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#73-85) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 104,
+            "message": "Event 'PCKevents.onReLoadAndDistribute' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#90-104) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 117,
+            "message": "Event 'PCKevents.onAffiliatePayout' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#106-117) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "Event 'PCKevents.onPotSwapDeposit' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#121-122) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 131,
+            "message": "Contract 'modularKey' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#130-131) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_threshold' of PlayCoinKey.setThreshold (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 277,
+            "message": "Parameter '_closed' of PlayCoinKey.setEnforce (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#276-277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 323,
+            "message": "Parameter '_affCode' of PlayCoinKey.buyXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#322-323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 324,
+            "message": "Parameter '_team' of PlayCoinKey.buyXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#323-324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 359,
+            "message": "Parameter '_affCode' of PlayCoinKey.buyXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#358-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 359,
+            "message": "Parameter '_team' of PlayCoinKey.buyXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 401,
+            "message": "Parameter '_affCode' of PlayCoinKey.buyXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#401) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 401,
+            "line_end": 403,
+            "message": "Parameter '_team' of PlayCoinKey.buyXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#401-403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 455,
+            "message": "Parameter '_affCode' of PlayCoinKey.reLoadXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#455) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 455,
+            "line_end": 456,
+            "message": "Parameter '_team' of PlayCoinKey.reLoadXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#455-456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_eth' of PlayCoinKey.reLoadXid (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 490,
+            "message": "Parameter '_affCode' of PlayCoinKey.reLoadXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#489-490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 490,
+            "message": "Parameter '_team' of PlayCoinKey.reLoadXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 490,
+            "message": "Parameter '_eth' of PlayCoinKey.reLoadXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_affCode' of PlayCoinKey.reLoadXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_team' of PlayCoinKey.reLoadXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 533,
+            "message": "Parameter '_eth' of PlayCoinKey.reLoadXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#532-533) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 669,
+            "line_end": 670,
+            "message": "Parameter '_nameString' of PlayCoinKey.registerNameXID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#669-670) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 670,
+            "line_end": 671,
+            "message": "Parameter '_affCode' of PlayCoinKey.registerNameXID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#670-671) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 671,
+            "message": "Parameter '_all' of PlayCoinKey.registerNameXID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#671) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 685,
+            "line_end": 686,
+            "message": "Parameter '_nameString' of PlayCoinKey.registerNameXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#685-686) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 686,
+            "line_end": 687,
+            "message": "Parameter '_affCode' of PlayCoinKey.registerNameXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#686-687) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 687,
+            "line_end": 688,
+            "message": "Parameter '_all' of PlayCoinKey.registerNameXaddr (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#687-688) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 700,
+            "line_end": 701,
+            "message": "Parameter '_nameString' of PlayCoinKey.registerNameXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#700-701) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 701,
+            "message": "Parameter '_affCode' of PlayCoinKey.registerNameXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#701) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 701,
+            "message": "Parameter '_all' of PlayCoinKey.registerNameXname (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#701) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 779,
+            "message": "Parameter '_pID' of PlayCoinKey.getPlayerVaults (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#779) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 823,
+            "line_end": 824,
+            "message": "Parameter '_pID' of PlayCoinKey.getPlayerVaultsHelper (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#823-824) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 824,
+            "message": "Parameter '_rID' of PlayCoinKey.getPlayerVaultsHelper (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#824) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 896,
+            "message": "Parameter '_addr' of PlayCoinKey.getPlayerInfoByAddress (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#896) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 929,
+            "message": "Parameter '_pID' of PlayCoinKey.buyCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#929) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 929,
+            "line_end": 930,
+            "message": "Parameter '_affID' of PlayCoinKey.buyCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#929-930) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 930,
+            "line_end": 931,
+            "message": "Parameter '_team' of PlayCoinKey.buyCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#930-931) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 931,
+            "line_end": 932,
+            "message": "Parameter '_eventData_' of PlayCoinKey.buyCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#931-932) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 983,
+            "message": "Parameter '_pID' of PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#983) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 983,
+            "message": "Parameter '_affID' of PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#983) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 983,
+            "message": "Parameter '_team' of PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#983) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 983,
+            "line_end": 984,
+            "message": "Parameter '_eth' of PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#983-984) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 984,
+            "line_end": 985,
+            "message": "Parameter '_eventData_' of PlayCoinKey.reLoadCore (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#984-985) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_rID' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_pID' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "line_end": 1041,
+            "message": "Parameter '_eth' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1040-1041) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1041,
+            "line_end": 1042,
+            "message": "Parameter '_affID' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1041-1042) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1042,
+            "message": "Parameter '_team' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1042) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1042,
+            "line_end": 1044,
+            "message": "Parameter '_eventData_' of PlayCoinKey.core (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1042-1044) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1163,
+            "message": "Parameter '_pID' of PlayCoinKey.calcUnMaskedEarnings (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1163,
+            "line_end": 1164,
+            "message": "Parameter '_rIDlast' of PlayCoinKey.calcUnMaskedEarnings (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1163-1164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1180,
+            "message": "Parameter '_rID' of PlayCoinKey.calcKeysReceived (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1180,
+            "message": "Parameter '_eth' of PlayCoinKey.calcKeysReceived (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1197,
+            "line_end": 1198,
+            "message": "Parameter '_keys' of PlayCoinKey.iWantXKeys (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1197-1198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1223,
+            "message": "Parameter '_pID' of PlayCoinKey.receivePlayerInfo (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1223) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1224,
+            "message": "Parameter '_addr' of PlayCoinKey.receivePlayerInfo (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1224) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1225,
+            "message": "Parameter '_name' of PlayCoinKey.receivePlayerInfo (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1225) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1225,
+            "message": "Parameter '_laff' of PlayCoinKey.receivePlayerInfo (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1225) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1244,
+            "message": "Parameter '_pID' of PlayCoinKey.receivePlayerNameList (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1244,
+            "line_end": 1245,
+            "message": "Parameter '_name' of PlayCoinKey.receivePlayerNameList (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1244-1245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1258,
+            "line_end": 1260,
+            "message": "Parameter '_eventData_' of PlayCoinKey.determinePID (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1258-1260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1303,
+            "message": "Parameter '_team' of PlayCoinKey.verifyTeam (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1303) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1318,
+            "message": "Parameter '_pID' of PlayCoinKey.managePlayer (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1318,
+            "message": "Parameter '_eventData_' of PlayCoinKey.managePlayer (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1339,
+            "message": "Parameter '_eventData_' of PlayCoinKey.endRound (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1420,
+            "message": "Parameter '_pID' of PlayCoinKey.updateGenVault (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1420) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1420,
+            "message": "Parameter '_rIDlast' of PlayCoinKey.updateGenVault (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1420) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1437,
+            "line_end": 1438,
+            "message": "Parameter '_keys' of PlayCoinKey.updateTimer (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1437-1438) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1438,
+            "message": "Parameter '_rID' of PlayCoinKey.updateTimer (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1438) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1438,
+            "line_end": 1439,
+            "message": "Parameter '_eth' of PlayCoinKey.updateTimer (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1438-1439) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1486,
+            "message": "Parameter '_rID' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1486) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1486,
+            "line_end": 1487,
+            "message": "Parameter '_pID' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1486-1487) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1487,
+            "message": "Parameter '_eth' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1487) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1488,
+            "line_end": 1489,
+            "message": "Parameter '_affID' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1488-1489) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1489,
+            "line_end": 1490,
+            "message": "Parameter '_team' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1489-1490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1490,
+            "line_end": 1491,
+            "message": "Parameter '_eventData_' of PlayCoinKey.distributeExternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1490-1491) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1560,
+            "message": "Parameter '_rID' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1560) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1560,
+            "message": "Parameter '_pID' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1560) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1560,
+            "message": "Parameter '_eth' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1560) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1560,
+            "line_end": 1561,
+            "message": "Parameter '_team' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1560-1561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1561,
+            "message": "Parameter '_keys' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1561,
+            "message": "Parameter '_eventData_' of PlayCoinKey.distributeInternal (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1587,
+            "line_end": 1588,
+            "message": "Parameter '_rID' of PlayCoinKey.updateMasks (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1587-1588) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1588,
+            "line_end": 1589,
+            "message": "Parameter '_pID' of PlayCoinKey.updateMasks (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1588-1589) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1589,
+            "message": "Parameter '_gen' of PlayCoinKey.updateMasks (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1589) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1589,
+            "line_end": 1590,
+            "message": "Parameter '_keys' of PlayCoinKey.updateMasks (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1589-1590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1635,
+            "line_end": 1636,
+            "message": "Parameter '_pID' of PlayCoinKey.withdrawEarnings (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1635-1636) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1649,
+            "message": "Parameter '_pID' of PlayCoinKey.endTx (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1649,
+            "message": "Parameter '_team' of PlayCoinKey.endTx (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1649,
+            "message": "Parameter '_eth' of PlayCoinKey.endTx (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1649,
+            "message": "Parameter '_keys' of PlayCoinKey.endTx (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1649,
+            "line_end": 1651,
+            "message": "Parameter '_eventData_' of PlayCoinKey.endTx (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1649-1651) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1709,
+            "message": "Parameter '_otherPCK' of PlayCoinKey.setOtherPCK (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1709) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "Constant 'PlayCoinKey.PCGod' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#135-136) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "Constant 'PlayCoinKey.Pro_Inc' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#136-137) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 139,
+            "message": "Constant 'PlayCoinKey.PlayerBook' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#137-139) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 146,
+            "message": "Constant 'PlayCoinKey.rndInit_' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#146) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 147,
+            "message": "Constant 'PlayCoinKey.rndInc_' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#147) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Constant 'PlayCoinKey.rndMax_' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#150) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 153,
+            "message": "Constant 'PlayCoinKey.rndMin_' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#151-153) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1817,
+            "message": "Parameter '_curEth' of PCKKeysCalcLong.keysRec (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1817) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1817,
+            "line_end": 1818,
+            "message": "Parameter '_newEth' of PCKKeysCalcLong.keysRec (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1817-1818) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1832,
+            "line_end": 1833,
+            "message": "Parameter '_curKeys' of PCKKeysCalcLong.ethRec (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1832-1833) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1833,
+            "message": "Parameter '_sellKeys' of PCKKeysCalcLong.ethRec (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1833) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1841,
+            "message": "Parameter '_eth' of PCKKeysCalcLong.keys (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1841) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1848,
+            "message": "Parameter '_keys' of PCKKeysCalcLong.eth (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1848) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1859,
+            "line_end": 1861,
+            "message": "Contract 'otherPCK' (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1859-1861) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol",
+            "impact": "Informational",
+            "line": 1913,
+            "message": "Parameter '_input' of NameFilter.nameFilter (0xd82409930a32dad66f90bc8455be4ce8faa06e93.sol#1913) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

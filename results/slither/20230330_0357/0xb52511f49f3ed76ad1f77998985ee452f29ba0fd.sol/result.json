@@ -1,0 +1,1537 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_RECEIVED_SIGNAL_37"
+    ],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "destroyDeed",
+            "impact": "High",
+            "line": 920,
+            "line_end": 928,
+            "message": "Deed.destroyDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#920-928) sends eth to arbitrary user\n\tDangerous calls:\n\t- owner.send(this.balance) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#926-928)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "destroyDeed",
+            "impact": "High",
+            "line": 920,
+            "line_end": 928,
+            "message": "Deed.destroyDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#920-928) allows anyone to destruct the contract\n",
+            "name": "suicidal"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Medium",
+            "line": 254,
+            "line_end": 272,
+            "message": "AddressUtils.isContract (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#254-272) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Medium",
+            "line": 1480,
+            "line_end": 1489,
+            "message": "Registrar.strlen (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1480-1489) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Basic",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 29,
+            "line_end": 111,
+            "message": "ERC721Basic (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#29-111) has incorrect ERC20 function interface(s):\n\t-approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#88-89)\n\t-transferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#96-99)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721BasicToken",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 330,
+            "line_end": 640,
+            "message": "ERC721BasicToken (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#330-640) has incorrect ERC20 function interface(s):\n\t-approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#402-410)\n\t-transferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#465-472)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "onlyOwner",
+            "impact": "Medium",
+            "line": 1018,
+            "line_end": 1021,
+            "message": "Registrar.onlyOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1018-1021) uses a dangerous strict equality:\n\t- require(bool)(state(_hash) == Mode.Owned && msg.sender == _entries[_hash].deed.owner())\n\t- require(bool)(state(_hash) == Mode.Owned && msg.sender == _entries[_hash].deed.owner())\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "cancelBid",
+            "impact": "Medium",
+            "line": 1167,
+            "line_end": 1191,
+            "message": "Reentrancy in Registrar.cancelBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1167-1191):\n\tExternal calls:\n\t- require(bool)(address(bid) != 0 && now >= bid.creationDate() + totalAuctionLength + 1209600) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1181-1184)\n\t- bid.setOwner(msg.sender) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1186-1190)\n\t- bid.closeDeed(5) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1190)\n\tState variables written after the call(s):\n\t- sealedBids (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1190)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "invalidateName",
+            "impact": "Medium",
+            "line": 1249,
+            "line_end": 1269,
+            "message": "Reentrancy in Registrar.invalidateName (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1249-1269):\n\tExternal calls:\n\t- _tryEraseSingleNode(hash) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1255)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1261)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "invalidateName",
+            "impact": "Medium",
+            "line": 1249,
+            "line_end": 1269,
+            "message": "Reentrancy in Registrar.invalidateName (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1249-1269):\n\tExternal calls:\n\t- _tryEraseSingleNode(hash) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1255)\n\t- h.deed.setBalance(h.value / 2,false) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1263)\n\t- h.deed.setOwner(msg.sender) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1263-1265)\n\t- h.deed.closeDeed(1000) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1265)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1268)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1268-1269)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1269)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "releaseDeed",
+            "impact": "Medium",
+            "line": 1229,
+            "line_end": 1244,
+            "message": "Reentrancy in Registrar.releaseDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1229-1244):\n\tExternal calls:\n\t- require(bool)(now >= h.registrationDate + 220752000 || ens.owner(rootNode) != address(this)) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1232-1236)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1236)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1236)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1238-1239)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "transferRegistrars",
+            "impact": "Medium",
+            "line": 1301,
+            "line_end": 1316,
+            "message": "Reentrancy in Registrar.transferRegistrars (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1301-1316):\n\tExternal calls:\n\t- registrar = ens.owner(rootNode) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1302-1303)\n\t- h.deed.setRegistrar(registrar) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1307-1308)\n\t- Registrar(registrar).acceptRegistrarTransfer(_hash,h.deed,h.registrationDate) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1309-1311)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1312-1313)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1314-1315)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1315)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1315-1316)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "unsealBid",
+            "impact": "Medium",
+            "line": 1113,
+            "line_end": 1164,
+            "message": "Reentrancy in Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1113-1164):\n\tExternal calls:\n\t- value = min(_value,bid.value()) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1120-1121)\n\t- bid.setBalance(value,true) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1121-1122)\n\t- previousWinner.closeDeed(995) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1145-1146)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1148-1149)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1150)\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1150)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "unsealBid",
+            "impact": "Medium",
+            "line": 1113,
+            "line_end": 1164,
+            "message": "Reentrancy in Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1113-1164):\n\tExternal calls:\n\t- value = min(_value,bid.value()) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1120-1121)\n\t- bid.setBalance(value,true) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1121-1122)\n\tState variables written after the call(s):\n\t- _entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1155)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 951,
+            "message": "ENS.setSubnodeOwner.owner (local variable @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#951) shadows:\n\t- ENS.owner (function @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#960)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "resolver",
+            "impact": "Low",
+            "line": 955,
+            "message": "ENS.setResolver.resolver (local variable @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#955) shadows:\n\t- ENS.resolver (function @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#960-963)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 957,
+            "line_end": 958,
+            "message": "ENS.setOwner.owner (local variable @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#957-958) shadows:\n\t- ENS.owner (function @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#960)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "ttl",
+            "impact": "Low",
+            "line": 958,
+            "message": "ENS.setTTL.ttl (local variable @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#958) shadows:\n\t- ENS.ttl (function @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#963-964)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "newBid",
+            "impact": "Low",
+            "line": 1090,
+            "line_end": 1093,
+            "message": "Registrar.newBid.newBid (local variable @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1090-1093) shadows:\n\t- Registrar.newBid (function @ 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1086-1095)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ENSNFT",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "mint",
+            "impact": "Low",
+            "message": "Reentrancy in ENSNFT.mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol):\n\tExternal calls:\n\t- (None,deedAddress,None,None,None) = registrar.entries(_hash) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol)\n\t- require(bool)(deed.owner() == address(this)) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol)\n\t- require(bool)(deed.previousOwner() == msg.sender) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol)\n\t- _mint(deed.previousOwner(),tokenId) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol)\n\tState variables written after the call(s):\n\t- allTokensIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "startAuctionsAndBid",
+            "impact": "Low",
+            "line": 1104,
+            "line_end": 1107,
+            "message": "Reentrancy in Registrar.startAuctionsAndBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1104-1107):\n\tExternal calls:\n\t- startAuctions(hashes) (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1106)\n\tState variables written after the call(s):\n\t- sealedBids (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1106-1107)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "AddressUtils",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 272,
+            "message": "AddressUtils.isContract uses assembly (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#254-272)\n\t- 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#270-272\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "strlen",
+            "impact": "Informational",
+            "line": 1480,
+            "line_end": 1489,
+            "message": "Registrar.strlen uses assembly (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1480-1489)\n\t- 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1486-1489\n\t- 0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721BasicToken",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 402,
+            "line_end": 410,
+            "message": "ERC721BasicToken.approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#402-410) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Basic",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 89,
+            "message": "ERC721Basic.approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#88-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Basic",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 93,
+            "message": "ERC721Basic.setApprovalForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#92-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721BasicToken",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 424,
+            "line_end": 433,
+            "message": "ERC721BasicToken.setApprovalForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#424-433) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721BasicToken",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 491,
+            "line_end": 495,
+            "message": "ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#491-495) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Basic",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 103,
+            "message": "ERC721Basic.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#99-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Token",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenOfOwnerByIndex",
+            "impact": "Informational",
+            "line": 722,
+            "line_end": 730,
+            "message": "ERC721Token.tokenOfOwnerByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#722-730) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Enumerable",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenOfOwnerByIndex",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 129,
+            "message": "ERC721Enumerable.tokenOfOwnerByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#122-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Enumerable",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenByIndex",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 130,
+            "message": "ERC721Enumerable.tokenByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#129-130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Token",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenByIndex",
+            "impact": "Informational",
+            "line": 743,
+            "line_end": 747,
+            "message": "ERC721Token.tokenByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#743-747) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Token",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenURI",
+            "impact": "Informational",
+            "line": 707,
+            "line_end": 712,
+            "message": "ERC721Token.tokenURI (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#707-712) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "tokenURI",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 141,
+            "message": "ERC721Metadata.tokenURI (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#140-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Receiver",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "onERC721Received",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 193,
+            "message": "ERC721Receiver.onERC721Received (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#184-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 884,
+            "line_end": 892,
+            "message": "Deed.setOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#884-892) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setRegistrar",
+            "impact": "Informational",
+            "line": 892,
+            "line_end": 897,
+            "message": "Deed.setRegistrar (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#892-897) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setBalance",
+            "impact": "Informational",
+            "line": 897,
+            "line_end": 906,
+            "message": "Deed.setBalance (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#897-906) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Deed",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "closeDeed",
+            "impact": "Informational",
+            "line": 911,
+            "line_end": 917,
+            "message": "Deed.closeDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#911-917) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setSubnodeOwner",
+            "impact": "Informational",
+            "line": 951,
+            "line_end": 953,
+            "message": "ENS.setSubnodeOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#951-953) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setResolver",
+            "impact": "Informational",
+            "line": 953,
+            "line_end": 956,
+            "message": "ENS.setResolver (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#953-956) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 957,
+            "line_end": 958,
+            "message": "ENS.setOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#957-958) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "setTTL",
+            "impact": "Informational",
+            "line": 958,
+            "line_end": 959,
+            "message": "ENS.setTTL (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#958-959) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 960,
+            "message": "ENS.owner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#960) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "resolver",
+            "impact": "Informational",
+            "line": 960,
+            "line_end": 963,
+            "message": "ENS.resolver (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#960-963) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "ttl",
+            "impact": "Informational",
+            "line": 963,
+            "line_end": 964,
+            "message": "ENS.ttl (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#963-964) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "startAuctionsAndBid",
+            "impact": "Informational",
+            "line": 1104,
+            "line_end": 1107,
+            "message": "Registrar.startAuctionsAndBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1104-1107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "unsealBid",
+            "impact": "Informational",
+            "line": 1113,
+            "line_end": 1164,
+            "message": "Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1113-1164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "cancelBid",
+            "impact": "Informational",
+            "line": 1167,
+            "line_end": 1191,
+            "message": "Registrar.cancelBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1167-1191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "finalizeAuction",
+            "impact": "Informational",
+            "line": 1196,
+            "line_end": 1211,
+            "message": "Registrar.finalizeAuction (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1196-1211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 1217,
+            "line_end": 1221,
+            "message": "Registrar.transfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1217-1221) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "releaseDeed",
+            "impact": "Informational",
+            "line": 1229,
+            "line_end": 1244,
+            "message": "Registrar.releaseDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1229-1244) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "invalidateName",
+            "impact": "Informational",
+            "line": 1249,
+            "line_end": 1269,
+            "message": "Registrar.invalidateName (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1249-1269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "eraseNode",
+            "impact": "Informational",
+            "line": 1290,
+            "line_end": 1293,
+            "message": "Registrar.eraseNode (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1290-1293) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "transferRegistrars",
+            "impact": "Informational",
+            "line": 1301,
+            "line_end": 1316,
+            "message": "Registrar.transferRegistrars (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1301-1316) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "acceptRegistrarTransfer",
+            "impact": "Informational",
+            "line": 1331,
+            "line_end": 1335,
+            "message": "Registrar.acceptRegistrarTransfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1331-1335) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registrar",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "entries",
+            "impact": "Informational",
+            "line": 1359,
+            "line_end": 1363,
+            "message": "Registrar.entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1359-1363) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENSNFT",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "message": "ENSNFT.mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENSNFT",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "message": "ENSNFT.burn (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 34,
+            "message": "Constant 'ERC721Basic.InterfaceId_ERC721' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#31-34) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 48,
+            "message": "Constant 'ERC721Basic.InterfaceId_ERC721Exists' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#45-48) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 54,
+            "message": "Constant 'ERC721Basic.InterfaceId_ERC721Enumerable' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#51-54) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 62,
+            "message": "Constant 'ERC721Basic.InterfaceId_ERC721Metadata' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#59-62) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 198,
+            "message": "Parameter '_a' of SafeMath.mul (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 198,
+            "message": "Parameter '_b' of SafeMath.mul (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 214,
+            "message": "Parameter '_a' of SafeMath.div (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 214,
+            "message": "Parameter '_b' of SafeMath.div (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 229,
+            "message": "Parameter '_a' of SafeMath.sub (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 230,
+            "message": "Parameter '_b' of SafeMath.sub (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#229-230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 241,
+            "message": "Parameter '_a' of SafeMath.add (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#239-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_b' of SafeMath.add (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 313,
+            "message": "Parameter '_interfaceId' of SupportsInterfaceWithLookup.supportsInterface (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#313) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 321,
+            "line_end": 325,
+            "message": "Function 'SupportsInterfaceWithLookup._registerInterface' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#321-325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_interfaceId' of SupportsInterfaceWithLookup._registerInterface (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 283,
+            "line_end": 286,
+            "message": "Constant 'SupportsInterfaceWithLookup.InterfaceId_ERC165' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#283-286) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_owner' of ERC721BasicToken.balanceOf (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 378,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.ownerOf (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.exists (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 402,
+            "message": "Parameter '_to' of ERC721BasicToken.approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#402) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 402,
+            "line_end": 403,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.approve (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#402-403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 415,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.getApproved (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#415) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 425,
+            "message": "Parameter '_to' of ERC721BasicToken.setApprovalForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#425) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 425,
+            "message": "Parameter '_approved' of ERC721BasicToken.setApprovalForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#425) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_owner' of ERC721BasicToken.isApprovedForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_operator' of ERC721BasicToken.isApprovedForAll (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_from' of ERC721BasicToken.transferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_to' of ERC721BasicToken.transferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.transferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 491,
+            "message": "Parameter '_from' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#491) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 492,
+            "message": "Parameter '_to' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#492) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 492,
+            "line_end": 493,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#492-493) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 516,
+            "message": "Parameter '_from' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#516) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 516,
+            "line_end": 517,
+            "message": "Parameter '_to' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#516-517) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 517,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#517) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 517,
+            "message": "Parameter '_data' of ERC721BasicToken.safeTransferFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#517) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 541,
+            "message": "Parameter '_spender' of ERC721BasicToken.isApprovedOrOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#541) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 541,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.isApprovedOrOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#541) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 559,
+            "line_end": 564,
+            "message": "Function 'ERC721BasicToken._mint' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#559-564) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 562,
+            "message": "Parameter '_to' of ERC721BasicToken._mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 562,
+            "message": "Parameter '_tokenId' of ERC721BasicToken._mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 568,
+            "line_end": 575,
+            "message": "Function 'ERC721BasicToken._burn' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#568-575) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 569,
+            "message": "Parameter '_owner' of ERC721BasicToken._burn (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#569) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 569,
+            "message": "Parameter '_tokenId' of ERC721BasicToken._burn (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#569) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 581,
+            "message": "Parameter '_owner' of ERC721BasicToken.clearApproval (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#581) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 581,
+            "line_end": 582,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.clearApproval (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#581-582) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 592,
+            "message": "Parameter '_to' of ERC721BasicToken.addTokenTo (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#592) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 592,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.addTokenTo (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#592) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 602,
+            "message": "Parameter '_from' of ERC721BasicToken.removeTokenFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#602) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 602,
+            "line_end": 603,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.removeTokenFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#602-603) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 629,
+            "message": "Parameter '_from' of ERC721BasicToken.checkAndCallSafeTransfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#629) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 629,
+            "message": "Parameter '_to' of ERC721BasicToken.checkAndCallSafeTransfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#629) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 629,
+            "message": "Parameter '_tokenId' of ERC721BasicToken.checkAndCallSafeTransfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#629) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 630,
+            "line_end": 631,
+            "message": "Parameter '_data' of ERC721BasicToken.checkAndCallSafeTransfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#630-631) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 808,
+            "line_end": 815,
+            "message": "Function 'ERC721Token._mint' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#808-815) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 808,
+            "line_end": 810,
+            "message": "Parameter '_to' of ERC721Token._mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#808-810) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 810,
+            "message": "Parameter '_tokenId' of ERC721Token._mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#810) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 824,
+            "line_end": 856,
+            "message": "Function 'ERC721Token._burn' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#824-856) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 826,
+            "line_end": 828,
+            "message": "Parameter '_owner' of ERC721Token._burn (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#826-828) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 828,
+            "message": "Parameter '_tokenId' of ERC721Token._burn (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#828) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 762,
+            "message": "Parameter '_to' of ERC721Token.addTokenTo (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 762,
+            "message": "Parameter '_tokenId' of ERC721Token.addTokenTo (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 771,
+            "message": "Parameter '_from' of ERC721Token.removeTokenFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#771) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 771,
+            "message": "Parameter '_tokenId' of ERC721Token.removeTokenFrom (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#771) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 722,
+            "message": "Parameter '_owner' of ERC721Token.tokenOfOwnerByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#722) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 723,
+            "line_end": 724,
+            "message": "Parameter '_index' of ERC721Token.tokenOfOwnerByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#723-724) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 743,
+            "line_end": 745,
+            "message": "Parameter '_index' of ERC721Token.tokenByIndex (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#743-745) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 710,
+            "line_end": 711,
+            "message": "Parameter '_tokenId' of ERC721Token.tokenURI (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#710-711) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 684,
+            "message": "Parameter '_name' of ERC721Token. (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#684) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 684,
+            "message": "Parameter '_symbol' of ERC721Token. (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#684) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 754,
+            "line_end": 755,
+            "message": "Function 'ERC721Token._setTokenURI' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#754-755) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 754,
+            "message": "Parameter '_tokenId' of ERC721Token._setTokenURI (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 754,
+            "message": "Parameter '_uri' of ERC721Token._setTokenURI (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 876,
+            "line_end": 883,
+            "message": "Function 'Deed.Deed' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#876-883) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 876,
+            "message": "Parameter '_owner' of Deed.Deed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 863,
+            "line_end": 864,
+            "message": "Constant 'Deed.burn' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#863-864) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "line_end": 1034,
+            "message": "Function 'Registrar.Registrar' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1032-1034) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_ens' of Registrar.Registrar (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_rootNode' of Registrar.Registrar (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_startDate' of Registrar.Registrar (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1038,
+            "message": "Parameter '_hash' of Registrar.startAuction (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1038) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1057,
+            "line_end": 1058,
+            "message": "Parameter '_hashes' of Registrar.startAuctions (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1057-1058) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1113,
+            "message": "Parameter '_hash' of Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1113,
+            "line_end": 1114,
+            "message": "Parameter '_value' of Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1113-1114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1114,
+            "message": "Parameter '_salt' of Registrar.unsealBid (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1197,
+            "message": "Parameter '_hash' of Registrar.finalizeAuction (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1217,
+            "message": "Parameter '_hash' of Registrar.transfer (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1229,
+            "message": "Parameter '_hash' of Registrar.releaseDeed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1301,
+            "line_end": 1302,
+            "message": "Parameter '_hash' of Registrar.transferRegistrars (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1301-1302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1342,
+            "line_end": 1343,
+            "message": "Parameter '_hash' of Registrar.state (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1342-1343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1359,
+            "message": "Parameter '_hash' of Registrar.entries (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1372,
+            "line_end": 1375,
+            "message": "Parameter '_hash' of Registrar.isAllowed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1372-1375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1375,
+            "message": "Parameter '_timestamp' of Registrar.isAllowed (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1385,
+            "message": "Parameter '_hash' of Registrar.getAllowedTime (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1385) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1406,
+            "line_end": 1420,
+            "message": "Function 'Registrar._tryEraseSingleNode' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1406-1420) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1420,
+            "line_end": 1437,
+            "message": "Function 'Registrar._eraseNodeHierarchy' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1420-1437) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1445,
+            "message": "Parameter '_hash' of Registrar.trySetSubnodeOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1445) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 1445,
+            "line_end": 1446,
+            "message": "Parameter '_newOwner' of Registrar.trySetSubnodeOwner (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#1445-1446) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 977,
+            "line_end": 979,
+            "message": "Variable 'Registrar._entries' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#977-979) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 988,
+            "line_end": 989,
+            "message": "Constant 'Registrar.totalAuctionLength' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#988-989) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 989,
+            "message": "Constant 'Registrar.revealPeriod' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#989) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 989,
+            "line_end": 990,
+            "message": "Constant 'Registrar.launchLength' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#989-990) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "line": 993,
+            "line_end": 994,
+            "message": "Constant 'Registrar.minPrice' (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol#993-994) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "message": "Parameter '_registrar' of ENSNFT. (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol",
+            "impact": "Informational",
+            "message": "Parameter '_hash' of ENSNFT.mint (0xb52511f49f3ed76ad1f77998985ee452f29ba0fd.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

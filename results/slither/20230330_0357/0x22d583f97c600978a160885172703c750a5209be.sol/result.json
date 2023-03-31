@@ -1,0 +1,268 @@
+{
+    "errors": [
+        "EXIT_CODE_28"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 5,
+            "line_end": 153,
+            "message": "EMCoin (0x22d583f97c600978a160885172703c750a5209be.sol#5-153) has incorrect ERC20 function interface(s):\n\t-transfer (0x22d583f97c600978a160885172703c750a5209be.sol#69-75)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "EMCoin.decimals should be constant (0x22d583f97c600978a160885172703c750a5209be.sol#9-10)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 3,
+            "message": "tokenRecipient.receiveApproval (0x22d583f97c600978a160885172703c750a5209be.sol#3) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 75,
+            "message": "EMCoin.transfer (0x22d583f97c600978a160885172703c750a5209be.sol#69-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 91,
+            "message": "EMCoin.transferFrom (0x22d583f97c600978a160885172703c750a5209be.sol#81-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 126,
+            "message": "EMCoin.approveAndCall (0x22d583f97c600978a160885172703c750a5209be.sol#113-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 139,
+            "message": "EMCoin.burn (0x22d583f97c600978a160885172703c750a5209be.sol#129-139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EMCoin",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 153,
+            "message": "EMCoin.burnFrom (0x22d583f97c600978a160885172703c750a5209be.sol#145-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x22d583f97c600978a160885172703c750a5209be.sol:\n\t- pragma solidity^0.4.16 (0x22d583f97c600978a160885172703c750a5209be.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Contract 'tokenRecipient' (0x22d583f97c600978a160885172703c750a5209be.sol#3-5) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 40,
+            "message": "Function 'EMCoin.EMCoin' (0x22d583f97c600978a160885172703c750a5209be.sol#29-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 63,
+            "message": "Function 'EMCoin._transfer' (0x22d583f97c600978a160885172703c750a5209be.sol#42-63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "Parameter '_from' of EMCoin._transfer (0x22d583f97c600978a160885172703c750a5209be.sol#42-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Parameter '_to' of EMCoin._transfer (0x22d583f97c600978a160885172703c750a5209be.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Parameter '_value' of EMCoin._transfer (0x22d583f97c600978a160885172703c750a5209be.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_to' of EMCoin.transfer (0x22d583f97c600978a160885172703c750a5209be.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 72,
+            "message": "Parameter '_value' of EMCoin.transfer (0x22d583f97c600978a160885172703c750a5209be.sol#69-72) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_from' of EMCoin.transferFrom (0x22d583f97c600978a160885172703c750a5209be.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_to' of EMCoin.transferFrom (0x22d583f97c600978a160885172703c750a5209be.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_value' of EMCoin.transferFrom (0x22d583f97c600978a160885172703c750a5209be.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 98,
+            "message": "Parameter '_spender' of EMCoin.approve (0x22d583f97c600978a160885172703c750a5209be.sol#98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 99,
+            "message": "Parameter '_value' of EMCoin.approve (0x22d583f97c600978a160885172703c750a5209be.sol#98-99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "Parameter '_spender' of EMCoin.approveAndCall (0x22d583f97c600978a160885172703c750a5209be.sol#114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "Parameter '_value' of EMCoin.approveAndCall (0x22d583f97c600978a160885172703c750a5209be.sol#114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 115,
+            "message": "Parameter '_extraData' of EMCoin.approveAndCall (0x22d583f97c600978a160885172703c750a5209be.sol#114-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 130,
+            "message": "Parameter '_value' of EMCoin.burn (0x22d583f97c600978a160885172703c750a5209be.sol#129-130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Parameter '_from' of EMCoin.burnFrom (0x22d583f97c600978a160885172703c750a5209be.sol#145) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d583f97c600978a160885172703c750a5209be.sol",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 146,
+            "message": "Parameter '_value' of EMCoin.burnFrom (0x22d583f97c600978a160885172703c750a5209be.sol#145-146) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

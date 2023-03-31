@@ -1,0 +1,114 @@
+{
+    "errors": [
+        "EXIT_CODE_11"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Satnet",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 6,
+            "line_end": 52,
+            "message": "Satnet (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#6-52) has incorrect ERC20 function interface(s):\n\t-transfer (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#34-48)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "Satnet.standard should be constant (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#8-9)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Deprecated standard detected @ 0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#35:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 37,
+            "message": "Deprecated standard detected @ 0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#37:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "Deprecated standard detected @ 0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#50-51:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Satnet",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 48,
+            "message": "Satnet.transfer (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#34-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Satnet",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "Satnet.fallback (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#50-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0f8019c51423a388a79e414f1dffbcb802db8962.sol:\n\t- pragma solidity^0.4.0 (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 34,
+            "message": "Function 'Satnet.Satnet' (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#22-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Parameter '_to' of Satnet.transfer (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#35) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f8019c51423a388a79e414f1dffbcb802db8962.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Parameter '_value' of Satnet.transfer (0x0f8019c51423a388a79e414f1dffbcb802db8962.sol#35) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

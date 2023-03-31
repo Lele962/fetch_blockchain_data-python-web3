@@ -1,0 +1,61 @@
+{
+    "errors": [
+        "EXIT_CODE_5"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol",
+            "function": "setCompleted",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 21,
+            "message": "Migrations.setCompleted (0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol#17-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol",
+            "function": "upgrade",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 25,
+            "message": "Migrations.upgrade (0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol#21-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol:\n\t- pragma solidity^0.4.23 (0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol",
+            "impact": "Informational",
+            "line": 21,
+            "message": "Parameter 'new_address' of Migrations.upgrade (0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol#21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 9,
+            "message": "Variable 'Migrations.last_completed_migration' (0xd19f5eb53c780d463869a4a2306d65abae6ade0b.sol#7-9) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

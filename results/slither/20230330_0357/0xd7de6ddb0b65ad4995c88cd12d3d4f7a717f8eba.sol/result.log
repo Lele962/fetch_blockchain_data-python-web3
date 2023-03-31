@@ -1,0 +1,88 @@
+INFO:Detectors:[93m
+NameFilter.nameFilter (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+_eth in WarOfEth.getPreviousProfit (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#798) is a local variable never initialiazed
+_eth in WarOfEth.withdraw (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#374-376) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+NameFilter.nameFilter uses assembly (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol)
+	- /sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+WarOfEth.fallback (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#264-269) should be declared external
+WarOfEth.withdraw (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#367-407) should be declared external
+WarOfEth.registerNameXID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#409-453) should be declared external
+WarOfEth.setTeamName (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454-497) should be declared external
+WarOfEth.checkIfNameValid (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#502-512) should be declared external
+WarOfEth.getNextKillingAfter (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#513-526) should be declared external
+WarOfEth.getPlayerInfoByAddress (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#529-555) should be declared external
+WarOfEth.getPlayerRoundTeamBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#559-568) should be declared external
+WarOfEth.getPlayerRoundBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#575-594) should be declared external
+WarOfEth.getPlayerRounds (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#599-617) should be declared external
+WarOfEth.getLastRoundInfo (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#621-633) should be declared external
+WarOfEth.getCurrentRoundInfo (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#633-660) should be declared external
+WarOfEth.getTeamInfoByID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#664-686) should be declared external
+WarOfEth.getTeamsInfo (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#691-739) should be declared external
+WarOfEth.getTeamLeaders (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#743-776) should be declared external
+WarOfEth.getNextKeyPrice (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#821-832) should be declared external
+WarOfEth.getEthFromKeys (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834-852) should be declared external
+WarOfEth.getKeysFromEth (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#854-872) should be declared external
+WarOfEth.activate (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1149-1173) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Event 'WarOfEth.onNewName' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#35-46) is not in CapWords
+Event 'WarOfEth.onNewTeamName' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#47-58) is not in CapWords
+Event 'WarOfEth.onTx' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#59-70) is not in CapWords
+Event 'WarOfEth.onAffPayout' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#72-86) is not in CapWords
+Event 'WarOfEth.onKill' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#89-92) is not in CapWords
+Event 'WarOfEth.onEndRound' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#96-103) is not in CapWords
+Event 'WarOfEth.onWithdraw' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#106-114) is not in CapWords
+Parameter '_team' of WarOfEth.buy (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#274-275) is not in mixedCase
+Parameter '_affCode' of WarOfEth.buy (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#275) is not in mixedCase
+Parameter '_nameString' of WarOfEth.registerNameXID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#410) is not in mixedCase
+Parameter '_tID' of WarOfEth.setTeamName (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454) is not in mixedCase
+Parameter '_nameString' of WarOfEth.setTeamName (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454-456) is not in mixedCase
+Parameter '_nameStr' of WarOfEth.checkIfNameValid (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#502) is not in mixedCase
+Parameter '_addr' of WarOfEth.getPlayerInfoByAddress (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#529-530) is not in mixedCase
+Parameter '_pID' of WarOfEth.getPlayerRoundTeamBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#561-563) is not in mixedCase
+Parameter '_roundID' of WarOfEth.getPlayerRoundTeamBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#563-564) is not in mixedCase
+Parameter '_tID' of WarOfEth.getPlayerRoundTeamBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#564) is not in mixedCase
+Parameter '_pID' of WarOfEth.getPlayerRoundBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#575-576) is not in mixedCase
+Parameter '_roundID' of WarOfEth.getPlayerRoundBought (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#576) is not in mixedCase
+Parameter '_pID' of WarOfEth.getPlayerRounds (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#600) is not in mixedCase
+Parameter '_tID' of WarOfEth.getTeamInfoByID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#665) is not in mixedCase
+Parameter '_pID' of WarOfEth.getProfit (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#780) is not in mixedCase
+Parameter '_pID' of WarOfEth.getPreviousProfit (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#796) is not in mixedCase
+Parameter '_tID' of WarOfEth.getNextKeyPrice (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#823) is not in mixedCase
+Parameter '_tID' of WarOfEth.getEthFromKeys (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834) is not in mixedCase
+Parameter '_keys' of WarOfEth.getEthFromKeys (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834) is not in mixedCase
+Parameter '_tID' of WarOfEth.getKeysFromEth (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#855) is not in mixedCase
+Parameter '_eth' of WarOfEth.getKeysFromEth (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#855-857) is not in mixedCase
+Parameter '_pID' of WarOfEth.buyCore (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase
+Parameter '_affID' of WarOfEth.buyCore (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase
+Parameter '_tID' of WarOfEth.buyCore (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase
+Parameter '_eth' of WarOfEth.buyCore (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase
+Parameter '_rID' of WarOfEth.distribute (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#937) is not in mixedCase
+Parameter '_pID' of WarOfEth.distribute (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#937-938) is not in mixedCase
+Parameter '_eth' of WarOfEth.distribute (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#938) is not in mixedCase
+Parameter '_affID' of WarOfEth.distribute (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#938) is not in mixedCase
+Parameter '_pID' of WarOfEth.refund (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1031-1032) is not in mixedCase
+Parameter '_value' of WarOfEth.refund (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1032) is not in mixedCase
+Parameter '_pID' of WarOfEth.createTeam (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1040-1042) is not in mixedCase
+Parameter '_eth' of WarOfEth.createTeam (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1042) is not in mixedCase
+Parameter '_addr' of WarOfEth.determinePID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1122) is not in mixedCase
+Parameter '_team' of WarOfEth.determinTID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1134-1135) is not in mixedCase
+Parameter '_pID' of WarOfEth.determinTID (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1135-1136) is not in mixedCase
+Constant 'WarOfEth.roundGap_' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#170-172) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'WarOfEth.killingGap_' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#173-175) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'WarOfEth.registrationFee_' (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#177) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_curEth' of WoeKeysCalc.keysRec (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1184-1185) is not in mixedCase
+Parameter '_newEth' of WoeKeysCalc.keysRec (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1186) is not in mixedCase
+Parameter '_curKeys' of WoeKeysCalc.ethRec (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1198) is not in mixedCase
+Parameter '_sellKeys' of WoeKeysCalc.ethRec (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1198-1199) is not in mixedCase
+Parameter '_eth' of WoeKeysCalc.keys (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1211) is not in mixedCase
+Parameter '_keys' of WoeKeysCalc.eth (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1231-1233) is not in mixedCase
+Parameter '_input' of NameFilter.nameFilter (/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol analyzed (4 contracts), 76 result(s) found

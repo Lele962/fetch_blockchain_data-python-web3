@@ -1,0 +1,419 @@
+{
+    "errors": [
+        "EXIT_CODE_39"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 564,
+            "message": "ERC20Detailed.constructor.name (local variable @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#564) shadows:\n\t- ERC20Detailed.name (function @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#577-579)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "symbol",
+            "impact": "Low",
+            "line": 564,
+            "line_end": 565,
+            "message": "ERC20Detailed.constructor.symbol (local variable @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#564-565) shadows:\n\t- ERC20Detailed.symbol (function @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#580-583)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "decimals",
+            "impact": "Low",
+            "line": 565,
+            "line_end": 568,
+            "message": "ERC20Detailed.constructor.decimals (local variable @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#565-568) shadows:\n\t- ERC20Detailed.decimals (function @ 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 30,
+            "message": "Ownable.owner (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#25-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 56,
+            "message": "Ownable.renounceOwnership (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#51-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 64,
+            "message": "Ownable.transferOwnership (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#59-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 234,
+            "message": "ERC20.transfer (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#232-234) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 87,
+            "message": "IERC20.transfer (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#85-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 247,
+            "line_end": 252,
+            "message": "ERC20.approve (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#247-252) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 87,
+            "message": "IERC20.approve (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 267,
+            "message": "ERC20.transferFrom (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#259-267) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 91,
+            "message": "IERC20.transferFrom (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#87-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 93,
+            "message": "IERC20.totalSupply (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#91-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 206,
+            "message": "ERC20.totalSupply (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#204-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 93,
+            "line_end": 94,
+            "message": "IERC20.balanceOf (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#93-94) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 214,
+            "message": "ERC20.balanceOf (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#213-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 97,
+            "message": "IERC20.allowance (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#95-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 226,
+            "message": "ERC20.allowance (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#223-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "increaseAllowance",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 285,
+            "message": "ERC20.increaseAllowance (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#277-285) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "decreaseAllowance",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 306,
+            "message": "ERC20.decreaseAllowance (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#295-306) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 380,
+            "line_end": 385,
+            "message": "ERC20Burnable.burn (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#380-385) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 399,
+            "line_end": 401,
+            "message": "ERC20Burnable.burnFrom (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#399-401) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 480,
+            "message": "MinterRole.addMinter (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#473-480) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "renounceMinter",
+            "impact": "Informational",
+            "line": 480,
+            "line_end": 483,
+            "message": "MinterRole.renounceMinter (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#480-483) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Mintable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 508,
+            "line_end": 512,
+            "message": "ERC20Mintable.mint (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#508-512) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Frozenable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "frozenAccount",
+            "impact": "Informational",
+            "line": 519,
+            "line_end": 525,
+            "message": "ERC20Frozenable.frozenAccount (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#519-525) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Frozenable",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 525,
+            "line_end": 534,
+            "message": "ERC20Frozenable.freezeAccount (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#525-534) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 577,
+            "line_end": 579,
+            "message": "ERC20Detailed.name (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#577-579) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 580,
+            "line_end": 583,
+            "message": "ERC20Detailed.symbol (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#580-583) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol:\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#1): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#80): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#106-107): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#178-179): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#375-376): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#403-405): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#450-451): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#491-492): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#512-513): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#544-547): it allows old versions\n\t- pragma solidity^0.5.0 (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 74,
+            "message": "Function 'Ownable._transferOwnership' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#68-74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 318,
+            "message": "Function 'ERC20._transfer' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#314-318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 337,
+            "message": "Function 'ERC20._mint' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#329-337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 343,
+            "line_end": 348,
+            "message": "Function 'ERC20._burn' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#343-348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 359,
+            "line_end": 371,
+            "message": "Function 'ERC20._burnFrom' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#359-371) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 484,
+            "line_end": 487,
+            "message": "Function 'MinterRole._addMinter' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#484-487) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 487,
+            "line_end": 490,
+            "message": "Function 'MinterRole._removeMinter' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#487-490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 534,
+            "line_end": 541,
+            "message": "Function 'ERC20Frozenable._transfer' (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#534-541) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol",
+            "impact": "Informational",
+            "line": 519,
+            "message": "Parameter '_address' of ERC20Frozenable.frozenAccount (0x76233a4fb103671b0d9920f1b837eb5f7f449058.sol#519) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

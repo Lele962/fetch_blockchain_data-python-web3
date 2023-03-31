@@ -1,0 +1,217 @@
+{
+    "errors": [
+        "EXIT_CODE_21"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 66,
+            "line_end": 290,
+            "message": "BIZT (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#66-290) has incorrect ERC20 function interface(s):\n\t-transfer (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#149-183)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Low",
+            "line": 143,
+            "line_end": 144,
+            "message": "BIZT.balanceOf.owner (local variable @ 0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#143-144) shadows:\n\t- Ownable.owner (state variable @ 0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#39)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 137,
+            "message": "BIZT.totalSupply (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#135-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 145,
+            "message": "BIZT.balanceOf (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#143-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 183,
+            "message": "BIZT.transfer (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#149-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 203,
+            "message": "BIZT.approve (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#189-203) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 242,
+            "message": "BIZT.transferFrom (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#208-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 251,
+            "line_end": 254,
+            "message": "BIZT.allowance (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#251-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "setParams",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 269,
+            "message": "BIZT.setParams (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#257-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "increaseSupply",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 282,
+            "message": "BIZT.increaseSupply (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#271-282) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BIZT",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "function": "decreaseSupply",
+            "impact": "Informational",
+            "line": 287,
+            "line_end": 290,
+            "message": "BIZT.decreaseSupply (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#287-290) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd49809491fa1ad3da807d1cc79200c23a0784583.sol:\n\t- pragma solidity^0.4.21 (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_to' of BIZT.transfer (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 150,
+            "message": "Parameter '_value' of BIZT.transfer (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#149-150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_spender' of BIZT.approve (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 190,
+            "message": "Parameter '_value' of BIZT.approve (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#189-190) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 209,
+            "message": "Parameter '_from' of BIZT.transferFrom (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#208-209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_to' of BIZT.transferFrom (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 210,
+            "message": "Parameter '_value' of BIZT.transferFrom (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#209-210) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_from' of BIZT.allowance (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd49809491fa1ad3da807d1cc79200c23a0784583.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_spender' of BIZT.allowance (0xd49809491fa1ad3da807d1cc79200c23a0784583.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

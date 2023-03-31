@@ -1,0 +1,242 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "submit",
+            "impact": "Medium",
+            "line": 102,
+            "line_end": 123,
+            "message": "Reentrancy in AirdropContractium.submit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#102-123):\n\tExternal calls:\n\t- isSuccess = ctuContract.transferFrom(_from,_to,_value) (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#107-108)\n\t- closeAirdrop() (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#119)\n\tState variables written after the call(s):\n\t- reward (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#119)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "batchSubmit",
+            "impact": "Medium",
+            "line": 94,
+            "message": "i in AirdropContractium.batchSubmit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#94) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "closeAirdrop",
+            "impact": "Low",
+            "line": 132,
+            "line_end": 142,
+            "message": "Reentrancy in AirdropContractium.closeAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#132-142):\n\tExternal calls:\n\t- _remain = ctuContract.allowance(_owner,_spender) (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#136-140)\n\tState variables written after the call(s):\n\t- remainAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#141)\n\t- reward (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#140)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "submit",
+            "impact": "Low",
+            "line": 102,
+            "line_end": 123,
+            "message": "Reentrancy in AirdropContractium.submit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#102-123):\n\tExternal calls:\n\t- isSuccess = ctuContract.transferFrom(_from,_to,_value) (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#107-108)\n\tState variables written after the call(s):\n\t- remainAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#112-114)\n\t- submitted (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#111)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractiumInterface",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "ContractiumInterface.balanceOf (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractiumInterface",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 34,
+            "message": "ContractiumInterface.transferFrom (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#33-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractiumInterface",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "contractSpend",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "ContractiumInterface.contractSpend (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#34-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractiumInterface",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ContractiumInterface.allowance (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractiumInterface",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 40,
+            "message": "ContractiumInterface.owner (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#36-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "getAirdrop",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 92,
+            "message": "AirdropContractium.getAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#88-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "batchSubmit",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 101,
+            "message": "AirdropContractium.batchSubmit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#92-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "setCtuContract",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 150,
+            "message": "AirdropContractium.setCtuContract (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#142-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "setRemainAirdrop",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 157,
+            "message": "AirdropContractium.setRemainAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#152-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirdropContractium",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "function": "setReward",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 161,
+            "message": "AirdropContractium.setReward (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#157-161) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol:\n\t- pragma solidity^0.4.18 (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 49,
+            "message": "Function 'Ownable.Ownable' (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#45-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "message": "Parameter '_addr' of AirdropContractium.transferOwnership (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 93,
+            "message": "Parameter '_addresses' of AirdropContractium.batchSubmit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#92-93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 103,
+            "message": "Parameter '_addr' of AirdropContractium.submit (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#102-103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 142,
+            "message": "Parameter '_ctuAddress' of AirdropContractium.setCtuContract (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#142) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_remain' of AirdropContractium.setRemainAirdrop (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 157,
+            "message": "Parameter '_reward' of AirdropContractium.setReward (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 77,
+            "message": "Variable 'AirdropContractium.ctu_owner' (0xb52834a6d5e84c08b60d8e1a5255b999fc0c729b.sol#75-77) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

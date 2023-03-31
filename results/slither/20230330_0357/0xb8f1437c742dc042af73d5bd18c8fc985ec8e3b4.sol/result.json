@@ -1,0 +1,627 @@
+{
+    "errors": [
+        "EXIT_CODE_64"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "totalSupply",
+            "impact": "High",
+            "line": 605,
+            "line_end": 606,
+            "message": "BasicToken.totalSupply_ (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#605-606) is never initialized. It is used in:\n\t- totalSupply (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#607-612)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "unsoldTokens",
+            "impact": "Medium",
+            "line": 526,
+            "line_end": 535,
+            "message": "CryptoHuntIco.unsoldTokens (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#526-535) uses a dangerous strict equality:\n\t- token.balanceOf(address(this)) == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 423,
+            "line_end": 458,
+            "message": "Reentrancy in CryptoHuntIco.claimTokens (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#423-458):\n\tExternal calls:\n\t- token.transfer(_beneficiary,diff) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#454-455)\n\tState variables written after the call(s):\n\t- tokenBuyersRemaining (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#455-456)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "finalize",
+            "impact": "Medium",
+            "line": 363,
+            "line_end": 374,
+            "message": "Reentrancy in CryptoHuntIco.finalize (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#363-374):\n\tExternal calls:\n\t- finalization() (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#369)\n\tState variables written after the call(s):\n\t- isFinalized (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#370-373)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "forceRefundState",
+            "impact": "Medium",
+            "line": 388,
+            "line_end": 394,
+            "message": "CryptoHuntIco.forceRefundState (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#388-394) does not use the value returned by external calls:\n\t-token.transfer(owner,token.balanceOf(address(this))) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#388-390)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "finalization",
+            "impact": "Medium",
+            "line": 404,
+            "line_end": 406,
+            "message": "CryptoHuntIco.finalization (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#404-406) does not use the value returned by external calls:\n\t-token.transfer(owner,token.balanceOf(address(this))) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#406)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 423,
+            "line_end": 458,
+            "message": "CryptoHuntIco.claimTokens (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#423-458) does not use the value returned by external calls:\n\t-token.transfer(_beneficiary,diff) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#454-455)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "withdrawRest",
+            "impact": "Medium",
+            "line": 503,
+            "line_end": 508,
+            "message": "CryptoHuntIco.withdrawRest (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#503-508) does not use the value returned by external calls:\n\t-token.transfer(owner,token.balanceOf(address(this))) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#507-508)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "forceRefundState",
+            "impact": "Low",
+            "line": 388,
+            "line_end": 394,
+            "message": "Reentrancy in CryptoHuntIco.forceRefundState (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#388-394):\n\tExternal calls:\n\t- vault.enableRefunds() (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#388)\n\t- token.transfer(owner,token.balanceOf(address(this))) (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#388-390)\n\tState variables written after the call(s):\n\t- forcedRefund (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#393)\n\t- isFinalized (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#392-393)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 605,
+            "line_end": 606,
+            "message": "BasicToken.totalSupply_ should be constant (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#605-606)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 81,
+            "message": "Ownable.transferOwnership (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#73-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 363,
+            "line_end": 374,
+            "message": "CryptoHuntIco.finalize (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#363-374) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "claimRefund",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 377,
+            "message": "CryptoHuntIco.claimRefund (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#375-377) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "unsoldTokens",
+            "impact": "Informational",
+            "line": 526,
+            "line_end": 535,
+            "message": "CryptoHuntIco.unsoldTokens (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#526-535) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoHuntIco",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "tokenBalance",
+            "impact": "Informational",
+            "line": 535,
+            "line_end": 542,
+            "message": "CryptoHuntIco.tokenBalance (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#535-542) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 565,
+            "line_end": 570,
+            "message": "RefundVault.deposit (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#565-570) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "close",
+            "impact": "Informational",
+            "line": 570,
+            "line_end": 576,
+            "message": "RefundVault.close (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#570-576) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "enableRefunds",
+            "impact": "Informational",
+            "line": 576,
+            "line_end": 578,
+            "message": "RefundVault.enableRefunds (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#576-578) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RefundVault",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "refund",
+            "impact": "Informational",
+            "line": 581,
+            "line_end": 594,
+            "message": "RefundVault.refund (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#581-594) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 596,
+            "line_end": 597,
+            "message": "ERC20Basic.totalSupply (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#596-597) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 607,
+            "line_end": 612,
+            "message": "BasicToken.totalSupply (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#607-612) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 635,
+            "line_end": 636,
+            "message": "BasicToken.balanceOf (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#635-636) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 597,
+            "line_end": 600,
+            "message": "ERC20Basic.balanceOf (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#597-600) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 616,
+            "line_end": 626,
+            "message": "BasicToken.transfer (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#616-626) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 600,
+            "message": "ERC20Basic.transfer (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#600) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 689,
+            "line_end": 690,
+            "message": "StandardToken.allowance (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#689-690) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 637,
+            "line_end": 638,
+            "message": "ERC20.allowance (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#637-638) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 638,
+            "line_end": 640,
+            "message": "ERC20.transferFrom (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#638-640) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 655,
+            "line_end": 662,
+            "message": "StandardToken.transferFrom (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#655-662) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 679,
+            "line_end": 682,
+            "message": "StandardToken.approve (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#679-682) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 640,
+            "line_end": 642,
+            "message": "ERC20.approve (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#640-642) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 702,
+            "line_end": 708,
+            "message": "StandardToken.increaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#702-708) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "message": "StandardToken.decreaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol:\n\t- pragma solidity^0.4.13 (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 61,
+            "message": "Function 'Ownable.Ownable' (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#58-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 197,
+            "message": "Function 'CryptoHuntIco.CryptoHuntIco' (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#180-197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_durationSeconds' of CryptoHuntIco.CryptoHuntIco (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 182,
+            "message": "Parameter '_wlDurationSeconds' of CryptoHuntIco.CryptoHuntIco (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#181-182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 182,
+            "message": "Parameter '_wallet' of CryptoHuntIco.CryptoHuntIco (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#182) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 183,
+            "message": "Parameter '_token' of CryptoHuntIco.CryptoHuntIco (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#182-183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 203,
+            "message": "Parameter '_token' of CryptoHuntIco.changeTokenAddress (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 213,
+            "message": "Parameter '_rate' of CryptoHuntIco.setRateAndStart (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#212-213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 215,
+            "message": "Parameter '_softcap' of CryptoHuntIco.setRateAndStart (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#213-215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 215,
+            "message": "Parameter '_hardcap' of CryptoHuntIco.setRateAndStart (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 334,
+            "line_end": 336,
+            "message": "Parameter '_beneficiary' of CryptoHuntIco.validPurchase (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#334-336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 423,
+            "message": "Parameter '_beneficiary' of CryptoHuntIco.claimTokens (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 472,
+            "message": "Parameter '_beneficiary' of CryptoHuntIco.fractionalize (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#472) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 483,
+            "message": "Parameter '_beneficiary' of CryptoHuntIco.totalWithdrawn (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#483) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 556,
+            "line_end": 563,
+            "message": "Function 'RefundVault.RefundVault' (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#556-563) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 557,
+            "message": "Parameter '_wallet' of RefundVault.RefundVault (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#557) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 635,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#635) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 616,
+            "message": "Parameter '_to' of BasicToken.transfer (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#616) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 616,
+            "message": "Parameter '_value' of BasicToken.transfer (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#616) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 689,
+            "message": "Parameter '_owner' of StandardToken.allowance (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#689) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 689,
+            "message": "Parameter '_spender' of StandardToken.allowance (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#689) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 656,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#656) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 656,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#656) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 656,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#656) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 679,
+            "message": "Parameter '_spender' of StandardToken.approve (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#679) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 679,
+            "message": "Parameter '_value' of StandardToken.approve (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#679) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 703,
+            "line_end": 704,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#703-704) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "line": 704,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol#704) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol",
+            "impact": "Informational",
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0xb8f1437c742dc042af73d5bd18c8fc985ec8e3b4.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

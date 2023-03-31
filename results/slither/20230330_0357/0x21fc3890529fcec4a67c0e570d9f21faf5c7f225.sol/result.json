@@ -1,0 +1,420 @@
+{
+    "errors": [
+        "EXIT_CODE_44"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 22,
+            "line_end": 180,
+            "message": "JeansToken (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#22-180) has incorrect ERC20 function interface(s):\n\t-transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#90-96)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 31,
+            "message": "JeansToken.decimals should be constant (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#31)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 20,
+            "message": "owned.transferOwnership (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#15-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "tokenRecipient.receiveApproval (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 96,
+            "message": "JeansToken.transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#90-96) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 112,
+            "message": "JeansToken.transferFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#103-112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 147,
+            "message": "JeansToken.approveAndCall (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#135-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 162,
+            "message": "JeansToken.burn (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#151-162) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JeansToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 180,
+            "message": "JeansToken.burnFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#166-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 224,
+            "message": "MyAdvancedToken.mintToken (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#218-224) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 231,
+            "message": "MyAdvancedToken.freezeAccount (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#229-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 240,
+            "message": "MyAdvancedToken.setPrices (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#238-240) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 246,
+            "message": "MyAdvancedToken.buy (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#243-246) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 250,
+            "message": "MyAdvancedToken.sell (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#248-250) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol:\n\t- pragma solidity^0.4.16 (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Contract 'tokenRecipient' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#20-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 61,
+            "message": "Function 'JeansToken.JeansToken' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#53-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 84,
+            "message": "Function 'JeansToken._transfer' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#63-84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_from' of JeansToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_to' of JeansToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_value' of JeansToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 94,
+            "message": "Parameter '_to' of JeansToken.transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#92-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Parameter '_value' of JeansToken.transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 103,
+            "message": "Parameter '_from' of JeansToken.transferFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 103,
+            "message": "Parameter '_to' of JeansToken.transferFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 103,
+            "message": "Parameter '_value' of JeansToken.transferFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_spender' of JeansToken.approve (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "Parameter '_value' of JeansToken.approve (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#120-121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 135,
+            "message": "Parameter '_spender' of JeansToken.approveAndCall (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "Parameter '_value' of JeansToken.approveAndCall (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#135-136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_extraData' of JeansToken.approveAndCall (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_value' of JeansToken.burn (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 167,
+            "message": "Parameter '_from' of JeansToken.burnFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#166-167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 167,
+            "message": "Parameter '_value' of JeansToken.burnFrom (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "Constant 'JeansToken._myTokeName' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#23-24) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 25,
+            "message": "Constant 'JeansToken._mySymbol' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#24-25) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 26,
+            "message": "Constant 'JeansToken._myinitialSupply' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#25-26) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "Constant 'JeansToken._myDecimal' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#26-27) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 214,
+            "message": "Function 'MyAdvancedToken._transfer' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#202-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_from' of MyAdvancedToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_to' of MyAdvancedToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_value' of MyAdvancedToken._transfer (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 201,
+            "message": "Function 'MyAdvancedToken.MyAdvancedToken' (0x21fc3890529fcec4a67c0e570d9f21faf5c7f225.sol#200-201) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

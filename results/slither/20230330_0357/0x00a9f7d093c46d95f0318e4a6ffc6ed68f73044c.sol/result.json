@@ -1,0 +1,649 @@
+{
+    "errors": [
+        "EXIT_CODE_68"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "refund",
+            "impact": "High",
+            "line": 341,
+            "line_end": 358,
+            "message": "Reentrancy in AhooleeTokenPreSale.refund (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#341-358):\n\tExternal calls:\n\t- balance = token.balanceOf(msg.sender) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#346-349)\n\tExternal calls sending eth:\n\t- ! msg.sender.send(refund) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#352-353)\n\tState variables written after the call(s):\n\t- refunded (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#356)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 120,
+            "line_end": 128,
+            "message": "ERC20Basic (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#120-128) has incorrect ERC20 function interface(s):\n\t-transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#121-126)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 130,
+            "line_end": 141,
+            "message": "ERC20 (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#130-141) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#132)\n\t-approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#132-138)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 146,
+            "line_end": 182,
+            "message": "BasicToken (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#146-182) has incorrect ERC20 function interface(s):\n\t-transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#162-169)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 191,
+            "line_end": 240,
+            "message": "StandardToken (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#191-240) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#198-210)\n\t-approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#216-227)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "doPurchase",
+            "impact": "Medium",
+            "line": 364,
+            "line_end": 385,
+            "message": "AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#364-385) uses a dangerous strict equality:\n\t- token.balanceOf(msg.sender) == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "refund",
+            "impact": "Medium",
+            "line": 364,
+            "line_end": 385,
+            "message": "AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#364-385) uses a dangerous strict equality:\n\t- token.balanceOf(msg.sender) == 0\nAhooleeTokenPreSale.refund (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#341-358) uses a dangerous strict equality:\n\t- balance == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "doPurchase",
+            "impact": "Medium",
+            "line": 364,
+            "line_end": 385,
+            "message": "Reentrancy in AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#364-385):\n\tExternal calls:\n\t- token.balanceOf(msg.sender) == 0 (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#383-385)\n\tState variables written after the call(s):\n\t- collected (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "refund",
+            "impact": "Low",
+            "line": 350,
+            "line_end": 351,
+            "message": "AhooleeTokenPreSale.refund.refund (local variable @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#350-351) shadows:\n\t- AhooleeTokenPreSale.refund (function @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#341-358)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "doPurchase",
+            "impact": "Low",
+            "line": 364,
+            "line_end": 385,
+            "message": "Reentrancy in AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#364-385):\n\tExternal calls:\n\t- token.balanceOf(msg.sender) == 0 (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#383-385)\n\tState variables written after the call(s):\n\t- investorCount (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "doPurchase",
+            "impact": "Low",
+            "line": 364,
+            "line_end": 385,
+            "message": "Reentrancy in AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#364-385):\n\tExternal calls:\n\t- token.balanceOf(msg.sender) == 0 (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#383-385)\n\t- token.transfer(msg.sender,tokens) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol)\n\tState variables written after the call(s):\n\t- tokensSold (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol)\n\t- weiRaised (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "refund",
+            "impact": "Low",
+            "line": 341,
+            "line_end": 358,
+            "message": "Reentrancy in AhooleeTokenPreSale.refund (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#341-358):\n\tExternal calls:\n\t- balance = token.balanceOf(msg.sender) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#346-349)\n\tExternal calls sending eth:\n\t- ! msg.sender.send(refund) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#352-353)\n\tState variables written after the call(s):\n\t- weiRefunded (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#356)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "withdraw",
+            "impact": "Low",
+            "line": 358,
+            "line_end": 364,
+            "message": "Reentrancy in AhooleeTokenPreSale.withdraw (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#358-364):\n\tExternal calls:\n\t- token.transfer(beneficiary,token.balanceOf(this)) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#362-363)\n\tExternal calls sending eth:\n\t- ! beneficiary.send(collected) (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#362)\n\tState variables written after the call(s):\n\t- crowdsaleFinished (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#363-364)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 261,
+            "message": "AhooleeToken.INITIAL_SUPPLY should be constant (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#258-261)\nAhooleeToken.decimals should be constant (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#254-255)\nAhooleeToken.name should be constant (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#252-253)\nAhooleeToken.symbol should be constant (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#253-254)\nAhooleeTokenPreSale.name should be constant (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#274-276)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#69:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 100,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#100:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 101,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#101:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#158:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#226:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 339,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#339:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 344,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#344:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 345,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#345:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 349,
+            "line_end": 350,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#349-350:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 353,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#353:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 360,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#360:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 362,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#362:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 370,
+            "line_end": 371,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#370-371:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 382,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#382:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#308:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 313,
+            "message": "Deprecated standard detected @ 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#313:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 81,
+            "message": "Ownable.transferOwnership (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#70-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 182,
+            "message": "BasicToken.balanceOf (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#180-182) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 121,
+            "message": "ERC20Basic.balanceOf (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 126,
+            "message": "ERC20Basic.transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#121-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 169,
+            "message": "BasicToken.transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#162-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 132,
+            "message": "ERC20.allowance (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#130-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 240,
+            "message": "StandardToken.allowance (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#238-240) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 210,
+            "message": "StandardToken.transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#198-210) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 132,
+            "message": "ERC20.transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 138,
+            "message": "ERC20.approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#132-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 227,
+            "message": "StandardToken.approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#216-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 341,
+            "message": "AhooleeTokenPreSale.fallback (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#336-341) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AhooleeTokenPreSale",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 364,
+            "message": "AhooleeTokenPreSale.withdraw (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#358-364) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol:\n\t- pragma solidity^0.4.11 (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 64,
+            "message": "Function 'Ownable.Ownable' (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#62-64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 181,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#180-181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 163,
+            "message": "Parameter '_to' of BasicToken.transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#162-163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_value' of BasicToken.transfer (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 239,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#238-239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 198,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 198,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 199,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#198-199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_spender' of StandardToken.approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_value' of StandardToken.approve (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 270,
+            "message": "Function 'AhooleeToken.AhooleeToken' (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#265-270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 261,
+            "message": "Variable 'AhooleeToken.INITIAL_SUPPLY' (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#258-261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 336,
+            "message": "Function 'AhooleeTokenPreSale.AhooleeTokenPreSale' (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#314-336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 315,
+            "message": "Parameter '_hardCapUSD' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#315) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 315,
+            "line_end": 316,
+            "message": "Parameter '_softCapUSD' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#315-316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 316,
+            "message": "Parameter '_token' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 318,
+            "message": "Parameter '_beneficiary' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#316-318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_totalTokens' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_priceETH' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 318,
+            "line_end": 319,
+            "message": "Parameter '_purchaseLimitUSD' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#318-319) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 320,
+            "message": "Parameter '_startTime' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#319-320) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 320,
+            "message": "Parameter '_duration' of AhooleeTokenPreSale.AhooleeTokenPreSale (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#320) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_owner' of AhooleeTokenPreSale.doPurchase (0x00a9f7d093c46d95f0318e4a6ffc6ed68f73044c.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,2425 @@
+{
+    "errors": [
+        "EXIT_CODE_11"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 539,
+            "line_end": 544,
+            "message": "Pausable223Token.isContract (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#539-544) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 676,
+            "line_end": 686,
+            "message": "Buffer.init (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#676-686) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 702,
+            "line_end": 744,
+            "message": "Buffer.append (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#702-744) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 753,
+            "line_end": 769,
+            "message": "Buffer.append (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#753-769) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 776,
+            "line_end": 797,
+            "message": "Buffer.appendInt (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#776-797) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 1365,
+            "line_end": 1371,
+            "message": "usingOraclize.getCodeSize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1365-1371) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Medium",
+            "line": 1733,
+            "line_end": 1755,
+            "message": "usingOraclize.copyBytes (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1733-1755) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WOLF",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "constructor",
+            "impact": "Medium",
+            "line": 578,
+            "line_end": 581,
+            "message": "Contract locking ether found in 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol:\n\tContract WOLF has payable functions:\n\t - constructor (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#578-581)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "claimRefund",
+            "impact": "Medium",
+            "line": 1903,
+            "line_end": 1910,
+            "message": "Reentrancy in WolfSale.claimRefund (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1903-1910):\n\tExternal calls:\n\t- refundedTokens = token.balanceOf(msg.sender) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1906-1907)\n\t- require(bool)(token.transferFrom(msg.sender,tokensSaleHolder,refundedTokens)) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1907-1909)\n\tState variables written after the call(s):\n\t- totaltokensold (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1909-1910)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "oraclizeAPI",
+            "impact": "Medium",
+            "line": 894,
+            "line_end": 899,
+            "message": "Reentrancy in usingOraclize.oraclizeAPI (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#894-899):\n\tExternal calls:\n\t- address(oraclize) != OAR.getAddress() (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#895-898)\n\t- oraclize = OraclizeI(OAR.getAddress()) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#896-898)\n\tState variables written after the call(s):\n\t- oraclize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#896-898)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "ba2cbor",
+            "impact": "Medium",
+            "line": 1521,
+            "line_end": 1523,
+            "message": "buf in usingOraclize.ba2cbor (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1521-1523) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "stra2cbor",
+            "impact": "Medium",
+            "line": 1511,
+            "line_end": 1512,
+            "message": "buf in usingOraclize.stra2cbor (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1511-1512) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CBOR",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "encodeType",
+            "impact": "Medium",
+            "line": 809,
+            "line_end": 830,
+            "message": "CBOR.encodeType (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#809-830) does not use the value returned by external calls:\n\t-buf.appendInt(value,1) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#817-818)\n\t-buf.appendInt(value,2) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#820)\n\t-buf.appendInt(value,4) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#824-825)\n\t-buf.appendInt(value,8) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#829)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CBOR",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "encodeBytes",
+            "impact": "Medium",
+            "line": 852,
+            "line_end": 856,
+            "message": "CBOR.encodeBytes (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#852-856) does not use the value returned by external calls:\n\t-buf.append(value) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#856)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CBOR",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "encodeString",
+            "impact": "Medium",
+            "line": 856,
+            "line_end": 861,
+            "message": "CBOR.encodeString (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#856-861) does not use the value returned by external calls:\n\t-buf.append(bytes(value)) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#860)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "__callback",
+            "impact": "Low",
+            "line": 1931,
+            "line_end": 1951,
+            "message": "Reentrancy in WolfSale.__callback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1931-1951):\n\tExternal calls:\n\t- require(bool)(msg.sender == oraclize_cbAddress()) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1937-1938)\n\tState variables written after the call(s):\n\t- USDETH (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1943)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "__callback",
+            "impact": "Low",
+            "line": 1931,
+            "line_end": 1951,
+            "message": "Reentrancy in WolfSale.__callback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1931-1951):\n\tExternal calls:\n\t- require(bool)(msg.sender == oraclize_cbAddress()) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1937-1938)\n\t- UpdateUSDETHPriceAfter(day) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1944-1945)\n\tExternal calls sending eth:\n\t- UpdateUSDETHPriceAfter(day) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1944-1945)\n\tState variables written after the call(s):\n\t- oraclize_network_name (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1944-1945)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "buy",
+            "impact": "Low",
+            "message": "Reentrancy in WolfSale.buy (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol):\n\tExternal calls:\n\t- require(bool)(token.transferFrom(tokensSaleHolder,msg.sender,NumberOfTokensToGive)) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\tExternal calls sending eth:\n\t- saleSecondAddress.transfer(msg.value * 30 / 100) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\tState variables written after the call(s):\n\t- totalDeposited (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\t- vault_deposited (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "buy",
+            "impact": "Low",
+            "message": "Reentrancy in WolfSale.buy (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol):\n\tExternal calls:\n\t- require(bool)(token.transferFrom(tokensSaleHolder,msg.sender,NumberOfTokensToGive)) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\tExternal calls sending eth:\n\t- saleSecondAddress.transfer(msg.value * 30 / 100) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\t- vault_releaseDeposit() (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\tState variables written after the call(s):\n\t- totalDeposited (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n\t- vault_state (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "claimRefund",
+            "impact": "Low",
+            "line": 1903,
+            "line_end": 1910,
+            "message": "Reentrancy in WolfSale.claimRefund (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1903-1910):\n\tExternal calls:\n\t- refundedTokens = token.balanceOf(msg.sender) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1906-1907)\n\t- require(bool)(token.transferFrom(msg.sender,tokensSaleHolder,refundedTokens)) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1907-1909)\n\tExternal calls sending eth:\n\t- vault_refund(msg.sender) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1910)\n\tState variables written after the call(s):\n\t- totalDeposited (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1910)\n\t- vault_deposited (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1910)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "oraclize_newRandomDSQuery",
+            "impact": "Low",
+            "line": 1531,
+            "line_end": 1585,
+            "message": "Reentrancy in usingOraclize.oraclize_newRandomDSQuery (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1531-1585):\n\tExternal calls:\n\t- sessionKeyHash_bytes32 = oraclize_randomDS_getSessionPubKeyHash() (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1535-1536)\n\t- queryId = oraclize_query(random,args,_customGasLimit) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1550-1552)\n\tExternal calls sending eth:\n\t- queryId = oraclize_query(random,args,_customGasLimit) (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1550-1552)\n\tState variables written after the call(s):\n\t- oraclize_network_name (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1550-1552)\n\t- oraclize_randomDS_args (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1583-1584)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable223Token",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 539,
+            "line_end": 544,
+            "message": "Pausable223Token.isContract uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#539-544)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#543-544\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Buffer",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "init",
+            "impact": "Informational",
+            "line": 676,
+            "line_end": 686,
+            "message": "Buffer.init uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#676-686)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#683-686\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Buffer",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "append",
+            "impact": "Informational",
+            "line": 702,
+            "line_end": 744,
+            "message": "Buffer.append uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#702-744)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#715-733\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#733-735\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#740-744\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Buffer",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "append",
+            "impact": "Informational",
+            "line": 753,
+            "line_end": 769,
+            "message": "Buffer.append uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#753-769)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#758-769\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Buffer",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "appendInt",
+            "impact": "Informational",
+            "line": 776,
+            "line_end": 797,
+            "message": "Buffer.appendInt uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#776-797)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#786-797\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "getCodeSize",
+            "impact": "Informational",
+            "line": 1365,
+            "line_end": 1371,
+            "message": "usingOraclize.getCodeSize uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1365-1371)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1368-1371\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "oraclize_newRandomDSQuery",
+            "impact": "Informational",
+            "line": 1531,
+            "line_end": 1585,
+            "message": "usingOraclize.oraclize_newRandomDSQuery uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1531-1585)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1536-1541\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1542-1545\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1552-1583\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "verifySig",
+            "impact": "Informational",
+            "line": 1593,
+            "line_end": 1615,
+            "message": "usingOraclize.verifySig uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1593-1615)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1603-1607\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "copyBytes",
+            "impact": "Informational",
+            "line": 1733,
+            "line_end": 1755,
+            "message": "usingOraclize.copyBytes uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1733-1755)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1750-1752\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "safer_ecrecover",
+            "impact": "Informational",
+            "line": 1759,
+            "line_end": 1802,
+            "message": "usingOraclize.safer_ecrecover uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1759-1802)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1772-1800\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "ecrecovery",
+            "impact": "Informational",
+            "line": 1806,
+            "line_end": 1858,
+            "message": "usingOraclize.ecrecovery uses assembly (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1806-1858)\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1823-1852\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 608,
+            "message": "OraclizeI.cbAddress should be constant (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#608)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Different versions of Solidity is used in 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol:\n\t- Version used: ['^0.4.18', '^0.4.23']\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1 declares pragma solidity^0.4.23\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#547-551 declares pragma solidity^0.4.23\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#607-608 declares pragma solidity^0.4.18\n\t- 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1862-1864 declares pragma solidity^0.4.23\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 168,
+            "line_end": 169,
+            "message": "ERC20Basic.totalSupply (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#168-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 197,
+            "message": "BasicToken.totalSupply (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#195-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 226,
+            "message": "BasicToken.balanceOf (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#222-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 172,
+            "message": "ERC20Basic.balanceOf (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#169-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 239,
+            "message": "BurnableToken.burn (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#238-239) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 261,
+            "message": "ERC20.allowance (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#258-261) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 410,
+            "line_end": 413,
+            "message": "StandardToken.allowance (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#410-413) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Receiver",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 311,
+            "line_end": 315,
+            "message": "ERC223Receiver.tokenFallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#311-315) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 353,
+            "message": "Pausable.pause (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#350-353) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 354,
+            "line_end": 356,
+            "message": "Pausable.unpause (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#354-356) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WOLF",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "increaseSupply",
+            "impact": "Informational",
+            "line": 556,
+            "line_end": 562,
+            "message": "WOLF.increaseSupply (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#556-562) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OraclizeI",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "query2",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 612,
+            "message": "OraclizeI.query2 (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#611-612) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OraclizeI",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "queryN",
+            "impact": "Informational",
+            "line": 617,
+            "line_end": 622,
+            "message": "OraclizeI.queryN (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#617-622) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OraclizeI",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "getPrice",
+            "impact": "Informational",
+            "line": 630,
+            "line_end": 631,
+            "message": "OraclizeI.getPrice (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#630-631) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OraclizeI",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "getPrice",
+            "impact": "Informational",
+            "line": 631,
+            "line_end": 632,
+            "message": "OraclizeI.getPrice (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#631-632) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OraclizeAddrResolverI",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "getAddress",
+            "impact": "Informational",
+            "line": 635,
+            "line_end": 637,
+            "message": "OraclizeAddrResolverI.getAddress (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#635-637) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "usingOraclize",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "__callback",
+            "impact": "Informational",
+            "line": 945,
+            "line_end": 946,
+            "message": "usingOraclize.__callback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#945-946) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "__callback",
+            "impact": "Informational",
+            "line": 1931,
+            "line_end": 1951,
+            "message": "WolfSale.__callback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1931-1951) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 1893,
+            "line_end": 1901,
+            "message": "WolfSale.finalize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1893-1901) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "claimRefund",
+            "impact": "Informational",
+            "line": 1903,
+            "line_end": 1910,
+            "message": "WolfSale.claimRefund (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1903-1910) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "releaseUnclaimedFunds",
+            "impact": "Informational",
+            "line": 1920,
+            "line_end": 1926,
+            "message": "WolfSale.releaseUnclaimedFunds (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1920-1926) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "RefillOraclize",
+            "impact": "Informational",
+            "line": 1987,
+            "line_end": 1990,
+            "message": "WolfSale.RefillOraclize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1987-1990) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "RedeemOraclize",
+            "impact": "Informational",
+            "message": "WolfSale.RedeemOraclize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WolfSale",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "WolfSale.fallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol:\n\t- pragma solidity^0.4.23 (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1): it allows old versions\n\t- pragma solidity^0.4.23 (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#547-551): it allows old versions\n\t- pragma solidity^0.4.18 (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#607-608): it allows old versions\n\t- pragma solidity^0.4.23 (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1862-1864): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 130,
+            "message": "Function 'RefundVault.vault_deposit' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#123-130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_value' of RefundVault.vault_deposit (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 140,
+            "message": "Function 'RefundVault.vault_releaseDeposit' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#130-140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 146,
+            "message": "Function 'RefundVault.vault_enableRefunds' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#140-146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 163,
+            "message": "Function 'RefundVault.vault_refund' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#146-163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 110,
+            "message": "Variable 'RefundVault.vault_deposited' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#108-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 112,
+            "message": "Variable 'RefundVault.vault_wallet' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#110-112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 113,
+            "message": "Variable 'RefundVault.vault_state' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#112-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 224,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#223-224) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_to' of BasicToken.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_value' of BasicToken.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 239,
+            "message": "Parameter '_value' of BurnableToken.burn (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#238-239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 256,
+            "message": "Function 'BurnableToken._burn' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#239-256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_who' of BurnableToken._burn (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 241,
+            "message": "Parameter '_value' of BurnableToken._burn (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#239-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 411,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#411) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 412,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#411-412) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 375,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 375,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 376,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#375-376) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 399,
+            "message": "Parameter '_spender' of StandardToken.approve (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#398-399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_value' of StandardToken.approve (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 425,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#425) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 425,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#425) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 447,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#447) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 447,
+            "line_end": 448,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#447-448) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 464,
+            "message": "Parameter '_to' of PausableToken.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#464) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 464,
+            "message": "Parameter '_value' of PausableToken.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#464) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 468,
+            "message": "Parameter '_from' of PausableToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 468,
+            "message": "Parameter '_to' of PausableToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 468,
+            "message": "Parameter '_value' of PausableToken.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 469,
+            "line_end": 470,
+            "message": "Parameter '_spender' of PausableToken.approve (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#469-470) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 471,
+            "line_end": 473,
+            "message": "Parameter '_value' of PausableToken.approve (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#471-473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 479,
+            "message": "Parameter '_spender' of PausableToken.increaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#479) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 482,
+            "message": "Parameter '_addedValue' of PausableToken.increaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#479-482) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 484,
+            "message": "Parameter '_spender' of PausableToken.decreaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 484,
+            "message": "Parameter '_subtractedValue' of PausableToken.decreaseApproval (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 510,
+            "message": "Parameter '_to' of Pausable223Token.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#510) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 510,
+            "message": "Parameter '_value' of Pausable223Token.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#510) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 514,
+            "message": "Parameter '_from' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 514,
+            "message": "Parameter '_to' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 514,
+            "message": "Parameter '_value' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 493,
+            "message": "Parameter '_to' of Pausable223Token.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#493) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 493,
+            "message": "Parameter '_value' of Pausable223Token.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#493) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 493,
+            "message": "Parameter '_data' of Pausable223Token.transfer (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#493) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 503,
+            "message": "Parameter '_from' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#503) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 503,
+            "message": "Parameter '_to' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#503) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 503,
+            "message": "Parameter '_value' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#503) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 503,
+            "line_end": 504,
+            "message": "Parameter '_data' of Pausable223Token.transferFrom (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#503-504) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 519,
+            "line_end": 522,
+            "message": "Parameter '_origin' of Pausable223Token.contractFallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#519-522) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 522,
+            "message": "Parameter '_to' of Pausable223Token.contractFallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#522) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 522,
+            "line_end": 525,
+            "message": "Parameter '_value' of Pausable223Token.contractFallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#522-525) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 525,
+            "message": "Parameter '_data' of Pausable223Token.contractFallback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#525) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 609,
+            "line_end": 611,
+            "message": "Function 'OraclizeI.query_withGasLimit' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#609-611) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 612,
+            "line_end": 617,
+            "message": "Function 'OraclizeI.query2_withGasLimit' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#612-617) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 622,
+            "line_end": 630,
+            "message": "Function 'OraclizeI.queryN_withGasLimit' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#622-630) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 633,
+            "line_end": 634,
+            "message": "Function 'OraclizeI.randomDS_getSessionPubKeyHash' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#633-634) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 672,
+            "line_end": 676,
+            "message": "Struct 'Buffer.buffer' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#672-676) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 874,
+            "line_end": 1858,
+            "message": "Contract 'usingOraclize' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#874-1858) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 900,
+            "line_end": 904,
+            "message": "Function 'usingOraclize.oraclize_setNetwork' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#900-904) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 904,
+            "line_end": 945,
+            "message": "Function 'usingOraclize.oraclize_setNetwork' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#904-945) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 945,
+            "line_end": 946,
+            "message": "Function 'usingOraclize.__callback' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#945-946) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 946,
+            "line_end": 948,
+            "message": "Function 'usingOraclize.__callback' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#946-948) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 948,
+            "line_end": 950,
+            "message": "Function 'usingOraclize.oraclize_getPrice' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#948-950) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 950,
+            "line_end": 953,
+            "message": "Function 'usingOraclize.oraclize_getPrice' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#950-953) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 953,
+            "line_end": 957,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#953-957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 957,
+            "line_end": 962,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#957-962) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 962,
+            "line_end": 967,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#962-967) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 967,
+            "line_end": 972,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#967-972) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 972,
+            "line_end": 977,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#972-977) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 977,
+            "line_end": 982,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#977-982) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 982,
+            "line_end": 988,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#982-988) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 988,
+            "line_end": 994,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#988-994) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 994,
+            "line_end": 999,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#994-999) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 999,
+            "line_end": 1005,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#999-1005) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1005,
+            "line_end": 1014,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1005-1014) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1014,
+            "line_end": 1021,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1014-1021) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1021,
+            "line_end": 1027,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1021-1027) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1027,
+            "line_end": 1032,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1027-1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "line_end": 1038,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1032-1038) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1038,
+            "line_end": 1043,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1038-1043) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1043,
+            "line_end": 1049,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1043-1049) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1049,
+            "line_end": 1056,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1049-1056) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1056,
+            "line_end": 1063,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1056-1063) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1063,
+            "line_end": 1070,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1063-1070) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1070,
+            "line_end": 1078,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1070-1078) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1078,
+            "line_end": 1086,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1078-1086) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1086,
+            "line_end": 1094,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1086-1094) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1094,
+            "line_end": 1100,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1094-1100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1101,
+            "line_end": 1108,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1101-1108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1108,
+            "line_end": 1117,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1108-1117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1117,
+            "line_end": 1126,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1117-1126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1126,
+            "line_end": 1135,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1126-1135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1135,
+            "line_end": 1143,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1135-1143) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1143,
+            "line_end": 1150,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1143-1150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1150,
+            "line_end": 1158,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1150-1158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1158,
+            "line_end": 1162,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1158-1162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1162,
+            "line_end": 1168,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1162-1168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1168,
+            "line_end": 1175,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1168-1175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1175,
+            "line_end": 1183,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1175-1183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1183,
+            "line_end": 1191,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1183-1191) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1191,
+            "line_end": 1197,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1191-1197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1197,
+            "line_end": 1203,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1197-1203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1203,
+            "line_end": 1209,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1203-1209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1209,
+            "line_end": 1213,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1209-1213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1214,
+            "line_end": 1220,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1214-1220) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1220,
+            "line_end": 1227,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1220-1227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1227,
+            "line_end": 1233,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1227-1233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1234,
+            "line_end": 1239,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1234-1239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1240,
+            "line_end": 1247,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1240-1247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1247,
+            "line_end": 1255,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1247-1255) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1255,
+            "line_end": 1262,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1255-1262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1263,
+            "line_end": 1269,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1263-1269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1269,
+            "line_end": 1277,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1269-1277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1277,
+            "line_end": 1286,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1277-1286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1286,
+            "line_end": 1295,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1286-1295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1295,
+            "line_end": 1303,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1295-1303) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1303,
+            "line_end": 1314,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1303-1314) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1314,
+            "line_end": 1324,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1314-1324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1324,
+            "line_end": 1339,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1324-1339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1339,
+            "line_end": 1347,
+            "message": "Function 'usingOraclize.oraclize_query' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1339-1347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1347,
+            "line_end": 1353,
+            "message": "Function 'usingOraclize.oraclize_cbAddress' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1347-1353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1353,
+            "line_end": 1356,
+            "message": "Function 'usingOraclize.oraclize_setProof' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1353-1356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1356,
+            "line_end": 1359,
+            "message": "Function 'usingOraclize.oraclize_setCustomGasPrice' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1356-1359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1359,
+            "line_end": 1364,
+            "message": "Function 'usingOraclize.oraclize_randomDS_getSessionPubKeyHash' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1359-1364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1372,
+            "message": "Parameter '_a' of usingOraclize.parseAddr (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1393,
+            "message": "Parameter '_a' of usingOraclize.strCompare (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1393,
+            "line_end": 1394,
+            "message": "Parameter '_b' of usingOraclize.strCompare (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1393-1394) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1407,
+            "message": "Parameter '_haystack' of usingOraclize.indexOf (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1407) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1408,
+            "message": "Parameter '_needle' of usingOraclize.indexOf (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1408) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1433,
+            "message": "Parameter '_a' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1433,
+            "message": "Parameter '_b' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1433,
+            "message": "Parameter '_c' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1433,
+            "message": "Parameter '_d' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1433,
+            "message": "Parameter '_e' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1460,
+            "message": "Parameter '_a' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1460) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1460,
+            "line_end": 1461,
+            "message": "Parameter '_b' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1460-1461) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1461,
+            "message": "Parameter '_c' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1461) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1461,
+            "line_end": 1462,
+            "message": "Parameter '_d' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1461-1462) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1468,
+            "message": "Parameter '_a' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1468,
+            "message": "Parameter '_b' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1468,
+            "line_end": 1469,
+            "message": "Parameter '_c' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1468-1469) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1471,
+            "message": "Parameter '_a' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1471) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1471,
+            "line_end": 1472,
+            "message": "Parameter '_b' of usingOraclize.strConcat (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1471-1472) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1476,
+            "message": "Parameter '_a' of usingOraclize.parseInt (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1476) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1481,
+            "line_end": 1482,
+            "message": "Parameter '_a' of usingOraclize.parseInt (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1481-1482) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1482,
+            "message": "Parameter '_b' of usingOraclize.parseInt (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1482) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1529,
+            "line_end": 1530,
+            "message": "Function 'usingOraclize.oraclize_setNetworkName' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1529-1530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1530,
+            "message": "Parameter '_network_name' of usingOraclize.oraclize_setNetworkName (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1530,
+            "line_end": 1531,
+            "message": "Function 'usingOraclize.oraclize_getNetworkName' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1530-1531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1531,
+            "line_end": 1585,
+            "message": "Function 'usingOraclize.oraclize_newRandomDSQuery' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1531-1585) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1532,
+            "message": "Parameter '_delay' of usingOraclize.oraclize_newRandomDSQuery (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1532,
+            "message": "Parameter '_nbytes' of usingOraclize.oraclize_newRandomDSQuery (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1532,
+            "message": "Parameter '_customGasLimit' of usingOraclize.oraclize_newRandomDSQuery (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1585,
+            "line_end": 1590,
+            "message": "Function 'usingOraclize.oraclize_randomDS_setCommitment' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1585-1590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1616,
+            "line_end": 1652,
+            "message": "Function 'usingOraclize.oraclize_randomDS_proofVerify__sessionKeyValidity' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1616-1652) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1658,
+            "line_end": 1666,
+            "message": "Function 'usingOraclize.oraclize_randomDS_proofVerify__returnCode' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1658-1666) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1659,
+            "message": "Parameter '_queryId' of usingOraclize.oraclize_randomDS_proofVerify__returnCode (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1659,
+            "message": "Parameter '_result' of usingOraclize.oraclize_randomDS_proofVerify__returnCode (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1659,
+            "message": "Parameter '_proof' of usingOraclize.oraclize_randomDS_proofVerify__returnCode (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1667,
+            "message": "Parameter 'n_random_bytes' of usingOraclize.matchBytes32Prefix (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1667) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1671,
+            "line_end": 1730,
+            "message": "Function 'usingOraclize.oraclize_randomDS_proofVerify__main' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1671-1730) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1676,
+            "message": "Parameter 'context_name' of usingOraclize.oraclize_randomDS_proofVerify__main (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1676) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1759,
+            "line_end": 1802,
+            "message": "Function 'usingOraclize.safer_ecrecover' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1759-1802) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 875,
+            "line_end": 877,
+            "message": "Constant 'usingOraclize.day' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#875-877) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 877,
+            "line_end": 879,
+            "message": "Constant 'usingOraclize.week' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#877-879) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 879,
+            "line_end": 880,
+            "message": "Constant 'usingOraclize.month' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#879-880) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 880,
+            "line_end": 884,
+            "message": "Constant 'usingOraclize.proofType_NONE' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#880-884) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 884,
+            "message": "Constant 'usingOraclize.proofType_TLSNotary' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#884) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 884,
+            "line_end": 885,
+            "message": "Constant 'usingOraclize.proofType_Android' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#884-885) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 885,
+            "line_end": 886,
+            "message": "Constant 'usingOraclize.proofType_Ledger' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#885-886) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 886,
+            "line_end": 887,
+            "message": "Constant 'usingOraclize.proofType_Native' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#886-887) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 888,
+            "message": "Constant 'usingOraclize.proofStorage_IPFS' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#888) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 888,
+            "line_end": 889,
+            "message": "Constant 'usingOraclize.networkID_auto' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#888-889) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 889,
+            "message": "Constant 'usingOraclize.networkID_mainnet' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#889) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 889,
+            "line_end": 890,
+            "message": "Constant 'usingOraclize.networkID_testnet' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#889-890) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 890,
+            "message": "Constant 'usingOraclize.networkID_morden' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#890) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 890,
+            "line_end": 891,
+            "message": "Constant 'usingOraclize.networkID_consensys' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#890-891) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 891,
+            "line_end": 892,
+            "message": "Variable 'usingOraclize.OAR' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#891-892) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1529,
+            "message": "Variable 'usingOraclize.oraclize_network_name' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1529) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1590,
+            "line_end": 1591,
+            "message": "Variable 'usingOraclize.oraclize_randomDS_args' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1590-1591) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1591,
+            "line_end": 1592,
+            "message": "Variable 'usingOraclize.oraclize_randomDS_sessionKeysHashVerified' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1591-1592) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1652,
+            "line_end": 1658,
+            "message": "Modifier 'usingOraclize.oraclize_randomDS_proofVerify' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1652-1658) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1892,
+            "line_end": 1893,
+            "message": "Event 'WolfSale.newOraclizeQuery' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1892-1893) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1893,
+            "message": "Event 'WolfSale.newETHUSDPrice' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1893) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1931,
+            "line_end": 1951,
+            "message": "Function 'WolfSale.__callback' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1931-1951) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1932,
+            "message": "Parameter '' of WolfSale.__callback (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1932) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1951,
+            "line_end": 1958,
+            "message": "Function 'WolfSale.UpdateUSDETHPriceAfter' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1951-1958) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1960,
+            "message": "Parameter '_tokenContract' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1960) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1960,
+            "message": "Parameter '_tokensSaleHolder' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1960) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1962,
+            "message": "Parameter '_saleMainAddress' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1962) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1962,
+            "line_end": 1964,
+            "message": "Parameter '_saleSecondAddress' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1962-1964) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1964,
+            "message": "Parameter '_ICOstarttime' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1964) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1964,
+            "message": "Parameter '_ICOendtime' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1964) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1966,
+            "message": "Parameter '_minimumInvestment' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1966) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1966,
+            "line_end": 1967,
+            "message": "Parameter '_maximumInvestment' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1966-1967) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1967,
+            "line_end": 1968,
+            "message": "Parameter '_PriceOf1000TokensInUSD' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1967-1968) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1968,
+            "message": "Parameter '_softcapInTokens' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1968) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1968,
+            "line_end": 1970,
+            "message": "Parameter '_hardcapInTokens' of WolfSale. (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1968-1970) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1987,
+            "line_end": 1990,
+            "message": "Function 'WolfSale.RefillOraclize' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1987-1990) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "message": "Function 'WolfSale.RedeemOraclize' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of WolfSale.RedeemOraclize (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "message": "Function 'WolfSale.ICOactive' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1873,
+            "message": "Variable 'WolfSale.ICOstarttime' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1873) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1873,
+            "line_end": 1875,
+            "message": "Variable 'WolfSale.ICOendtime' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1873-1875) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1884,
+            "message": "Variable 'WolfSale.USDETH' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1884) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 1884,
+            "line_end": 1886,
+            "message": "Variable 'WolfSale.PriceOf1000TokensInUSD' (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#1884-1886) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol",
+            "impact": "Informational",
+            "line": 879,
+            "line_end": 880,
+            "message": "usingOraclize.month (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#879-880) is never used in WolfSale\nusingOraclize.proofType_NONE (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#880-884) is never used in WolfSale\nusingOraclize.proofType_TLSNotary (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#884) is never used in WolfSale\nusingOraclize.proofType_Android (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#884-885) is never used in WolfSale\nusingOraclize.proofType_Ledger (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#885-886) is never used in WolfSale\nusingOraclize.proofType_Native (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#886-887) is never used in WolfSale\nusingOraclize.proofStorage_IPFS (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#888) is never used in WolfSale\nusingOraclize.networkID_mainnet (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#889) is never used in WolfSale\nusingOraclize.networkID_testnet (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#889-890) is never used in WolfSale\nusingOraclize.networkID_morden (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#890) is never used in WolfSale\nusingOraclize.networkID_consensys (0x21e9738e66e9d4a5e145376b4be0867b3666f34f.sol#890-891) is never used in WolfSale\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

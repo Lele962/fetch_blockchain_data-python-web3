@@ -1,0 +1,349 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BFDToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 235,
+            "line_end": 237,
+            "message": "Contract locking ether found in 0x117a4db782f29598d9627a57be5ed331f6aa446c.sol:\n\tContract BFDToken has payable functions:\n\t - fallback (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#235-237)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 228,
+            "message": "BFDToken.decimals should be constant (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#226-228)\nBFDToken.name should be constant (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#221-222)\nBFDToken.symbol should be constant (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#222-226)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 83,
+            "message": "Ownable.transferOwnership (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#77-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 90,
+            "message": "ERC20Basic.balanceOf (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#89-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 129,
+            "message": "BasicToken.balanceOf (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#127-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 119,
+            "message": "BasicToken.transfer (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#108-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 93,
+            "message": "ERC20Basic.transfer (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#90-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "ERC20.allowance (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 190,
+            "message": "StandardToken.allowance (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#188-190) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "ERC20.transferFrom (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#133-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 164,
+            "message": "StandardToken.transferFrom (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#151-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 180,
+            "message": "StandardToken.approve (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#174-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 137,
+            "message": "ERC20.approve (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#134-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 202,
+            "message": "StandardToken.increaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#195-202) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 214,
+            "message": "StandardToken.decreaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#202-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BFDToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 237,
+            "message": "BFDToken.fallback (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#235-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BFDToken",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "message": "BFDToken.transferAnyERC20Token (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x117a4db782f29598d9627a57be5ed331f6aa446c.sol:\n\t- pragma solidity^0.4.18 (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "Function 'Ownable.Ownable' (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#64-65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_to' of BasicToken.transfer (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 110,
+            "message": "Parameter '_value' of BasicToken.transfer (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#108-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 189,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#188-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_spender' of StandardToken.approve (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 178,
+            "message": "Parameter '_value' of StandardToken.approve (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 195,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 196,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#195-196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 204,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#203-204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 204,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 234,
+            "message": "Function 'BFDToken.BFDToken' (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#233-234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x117a4db782f29598d9627a57be5ed331f6aa446c.sol",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 233,
+            "message": "Variable 'BFDToken.INITIAL_SUPPLY' (0x117a4db782f29598d9627a57be5ed331f6aa446c.sol#228-233) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,227 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:2:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:780:9: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+        bytes genericPayload,
+        ^------------------^
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:832:9: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+        bytes genericPayload,
+        ^------------------^
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:88:5: Warning: Function state mutability can be restricted to pure
+    function fetchReturnData() internal returns (bool success){
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:430:28: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+            let success := call(
+                           ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:722:24: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+            success := delegatecall(
+                       ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:761:24: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+            success := delegatecall(
+                       ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:1181:5: Warning: Function state mutability can be restricted to pure
+    function initialiseTradeFlags(Trade[] trades)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:1401:5: Warning: Function state mutability can be restricted to pure
+    function calculateFee(uint256 amount, uint256 fee) internal view returns (uint256){
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:1408:5: Warning: Function state mutability can be restricted to pure
+    function removeFee(uint256 amount, uint256 fee) internal view returns (uint256){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Affiliate.payout (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#569-578) sends eth to arbitrary user
+	Dangerous calls:
+	- affiliateBeneficiary.transfer(SafeMath.div(SafeMath.mul(address(this).balance,affiliatePercentage),getTotalFeePercentage())) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#573-576)
+	- companyBeneficiary.transfer(address(this).balance) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#576-578)
+TotleProxyPrimary.performRebalance (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1499-1513) sends eth to arbitrary user
+	Dangerous calls:
+	- paymentReceiver.transfer(address(this).balance) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1512)
+	- msg.sender.transfer(address(this).balance) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1512-1513)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+Utils.getDecimals (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#424-456) is declared view but contains assembly code
+ExchangeHandler.getAmountToGive (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753) is declared view but contains assembly code
+ExchangeHandler.staticExchangeChecks (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+i in TotlePrimary.staticChecks (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1152) is a local variable never initialiazed
+j in TotlePrimary.staticChecks (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1188) is a local variable never initialiazed
+i in TotlePrimary.performRebalance (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1062) is a local variable never initialiazed
+j in TotlePrimary.performTrade (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1252) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+TotleProxyPrimary.transferTokensOut (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) does not use the value returned by external calls:
+	-ERC20SafeTransfer.safeTransfer(trades[i].tokenAddress,receiver,balance) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)
+	-ERC20SafeTransfer.safeTransfer(trades[i].tokenAddress,msg.sender,balance) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+TotlePrimary.performRebalance has external calls inside a loop:
+	- errorReporter.revertTx(Amounts spent/received in trade not acceptable) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1100-1102)
+TotlePrimary.staticChecks has external calls inside a loop:
+	- errorReporter.revertTx(A buy has occured before this sell) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1157)
+TotlePrimary.staticChecks has external calls inside a loop:
+	- errorReporter.revertTx(Taker has not sent allowance/balance on a non-optional trade) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1162-1165)
+TotlePrimary.performTrade has external calls inside a loop:
+	- amountToGiveForOrder = Utils.min(thisHandler.getAmountToGive(thisOrder.genericPayload),amounts.amountLeftToSpendOnTrade) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1276-1280)
+TotlePrimary.performTrade has external calls inside a loop:
+	- ! thisHandler.staticExchangeChecks(thisOrder.genericPayload) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1288-1289)
+TotlePrimary.performTrade has external calls inside a loop:
+	- errorReporter.revertTx(Unable to transfer tokens to handler) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1295)
+TotlePrimary.performTrade has external calls inside a loop:
+	- (amountSpentOnOrder,amountReceivedFromOrder) = thisHandler.performSellOrder(thisOrder.genericPayload,amountToGiveForOrder) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1300-1302)
+TotlePrimary.performTrade has external calls inside a loop:
+	- (amountSpentOnOrder,amountReceivedFromOrder) = thisHandler.performBuyOrder.value(amountToGiveForOrder)(thisOrder.genericPayload,amountToGiveForOrder) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1312-1314)
+TotlePrimary.transferTokens has external calls inside a loop:
+	- ! tokenTransferProxy.transferFrom(trades[i].tokenAddress,msg.sender,address(this),trades[i].tokenAmount) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1395-1402)
+TotlePrimary.transferTokens has external calls inside a loop:
+	- errorReporter.revertTx(TTP unable to transfer tokens to primary) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1401-1402)
+TotleProxyPrimary.transferTokensIn has external calls inside a loop:
+	- ! tokenTransferProxy.transferFrom(trades[i].tokenAddress,msg.sender,address(this),trades[i].tokenAmount) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in AffiliateRegistry.overrideRegisterAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#600-611):
+	External calls:
+	- newAffiliate.init(_companyBeneficiary,_companyPercentage,affiliateBeneficiary,affiliatePercentage) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#604-606)
+	State variables written after the call(s):
+	- affiliateContracts (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#606)
+Reentrancy in AffiliateRegistry.registerAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#590-598):
+	External calls:
+	- newAffiliate.init(companyBeneficiary,companyPercentage,affiliateBeneficiary,affiliatePercentage) (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#592-596)
+	State variables written after the call(s):
+	- affiliateContracts (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#596)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20SafeTransfer.fetchReturnData uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#90-107)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#92-107
+Utils.getDecimals uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#424-456)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#433-456
+AffiliateRegistry.createClone uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#615-625)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#616-625
+ExchangeHandler.getAmountToGive uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#724-753
+ExchangeHandler.staticExchangeChecks uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#764-791
+ExchangeHandler.performBuyOrder uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#800-843)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#808-843
+ExchangeHandler.performSellOrder uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#853-916)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#861-916
+TotlePrimary.fallback uses assembly (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1452-1464)
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1456-1460
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Different versions of Solidity is used in /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol:
+	- Version used: ['0.4.25', 'ABIEncoderV2']
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1 declares pragma solidity0.4.25
+	- /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#2-3 declares pragma experimentalABIEncoderV2
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+Ownable.renounceOwnership (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#42-48) should be declared external
+Ownable.transferOwnership (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#51-56) should be declared external
+ERC20.totalSupply (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#135-136) should be declared external
+ERC20.balanceOf (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#136-138) should be declared external
+ERC20.allowance (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#138-141) should be declared external
+ERC20.transfer (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#141-143) should be declared external
+ERC20.approve (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#143-146) should be declared external
+ERC20.transferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#146-152) should be declared external
+ERC20.decimals (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#154-156) should be declared external
+TokenTransferProxy.addAuthorizedAddress (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#218-226) should be declared external
+TokenTransferProxy.removeAuthorizedAddress (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#230-243) should be declared external
+TokenTransferProxy.transferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#254-269) should be declared external
+TokenTransferProxy.getAuthorizedAddresses (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#277-284) should be declared external
+Pausable.paused (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#299-301) should be declared external
+Pausable.pause (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#325-330) should be declared external
+Pausable.unpause (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#332-333) should be declared external
+ErrorReporter.revertTx (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#545-546) should be declared external
+Affiliate.init (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553-569) should be declared external
+Affiliate.payout (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#569-578) should be declared external
+Affiliate.fallback (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#578-579) should be declared external
+AffiliateRegistry.deleteAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#611-613) should be declared external
+AffiliateRegistry.isValidAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#625-628) should be declared external
+AffiliateRegistry.updateCompanyInfo (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#628-635) should be declared external
+ExchangeHandler.getAmountToGive (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#718-753) should be declared external
+ExchangeHandler.staticExchangeChecks (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#758-791) should be declared external
+ExchangeHandler.performBuyOrder (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#800-843) should be declared external
+ExchangeHandler.performSellOrder (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#853-916) should be declared external
+TotlePrimary.updateDefaultFeeAccount (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#994-996) should be declared external
+TotlePrimary.addHandlerToWhitelist (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1004-1011) should be declared external
+TotlePrimary.removeHandlerFromWhitelist (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1019-1036) should be declared external
+TotlePrimary.performRebalance (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1040-1139) should be declared external
+TotlePrimary.fallback (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1452-1464) should be declared external
+TotleProxyPrimary.performRebalance (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1499-1513) should be declared external
+TotleProxyPrimary.setTokenTransferProxy (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) should be declared external
+TotleProxyPrimary.setTotlePrimary (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in ERC20SafeTransfer.safeTransfer (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#67-74):
+	-require(bool)(_tokenAddress.call(bytes4(keccak256()(transfer(address,uint256))),_to,_value)) /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69-74
+Low level call in ERC20SafeTransfer.safeTransferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74-81):
+	-require(bool)(_tokenAddress.call(bytes4(keccak256()(transferFrom(address,address,uint256))),_from,_to,_value)) /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76-81
+Low level call in ERC20SafeTransfer.safeApprove (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#81-90):
+	-require(bool)(_tokenAddress.call(bytes4(keccak256()(approve(address,uint256))),_spender,_value)) /sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83-88
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Ownable.transferOwnership (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#52) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#60-67) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#60-61) is not in mixedCase
+Parameter '_tokenAddress' of ERC20SafeTransfer.safeTransfer (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#67-69) is not in mixedCase
+Parameter '_to' of ERC20SafeTransfer.safeTransfer (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69) is not in mixedCase
+Parameter '_value' of ERC20SafeTransfer.safeTransfer (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#69) is not in mixedCase
+Parameter '_tokenAddress' of ERC20SafeTransfer.safeTransferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74) is not in mixedCase
+Parameter '_from' of ERC20SafeTransfer.safeTransferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#74-76) is not in mixedCase
+Parameter '_to' of ERC20SafeTransfer.safeTransferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76) is not in mixedCase
+Parameter '_value' of ERC20SafeTransfer.safeTransferFrom (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#76) is not in mixedCase
+Parameter '_tokenAddress' of ERC20SafeTransfer.safeApprove (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#81-83) is not in mixedCase
+Parameter '_spender' of ERC20SafeTransfer.safeApprove (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83) is not in mixedCase
+Parameter '_value' of ERC20SafeTransfer.safeApprove (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#83) is not in mixedCase
+Parameter '_token' of Withdrawable.withdrawToken (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#115) is not in mixedCase
+Parameter '_amount' of Withdrawable.withdrawToken (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#115-116) is not in mixedCase
+Parameter '_amount' of Withdrawable.withdrawETH (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#128) is not in mixedCase
+Parameter '_a' of SafeMath.mul (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#341) is not in mixedCase
+Parameter '_b' of SafeMath.mul (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#341) is not in mixedCase
+Parameter '_a' of SafeMath.div (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#358) is not in mixedCase
+Parameter '_b' of SafeMath.div (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#358) is not in mixedCase
+Parameter '_a' of SafeMath.sub (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#378) is not in mixedCase
+Parameter '_b' of SafeMath.sub (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#378) is not in mixedCase
+Parameter '_a' of SafeMath.add (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#386-388) is not in mixedCase
+Parameter '_b' of SafeMath.add (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#388) is not in mixedCase
+Function 'Utils.max_qty' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#408) is not in mixedCase
+Function 'Utils.max_rate' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#409) is not in mixedCase
+Function 'Utils.max_decimals' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#409-411) is not in mixedCase
+Function 'Utils.eth_decimals' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#411-412) is not in mixedCase
+Function 'Utils.max_uint' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#412-413) is not in mixedCase
+Parameter '_companyBeneficiary' of Affiliate.init (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase
+Parameter '_companyPercentage' of Affiliate.init (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase
+Parameter '_affiliateBeneficiary' of Affiliate.init (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553) is not in mixedCase
+Parameter '_affiliatePercentage' of Affiliate.init (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#553-554) is not in mixedCase
+Parameter '_target' of AffiliateRegistry. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#586-589) is not in mixedCase
+Parameter '_companyBeneficiary' of AffiliateRegistry. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#589) is not in mixedCase
+Parameter '_companyPercentage' of AffiliateRegistry. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#589) is not in mixedCase
+Parameter '_companyBeneficiary' of AffiliateRegistry.overrideRegisterAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#600-601) is not in mixedCase
+Parameter '_companyPercentage' of AffiliateRegistry.overrideRegisterAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#601) is not in mixedCase
+Parameter '_affiliateAddress' of AffiliateRegistry.deleteAffiliate (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#611) is not in mixedCase
+Parameter '_totlePrimary' of TotleControl. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#657-658) is not in mixedCase
+Parameter '_totlePrimary' of TotleControl.addTotle (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#661) is not in mixedCase
+Parameter '_totlePrimary' of TotleControl.removeTotle (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#666-667) is not in mixedCase
+Constant 'SelectorProvider.getAmountToGiveSelector' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#673-676) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'SelectorProvider.staticExchangeChecksSelector' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#677-680) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'SelectorProvider.performBuyOrderSelector' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#681-683) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'SelectorProvider.performSellOrderSelector' (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#683-687) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_errorReporter' of ExchangeHandler. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#706-707) is not in mixedCase
+Parameter '_tokenTransferProxy' of TotlePrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#975) is not in mixedCase
+Parameter '_affiliateRegistry' of TotlePrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#975-976) is not in mixedCase
+Parameter '_errorReporter' of TotlePrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#976) is not in mixedCase
+Parameter '_defaultFeeAccount' of TotlePrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#976) is not in mixedCase
+Parameter '_tokenTransferProxy' of TotleProxyPrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1496) is not in mixedCase
+Parameter '_totlePrimary' of TotleProxyPrimary. (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#1496) is not in mixedCase
+Parameter '_newTokenTransferProxy' of TotleProxyPrimary.setTokenTransferProxy (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) is not in mixedCase
+Parameter '_newTotlePrimary' of TotleProxyPrimary.setTotlePrimary (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+SelectorProvider.getAmountToGiveSelector (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#673-676) is never used in ExchangeHandler
+SelectorProvider.staticExchangeChecksSelector (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#677-680) is never used in ExchangeHandler
+SelectorProvider.performBuyOrderSelector (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#681-683) is never used in ExchangeHandler
+SelectorProvider.performSellOrderSelector (/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol#683-687) is never used in ExchangeHandler
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/sb/0x0a3fba29c8941fb09f6c712c06d2eade82df225b.sol analyzed (17 contracts), 126 result(s) found

@@ -1,0 +1,767 @@
+{
+    "errors": [
+        "EXIT_CODE_78"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "releaseTokensTo",
+            "impact": "High",
+            "line": 234,
+            "line_end": 253,
+            "message": "Reentrancy in RC.releaseTokensTo (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#234-253):\n\tExternal calls:\n\t- tokenAmount = tokenSaleContract.buyFromRC.value(msg.value)(buyer,oneTokenInUsdWei,remainingTokens) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#238-241)\n\tState variables written after the call(s):\n\t- remainingTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#245-246)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "addMeByRC",
+            "impact": "Medium",
+            "line": 393,
+            "line_end": 394,
+            "message": "TokenSale.addMeByRC uses tx.origin for authorization:\n\t- require(bool)(tx.origin == owner) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#393-394)\n",
+            "name": "tx-origin"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 280,
+            "line_end": 301,
+            "message": "RC.fallback (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#280-301) does not use the value returned by external calls:\n\t-tokenSaleContract.claim(msg.sender,addTokenAmount) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#299-301)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "buyFromRC",
+            "impact": "Medium",
+            "line": 345,
+            "line_end": 380,
+            "message": "TokenSale.buyFromRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#345-380) does not use the value returned by external calls:\n\t-tokenContract.transfer(_buyer,tokenAmount) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#374-377)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "RC",
+            "impact": "Low",
+            "line": 183,
+            "line_end": 208,
+            "message": "Reentrancy in RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#183-208):\n\tExternal calls:\n\t- tokenSaleContract.addMeByRC() (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#201-204)\n\tState variables written after the call(s):\n\t- oneTokenInUsdWei (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#205-206)\n\t- remainingTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#204-205)\n\t- soldTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#204)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "RC",
+            "impact": "Low",
+            "line": 183,
+            "line_end": 208,
+            "message": "Reentrancy in RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#183-208):\n\tExternal calls:\n\t- tokenSaleContract.addMeByRC() (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#201-204)\n\t- setTimeRC(_startTime,_endTime) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#206-208)\n\tState variables written after the call(s):\n\t- endTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#206-208)\n\t- startTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#206-208)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "releaseTokensTo",
+            "impact": "Low",
+            "line": 234,
+            "line_end": 253,
+            "message": "Reentrancy in RC.releaseTokensTo (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#234-253):\n\tExternal calls:\n\t- tokenAmount = tokenSaleContract.buyFromRC.value(msg.value)(buyer,oneTokenInUsdWei,remainingTokens) (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#238-241)\n\tState variables written after the call(s):\n\t- balanceUser (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#241-244)\n\t- soldTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#246-247)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setTimeRC",
+            "impact": "Low",
+            "line": 208,
+            "line_end": 223,
+            "message": "Reentrancy in RC.setTimeRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#208-223):\n\tExternal calls:\n\t- startTime = tokenSaleContract.startTime() (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#213-215)\n\t- endTime = tokenSaleContract.endTime() (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#219-222)\n\tState variables written after the call(s):\n\t- endTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#219-222)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setTimeRC",
+            "impact": "Low",
+            "line": 208,
+            "line_end": 223,
+            "message": "Reentrancy in RC.setTimeRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#208-223):\n\tExternal calls:\n\t- startTime = tokenSaleContract.startTime() (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#213-215)\n\tState variables written after the call(s):\n\t- endTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#222)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 72,
+            "message": "Ownable.transferOwnership (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#64-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 73,
+            "message": "tokenInterface.balanceOf (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#72-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 77,
+            "message": "tokenInterface.transfer (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#75-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "rateInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "readRate",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 82,
+            "message": "rateInterface.readRate (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#77-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "started",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 257,
+            "message": "RC.started (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#253-257) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "started",
+            "impact": "Informational",
+            "line": 85,
+            "message": "ICOEngineInterface.started (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "ended",
+            "impact": "Informational",
+            "line": 88,
+            "message": "ICOEngineInterface.ended (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "ended",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 262,
+            "message": "RC.ended (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#257-262) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "startTime",
+            "impact": "Informational",
+            "line": 91,
+            "message": "ICOEngineInterface.startTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "startTime",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 265,
+            "message": "RC.startTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#262-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "endTime",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 95,
+            "message": "ICOEngineInterface.endTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#94-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "endTime",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 269,
+            "message": "RC.endTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#266-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "totalTokens",
+            "impact": "Informational",
+            "line": 105,
+            "message": "ICOEngineInterface.totalTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "totalTokens",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 271,
+            "message": "RC.totalTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#269-271) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "remainingTokens",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 276,
+            "message": "RC.remainingTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#271-276) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "remainingTokens",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 110,
+            "message": "ICOEngineInterface.remainingTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#109-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "price",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 280,
+            "message": "RC.price (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#276-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICOEngineInterface",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "price",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 117,
+            "message": "ICOEngineInterface.price (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#116-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KYCBase",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "buyTokensFor",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 147,
+            "message": "KYCBase.buyTokensFor (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#138-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KYCBase",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "buyTokens",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 151,
+            "message": "KYCBase.buyTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#147-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setTime",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 230,
+            "message": "RC.setTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#227-230) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RC",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 301,
+            "message": "RC.fallback (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#280-301) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "buyFromRC",
+            "impact": "Informational",
+            "line": 345,
+            "line_end": 380,
+            "message": "TokenSale.buyFromRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#345-380) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "addMeByRC",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 396,
+            "message": "TokenSale.addMeByRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#392-396) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 404,
+            "line_end": 407,
+            "message": "TokenSale.withdraw (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#404-407) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "withdrawTokens",
+            "impact": "Informational",
+            "line": 408,
+            "line_end": 412,
+            "message": "TokenSale.withdrawTokens (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#408-412) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setTokenContract",
+            "impact": "Informational",
+            "line": 412,
+            "line_end": 416,
+            "message": "TokenSale.setTokenContract (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#412-416) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setWalletAddress",
+            "impact": "Informational",
+            "line": 417,
+            "line_end": 420,
+            "message": "TokenSale.setWalletAddress (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#417-420) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setAdvisorAddress",
+            "impact": "Informational",
+            "line": 420,
+            "line_end": 424,
+            "message": "TokenSale.setAdvisorAddress (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#420-424) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setAdvisorFee",
+            "impact": "Informational",
+            "line": 424,
+            "line_end": 427,
+            "message": "TokenSale.setAdvisorFee (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#424-427) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "setRateContract",
+            "impact": "Informational",
+            "message": "TokenSale.setRateContract (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "claim",
+            "impact": "Informational",
+            "message": "TokenSale.claim (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "TokenSale.fallback (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol:\n\t- pragma solidity^0.4.19 (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 53,
+            "message": "Function 'Ownable.Ownable' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#49-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 77,
+            "message": "Contract 'tokenInterface' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#72-77) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 82,
+            "message": "Contract 'rateInterface' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#77-82) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 127,
+            "message": "Function 'KYCBase.KYCBase' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#123-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 208,
+            "message": "Function 'RC.RC' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#183-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 183,
+            "message": "Parameter '_tokenSaleContract' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 184,
+            "message": "Parameter '_oneTokenInUsdWei' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#183-184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 184,
+            "message": "Parameter '_remainingTokens' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 185,
+            "message": "Parameter '_startTime' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#184-185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_endTime' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 186,
+            "message": "Parameter '_tokenThreshold' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 186,
+            "line_end": 187,
+            "message": "Parameter '_bonusThreshold' of RC.RC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#186-187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 210,
+            "message": "Parameter '_startTime' of RC.setTimeRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#210) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 211,
+            "message": "Parameter '_endTime' of RC.setTimeRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#210-211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_newStart' of RC.setTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_newEnd' of RC.setTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 324,
+            "message": "Function 'TokenSale.TokenSale' (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#314-324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 315,
+            "message": "Parameter '_tokenAddress' of TokenSale.TokenSale (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#315) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 318,
+            "message": "Parameter '_rateAddress' of TokenSale.TokenSale (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#316-318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_startTime' of TokenSale.TokenSale (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_endTime' of TokenSale.TokenSale (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 325,
+            "line_end": 326,
+            "message": "Parameter '_oneTokenInUsdWei' of TokenSale.tokenValueInEther (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#325-326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 345,
+            "line_end": 347,
+            "message": "Parameter '_buyer' of TokenSale.buyFromRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#345-347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 347,
+            "line_end": 348,
+            "message": "Parameter '_rcTokenValue' of TokenSale.buyFromRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#347-348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 348,
+            "message": "Parameter '_remainingTokens' of TokenSale.buyFromRC (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 382,
+            "message": "Parameter '_amount' of TokenSale.forward (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#382) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 397,
+            "message": "Parameter '_newStart' of TokenSale.setTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 400,
+            "message": "Parameter '_newEnd' of TokenSale.setTime (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#397-400) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 413,
+            "message": "Parameter '_tokenContract' of TokenSale.setTokenContract (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 417,
+            "message": "Parameter '_wallet' of TokenSale.setWalletAddress (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#417) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_advisor' of TokenSale.setAdvisorAddress (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "line": 425,
+            "line_end": 427,
+            "message": "Parameter '_advisorFee' of TokenSale.setAdvisorFee (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol#425-427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "message": "Parameter '_rateAddress' of TokenSale.setRateContract (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "message": "Parameter '_buyer' of TokenSale.claim (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of TokenSale.claim (0xd7aa007c3e7ab454ffe3e20f0b28f926db295477.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

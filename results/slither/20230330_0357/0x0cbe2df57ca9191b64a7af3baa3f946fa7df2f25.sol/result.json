@@ -1,0 +1,1180 @@
+{
+    "errors": [
+        "EXIT_CODE_123"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 776,
+            "line_end": 810,
+            "message": "Contract locking ether found in 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol:\n\tContract Proxy has payable functions:\n\t - fallback (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#776-810)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FeePool",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "claimFees",
+            "impact": "Medium",
+            "line": 3411,
+            "line_end": 3431,
+            "message": "Reentrancy in FeePool.claimFees (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3411-3431):\n\tExternal calls:\n\t- availableFees = feesAvailable(messageSender,XDR) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3416)\n\tState variables written after the call(s):\n\t- lastFeeWithdrawal (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3420)\n\t- recentFeePeriods (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3423)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FeePool",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "closeCurrentFeePeriod",
+            "impact": "Medium",
+            "line": 3361,
+            "line_end": 3405,
+            "message": "Reentrancy in FeePool.closeCurrentFeePeriod (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3361-3405):\n\tExternal calls:\n\t- recentFeePeriods[0].startingDebtIndex = synthetix.synthetixState().debtLedgerLength() (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3399)\n\tState variables written after the call(s):\n\t- nextFeePeriodId (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3402)\n\t- recentFeePeriods (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3400)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "issueMaxSynths",
+            "impact": "Medium",
+            "line": 2856,
+            "line_end": 2865,
+            "message": "Reentrancy in Synthetix.issueMaxSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2856-2865):\n\tExternal calls:\n\t- maxIssuable = remainingIssuableSynths(messageSender,currencyKey) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2861)\n\t- issueSynths(currencyKey,maxIssuable) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2864)\n\tState variables written after the call(s):\n\t- messageSender (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2864)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "issueSynths",
+            "impact": "Medium",
+            "line": 2836,
+            "line_end": 2849,
+            "message": "Reentrancy in Synthetix.issueSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2836-2849):\n\tExternal calls:\n\t- require(bool,string)(amount <= remainingIssuableSynths(messageSender,currencyKey),Amount too large) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2842)\n\t- _addToDebtRegister(currencyKey,amount) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2845)\n\tState variables written after the call(s):\n\t- messageSender (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2845)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "removeSynth",
+            "impact": "Medium",
+            "line": 2390,
+            "line_end": 2422,
+            "message": "Reentrancy in Synthetix.removeSynth (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2390-2422):\n\tExternal calls:\n\t- require(bool,string)(synths[currencyKey].totalSupply() == 0,Synth supply exists) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2395)\n\tState variables written after the call(s):\n\t- synths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2419)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 3922,
+            "message": "empty in Synth.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3922) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3877,
+            "message": "empty in Synth.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3877) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 2586,
+            "message": "empty in Synthetix.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2586) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FeePool",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "feesByPeriod",
+            "impact": "Medium",
+            "line": 3674,
+            "message": "result in FeePool.feesByPeriod (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3674) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "triggerTokenFallbackIfNeeded",
+            "impact": "Medium",
+            "line": 4078,
+            "message": "empty in Synth.triggerTokenFallbackIfNeeded (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4078) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferSenderPaysFee",
+            "impact": "Medium",
+            "line": 3964,
+            "message": "empty in Synth.transferSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3964) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFromSenderPaysFee",
+            "impact": "Medium",
+            "line": 4002,
+            "message": "empty in Synth.transferFromSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4002) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 2555,
+            "message": "empty in Synthetix.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2555) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthetixEscrow",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "withdrawSynthetix",
+            "impact": "Medium",
+            "line": 1450,
+            "line_end": 1456,
+            "message": "SynthetixEscrow.withdrawSynthetix (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1450-1456) does not use the value returned by external calls:\n\t-synthetix.transfer(synthetix,quantity) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1455)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthetixEscrow",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "vest",
+            "impact": "Medium",
+            "line": 1534,
+            "line_end": 1560,
+            "message": "SynthetixEscrow.vest (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1534-1560) does not use the value returned by external calls:\n\t-synthetix.transfer(msg.sender,total) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1557)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3864,
+            "line_end": 3879,
+            "message": "Synth.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3864-3879) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3874)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3885,
+            "line_end": 3899,
+            "message": "Synth.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3885-3899) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3895)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 3905,
+            "line_end": 3924,
+            "message": "Synth.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3905-3924) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3920)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 3930,
+            "line_end": 3948,
+            "message": "Synth.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3930-3948) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3945)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferSenderPaysFee",
+            "impact": "Medium",
+            "line": 3952,
+            "line_end": 3966,
+            "message": "Synth.transferSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3952-3966) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3961)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferSenderPaysFee",
+            "impact": "Medium",
+            "line": 3970,
+            "line_end": 3983,
+            "message": "Synth.transferSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3970-3983) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(messageSender,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3979)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFromSenderPaysFee",
+            "impact": "Medium",
+            "line": 3987,
+            "line_end": 4004,
+            "message": "Synth.transferFromSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3987-4004) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4000)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFromSenderPaysFee",
+            "impact": "Medium",
+            "line": 4008,
+            "line_end": 4024,
+            "message": "Synth.transferFromSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4008-4024) does not use the value returned by external calls:\n\t-synthetix.synthInitiatedFeePayment(from,currencyKey,fee) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4021)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Low",
+            "line": 1081,
+            "message": "ExternStateToken.allowance.owner (local variable @ 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1081) shadows:\n\t- Owned.owner (state variable @ 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#369)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Low",
+            "line": 1188,
+            "message": "ExternStateToken.emitApproval.owner (local variable @ 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1188) shadows:\n\t- Owned.owner (state variable @ 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#369)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "totalIssuedSynths",
+            "impact": "Low",
+            "line": 2520,
+            "message": "Synthetix.totalIssuedSynths has external calls inside a loop:\n\t- require(bool,string)(! exchangeRates.rateIsStale(availableSynths[i].currencyKey()),Rate is stale) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2520)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "totalIssuedSynths",
+            "impact": "Low",
+            "line": 2526,
+            "line_end": 2528,
+            "message": "Synthetix.totalIssuedSynths has external calls inside a loop:\n\t- synthValue = availableSynths[i].totalSupply().multiplyDecimalRound(exchangeRates.rateForCurrency(availableSynths[i].currencyKey())).divideDecimalRound(currencyRate) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2526-2528)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthetixState",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "_addToDebtRegister",
+            "impact": "Low",
+            "line": 1770,
+            "line_end": 1823,
+            "message": "Reentrancy in SynthetixState._addToDebtRegister (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823):\n\tExternal calls:\n\t- xdrValue = synthetix.effectiveValue(sUSD,amount,XDR) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1778)\n\tState variables written after the call(s):\n\t- importedXDRAmount (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1787)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthetixState",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "_addToDebtRegister",
+            "impact": "Low",
+            "line": 1770,
+            "line_end": 1823,
+            "message": "Reentrancy in SynthetixState._addToDebtRegister (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823):\n\tExternal calls:\n\t- xdrValue = synthetix.effectiveValue(sUSD,amount,XDR) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1778)\n\t- existingDebt = synthetix.debtBalanceOf(account,XDR) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1798)\n\tState variables written after the call(s):\n\t- debtLedger (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1817-1819)\n\t- debtLedger (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1821)\n\t- issuanceData (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1811)\n\t- issuanceData (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1812)\n\t- totalIssuerCount (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1807)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "addSynth",
+            "impact": "Low",
+            "line": 2372,
+            "line_end": 2384,
+            "message": "Reentrancy in Synthetix.addSynth (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2372-2384):\n\tExternal calls:\n\t- currencyKey = synth.currencyKey() (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2376)\n\tState variables written after the call(s):\n\t- availableSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2380)\n\t- synths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2381)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthetixEscrow",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "appendVestingEntry",
+            "impact": "Low",
+            "line": 1484,
+            "line_end": 1511,
+            "message": "Reentrancy in SynthetixEscrow.appendVestingEntry (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1484-1511):\n\tExternal calls:\n\t- require(bool,string)(totalVestedBalance <= synthetix.balanceOf(this),Must be enough balance in the contract to provide for the vesting entry) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1495)\n\tState variables written after the call(s):\n\t- totalVestedAccountBalance (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1502)\n\t- totalVestedAccountBalance (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1507)\n\t- vestingSchedules (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1510)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "burn",
+            "impact": "Low",
+            "line": 4054,
+            "line_end": 4062,
+            "message": "Reentrancy in Synth.burn (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4054-4062):\n\tExternal calls:\n\t- tokenState.setBalanceOf(account,tokenState.balanceOf(account).sub(amount)) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4058)\n\tState variables written after the call(s):\n\t- totalSupply (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4059)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 3823,
+            "line_end": 3838,
+            "message": "Reentrancy in Synth.constructor (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823-3838):\n\tExternal calls:\n\t- require(bool,string)(_synthetix.synths(_currencyKey) == Synth(0),Currency key is already in use) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3833)\n\tState variables written after the call(s):\n\t- currencyKey (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3837)\n\t- feePool (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3835)\n\t- synthetix (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3836)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FeePool",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "feePaid",
+            "impact": "Low",
+            "line": 3348,
+            "line_end": 3356,
+            "message": "Reentrancy in FeePool.feePaid (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3348-3356):\n\tExternal calls:\n\t- xdrAmount = synthetix.effectiveValue(currencyKey,amount,XDR) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3352)\n\tState variables written after the call(s):\n\t- recentFeePeriods (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3355)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "issue",
+            "impact": "Low",
+            "line": 4043,
+            "line_end": 4051,
+            "message": "Reentrancy in Synth.issue (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4043-4051):\n\tExternal calls:\n\t- tokenState.setBalanceOf(account,tokenState.balanceOf(account).add(amount)) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4047)\n\tState variables written after the call(s):\n\t- totalSupply (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4048)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "removeSynth",
+            "impact": "Low",
+            "line": 2390,
+            "line_end": 2422,
+            "message": "Reentrancy in Synthetix.removeSynth (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2390-2422):\n\tExternal calls:\n\t- require(bool,string)(synths[currencyKey].totalSupply() == 0,Synth supply exists) (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2395)\n\tState variables written after the call(s):\n\t- availableSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2404)\n\t- availableSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2409)\n\t- availableSynths (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2412)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "_emit",
+            "impact": "Informational",
+            "line": 744,
+            "line_end": 774,
+            "message": "Proxy._emit uses assembly (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#744-774)\n\t- 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#751-774\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 776,
+            "line_end": 810,
+            "message": "Proxy.fallback uses assembly (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#776-810)\n\t- 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#781-794\n\t- 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#798-809\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenFallbackCaller",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "callTokenFallbackIfNeeded",
+            "impact": "Informational",
+            "line": 968,
+            "line_end": 1000,
+            "message": "TokenFallbackCaller.callTokenFallbackIfNeeded uses assembly (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#968-1000)\n\t- 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#985-991\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExternStateToken",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 1081,
+            "line_end": 1087,
+            "message": "ExternStateToken.allowance (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1081-1087) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExternStateToken",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 1092,
+            "line_end": 1098,
+            "message": "ExternStateToken.balanceOf (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1092-1098) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExternStateToken",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 1166,
+            "line_end": 1176,
+            "message": "ExternStateToken.approve (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1166-1176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthetixEscrow",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 1336,
+            "line_end": 1342,
+            "message": "SynthetixEscrow.balanceOf (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1336-1342) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeRates",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "rateForCurrency",
+            "impact": "Informational",
+            "line": 2099,
+            "line_end": 2105,
+            "message": "ExchangeRates.rateForCurrency (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2099-2105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeRates",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "ratesForCurrencies",
+            "impact": "Informational",
+            "line": 2110,
+            "line_end": 2122,
+            "message": "ExchangeRates.ratesForCurrencies (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2110-2122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeRates",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "lastRateUpdateTimeForCurrency",
+            "impact": "Informational",
+            "line": 2127,
+            "line_end": 2133,
+            "message": "ExchangeRates.lastRateUpdateTimeForCurrency (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2127-2133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ExchangeRates",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "lastRateUpdateTimesForCurrencies",
+            "impact": "Informational",
+            "line": 2138,
+            "line_end": 2150,
+            "message": "ExchangeRates.lastRateUpdateTimesForCurrencies (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2138-2150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "availableSynthCount",
+            "impact": "Informational",
+            "line": 2538,
+            "line_end": 2544,
+            "message": "Synthetix.availableSynthCount (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2538-2544) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 2551,
+            "line_end": 2557,
+            "message": "Synthetix.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2551-2557) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 2582,
+            "line_end": 2588,
+            "message": "Synthetix.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2582-2588) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synthetix",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "collateralisationRatio",
+            "impact": "Informational",
+            "line": 2964,
+            "line_end": 2974,
+            "message": "Synthetix.collateralisationRatio (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2964-2974) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 3864,
+            "line_end": 3879,
+            "message": "Synth.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3864-3879) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 3885,
+            "line_end": 3899,
+            "message": "Synth.transfer (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3885-3899) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 3905,
+            "line_end": 3924,
+            "message": "Synth.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3905-3924) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 3930,
+            "line_end": 3948,
+            "message": "Synth.transferFrom (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3930-3948) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferSenderPaysFee",
+            "impact": "Informational",
+            "line": 3952,
+            "line_end": 3966,
+            "message": "Synth.transferSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3952-3966) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferSenderPaysFee",
+            "impact": "Informational",
+            "line": 3970,
+            "line_end": 3983,
+            "message": "Synth.transferSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3970-3983) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFromSenderPaysFee",
+            "impact": "Informational",
+            "line": 3987,
+            "line_end": 4004,
+            "message": "Synth.transferFromSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3987-4004) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Synth",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "transferFromSenderPaysFee",
+            "impact": "Informational",
+            "line": 4008,
+            "line_end": 4024,
+            "message": "Synth.transferFromSenderPaysFee (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4008-4024) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenFallbackCaller",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "function": "callTokenFallbackIfNeeded",
+            "impact": "Informational",
+            "line": 968,
+            "line_end": 1000,
+            "message": "Low level call in TokenFallbackCaller.callTokenFallbackIfNeeded (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#968-1000):\n\t-recipient.call(abi.encodeWithSignature(tokenFallback(address,uint256,bytes),sender,amount,data)) 0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#996\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 189,
+            "message": "Function 'SafeDecimalMath._multiplyDecimalRound' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#176-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 269,
+            "message": "Function 'SafeDecimalMath._divideDecimalRound' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#257-269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Constant 'SafeDecimalMath.highPrecisionDecimals' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#115) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 375,
+            "message": "Parameter '_owner' of Owned. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_owner' of Owned.nominateNewOwner (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 455,
+            "message": "Parameter '_owner' of SelfDestructible. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#455) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 469,
+            "message": "Parameter '_beneficiary' of SelfDestructible.setSelfDestructBeneficiary (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#469) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 567,
+            "message": "Parameter '_associatedContract' of State. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#567) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 578,
+            "message": "Parameter '_associatedContract' of State.setAssociatedContract (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#578) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 729,
+            "message": "Parameter '_target' of Proxy.setTarget (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#729) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 744,
+            "line_end": 774,
+            "message": "Function 'Proxy._emit' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#744-774) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 857,
+            "message": "Parameter '_proxy' of Proxyable. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#857) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 865,
+            "message": "Parameter '_proxy' of Proxyable.setProxy (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#865) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 893,
+            "line_end": 900,
+            "message": "Modifier 'Proxyable.optionalProxy_onlyOwner' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#893-900) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1059,
+            "message": "Parameter '_tokenState' of ExternStateToken. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1059) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1060,
+            "message": "Parameter '_name' of ExternStateToken. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1060,
+            "message": "Parameter '_symbol' of ExternStateToken. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1060,
+            "message": "Parameter '_totalSupply' of ExternStateToken. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1060) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1061,
+            "message": "Parameter '_decimals' of ExternStateToken. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1061) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1107,
+            "message": "Parameter '_tokenState' of ExternStateToken.setTokenState (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1115,
+            "line_end": 1137,
+            "message": "Function 'ExternStateToken._internalTransfer' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1115-1137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1143,
+            "line_end": 1148,
+            "message": "Function 'ExternStateToken._transfer_byProxy' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1143-1148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1154,
+            "line_end": 1161,
+            "message": "Function 'ExternStateToken._transferFrom_byProxy' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1154-1161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1312,
+            "message": "Parameter '_synthetix' of SynthetixEscrow. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1312) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1322,
+            "message": "Parameter '_synthetix' of SynthetixEscrow.setSynthetix (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1322) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1741,
+            "message": "Parameter '_issuanceRatio' of SynthetixState.setIssuanceRatio (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1741) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1770,
+            "line_end": 1823,
+            "message": "Function 'SynthetixState._addToDebtRegister' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1770-1823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1934,
+            "message": "Parameter '_oracle' of ExchangeRates. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1934) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1935,
+            "message": "Parameter '_currencyKeys' of ExchangeRates. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1935) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 1936,
+            "message": "Parameter '_newRates' of ExchangeRates. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#1936) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2074,
+            "message": "Parameter '_oracle' of ExchangeRates.setOracle (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2074) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2086,
+            "message": "Parameter '_time' of ExchangeRates.setRateStalePeriod (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2086) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2355,
+            "message": "Parameter '_synthetixState' of Synthetix. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2355) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2356,
+            "message": "Parameter '_exchangeRates' of Synthetix. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2356,
+            "message": "Parameter '_feePool' of Synthetix. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2428,
+            "message": "Parameter '_escrow' of Synthetix.setEscrow (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2428) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2442,
+            "message": "Parameter '_exchangeRates' of Synthetix.setExchangeRates (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2442) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2456,
+            "message": "Parameter '_synthetixState' of Synthetix.setSynthetixState (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2720,
+            "line_end": 2773,
+            "message": "Function 'Synthetix._internalExchange' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2720-2773) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2781,
+            "line_end": 2828,
+            "message": "Function 'Synthetix._addToDebtRegister' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2781-2828) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2899,
+            "line_end": 2935,
+            "message": "Function 'Synthetix._removeFromDebtRegister' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2899-2935) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3248,
+            "message": "Parameter '_synthetix' of FeePool. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3248,
+            "message": "Parameter '_feeAuthority' of FeePool. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3248,
+            "message": "Parameter '_transferFeeRate' of FeePool. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3248,
+            "message": "Parameter '_exchangeFeeRate' of FeePool. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3277,
+            "message": "Parameter '_exchangeFeeRate' of FeePool.setExchangeFeeRate (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3292,
+            "message": "Parameter '_transferFeeRate' of FeePool.setTransferFeeRate (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3307,
+            "message": "Parameter '_feeAuthority' of FeePool.setFeeAuthority (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3307) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3319,
+            "message": "Parameter '_feePeriodDuration' of FeePool.setFeePeriodDuration (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3319) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3334,
+            "message": "Parameter '_synthetix' of FeePool.setSynthetix (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3437,
+            "line_end": 3464,
+            "message": "Function 'FeePool._recordFeePayment' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3437-3464) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3472,
+            "line_end": 3502,
+            "message": "Function 'FeePool._payFees' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3472-3502) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 4027,
+            "line_end": 4040,
+            "message": "Function 'Synth._internalTransfer' (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#4027-4040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3823,
+            "message": "Parameter '_proxy' of Synth. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3823,
+            "message": "Parameter '_synthetix' of Synth. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3823,
+            "message": "Parameter '_feePool' of Synth. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3824,
+            "message": "Parameter '_owner' of Synth. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3824) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3824,
+            "message": "Parameter '_currencyKey' of Synth. (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3824) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3842,
+            "message": "Parameter '_synthetix' of Synth.setSynthetix (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3842) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3850,
+            "message": "Parameter '_feePool' of Synth.setFeePool (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3850) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 2342,
+            "message": "Synthetix.SYNTHETIX_SUPPLY (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2342) is never used in Synthetix\nSynthetix.TOKEN_NAME (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2343) is never used in Synthetix\nSynthetix.TOKEN_SYMBOL (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2344) is never used in Synthetix\nSynthetix.DECIMALS (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#2345) is never used in Synthetix\n",
+            "name": "unused-state"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol",
+            "impact": "Informational",
+            "line": 3819,
+            "message": "Synth.DECIMALS (0x0cbe2df57ca9191b64a7af3baa3f946fa7df2f25.sol#3819) is never used in Synth\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

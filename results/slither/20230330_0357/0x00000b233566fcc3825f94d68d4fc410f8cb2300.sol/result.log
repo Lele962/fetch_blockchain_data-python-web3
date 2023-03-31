@@ -1,0 +1,45 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol:
+/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol:70:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol:114:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function NRM() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+NRM.totalSupply (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#173-175) should be declared external
+ERC20Interface.totalSupply (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#41-42) should be declared external
+ERC20Interface.balanceOf (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#42-43) should be declared external
+NRM.balanceOf (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#181-183) should be declared external
+NRM.allowance (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#233-236) should be declared external
+ERC20Interface.allowance (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#43-44) should be declared external
+NRM.transfer (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#187-196) should be declared external
+ERC20Interface.transfer (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#44-45) should be declared external
+NRM.approve (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#205-211) should be declared external
+ERC20Interface.approve (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#45-46) should be declared external
+ERC20Interface.transferFrom (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#46-48) should be declared external
+NRM.transferFrom (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#215-227) should be declared external
+ApproveAndCallFallBack.receiveApproval (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#57-61) should be declared external
+Owned.transferOwnership (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#80-84) should be declared external
+Owned.acceptOwnership (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#85-93) should be declared external
+NRM.unfreezeTeamTokens (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#139-150) should be declared external
+NRM.startStop (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#163-167) should be declared external
+NRM.approveAndCall (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#241-249) should be declared external
+NRM.transferAnyERC20Token (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#253-257) should be declared external
+NRM.burnTokens (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#261-270) should be declared external
+NRM.multisend (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#274-278) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol:
+	- pragma solidity^0.4.21 (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#74-76) is not in mixedCase
+Parameter '_newOwner' of Owned.transferOwnership (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#82-83) is not in mixedCase
+Function 'NRM.NRM' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#118-135) is not in mixedCase
+Variable 'NRM._totalSupply' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#105-106) is not in mixedCase
+Variable 'NRM.FreezeAddress' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#109-111) is not in mixedCase
+Variable 'NRM.FreezeTokens' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#111) is not in mixedCase
+Variable 'NRM.FreezeTokensReleaseTime' (/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol#111-112) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x00000b233566fcc3825f94d68d4fc410f8cb2300.sol analyzed (5 contracts), 29 result(s) found

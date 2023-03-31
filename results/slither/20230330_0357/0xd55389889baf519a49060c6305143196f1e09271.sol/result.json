@@ -1,0 +1,138 @@
+{
+    "errors": [
+        "EXIT_CODE_13"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "SKWVesting2",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 82,
+            "line_end": 90,
+            "message": "SKWVesting2.release (0xd55389889baf519a49060c6305143196f1e09271.sol#82-90) does not use the value returned by external calls:\n\t-_token.transfer(_beneficiary,unreleased) (0xd55389889baf519a49060c6305143196f1e09271.sol#88-89)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SKWVesting2",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "function": "testRelease",
+            "impact": "Medium",
+            "line": 121,
+            "line_end": 125,
+            "message": "SKWVesting2.testRelease (0xd55389889baf519a49060c6305143196f1e09271.sol#121-125) does not use the value returned by external calls:\n\t-_token.transfer(_beneficiary,unreleased) (0xd55389889baf519a49060c6305143196f1e09271.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "SKWVesting2",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 90,
+            "message": "SKWVesting2.release (0xd55389889baf519a49060c6305143196f1e09271.sol#82-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SKWVesting2",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "function": "testRelease",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 125,
+            "message": "SKWVesting2.testRelease (0xd55389889baf519a49060c6305143196f1e09271.sol#121-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd55389889baf519a49060c6305143196f1e09271.sol:\n\t- pragma solidity^0.4.11 (0xd55389889baf519a49060c6305143196f1e09271.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 44,
+            "message": "Variable 'SKWVesting2._beneficiary' (0xd55389889baf519a49060c6305143196f1e09271.sol#43-44) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 48,
+            "message": "Variable 'SKWVesting2.unLockTime_1' (0xd55389889baf519a49060c6305143196f1e09271.sol#46-48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 50,
+            "message": "Variable 'SKWVesting2.unLockTime_2' (0xd55389889baf519a49060c6305143196f1e09271.sol#48-50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "Variable 'SKWVesting2.unLockTime_3' (0xd55389889baf519a49060c6305143196f1e09271.sol#50-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 54,
+            "message": "Variable 'SKWVesting2.unLockTime_4' (0xd55389889baf519a49060c6305143196f1e09271.sol#52-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 56,
+            "message": "Variable 'SKWVesting2.unLockTime_5' (0xd55389889baf519a49060c6305143196f1e09271.sol#54-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 58,
+            "message": "Variable 'SKWVesting2.unLockTime_6' (0xd55389889baf519a49060c6305143196f1e09271.sol#56-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd55389889baf519a49060c6305143196f1e09271.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 66,
+            "message": "Constant 'SKWVesting2._token' (0xd55389889baf519a49060c6305143196f1e09271.sol#62-66) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

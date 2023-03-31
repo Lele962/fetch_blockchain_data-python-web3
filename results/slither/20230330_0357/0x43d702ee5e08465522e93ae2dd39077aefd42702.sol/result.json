@@ -1,0 +1,358 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "totalSupply",
+            "impact": "Low",
+            "line": 12,
+            "line_end": 14,
+            "message": "ERC20.totalSupply.totalSupply (local variable @ 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#12-14) shadows:\n\t- ERC20.totalSupply (function @ 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#12-14)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "totalSupply",
+            "impact": "Low",
+            "line": 82,
+            "message": "MidnightCoin.totalSupply.totalSupply (local variable @ 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#82) shadows:\n\t- MidnightCoin.totalSupply (function @ 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#79-83)\n\t- ERC20.totalSupply (function @ 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#12-14)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 83,
+            "message": "MidnightCoin.totalSupply (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#79-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 14,
+            "message": "ERC20.totalSupply (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#12-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 17,
+            "message": "ERC20.balanceOf (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#15-17) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 88,
+            "message": "MidnightCoin.balanceOf (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#84-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 20,
+            "message": "ERC20.transfer (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#18-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 102,
+            "message": "MidnightCoin.transfer (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#89-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 127,
+            "message": "MidnightCoin.transferFrom (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#111-127) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 23,
+            "message": "ERC20.transferFrom (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#21-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 135,
+            "message": "MidnightCoin.approve (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#130-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 28,
+            "message": "ERC20.approve (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#26-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 31,
+            "message": "ERC20.allowance (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#29-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 144,
+            "message": "MidnightCoin.allowance (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#135-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 56,
+            "message": "Owned.transferOwnership (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#50-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "kill",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 149,
+            "message": "MidnightCoin.kill (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#145-149) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 151,
+            "message": "MidnightCoin.withdraw (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#149-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "sellMNC",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 169,
+            "message": "MidnightCoin.sellMNC (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#160-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MidnightCoin",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "MidnightCoin.fallback (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x43d702ee5e08465522e93ae2dd39077aefd42702.sol:\n\t- pragma solidity^0.4.13 (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 46,
+            "message": "Function 'Owned.Owned' (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#42-46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 86,
+            "message": "Parameter '_owner' of MidnightCoin.balanceOf (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#84-86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '_to' of MidnightCoin.transfer (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 90,
+            "message": "Parameter '_amount' of MidnightCoin.transfer (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#89-90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 112,
+            "message": "Parameter '_from' of MidnightCoin.transferFrom (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 113,
+            "message": "Parameter '_to' of MidnightCoin.transferFrom (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#112-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 113,
+            "message": "Parameter '_amount' of MidnightCoin.transferFrom (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 130,
+            "message": "Parameter '_spender' of MidnightCoin.approve (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 131,
+            "message": "Parameter '_amount' of MidnightCoin.approve (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#130-131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 139,
+            "message": "Parameter '_owner' of MidnightCoin.allowance (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#138-139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "Parameter '_spender' of MidnightCoin.allowance (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#139-140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 79,
+            "message": "Function 'MidnightCoin.MidnightCoin' (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#74-79) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 153,
+            "message": "Parameter '_loveletter' of MidnightCoin.buyMNC (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#152-153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 160,
+            "message": "Parameter '_amount' of MidnightCoin.sellMNC (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d702ee5e08465522e93ae2dd39077aefd42702.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "Variable 'MidnightCoin._totalSupply' (0x43d702ee5e08465522e93ae2dd39077aefd42702.sol#60-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

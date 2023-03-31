@@ -1,0 +1,236 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "allowance",
+            "impact": "Low",
+            "line": 86,
+            "line_end": 87,
+            "message": "DevCash.transferFrom.allowance (local variable @ 0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#86-87) shadows:\n\t- DevCash.allowance (function @ 0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#108-113)\n\t- EIP20Interface.allowance (function @ 0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#50-52)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 101,
+            "message": "DevCash.balanceOf (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#97-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EIP20Interface",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 28,
+            "message": "EIP20Interface.balanceOf (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#26-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 84,
+            "message": "DevCash.transfer (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#76-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EIP20Interface",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 34,
+            "message": "EIP20Interface.transfer (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#32-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EIP20Interface",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 41,
+            "message": "EIP20Interface.transferFrom (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#39-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 97,
+            "message": "DevCash.transferFrom (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#84-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 107,
+            "message": "DevCash.approve (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#101-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EIP20Interface",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 47,
+            "message": "EIP20Interface.approve (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#45-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DevCash",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 113,
+            "message": "DevCash.allowance (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#108-113) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EIP20Interface",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "EIP20Interface.allowance (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#50-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 19,
+            "message": "Detected issues with version pragma in 0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol:\n\t- pragma solidity^0.4.8 (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#17-19): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 100,
+            "message": "Parameter '_owner' of DevCash.balanceOf (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#99-100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 77,
+            "message": "Parameter '_to' of DevCash.transfer (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#77) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 77,
+            "message": "Parameter '_value' of DevCash.transfer (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#77) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter '_from' of DevCash.transferFrom (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter '_to' of DevCash.transferFrom (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter '_value' of DevCash.transferFrom (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 102,
+            "message": "Parameter '_spender' of DevCash.approve (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#101-102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 102,
+            "message": "Parameter '_value' of DevCash.approve (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_owner' of DevCash.allowance (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 111,
+            "message": "Parameter '_spender' of DevCash.allowance (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#109-111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 76,
+            "message": "Function 'DevCash.DevCash' (0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a.sol#69-76) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,303 @@
+{
+    "errors": [
+        "EXIT_CODE_31"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "message": "Contract locking ether found in 0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol:\n\tContract JoosToken has payable functions:\n\t - fallback (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 55,
+            "message": "ERC20Basic.totalSupply (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#54-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 89,
+            "message": "BasicToken.totalSupply (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#83-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 141,
+            "message": "BasicToken.balanceOf (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#138-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 56,
+            "message": "ERC20Basic.balanceOf (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#55-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 57,
+            "message": "ERC20Basic.transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#56-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 129,
+            "message": "BasicToken.transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#113-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "message": "JoosToken.allowance (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 66,
+            "message": "ERC20.allowance (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#65-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 195,
+            "message": "JoosToken.transferFrom (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#183-195) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 67,
+            "message": "ERC20.transferFrom (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#66-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 211,
+            "message": "JoosToken.approve (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#209-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 68,
+            "message": "ERC20.approve (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#67-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 177,
+            "message": "JoosToken.changeOwner (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#176-177) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "JoosToken",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "JoosToken.fallback (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol:\n\t- pragma solidity^0.4.23 (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#139-140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 115,
+            "message": "Parameter '_to' of BasicToken.transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#114-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Parameter '_value' of BasicToken.transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 110,
+            "message": "Function 'BasicToken._transfer' (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#90-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_from' of BasicToken._transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_to' of BasicToken._transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_value' of BasicToken._transfer (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of JoosToken.allowance (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of JoosToken.allowance (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 185,
+            "message": "Parameter '_from' of JoosToken.transferFrom (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#183-185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_to' of JoosToken.transferFrom (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_value' of JoosToken.transferFrom (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_spender' of JoosToken.approve (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 209,
+            "message": "Parameter '_value' of JoosToken.approve (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Parameter '_newOwner' of JoosToken.changeOwner (0x05f9abf4b0c5661e83b92c056a8791d5ccd7ca52.sol#176) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

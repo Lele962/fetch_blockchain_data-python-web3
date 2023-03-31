@@ -1,0 +1,258 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 220,
+            "message": "Contract locking ether found in 0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol:\n\tContract FilmFinsCoin has payable functions:\n\t - fallback (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#220)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "safeMul",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 34,
+            "message": "SafeMath.safeMul (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#30-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "safeDiv",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 41,
+            "message": "SafeMath.safeDiv (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#34-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 135,
+            "message": "FilmFinsCoin.totalSupply (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#134-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "ERC20Interface.totalSupply (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#46-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 143,
+            "message": "FilmFinsCoin.balanceOf (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#142-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20Interface.balanceOf (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20Interface.allowance (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 197,
+            "line_end": 199,
+            "message": "FilmFinsCoin.allowance (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#197-199) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 156,
+            "message": "FilmFinsCoin.transfer (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#149-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Interface.transfer (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 173,
+            "message": "FilmFinsCoin.approve (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#165-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20Interface.approve (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#50-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 190,
+            "message": "FilmFinsCoin.transferFrom (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#181-190) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 53,
+            "message": "ERC20Interface.transferFrom (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#51-53) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 68,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#64-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 91,
+            "message": "Owned.transferOwnership (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#87-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 99,
+            "message": "Owned.acceptOwnership (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#91-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 205,
+            "line_end": 213,
+            "message": "FilmFinsCoin.approveAndCall (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#205-213) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 220,
+            "message": "FilmFinsCoin.fallback (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#220) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FilmFinsCoin",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "message": "FilmFinsCoin.transferAnyERC20Token (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 112,
+            "message": "Variable 'FilmFinsCoin._totalSupply' (0x0313f9c5fa5338bc00e416ceae577038e5fa3e28.sol#109-112) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

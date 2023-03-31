@@ -1,0 +1,431 @@
+{
+    "errors": [
+        "EXIT_CODE_45"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "getEth",
+            "impact": "High",
+            "message": "MyAdvancedToken.getEth (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol) sends eth to arbitrary user\n\tDangerous calls:\n\t- owner.transfer(num) (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "selfdestructs",
+            "impact": "High",
+            "message": "MyAdvancedToken.selfdestructs (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol) allows anyone to destruct the contract\n",
+            "name": "suicidal"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 22,
+            "line_end": 176,
+            "message": "TokenERC20 (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#22-176) has incorrect ERC20 function interface(s):\n\t-transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#86-92)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "TokenERC20.decimals should be constant (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#26-27)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 20,
+            "message": "owned.transferOwnership (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#15-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "tokenRecipient.receiveApproval (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 92,
+            "message": "TokenERC20.transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#86-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 108,
+            "message": "TokenERC20.transferFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#98-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 143,
+            "message": "TokenERC20.approveAndCall (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#131-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 158,
+            "message": "TokenERC20.burn (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#146-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 176,
+            "message": "TokenERC20.burnFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#162-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 218,
+            "message": "MyAdvancedToken.mintToken (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#212-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 225,
+            "message": "MyAdvancedToken.freezeAccount (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#223-225) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 235,
+            "message": "MyAdvancedToken.setPrices (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#233-235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 242,
+            "message": "MyAdvancedToken.buy (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#238-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 260,
+            "message": "MyAdvancedToken.sell (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#244-260) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 265,
+            "message": "MyAdvancedToken.fallback (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#261-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "selfdestructs",
+            "impact": "Informational",
+            "message": "MyAdvancedToken.selfdestructs (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "function": "getEth",
+            "impact": "Informational",
+            "message": "MyAdvancedToken.getEth (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x05f8b281410c9327a1bbf508db380fd967c31df6.sol:\n\t- pragma solidity^0.4.16 (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Contract 'tokenRecipient' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#20-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 57,
+            "message": "Function 'TokenERC20.TokenERC20' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#46-57) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 80,
+            "message": "Function 'TokenERC20._transfer' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#59-80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_from' of TokenERC20._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_to' of TokenERC20._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_value' of TokenERC20._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 89,
+            "message": "Parameter '_to' of TokenERC20.transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#87-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_value' of TokenERC20.transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_from' of TokenERC20.transferFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_to' of TokenERC20.transferFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_value' of TokenERC20.transferFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "Parameter '_spender' of TokenERC20.approve (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#115-116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 116,
+            "message": "Parameter '_value' of TokenERC20.approve (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 131,
+            "message": "Parameter '_spender' of TokenERC20.approveAndCall (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 132,
+            "message": "Parameter '_value' of TokenERC20.approveAndCall (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#131-132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 132,
+            "message": "Parameter '_extraData' of TokenERC20.approveAndCall (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 147,
+            "message": "Parameter '_value' of TokenERC20.burn (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 163,
+            "message": "Parameter '_from' of TokenERC20.burnFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#162-163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_value' of TokenERC20.burnFrom (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 208,
+            "message": "Function 'MyAdvancedToken._transfer' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#196-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_from' of MyAdvancedToken._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_to' of MyAdvancedToken._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_value' of MyAdvancedToken._transfer (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05f8b281410c9327a1bbf508db380fd967c31df6.sol",
+            "impact": "Informational",
+            "line": 193,
+            "line_end": 195,
+            "message": "Function 'MyAdvancedToken.MyAdvancedToken' (0x05f8b281410c9327a1bbf508db380fd967c31df6.sol#193-195) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,211 @@
+{
+    "errors": [
+        "EXIT_CODE_20"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "executeProposal",
+            "impact": "High",
+            "line": 233,
+            "line_end": 271,
+            "message": "Reentrancy in Association.executeProposal (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#233-271):\n\tExternal calls:\n\t- require(bool)(p.recipient.call.value(p.amount)(transactionBytecode)) (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#269-271)\n\tState variables written after the call(s):\n\t- proposals (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "executeProposal",
+            "impact": "Low",
+            "line": 254,
+            "message": "Association.executeProposal has external calls inside a loop:\n\t- voteWeight = sharesTokenAddress.balanceOf(v.voter) (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#254)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 30,
+            "message": "owned.transferOwnership (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#25-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 41,
+            "message": "tokenRecipient.receiveApproval (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#34-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 46,
+            "message": "tokenRecipient.fallback (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#41-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 51,
+            "message": "Token.transferFrom (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#47-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "newProposalInEther",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 180,
+            "message": "Association.newProposalInEther (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#169-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "checkProposalCode",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 202,
+            "message": "Association.checkProposalCode (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#190-202) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "vote",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 228,
+            "message": "Association.vote (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#211-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "executeProposal",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 271,
+            "message": "Association.executeProposal (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#233-271) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd20a1225cf7410616a5a826bffbef4cd22019030.sol:\n\t- pragma solidity^0.4.16 (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "Association",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "function": "executeProposal",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 271,
+            "message": "Low level call in Association.executeProposal (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#233-271):\n\t-require(bool)(p.recipient.call.value(p.amount)(transactionBytecode)) 0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#269-271\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 30,
+            "message": "Contract 'owned' (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#13-30) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 46,
+            "message": "Contract 'tokenRecipient' (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#31-46) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 32,
+            "message": "Event 'tokenRecipient.receivedEther' (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#31-32) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 34,
+            "message": "Event 'tokenRecipient.receivedTokens' (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#32-34) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "Parameter '_from' of tokenRecipient.receiveApproval (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "Parameter '_value' of tokenRecipient.receiveApproval (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "Parameter '_token' of tokenRecipient.receiveApproval (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#34-35) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20a1225cf7410616a5a826bffbef4cd22019030.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Parameter '_extraData' of tokenRecipient.receiveApproval (0xd20a1225cf7410616a5a826bffbef4cd22019030.sol#35) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

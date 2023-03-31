@@ -1,0 +1,261 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 58,
+            "line_end": 70,
+            "message": "Token (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#58-70) has incorrect ERC20 function interface(s):\n\t-transfer (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#62)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "ballot",
+            "impact": "Medium",
+            "line": 232,
+            "line_end": 282,
+            "message": "NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282) uses a dangerous strict equality:\n\t- require(bool,string)(ballotInfo.amount == 0,The address has been voted. Code<200>)\n\t- require(bool,string)(node.valid == true,Node does not exist. Code<203>)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "destruct",
+            "impact": "Medium",
+            "line": 232,
+            "line_end": 282,
+            "message": "NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282) uses a dangerous strict equality:\n\t- require(bool,string)(ballotInfo.amount == 0,The address has been voted. Code<200>)\n\t- require(bool,string)(node.valid == true,Node does not exist. Code<203>)\nNodeBallot.destruct (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol) uses a dangerous strict equality:\n\t- require(bool,string)(token.balanceOf(address(this)) == 0,please execute transferToken first. Code<213>)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "generalSuperNode",
+            "impact": "Medium",
+            "line": 232,
+            "line_end": 282,
+            "message": "NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282) uses a dangerous strict equality:\n\t- require(bool,string)(ballotInfo.amount == 0,The address has been voted. Code<200>)\n\t- require(bool,string)(node.valid == true,Node does not exist. Code<203>)\nNodeBallot.destruct (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol) uses a dangerous strict equality:\n\t- require(bool,string)(token.balanceOf(address(this)) == 0,please execute transferToken first. Code<213>)\nNodeBallot.generalSuperNode (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#196-229) uses a dangerous strict equality:\n\t- require(bool,string)(addOne.valid == false,Node did exist. Code<208>)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "ballot",
+            "impact": "Medium",
+            "line": 232,
+            "line_end": 282,
+            "message": "Reentrancy in NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282):\n\tExternal calls:\n\t- allowance = token.allowance(msg.sender,address(this)) (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#254-258)\n\tState variables written after the call(s):\n\t- nodes (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#263-269)\n\t- userBallotInfoMap (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#272)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "generalSuperNode",
+            "impact": "Medium",
+            "line": 196,
+            "line_end": 229,
+            "message": "NodeBallot.generalSuperNode (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#196-229) does not use the value returned by external calls:\n\t-token.transferFrom(msg.sender,address(this),originalAmount) (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#225-228)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "ballot",
+            "impact": "Medium",
+            "line": 232,
+            "line_end": 282,
+            "message": "NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282) does not use the value returned by external calls:\n\t-token.transferFrom(msg.sender,address(this),ballotAmount) (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#276-278)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "ballot",
+            "impact": "Low",
+            "line": 232,
+            "line_end": 282,
+            "message": "Reentrancy in NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282):\n\tExternal calls:\n\t- allowance = token.allowance(msg.sender,address(this)) (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#254-258)\n\tState variables written after the call(s):\n\t- totalLockToken (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#273-275)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "generalSuperNode",
+            "impact": "Low",
+            "line": 196,
+            "line_end": 229,
+            "message": "Reentrancy in NodeBallot.generalSuperNode (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#196-229):\n\tExternal calls:\n\t- allowance = token.allowance(msg.sender,address(this)) (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#210-212)\n\tState variables written after the call(s):\n\t- nodes (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#221)\n\t- totalLockToken (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#221-224)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 112,
+            "message": "NodeBallot.decimals should be constant (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#110-112)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 45,
+            "message": "Ownable.transferOwnership (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#41-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "motifyActivityEnable",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 182,
+            "message": "NodeBallot.motifyActivityEnable (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#174-182) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "openWithdraw",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 192,
+            "message": "NodeBallot.openWithdraw (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#185-192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "generalSuperNode",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 229,
+            "message": "NodeBallot.generalSuperNode (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#196-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "ballot",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 282,
+            "message": "NodeBallot.ballot (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#232-282) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "withdrawToken",
+            "impact": "Informational",
+            "line": 283,
+            "line_end": 286,
+            "message": "NodeBallot.withdrawToken (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#283-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "withdrawTokenToAddress",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 292,
+            "message": "NodeBallot.withdrawTokenToAddress (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#291-292) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "transferToken",
+            "impact": "Informational",
+            "message": "NodeBallot.transferToken (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NodeBallot",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "function": "destruct",
+            "impact": "Informational",
+            "message": "NodeBallot.destruct (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol:\n\t- pragma solidity>=0.4.0<0.6.0 (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 54,
+            "message": "Function 'Ownable._transferOwnership' (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#45-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 25,
+            "message": "Variable 'Ownable._owner' (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#23-25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 294,
+            "line_end": 330,
+            "message": "Function 'NodeBallot._withdrawToken' (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#294-330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 106,
+            "message": "Constant 'NodeBallot.lockLimitTime' (0xc8ee2a26dc1e4bebabebc610c25e08cb4b4c0f10.sol#103-106) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

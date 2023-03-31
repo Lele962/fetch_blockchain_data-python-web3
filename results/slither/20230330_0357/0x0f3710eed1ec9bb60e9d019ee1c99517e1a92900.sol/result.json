@@ -1,0 +1,114 @@
+{
+    "errors": [
+        "EXIT_CODE_11"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "EthereumPlus",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 4,
+            "line_end": 50,
+            "message": "EthereumPlus (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#4-50) has incorrect ERC20 function interface(s):\n\t-transfer (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#32-46)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "EthereumPlus.standard should be constant (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#6-7)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 33,
+            "message": "Deprecated standard detected @ 0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#33:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 35,
+            "message": "Deprecated standard detected @ 0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#35:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "Deprecated standard detected @ 0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#48-49:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthereumPlus",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 46,
+            "message": "EthereumPlus.transfer (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#32-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthereumPlus",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 50,
+            "message": "EthereumPlus.fallback (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#48-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol:\n\t- pragma solidity^0.4.2 (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 32,
+            "message": "Function 'EthereumPlus.EthereumPlus' (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#19-32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 33,
+            "message": "Parameter '_to' of EthereumPlus.transfer (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#33) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol",
+            "impact": "Informational",
+            "line": 33,
+            "message": "Parameter '_value' of EthereumPlus.transfer (0x0f3710eed1ec9bb60e9d019ee1c99517e1a92900.sol#33) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

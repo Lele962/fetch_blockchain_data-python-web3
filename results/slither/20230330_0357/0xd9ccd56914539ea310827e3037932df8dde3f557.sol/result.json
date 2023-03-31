@@ -1,0 +1,89 @@
+{
+    "errors": [
+        "EXIT_CODE_8"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "RACEFORETH.SCORE_TO_WIN should be constant (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#9-10)\nRACEFORETH.speed_limit should be constant (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#15-17)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "RACEFORETH",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 48,
+            "message": "RACEFORETH.fallback (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#45-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RACEFORETH",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "function": "endRace",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 55,
+            "message": "RACEFORETH.endRace (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#50-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd9ccd56914539ea310827e3037932df8dde3f557.sol:\n\t- pragma solidity0.4.21 (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 29,
+            "message": "Function 'RACEFORETH.RACEFORETH' (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#24-29) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "Variable 'RACEFORETH.SCORE_TO_WIN' (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#9-10) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 12,
+            "message": "Variable 'RACEFORETH.PRIZE' (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#10-12) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9ccd56914539ea310827e3037932df8dde3f557.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 17,
+            "message": "Variable 'RACEFORETH.speed_limit' (0xd9ccd56914539ea310827e3037932df8dde3f557.sol#15-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

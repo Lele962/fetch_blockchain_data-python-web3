@@ -1,0 +1,96 @@
+{
+    "errors": [
+        "EXIT_CODE_8"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "impact": "Medium",
+            "line": 199,
+            "line_end": 206,
+            "message": "SmartHashFast.bytesToAddress (0x69005b3573915bc6f45d070a191541b08822c73b.sol#199-206) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SmartHashFast",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "function": "makeDeposit",
+            "impact": "Medium",
+            "line": 68,
+            "line_end": 106,
+            "message": "SmartHashFast.makeDeposit (0x69005b3573915bc6f45d070a191541b08822c73b.sol#68-106) uses a dangerous strict equality:\n\t- users[msg.sender].deposited == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "SmartHashFast",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "function": "bytesToAddress",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 206,
+            "message": "SmartHashFast.bytesToAddress uses assembly (0x69005b3573915bc6f45d070a191541b08822c73b.sol#199-206)\n\t- 0x69005b3573915bc6f45d070a191541b08822c73b.sol#204-206\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "SmartHashFast",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 56,
+            "message": "SmartHashFast.fallback (0x69005b3573915bc6f45d070a191541b08822c73b.sol#48-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SmartHashFast",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "function": "getUserDividends",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 191,
+            "message": "SmartHashFast.getUserDividends (0x69005b3573915bc6f45d070a191541b08822c73b.sol#178-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SmartHashFast",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "function": "getUserDeposits",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 199,
+            "message": "SmartHashFast.getUserDeposits (0x69005b3573915bc6f45d070a191541b08822c73b.sol#191-199) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "Constant 'SmartHashFast.BonusContract_PERCENT' (0x69005b3573915bc6f45d070a191541b08822c73b.sol#12-13) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x69005b3573915bc6f45d070a191541b08822c73b.sol",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 23,
+            "message": "Constant 'SmartHashFast.bonus_ADDRESS' (0x69005b3573915bc6f45d070a191541b08822c73b.sol#21-23) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

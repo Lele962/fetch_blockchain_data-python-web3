@@ -1,0 +1,169 @@
+{
+    "errors": [
+        "EXIT_CODE_16"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "claim",
+            "impact": "High",
+            "line": 90,
+            "line_end": 96,
+            "message": "MoonDustDividends.claim (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#90-96) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(_dividends) (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#94-95)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "preauthorize",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 37,
+            "message": "MoonDustDividends.preauthorize (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#32-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "startGame",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 42,
+            "message": "MoonDustDividends.startGame (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#38-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 61,
+            "message": "MoonDustDividends.deposit (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#55-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 81,
+            "message": "MoonDustDividends.withdraw (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#61-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "claim",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 96,
+            "message": "MoonDustDividends.claim (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#90-96) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "reinvest",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 101,
+            "message": "MoonDustDividends.reinvest (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#96-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MoonDustDividends",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "function": "dividendsForUser",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 106,
+            "message": "MoonDustDividends.dividendsForUser (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#101-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x5d1f222108e1a27f95c596f5df289e61068537ab.sol:\n\t- pragma solidity^0.4.21 (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 32,
+            "message": "Function 'MoonDustDividends.MoonDustDividends' (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#27-32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 33,
+            "message": "Parameter '_user' of MoonDustDividends.preauthorize (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#33) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Parameter '_amount' of MoonDustDividends.depositHelper (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_amount' of MoonDustDividends.withdraw (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 101,
+            "message": "Parameter '_user' of MoonDustDividends.dividendsForUser (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#101) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 16,
+            "message": "Constant 'MoonDustDividends.depositTaxDivisor' (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#15-16) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x5d1f222108e1a27f95c596f5df289e61068537ab.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "Constant 'MoonDustDividends.withdrawalTaxDivisor' (0x5d1f222108e1a27f95c596f5df289e61068537ab.sol#16-18) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

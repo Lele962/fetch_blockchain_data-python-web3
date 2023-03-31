@@ -1,0 +1,707 @@
+{
+    "errors": [
+        "EXIT_CODE_76"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Medium",
+            "message": "NameFilter.nameFilter (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getPreviousProfit",
+            "impact": "Medium",
+            "line": 798,
+            "message": "_eth in WarOfEth.getPreviousProfit (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#798) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 374,
+            "line_end": 376,
+            "message": "_eth in WarOfEth.withdraw (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#374-376) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "message": "NameFilter.nameFilter uses assembly (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol)\n\t- 0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 269,
+            "message": "WarOfEth.fallback (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#264-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 367,
+            "line_end": 407,
+            "message": "WarOfEth.withdraw (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#367-407) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "registerNameXID",
+            "impact": "Informational",
+            "line": 409,
+            "line_end": 453,
+            "message": "WarOfEth.registerNameXID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#409-453) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "setTeamName",
+            "impact": "Informational",
+            "line": 454,
+            "line_end": 497,
+            "message": "WarOfEth.setTeamName (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454-497) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "checkIfNameValid",
+            "impact": "Informational",
+            "line": 502,
+            "line_end": 512,
+            "message": "WarOfEth.checkIfNameValid (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#502-512) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getNextKillingAfter",
+            "impact": "Informational",
+            "line": 513,
+            "line_end": 526,
+            "message": "WarOfEth.getNextKillingAfter (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#513-526) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getPlayerInfoByAddress",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 555,
+            "message": "WarOfEth.getPlayerInfoByAddress (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#529-555) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getPlayerRoundTeamBought",
+            "impact": "Informational",
+            "line": 559,
+            "line_end": 568,
+            "message": "WarOfEth.getPlayerRoundTeamBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#559-568) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getPlayerRoundBought",
+            "impact": "Informational",
+            "line": 575,
+            "line_end": 594,
+            "message": "WarOfEth.getPlayerRoundBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#575-594) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getPlayerRounds",
+            "impact": "Informational",
+            "line": 599,
+            "line_end": 617,
+            "message": "WarOfEth.getPlayerRounds (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#599-617) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getLastRoundInfo",
+            "impact": "Informational",
+            "line": 621,
+            "line_end": 633,
+            "message": "WarOfEth.getLastRoundInfo (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#621-633) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Informational",
+            "line": 633,
+            "line_end": 660,
+            "message": "WarOfEth.getCurrentRoundInfo (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#633-660) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getTeamInfoByID",
+            "impact": "Informational",
+            "line": 664,
+            "line_end": 686,
+            "message": "WarOfEth.getTeamInfoByID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#664-686) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getTeamsInfo",
+            "impact": "Informational",
+            "line": 691,
+            "line_end": 739,
+            "message": "WarOfEth.getTeamsInfo (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#691-739) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getTeamLeaders",
+            "impact": "Informational",
+            "line": 743,
+            "line_end": 776,
+            "message": "WarOfEth.getTeamLeaders (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#743-776) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getNextKeyPrice",
+            "impact": "Informational",
+            "line": 821,
+            "line_end": 832,
+            "message": "WarOfEth.getNextKeyPrice (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#821-832) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getEthFromKeys",
+            "impact": "Informational",
+            "line": 834,
+            "line_end": 852,
+            "message": "WarOfEth.getEthFromKeys (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834-852) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "getKeysFromEth",
+            "impact": "Informational",
+            "line": 854,
+            "line_end": 872,
+            "message": "WarOfEth.getKeysFromEth (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#854-872) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarOfEth",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 1149,
+            "line_end": 1173,
+            "message": "WarOfEth.activate (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1149-1173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 46,
+            "message": "Event 'WarOfEth.onNewName' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#35-46) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 58,
+            "message": "Event 'WarOfEth.onNewTeamName' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#47-58) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 70,
+            "message": "Event 'WarOfEth.onTx' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#59-70) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 86,
+            "message": "Event 'WarOfEth.onAffPayout' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#72-86) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 92,
+            "message": "Event 'WarOfEth.onKill' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#89-92) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 103,
+            "message": "Event 'WarOfEth.onEndRound' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#96-103) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 114,
+            "message": "Event 'WarOfEth.onWithdraw' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#106-114) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 274,
+            "line_end": 275,
+            "message": "Parameter '_team' of WarOfEth.buy (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#274-275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 275,
+            "message": "Parameter '_affCode' of WarOfEth.buy (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 410,
+            "message": "Parameter '_nameString' of WarOfEth.registerNameXID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#410) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 454,
+            "message": "Parameter '_tID' of WarOfEth.setTeamName (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 454,
+            "line_end": 456,
+            "message": "Parameter '_nameString' of WarOfEth.setTeamName (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#454-456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 502,
+            "message": "Parameter '_nameStr' of WarOfEth.checkIfNameValid (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#502) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 530,
+            "message": "Parameter '_addr' of WarOfEth.getPlayerInfoByAddress (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#529-530) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 561,
+            "line_end": 563,
+            "message": "Parameter '_pID' of WarOfEth.getPlayerRoundTeamBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#561-563) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 563,
+            "line_end": 564,
+            "message": "Parameter '_roundID' of WarOfEth.getPlayerRoundTeamBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#563-564) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 564,
+            "message": "Parameter '_tID' of WarOfEth.getPlayerRoundTeamBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#564) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 575,
+            "line_end": 576,
+            "message": "Parameter '_pID' of WarOfEth.getPlayerRoundBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#575-576) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 576,
+            "message": "Parameter '_roundID' of WarOfEth.getPlayerRoundBought (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#576) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 600,
+            "message": "Parameter '_pID' of WarOfEth.getPlayerRounds (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#600) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 665,
+            "message": "Parameter '_tID' of WarOfEth.getTeamInfoByID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#665) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 780,
+            "message": "Parameter '_pID' of WarOfEth.getProfit (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#780) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 796,
+            "message": "Parameter '_pID' of WarOfEth.getPreviousProfit (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#796) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 823,
+            "message": "Parameter '_tID' of WarOfEth.getNextKeyPrice (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 834,
+            "message": "Parameter '_tID' of WarOfEth.getEthFromKeys (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 834,
+            "message": "Parameter '_keys' of WarOfEth.getEthFromKeys (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#834) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 855,
+            "message": "Parameter '_tID' of WarOfEth.getKeysFromEth (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#855) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 855,
+            "line_end": 857,
+            "message": "Parameter '_eth' of WarOfEth.getKeysFromEth (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#855-857) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 876,
+            "message": "Parameter '_pID' of WarOfEth.buyCore (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 876,
+            "message": "Parameter '_affID' of WarOfEth.buyCore (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 876,
+            "message": "Parameter '_tID' of WarOfEth.buyCore (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 876,
+            "message": "Parameter '_eth' of WarOfEth.buyCore (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 937,
+            "message": "Parameter '_rID' of WarOfEth.distribute (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#937) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 937,
+            "line_end": 938,
+            "message": "Parameter '_pID' of WarOfEth.distribute (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#937-938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 938,
+            "message": "Parameter '_eth' of WarOfEth.distribute (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 938,
+            "message": "Parameter '_affID' of WarOfEth.distribute (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#938) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1031,
+            "line_end": 1032,
+            "message": "Parameter '_pID' of WarOfEth.refund (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1031-1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_value' of WarOfEth.refund (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "line_end": 1042,
+            "message": "Parameter '_pID' of WarOfEth.createTeam (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1040-1042) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1042,
+            "message": "Parameter '_eth' of WarOfEth.createTeam (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1042) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1122,
+            "message": "Parameter '_addr' of WarOfEth.determinePID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1134,
+            "line_end": 1135,
+            "message": "Parameter '_team' of WarOfEth.determinTID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1134-1135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1135,
+            "line_end": 1136,
+            "message": "Parameter '_pID' of WarOfEth.determinTID (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1135-1136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 172,
+            "message": "Constant 'WarOfEth.roundGap_' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#170-172) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 175,
+            "message": "Constant 'WarOfEth.killingGap_' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#173-175) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Constant 'WarOfEth.registrationFee_' (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#177) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1184,
+            "line_end": 1185,
+            "message": "Parameter '_curEth' of WoeKeysCalc.keysRec (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1184-1185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1186,
+            "message": "Parameter '_newEth' of WoeKeysCalc.keysRec (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1198,
+            "message": "Parameter '_curKeys' of WoeKeysCalc.ethRec (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1198,
+            "line_end": 1199,
+            "message": "Parameter '_sellKeys' of WoeKeysCalc.ethRec (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1198-1199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1211,
+            "message": "Parameter '_eth' of WoeKeysCalc.keys (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "line": 1231,
+            "line_end": 1233,
+            "message": "Parameter '_keys' of WoeKeysCalc.eth (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol#1231-1233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol",
+            "impact": "Informational",
+            "message": "Parameter '_input' of NameFilter.nameFilter (0xd7de6ddb0b65ad4995c88cd12d3d4f7a717f8eba.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

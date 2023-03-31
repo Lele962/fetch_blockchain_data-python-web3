@@ -1,0 +1,43 @@
+{
+    "errors": [
+        "EXIT_CODE_3"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol",
+            "impact": "Medium",
+            "line": 32,
+            "line_end": 39,
+            "message": "DSWP.isContract (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#32-39) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSWP",
+            "filename": "output/0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 39,
+            "message": "DSWP.isContract uses assembly (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#32-39)\n\t- 0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#35-39\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "DSWP.decimals should be constant (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#23-24)\nDSWP.name should be constant (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#24-25)\nDSWP.symbol should be constant (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#25-26)\nDSWP.totalSupply should be constant (0x000000d4e883e304c7f9574ebeecf238eb55a40f.sol#26-27)\n",
+            "name": "constable-states"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

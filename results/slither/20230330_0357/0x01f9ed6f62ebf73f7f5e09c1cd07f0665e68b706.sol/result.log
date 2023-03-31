@@ -1,0 +1,90 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:
+/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:347:46: Warning: Using "years" as a unit denomination is deprecated.
+    uint256 public constant timeToBeBurned = 1 years;
+                                             ^-----^
+/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:734:15: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+       return keccak256(a) == keccak256(b);
+              ^----------^
+/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:734:15: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+       return keccak256(a) == keccak256(b);
+              ^----------^
+/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:734:31: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+       return keccak256(a) == keccak256(b);
+                              ^----------^
+/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:734:31: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+       return keccak256(a) == keccak256(b);
+                              ^----------^
+
+INFO:Detectors:[92m
+BasicToken.totalSupply (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#83-88) should be declared external
+ERC20Basic.totalSupply (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#53-54) should be declared external
+BasicToken.balanceOf (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#108-112) should be declared external
+ERC20Basic.balanceOf (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#54-55) should be declared external
+StandardToken.allowance (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#159-161) should be declared external
+ERC20.allowance (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#64-65) should be declared external
+Ownable.transferOwnership (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#233-239) should be declared external
+Pausable.unpause (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#281-288) should be declared external
+Pausable.notPauseable (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#291-293) should be declared external
+CrowdsaleToken.fallback (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#408-430) should be declared external
+CrowdsaleToken.startIco (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#710-715) should be declared external
+CrowdsaleToken.setCustomEvent (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#727-752) should be declared external
+CrowdsaleToken.setEventActive (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#760-769) should be declared external
+CrowdsaleToken.setMinMax (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#772-779) should be declared external
+CrowdsaleToken.setDiscountMember (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#789-807) should be declared external
+CrowdsaleToken.isMemberOf (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#811-821) should be declared external
+CrowdsaleToken.withdrawFromRemainingTokens (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#833-853) should be declared external
+CrowdsaleToken.finalizeIco (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#854-865) should be declared external
+CrowdsaleToken.currentBonus (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#868-871) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol:
+	- pragma solidity^0.4.23 (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#111) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#93) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#93) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#159) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#159) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#121) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#121) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#121-122) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#144) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#145) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#170) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#170) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#187) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#187-188) is not in mixedCase
+Parameter '_to' of PausableToken.transfer (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#300) is not in mixedCase
+Parameter '_value' of PausableToken.transfer (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#300) is not in mixedCase
+Parameter '_from' of PausableToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#307-308) is not in mixedCase
+Parameter '_to' of PausableToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#308) is not in mixedCase
+Parameter '_value' of PausableToken.transferFrom (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#308) is not in mixedCase
+Parameter '_spender' of PausableToken.approve (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#314-315) is not in mixedCase
+Parameter '_value' of PausableToken.approve (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#315) is not in mixedCase
+Parameter '_spender' of PausableToken.increaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#321) is not in mixedCase
+Parameter '_addedValue' of PausableToken.increaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#321-322) is not in mixedCase
+Parameter '_spender' of PausableToken.decreaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#332) is not in mixedCase
+Parameter '_subtractedValue' of PausableToken.decreaseApproval (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#332) is not in mixedCase
+Constant 'Configurable.cap' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#335) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleFirstCap' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#335-336) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleSecondCap' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#336-337) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleThirdCap' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#337-338) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleFourthCap' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#338) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.privateLimit' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#339) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.basePrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#339-340) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleDiscountPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#340) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleFirstPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#341-342) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleSecondPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#342-343) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleThirdPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#343-344) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleFourthPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#347-348) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.privateDiscountPrice' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#349-351) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.timeToBeBurned' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#353-354) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.companyReserve' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#354-355) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Configurable.preSaleStartDate' (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#362-363) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_wei' of CrowdsaleToken.tokensAmount (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#435) is not in mixedCase
+Parameter '_address' of CrowdsaleToken.setDiscountMember (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#790) is not in mixedCase
+Parameter '_address' of CrowdsaleToken.isMemberOf (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#811) is not in mixedCase
+Parameter '_value' of CrowdsaleToken.withdrawFromRemainingTokens (/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol#834) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x01f9ed6f62ebf73f7f5e09c1cd07f0665e68b706.sol analyzed (11 contracts), 65 result(s) found

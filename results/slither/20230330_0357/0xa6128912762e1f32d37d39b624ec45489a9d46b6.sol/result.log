@@ -1,0 +1,49 @@
+INFO:Detectors:[93m
+LockTokenContract.calculateUnlockAmount (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#217-235) uses a dangerous strict equality:
+	- unlockable == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol:
+	Contract LockTokenContract has payable functions:
+	 - fallback (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#190-217)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+stage in LockTokenContract.fallback (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#201) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Reentrancy in LockTokenContract.fallback (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#190-217):
+	External calls:
+	- balance = token.balanceOf(address(this)) (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#199-200)
+	State variables written after the call(s):
+	- AddressWithdrawals (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#213-214)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+LockTokenContract.FoundationAddress should be constant (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#173-174)
+LockTokenContract.GubiTokenAddress should be constant (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#179-184)
+LockTokenContract.TeamAndAdviserAddreesOne should be constant (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#174-175)
+LockTokenContract.TeamAndAdviserAddreesTwo should be constant (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#175-179)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Token.balanceOf (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#32-33) should be declared external
+Token.transfer (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#33-36) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol:
+	- pragma solidity0.5.4 (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_now' of LockTokenContract.calculateUnlockAmount (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#218-219) is not in mixedCase
+Parameter '_balance' of LockTokenContract.calculateUnlockAmount (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#219) is not in mixedCase
+Variable 'LockTokenContract.FoundationReleaseStage' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#39-94) is not in mixedCase
+Variable 'LockTokenContract.TeamAndAdviserAddreesOneStage' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#95-137) is not in mixedCase
+Variable 'LockTokenContract.TeamAndAdviserAddreesTwoStage' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#138-173) is not in mixedCase
+Variable 'LockTokenContract.FoundationAddress' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#173-174) is not in mixedCase
+Variable 'LockTokenContract.TeamAndAdviserAddreesOne' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#174-175) is not in mixedCase
+Variable 'LockTokenContract.TeamAndAdviserAddreesTwo' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#175-179) is not in mixedCase
+Variable 'LockTokenContract.GubiTokenAddress' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#179-184) is not in mixedCase
+Constant 'LockTokenContract.StageSection' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#185-188) is not in UPPER_CASE_WITH_UNDERSCORES
+Variable 'LockTokenContract.StartTime' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#189) is not in mixedCase
+Variable 'LockTokenContract.AddressWithdrawals' (/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol#189) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xa6128912762e1f32d37d39b624ec45489a9d46b6.sol analyzed (3 contracts), 20 result(s) found

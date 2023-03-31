@@ -1,0 +1,420 @@
+{
+    "errors": [
+        "EXIT_CODE_43"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 25,
+            "line_end": 75,
+            "message": "TokenERC20 (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#25-75) has incorrect ERC20 function interface(s):\n\t-transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#56-60)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 75,
+            "line_end": 191,
+            "message": "ALUXToken (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#75-191) has incorrect ERC20 function interface(s):\n\t-transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#110-119)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "ALUXToken.commissionGetter should be constant (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#80-81)\nALUXToken.minimumCommission should be constant (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#81-83)\nTokenERC20.decimals should be constant (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#27-28)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 24,
+            "message": "owned.transferOwnership (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#19-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 119,
+            "message": "ALUXToken.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#110-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 60,
+            "message": "TokenERC20.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#56-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 133,
+            "message": "ALUXToken.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#119-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 68,
+            "message": "TokenERC20.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#60-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 75,
+            "message": "TokenERC20.approve (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#68-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "refillTokens",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 109,
+            "message": "ALUXToken.refillTokens (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#106-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 140,
+            "message": "ALUXToken.mintToken (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#133-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 145,
+            "message": "ALUXToken.freezeAccount (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#140-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 150,
+            "message": "ALUXToken.setPrices (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#145-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "setStatus",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 155,
+            "message": "ALUXToken.setStatus (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#152-155) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 165,
+            "message": "ALUXToken.deposit (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#156-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 169,
+            "message": "ALUXToken.withdraw (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#165-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 191,
+            "message": "ALUXToken.sell (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#181-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ALUXToken",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "ALUXToken.fallback (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol:\n\t- pragma solidity^0.4.18 (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 24,
+            "message": "Contract 'owned' (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#7-24) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 45,
+            "message": "Function 'TokenERC20.TokenERC20' (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#35-45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 56,
+            "message": "Function 'TokenERC20._transfer' (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#45-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 46,
+            "message": "Parameter '_from' of TokenERC20._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#45-46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 46,
+            "message": "Parameter '_to' of TokenERC20._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "Parameter '_value' of TokenERC20._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#46-47) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 57,
+            "message": "Parameter '_to' of TokenERC20.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#57) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "Parameter '_value' of TokenERC20.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#57-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_from' of TokenERC20.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "Parameter '_to' of TokenERC20.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#60-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_value' of TokenERC20.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 69,
+            "message": "Parameter '_spender' of TokenERC20.approve (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#68-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_value' of TokenERC20.approve (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 105,
+            "message": "Function 'ALUXToken._transfer' (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#94-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 95,
+            "message": "Parameter '_from' of ALUXToken._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#95) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 95,
+            "message": "Parameter '_to' of ALUXToken._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#95) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 96,
+            "message": "Parameter '_value' of ALUXToken._transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#95-96) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Parameter '_to' of ALUXToken.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Parameter '_value' of ALUXToken.transfer (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 119,
+            "message": "Parameter '_from' of ALUXToken.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_to' of ALUXToken.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_value' of ALUXToken.transferFrom (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 94,
+            "message": "Function 'ALUXToken.ALUXToken' (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#90-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_value' of ALUXToken.refillTokens (0x42cee7dd9b47c2cee35ca996a712e8c99471d46f.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

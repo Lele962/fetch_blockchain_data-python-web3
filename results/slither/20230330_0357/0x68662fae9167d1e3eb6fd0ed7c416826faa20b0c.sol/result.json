@@ -1,0 +1,522 @@
+{
+    "errors": [
+        "EXIT_CODE_56"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "High",
+            "line": 115,
+            "message": "MyAdvancedToken.totalSupply (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#115) shadows:\n\t- token.totalSupply (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#41)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 34,
+            "line_end": 110,
+            "message": "token (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#34-110) has incorrect ERC20 function interface(s):\n\t-transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#64-71)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 110,
+            "line_end": 183,
+            "message": "MyAdvancedToken (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#110-183) has incorrect ERC20 function interface(s):\n\t-transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#126-136)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 37,
+            "message": "token.standard should be constant (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#35-37)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 26,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#24-26:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#65:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#66:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#92:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#93:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#94:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 107,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#107:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#127:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 129,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#129:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 130,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#129-130:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 138,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#138:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#139-140:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#141:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 142,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#142:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#169:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 176,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#176:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 180,
+            "message": "Deprecated standard detected @ 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#180:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "mortal",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "kill",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 14,
+            "message": "mortal.kill (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#11-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 31,
+            "message": "owned.transferOwnership (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#26-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 34,
+            "message": "tokenRecipient.receiveApproval (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#31-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 136,
+            "message": "MyAdvancedToken.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#126-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 71,
+            "message": "token.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#64-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 90,
+            "message": "token.approveAndCall (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#81-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 150,
+            "message": "MyAdvancedToken.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#137-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 102,
+            "message": "token.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#90-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 110,
+            "message": "token.fallback (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#107-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 158,
+            "message": "MyAdvancedToken.mintToken (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#150-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 165,
+            "message": "MyAdvancedToken.freezeAccount (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#160-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 167,
+            "message": "MyAdvancedToken.setPrices (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#165-167) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 175,
+            "message": "MyAdvancedToken.buy (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#167-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 183,
+            "message": "MyAdvancedToken.sell (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#175-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol:\n\t- pragma solidity^0.4.2 (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 14,
+            "message": "Contract 'mortal' (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#3-14) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 31,
+            "message": "Contract 'owned' (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#14-31) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 34,
+            "message": "Contract 'tokenRecipient' (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#31-34) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 110,
+            "message": "Contract 'token' (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#34-110) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_to' of token.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_value' of token.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Parameter '_spender' of token.approve (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Parameter '_value' of token.approve (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 82,
+            "message": "Parameter '_spender' of token.approveAndCall (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#81-82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_value' of token.approveAndCall (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_extraData' of token.approveAndCall (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_from' of token.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_to' of token.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_value' of token.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "Parameter '_to' of MyAdvancedToken.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#126-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_value' of MyAdvancedToken.transfer (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 137,
+            "message": "Parameter '_from' of MyAdvancedToken.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 137,
+            "message": "Parameter '_to' of MyAdvancedToken.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "Parameter '_value' of MyAdvancedToken.transferFrom (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#137-138) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 126,
+            "message": "Function 'MyAdvancedToken.MyAdvancedToken' (0x68662fae9167d1e3eb6fd0ed7c416826faa20b0c.sol#120-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

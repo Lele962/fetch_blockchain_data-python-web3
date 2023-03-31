@@ -1,0 +1,544 @@
+{
+    "errors": [
+        "EXIT_CODE_56"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "safeMul",
+            "impact": "Medium",
+            "line": 66,
+            "line_end": 76,
+            "message": "SafeMath.safeMul (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#66-76) uses a dangerous strict equality:\n\t- assert(bool)(_x == 0 || z / _x == _y)\n\t- assert(bool)(_x == 0 || z / _x == _y)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Different versions of Solidity is used in 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol:\n\t- Version used: ['^0.4.15', '^0.4.18']\n\t- 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#1 declares pragma solidity^0.4.15\n\t- 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#19-22 declares pragma solidity^0.4.18\n\t- 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#78-80 declares pragma solidity^0.4.15\n\t- 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#83-85 declares pragma solidity^0.4.15\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 88,
+            "message": "iERC20Token.totalSupply (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#87-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 153,
+            "line_end": 154,
+            "message": "BurnableToken.totalSupply (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#153-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 88,
+            "message": "iERC20Token.balanceOf (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 189,
+            "message": "BurnableToken.balanceOf (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#187-189) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 91,
+            "message": "iERC20Token.allowance (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#88-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 205,
+            "line_end": 211,
+            "message": "BurnableToken.allowance (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#205-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 168,
+            "message": "BurnableToken.transfer (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#154-168) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 91,
+            "message": "iERC20Token.transfer (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 187,
+            "message": "BurnableToken.transferFrom (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#169-187) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 94,
+            "message": "iERC20Token.transferFrom (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#92-94) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 205,
+            "message": "BurnableToken.approve (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#189-205) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iERC20Token",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 95,
+            "message": "iERC20Token.approve (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#94-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iBurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 104,
+            "message": "iBurnableToken.burnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#101-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 253,
+            "message": "BurnableToken.burnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#243-253) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "iBurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "unPaidBurnTokens",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 106,
+            "message": "iBurnableToken.unPaidBurnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#104-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "unPaidBurnTokens",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 264,
+            "message": "BurnableToken.unPaidBurnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#253-264) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 216,
+            "message": "BurnableToken.fallback (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#213-216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "initTokenSupply",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 227,
+            "message": "BurnableToken.initTokenSupply (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#218-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "setName",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 229,
+            "message": "BurnableToken.setName (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#227-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "lock",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 232,
+            "message": "BurnableToken.lock (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#229-232) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "setRestrictedAcct",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 237,
+            "message": "BurnableToken.setRestrictedAcct (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#232-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "tokenValue",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 241,
+            "message": "BurnableToken.tokenValue (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#237-241) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "valueOf",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 243,
+            "message": "BurnableToken.valueOf (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#241-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BurnableToken",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "function": "haraKiri",
+            "impact": "Informational",
+            "message": "BurnableToken.haraKiri (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol:\n\t- pragma solidity^0.4.15 (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#1): it allows old versions\n\t- pragma solidity^0.4.18 (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#19-22): it allows old versions\n\t- pragma solidity^0.4.15 (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#78-80): it allows old versions\n\t- pragma solidity^0.4.15 (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#83-85): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 32,
+            "message": "Function 'SafeMath.SafeMath' (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#28-32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_x' of SafeMath.safeAdd (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 40,
+            "message": "Parameter '_y' of SafeMath.safeAdd (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#39-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 54,
+            "message": "Parameter '_x' of SafeMath.safeSub (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#53-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_y' of SafeMath.safeSub (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_x' of SafeMath.safeMul (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 68,
+            "message": "Parameter '_y' of SafeMath.safeMul (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#67-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 100,
+            "message": "Contract 'iERC20Token' (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#86-100) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 106,
+            "message": "Contract 'iBurnableToken' (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#100-106) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 188,
+            "message": "Parameter '_owner' of BurnableToken.balanceOf (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#187-188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 207,
+            "message": "Parameter '_owner' of BurnableToken.allowance (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 208,
+            "message": "Parameter '_spender' of BurnableToken.allowance (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#207-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_to' of BurnableToken.transfer (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_value' of BurnableToken.transfer (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Parameter '_from' of BurnableToken.transferFrom (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Parameter '_to' of BurnableToken.transferFrom (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Parameter '_value' of BurnableToken.transferFrom (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 194,
+            "message": "Parameter '_spender' of BurnableToken.approve (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#190-194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 194,
+            "message": "Parameter '_value' of BurnableToken.approve (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_burnCount' of BurnableToken.burnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 254,
+            "message": "Parameter '_burnCount' of BurnableToken.unPaidBurnTokens (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 153,
+            "message": "Function 'BurnableToken.BurnableToken' (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#151-153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 218,
+            "message": "Parameter '_tokenSupply' of BurnableToken.initTokenSupply (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 218,
+            "message": "Parameter '_decimals' of BurnableToken.initTokenSupply (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_name' of BurnableToken.setName (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_symbol' of BurnableToken.setName (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 233,
+            "message": "Parameter '_restrictedAcct' of BurnableToken.setRestrictedAcct (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 236,
+            "message": "Parameter '_restrictUntil' of BurnableToken.setRestrictedAcct (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#233-236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_owner' of BurnableToken.valueOf (0x0edde4b6f91dbd2efd075ace85ec2e52d0696d44.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

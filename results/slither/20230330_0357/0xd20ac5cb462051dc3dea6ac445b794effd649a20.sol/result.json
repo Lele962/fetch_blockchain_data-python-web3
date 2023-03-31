@@ -1,0 +1,327 @@
+{
+    "errors": [
+        "EXIT_CODE_34"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 59,
+            "message": "EthPyramid.balanceOf.balance (local variable @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#59) shadows:\n\t- EthPyramid.balance (function @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#239-243)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 65,
+            "message": "EthPyramid.withdraw.balance (local variable @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#65) shadows:\n\t- EthPyramid.balance (function @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#239-243)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 85,
+            "message": "EthPyramid.reinvestDividends.balance (local variable @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#85) shadows:\n\t- EthPyramid.balance (function @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#239-243)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 171,
+            "message": "EthPyramid.sellMyTokens.balance (local variable @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#171) shadows:\n\t- EthPyramid.balance (function @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#239-243)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 221,
+            "message": "EthPyramid.withdrawOld.balance (local variable @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#221) shadows:\n\t- EthPyramid.balance (function @ 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#239-243)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "reinvestDividends",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 164,
+            "message": "EthPyramid.reinvestDividends (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#82-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "getMeOutOfHere",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 179,
+            "message": "EthPyramid.getMeOutOfHere (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#178-179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "buyPrice",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 200,
+            "message": "EthPyramid.buyPrice (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#198-200) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "sellPrice",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 206,
+            "message": "EthPyramid.sellPrice (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#204-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EthPyramid",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "EthPyramid.fallback (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol:\n\t- pragma solidity^0.4.18 (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 52,
+            "message": "Function 'EthPyramid.EthPyramid' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#49-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "Parameter '_factory' of EthPyramid.EthPyramid (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#49-50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 56,
+            "message": "Parameter '_owner' of EthPyramid.balanceOf (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#55-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 211,
+            "message": "Parameter '_owner' of EthPyramid.dividends (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 10,
+            "message": "Constant 'EthPyramid.scaleFactor' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#10) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 15,
+            "message": "Constant 'EthPyramid.crr_n' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#15) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 16,
+            "message": "Constant 'EthPyramid.crr_d' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#16) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Constant 'EthPyramid.price_coeff' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#20-22) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 390,
+            "line_end": 391,
+            "message": "Constant 'EthPyramid.one' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#390-391) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 391,
+            "line_end": 392,
+            "message": "Constant 'EthPyramid.sqrt2' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#391-392) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 393,
+            "message": "Constant 'EthPyramid.sqrtdot5' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#392-393) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 393,
+            "line_end": 395,
+            "message": "Constant 'EthPyramid.ln2' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#393-395) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 395,
+            "line_end": 396,
+            "message": "Constant 'EthPyramid.ln2_64dot5' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#395-396) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 397,
+            "message": "Constant 'EthPyramid.c1' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#396-397) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 398,
+            "message": "Constant 'EthPyramid.c3' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#397-398) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 399,
+            "message": "Constant 'EthPyramid.c5' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#398-399) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 400,
+            "line_end": 404,
+            "message": "Constant 'EthPyramid.c7' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#400-404) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 404,
+            "line_end": 408,
+            "message": "Constant 'EthPyramid.c9' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#404-408) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 408,
+            "message": "Constant 'EthPyramid.c11' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#408) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 424,
+            "line_end": 426,
+            "message": "Constant 'EthPyramid.c2' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#424-426) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 426,
+            "line_end": 427,
+            "message": "Constant 'EthPyramid.c4' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#426-427) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 427,
+            "line_end": 428,
+            "message": "Constant 'EthPyramid.c6' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#427-428) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol",
+            "impact": "Informational",
+            "line": 428,
+            "line_end": 429,
+            "message": "Constant 'EthPyramid.c8' (0xd20ac5cb462051dc3dea6ac445b794effd649a20.sol#428-429) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,693 @@
+{
+    "errors": [
+        "EXIT_CODE_74"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "balanceOfAt",
+            "impact": "High",
+            "line": 112,
+            "line_end": 113,
+            "message": "MiniMeToken.balances (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#112-113) is never initialized. It is used in:\n\t- doTransfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#209-247)\n\t- balanceOfAt (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#326-349)\n\t- generateTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-435)\n\t- destroyTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#438-456)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Medium",
+            "line": 520,
+            "line_end": 524,
+            "message": "MiniMeToken.isContract (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520-524) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 260,
+            "line_end": 278,
+            "message": "Reentrancy in MiniMeToken.approve (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#260-278):\n\tExternal calls:\n\t- require(bool)(TokenController(controller).onApprove(msg.sender,_spender,_amount)) (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#275-276)\n\tState variables written after the call(s):\n\t- allowed (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#277)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 551,
+            "line_end": 566,
+            "message": "MiniMeToken.claimTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551-566) does not use the value returned by external calls:\n\t-token.transfer(controller,balance) (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#563-566)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "min",
+            "impact": "Low",
+            "line": 487,
+            "message": "MiniMeToken.getValueAt.min (local variable @ 0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#487) shadows:\n\t- MiniMeToken.min (function @ 0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#527-531)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 520,
+            "line_end": 524,
+            "message": "MiniMeToken.isContract uses assembly (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520-524)\n\t- 0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#522-524\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "MiniMeToken.version should be constant (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#84)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "proxyPayment",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 10,
+            "message": "TokenController.proxyPayment (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#8-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "onTransfer",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "TokenController.onTransfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#16-18) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "onApprove",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 28,
+            "message": "TokenController.onApprove (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#24-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controlled",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "changeController",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 45,
+            "message": "Controlled.changeController (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#39-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 73,
+            "message": "ApproveAndCallFallBack.receiveApproval (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#70-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 177,
+            "message": "MiniMeToken.transfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#172-177) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 201,
+            "message": "MiniMeToken.transferFrom (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 288,
+            "message": "MiniMeToken.allowance (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#286-288) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 300,
+            "line_end": 315,
+            "message": "MiniMeToken.approveAndCall (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#300-315) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "createCloneToken",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 415,
+            "message": "MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#392-415) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "generateTokens",
+            "impact": "Informational",
+            "line": 420,
+            "line_end": 435,
+            "message": "MiniMeToken.generateTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-435) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "destroyTokens",
+            "impact": "Informational",
+            "line": 438,
+            "line_end": 456,
+            "message": "MiniMeToken.destroyTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#438-456) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "enableTransfers",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 463,
+            "message": "MiniMeToken.enableTransfers (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#461-463) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 535,
+            "line_end": 541,
+            "message": "MiniMeToken.fallback (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#535-541) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "claimTokens",
+            "impact": "Informational",
+            "line": 551,
+            "line_end": 566,
+            "message": "MiniMeToken.claimTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551-566) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeTokenFactory",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "function": "createCloneToken",
+            "impact": "Informational",
+            "line": 604,
+            "line_end": 616,
+            "message": "MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#604-616) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol:\n\t- pragma solidity0.4.19 (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 37,
+            "message": "Function 'Controlled.Controlled' (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#35-37) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 40,
+            "message": "Parameter '_newController' of Controlled.changeController (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#39-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 166,
+            "message": "Function 'MiniMeToken.MiniMeToken' (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#145-166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 147,
+            "message": "Parameter '_tokenFactory' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#146-147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 148,
+            "message": "Parameter '_parentToken' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 150,
+            "message": "Parameter '_parentSnapShotBlock' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#149-150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Parameter '_tokenName' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 151,
+            "message": "Parameter '_decimalUnits' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#150-151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_tokenSymbol' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.MiniMeToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 175,
+            "message": "Parameter '_to' of MiniMeToken.transfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#173-175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 175,
+            "message": "Parameter '_amount' of MiniMeToken.transfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_from' of MiniMeToken.transferFrom (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_to' of MiniMeToken.transferFrom (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_amount' of MiniMeToken.transferFrom (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 211,
+            "message": "Parameter '_from' of MiniMeToken.doTransfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#210-211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 213,
+            "message": "Parameter '_to' of MiniMeToken.doTransfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#211-213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 213,
+            "message": "Parameter '_amount' of MiniMeToken.doTransfer (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 251,
+            "message": "Parameter '_owner' of MiniMeToken.balanceOf (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 261,
+            "message": "Parameter '_spender' of MiniMeToken.approve (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#260-261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 261,
+            "message": "Parameter '_amount' of MiniMeToken.approve (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 287,
+            "message": "Parameter '_owner' of MiniMeToken.allowance (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#286-287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_spender' of MiniMeToken.allowance (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 302,
+            "line_end": 303,
+            "message": "Parameter '_spender' of MiniMeToken.approveAndCall (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#302-303) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 303,
+            "line_end": 306,
+            "message": "Parameter '_amount' of MiniMeToken.approveAndCall (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#303-306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_extraData' of MiniMeToken.approveAndCall (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 327,
+            "message": "Parameter '_owner' of MiniMeToken.balanceOfAt (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#327) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 327,
+            "message": "Parameter '_blockNumber' of MiniMeToken.balanceOfAt (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#327) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 352,
+            "line_end": 353,
+            "message": "Parameter '_blockNumber' of MiniMeToken.totalSupplyAt (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#352-353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 393,
+            "line_end": 394,
+            "message": "Parameter '_cloneTokenName' of MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#393-394) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 394,
+            "line_end": 395,
+            "message": "Parameter '_cloneDecimalUnits' of MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#394-395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 395,
+            "line_end": 396,
+            "message": "Parameter '_cloneTokenSymbol' of MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#395-396) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 399,
+            "message": "Parameter '_snapshotBlock' of MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#397-399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 420,
+            "line_end": 421,
+            "message": "Parameter '_owner' of MiniMeToken.generateTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_amount' of MiniMeToken.generateTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 439,
+            "message": "Parameter '_owner' of MiniMeToken.destroyTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#439) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 439,
+            "line_end": 440,
+            "message": "Parameter '_amount' of MiniMeToken.destroyTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#439-440) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 462,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.enableTransfers (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#461-462) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 474,
+            "line_end": 475,
+            "message": "Parameter '_block' of MiniMeToken.getValueAt (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#474-475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 498,
+            "message": "Parameter '_value' of MiniMeToken.updateValueAtNow (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#498) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 520,
+            "message": "Parameter '_addr' of MiniMeToken.isContract (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 551,
+            "message": "Parameter '_token' of MiniMeToken.claimTokens (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 605,
+            "message": "Parameter '_parentToken' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 605,
+            "message": "Parameter '_snapshotBlock' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 605,
+            "line_end": 606,
+            "message": "Parameter '_tokenName' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605-606) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 606,
+            "message": "Parameter '_decimalUnits' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#606) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 607,
+            "line_end": 608,
+            "message": "Parameter '_tokenSymbol' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#607-608) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "line": 608,
+            "line_end": 609,
+            "message": "Parameter '_transfersEnabled' of MiniMeTokenFactory.createCloneToken (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#608-609) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol",
+            "impact": "Informational",
+            "message": "Function 'Token.Token' (0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,211 @@
+{
+    "errors": [
+        "EXIT_CODE_22"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MyToken",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3,
+            "line_end": 57,
+            "message": "MyToken (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#3-57) has incorrect ERC20 function interface(s):\n\t-transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#35-39)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "MyToken.decimals should be constant (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#6-7)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyToken",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 39,
+            "message": "MyToken.transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#35-39) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyToken",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 46,
+            "message": "MyToken.transferFrom (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#39-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyToken",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 57,
+            "message": "MyToken.approve (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#51-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b84aa023702fdba2818256193dbc72edee1d56c.sol:\n\t- pragma solidity^0.4.21 (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 19,
+            "message": "Function 'MyToken.MyToken' (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#12-19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 30,
+            "message": "Function 'MyToken._transfer' (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#19-30) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 19,
+            "message": "Parameter '_from' of MyToken._transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 19,
+            "message": "Parameter '_to' of MyToken._transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "Parameter '_value' of MyToken._transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#19-20) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "Parameter '_to' of MyToken.transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#35-36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 36,
+            "message": "Parameter '_value' of MyToken.transfer (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_from' of MyToken.transferFrom (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_to' of MyToken.transferFrom (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 40,
+            "message": "Parameter '_value' of MyToken.transferFrom (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#39-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 46,
+            "message": "Parameter '_owner' of MyToken.allowance (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 48,
+            "message": "Parameter '_spender' of MyToken.allowance (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#46-48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_spender' of MyToken.approve (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 53,
+            "message": "Parameter '_value' of MyToken.approve (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "Variable 'MyToken._totalSupply' (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#7-8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b84aa023702fdba2818256193dbc72edee1d56c.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "Variable 'MyToken._allowance' (0x7b84aa023702fdba2818256193dbc72edee1d56c.sol#9-10) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

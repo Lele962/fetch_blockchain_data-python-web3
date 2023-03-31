@@ -1,0 +1,550 @@
+{
+    "errors": [
+        "EXIT_CODE_56"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "setContract",
+            "impact": "Medium",
+            "line": 271,
+            "line_end": 283,
+            "message": "Reentrancy in Safe.setContract (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#271-283):\n\tExternal calls:\n\t- freeAmount = getMainBalance() (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#279-280)\n\tState variables written after the call(s):\n\t- lockupIsSet (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#282)\n\t- tranche (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#281)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "AssetWithdraw",
+            "impact": "Medium",
+            "line": 207,
+            "line_end": 215,
+            "message": "Safe.AssetWithdraw (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#207-215) does not use the value returned by external calls:\n\t-token.transfer(_to,_balance) (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#214)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "withdrawCell",
+            "impact": "Medium",
+            "line": 310,
+            "line_end": 320,
+            "message": "Safe.withdrawCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#310-320) does not use the value returned by external calls:\n\t-token.transfer(msg.sender,_balance) (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#318)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "setContract",
+            "impact": "Low",
+            "line": 271,
+            "line_end": 283,
+            "message": "Reentrancy in Safe.setContract (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#271-283):\n\tExternal calls:\n\t- freeAmount = getMainBalance() (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#279-280)\n\tState variables written after the call(s):\n\t- mainLockup (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#280)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "AuthStart",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 170,
+            "message": "Safe.AuthStart (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#159-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "AuthEnd",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 183,
+            "message": "Safe.AuthEnd (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#172-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getTimeOutAuthentication",
+            "impact": "Informational",
+            "line": 183,
+            "line_end": 187,
+            "message": "Safe.getTimeOutAuthentication (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#183-187) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getFreeAmount",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 191,
+            "message": "Safe.getFreeAmount (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#187-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getLockupCell",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 195,
+            "message": "Safe.getLockupCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#191-195) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getExistCell",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 204,
+            "message": "Safe.getExistCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#199-204) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getSafeKey",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 206,
+            "message": "Safe.getSafeKey (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#204-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "AssetWithdraw",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 215,
+            "message": "Safe.AssetWithdraw (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#207-215) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "setCell",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 228,
+            "message": "Safe.setCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#216-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "deleteCell",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 238,
+            "message": "Safe.deleteCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#228-238) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "editCell",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 248,
+            "message": "Safe.editCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#239-248) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "depositCell",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 257,
+            "message": "Safe.depositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#248-257) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "changeDepositCell",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 266,
+            "message": "Safe.changeDepositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#257-266) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "setContract",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 283,
+            "message": "Safe.setContract (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#271-283) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "changeKey",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 304,
+            "message": "Safe.changeKey (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#284-304) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "setTimeOutAuthentication",
+            "impact": "Informational",
+            "line": 306,
+            "line_end": 310,
+            "message": "Safe.setTimeOutAuthentication (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#306-310) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "withdrawCell",
+            "impact": "Informational",
+            "line": 310,
+            "line_end": 320,
+            "message": "Safe.withdrawCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#310-320) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "transferCell",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 335,
+            "message": "Safe.transferCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#320-335) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getInfoCellBalance",
+            "impact": "Informational",
+            "line": 338,
+            "line_end": 342,
+            "message": "Safe.getInfoCellBalance (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#338-342) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getInfoCellLockup",
+            "impact": "Informational",
+            "line": 346,
+            "line_end": 350,
+            "message": "Safe.getInfoCellLockup (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#346-350) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "getMainLockup",
+            "impact": "Informational",
+            "message": "Safe.getMainLockup (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Safe",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "function": "isTimeOver",
+            "impact": "Informational",
+            "message": "Safe.isTimeOver (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 104,
+            "message": "Struct 'Safe._Cell' (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#98-104) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 135,
+            "message": "Parameter '_first' of Safe. (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "Parameter '_second' of Safe. (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#135-136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_third' of Safe. (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "Parameter '_fourth' of Safe. (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#136-137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 170,
+            "message": "Function 'Safe.AuthStart' (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#159-170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 183,
+            "message": "Function 'Safe.AuthEnd' (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#172-183) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 191,
+            "line_end": 192,
+            "message": "Parameter '_user' of Safe.getLockupCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#191-192) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_user' of Safe.getBalanceCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_user' of Safe.getExistCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 215,
+            "message": "Function 'Safe.AssetWithdraw' (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#207-215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_to' of Safe.AssetWithdraw (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 209,
+            "message": "Parameter '_balance' of Safe.AssetWithdraw (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#208-209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 217,
+            "message": "Parameter '_cell' of Safe.setCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#216-217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_lockup' of Safe.setCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 229,
+            "message": "Parameter '_key' of Safe.deleteCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 240,
+            "message": "Parameter '_key' of Safe.editCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 241,
+            "message": "Parameter '_lockup' of Safe.editCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#240-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 248,
+            "message": "Parameter '_key' of Safe.depositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 249,
+            "message": "Parameter '_balance' of Safe.depositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#248-249) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_key' of Safe.changeDepositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 261,
+            "message": "Parameter '_balance' of Safe.changeDepositCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#258-261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_token' of Safe.setContract (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 273,
+            "message": "Parameter '_lockup' of Safe.setContract (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#272-273) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_oldKey' of Safe.changeKey (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 287,
+            "message": "Parameter '_newKey' of Safe.changeKey (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#286-287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_time' of Safe.setTimeOutAuthentication (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 311,
+            "message": "Parameter '_balance' of Safe.withdrawCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#311) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_to' of Safe.transferCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_balance' of Safe.transferCell (0x7b57ee1e32e2b3453838482970bf63c28b2472c9.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

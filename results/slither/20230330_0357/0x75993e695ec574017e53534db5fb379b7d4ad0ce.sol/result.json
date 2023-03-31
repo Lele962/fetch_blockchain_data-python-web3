@@ -1,0 +1,284 @@
+{
+    "errors": [
+        "EXIT_CODE_26"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 218,
+            "message": "Contract locking ether found in 0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol:\n\tContract BudCoin has payable functions:\n\t - fallback (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#218)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "safeMul",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 33,
+            "message": "SafeMath.safeMul (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#29-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "safeDiv",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 40,
+            "message": "SafeMath.safeDiv (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#33-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "BudCoin.totalSupply (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 46,
+            "message": "ERC20Interface.totalSupply (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#45-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 141,
+            "message": "BudCoin.balanceOf (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#140-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "ERC20Interface.balanceOf (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#46-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 197,
+            "message": "BudCoin.allowance (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#195-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20Interface.allowance (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20Interface.transfer (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 154,
+            "message": "BudCoin.transfer (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#146-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Interface.approve (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 171,
+            "message": "BudCoin.approve (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#163-171) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "ERC20Interface.transferFrom (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#50-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 188,
+            "message": "BudCoin.transferFrom (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#179-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 67,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#63-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 90,
+            "message": "Owned.transferOwnership (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#86-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 98,
+            "message": "Owned.acceptOwnership (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#90-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 211,
+            "message": "BudCoin.approveAndCall (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#203-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 218,
+            "message": "BudCoin.fallback (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BudCoin",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "message": "BudCoin.transferAnyERC20Token (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol:\n\t- pragma solidity^0.4.18 (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 83,
+            "message": "Function 'Owned.Owned' (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#80-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "impact": "Informational",
+            "line": 88,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#88) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 126,
+            "message": "Function 'BudCoin.BudCoin' (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#118-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 111,
+            "message": "Variable 'BudCoin._totalSupply' (0x75993e695ec574017e53534db5fb379b7d4ad0ce.sol#108-111) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

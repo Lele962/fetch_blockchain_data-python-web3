@@ -1,0 +1,590 @@
+{
+    "errors": [
+        "EXIT_CODE_55"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "updatePrice",
+            "impact": "High",
+            "line": 885,
+            "line_end": 892,
+            "message": "Reentrancy in C10Token.updatePrice (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#885-892):\n\tExternal calls:\n\t- allocateTokens() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)\n\t- processWithdrawals() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)\n\tState variables written after the call(s):\n\t- _balances (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)\n\t- _totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 924,
+            "line_end": 932,
+            "message": "C10Token.claimTokens (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#924-932) does not use the value returned by external calls:\n\t-token.transfer(owner(),token.balanceOf(address(this))) (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#928-931)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "handleAllocation",
+            "impact": "Medium",
+            "line": 1021,
+            "line_end": 1040,
+            "message": "C10Token.handleAllocation (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1021-1040) does not use the value returned by external calls:\n\t-participantAddresses.pop() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1033)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "handleWithdrawal",
+            "impact": "Medium",
+            "line": 1052,
+            "line_end": 1060,
+            "message": "C10Token.handleWithdrawal (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060) does not use the value returned by external calls:\n\t-withdrawals.pop() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20Detailed.constructor.name (local variable @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#50-51) shadows:\n\t- ERC20Detailed.name (function @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#60-66)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "symbol",
+            "impact": "Low",
+            "line": 51,
+            "line_end": 52,
+            "message": "ERC20Detailed.constructor.symbol (local variable @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#51-52) shadows:\n\t- ERC20Detailed.symbol (function @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#67-72)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "decimals",
+            "impact": "Low",
+            "line": 52,
+            "message": "ERC20Detailed.constructor.decimals (local variable @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#52) shadows:\n\t- ERC20Detailed.decimals (function @ 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#74-80)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "handleAllocation",
+            "impact": "Low",
+            "line": 1021,
+            "line_end": 1040,
+            "message": "Reentrancy in C10Token.handleAllocation (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1021-1040):\n\tExternal calls:\n\t- participantAddresses.pop() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1033)\n\tExternal calls sending eth:\n\t- address(uint160(owner())).transfer(feeAmount) (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1035)\n\tState variables written after the call(s):\n\t- _balances (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1036-1039)\n\t- _totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1036-1039)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "handleWithdrawal",
+            "impact": "Low",
+            "line": 1052,
+            "line_end": 1060,
+            "message": "Reentrancy in C10Token.handleWithdrawal (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060):\n\tExternal calls:\n\t- withdrawals.pop() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n\tState variables written after the call(s):\n\t- _balances (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n\t- _totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "C10Token",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "handleWithdrawal",
+            "impact": "Low",
+            "line": 1052,
+            "line_end": 1060,
+            "message": "Reentrancy in C10Token.handleWithdrawal (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060):\n\tExternal calls:\n\t- withdrawals.pop() (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n\tExternal calls sending eth:\n\t- participant.send(balance) (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n\tState variables written after the call(s):\n\t- _balances (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n\t- _totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 66,
+            "message": "ERC20Detailed.name (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#60-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 72,
+            "message": "ERC20Detailed.symbol (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#67-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 80,
+            "message": "ERC20Detailed.decimals (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#74-80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 209,
+            "message": "ERC20.transfer (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#208-209) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 20,
+            "message": "IERC20.transfer (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#18-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "IERC20.approve (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 227,
+            "message": "ERC20.approve (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#221-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 24,
+            "message": "IERC20.transferFrom (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#22-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 242,
+            "message": "ERC20.transferFrom (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#235-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 26,
+            "message": "IERC20.totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#24-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 181,
+            "message": "ERC20.totalSupply (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#180-181) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 202,
+            "message": "ERC20.allowance (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#199-202) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 30,
+            "message": "IERC20.allowance (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#28-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "increaseAllowance",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 261,
+            "message": "ERC20.increaseAllowance (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#253-261) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "decreaseAllowance",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 281,
+            "message": "ERC20.decreaseAllowance (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#271-281) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 367,
+            "line_end": 372,
+            "message": "ERC20Burnable.burnFrom (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#367-372) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 422,
+            "line_end": 427,
+            "message": "Ownable.renounceOwnership (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#422-427) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 431,
+            "line_end": 437,
+            "message": "Ownable.transferOwnership (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#431-437) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 523,
+            "line_end": 529,
+            "message": "PauserRole.addPauser (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#523-529) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 532,
+            "message": "PauserRole.renouncePauser (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#529-532) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 567,
+            "line_end": 570,
+            "message": "Pausable.paused (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#567-570) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 589,
+            "line_end": 595,
+            "message": "Pausable.pause (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#589-595) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 602,
+            "line_end": 606,
+            "message": "Pausable.unpause (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#602-606) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "line": 631,
+            "line_end": 633,
+            "message": "MinterRole.addMinter (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#631-633) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "renounceMinter",
+            "impact": "Informational",
+            "line": 634,
+            "line_end": 636,
+            "message": "MinterRole.renounceMinter (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#634-636) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WhitelistAdminRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "addWhitelistAdmin",
+            "impact": "Informational",
+            "line": 678,
+            "line_end": 679,
+            "message": "WhitelistAdminRole.addWhitelistAdmin (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#678-679) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WhitelistAdminRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "renounceWhitelistAdmin",
+            "impact": "Informational",
+            "line": 679,
+            "line_end": 680,
+            "message": "WhitelistAdminRole.renounceWhitelistAdmin (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#679-680) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WhitelistedRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "removeWhitelisted",
+            "impact": "Informational",
+            "line": 733,
+            "line_end": 737,
+            "message": "WhitelistedRole.removeWhitelisted (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#733-737) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WhitelistedRole",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "renounceWhitelisted",
+            "impact": "Informational",
+            "line": 737,
+            "line_end": 739,
+            "message": "WhitelistedRole.renounceWhitelisted (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#737-739) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "InvictusWhitelist",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "verifyParticipant",
+            "impact": "Informational",
+            "line": 761,
+            "line_end": 766,
+            "message": "InvictusWhitelist.verifyParticipant (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#761-766) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "InvictusWhitelist",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "function": "removeWhitelistAdmin",
+            "impact": "Informational",
+            "line": 767,
+            "line_end": 771,
+            "message": "InvictusWhitelist.removeWhitelistAdmin (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#767-771) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 14,
+            "message": "Detected issues with version pragma in 0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol:\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#11-14): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#40-41): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#84): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#154): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#347-350): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#375): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#456-459): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#502-504): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#549): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#610): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#651): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#696): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#755): it allows old versions\n\t- pragma solidity^0.5.6 (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#772-773): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 290,
+            "line_end": 294,
+            "message": "Function 'ERC20._transfer' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#290-294) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 305,
+            "line_end": 311,
+            "message": "Function 'ERC20._mint' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#305-311) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 323,
+            "message": "Function 'ERC20._burn' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#319-323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 344,
+            "message": "Function 'ERC20._burnFrom' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#333-344) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 445,
+            "line_end": 452,
+            "message": "Function 'Ownable._transferOwnership' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#445-452) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 538,
+            "message": "Function 'PauserRole._addPauser' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#532-538) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 538,
+            "line_end": 544,
+            "message": "Function 'PauserRole._removePauser' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#538-544) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 636,
+            "line_end": 641,
+            "message": "Function 'MinterRole._addMinter' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#636-641) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 641,
+            "line_end": 646,
+            "message": "Function 'MinterRole._removeMinter' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#641-646) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 680,
+            "line_end": 685,
+            "message": "Function 'WhitelistAdminRole._addWhitelistAdmin' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#680-685) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 686,
+            "line_end": 691,
+            "message": "Function 'WhitelistAdminRole._removeWhitelistAdmin' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#686-691) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 739,
+            "line_end": 744,
+            "message": "Function 'WhitelistedRole._addWhitelisted' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#739-744) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol",
+            "impact": "Informational",
+            "line": 744,
+            "line_end": 750,
+            "message": "Function 'WhitelistedRole._removeWhitelisted' (0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#744-750) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

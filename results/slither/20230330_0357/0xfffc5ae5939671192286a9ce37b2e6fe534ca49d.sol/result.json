@@ -1,0 +1,447 @@
+{
+    "errors": [
+        "EXIT_CODE_44"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Medium",
+            "line": 74,
+            "line_end": 75,
+            "message": "Token99.totalSupply (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#74-75) shadows:\n\t- ERC20Basic.totalSupply (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#42)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 42,
+            "message": "ERC20Basic.totalSupply should be constant (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#42)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 37,
+            "message": "ForeignToken.balanceOf (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#36-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 41,
+            "message": "ForeignToken.transfer (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#37-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 229,
+            "message": "Token99.balanceOf (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#225-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "ERC20Basic.balanceOf (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#42-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 245,
+            "message": "Token99.transfer (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#234-245) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 44,
+            "message": "ERC20Basic.transfer (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#43-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 267,
+            "line_end": 273,
+            "message": "Token99.allowance (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#267-273) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20.allowance (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 245,
+            "line_end": 257,
+            "message": "Token99.transferFrom (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#245-257) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20.transferFrom (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20.approve (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#50-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 267,
+            "message": "Token99.approve (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#257-267) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "distr",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 56,
+            "message": "Token.distr (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#55-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 57,
+            "message": "Token.totalSupply (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#56-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 62,
+            "message": "Token.balanceOf (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#57-62) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 116,
+            "message": "Token99.transferOwnership (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#111-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "enableWhitelist",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 122,
+            "message": "Token99.enableWhitelist (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#116-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "disableWhitelist",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 129,
+            "message": "Token99.disableWhitelist (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#123-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "finishDistribution",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 134,
+            "message": "Token99.finishDistribution (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#129-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "airdrop",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 164,
+            "message": "Token99.airdrop (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#149-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "distribution",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 179,
+            "message": "Token99.distribution (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#164-179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "distributeAmounts",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 198,
+            "message": "Token99.distributeAmounts (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#179-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "getTokenBalance",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 279,
+            "message": "Token99.getTokenBalance (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#273-279) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 279,
+            "line_end": 280,
+            "message": "Token99.withdraw (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#279-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 295,
+            "message": "Token99.burn (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#280-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token99",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "message": "Token99.withdrawForeignTokens (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol:\n\t- pragma solidity^0.4.19 (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 226,
+            "message": "Parameter '_owner' of Token99.balanceOf (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#225-226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 234,
+            "message": "Parameter '_to' of Token99.transfer (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 235,
+            "message": "Parameter '_amount' of Token99.transfer (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 267,
+            "line_end": 268,
+            "message": "Parameter '_owner' of Token99.allowance (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#267-268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 268,
+            "message": "Parameter '_spender' of Token99.allowance (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Parameter '_from' of Token99.transferFrom (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#246-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_to' of Token99.transferFrom (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_amount' of Token99.transferFrom (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Parameter '_spender' of Token99.approve (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#257-258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_value' of Token99.approve (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 110,
+            "message": "Function 'Token99.Token99' (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#105-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 135,
+            "message": "Parameter '_to' of Token99.distr (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 135,
+            "message": "Parameter '_amount' of Token99.distr (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "line": 282,
+            "message": "Parameter '_value' of Token99.burn (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol#282) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of Token99.withdrawForeignTokens (0xfffc5ae5939671192286a9ce37b2e6fe534ca49d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

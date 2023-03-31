@@ -1,0 +1,76 @@
+{
+    "errors": [
+        "EXIT_CODE_6"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "pay",
+            "impact": "Low",
+            "line": 156,
+            "line_end": 157,
+            "message": "Multiplier.pay has external calls inside a loop:\n\t- dep.depositor.send(dep.expect) (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol#156-157)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "pay",
+            "impact": "Low",
+            "line": 164,
+            "line_end": 165,
+            "message": "Multiplier.pay has external calls inside a loop:\n\t- dep.depositor.send(money) (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol#164-165)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 140,
+            "message": "Multiplier.fallback (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol#121-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "getDeposit",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 188,
+            "message": "Multiplier.getDeposit (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol#182-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "getDeposits",
+            "impact": "Informational",
+            "message": "Multiplier.getDeposits (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Multiplier",
+            "filename": "output/0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol",
+            "function": "getQueueLength",
+            "impact": "Informational",
+            "message": "Multiplier.getQueueLength (0x0f7466e713b582630504dd39a72f6e15d2d052a9.sol) should be declared external\n",
+            "name": "external-function"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

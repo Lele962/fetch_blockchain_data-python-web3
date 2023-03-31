@@ -1,0 +1,60 @@
+INFO:Detectors:[91m
+VOXTrader.owner (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#191) shadows:
+	- HorizonContractBase.owner (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#52-53)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in VOXTrader.execute (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#289-333):
+	External calls:
+	- ! ERC20Interface(tokenContract).transferFrom(seller,msg.sender,tradeQuantity) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#316-324)
+	External calls sending eth:
+	- seller.transfer(cost.sub(etherFee)) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#327)
+	- owner.transfer(etherFee) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#329)
+	State variables written after the call(s):
+	- lastSellPrice (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#330)
+Reentrancy in VOXTrader.offer (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287):
+	External calls:
+	- allowed = ERC20Interface(tokenContract).allowance(msg.sender,this) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#274)
+	- balance = ERC20Interface(tokenContract).balanceOf(msg.sender) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#277-281)
+	State variables written after the call(s):
+	- orderBook (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#284-285)
+Reentrancy in VOXTrader.setOfferSize (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#387-407):
+	External calls:
+	- balance = ERC20Interface(tokenContract).balanceOf(msg.sender) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#391-392)
+	- allowed = ERC20Interface(tokenContract).allowance(msg.sender,this) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#395-399)
+	State variables written after the call(s):
+	- orderBook (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#404-405)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+VOXTrader.offer (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(expiry > block.timestamp,Cannot have an expiry date in the past.) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#270)
+VOXTrader.execute (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#289-333) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(block.timestamp < order.expiry,Sell order has expired.) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#295-296)
+VOXTrader.setOfferExpiry (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#411-425) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(expiry > block.timestamp,Cannot have an expiry date in the past.) (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#417-418)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+ERC20Interface.totalSupply (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#31-32) should be declared external
+ERC20Interface.balanceOf (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#32-33) should be declared external
+ERC20Interface.allowance (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#33-34) should be declared external
+ERC20Interface.transfer (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#34-35) should be declared external
+ERC20Interface.approve (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#35-36) should be declared external
+ERC20Interface.transferFrom (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#36-38) should be declared external
+VOXTrader.getOrder (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#255-259) should be declared external
+VOXTrader.offer (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#265-287) should be declared external
+VOXTrader.cancel (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#335-343) should be declared external
+VOXTrader.setEnforceKyc (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#366-367) should be declared external
+VOXTrader.setOfferPrice (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#370-385) should be declared external
+VOXTrader.setOfferSize (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#387-407) should be declared external
+VOXTrader.setOfferExpiry (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#411-425) should be declared external
+VOXTrader.setEtherFeePercent (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#430-437) should be declared external
+VOXTrader.setEtherFeeMin (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#440-442) should be declared external
+VOXTrader.redeemVoucherSingle (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#494-504) should be declared external
+VOXTrader.redeemVoucher (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#513-536) should be declared external
+VOXTrader.setSellCeiling (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#538-539) should be declared external
+VOXTrader.setSellFloor (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol#544-546) should be declared external
+VOXTrader.retire (/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Slither:/sb/0x01e15429fedbc08dec25e127df09b4af17167f5e.sol analyzed (5 contracts), 27 result(s) found

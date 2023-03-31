@@ -1,0 +1,61 @@
+INFO:Detectors:[93m
+RasthenToken.totalSupply (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#80-81) shadows:
+	- ERC20Basic.totalSupply (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing-from-abstract-contracts[0m
+INFO:Detectors:[92m
+ERC20Basic.totalSupply should be constant (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+AltcoinToken.balanceOf (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#49-50) should be declared external
+AltcoinToken.transfer (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#50-54) should be declared external
+ERC20Basic.balanceOf (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#55-56) should be declared external
+RasthenToken.balanceOf (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#196-201) should be declared external
+ERC20Basic.transfer (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#56-57) should be declared external
+RasthenToken.transfer (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206-215) should be declared external
+RasthenToken.allowance (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#237-243) should be declared external
+ERC20.allowance (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#61-62) should be declared external
+RasthenToken.transferFrom (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216-227) should be declared external
+ERC20.transferFrom (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#62-63) should be declared external
+ERC20.approve (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#63-64) should be declared external
+RasthenToken.approve (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#227-237) should be declared external
+RasthenToken.Rasthen (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#112-117) should be declared external
+RasthenToken.transferOwnership (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#117-123) should be declared external
+RasthenToken.finishDistribution (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#124-129) should be declared external
+RasthenToken.adminClaimAirdrop (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159-160) should be declared external
+RasthenToken.adminClaimAirdropMultiple (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#160-165) should be declared external
+RasthenToken.updateTokensPerEth (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#166-175) should be declared external
+RasthenToken.getTokenBalance (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#243-250) should be declared external
+RasthenToken.withdraw (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#250-254) should be declared external
+RasthenToken.burn (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#255-262) should be declared external
+RasthenToken.withdrawAltcoinTokens (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#264) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol:
+	- pragma solidity^0.4.18 (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_owner' of RasthenToken.balanceOf (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#197) is not in mixedCase
+Parameter '_to' of RasthenToken.transfer (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206) is not in mixedCase
+Parameter '_amount' of RasthenToken.transfer (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#206) is not in mixedCase
+Parameter '_owner' of RasthenToken.allowance (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#238) is not in mixedCase
+Parameter '_spender' of RasthenToken.allowance (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#238) is not in mixedCase
+Parameter '_from' of RasthenToken.transferFrom (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216) is not in mixedCase
+Parameter '_to' of RasthenToken.transferFrom (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#216) is not in mixedCase
+Parameter '_amount' of RasthenToken.transferFrom (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#217-218) is not in mixedCase
+Parameter '_spender' of RasthenToken.approve (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#228) is not in mixedCase
+Parameter '_value' of RasthenToken.approve (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#228-229) is not in mixedCase
+Function 'RasthenToken.Rasthen' (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#112-117) is not in mixedCase
+Parameter '_to' of RasthenToken.distr (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#129-130) is not in mixedCase
+Parameter '_amount' of RasthenToken.distr (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#130) is not in mixedCase
+Parameter '_participant' of RasthenToken.doAirdrop (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#141-143) is not in mixedCase
+Parameter '_amount' of RasthenToken.doAirdrop (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#143) is not in mixedCase
+Parameter '_participant' of RasthenToken.adminClaimAirdrop (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159) is not in mixedCase
+Parameter '_amount' of RasthenToken.adminClaimAirdrop (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#159) is not in mixedCase
+Parameter '_addresses' of RasthenToken.adminClaimAirdropMultiple (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#163) is not in mixedCase
+Parameter '_amount' of RasthenToken.adminClaimAirdropMultiple (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#163) is not in mixedCase
+Parameter '_tokensPerEth' of RasthenToken.updateTokensPerEth (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#168) is not in mixedCase
+Parameter '_value' of RasthenToken.burn (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#255) is not in mixedCase
+Parameter '_tokenContract' of RasthenToken.withdrawAltcoinTokens (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol) is not in mixedCase
+Constant 'RasthenToken.minContribution' (/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol#84) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xc8e73d3709d939bf186cfb83a92d24c464cb0056.sol analyzed (5 contracts), 48 result(s) found

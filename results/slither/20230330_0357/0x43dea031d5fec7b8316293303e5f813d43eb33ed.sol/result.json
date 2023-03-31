@@ -1,0 +1,383 @@
+{
+    "errors": [
+        "EXIT_CODE_43"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Extradecoin",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "function": "endICO",
+            "impact": "Medium",
+            "line": 233,
+            "line_end": 240,
+            "message": "Extradecoin.endICO (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#233-240) uses a dangerous strict equality:\n\t- require(bool)(icoEndTime == 0)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owner",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 24,
+            "message": "Owner.changeOwner (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#16-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Extradecoin",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "function": "isSoftCapReached",
+            "impact": "Informational",
+            "message": "Extradecoin.isSoftCapReached (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol:\n\t- pragma solidity^0.4.21 (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 16,
+            "message": "Function 'Owner.Owner' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#12-16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "Parameter '_owner' of Owner.Owner (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#12-13) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 16,
+            "message": "Parameter '_newOwnerAddr' of Owner.changeOwner (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 173,
+            "message": "Function 'Extradecoin.Extradecoin' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#159-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 161,
+            "message": "Parameter '_walletAddr' of Extradecoin.Extradecoin (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#160-161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 161,
+            "line_end": 162,
+            "message": "Parameter '_adminAddr' of Extradecoin.Extradecoin (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#161-162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 187,
+            "message": "Parameter '_to' of Extradecoin.transfer (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 188,
+            "message": "Parameter '_value' of Extradecoin.transfer (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#187-188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_from' of Extradecoin.transferFrom (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_to' of Extradecoin.transferFrom (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 199,
+            "message": "Parameter '_value' of Extradecoin.transferFrom (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 212,
+            "message": "Parameter '_spender' of Extradecoin.approve (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 212,
+            "message": "Parameter '_value' of Extradecoin.approve (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_tokenPerEther' of Extradecoin.setICOPrice (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 270,
+            "message": "Parameter '_newAddress' of Extradecoin.changeWallet (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#269-270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 276,
+            "message": "Parameter '_newAddress' of Extradecoin.changeAdminAddress (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 283,
+            "message": "Parameter '_newAddress' of Extradecoin.changeFounderAddress (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_newAddress' of Extradecoin.changeTeamAddress (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 371,
+            "line_end": 372,
+            "message": "Parameter '_addr' of Extradecoin.allocateReservedTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#371-372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 372,
+            "message": "Parameter '_amount' of Extradecoin.allocateReservedTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 381,
+            "message": "Parameter '_addr' of Extradecoin.allocateSalesTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#381) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 381,
+            "message": "Parameter '_amount' of Extradecoin.allocateSalesTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#381) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 391,
+            "line_end": 392,
+            "message": "Parameter '_owner' of Extradecoin.allowance (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#391-392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 392,
+            "message": "Parameter '_spender' of Extradecoin.allowance (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 396,
+            "message": "Parameter '_state' of Extradecoin.issueTokensForICO (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#396) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 398,
+            "message": "Parameter '_price' of Extradecoin.issueTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#398) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 399,
+            "message": "Parameter '_state' of Extradecoin.issueTokens (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#398-399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of Extradecoin.balanceOf (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 77,
+            "message": "Constant 'Extradecoin.totalSupply' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#75-77) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 88,
+            "message": "Constant 'Extradecoin.lockPeriod1' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#87-88) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 89,
+            "message": "Constant 'Extradecoin.lockPeriod2' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#88-89) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 91,
+            "message": "Constant 'Extradecoin.lockPeriod3' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#89-91) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 96,
+            "message": "Constant 'Extradecoin.salesAllocation' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#95-96) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 97,
+            "message": "Constant 'Extradecoin.founderAllocation' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#96-97) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 98,
+            "message": "Constant 'Extradecoin.advisorAllocation' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#97-98) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 99,
+            "message": "Constant 'Extradecoin.reservedAllocation' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#98-99) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 100,
+            "message": "Constant 'Extradecoin.minInvestedCap' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#100) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 103,
+            "message": "Constant 'Extradecoin.minInvestedAmount' (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#100-103) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Extradecoin.NOT_SALE (0x43dea031d5fec7b8316293303e5f813d43eb33ed.sol#93) is never used in Extradecoin\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

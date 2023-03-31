@@ -1,0 +1,211 @@
+{
+    "errors": [
+        "EXIT_CODE_20"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "perform_withdrawal",
+            "impact": "Low",
+            "line": 35,
+            "line_end": 53,
+            "message": "Reentrancy in RequestSale.perform_withdrawal (0x0b444993e305016f213a030c9af4013a8c537b63.sol#35-53):\n\tExternal calls:\n\t- contract_token_balance = token.balanceOf(address(this)) (0x0b444993e305016f213a030c9af4013a8c537b63.sol#40-41)\n\tState variables written after the call(s):\n\t- balances (0x0b444993e305016f213a030c9af4013a8c537b63.sol#49)\n\t- contract_eth_value (0x0b444993e305016f213a030c9af4013a8c537b63.sol#47)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 28,
+            "message": "RequestSale.sale should be constant (0x0b444993e305016f213a030c9af4013a8c537b63.sol#26-28)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "ERC20.transfer (0x0b444993e305016f213a030c9af4013a8c537b63.sol#8-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 12,
+            "message": "ERC20.balanceOf (0x0b444993e305016f213a030c9af4013a8c537b63.sol#9-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "perform_withdrawal",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 53,
+            "message": "RequestSale.perform_withdrawal (0x0b444993e305016f213a030c9af4013a8c537b63.sol#35-53) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "refund_me",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 63,
+            "message": "RequestSale.refund_me (0x0b444993e305016f213a030c9af4013a8c537b63.sol#55-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "buy_the_tokens",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 83,
+            "message": "RequestSale.buy_the_tokens (0x0b444993e305016f213a030c9af4013a8c537b63.sol#65-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "upgrade_cap",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 90,
+            "message": "RequestSale.upgrade_cap (0x0b444993e305016f213a030c9af4013a8c537b63.sol#83-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 98,
+            "message": "RequestSale.fallback (0x0b444993e305016f213a030c9af4013a8c537b63.sol#91-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0b444993e305016f213a030c9af4013a8c537b63.sol:\n\t- pragma solidity^0.4.16 (0x0b444993e305016f213a030c9af4013a8c537b63.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "RequestSale",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "function": "buy_the_tokens",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 83,
+            "message": "Low level call in RequestSale.buy_the_tokens (0x0b444993e305016f213a030c9af4013a8c537b63.sol#65-83):\n\t-require(bool)(sale.call.value(contract_eth_value)()) 0x0b444993e305016f213a030c9af4013a8c537b63.sol#81-83\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 33,
+            "message": "Function 'RequestSale.RequestSale' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#30-33) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 53,
+            "message": "Function 'RequestSale.perform_withdrawal' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#35-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 63,
+            "message": "Function 'RequestSale.refund_me' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#55-63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 83,
+            "message": "Function 'RequestSale.buy_the_tokens' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#65-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 90,
+            "message": "Function 'RequestSale.upgrade_cap' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#83-90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 17,
+            "message": "Variable 'RequestSale.bought_tokens' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#16-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 19,
+            "message": "Variable 'RequestSale.contract_eth_value' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#18-19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 21,
+            "message": "Variable 'RequestSale.eth_cap' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#20-21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b444993e305016f213a030c9af4013a8c537b63.sol",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "Constant 'RequestSale.min_required_amount' (0x0b444993e305016f213a030c9af4013a8c537b63.sol#22-23) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

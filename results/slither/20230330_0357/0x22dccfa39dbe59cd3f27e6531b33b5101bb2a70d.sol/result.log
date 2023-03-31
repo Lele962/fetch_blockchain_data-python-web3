@@ -1,0 +1,58 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol:
+/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol:96:21: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x642e0Ce9AE8c0D8007e0ACAF82C8D716FF8c74c1'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        promoter2 = 0x642e0ce9ae8c0d8007e0acaf82c8d716ff8c74c1;
+                    ^----------------------------------------^
+/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol:98:22: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x12b353D1a2842D2272aB5A18C6814D69f4296873'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        supporter1 = 0x12b353d1a2842d2272ab5a18c6814d69f4296873;
+                     ^----------------------------------------^
+
+INFO:Detectors:[92m
+DailyDivsCardGame.cardPriceIncrement should be constant (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#73-75)
+DailyDivsCardGame.precisionFactor should be constant (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#60-61)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+DailyDivsCardGame.buy (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#166-221) should be declared external
+DailyDivsCardGame.withdraw (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#239-259) should be declared external
+DailyDivsCardGame.setName (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#264-266) should be declared external
+DailyDivsCardGame.setSymbol (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#266-272) should be declared external
+DailyDivsCardGame.setcardPrice (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#272-282) should be declared external
+DailyDivsCardGame.addNewcard (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#282-294) should be declared external
+DailyDivsCardGame.setAllowReferral (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#294-303) should be declared external
+DailyDivsCardGame.getMyBalance (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#314-320) should be declared external
+DailyDivsCardGame.getOwnerBalance (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#320-329) should be declared external
+DailyDivsCardGame.getcardPrice (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#329-338) should be declared external
+DailyDivsCardGame.getcardOwner (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#338-349) should be declared external
+DailyDivsCardGame.gettotalCardDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#349-355) should be declared external
+DailyDivsCardGame.getTotalDivsProduced (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#355-360) should be declared external
+DailyDivsCardGame.getCardDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#374-389) should be declared external
+DailyDivsCardGame.gettotalCardValue (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#389-400) should be declared external
+DailyDivsCardGame.totalEthereumBalance (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#401-404) should be declared external
+DailyDivsCardGame.gettotalCards (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#404-410) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Event 'DailyDivsCardGame.oncardPurchase' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#26-33) is not in CapWords
+Event 'DailyDivsCardGame.onWithdraw' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#33-38) is not in CapWords
+Parameter '_new' of DailyDivsCardGame.addtotalCardValue (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#157) is not in mixedCase
+Parameter '_old' of DailyDivsCardGame.addtotalCardValue (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#157) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.buy (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#167) is not in mixedCase
+Parameter '_referrer' of DailyDivsCardGame.buy (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#167) is not in mixedCase
+Parameter '_distDividends' of DailyDivsCardGame.distributeDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#221) is not in mixedCase
+Parameter '_name' of DailyDivsCardGame.setName (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#264) is not in mixedCase
+Parameter '_symbol' of DailyDivsCardGame.setSymbol (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#268) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.setcardPrice (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#273-274) is not in mixedCase
+Parameter '_price' of DailyDivsCardGame.setcardPrice (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#274-275) is not in mixedCase
+Parameter '_price' of DailyDivsCardGame.addNewcard (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#283) is not in mixedCase
+Parameter '_allowReferral' of DailyDivsCardGame.setAllowReferral (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#295-298) is not in mixedCase
+Parameter '_cardOwner' of DailyDivsCardGame.getOwnerBalance (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#323) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.getcardPrice (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#330-332) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.getcardOwner (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#339-341) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.gettotalCardDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#350-351) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.getCardDivShare (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#362-363) is not in mixedCase
+Parameter '_card' of DailyDivsCardGame.getCardDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#376) is not in mixedCase
+Parameter '_amt' of DailyDivsCardGame.getCardDivs (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#376-377) is not in mixedCase
+Constant 'DailyDivsCardGame.cardsDivRate' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#52-53) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'DailyDivsCardGame.ownerDivRate' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#53-54) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'DailyDivsCardGame.distDivRate' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#54-55) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'DailyDivsCardGame.referralRate' (/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol#55-56) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x22dccfa39dbe59cd3f27e6531b33b5101bb2a70d.sol analyzed (2 contracts), 42 result(s) found

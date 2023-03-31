@@ -1,0 +1,53 @@
+{
+    "errors": [
+        "EXIT_CODE_4"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "batchTransfer",
+            "filename": "output/0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol",
+            "function": "fallback",
+            "impact": "Low",
+            "line": 29,
+            "line_end": 35,
+            "message": "batchTransfer.fallback has external calls inside a loop:\n\t- myAddresses[i].transfer(distr) (0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol#29-35)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "batchTransfer",
+            "filename": "output/0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 35,
+            "message": "batchTransfer.fallback (0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol#19-35) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol:\n\t- pragma solidity^0.4.21 (0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 35,
+            "message": "Contract 'batchTransfer' (0x0c7ea415e2780808e03b7fc8328b01aa03288118.sol#3-35) is not in CapWords\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

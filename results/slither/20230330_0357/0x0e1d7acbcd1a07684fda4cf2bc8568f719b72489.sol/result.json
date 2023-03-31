@@ -1,0 +1,805 @@
+{
+    "errors": [
+        "EXIT_CODE_84"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 45,
+            "message": "_amount in Chende.fallback (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#45) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "DistribFundsReceiverAddress",
+            "impact": "Low",
+            "line": 86,
+            "line_end": 87,
+            "message": "Chende.SetupToken.DistribFundsReceiverAddress (local variable @ 0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#86-87) shadows:\n\t- Chende.DistribFundsReceiverAddress (function @ 0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 85,
+            "message": "Chende.fallback (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#43-85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "SetupToken",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 107,
+            "message": "Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "SetupMultipliers",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 116,
+            "message": "Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "SetBonus",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 123,
+            "message": "Chende.SetBonus (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "SetFreeTokens",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 124,
+            "message": "Chende.SetFreeTokens (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "StartDistrib",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 135,
+            "message": "Chende.StartDistrib (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#125-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "StopDistrib",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 153,
+            "message": "Chende.StopDistrib (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#135-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "distribution",
+            "impact": "Informational",
+            "line": 153,
+            "line_end": 175,
+            "message": "Chende.distribution (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#153-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "distributeAmounts",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 200,
+            "message": "Chende.distributeAmounts (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#175-200) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "BurnTokens",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 214,
+            "message": "Chende.BurnTokens (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#200-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 215,
+            "line_end": 218,
+            "message": "Chende.totalSupply (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#215-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "MaxDistribPublicSupply_",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 222,
+            "message": "Chende.MaxDistribPublicSupply_ (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#218-222) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "OwnerDistribSupply_",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 226,
+            "message": "Chende.OwnerDistribSupply_ (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#222-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "CurrentDistribPublicSupply_",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 230,
+            "message": "Chende.CurrentDistribPublicSupply_ (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#226-230) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "RemainingTokensReceiverAddress",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 235,
+            "message": "Chende.RemainingTokensReceiverAddress (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#230-235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "DistribFundsReceiverAddress",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 242,
+            "message": "Chende.DistribFundsReceiverAddress (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "Owner",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 245,
+            "message": "Chende.Owner (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#242-245) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "SetupDone",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Chende.SetupDone (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#246-247) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "IsDistribRunningFalg_",
+            "impact": "Informational",
+            "line": 247,
+            "line_end": 252,
+            "message": "Chende.IsDistribRunningFalg_ (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#247-252) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "IsDistribStarted",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 255,
+            "message": "Chende.IsDistribStarted (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#254-255) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 256,
+            "line_end": 258,
+            "message": "Chende.balanceOf (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#256-258) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 275,
+            "message": "Chende.transfer (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259-275) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 275,
+            "line_end": 292,
+            "message": "Chende.transferFrom (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#275-292) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 295,
+            "message": "Chende.approve (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#292-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Chende",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "message": "Chende.allowance (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol:\n\t- pragma solidity0.4.19 (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 43,
+            "message": "Function 'Chende.Chende' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#39-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 107,
+            "message": "Function 'Chende.SetupToken' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter 'BonusTokensPerETHdonated' of Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter 'MaxDistribPublicSupply' of Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "Parameter 'OwnerDistribSupply' of Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 87,
+            "message": "Parameter 'DistribFundsReceiverAddress' of Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#86-87) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 87,
+            "message": "Parameter 'FreeTokens' of Chende.SetupToken (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#87) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 116,
+            "message": "Function 'Chende.SetupMultipliers' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 107,
+            "message": "Parameter 'Multiplier1inX' of Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 107,
+            "message": "Parameter 'Multiplier2inX' of Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "Parameter 'LimitMultiplier1inWei' of Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter 'LimitMultiplier2inWei' of Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 110,
+            "message": "Parameter 'HighDonateLimitInWei' of Chende.SetupMultipliers (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#109-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 123,
+            "message": "Function 'Chende.SetBonus' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 119,
+            "message": "Parameter 'BonusTokensPerETHdonated' of Chende.SetBonus (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 124,
+            "message": "Function 'Chende.SetFreeTokens' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123-124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter 'FreeTokens' of Chende.SetFreeTokens (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 135,
+            "message": "Function 'Chende.StartDistrib' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#125-135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 153,
+            "message": "Function 'Chende.StopDistrib' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#135-153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 154,
+            "message": "Parameter '_amount' of Chende.distribution (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#154) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 214,
+            "message": "Function 'Chende.BurnTokens' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#200-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 222,
+            "message": "Function 'Chende.MaxDistribPublicSupply_' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#218-222) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 226,
+            "message": "Function 'Chende.OwnerDistribSupply_' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#222-226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 230,
+            "message": "Function 'Chende.CurrentDistribPublicSupply_' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#226-230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 235,
+            "message": "Function 'Chende.RemainingTokensReceiverAddress' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#230-235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 242,
+            "message": "Function 'Chende.DistribFundsReceiverAddress' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 245,
+            "message": "Function 'Chende.Owner' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#242-245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Function 'Chende.SetupDone' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#246-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 247,
+            "line_end": 252,
+            "message": "Function 'Chende.IsDistribRunningFalg_' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#247-252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 255,
+            "message": "Function 'Chende.IsDistribStarted' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#254-255) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 256,
+            "line_end": 257,
+            "message": "Parameter '_owner' of Chende.balanceOf (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#256-257) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 259,
+            "message": "Parameter '_to' of Chende.transfer (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 260,
+            "message": "Parameter '_amount' of Chende.transfer (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259-260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 275,
+            "line_end": 276,
+            "message": "Parameter '_from' of Chende.transferFrom (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#275-276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 276,
+            "message": "Parameter '_to' of Chende.transferFrom (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 277,
+            "message": "Parameter '_amount' of Chende.transferFrom (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#276-277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 293,
+            "message": "Parameter '_spender' of Chende.approve (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#292-293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 293,
+            "message": "Parameter '_amount' of Chende.approve (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of Chende.allowance (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of Chende.allowance (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "Variable 'Chende._totalSupply' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#7-8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "Variable 'Chende._MaxDistribPublicSupply' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#8-9) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "Variable 'Chende._OwnerDistribSupply' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#9-10) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 11,
+            "message": "Variable 'Chende._CurrentDistribPublicSupply' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#10-11) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 12,
+            "message": "Variable 'Chende._FreeTokens' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#11-12) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "Variable 'Chende._Multiplier1' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#12-13) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "Variable 'Chende._Multiplier2' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#13-14) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "Variable 'Chende._LimitMultiplier1' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#14-15) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 16,
+            "message": "Variable 'Chende._LimitMultiplier2' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#15-16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 17,
+            "message": "Variable 'Chende._HighDonateLimit' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#16-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 18,
+            "message": "Variable 'Chende._BonusTokensPerETHdonated' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#17-18) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 19,
+            "message": "Variable 'Chende._DistribFundsReceiverAddress' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#18-19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "Variable 'Chende._remainingTokensReceiverAddress' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#19-20) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "Variable 'Chende.IsDistribRunning' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#22-23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 25,
+            "message": "Variable 'Chende.DistribStarted' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#23-25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 34,
+            "message": "Variable 'Chende.Claimed' (0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#31-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

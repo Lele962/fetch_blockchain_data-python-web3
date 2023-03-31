@@ -1,0 +1,23 @@
+INFO:Detectors:[92m
+OldTrueUSDInterface.delegateToNewContract (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#6-7) should be declared external
+OldTrueUSDInterface.claimOwnership (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#7-8) should be declared external
+OldTrueUSDInterface.balances (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#8-9) should be declared external
+OldTrueUSDInterface.allowances (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#9-10) should be declared external
+OldTrueUSDInterface.totalSupply (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#10-11) should be declared external
+NewTrueUSDInterface.setTotalSupply (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#14-15) should be declared external
+NewTrueUSDInterface.transferOwnership (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#15-16) should be declared external
+NewTrueUSDInterface.claimOwnership (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#16-19) should be declared external
+UpgradeHelper.upgrade (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#44-85) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol:
+	- pragma solidity^0.4.23 (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Constant 'UpgradeHelper.oldTrueUSD' (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#37-38) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'UpgradeHelper.newTrueUSD' (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#38-39) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'UpgradeHelper.tokenController' (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#39-40) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'UpgradeHelper.registry' (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#40-41) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'UpgradeHelper.globalPause' (/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol#41-44) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x000000eade0fe9269d0412a6055b6f3c5d968488.sol analyzed (4 contracts), 15 result(s) found

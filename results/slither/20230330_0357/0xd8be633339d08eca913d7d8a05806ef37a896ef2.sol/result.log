@@ -1,0 +1,127 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:53:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = dividends(msg.sender);
+		^---------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:61:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = balanceOf(msg.sender);
+		^---------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:125:9: Warning: Use of the "var" keyword is deprecated.
+        var _allowance = allowance[_from][msg.sender];
+        ^------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:148:3: Warning: Use of the "var" keyword is deprecated.
+		var balance = dividends(msg.sender);
+		^---------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:165:3: Warning: Use of the "var" keyword is deprecated.
+		var sender = msg.sender;
+		^--------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:167:3: Warning: Use of the "var" keyword is deprecated.
+		var fee = (uint)(msg.value / 10);
+		^-----^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:170:3: Warning: Use of the "var" keyword is deprecated.
+		var numEther = msg.value - fee;
+		^----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:171:3: Warning: Use of the "var" keyword is deprecated.
+		var numTokens = getTokensForEther(numEther);
+		^-----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:173:3: Warning: Use of the "var" keyword is deprecated.
+		var buyerfee = fee * PRECISION;
+		^----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:177:4: Warning: Use of the "var" keyword is deprecated.
+			var holderreward =
+			^--------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:180:4: Warning: Use of the "var" keyword is deprecated.
+			var holderfee = fee * holderreward;
+			^-----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:184:4: Warning: Use of the "var" keyword is deprecated.
+			var feePerShare = holderfee / totalSupply;
+			^-------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:193:3: Warning: Use of the "var" keyword is deprecated.
+		var payoutDiff = (int256) ((earningsPerShare * numTokens) - buyerfee);
+		^------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:199:3: Warning: Use of the "var" keyword is deprecated.
+		var numEthers = getEtherForTokens(amount);
+		^-----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:205:3: Warning: Use of the "var" keyword is deprecated.
+		var payoutDiff = (int256) (earningsPerShare * amount + (numEthers * PRECISION));
+		^------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:246:3: Warning: Use of the "var" keyword is deprecated.
+		var z = (s*s) / one;
+		^---^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:117:3: Warning: Invoking events without "emit" prefix is deprecated.
+		Transfer(_from, _to, _value);
+		^--------------------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:140:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:155:10: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		return this.balance - msg.value;
+		       ^----------^
+/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:49:20: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function withdraw(uint tokenCount) // the parameter is ignored, yes
+	                  ^-------------^
+
+INFO:Detectors:[91m
+NumbersToken2.approve (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144) allows anyone to destruct the contract
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#suicidal[0m
+INFO:Detectors:[93m
+NumbersToken2 (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#11-279) has incorrect ERC20 function interface(s):
+	-transfer (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124-125)
+	-transferFrom (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#125-133)
+	-approve (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[92m
+NumbersToken2.balanceOf.balance (local variable @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#46-47) shadows:
+	- NumbersToken2.balance (function @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)
+NumbersToken2.withdraw.balance (local variable @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#54) shadows:
+	- NumbersToken2.balance (function @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)
+NumbersToken2.sellMyTokensDaddy.balance (local variable @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#62) shadows:
+	- NumbersToken2.balance (function @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)
+NumbersToken2.withdrawOld.balance (local variable @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#151-154) shadows:
+	- NumbersToken2.balance (function @ /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+NumbersToken2.POWHclone (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#41-44) should be declared external
+NumbersToken2.getMeOutOfHere (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#67-73) should be declared external
+NumbersToken2.fund (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#74-84) should be declared external
+NumbersToken2.buyPrice (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#84-88) should be declared external
+NumbersToken2.sellPrice (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#88-95) should be declared external
+NumbersToken2.transfer (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124-125) should be declared external
+NumbersToken2.transferFrom (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#125-133) should be declared external
+NumbersToken2.approve (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144) should be declared external
+NumbersToken2.fallback (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:
+	- pragma solidity^0.4.18 (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'NumbersToken2.POWHclone' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#41-44) is not in mixedCase
+Parameter '_owner' of NumbersToken2.balanceOf (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#45) is not in mixedCase
+Parameter '_from' of NumbersToken2.transferTokens (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108) is not in mixedCase
+Parameter '_to' of NumbersToken2.transferTokens (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108) is not in mixedCase
+Parameter '_value' of NumbersToken2.transferTokens (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108-109) is not in mixedCase
+Parameter '_to' of NumbersToken2.transfer (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124) is not in mixedCase
+Parameter '_value' of NumbersToken2.transfer (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124) is not in mixedCase
+Parameter '_from' of NumbersToken2.transferFrom (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#126) is not in mixedCase
+Parameter '_to' of NumbersToken2.transferFrom (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#126-127) is not in mixedCase
+Parameter '_value' of NumbersToken2.transferFrom (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#127-128) is not in mixedCase
+Parameter '_spender' of NumbersToken2.approve (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#134) is not in mixedCase
+Parameter '_value' of NumbersToken2.approve (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#134) is not in mixedCase
+Parameter '_owner' of NumbersToken2.dividends (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#144) is not in mixedCase
+Constant 'NumbersToken2.one' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#224-225) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.sqrt2' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#225-226) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.sqrtdot5' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#226-227) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.ln2' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#227-228) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.ln2_64dot5' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#228-229) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c1' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#229-230) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c3' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#230-232) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c5' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#232-233) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c7' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#233-236) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c9' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#236-240) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c11' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#240-242) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c2' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#257-258) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c4' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#258-259) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c6' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#259-260) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'NumbersToken2.c8' (/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#260-261) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol analyzed (1 contracts), 44 result(s) found

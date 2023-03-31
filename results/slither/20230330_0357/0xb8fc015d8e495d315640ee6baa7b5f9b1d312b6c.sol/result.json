@@ -1,0 +1,508 @@
+{
+    "errors": [
+        "EXIT_CODE_52"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "addBeneficiary",
+            "impact": "Medium",
+            "line": 320,
+            "line_end": 354,
+            "message": "Reentrancy in TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354):\n\tExternal calls:\n\t- require(bool)(token.balanceOf(address(this)) >= _amount) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#333-337)\n\tState variables written after the call(s):\n\t- distributedTokens (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#340-341)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "addBeneficiary",
+            "impact": "Low",
+            "line": 320,
+            "line_end": 354,
+            "message": "Reentrancy in TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354):\n\tExternal calls:\n\t- require(bool)(token.balanceOf(address(this)) >= _amount) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#333-337)\n\tState variables written after the call(s):\n\t- beneficiaries (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#338)\n\t- beneficiaryDistributionContracts (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#349-350)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelock",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 220,
+            "line_end": 232,
+            "message": "TokenTimelock.constructor (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#220-232) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(_releaseTime > block.timestamp) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#228-229)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelock",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "release",
+            "impact": "Low",
+            "line": 235,
+            "line_end": 247,
+            "message": "TokenTimelock.release (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#235-247) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp >= releaseTime) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#240-241)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 291,
+            "line_end": 302,
+            "message": "TokenTimelockPool.constructor (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#291-302) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(_releaseDate > block.timestamp) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#299-300)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "addBeneficiary",
+            "impact": "Low",
+            "line": 320,
+            "line_end": 354,
+            "message": "TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp < releaseDate) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#326-328)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "reclaim",
+            "impact": "Low",
+            "line": 364,
+            "line_end": 370,
+            "message": "TokenTimelockPool.reclaim (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#364-370) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp > releaseDate) (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#365)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20Basic.totalSupply (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#50-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 52,
+            "message": "ERC20Basic.balanceOf (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#51-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 53,
+            "message": "ERC20Basic.transfer (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#52-53) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 64,
+            "message": "ERC20.allowance (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#62-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 67,
+            "message": "ERC20.transferFrom (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#64-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 70,
+            "message": "ERC20.approve (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#67-70) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 148,
+            "message": "Ownable.renounceOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#147-148) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 158,
+            "message": "Ownable.transferOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#155-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 193,
+            "message": "Claimable.transferOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#192-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Claimable",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "claimOwnership",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 206,
+            "message": "Claimable.claimOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#199-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTimelock",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 235,
+            "line_end": 247,
+            "message": "TokenTimelock.release (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#235-247) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "addBeneficiary",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 354,
+            "message": "TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "reclaim",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 370,
+            "message": "TokenTimelockPool.reclaim (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#364-370) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTimelockPool",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "function": "getDistributionContracts",
+            "impact": "Informational",
+            "line": 377,
+            "line_end": 382,
+            "message": "TokenTimelockPool.getDistributionContracts (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#377-382) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 8,
+            "message": "Parameter '_a' of SafeMath.mul (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 8,
+            "message": "Parameter '_b' of SafeMath.mul (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#8) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 24,
+            "message": "Parameter '_a' of SafeMath.div (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#24) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 24,
+            "message": "Parameter '_b' of SafeMath.div (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#24) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "Parameter '_a' of SafeMath.sub (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "Parameter '_b' of SafeMath.sub (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 42,
+            "message": "Parameter '_a' of SafeMath.add (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#42) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "Parameter '_b' of SafeMath.add (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#42-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 83,
+            "message": "Parameter '_token' of SafeERC20.safeTransfer (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 83,
+            "message": "Parameter '_to' of SafeERC20.safeTransfer (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 86,
+            "message": "Parameter '_value' of SafeERC20.safeTransfer (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83-86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 93,
+            "line_end": 94,
+            "message": "Parameter '_token' of SafeERC20.safeTransferFrom (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#93-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Parameter '_from' of SafeERC20.safeTransferFrom (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Parameter '_to' of SafeERC20.safeTransferFrom (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 97,
+            "message": "Parameter '_value' of SafeERC20.safeTransferFrom (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 104,
+            "message": "Parameter '_token' of SafeERC20.safeApprove (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 108,
+            "message": "Parameter '_spender' of SafeERC20.safeApprove (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#104-108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter '_value' of SafeERC20.safeApprove (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 156,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#156) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 161,
+            "line_end": 168,
+            "message": "Function 'Ownable._transferOwnership' (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#161-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 167,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#166-167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 220,
+            "line_end": 221,
+            "message": "Parameter '_token' of TokenTimelock. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#220-221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 221,
+            "line_end": 222,
+            "message": "Parameter '_beneficiary' of TokenTimelock. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#221-222) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 225,
+            "message": "Parameter '_releaseTime' of TokenTimelock. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#222-225) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 292,
+            "message": "Parameter '_token' of TokenTimelockPool. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#291-292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 292,
+            "line_end": 293,
+            "message": "Parameter '_totalFunds' of TokenTimelockPool. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#292-293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 293,
+            "line_end": 296,
+            "message": "Parameter '_releaseDate' of TokenTimelockPool. (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#293-296) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 320,
+            "message": "Parameter '_beneficiary' of TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 321,
+            "message": "Parameter '_amount' of TokenTimelockPool.addBeneficiary (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "line": 377,
+            "line_end": 379,
+            "message": "Parameter '_beneficiary' of TokenTimelockPool.getDistributionContracts (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#377-379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_beneficiary' of TokenTimelockPool.beneficiaryExists (0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

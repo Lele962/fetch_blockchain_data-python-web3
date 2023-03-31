@@ -1,0 +1,107 @@
+INFO:Detectors:[91m
+MiniMeToken.balances (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#112-113) is never initialized. It is used in:
+	- doTransfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#209-247)
+	- balanceOfAt (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#326-349)
+	- generateTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-435)
+	- destroyTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#438-456)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+MiniMeToken.isContract (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520-524) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Reentrancy in MiniMeToken.approve (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#260-278):
+	External calls:
+	- require(bool)(TokenController(controller).onApprove(msg.sender,_spender,_amount)) (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#275-276)
+	State variables written after the call(s):
+	- allowed (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#277)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+MiniMeToken.claimTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551-566) does not use the value returned by external calls:
+	-token.transfer(controller,balance) (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#563-566)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+MiniMeToken.getValueAt.min (local variable @ /sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#487) shadows:
+	- MiniMeToken.min (function @ /sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#527-531)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+MiniMeToken.isContract uses assembly (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520-524)
+	- /sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#522-524
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+MiniMeToken.version should be constant (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#84)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+TokenController.proxyPayment (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#8-10) should be declared external
+TokenController.onTransfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#16-18) should be declared external
+TokenController.onApprove (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#24-28) should be declared external
+Controlled.changeController (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#39-45) should be declared external
+ApproveAndCallFallBack.receiveApproval (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#70-73) should be declared external
+MiniMeToken.transfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#172-177) should be declared external
+MiniMeToken.transferFrom (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185-201) should be declared external
+MiniMeToken.allowance (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#286-288) should be declared external
+MiniMeToken.approveAndCall (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#300-315) should be declared external
+MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#392-415) should be declared external
+MiniMeToken.generateTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-435) should be declared external
+MiniMeToken.destroyTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#438-456) should be declared external
+MiniMeToken.enableTransfers (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#461-463) should be declared external
+MiniMeToken.fallback (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#535-541) should be declared external
+MiniMeToken.claimTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551-566) should be declared external
+MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#604-616) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol:
+	- pragma solidity0.4.19 (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Controlled.Controlled' (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#35-37) is not in mixedCase
+Parameter '_newController' of Controlled.changeController (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#39-40) is not in mixedCase
+Function 'MiniMeToken.MiniMeToken' (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#145-166) is not in mixedCase
+Parameter '_tokenFactory' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#146-147) is not in mixedCase
+Parameter '_parentToken' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#148) is not in mixedCase
+Parameter '_parentSnapShotBlock' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#149-150) is not in mixedCase
+Parameter '_tokenName' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#150) is not in mixedCase
+Parameter '_decimalUnits' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#150-151) is not in mixedCase
+Parameter '_tokenSymbol' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#151) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.MiniMeToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#151) is not in mixedCase
+Parameter '_to' of MiniMeToken.transfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#173-175) is not in mixedCase
+Parameter '_amount' of MiniMeToken.transfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#175) is not in mixedCase
+Parameter '_from' of MiniMeToken.transferFrom (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase
+Parameter '_to' of MiniMeToken.transferFrom (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase
+Parameter '_amount' of MiniMeToken.transferFrom (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#185) is not in mixedCase
+Parameter '_from' of MiniMeToken.doTransfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#210-211) is not in mixedCase
+Parameter '_to' of MiniMeToken.doTransfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#211-213) is not in mixedCase
+Parameter '_amount' of MiniMeToken.doTransfer (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#213) is not in mixedCase
+Parameter '_owner' of MiniMeToken.balanceOf (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#251) is not in mixedCase
+Parameter '_spender' of MiniMeToken.approve (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#260-261) is not in mixedCase
+Parameter '_amount' of MiniMeToken.approve (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#261) is not in mixedCase
+Parameter '_owner' of MiniMeToken.allowance (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#286-287) is not in mixedCase
+Parameter '_spender' of MiniMeToken.allowance (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#287) is not in mixedCase
+Parameter '_spender' of MiniMeToken.approveAndCall (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#302-303) is not in mixedCase
+Parameter '_amount' of MiniMeToken.approveAndCall (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#303-306) is not in mixedCase
+Parameter '_extraData' of MiniMeToken.approveAndCall (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#306) is not in mixedCase
+Parameter '_owner' of MiniMeToken.balanceOfAt (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#327) is not in mixedCase
+Parameter '_blockNumber' of MiniMeToken.balanceOfAt (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#327) is not in mixedCase
+Parameter '_blockNumber' of MiniMeToken.totalSupplyAt (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#352-353) is not in mixedCase
+Parameter '_cloneTokenName' of MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#393-394) is not in mixedCase
+Parameter '_cloneDecimalUnits' of MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#394-395) is not in mixedCase
+Parameter '_cloneTokenSymbol' of MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#395-396) is not in mixedCase
+Parameter '_snapshotBlock' of MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#397-399) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#399) is not in mixedCase
+Parameter '_owner' of MiniMeToken.generateTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#420-421) is not in mixedCase
+Parameter '_amount' of MiniMeToken.generateTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#421) is not in mixedCase
+Parameter '_owner' of MiniMeToken.destroyTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#439) is not in mixedCase
+Parameter '_amount' of MiniMeToken.destroyTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#439-440) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.enableTransfers (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#461-462) is not in mixedCase
+Parameter '_block' of MiniMeToken.getValueAt (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#474-475) is not in mixedCase
+Parameter '_value' of MiniMeToken.updateValueAtNow (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#498) is not in mixedCase
+Parameter '_addr' of MiniMeToken.isContract (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#520) is not in mixedCase
+Parameter '_token' of MiniMeToken.claimTokens (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#551) is not in mixedCase
+Parameter '_parentToken' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605) is not in mixedCase
+Parameter '_snapshotBlock' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605) is not in mixedCase
+Parameter '_tokenName' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#605-606) is not in mixedCase
+Parameter '_decimalUnits' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#606) is not in mixedCase
+Parameter '_tokenSymbol' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#607-608) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeTokenFactory.createCloneToken (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol#608-609) is not in mixedCase
+Function 'Token.Token' (/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd8bd3958725f216eb236e9dc65b169de48101c6a.sol analyzed (6 contracts), 74 result(s) found

@@ -1,0 +1,552 @@
+{
+    "errors": [
+        "EXIT_CODE_62"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 16,
+            "line_end": 31,
+            "message": "ERC721 (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#16-31) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#24-25)\n\t-approve (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#25-26)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarToken",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 128,
+            "line_end": 585,
+            "message": "WarToken (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#128-585) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#276-288)\n\t-approve (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#294-301)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarToken",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "function": "_safeTransferFrom",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 393,
+            "message": "WarToken._safeTransferFrom uses assembly (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#372-393)\n\t- 0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#385-386\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 105,
+            "message": "Deprecated standard detected @ 0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#102-105:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 115,
+            "message": "Deprecated standard detected @ 0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#111-115:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarToken",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 227,
+            "message": "WarToken.name (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#226-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WarToken",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 231,
+            "message": "WarToken.symbol (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#227-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 8,
+            "message": "Detected issues with version pragma in 0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol:\n\t- pragma solidity^0.4.20 (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#6-8): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 62,
+            "message": "Function 'AccessAdmin.AccessAdmin' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#57-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 78,
+            "message": "Parameter '_newAdmin' of AccessAdmin.setAdmin (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#77-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 105,
+            "message": "Function 'Random._rand' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#98-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 117,
+            "message": "Function 'Random._randBySeed' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#110-117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Parameter '_outSeed' of Random._randBySeed (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 97,
+            "message": "Variable 'Random._seed' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 219,
+            "message": "Parameter '_interfaceId' of WarToken.supportsInterface (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#216-219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 234,
+            "message": "Parameter '_owner' of WarToken.balanceOf (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 242,
+            "message": "Parameter '_tokenId' of WarToken.ownerOf (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#241-242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_from' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 254,
+            "message": "Parameter '_to' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#253-254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 254,
+            "message": "Parameter '_tokenId' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 265,
+            "message": "Parameter '_from' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#264-265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 265,
+            "message": "Parameter '_to' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 265,
+            "message": "Parameter '_tokenId' of WarToken.safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_from' of WarToken.transferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_to' of WarToken.transferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_tokenId' of WarToken.transferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 294,
+            "message": "Parameter '_approved' of WarToken.approve (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#294) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 294,
+            "message": "Parameter '_tokenId' of WarToken.approve (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#294) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 308,
+            "message": "Parameter '_operator' of WarToken.setApprovalForAll (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#307-308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Parameter '_approved' of WarToken.setApprovalForAll (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 315,
+            "line_end": 316,
+            "message": "Parameter '_tokenId' of WarToken.getApproved (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#315-316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_owner' of WarToken.isApprovedForAll (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_operator' of WarToken.isApprovedForAll (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 172,
+            "message": "Parameter '_actionAddr' of WarToken.setActionContract (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 172,
+            "message": "Parameter '_useful' of WarToken.setActionContract (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 175,
+            "message": "Parameter '_actionAddr' of WarToken.getActionContract (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#173-175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 204,
+            "message": "Function 'WarToken.WarToken' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#199-204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 339,
+            "line_end": 371,
+            "message": "Function 'WarToken._transfer' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#339-371) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 339,
+            "message": "Parameter '_from' of WarToken._transfer (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 339,
+            "message": "Parameter '_to' of WarToken._transfer (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 339,
+            "line_end": 340,
+            "message": "Parameter '_tokenId' of WarToken._transfer (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#339-340) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 393,
+            "message": "Function 'WarToken._safeTransferFrom' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#372-393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 373,
+            "message": "Parameter '_from' of WarToken._safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#373) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 373,
+            "message": "Parameter '_to' of WarToken._safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#373) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 373,
+            "line_end": 374,
+            "message": "Parameter '_tokenId' of WarToken._safeTransferFrom (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#373-374) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 404,
+            "line_end": 405,
+            "message": "Parameter '_owner' of WarToken.createFashion (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#404-405) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 405,
+            "message": "Parameter '_attrs' of WarToken.createFashion (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#405) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 461,
+            "message": "Function 'WarToken._changeAttrByIndex' (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#442-461) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 443,
+            "message": "Parameter '_fs' of WarToken._changeAttrByIndex (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#442-443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_index' of WarToken._changeAttrByIndex (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 443,
+            "line_end": 444,
+            "message": "Parameter '_val' of WarToken._changeAttrByIndex (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#443-444) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 472,
+            "line_end": 474,
+            "message": "Parameter '_tokenId' of WarToken.changeFashionAttr (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#472-474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_idxArray' of WarToken.changeFashionAttr (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 474,
+            "line_end": 475,
+            "message": "Parameter '_params' of WarToken.changeFashionAttr (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#474-475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 475,
+            "message": "Parameter '_changeType' of WarToken.changeFashionAttr (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 499,
+            "message": "Parameter '_tokenId' of WarToken.destroyFashion (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#499) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 501,
+            "message": "Parameter '_deleteType' of WarToken.destroyFashion (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#500-501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_tokenId' of WarToken.safeTransferByContract (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 531,
+            "message": "Parameter '_to' of WarToken.safeTransferByContract (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#531) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 548,
+            "message": "Parameter '_tokenId' of WarToken.getFashion (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#548) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 562,
+            "message": "Parameter '_owner' of WarToken.getOwnFashions (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol",
+            "impact": "Informational",
+            "line": 577,
+            "line_end": 578,
+            "message": "Parameter '_tokens' of WarToken.getFashionsAttrs (0x0f4586b20fd52323fd18c4e6e376f724e0e7cad3.sol#577-578) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

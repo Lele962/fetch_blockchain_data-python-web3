@@ -1,0 +1,183 @@
+{
+    "errors": [
+        "EXIT_CODE_17"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "HasNoTokens",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "extractTokens",
+            "impact": "Medium",
+            "line": 72,
+            "line_end": 89,
+            "message": "HasNoTokens.extractTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#72-89) does not use the value returned by external calls:\n\t-token.transfer(_claimer,balance) (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#81-87)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BountyDistribute",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "distributeTokens",
+            "impact": "Medium",
+            "line": 91,
+            "line_end": 100,
+            "message": "BountyDistribute.distributeTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#91-100) does not use the value returned by external calls:\n\t-token.transfer(_to[i],_value[i]) (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BountyDistribute",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "distributeTokens",
+            "impact": "Low",
+            "line": 91,
+            "line_end": 100,
+            "message": "BountyDistribute.distributeTokens has external calls inside a loop:\n\t- token.transfer(_to[i],_value[i]) (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "ERC20.balanceOf (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#8-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 10,
+            "message": "ERC20.transfer (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#9-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 11,
+            "message": "ERC20.allowance (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#10-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 12,
+            "message": "ERC20.transferFrom (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#11-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "ERC20.approve (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#12-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 64,
+            "message": "Ownable.transferOwnership (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#52-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "HasNoTokens",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "function": "extractTokens",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 89,
+            "message": "HasNoTokens.extractTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#72-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol:\n\t- pragma solidity^0.4.17 (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 40,
+            "message": "Function 'Ownable.Ownable' (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#35-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 74,
+            "message": "Parameter '_token' of HasNoTokens.extractTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#73-74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Parameter '_claimer' of HasNoTokens.extractTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_token' of BountyDistribute.distributeTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 94,
+            "message": "Parameter '_to' of BountyDistribute.distributeTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#92-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Parameter '_value' of BountyDistribute.distributeTokens (0x1a930f5fbd08d86c78cda6bd2d48e17a639880fe.sol#94) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

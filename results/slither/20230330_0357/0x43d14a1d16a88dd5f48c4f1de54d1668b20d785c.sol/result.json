@@ -1,0 +1,681 @@
+{
+    "errors": [
+        "EXIT_CODE_73"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "init",
+            "impact": "Medium",
+            "line": 660,
+            "line_end": 706,
+            "message": "Reentrancy in TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#660-706):\n\tExternal calls:\n\t- initialTokenOwner = CompanyToken(tokenOnSale).owner() (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#695-698)\n\t- tokenDecimals = CompanyToken(tokenOnSale).decimals() (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#698-702)\n\tState variables written after the call(s):\n\t- crowdsaleCap (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#702-703)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "finalization",
+            "impact": "Medium",
+            "message": "TokenSale.finalization (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol) does not use the value returned by external calls:\n\t-tokenOnSale.mint(wallet,remainingTokens) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "buyTokens",
+            "impact": "Medium",
+            "line": 755,
+            "line_end": 800,
+            "message": "TokenSale.buyTokens (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#755-800) does not use the value returned by external calls:\n\t-tokenOnSale.mint(beneficiary,tokens) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#790-791)\n\t-starToken.transferFrom(beneficiary,wallet,starAllocationToTokenSale) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#797-800)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "buyTokensWithWei",
+            "impact": "Medium",
+            "line": 804,
+            "line_end": 834,
+            "message": "TokenSale.buyTokensWithWei (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#804-834) does not use the value returned by external calls:\n\t-tokenOnSale.mint(beneficiary,tokens) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#828-829)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "buyTokens",
+            "impact": "Low",
+            "line": 755,
+            "line_end": 800,
+            "message": "Reentrancy in TokenSale.buyTokens (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#755-800):\n\tExternal calls:\n\t- require(bool)(validPurchase() && tokenOnSale.totalSupply() < crowdsaleCap) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#760-762)\n\t- buyTokensWithWei(beneficiary) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#767)\n\t- starAllocationToTokenSale = starToken.allowance(beneficiary,this) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#770-771)\n\t- tokenOnSale.totalSupply().add(tokens) > crowdsaleCap (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#779-788)\n\t- tokens = crowdsaleCap.sub(tokenOnSale.totalSupply()) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#783-785)\n\tExternal calls sending eth:\n\t- buyTokensWithWei(beneficiary) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#767)\n\tState variables written after the call(s):\n\t- starRaised (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#789-790)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "buyTokensWithWei",
+            "impact": "Low",
+            "line": 804,
+            "line_end": 834,
+            "message": "Reentrancy in TokenSale.buyTokensWithWei (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#804-834):\n\tExternal calls:\n\t- tokenOnSale.totalSupply().add(tokens) > crowdsaleCap (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#813-823)\n\t- tokens = crowdsaleCap.sub(tokenOnSale.totalSupply()) (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#819-820)\n\tState variables written after the call(s):\n\t- weiRaised (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#823-827)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 47,
+            "message": "Ownable.renounceOwnership (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#41-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 55,
+            "message": "Ownable.transferOwnership (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#50-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 115,
+            "message": "Pausable.unpause (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#111-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 169,
+            "line_end": 170,
+            "message": "ERC20Basic.totalSupply (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#169-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 198,
+            "message": "BasicToken.totalSupply (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#196-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 227,
+            "message": "BasicToken.balanceOf (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#224-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 173,
+            "message": "ERC20Basic.balanceOf (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#170-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 231,
+            "message": "ERC20.allowance (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#229-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 300,
+            "line_end": 302,
+            "message": "StandardToken.allowance (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#300-302) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 235,
+            "message": "ERC20.totalSupply (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#234-235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 235,
+            "message": "ERC20.balanceOf (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 371,
+            "line_end": 384,
+            "message": "MintableToken.mint (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#371-384) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 385,
+            "line_end": 387,
+            "message": "MintableToken.finishMinting (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#385-387) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FinalizableCrowdsale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 484,
+            "line_end": 489,
+            "message": "FinalizableCrowdsale.finalize (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#484-489) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Whitelist",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "removeManyFromWhitelist",
+            "impact": "Informational",
+            "line": 592,
+            "line_end": 605,
+            "message": "Whitelist.removeManyFromWhitelist (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#592-605) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "function": "buyTokens",
+            "impact": "Informational",
+            "line": 755,
+            "line_end": 800,
+            "message": "TokenSale.buyTokens (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#755-800) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 51,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 68,
+            "message": "Function 'Ownable._transferOwnership' (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#58-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 60,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#59-60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 226,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#225-226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 203,
+            "message": "Parameter '_to' of BasicToken.transfer (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 203,
+            "message": "Parameter '_value' of BasicToken.transfer (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 265,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#264-265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 288,
+            "message": "Parameter '_spender' of StandardToken.approve (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 288,
+            "message": "Parameter '_value' of StandardToken.approve (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 313,
+            "line_end": 314,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#313-314) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 314,
+            "line_end": 315,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#314-315) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 329,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#329) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 330,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#329-330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 371,
+            "line_end": 372,
+            "message": "Parameter '_to' of MintableToken.mint (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#371-372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 373,
+            "message": "Parameter '_amount' of MintableToken.mint (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#373) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 423,
+            "line_end": 424,
+            "message": "Parameter '_startTime' of Crowdsale.initCrowdsale (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#423-424) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 424,
+            "message": "Parameter '_endTime' of Crowdsale.initCrowdsale (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#424) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 424,
+            "message": "Parameter '_rate' of Crowdsale.initCrowdsale (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#424) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 424,
+            "message": "Parameter '_wallet' of Crowdsale.initCrowdsale (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#424) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 505,
+            "message": "Parameter '_from' of PausableToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#505) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 505,
+            "message": "Parameter '_to' of PausableToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#505) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 505,
+            "message": "Parameter '_value' of PausableToken.transferFrom (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#505) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 510,
+            "message": "Parameter '_spender' of PausableToken.approve (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#510) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 510,
+            "line_end": 513,
+            "message": "Parameter '_value' of PausableToken.approve (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#510-513) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 501,
+            "message": "Parameter '_to' of PausableToken.transfer (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 501,
+            "message": "Parameter '_value' of PausableToken.transfer (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 514,
+            "message": "Parameter '_spender' of PausableToken.increaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 514,
+            "line_end": 516,
+            "message": "Parameter '_addedValue' of PausableToken.increaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#514-516) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 522,
+            "message": "Parameter '_spender' of PausableToken.decreaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#522) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 522,
+            "line_end": 523,
+            "message": "Parameter '_subtractedValue' of PausableToken.decreaseApproval (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#522-523) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 548,
+            "line_end": 549,
+            "message": "Parameter '_name' of CompanyToken. (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#548-549) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 549,
+            "message": "Parameter '_symbol' of CompanyToken. (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#549) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 549,
+            "message": "Parameter '_decimals' of CompanyToken. (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#549) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 568,
+            "message": "Parameter '_address' of Whitelist.addToWhitelist (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#568) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 574,
+            "message": "Parameter '_addresses' of Whitelist.addManyToWhitelist (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#574) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 593,
+            "line_end": 594,
+            "message": "Parameter '_addresses' of Whitelist.removeManyFromWhitelist (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#593-594) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 661,
+            "line_end": 662,
+            "message": "Parameter '_startTime' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#661-662) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 662,
+            "message": "Parameter '_endTime' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#662) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 662,
+            "line_end": 663,
+            "message": "Parameter '_whitelist' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#662-663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 663,
+            "message": "Parameter '_starToken' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 664,
+            "message": "Parameter '_companyToken' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#664) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 664,
+            "line_end": 665,
+            "message": "Parameter '_rate' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#664-665) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 665,
+            "line_end": 666,
+            "message": "Parameter '_starRate' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#665-666) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 666,
+            "message": "Parameter '_wallet' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#666) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 666,
+            "line_end": 669,
+            "message": "Parameter '_crowdsaleCap' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#666-669) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 669,
+            "message": "Parameter '_isWeiAccepted' of TokenSale.init (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#669) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol",
+            "impact": "Informational",
+            "line": 748,
+            "line_end": 749,
+            "message": "Parameter '_isWeiAccepted' of TokenSale.setIsWeiAccepted (0x43d14a1d16a88dd5f48c4f1de54d1668b20d785c.sol#748-749) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

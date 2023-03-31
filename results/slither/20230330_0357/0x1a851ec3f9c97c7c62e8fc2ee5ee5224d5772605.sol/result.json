@@ -1,0 +1,562 @@
+{
+    "errors": [
+        "EXIT_CODE_56"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "High",
+            "line": 266,
+            "line_end": 316,
+            "message": "Reentrancy in Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316):\n\tExternal calls:\n\t- tokensConfirmed += token.balanceOf(msg.sender) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#279-280)\n\t- token.transfer(creator,requests[id].tokensAmount / 10) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291-292)\n\t- token.transfer(requests[id].beneficiary,requests[id].tokensAmount) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#311-312)\n\tExternal calls sending eth:\n\t- assert(bool)(wallet.send(requests[id].ethAmount)) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#306-310)\n\tState variables written after the call(s):\n\t- requests (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#315)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Medium",
+            "line": 266,
+            "line_end": 316,
+            "message": "Reentrancy in Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316):\n\tExternal calls:\n\t- tokensConfirmed += token.balanceOf(msg.sender) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#279-280)\n\t- token.transfer(creator,requests[id].tokensAmount / 10) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291-292)\n\tState variables written after the call(s):\n\t- inList (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#302)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "initCreator",
+            "impact": "Medium",
+            "line": 176,
+            "line_end": 187,
+            "message": "Reentrancy in Treaties.initCreator (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#176-187):\n\tExternal calls:\n\t- assert(bool)(token.transfer(creator,_tokensAmount)) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#183)\n\tState variables written after the call(s):\n\t- creatorInited (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#186-187)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Medium",
+            "line": 266,
+            "line_end": 316,
+            "message": "Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316) does not use the value returned by external calls:\n\t-token.transfer(creator,requests[id].tokensAmount / 10) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291-292)\n\t-token.transfer(requests[id].beneficiary,requests[id].tokensAmount) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#311-312)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Low",
+            "line": 283,
+            "line_end": 284,
+            "message": "Treaties.confirmRequest has external calls inside a loop:\n\t- tokensInOwners += token.balanceOf(owners[i]) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#283-284)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Low",
+            "line": 274,
+            "line_end": 276,
+            "message": "Treaties.confirmRequest has external calls inside a loop:\n\t- tokensConfirmed += token.balanceOf(requests[id].ownersConfirm[i]) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#274-276)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 353,
+            "line_end": 355,
+            "message": "Treaties.splitProfit has external calls inside a loop:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#353-355)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 342,
+            "line_end": 345,
+            "message": "Treaties.splitProfit has external calls inside a loop:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#342-345)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 336,
+            "line_end": 339,
+            "message": "Treaties.splitProfit has external calls inside a loop:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#336-339)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Low",
+            "line": 266,
+            "line_end": 316,
+            "message": "Reentrancy in Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316):\n\tExternal calls:\n\t- tokensConfirmed += token.balanceOf(msg.sender) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#279-280)\n\tState variables written after the call(s):\n\t- owners (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291)\n\t- walletPercentage (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#286-287)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Low",
+            "line": 266,
+            "line_end": 316,
+            "message": "Reentrancy in Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316):\n\tExternal calls:\n\t- tokensConfirmed += token.balanceOf(msg.sender) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#279-280)\n\t- token.transfer(creator,requests[id].tokensAmount / 10) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291-292)\n\tState variables written after the call(s):\n\t- investors (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#301)\n\t- teams (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#295-297)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Low",
+            "line": 266,
+            "line_end": 316,
+            "message": "Reentrancy in Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316):\n\tExternal calls:\n\t- tokensConfirmed += token.balanceOf(msg.sender) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#279-280)\n\t- token.transfer(creator,requests[id].tokensAmount / 10) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#291-292)\n\t- token.transfer(requests[id].beneficiary,requests[id].tokensAmount) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#311-312)\n\tExternal calls sending eth:\n\t- assert(bool)(wallet.send(requests[id].ethAmount)) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#306-310)\n\tState variables written after the call(s):\n\t- tokensInUse (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#314)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "initCreator",
+            "impact": "Low",
+            "line": 176,
+            "line_end": 187,
+            "message": "Reentrancy in Treaties.initCreator (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#176-187):\n\tExternal calls:\n\t- assert(bool)(token.transfer(creator,_tokensAmount)) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#183)\n\tState variables written after the call(s):\n\t- inList (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#184-186)\n\t- tokensInUse (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#183-184)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 331,
+            "line_end": 357,
+            "message": "Reentrancy in Treaties.splitProfit (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#331-357):\n\tExternal calls:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#336-339)\n\tState variables written after the call(s):\n\t- refunds (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#340)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 331,
+            "line_end": 357,
+            "message": "Reentrancy in Treaties.splitProfit (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#331-357):\n\tExternal calls:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#342-345)\n\tState variables written after the call(s):\n\t- refunds (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#347)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "splitProfit",
+            "impact": "Low",
+            "line": 331,
+            "line_end": 357,
+            "message": "Reentrancy in Treaties.splitProfit (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#331-357):\n\tExternal calls:\n\t- refund = profit.mul(token.balanceOf(addr)).mul(100 - walletPercentage).div(100).div(tokensInUse) (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#353-355)\n\tState variables written after the call(s):\n\t- refunds (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#356-357)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "SafeNetToken.decimals should be constant (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#64-65)\nSafeNetToken.name should be constant (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#61-62)\nSafeNetToken.symbol should be constant (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#62-64)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 17,
+            "message": "StandardToken.transfer (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#9-17) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 26,
+            "message": "StandardToken.transferFrom (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#17-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 30,
+            "message": "StandardToken.balanceOf (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#26-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 36,
+            "message": "StandardToken.approve (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#30-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 40,
+            "message": "StandardToken.allowance (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#36-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 60,
+            "message": "MintableToken.mint (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#52-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "initCreator",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 187,
+            "message": "Treaties.initCreator (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#176-187) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "createTreatyRequest",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 205,
+            "message": "Treaties.createTreatyRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#188-205) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "createEthInvestorRequest",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 220,
+            "message": "Treaties.createEthInvestorRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#206-220) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "removeEthInvestorRequest",
+            "impact": "Informational",
+            "line": 220,
+            "line_end": 232,
+            "message": "Treaties.removeEthInvestorRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#220-232) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "createFiatInvestorRequest",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 249,
+            "message": "Treaties.createFiatInvestorRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#233-249) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "createPercentageRequest",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 266,
+            "message": "Treaties.createPercentageRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#249-266) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "confirmRequest",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 316,
+            "message": "Treaties.confirmRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#266-316) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "rejectRequest",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 331,
+            "message": "Treaties.rejectRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#316-331) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Treaties",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "function": "withdrawRefunds",
+            "impact": "Informational",
+            "message": "Treaties.withdrawRefunds (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol:\n\t- pragma solidity^0.4.21 (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 9,
+            "message": "Parameter '_to' of StandardToken.transfer (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#9) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 9,
+            "message": "Parameter '_value' of StandardToken.transfer (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#9) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 17,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 17,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 17,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 26,
+            "message": "Parameter '_owner' of StandardToken.balanceOf (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#26) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 30,
+            "message": "Parameter '_spender' of StandardToken.approve (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#30) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 30,
+            "message": "Parameter '_value' of StandardToken.approve (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#30) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 36,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 36,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_to' of MintableToken.mint (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 73,
+            "message": "Function 'SafeNetToken.SafeNetToken' (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#65-73) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Parameter '_totalSupply' of SafeNetToken.SafeNetToken (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 173,
+            "message": "Function 'Treaties.Treaties' (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#167-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 168,
+            "message": "Parameter '_wallet' of Treaties.Treaties (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#167-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '_token' of Treaties.Treaties (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 177,
+            "message": "Parameter '_tokensAmount' of Treaties.initCreator (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#176-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 189,
+            "message": "Parameter '_rType' of Treaties.createTreatyRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#188-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_treatyHash' of Treaties.createTreatyRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 190,
+            "message": "Parameter '_tokensAmount' of Treaties.createTreatyRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#189-190) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 207,
+            "message": "Parameter '_tokensAmount' of Treaties.createEthInvestorRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 235,
+            "message": "Parameter '_tokensAmount' of Treaties.createFiatInvestorRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#234-235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 251,
+            "message": "Parameter '_percentage' of Treaties.createPercentageRequest (0x1a851ec3f9c97c7c62e8fc2ee5ee5224d5772605.sol#250-251) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

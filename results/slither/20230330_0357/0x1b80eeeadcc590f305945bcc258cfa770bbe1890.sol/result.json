@@ -1,0 +1,375 @@
+{
+    "errors": [
+        "EXIT_CODE_36"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20CappedMintable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "cap",
+            "impact": "Low",
+            "line": 686,
+            "message": "ERC20CappedMintable.constructor.cap (local variable @ 0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#686) shadows:\n\t- ERC20CappedMintable.cap (function @ 0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#695-697)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 100,
+            "message": "Ownable.owner (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#98-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 125,
+            "message": "Ownable.renounceOwnership (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#121-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "Ownable.transferOwnership (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 215,
+            "message": "MinterRole.addMinter (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#212-215) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "renounceMinter",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "MinterRole.renounceMinter (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#217-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 258,
+            "message": "PauserRole.addPauser (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#254-258) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 260,
+            "message": "PauserRole.renouncePauser (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#258-260) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 326,
+            "line_end": 330,
+            "message": "ERC20.totalSupply (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#326-330) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 278,
+            "message": "IERC20.totalSupply (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#276-278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 281,
+            "message": "IERC20.balanceOf (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#278-281) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 336,
+            "message": "ERC20.balanceOf (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#333-336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 281,
+            "line_end": 285,
+            "message": "IERC20.allowance (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#281-285) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 351,
+            "line_end": 356,
+            "message": "ERC20.allowance (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#351-356) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 536,
+            "line_end": 538,
+            "message": "Pausable.paused (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#536-538) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 563,
+            "line_end": 569,
+            "message": "Pausable.pause (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#563-569) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 575,
+            "line_end": 581,
+            "message": "Pausable.unpause (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#575-581) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 645,
+            "line_end": 654,
+            "message": "ERC20Burnable.burn (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#645-654) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Burnable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 666,
+            "line_end": 672,
+            "message": "ERC20Burnable.burnFrom (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#666-672) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CappedMintable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "cap",
+            "impact": "Informational",
+            "line": 695,
+            "line_end": 697,
+            "message": "ERC20CappedMintable.cap (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#695-697) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CappedMintable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 703,
+            "line_end": 707,
+            "message": "ERC20CappedMintable.mint (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#703-707) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Releasable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "setReleaseAgent",
+            "impact": "Informational",
+            "line": 739,
+            "line_end": 746,
+            "message": "ERC20Releasable.setReleaseAgent (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#739-746) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Releasable",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "function": "setTransferAgent",
+            "impact": "Informational",
+            "line": 751,
+            "line_end": 758,
+            "message": "ERC20Releasable.setTransferAgent (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#751-758) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 149,
+            "message": "Function 'Ownable._transferOwnership' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#137-149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 227,
+            "message": "Function 'MinterRole._addMinter' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#219-227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 232,
+            "message": "Function 'MinterRole._removeMinter' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#227-232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 269,
+            "message": "Function 'PauserRole._addPauser' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#262-269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 273,
+            "message": "Function 'PauserRole._removePauser' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#269-273) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 470,
+            "line_end": 477,
+            "message": "Function 'ERC20._mint' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#470-477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 484,
+            "line_end": 491,
+            "message": "Function 'ERC20._burn' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#484-491) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 502,
+            "line_end": 520,
+            "message": "Function 'ERC20._burnFrom' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#502-520) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "line": 675,
+            "line_end": 677,
+            "message": "Function 'ERC20Burnable._burn' (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol#675-677) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenName' of BXBCoin. (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenSymbol' of BXBCoin. (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "message": "Parameter '_initialSupply' of BXBCoin. (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenDecimals' of BXBCoin. (0x1b80eeeadcc590f305945bcc258cfa770bbe1890.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

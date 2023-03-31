@@ -1,0 +1,284 @@
+{
+    "errors": [
+        "EXIT_CODE_26"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 218,
+            "message": "Contract locking ether found in 0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol:\n\tContract BLONDCOIN has payable functions:\n\t - fallback (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#218)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "safeMul",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 33,
+            "message": "SafeMath.safeMul (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#29-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "safeDiv",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 40,
+            "message": "SafeMath.safeDiv (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#33-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "BLONDCOIN.totalSupply (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#132-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 46,
+            "message": "ERC20Interface.totalSupply (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#45-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 141,
+            "message": "BLONDCOIN.balanceOf (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#140-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "ERC20Interface.balanceOf (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#46-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20Interface.allowance (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 197,
+            "message": "BLONDCOIN.allowance (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#195-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 154,
+            "message": "BLONDCOIN.transfer (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#146-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20Interface.transfer (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Interface.approve (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 171,
+            "message": "BLONDCOIN.approve (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#163-171) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "ERC20Interface.transferFrom (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#50-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 188,
+            "message": "BLONDCOIN.transferFrom (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#179-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 67,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#63-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 90,
+            "message": "Owned.transferOwnership (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#86-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 98,
+            "message": "Owned.acceptOwnership (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#90-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 211,
+            "message": "BLONDCOIN.approveAndCall (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#203-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 218,
+            "message": "BLONDCOIN.fallback (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BLONDCOIN",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "message": "BLONDCOIN.transferAnyERC20Token (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol:\n\t- pragma solidity^0.4.18 (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 83,
+            "message": "Function 'Owned.Owned' (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#80-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "impact": "Informational",
+            "line": 88,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#88) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 126,
+            "message": "Function 'BLONDCOIN.BLONDCOIN' (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#118-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 111,
+            "message": "Variable 'BLONDCOIN._totalSupply' (0x1c3bb10de15c31d5dbe48fbb7b87735d1b7d8c32.sol#108-111) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

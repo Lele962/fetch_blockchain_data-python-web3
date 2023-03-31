@@ -1,0 +1,425 @@
+{
+    "errors": [
+        "EXIT_CODE_43"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "High",
+            "line": 200,
+            "line_end": 201,
+            "message": "MangoCoin.frozenAccount (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#200-201) shadows:\n\t- ERC20CompatibleToken.frozenAccount (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#38-42)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Interface",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 150,
+            "line_end": 160,
+            "message": "ERC223Interface (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#150-160) has incorrect ERC20 function interface(s):\n\t-transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#152)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 197,
+            "line_end": 293,
+            "message": "MangoCoin (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#197-293) has incorrect ERC20 function interface(s):\n\t-transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#253-278)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transferFrom",
+            "impact": "Medium",
+            "line": 63,
+            "line_end": 91,
+            "message": "Reentrancy in ERC20CompatibleToken.transferFrom (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#63-91):\n\tExternal calls:\n\t- receiver.tokenFallback(_from,_value,empty) (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#83-84)\n\tState variables written after the call(s):\n\t- allowed (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#86-91)\n\t- balances (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#84-85)\n\t- balances (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#85-86)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Low",
+            "line": 51,
+            "message": "ERC20CompatibleToken.constructor.owner (local variable @ 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#51) shadows:\n\t- owned.owner (state variable @ 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#4-6)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Low",
+            "line": 207,
+            "message": "MangoCoin.constructor.owner (local variable @ 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#207) shadows:\n\t- owned.owner (state variable @ 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#4-6)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 91,
+            "message": "ERC20CompatibleToken.transferFrom uses assembly (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#63-91)\n\t- 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#75-79\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 278,
+            "message": "MangoCoin.transfer uses assembly (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#253-278)\n\t- 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#261-264\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 243,
+            "message": "MangoCoin.transfer uses assembly (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#219-243)\n\t- 0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#230-233\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 31,
+            "message": "ERC20CompatibleToken.decimals should be constant (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#31)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 20,
+            "message": "owned.transferOwnership (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#15-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223ReceivingContract",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 24,
+            "message": "ERC223ReceivingContract.tokenFallback (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#21-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 91,
+            "message": "ERC20CompatibleToken.transferFrom (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#63-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 104,
+            "message": "ERC20CompatibleToken.approve (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#97-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 114,
+            "message": "ERC20CompatibleToken.allowance (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#109-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 125,
+            "message": "ERC20CompatibleToken.increaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#119-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 136,
+            "message": "ERC20CompatibleToken.decreaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#125-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "message": "MangoCoin.freezeAccount (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20CompatibleToken",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 150,
+            "message": "ERC20CompatibleToken.freezeAccount (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#143-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Interface",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 152,
+            "message": "ERC223Interface.balanceOf (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#151-152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 286,
+            "message": "MangoCoin.balanceOf (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#284-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Interface",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 152,
+            "message": "ERC223Interface.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 278,
+            "message": "MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#253-278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MangoCoin",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 219,
+            "line_end": 243,
+            "message": "MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#219-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223Interface",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 157,
+            "message": "ERC223Interface.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#154-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 64,
+            "message": "Parameter '_from' of ERC20CompatibleToken.transferFrom (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#63-64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Parameter '_to' of ERC20CompatibleToken.transferFrom (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Parameter '_value' of ERC20CompatibleToken.transferFrom (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 98,
+            "message": "Parameter '_spender' of ERC20CompatibleToken.approve (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#97-98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 98,
+            "message": "Parameter '_value' of ERC20CompatibleToken.approve (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 113,
+            "message": "Parameter '_owner' of ERC20CompatibleToken.allowance (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#110-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 113,
+            "message": "Parameter '_spender' of ERC20CompatibleToken.allowance (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 119,
+            "message": "Parameter '_spender' of ERC20CompatibleToken.increaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_addedValue' of ERC20CompatibleToken.increaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_spender' of ERC20CompatibleToken.decreaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "Parameter '_subtractedValue' of ERC20CompatibleToken.decreaseApproval (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#126-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 284,
+            "message": "Parameter '_owner' of MangoCoin.balanceOf (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_to' of MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_value' of MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_to' of MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_value' of MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol",
+            "impact": "Informational",
+            "line": 221,
+            "message": "Parameter '_data' of MangoCoin.transfer (0x0a3f6648fdf7df0f542c7ef3df86406cec5bfade.sol#221) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

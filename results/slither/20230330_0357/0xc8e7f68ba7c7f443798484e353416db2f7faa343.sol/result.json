@@ -1,0 +1,165 @@
+{
+    "errors": [
+        "EXIT_CODE_15"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 87,
+            "line_end": 96,
+            "message": "Crowdfund.fallback (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#87-96) does not use the value returned by external calls:\n\t-Holdings[msg.sender].add(msg.value) (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#89)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 46,
+            "message": "Owned.transferOwnership (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#42-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 54,
+            "message": "Owned.acceptOwnership (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#46-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "amountOfCFTtoSend",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 83,
+            "message": "Crowdfund.amountOfCFTtoSend (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#77-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "setAmountCFTsBought",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 87,
+            "message": "Crowdfund.setAmountCFTsBought (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#83-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "balanceToOwner",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 102,
+            "message": "Crowdfund.balanceToOwner (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#96-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "CloseCrowdfund",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 105,
+            "message": "Crowdfund.CloseCrowdfund (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#102-105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "failCrowdfund",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 107,
+            "message": "Crowdfund.failCrowdfund (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#105-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdfund",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "function": "retreiveEthuponFail",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 112,
+            "message": "Crowdfund.retreiveEthuponFail (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#107-112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 79,
+            "message": "Parameter 'Holder' of Crowdfund.amountOfCFTtoSend (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#78-79) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 105,
+            "message": "Function 'Crowdfund.CloseCrowdfund' (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#102-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Variable 'Crowdfund.Holdings' (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 61,
+            "message": "Variable 'Crowdfund.ContributorsList' (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#59-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 68,
+            "message": "Variable 'Crowdfund.CFTsToSend' (0xc8e7f68ba7c7f443798484e353416db2f7faa343.sol#67-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,93 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:
+/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:325:43: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... tion _tokenApprovalWithSignature(  string memory methodName, address relayAuthority,address fr ...
+                                        ^----------------------^
+/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:325:191: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... elayerRewardTokens,uint256 expires,uint256 nonce, bytes32 sigHash, bytes memory sig ...
+                                        ^-----------^
+/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:476:76: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+     function receiveApproval(address from, uint256 tokens, address token, bytes memory data) public returns (bool success) {
+                                                                           ^---------------^
+
+INFO:Detectors:[93m
+ECRecovery.recover (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#78-117) is declared view but contains assembly code
+LavaToken.addressContainsContract (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#506-516) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:
+	Contract LavaToken has payable functions:
+	 - fallback (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#213-215)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+Reentrancy in LavaToken.transferTokensWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409):
+	External calls:
+	- require(bool)(_tokenApprovalWithSignature(methodName,relayAuthority,from,to,wallet,tokens,relayerRewardTokens,expires,nonce,sigHash,signature)) (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#404-406)
+	State variables written after the call(s):
+	- balances (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#409)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in LavaToken._tokenApprovalWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#329-375):
+	External calls:
+	- require(bool)(relayAuthority == address(0x0) || (! addressContainsContract(relayAuthority) && msg.sender == relayAuthority) || (addressContainsContract(relayAuthority) && msg.sender == RelayAuthorityInterface(relayAuthority).getRelayAuthority())) (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#343-351)
+	State variables written after the call(s):
+	- allowance (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#372-373)
+	- balances (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#371)
+	- burnedSignatures (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#366-371)
+Reentrancy in LavaToken.mutateTokens (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#222-239):
+	External calls:
+	- require(bool)(ERC20Interface(masterToken).transferFrom(from,address(this),amount)) (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#230-234)
+	State variables written after the call(s):
+	- _totalSupply (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#237)
+	- balances (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#235-236)
+Reentrancy in LavaToken.transferTokensWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409):
+	External calls:
+	- require(bool)(_tokenApprovalWithSignature(methodName,relayAuthority,from,to,wallet,tokens,relayerRewardTokens,expires,nonce,sigHash,signature)) (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#404-406)
+	State variables written after the call(s):
+	- allowance (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#409)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ECRecovery.recover uses assembly (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#78-117)
+	- /sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#92-96
+LavaToken.addressContainsContract uses assembly (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#506-516)
+	- /sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+LavaToken.decimals should be constant (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#147)
+LavaToken.name should be constant (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#146)
+LavaToken.symbol should be constant (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#146-147)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+RelayAuthorityInterface.getRelayAuthority (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#118-119) should be declared external
+ERC20Interface.totalSupply (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#119-120) should be declared external
+ERC20Interface.balanceOf (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#120-121) should be declared external
+ERC20Interface.allowance (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#121-122) should be declared external
+ERC20Interface.transfer (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#122-123) should be declared external
+ERC20Interface.approve (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#123-125) should be declared external
+ERC20Interface.transferFrom (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#125-126) should be declared external
+ApproveAndCallFallBack.receiveApproval (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#135-139) should be declared external
+LavaToken.getLavaPacketTypehash (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#180) should be declared external
+LavaToken.unmutateTokens (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#244-259) should be declared external
+LavaToken.totalSupply (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#262-263) should be declared external
+LavaToken.balanceOf (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#265-269) should be declared external
+LavaToken.getAllowance (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#270-277) should be declared external
+LavaToken.approve (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#277-281) should be declared external
+LavaToken.transfer (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#285-289) should be declared external
+LavaToken.approveTokensWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#375-389) should be declared external
+LavaToken.transferTokensWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409) should be declared external
+LavaToken.approveAndCallWithSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#413-436) should be declared external
+LavaToken.burnSignature (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#442-474) should be declared external
+LavaToken.signatureHashBurnStatus (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#478-489) should be declared external
+LavaToken.receiveApproval (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#495-506) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:
+	- pragma solidity^0.5.0 (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'LavaToken._giveRelayerReward' (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#304-307) is not in mixedCase
+Function 'LavaToken._tokenApprovalWithSignature' (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#329-375) is not in mixedCase
+Function 'LavaToken._sendApproveAndCall' (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#436) is not in mixedCase
+Constant 'LavaToken.masterToken' (/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#142-144) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol analyzed (6 contracts), 36 result(s) found

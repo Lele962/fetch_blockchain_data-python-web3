@@ -1,0 +1,663 @@
+{
+    "errors": [
+        "EXIT_CODE_67"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buyWeaponWithEth",
+            "impact": "Medium",
+            "line": 216,
+            "line_end": 226,
+            "message": "Contract locking ether found in 0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol:\n\tContract TradeWeapon has payable functions:\n\t - buyWeaponWithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#216-226)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithEth",
+            "impact": "Medium",
+            "line": 257,
+            "line_end": 285,
+            "message": "Reentrancy in TradeWeapon.buywithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#257-285):\n\tExternal calls:\n\t- require(bool,string)(RCCToken.balanceOf(address(this)) >= sellerPrice,11) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#273-274)\n\t- RCCToken.transfer(seller,sellerPrice) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#276-277)\n\tState variables written after the call(s):\n\t- weaponDetail (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#278-281)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithRCC",
+            "impact": "Medium",
+            "line": 229,
+            "line_end": 255,
+            "message": "Reentrancy in TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#229-255):\n\tExternal calls:\n\t- allowance = RCCToken.allowance(_buyer,address(this)) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#234-236)\n\tState variables written after the call(s):\n\t- weaponDetail (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#243-244)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "sellWeapon",
+            "impact": "Medium",
+            "line": 173,
+            "line_end": 188,
+            "message": "Reentrancy in TradeWeapon.sellWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#173-188):\n\tExternal calls:\n\t- weaponOwner = weaponTokenize.getOwnerOf(_weaponId) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#179-180)\n\t- putWeaponOnSale(_weaponId,testItem) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n\tState variables written after the call(s):\n\t- isOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "cancelSale",
+            "impact": "Medium",
+            "line": 199,
+            "line_end": 209,
+            "message": "TradeWeapon.cancelSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#199-209) does not use the value returned by external calls:\n\t-weaponTokenize.updateOwnerOfWeapon(_weaponId,weaponOwner) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#205-207)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithRCC",
+            "impact": "Medium",
+            "line": 229,
+            "line_end": 255,
+            "message": "TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#229-255) does not use the value returned by external calls:\n\t-RCCToken.transferFrom(_buyer,seller,sellersPrice) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#245-246)\n\t-RCCToken.transferFrom(_buyer,owner,commssion) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#247)\n\t-weaponTokenize.updateOwnerOfWeapon(_weaponId,_buyer) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#252-254)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithEth",
+            "impact": "Medium",
+            "line": 257,
+            "line_end": 285,
+            "message": "TradeWeapon.buywithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#257-285) does not use the value returned by external calls:\n\t-RCCToken.transfer(seller,sellerPrice) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#276-277)\n\t-weaponTokenize.updateOwnerOfWeapon(_weaponId,_buyer) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#283)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "putWeaponOnSale",
+            "impact": "Medium",
+            "line": 285,
+            "line_end": 304,
+            "message": "TradeWeapon.putWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#285-304) does not use the value returned by external calls:\n\t-weaponTokenize.updateOwnerOfWeapon(_weaponId,address(this)) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#289-290)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithEth",
+            "impact": "Low",
+            "line": 257,
+            "line_end": 285,
+            "message": "Reentrancy in TradeWeapon.buywithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#257-285):\n\tExternal calls:\n\t- require(bool,string)(RCCToken.balanceOf(address(this)) >= sellerPrice,11) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#273-274)\n\t- RCCToken.transfer(seller,sellerPrice) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#276-277)\n\tState variables written after the call(s):\n\t- indexToWeaponId (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#278-281)\n\t- isOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#278-281)\n\t- totalOrdersMatched (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#281-282)\n\t- totalWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#278-281)\n\t- weaponIdToIndex (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#278-281)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithRCC",
+            "impact": "Low",
+            "line": 229,
+            "line_end": 255,
+            "message": "Reentrancy in TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#229-255):\n\tExternal calls:\n\t- allowance = RCCToken.allowance(_buyer,address(this)) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#234-236)\n\tState variables written after the call(s):\n\t- indexToWeaponId (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#243-244)\n\t- isOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#243-244)\n\t- totalWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#243-244)\n\t- weaponIdToIndex (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#243-244)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buywithRCC",
+            "impact": "Low",
+            "line": 229,
+            "line_end": 255,
+            "message": "Reentrancy in TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#229-255):\n\tExternal calls:\n\t- allowance = RCCToken.allowance(_buyer,address(this)) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#234-236)\n\t- RCCToken.transferFrom(_buyer,seller,sellersPrice) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#245-246)\n\t- RCCToken.transferFrom(_buyer,owner,commssion) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#247)\n\tState variables written after the call(s):\n\t- totalOrdersMatched (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#250)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "putWeaponOnSale",
+            "impact": "Low",
+            "line": 285,
+            "line_end": 304,
+            "message": "Reentrancy in TradeWeapon.putWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#285-304):\n\tExternal calls:\n\t- weaponTokenize.updateOwnerOfWeapon(_weaponId,address(this)) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#289-290)\n\tState variables written after the call(s):\n\t- indexToWeaponId (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#292-293)\n\t- isOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#302)\n\t- totalOrdersPlaced (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#303-304)\n\t- totalWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#298)\n\t- weaponDetail (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#300-301)\n\t- weaponIdToIndex (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#294-295)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "sellWeapon",
+            "impact": "Low",
+            "line": 173,
+            "line_end": 188,
+            "message": "Reentrancy in TradeWeapon.sellWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#173-188):\n\tExternal calls:\n\t- weaponOwner = weaponTokenize.getOwnerOf(_weaponId) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#179-180)\n\t- putWeaponOnSale(_weaponId,testItem) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n\tState variables written after the call(s):\n\t- indexToWeaponId (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n\t- weaponDetail (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n\t- weaponIdToIndex (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#186)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "updateSale",
+            "impact": "Low",
+            "line": 188,
+            "line_end": 199,
+            "message": "Reentrancy in TradeWeapon.updateSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#188-199):\n\tExternal calls:\n\t- weaponOwner = weaponTokenize.getOwnerOf(_weaponId) (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#193-197)\n\tState variables written after the call(s):\n\t- weaponDetail (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#197-198)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "WeaponTokenize",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "updateOwnerOfWeapon",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 39,
+            "message": "WeaponTokenize.updateOwnerOfWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#38-39) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "WeaponTokenize",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "getOwnerOf",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 43,
+            "message": "WeaponTokenize.getOwnerOf (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#39-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 44,
+            "message": "ERC20Interface.transfer (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#43-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 45,
+            "message": "ERC20Interface.balanceOf (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#44-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 46,
+            "message": "ERC20Interface.allowance (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#45-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 52,
+            "message": "ERC20Interface.transferFrom (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#47-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "updateRate",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 138,
+            "message": "TradeWeapon.updateRate (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#136-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "updateCommission",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 146,
+            "message": "TradeWeapon.updateCommission (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#138-146) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "disableSale",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 150,
+            "message": "TradeWeapon.disableSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#146-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "enableSale",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 154,
+            "message": "TradeWeapon.enableSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#150-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "disableEthSale",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 157,
+            "message": "TradeWeapon.disableEthSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#154-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "enableEthSale",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 159,
+            "message": "TradeWeapon.enableEthSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#157-159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "addOperator",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 171,
+            "message": "TradeWeapon.addOperator (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#166-171) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "removeOperator",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 173,
+            "message": "TradeWeapon.removeOperator (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#171-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "sellWeapon",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 188,
+            "message": "TradeWeapon.sellWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#173-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "updateSale",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 199,
+            "message": "TradeWeapon.updateSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#188-199) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "cancelSale",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 209,
+            "message": "TradeWeapon.cancelSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#199-209) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buyWeaponWithRCC",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 216,
+            "message": "TradeWeapon.buyWeaponWithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#209-216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "buyWeaponWithEth",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 226,
+            "message": "TradeWeapon.buyWeaponWithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#216-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "getTotalWeaponOnSale",
+            "impact": "Informational",
+            "line": 339,
+            "line_end": 342,
+            "message": "TradeWeapon.getTotalWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#339-342) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TradeWeapon",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "function": "getWeaponAt",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 346,
+            "message": "TradeWeapon.getWeaponAt (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#342-346) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 38,
+            "message": "Parameter '' of WeaponTokenize.updateOwnerOfWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#38) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_scope_0' of WeaponTokenize.updateOwnerOfWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 75,
+            "message": "Struct 'TradeWeapon.item' (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#71-75) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 95,
+            "message": "Parameter '_tokenizeAddress' of TradeWeapon. (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#95) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 96,
+            "message": "Parameter '_rccAddress' of TradeWeapon. (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#95-96) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_newRate' of TradeWeapon.updateRate (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_commssion_n' of TradeWeapon.updateCommission (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 142,
+            "message": "Parameter '_commssion_d' of TradeWeapon.updateCommission (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#141-142) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 171,
+            "message": "Parameter '_operator' of TradeWeapon.removeOperator (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#171) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_weaponId' of TradeWeapon.sellWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_sellPrice' of TradeWeapon.sellWeapon (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 189,
+            "message": "Parameter '_weaponId' of TradeWeapon.updateSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#188-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 189,
+            "message": "Parameter '_sellPrice' of TradeWeapon.updateSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_weaponId' of TradeWeapon.cancelSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 213,
+            "message": "Parameter '_weaponId' of TradeWeapon.buyWeaponWithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#211-213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 213,
+            "message": "Parameter '_buyer' of TradeWeapon.buyWeaponWithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#213) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Parameter '_weaponId' of TradeWeapon.buyWeaponWithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 218,
+            "message": "Parameter '_buyer' of TradeWeapon.buyWeaponWithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#217-218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_weaponId' of TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_buyer' of TradeWeapon.buywithRCC (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Parameter '_weaponId' of TradeWeapon.buywithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#257-258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_buyer' of TradeWeapon.buywithEth (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_weaponId' of TradeWeapon.putWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_testItem' of TradeWeapon.putWeaponOnSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_weaponId' of TradeWeapon.removeWeaponFromSale (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 329,
+            "message": "Parameter '_weaponId' of TradeWeapon.getWeaponDetails (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#329) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 337,
+            "line_end": 338,
+            "message": "Parameter '_amount' of TradeWeapon.calculateCommission (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#337-338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "message": "Parameter '_user' of TradeWeapon.checkOperator (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "message": "Parameter '_operator' of TradeWeapon.checkOperator (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "Variable 'TradeWeapon.RCCToken' (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#57-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Variable 'TradeWeapon.commssion_n' (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "Variable 'TradeWeapon.commssion_d' (0x76063ea512a2f8700ebb5b01d8540b2d0f602cd4.sol#60-61) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

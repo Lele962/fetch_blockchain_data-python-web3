@@ -1,0 +1,108 @@
+{
+    "errors": [
+        "EXIT_CODE_9"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "impact": "Medium",
+            "line": 40,
+            "line_end": 58,
+            "message": "Registry.get (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "storeDataAsContract",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 35,
+            "message": "Registry.storeDataAsContract uses assembly (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#24-35)\n\t- 0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#27-31\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "get",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 58,
+            "message": "Registry.get uses assembly (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58)\n\t- 0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#44-58\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "addEntry",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 19,
+            "message": "Registry.addEntry (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#13-19) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 24,
+            "message": "Registry.finalize (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#19-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "addChunk",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 40,
+            "message": "Registry.addChunk (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#35-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "get",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 58,
+            "message": "Registry.get (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Registry",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "function": "getLen",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 61,
+            "message": "Registry.getLen (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#58-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol:\n\t- pragma solidity^0.5.8 (0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

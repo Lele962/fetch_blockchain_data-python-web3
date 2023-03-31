@@ -1,0 +1,329 @@
+{
+    "errors": [
+        "EXIT_CODE_33"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transfer",
+            "impact": "Low",
+            "line": 68,
+            "line_end": 79,
+            "message": "CBMC_TOKEN.transfer (0xd7a54004297cd80448f65442636e8190813af413.sol#68-79) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp >= 1545102693) (0xd7a54004297cd80448f65442636e8190813af413.sol#73-74)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transferFrom",
+            "impact": "Low",
+            "line": 79,
+            "line_end": 93,
+            "message": "CBMC_TOKEN.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#79-93) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp >= 1545102693) (0xd7a54004297cd80448f65442636e8190813af413.sol#85-86)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 45,
+            "message": "CBMC_TOKEN.name should be constant (0xd7a54004297cd80448f65442636e8190813af413.sol#43-45)\nCBMC_TOKEN.symbol should be constant (0xd7a54004297cd80448f65442636e8190813af413.sol#45-46)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "IERC20.balanceOf (0xd7a54004297cd80448f65442636e8190813af413.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 64,
+            "message": "CBMC_TOKEN.balanceOf (0xd7a54004297cd80448f65442636e8190813af413.sol#60-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 68,
+            "message": "CBMC_TOKEN.allowance (0xd7a54004297cd80448f65442636e8190813af413.sol#64-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "IERC20.allowance (0xd7a54004297cd80448f65442636e8190813af413.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "IERC20.transfer (0xd7a54004297cd80448f65442636e8190813af413.sol#6-7) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 79,
+            "message": "CBMC_TOKEN.transfer (0xd7a54004297cd80448f65442636e8190813af413.sol#68-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 93,
+            "message": "CBMC_TOKEN.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#79-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "IERC20.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 9,
+            "message": "IERC20.approve (0xd7a54004297cd80448f65442636e8190813af413.sol#8-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 93,
+            "line_end": 99,
+            "message": "CBMC_TOKEN.approve (0xd7a54004297cd80448f65442636e8190813af413.sol#93-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 105,
+            "message": "CBMC_TOKEN.increaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#99-105) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CBMC_TOKEN",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 114,
+            "message": "CBMC_TOKEN.decreaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#105-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7a54004297cd80448f65442636e8190813af413.sol:\n\t- pragma solidity^0.5.1 (0xd7a54004297cd80448f65442636e8190813af413.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 114,
+            "message": "Contract 'CBMC_TOKEN' (0xd7a54004297cd80448f65442636e8190813af413.sol#41-114) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_owner' of CBMC_TOKEN.balanceOf (0xd7a54004297cd80448f65442636e8190813af413.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "Parameter '_owner' of CBMC_TOKEN.allowance (0xd7a54004297cd80448f65442636e8190813af413.sol#64-65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Parameter '_spender' of CBMC_TOKEN.allowance (0xd7a54004297cd80448f65442636e8190813af413.sol#65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_to' of CBMC_TOKEN.transfer (0xd7a54004297cd80448f65442636e8190813af413.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 70,
+            "message": "Parameter '_value' of CBMC_TOKEN.transfer (0xd7a54004297cd80448f65442636e8190813af413.sol#69-70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Parameter '_from' of CBMC_TOKEN.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Parameter '_to' of CBMC_TOKEN.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#80-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Parameter '_value' of CBMC_TOKEN.transferFrom (0xd7a54004297cd80448f65442636e8190813af413.sol#81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 93,
+            "line_end": 94,
+            "message": "Parameter '_spender' of CBMC_TOKEN.approve (0xd7a54004297cd80448f65442636e8190813af413.sol#93-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 94,
+            "message": "Parameter '_value' of CBMC_TOKEN.approve (0xd7a54004297cd80448f65442636e8190813af413.sol#94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_spender' of CBMC_TOKEN.increaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_addedValue' of CBMC_TOKEN.increaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 106,
+            "message": "Parameter '_spender' of CBMC_TOKEN.decreaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#105-106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 106,
+            "message": "Parameter '_subtractedValue' of CBMC_TOKEN.decreaseApproval (0xd7a54004297cd80448f65442636e8190813af413.sol#106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "Constant 'CBMC_TOKEN.decimalFactor' (0xd7a54004297cd80448f65442636e8190813af413.sol#46-47) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7a54004297cd80448f65442636e8190813af413.sol",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 49,
+            "message": "Constant 'CBMC_TOKEN.totalSupply' (0xd7a54004297cd80448f65442636e8190813af413.sol#47-49) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

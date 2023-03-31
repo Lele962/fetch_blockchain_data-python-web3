@@ -1,0 +1,262 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "ICOPhase3",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "_deliverTokens",
+            "impact": "Medium",
+            "line": 58,
+            "line_end": 62,
+            "message": "ICOPhase3._deliverTokens (0x05efea44d16620f0030c2411b325407aa96bda92.sol#58-62) does not use the value returned by external calls:\n\t-token.transfer(_beneficiary,_tokenAmount) (0x05efea44d16620f0030c2411b325407aa96bda92.sol#62)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 100,
+            "message": "ERC20Basic.totalSupply (0x05efea44d16620f0030c2411b325407aa96bda92.sol#99-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 101,
+            "message": "ERC20Basic.balanceOf (0x05efea44d16620f0030c2411b325407aa96bda92.sol#100-101) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 103,
+            "message": "ERC20Basic.transfer (0x05efea44d16620f0030c2411b325407aa96bda92.sol#101-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 106,
+            "message": "ERC20.allowance (0x05efea44d16620f0030c2411b325407aa96bda92.sol#105-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "ERC20.transferFrom (0x05efea44d16620f0030c2411b325407aa96bda92.sol#106-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 107,
+            "message": "ERC20.approve (0x05efea44d16620f0030c2411b325407aa96bda92.sol#107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 7,
+            "message": "Detected issues with version pragma in 0x05efea44d16620f0030c2411b325407aa96bda92.sol:\n\t- pragma solidity^0.4.18 (0x05efea44d16620f0030c2411b325407aa96bda92.sol#5-7): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 28,
+            "message": "Function 'ICOPhase3.ICOPhase3' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#18-28) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 18,
+            "message": "Parameter '_rate' of ICOPhase3.ICOPhase3 (0x05efea44d16620f0030c2411b325407aa96bda92.sol#18) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 18,
+            "message": "Parameter '_wallet' of ICOPhase3.ICOPhase3 (0x05efea44d16620f0030c2411b325407aa96bda92.sol#18) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 19,
+            "message": "Parameter '_token' of ICOPhase3.ICOPhase3 (0x05efea44d16620f0030c2411b325407aa96bda92.sol#18-19) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 34,
+            "message": "Parameter '_beneficiary' of ICOPhase3.buyTokens (0x05efea44d16620f0030c2411b325407aa96bda92.sol#32-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 55,
+            "message": "Function 'ICOPhase3._preValidatePurchase' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#50-55) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "Parameter '_beneficiary' of ICOPhase3._preValidatePurchase (0x05efea44d16620f0030c2411b325407aa96bda92.sol#50-51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 51,
+            "message": "Parameter '_weiAmount' of ICOPhase3._preValidatePurchase (0x05efea44d16620f0030c2411b325407aa96bda92.sol#51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 58,
+            "message": "Function 'ICOPhase3._postValidatePurchase' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#55-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 62,
+            "message": "Function 'ICOPhase3._deliverTokens' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#58-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_beneficiary' of ICOPhase3._deliverTokens (0x05efea44d16620f0030c2411b325407aa96bda92.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_tokenAmount' of ICOPhase3._deliverTokens (0x05efea44d16620f0030c2411b325407aa96bda92.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 66,
+            "message": "Function 'ICOPhase3._processPurchase' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#62-66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 63,
+            "message": "Parameter '_beneficiary' of ICOPhase3._processPurchase (0x05efea44d16620f0030c2411b325407aa96bda92.sol#63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 63,
+            "message": "Parameter '_tokenAmount' of ICOPhase3._processPurchase (0x05efea44d16620f0030c2411b325407aa96bda92.sol#63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 69,
+            "message": "Function 'ICOPhase3._updatePurchasingState' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#66-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 74,
+            "message": "Function 'ICOPhase3._getTokenAmount' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#69-74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_weiAmount' of ICOPhase3._getTokenAmount (0x05efea44d16620f0030c2411b325407aa96bda92.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x05efea44d16620f0030c2411b325407aa96bda92.sol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 77,
+            "message": "Function 'ICOPhase3._forwardFunds' (0x05efea44d16620f0030c2411b325407aa96bda92.sol#76-77) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

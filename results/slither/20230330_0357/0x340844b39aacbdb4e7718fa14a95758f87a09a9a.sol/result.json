@@ -1,0 +1,122 @@
+{
+    "errors": [
+        "EXIT_CODE_11"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "impact": "High",
+            "line": 26,
+            "message": "DepositCapsule.Owner (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#26) shadows:\n\t- Ownable.Owner (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#13-14)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "transferOwner",
+            "impact": "Medium",
+            "line": 15,
+            "line_end": 24,
+            "message": "Ownable.transferOwner (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#15-24) uses a dangerous strict equality:\n\t- address(this).balance == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "transferOwner",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 24,
+            "message": "Ownable.transferOwner (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#15-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DepositCapsule",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "init",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 34,
+            "message": "DepositCapsule.init (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#29-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DepositCapsule",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "DepositCapsule.fallback (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DepositCapsule",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 42,
+            "message": "DepositCapsule.deposit (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#36-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DepositCapsule",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 51,
+            "message": "DepositCapsule.withdraw (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#42-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 12,
+            "message": "Detected issues with version pragma in 0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol:\n\t- pragma solidity^0.4.20 (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#10-12): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "impact": "Informational",
+            "line": 15,
+            "message": "Parameter '_owner' of Ownable.transferOwner (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#15) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "Variable 'Ownable.Owner' (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#13-14) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol",
+            "impact": "Informational",
+            "line": 26,
+            "message": "Variable 'DepositCapsule.Owner' (0x340844b39aacbdb4e7718fa14a95758f87a09a9a.sol#26) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

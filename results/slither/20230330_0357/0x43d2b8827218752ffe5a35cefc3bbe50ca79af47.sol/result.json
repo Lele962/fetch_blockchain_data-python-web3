@@ -1,0 +1,573 @@
+{
+    "errors": [
+        "EXIT_CODE_57"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "withdrawReward",
+            "impact": "High",
+            "line": 280,
+            "line_end": 295,
+            "message": "CrystalDeposit.withdrawReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295) sends eth to arbitrary user\n\tDangerous calls:\n\t- _addr.transfer(balance) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#293)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "calculateReward",
+            "impact": "Medium",
+            "line": 325,
+            "line_end": 335,
+            "message": "CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:\n\t- g.crystals == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "endRound",
+            "impact": "Medium",
+            "line": 325,
+            "line_end": 335,
+            "message": "CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:\n\t- g.crystals == 0\nCrystalDeposit.endRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "share",
+            "impact": "Medium",
+            "line": 325,
+            "line_end": 335,
+            "message": "CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:\n\t- g.crystals == 0\nCrystalDeposit.endRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\nCrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "startRound",
+            "impact": "Medium",
+            "line": 325,
+            "line_end": 335,
+            "message": "CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:\n\t- g.crystals == 0\nCrystalDeposit.endRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\nCrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\nCrystalDeposit.startRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == true)\n\t- crystalsLastRound == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "updateReward",
+            "impact": "Medium",
+            "line": 325,
+            "line_end": 335,
+            "message": "CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:\n\t- g.crystals == 0\nCrystalDeposit.endRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\nCrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == false)\nCrystalDeposit.startRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234) uses a dangerous strict equality:\n\t- require(bool)(games[round].ended == true)\n\t- crystalsLastRound == 0\nCrystalDeposit.updateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295-312) uses a dangerous strict equality:\n\t- games[p.currentRound].ended == true && p.lastRound < p.currentRound\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "share",
+            "impact": "Medium",
+            "line": 249,
+            "line_end": 272,
+            "message": "Reentrancy in CrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272):\n\tExternal calls:\n\t- MiningWar.subCrystal(msg.sender,_value) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#254-255)\n\t- endRound() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)\n\tState variables written after the call(s):\n\t- games (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)\n\t- games (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#261-264)\n\t- round (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "startRound",
+            "impact": "Medium",
+            "line": 206,
+            "line_end": 234,
+            "message": "Reentrancy in CrystalDeposit.startRound (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234):\n\tExternal calls:\n\t- engineerPrizePool = getEngineerPrizePool() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#222)\n\t- Engineer.claimPrizePool(address(this),prizePool) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#224-226)\n\tState variables written after the call(s):\n\t- games (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#231-234)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 125,
+            "line_end": 133,
+            "message": "Reentrancy in CrystalDeposit.constructor (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#125-133):\n\tExternal calls:\n\t- setMiningWarInterface(0x1b002cd1ba79dfad65e8abfbb3a97826e4960fe5) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#126-130)\n\t- setEngineerInterface(0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#132-133)\n\tState variables written after the call(s):\n\t- Engineer (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#132-133)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "setContractsMiniGame",
+            "impact": "Low",
+            "line": 150,
+            "line_end": 158,
+            "message": "Reentrancy in CrystalDeposit.setContractsMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150-158):\n\tExternal calls:\n\t- MiniGame.isContractMiniGame() == false (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#155-156)\n\tState variables written after the call(s):\n\t- miniGames (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#158)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "setEngineerInterface",
+            "impact": "Low",
+            "line": 184,
+            "line_end": 195,
+            "message": "Reentrancy in CrystalDeposit.setEngineerInterface (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#184-195):\n\tExternal calls:\n\t- require(bool)(engineerInterface.isEngineerContract() == true) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#191-193)\n\tState variables written after the call(s):\n\t- Engineer (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#195)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "setMiningWarInterface",
+            "impact": "Low",
+            "line": 174,
+            "line_end": 184,
+            "message": "Reentrancy in CrystalDeposit.setMiningWarInterface (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#174-184):\n\tExternal calls:\n\t- require(bool)(miningWarInterface.isMiningWarContract() == true) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#180-181)\n\tState variables written after the call(s):\n\t- MiningWar (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#182-183)\n\t- miningWarAddress (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#182)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "share",
+            "impact": "Low",
+            "line": 249,
+            "line_end": 272,
+            "message": "Reentrancy in CrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272):\n\tExternal calls:\n\t- MiningWar.subCrystal(msg.sender,_value) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#254-255)\n\t- endRound() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)\n\tState variables written after the call(s):\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#257)\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#266)\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#268)\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#269-270)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "startGame",
+            "impact": "Low",
+            "line": 199,
+            "line_end": 206,
+            "message": "Reentrancy in CrystalDeposit.startGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#199-206):\n\tExternal calls:\n\t- miningWarDeadline = MiningWar.deadline() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#203-205)\n\tState variables written after the call(s):\n\t- games (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#205-206)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "withdrawReward",
+            "impact": "Low",
+            "line": 280,
+            "line_end": 295,
+            "message": "Reentrancy in CrystalDeposit.withdrawReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295):\n\tExternal calls:\n\t- endRound() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#284)\n\tState variables written after the call(s):\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#286-287)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "withdrawReward",
+            "impact": "Low",
+            "line": 280,
+            "line_end": 295,
+            "message": "Reentrancy in CrystalDeposit.withdrawReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295):\n\tExternal calls:\n\t- endRound() (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#284)\n\tExternal calls sending eth:\n\t- _addr.transfer(balance) (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#293)\n\tState variables written after the call(s):\n\t- players (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 57,
+            "message": "CryptoEngineerInterface.prizePool should be constant (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#57)\nCryptoMiningWarInterface.deadline should be constant (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#64)\nCrystalDeposit.HALF_TIME should be constant (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#76-77)\nCrystalDeposit.MIN_TIME_WITH_DEADLINE should be constant (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#77-78)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineerInterface",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "subVirus",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "CryptoEngineerInterface.subVirus (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#57-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineerInterface",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "claimPrizePool",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 59,
+            "message": "CryptoEngineerInterface.claimPrizePool (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58-59) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineerInterface",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "isContractMiniGame",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 60,
+            "message": "CryptoEngineerInterface.isContractMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoMiningWarInterface",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "subCrystal",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "CryptoMiningWarInterface.subCrystal (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#64-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 135,
+            "message": "CrystalDeposit.fallback (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#134-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "isContractMiniGame",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 143,
+            "message": "CrystalDeposit.isContractMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#139-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "isDepositContract",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 147,
+            "message": "CrystalDeposit.isDepositContract (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#143-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "upgrade",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 149,
+            "message": "CrystalDeposit.upgrade (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#147-149) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "setContractsMiniGame",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 158,
+            "message": "CrystalDeposit.setContractsMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "removeContractMiniGame",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 165,
+            "message": "CrystalDeposit.removeContractMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#163-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "setupMiniGame",
+            "impact": "Informational",
+            "line": 168,
+            "line_end": 174,
+            "message": "CrystalDeposit.setupMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#168-174) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "startGame",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 206,
+            "message": "CrystalDeposit.startGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#199-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "share",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 272,
+            "message": "CrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "getCurrentReward",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 280,
+            "message": "CrystalDeposit.getCurrentReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#272-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "withdrawReward",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 295,
+            "message": "CrystalDeposit.withdrawReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CrystalDeposit",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "function": "getData",
+            "impact": "Informational",
+            "line": 312,
+            "line_end": 324,
+            "message": "CrystalDeposit.getData (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#312-324) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Parameter '' of CryptoEngineerInterface.subVirus (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Parameter '_scope_0' of CryptoEngineerInterface.subVirus (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '' of CryptoEngineerInterface.claimPrizePool (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_scope_0' of CryptoEngineerInterface.claimPrizePool (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Parameter '' of CryptoMiningWarInterface.subCrystal (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 65,
+            "message": "Parameter '_scope_0' of CryptoMiningWarInterface.subCrystal (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#65) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 150,
+            "message": "Parameter '_addr' of CrystalDeposit.setContractsMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 165,
+            "message": "Parameter '_addr' of CrystalDeposit.removeContractMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#164-165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 168,
+            "message": "Parameter '' of CrystalDeposit.setupMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 170,
+            "message": "Parameter '_miningWarDeadline' of CrystalDeposit.setupMiniGame (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_addr' of CrystalDeposit.setMiningWarInterface (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 184,
+            "message": "Parameter '_addr' of CrystalDeposit.setEngineerInterface (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 249,
+            "message": "Parameter '_value' of CrystalDeposit.share (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 274,
+            "message": "Parameter '_addr' of CrystalDeposit.getCurrentReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#273-274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 281,
+            "message": "Parameter '_addr' of CrystalDeposit.withdrawReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#281) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 296,
+            "message": "Parameter '_addr' of CrystalDeposit.updateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295-296) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 312,
+            "message": "Parameter '_addr' of CrystalDeposit.getData (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#312) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 325,
+            "message": "Parameter '_addr' of CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 325,
+            "message": "Parameter '_round' of CrystalDeposit.calculateReward (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_addr' of CrystalDeposit.getPlayerData (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 77,
+            "message": "Variable 'CrystalDeposit.HALF_TIME' (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#76-77) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 78,
+            "message": "Variable 'CrystalDeposit.MIN_TIME_WITH_DEADLINE' (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#77-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 81,
+            "message": "Variable 'CrystalDeposit.Engineer' (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#79-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 82,
+            "message": "Variable 'CrystalDeposit.MiningWar' (0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#81-82) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

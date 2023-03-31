@@ -1,0 +1,194 @@
+{
+    "errors": [
+        "EXIT_CODE_18"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "version",
+            "impact": "Low",
+            "line": 177,
+            "message": "UpgradeabilityProxy._upgradeTo.version (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#177) shadows:\n\t- UpgradeabilityStorage.version (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#141-144)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "implementation",
+            "impact": "Low",
+            "line": 177,
+            "line_end": 178,
+            "message": "UpgradeabilityProxy._upgradeTo.implementation (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#177-178) shadows:\n\t- UpgradeabilityStorage.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#149-158)\n\t- Proxy.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#36-39)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "version",
+            "impact": "Low",
+            "line": 274,
+            "message": "OwnedUpgradeabilityProxy.upgradeTo.version (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#274) shadows:\n\t- UpgradeabilityStorage.version (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#141-144)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "implementation",
+            "impact": "Low",
+            "line": 274,
+            "message": "OwnedUpgradeabilityProxy.upgradeTo.implementation (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#274) shadows:\n\t- UpgradeabilityStorage.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#149-158)\n\t- Proxy.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#36-39)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "version",
+            "impact": "Low",
+            "line": 288,
+            "line_end": 294,
+            "message": "OwnedUpgradeabilityProxy.upgradeToAndCall.version (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#288-294) shadows:\n\t- UpgradeabilityStorage.version (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#141-144)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "implementation",
+            "impact": "Low",
+            "line": 294,
+            "message": "OwnedUpgradeabilityProxy.upgradeToAndCall.implementation (local variable @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#294) shadows:\n\t- UpgradeabilityStorage.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#149-158)\n\t- Proxy.implementation (function @ 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#36-39)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 122,
+            "message": "Proxy.fallback uses assembly (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#43-122)\n\t- 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#47-122\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 122,
+            "message": "Proxy.fallback (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#43-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityStorage",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "version",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 144,
+            "message": "UpgradeabilityStorage.version (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#141-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OwnedUpgradeabilityProxy",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "transferProxyOwnership",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 266,
+            "message": "OwnedUpgradeabilityProxy.transferProxyOwnership (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#264-266) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OwnedUpgradeabilityProxy",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "upgradeToAndCall",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 296,
+            "message": "OwnedUpgradeabilityProxy.upgradeToAndCall (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#286-296) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Detected issues with version pragma in 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol:\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#3-5): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#23-27): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#123): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#158): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#192-193): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#222): it allows old versions\n\t- pragma solidity0.4.19 (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#296-297): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "OwnedUpgradeabilityProxy",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "function": "upgradeToAndCall",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 296,
+            "message": "Low level call in OwnedUpgradeabilityProxy.upgradeToAndCall (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#286-296):\n\t-require(bool)(address(this).call.value(msg.value)(data)) 0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#295-296\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 133,
+            "message": "Variable 'UpgradeabilityStorage._version' (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Variable 'UpgradeabilityStorage._implementation' (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 189,
+            "message": "Function 'UpgradeabilityProxy._upgradeTo' (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#176-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 247,
+            "message": "Function 'OwnedUpgradeabilityProxy.OwnedUpgradeabilityProxy' (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#241-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "EternalStorage.uintStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#12-13) is never used in EternalStorageProxy\nEternalStorage.stringStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#13-14) is never used in EternalStorageProxy\nEternalStorage.addressStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#14-15) is never used in EternalStorageProxy\nEternalStorage.bytesStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#15-16) is never used in EternalStorageProxy\nEternalStorage.boolStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#16-17) is never used in EternalStorageProxy\nEternalStorage.intStorage (0x0cb781ee62f815bdd9cd4c2210ae8600d43e7040.sol#17-21) is never used in EternalStorageProxy\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

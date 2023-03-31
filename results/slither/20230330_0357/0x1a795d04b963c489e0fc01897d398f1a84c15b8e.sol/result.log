@@ -1,0 +1,71 @@
+INFO:Detectors:[91m
+StandardToken.totalSupply_ (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#108) is never initialized. It is used in:
+	- totalSupply (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#113-114)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[92m
+StandardToken.totalSupply_ should be constant (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#108)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20.totalSupply (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#61) should be declared external
+StandardToken.totalSupply (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#113-114) should be declared external
+StandardToken.balanceOf (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#122-123) should be declared external
+ERC20.balanceOf (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#61-64) should be declared external
+StandardToken.allowance (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#135-141) should be declared external
+ERC20.allowance (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#64-66) should be declared external
+ERC20.transfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#66-69) should be declared external
+StandardToken.transfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#145-155) should be declared external
+StandardToken.approve (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#164-171) should be declared external
+ERC20.approve (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#69-71) should be declared external
+StandardToken.transferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#183-196) should be declared external
+ERC20.transferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#72-77) should be declared external
+StandardToken.increaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#210-218) should be declared external
+StandardToken.decreaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#233-249) should be declared external
+MultiSigWallet.fallback (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#403-410) should be declared external
+MultiSigWallet.setToken (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#419-426) should be declared external
+MultiSigWallet.replaceOwner (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#471-485) should be declared external
+MultiSigWallet.submitWithdrawTransaction (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#501-509) should be declared external
+MultiSigWallet.submitWithdrawTokenTransaction (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#516-526) should be declared external
+MultiSigWallet.submitAddOwnerTransaction (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#531-539) should be declared external
+MultiSigWallet.submitRemoveOwnerTransaction (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#543-551) should be declared external
+MultiSigWallet.revokeConfirmation (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#568-575) should be declared external
+MultiSigWallet.getConfirmationCount (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#677-685) should be declared external
+MultiSigWallet.getTransactionCount (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#695-705) should be declared external
+MultiSigWallet.getOwners (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#706-710) should be declared external
+MultiSigWallet.getConfirmations (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_a' of SafeMath.mul (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#13) is not in mixedCase
+Parameter '_b' of SafeMath.mul (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#13) is not in mixedCase
+Parameter '_a' of SafeMath.div (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#29) is not in mixedCase
+Parameter '_b' of SafeMath.div (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#29) is not in mixedCase
+Parameter '_a' of SafeMath.sub (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#39) is not in mixedCase
+Parameter '_b' of SafeMath.sub (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#39-40) is not in mixedCase
+Parameter '_a' of SafeMath.add (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#47) is not in mixedCase
+Parameter '_b' of SafeMath.add (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#47-48) is not in mixedCase
+Parameter '_owner' of StandardToken.balanceOf (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#122) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#136-139) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#139) is not in mixedCase
+Parameter '_to' of StandardToken.transfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#147) is not in mixedCase
+Parameter '_value' of StandardToken.transfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#147) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#165-168) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#169) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#183-184) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#184) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#185-186) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#211) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#211) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#234-235) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#235) is not in mixedCase
+Parameter '_token' of SafeERC20.safeTransfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#270) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#270) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransfer (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#270-273) is not in mixedCase
+Parameter '_token' of SafeERC20.safeTransferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#280) is not in mixedCase
+Parameter '_from' of SafeERC20.safeTransferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#280) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#281-284) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransferFrom (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#284) is not in mixedCase
+Parameter '_token' of SafeERC20.safeApprove (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#285) is not in mixedCase
+Parameter '_spender' of SafeERC20.safeApprove (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#286) is not in mixedCase
+Parameter '_value' of SafeERC20.safeApprove (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#286) is not in mixedCase
+Parameter '_required' of MultiSigWallet.changeRequirement (/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol#489) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x1a795d04b963c489e0fc01897d398f1a84c15b8e.sol analyzed (5 contracts), 61 result(s) found

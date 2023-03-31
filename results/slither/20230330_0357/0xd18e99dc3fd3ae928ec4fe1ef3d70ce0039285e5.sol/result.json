@@ -1,0 +1,332 @@
+{
+    "errors": [
+        "EXIT_CODE_33"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Medium",
+            "line": 54,
+            "message": "OBTCoin.totalSupply (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#54) shadows:\n\t- ERC20Basic.totalSupply (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#28-29)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 29,
+            "message": "ERC20Basic.totalSupply should be constant (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#28-29)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 79,
+            "message": "OBTCoin.balanceOf (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#75-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 30,
+            "message": "ERC20Basic.balanceOf (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#29-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 95,
+            "message": "OBTCoin.transfer (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#84-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 31,
+            "message": "ERC20Basic.transfer (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#30-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 120,
+            "message": "OBTCoin.allowance (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#115-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ERC20.allowance (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 109,
+            "message": "OBTCoin.transferFrom (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#95-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 37,
+            "message": "ERC20.transferFrom (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#36-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 38,
+            "message": "ERC20.approve (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#37-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 115,
+            "message": "OBTCoin.approve (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#109-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 74,
+            "message": "OBTCoin.transferOwnership (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#69-74) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 126,
+            "message": "OBTCoin.withdraw (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#120-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 133,
+            "message": "OBTCoin.burn (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#126-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 139,
+            "message": "OBTCoin.approveAndCall (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#133-139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol:\n\t- pragma solidity^0.4.18 (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "OBTCoin",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 139,
+            "message": "Low level call in OBTCoin.approveAndCall (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#133-139):\n\t-require(bool)(_spender.call(bytes4(bytes32(keccak256()(receiveApproval(address,uint256,address,bytes)))),msg.sender,_value,this,_extraData)) 0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#136-139\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 76,
+            "message": "Parameter '_owner' of OBTCoin.balanceOf (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#75-76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 86,
+            "message": "Parameter '_to' of OBTCoin.transfer (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#84-86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 86,
+            "message": "Parameter '_amount' of OBTCoin.transfer (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 118,
+            "message": "Parameter '_owner' of OBTCoin.allowance (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#116-118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 118,
+            "message": "Parameter '_spender' of OBTCoin.allowance (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 97,
+            "message": "Parameter '_from' of OBTCoin.transferFrom (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#95-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 97,
+            "message": "Parameter '_to' of OBTCoin.transferFrom (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 97,
+            "message": "Parameter '_amount' of OBTCoin.transferFrom (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 110,
+            "message": "Parameter '_spender' of OBTCoin.approve (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#109-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 110,
+            "message": "Parameter '_value' of OBTCoin.approve (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 68,
+            "message": "Function 'OBTCoin.OBTCoin' (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#65-68) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_value' of OBTCoin.burn (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "Parameter '_spender' of OBTCoin.approveAndCall (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#133-134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_value' of OBTCoin.approveAndCall (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 135,
+            "message": "Parameter '_extraData' of OBTCoin.approveAndCall (0xd18e99dc3fd3ae928ec4fe1ef3d70ce0039285e5.sol#134-135) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

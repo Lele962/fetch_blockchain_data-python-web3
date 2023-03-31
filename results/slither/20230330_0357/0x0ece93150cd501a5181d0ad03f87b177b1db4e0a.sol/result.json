@@ -1,0 +1,1162 @@
+{
+    "errors": [
+        "EXIT_CODE_120"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "High",
+            "line": 973,
+            "message": "Migrations.owner (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#973) shadows:\n\t- Ownable.owner (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#5-7)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Medium",
+            "line": 137,
+            "line_end": 152,
+            "message": "ESOPTypes.serializeEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#137-152) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Medium",
+            "line": 152,
+            "line_end": 158,
+            "message": "ESOPTypes.deserializeEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#152-158) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20OptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 328,
+            "line_end": 403,
+            "message": "ERC20OptionsConverter (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#328-403) has incorrect ERC20 function interface(s):\n\t-transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#382-388)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ProceedsOptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 1184,
+            "line_end": 1237,
+            "message": "ProceedsOptionsConverter (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1184-1237) has incorrect ERC20 function interface(s):\n\t-transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1232-1237)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeMigratesToNewESOP",
+            "impact": "Medium",
+            "line": 879,
+            "line_end": 921,
+            "message": "Reentrancy in ESOP.employeeMigratesToNewESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#879-921):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#886-887)\n\t- emp = _loademp(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#888)\n\t- (pool,extra,_) = optionsCalculator.calculateOptionsComponents(serializeEmployee(emp),currentTime(),0,false) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#895-901)\n\tState variables written after the call(s):\n\t- migrations (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#902)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeMigratesToNewESOP",
+            "impact": "Medium",
+            "line": 879,
+            "line_end": 921,
+            "message": "Reentrancy in ESOP.employeeMigratesToNewESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#879-921):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#886-887)\n\t- emp = _loademp(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#888)\n\t- (pool,extra,_) = optionsCalculator.calculateOptionsComponents(serializeEmployee(emp),currentTime(),0,false) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#895-901)\n\t- migration.migrate(msg.sender,pool,extra) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#902)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#905-910)\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#905-910)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "offerOptionsConversion",
+            "impact": "Medium",
+            "line": 766,
+            "line_end": 790,
+            "message": "Reentrancy in ESOP.offerOptionsConversion (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#766-790):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#781-783)\n\t- exerciseOptionsDeadline = converter.getExercisePeriodDeadline() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#785-786)\n\tState variables written after the call(s):\n\t- esopState (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#788)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "offerOptionsToEmployee",
+            "impact": "Medium",
+            "line": 587,
+            "line_end": 617,
+            "message": "Reentrancy in ESOP.offerOptionsToEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#587-617):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#600-601)\n\t- poolOptions = optionsCalculator.calcNewEmployeePoolOptions(remainingPoolOptions) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#601-604)\n\t- _saveemp(e,emp) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#609-610)\n\tState variables written after the call(s):\n\t- remainingPoolOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#610-613)\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#613-615)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Medium",
+            "line": 525,
+            "line_end": 567,
+            "message": "Reentrancy in ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#525-567):\n\tExternal calls:\n\t- ea = employees.addresses(i) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#532-533)\n\t- ser = employees.getSerializedEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#536)\n\t- remainingPoolOptions += distributeAndReturnToPool(emp.poolOptions,i + 1) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#538-540)\n\t- employees.removeEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#541-542)\n\t- (returnedPoolOptions,returnedExtraOptions) = optionsCalculator.calculateFadeoutToPool(ct,ser) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#550-553)\n\t- employees.setFadeoutStarts(ea,ct) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#557-558)\n\tState variables written after the call(s):\n\t- remainingPoolOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#562-563)\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#564-566)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "terminateEmployee",
+            "impact": "Medium",
+            "line": 736,
+            "message": "returnedExtraOptions in ESOP.terminateEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#736) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "exerciseOptionsInternal",
+            "impact": "Medium",
+            "line": 801,
+            "message": "extra in ESOP.exerciseOptionsInternal (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#801) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "exerciseOptionsInternal",
+            "impact": "Medium",
+            "line": 800,
+            "message": "pool in ESOP.exerciseOptionsInternal (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#800) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "terminateEmployee",
+            "impact": "Medium",
+            "line": 735,
+            "line_end": 736,
+            "message": "returnedOptions in ESOP.terminateEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#735-736) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "exerciseOptionsInternal",
+            "impact": "Medium",
+            "line": 801,
+            "message": "bonus in ESOP.exerciseOptionsInternal (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#801) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Medium",
+            "line": 525,
+            "line_end": 567,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#525-567) does not use the value returned by external calls:\n\t-employees.removeEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#541-542)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeSignsToESOP",
+            "impact": "Medium",
+            "line": 669,
+            "line_end": 695,
+            "message": "ESOP.employeeSignsToESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#669-695) does not use the value returned by external calls:\n\t-employees.removeEmployee(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#689-691)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "terminateEmployee",
+            "impact": "Medium",
+            "line": 724,
+            "line_end": 766,
+            "message": "ESOP.terminateEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#724-766) does not use the value returned by external calls:\n\t-employees.removeEmployee(e) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#760-762)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeMigratesToNewESOP",
+            "impact": "Medium",
+            "line": 879,
+            "line_end": 921,
+            "message": "ESOP.employeeMigratesToNewESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#879-921) does not use the value returned by external calls:\n\t-employees.removeEmployee(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#916-919)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "_saveemp",
+            "impact": "Medium",
+            "line": 945,
+            "line_end": 957,
+            "message": "ESOP._saveemp (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#945-957) does not use the value returned by external calls:\n\t-employees.setEmployee(e,emp.issueDate,emp.timeToSign,emp.terminatedAt,emp.fadeoutStarts,emp.poolOptions,emp.extraOptions,emp.suspendedAt,emp.state) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#949-957)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "Destructable",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "selfdestruct",
+            "impact": "Low",
+            "line": 25,
+            "line_end": 33,
+            "message": "Destructable.selfdestruct (function @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#25-33) shadows built-in symbol \"selfdestruct\"\n",
+            "name": "shadowing-builtin"
+        },
+        {
+            "confidence": "High",
+            "contract": "EmployeesList",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "size",
+            "impact": "Low",
+            "line": 214,
+            "line_end": 216,
+            "message": "EmployeesList.setEmployee.size (local variable @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#214-216) shadows:\n\t- EmployeesList.size (function @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#199-200)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "distributeAndReturnToPool",
+            "impact": "Low",
+            "line": 504,
+            "line_end": 524,
+            "message": "ESOP.distributeAndReturnToPool has external calls inside a loop:\n\t- i < employees.size() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#504-524)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "distributeAndReturnToPool",
+            "impact": "Low",
+            "line": 505,
+            "line_end": 506,
+            "message": "ESOP.distributeAndReturnToPool has external calls inside a loop:\n\t- ea = employees.addresses(i) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#505-506)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "distributeAndReturnToPool",
+            "impact": "Low",
+            "line": 519,
+            "line_end": 520,
+            "message": "ESOP.distributeAndReturnToPool has external calls inside a loop:\n\t- newoptions = optionsCalculator.calcNewEmployeePoolOptions(distributedOptions) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#519-520)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 532,
+            "line_end": 567,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- i < employees.size() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#532-567)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 532,
+            "line_end": 533,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- ea = employees.addresses(i) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#532-533)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 536,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- ser = employees.getSerializedEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#536)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 541,
+            "line_end": 542,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- employees.removeEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#541-542)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 550,
+            "line_end": 553,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- (returnedPoolOptions,returnedExtraOptions) = optionsCalculator.calculateFadeoutToPool(ct,ser) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#550-553)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 557,
+            "line_end": 558,
+            "message": "ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout has external calls inside a loop:\n\t- employees.setFadeoutStarts(ea,ct) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#557-558)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "allowEmployeeMigration",
+            "impact": "Low",
+            "line": 868,
+            "line_end": 879,
+            "message": "Reentrancy in ESOP.allowEmployeeMigration (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#868-879):\n\tExternal calls:\n\t- emp = _loademp(employee) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#874-875)\n\tState variables written after the call(s):\n\t- migrations (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#878)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeMigratesToNewESOP",
+            "impact": "Low",
+            "line": 879,
+            "line_end": 921,
+            "message": "Reentrancy in ESOP.employeeMigratesToNewESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#879-921):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#886-887)\n\t- emp = _loademp(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#888)\n\t- (pool,extra,_) = optionsCalculator.calculateOptionsComponents(serializeEmployee(emp),currentTime(),0,false) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#895-901)\n\t- migration.migrate(msg.sender,pool,extra) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#902)\n\tState variables written after the call(s):\n\t- totalPoolOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#915-916)\n\t- totalPoolOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#915-916)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "employeeSignsToESOP",
+            "impact": "Low",
+            "line": 669,
+            "line_end": 695,
+            "message": "Reentrancy in ESOP.employeeSignsToESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#669-695):\n\tExternal calls:\n\t- emp = _loademp(msg.sender) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#675-678)\n\t- remainingPoolOptions += distributeAndReturnToPool(emp.poolOptions,emp.idx) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#684-688)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#688-689)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "increaseEmployeeExtraOptions",
+            "impact": "Low",
+            "line": 653,
+            "line_end": 669,
+            "message": "Reentrancy in ESOP.increaseEmployeeExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#653-669):\n\tExternal calls:\n\t- emp = _loademp(e) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#660)\n\t- _saveemp(e,emp) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#666)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#666-667)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "offerOptionsConversion",
+            "impact": "Low",
+            "line": 766,
+            "line_end": 790,
+            "message": "Reentrancy in ESOP.offerOptionsConversion (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#766-790):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#781-783)\n\tState variables written after the call(s):\n\t- conversionOfferedAt (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#785)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "offerOptionsConversion",
+            "impact": "Low",
+            "line": 766,
+            "line_end": 790,
+            "message": "Reentrancy in ESOP.offerOptionsConversion (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#766-790):\n\tExternal calls:\n\t- removeEmployeesWithExpiredSignaturesAndReturnFadeout() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#781-783)\n\t- exerciseOptionsDeadline = converter.getExercisePeriodDeadline() (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#785-786)\n\tState variables written after the call(s):\n\t- exerciseOptionsDeadline (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#785-786)\n\t- optionsConverter (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#786)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "offerOptionsToEmployeeOnlyExtra",
+            "impact": "Low",
+            "line": 624,
+            "line_end": 653,
+            "message": "Reentrancy in ESOP.offerOptionsToEmployeeOnlyExtra (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#624-653):\n\tExternal calls:\n\t- _saveemp(e,emp) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#646-647)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#647-648)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "removeEmployeesWithExpiredSignaturesAndReturnFadeout",
+            "impact": "Low",
+            "line": 525,
+            "line_end": 567,
+            "message": "Reentrancy in ESOP.removeEmployeesWithExpiredSignaturesAndReturnFadeout (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#525-567):\n\tExternal calls:\n\t- ea = employees.addresses(i) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#532-533)\n\t- ser = employees.getSerializedEmployee(ea) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#536)\n\t- remainingPoolOptions += distributeAndReturnToPool(emp.poolOptions,i + 1) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#538-540)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#540)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "terminateEmployee",
+            "impact": "Low",
+            "line": 724,
+            "line_end": 766,
+            "message": "Reentrancy in ESOP.terminateEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#724-766):\n\tExternal calls:\n\t- emp = _loademp(e) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#730-731)\n\t- returnedOptions = emp.poolOptions - optionsCalculator.calculateVestedOptions(terminatedAt,emp.issueDate,emp.poolOptions) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#742-745)\n\t- returnedExtraOptions = emp.extraOptions - optionsCalculator.calculateVestedOptions(terminatedAt,emp.issueDate,emp.extraOptions) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#747-752)\n\t- employees.terminateEmployee(e,emp.issueDate,terminatedAt,terminatedAt,EmployeeState.Terminated) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#752-755)\n\t- employees.removeEmployee(e) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#760-762)\n\t- remainingPoolOptions += distributeAndReturnToPool(returnedOptions,emp.idx) (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#762-763)\n\tState variables written after the call(s):\n\t- totalExtraOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#764)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TimeSource",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "currentTime",
+            "impact": "Low",
+            "line": 67,
+            "line_end": 75,
+            "message": "TimeSource.currentTime (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#67-75) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp > 0xFFFFFFFF (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#70-73)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ESOPTypes",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "serializeEmployee",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 152,
+            "message": "ESOPTypes.serializeEmployee uses assembly (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#137-152)\n\t- 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#142-152\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ESOPTypes",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "deserializeEmployee",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 158,
+            "message": "ESOPTypes.deserializeEmployee uses assembly (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#152-158)\n\t- 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#157-158\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#14-15:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#54:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 64,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#64:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 73,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#71-73:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#84:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#92:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 173,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#173:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#177:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#217:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 248,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#248:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 257,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#257:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#279:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 282,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#282:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 300,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#299-300:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 325,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#325:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 386,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#386:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#399:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 353,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#353:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 357,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#357:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 404,
+            "line_end": 405,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#404-405:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 605,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#605:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 873,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#873:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 885,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#885:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 964,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#964:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 492,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#492:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 495,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#495:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 497,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#497:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 499,
+            "line_end": 500,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#499-500:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 501,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#501:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1176,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1176:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1177,
+            "line_end": 1178,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1177-1178:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1181,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1181:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1023,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1023:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1191,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1191:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1229,
+            "message": "Deprecated standard detected @ 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1229:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "TimeSource",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "mockTime",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 84,
+            "message": "TimeSource.mockTime (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#75-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseOptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "getExercisePeriodDeadline",
+            "impact": "Informational",
+            "line": 97,
+            "message": "BaseOptionsConverter.getExercisePeriodDeadline (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20OptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "getExercisePeriodDeadline",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 364,
+            "message": "ERC20OptionsConverter.getExercisePeriodDeadline (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#362-364) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20OptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "exerciseOptions",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 382,
+            "message": "ERC20OptionsConverter.exerciseOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#364-382) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BaseOptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "exerciseOptions",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 104,
+            "message": "BaseOptionsConverter.exerciseOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#99-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CodeUpdateable",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "beginCodeUpdate",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 181,
+            "message": "CodeUpdateable.beginCodeUpdate (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#177-181) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CodeUpdateable",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "cancelCodeUpdate",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 187,
+            "message": "CodeUpdateable.cancelCodeUpdate (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#181-187) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20OptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 397,
+            "line_end": 399,
+            "message": "ERC20OptionsConverter.fallback (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#397-399) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ESOPMigration",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "migrate",
+            "impact": "Informational",
+            "line": 413,
+            "line_end": 414,
+            "message": "ESOPMigration.migrate (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#413-414) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "calcEffectiveOptionsForEmployee",
+            "impact": "Informational",
+            "line": 921,
+            "line_end": 932,
+            "message": "ESOP.calcEffectiveOptionsForEmployee (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#921-932) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ESOP",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 962,
+            "line_end": 964,
+            "message": "ESOP.fallback (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#962-964) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "setCompleted",
+            "impact": "Informational",
+            "line": 978,
+            "line_end": 982,
+            "message": "Migrations.setCompleted (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#978-982) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Migrations",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "upgrade",
+            "impact": "Informational",
+            "line": 982,
+            "line_end": 986,
+            "message": "Migrations.upgrade (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#982-986) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OptionsCalculator",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "residualAmountPromille",
+            "impact": "Informational",
+            "line": 1001,
+            "line_end": 1006,
+            "message": "OptionsCalculator.residualAmountPromille (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1001-1006) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OptionsCalculator",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "calcNewEmployeePoolOptions",
+            "impact": "Informational",
+            "line": 1023,
+            "line_end": 1025,
+            "message": "OptionsCalculator.calcNewEmployeePoolOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1023-1025) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OptionsCalculator",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "calculateFadeoutToPool",
+            "impact": "Informational",
+            "line": 1122,
+            "line_end": 1145,
+            "message": "OptionsCalculator.calculateFadeoutToPool (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1122-1145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OptionsCalculator",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "simulateOptions",
+            "impact": "Informational",
+            "line": 1145,
+            "line_end": 1164,
+            "message": "OptionsCalculator.simulateOptions (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1145-1164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ProceedsOptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "makePayout",
+            "impact": "Informational",
+            "line": 1188,
+            "line_end": 1191,
+            "message": "ProceedsOptionsConverter.makePayout (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1188-1191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ProceedsOptionsConverter",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 1191,
+            "line_end": 1232,
+            "message": "ProceedsOptionsConverter.withdraw (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1191-1232) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RoT",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "setESOP",
+            "impact": "Informational",
+            "message": "RoT.setESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RoT",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "function": "killOnUnsupportedFork",
+            "impact": "Informational",
+            "message": "RoT.killOnUnsupportedFork (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol:\n\t- pragma solidity^0.4.8 (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 11,
+            "message": "Function 'Ownable.Ownable' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#7-11) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 385,
+            "message": "Parameter '_to' of ERC20OptionsConverter.transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#385) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 385,
+            "message": "Parameter '_value' of ERC20OptionsConverter.transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#385) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 393,
+            "message": "Parameter '_owner' of ERC20OptionsConverter.balanceOf (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#392-393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 399,
+            "line_end": 403,
+            "message": "Function 'ERC20OptionsConverter.ERC20OptionsConverter' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#399-403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 933,
+            "line_end": 935,
+            "message": "Function 'ESOP._logerror' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#933-935) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 937,
+            "line_end": 945,
+            "message": "Function 'ESOP._loademp' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#937-945) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 945,
+            "line_end": 957,
+            "message": "Function 'ESOP._saveemp' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#945-957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 964,
+            "line_end": 972,
+            "message": "Function 'ESOP.ESOP' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#964-972) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 445,
+            "message": "Variable 'ESOP.ESOPLegalWrapperIPFSHash' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#445) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 977,
+            "line_end": 978,
+            "message": "Function 'Migrations.Migrations' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#977-978) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 982,
+            "message": "Parameter 'new_address' of Migrations.upgrade (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#982) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 973,
+            "line_end": 974,
+            "message": "Variable 'Migrations.last_completed_migration' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#973-974) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1183,
+            "line_end": 1184,
+            "message": "Function 'OptionsCalculator.OptionsCalculator' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1183-1184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1232,
+            "message": "Parameter '_to' of ProceedsOptionsConverter.transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "line": 1232,
+            "line_end": 1233,
+            "message": "Parameter '_value' of ProceedsOptionsConverter.transfer (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol#1232-1233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "message": "Function 'ProceedsOptionsConverter.ProceedsOptionsConverter' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "message": "Parameter 'ESOP' of RoT.setESOP (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol",
+            "impact": "Informational",
+            "message": "Variable 'RoT.ESOPAddress' (0x0ece93150cd501a5181d0ad03f87b177b1db4e0a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "errors": [
+        "EXIT_CODE_10"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 46,
+            "message": "Ownable.transferOwnership (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#37-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "itoken",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "function": "transferMultiAddressFrom",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 50,
+            "message": "itoken.transferMultiAddressFrom (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#46-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AirsendGifts",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "function": "multiSend",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 66,
+            "message": "AirsendGifts.multiSend (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#61-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol:\n\t- pragma solidity^0.4.18 (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 25,
+            "message": "Function 'Ownable.Ownable' (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#19-25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 50,
+            "message": "Contract 'itoken' (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#46-50) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_tokenAddr' of AirsendGifts.multiSend (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_tokenOwner' of AirsendGifts.multiSend (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "Parameter '_destAddrs' of AirsendGifts.multiSend (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#61-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_values' of AirsendGifts.multiSend (0x68974bb47457c299b18eeb7093b5a8cb95ee073d.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

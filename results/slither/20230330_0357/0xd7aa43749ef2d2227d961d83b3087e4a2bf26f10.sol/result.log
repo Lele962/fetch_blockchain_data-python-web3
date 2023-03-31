@@ -1,0 +1,88 @@
+INFO:Detectors:[93m
+Reentrancy in OneledgerTokenVesting.release (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612):
+	External calls:
+	- require(bool)(token.balanceOf(this) >= 0 && now >= startFrom) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#593-597)
+	- tokensReadyToRelease > token.balanceOf(this) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#605-609)
+	- amountToTransfer = token.balanceOf(this) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#605-609)
+	State variables written after the call(s):
+	- elapsedPeriods (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#610-612)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+ICO.buyTokens (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#474-484) does not use the value returned by external calls:
+	-token.mint(msg.sender,tokenToBuy) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#479)
+ICO.mintToken (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#505-508) does not use the value returned by external calls:
+	-token.mint(target,tokenToMint) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#507-508)
+ICO.closeSale (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#509-514) does not use the value returned by external calls:
+	-token.mint(owner,TOTAL_TOKEN_SUPPLY.sub(token.totalSupply())) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#511-512)
+	-token.finishMinting() (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#513)
+OneledgerTokenVesting.release (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612) does not use the value returned by external calls:
+	-token.transfer(beneficiary,amountToTransfer) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol)
+OneledgerTokenVesting.close (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) does not use the value returned by external calls:
+	-token.transfer(reservedAccount,tokenLeft) (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ICO.TOTAL_TOKEN_SUPPLY should be constant (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#421-422)
+OneledgerToken.decimals should be constant (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#380)
+OneledgerToken.name should be constant (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#375-376)
+OneledgerToken.symbol should be constant (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#376-380)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Ownable.renounceOwnership (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#85-90) should be declared external
+Ownable.transferOwnership (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#94-99) should be declared external
+ERC20Basic.totalSupply (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#110-111) should be declared external
+BasicToken.totalSupply (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#150-151) should be declared external
+ERC20Basic.balanceOf (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#111-112) should be declared external
+BasicToken.balanceOf (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#177-179) should be declared external
+ERC20.allowance (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#119-122) should be declared external
+StandardToken.allowance (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#245-248) should be declared external
+ERC20.approve (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#125-131) should be declared external
+StandardToken.approve (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228-231) should be declared external
+StandardToken.increaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#263-272) should be declared external
+StandardToken.decreaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#288-300) should be declared external
+MintableToken.mint (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342-357) should be declared external
+MintableToken.finishMinting (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#361-365) should be declared external
+OneledgerToken.activate (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#387-389) should be declared external
+ICO.updateRate (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#463-466) should be declared external
+ICO.updateWeiCap (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#467-473) should be declared external
+ICO.addToWhiteList (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#489-499) should be declared external
+ICO.mintToken (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#505-508) should be declared external
+ICO.closeSale (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#509-514) should be declared external
+OneledgerTokenVesting.getToken (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#588-589) should be declared external
+OneledgerTokenVesting.release (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#591-612) should be declared external
+OneledgerTokenVesting.assignReservedAccount (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) should be declared external
+OneledgerTokenVesting.close (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Ownable.transferOwnership (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#98) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#103-110) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#103-104) is not in mixedCase
+Parameter '_owner' of BasicToken.balanceOf (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#177-178) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#157) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#157) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#247) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#247) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#202) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#203-204) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#204) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#228) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#264-268) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#268) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#288) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#289-290) is not in mixedCase
+Parameter '_to' of MintableToken.mint (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342) is not in mixedCase
+Parameter '_amount' of MintableToken.mint (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#342-343) is not in mixedCase
+Parameter '_wallet' of ICO. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#434-435) is not in mixedCase
+Parameter '_rate' of ICO. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435) is not in mixedCase
+Parameter '_startDate' of ICO. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435) is not in mixedCase
+Parameter '_weiCap' of ICO. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#435-437) is not in mixedCase
+Variable 'ICO.TOTAL_TOKEN_SUPPLY' (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#421-422) is not in mixedCase
+Parameter '_beneficiary' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#567) is not in mixedCase
+Parameter '_startFrom' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#568-571) is not in mixedCase
+Parameter '_period' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#571) is not in mixedCase
+Parameter '_tokensReleasedPerPeriod' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#571-572) is not in mixedCase
+Parameter '_reservedAccount' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#572) is not in mixedCase
+Parameter '_token' of OneledgerTokenVesting. (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol#572-573) is not in mixedCase
+Parameter '_newReservedAccount' of OneledgerTokenVesting.assignReservedAccount (/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd7aa43749ef2d2227d961d83b3087e4a2bf26f10.sol analyzed (10 contracts), 62 result(s) found

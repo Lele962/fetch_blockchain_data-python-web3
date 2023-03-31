@@ -1,0 +1,44 @@
+INFO:Detectors:[92m
+Ownable.transferOwnership (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#69-77) should be declared external
+BasicToken.balanceOf (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#156-159) should be declared external
+ERC20Basic.balanceOf (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#83-84) should be declared external
+ERC20Basic.transfer (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#84-88) should be declared external
+BasicToken.transfer (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#134-147) should be declared external
+BasicToken.allowAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#104-109) should be declared external
+BasicToken.lockAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#109-116) should be declared external
+BasicToken.setLocked (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#116-118) should be declared external
+StandardToken.allowance (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#228-230) should be declared external
+ERC20.allowance (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#160-161) should be declared external
+StandardToken.transferFrom (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#188-203) should be declared external
+ERC20.transferFrom (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#161-165) should be declared external
+ERC20.approve (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#166-169) should be declared external
+StandardToken.approve (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#217-219) should be declared external
+StandardToken.increaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#236-245) should be declared external
+StandardToken.decreaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#246-264) should be declared external
+BurnableToken.burn (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#271-287) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#156) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#137) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#137) is not in mixedCase
+Parameter '_addr' of BasicToken.allowAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#104) is not in mixedCase
+Parameter '_allowed' of BasicToken.allowAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#104-107) is not in mixedCase
+Parameter '_addr' of BasicToken.lockAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#109-111) is not in mixedCase
+Parameter '_locked' of BasicToken.lockAddress (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#112) is not in mixedCase
+Parameter '_locked' of BasicToken.setLocked (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#116) is not in mixedCase
+Parameter '_addr' of BasicToken.canTransfer (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#118-119) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#228) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#228) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#188-190) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#190) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#190) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#217) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#217) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#236-237) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#238-240) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#247) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#247) is not in mixedCase
+Parameter '_value' of BurnableToken.burn (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#271) is not in mixedCase
+Constant 'Croba.initialSupply' (/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol#293-295) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x1b93adebff40cc36f0e2b97a427c7bc52edaa552.sol analyzed (8 contracts), 39 result(s) found

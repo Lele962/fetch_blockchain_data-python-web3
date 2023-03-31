@@ -1,0 +1,262 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 18,
+            "line_end": 19,
+            "message": "ENS.setSubnodeOwner.owner (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#18-19) shadows:\n\t- ENS.owner (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#22-23)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "resolver",
+            "impact": "Low",
+            "line": 19,
+            "line_end": 20,
+            "message": "ENS.setResolver.resolver (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#19-20) shadows:\n\t- ENS.resolver (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#23-24)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "owner",
+            "impact": "Low",
+            "line": 20,
+            "line_end": 21,
+            "message": "ENS.setOwner.owner (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#20-21) shadows:\n\t- ENS.owner (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#22-23)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ENS",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "ttl",
+            "impact": "Low",
+            "line": 21,
+            "line_end": 22,
+            "message": "ENS.setTTL.ttl (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#21-22) shadows:\n\t- ENS.ttl (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#24-29)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "addr",
+            "impact": "Low",
+            "line": 92,
+            "message": "PublicResolver.setAddr.addr (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#92) shadows:\n\t- PublicResolver.addr (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#249-251)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 130,
+            "line_end": 131,
+            "message": "PublicResolver.setName.name (local variable @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#130-131) shadows:\n\t- PublicResolver.name (function @ 0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#220-222)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setAddr",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 97,
+            "message": "PublicResolver.setAddr (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#91-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setContent",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 110,
+            "message": "PublicResolver.setContent (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#104-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setMultihash",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 121,
+            "message": "PublicResolver.setMultihash (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#115-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setName",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 132,
+            "message": "PublicResolver.setName (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#127-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setABI",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 149,
+            "message": "PublicResolver.setABI (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#140-149) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setPubkey",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 160,
+            "message": "PublicResolver.setPubkey (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#154-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "setText",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 173,
+            "message": "PublicResolver.setText (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#166-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "text",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 183,
+            "message": "PublicResolver.text (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#180-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "pubkey",
+            "impact": "Informational",
+            "line": 190,
+            "line_end": 193,
+            "message": "PublicResolver.pubkey (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#190-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "ABI",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 214,
+            "message": "PublicResolver.ABI (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#199-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 220,
+            "line_end": 222,
+            "message": "PublicResolver.name (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#220-222) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "content",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 235,
+            "message": "PublicResolver.content (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#232-235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "multihash",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 244,
+            "message": "PublicResolver.multihash (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#241-244) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "addr",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 251,
+            "message": "PublicResolver.addr (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#249-251) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PublicResolver",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "function": "supportsInterface",
+            "impact": "Informational",
+            "line": 256,
+            "line_end": 262,
+            "message": "PublicResolver.supportsInterface (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#256-262) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 214,
+            "message": "Function 'PublicResolver.ABI' (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#199-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 78,
+            "message": "Modifier 'PublicResolver.only_owner' (0x0a2340e7af5dcf6f7f4acc0e01f2102fb4b144b7.sol#72-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

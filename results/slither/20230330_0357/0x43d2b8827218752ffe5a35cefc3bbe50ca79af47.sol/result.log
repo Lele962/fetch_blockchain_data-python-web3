@@ -1,0 +1,173 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:
+/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:125:31: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x1b002cD1BA79DfaD65e8abFBb3A97826e4960fe5'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        setMiningWarInterface(0x1b002cd1ba79dfad65e8abfbb3a97826e4960fe5);
+                              ^----------------------------------------^
+/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:126:30: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0xd7AFbF5141A7f1d6b0473175F7A6b0a7954eD3D2'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        setEngineerInterface(0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2);
+                             ^----------------------------------------^
+/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:57:5: Warning: Function state mutability can be restricted to pure
+    function subVirus(address /*_addr*/, uint256 /*_value*/) public {}
+    ^----------------------------------------------------------------^
+/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:58:5: Warning: Function state mutability can be restricted to pure
+    function claimPrizePool(address /*_addr*/, uint256 /*_value*/) public {} 
+    ^----------------------------------------------------------------------^
+/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol:64:5: Warning: Function state mutability can be restricted to pure
+    function subCrystal( address /*_addr*/, uint256 /*_value*/ ) public {}
+    ^--------------------------------------------------------------------^
+
+INFO:Detectors:[91m
+CrystalDeposit.withdrawReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295) sends eth to arbitrary user
+	Dangerous calls:
+	- _addr.transfer(balance) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#293)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:
+	- g.crystals == 0
+CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:
+	- g.crystals == 0
+CrystalDeposit.endRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:
+	- g.crystals == 0
+CrystalDeposit.endRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:
+	- g.crystals == 0
+CrystalDeposit.endRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.startRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == true)
+	- crystalsLastRound == 0
+CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325-335) uses a dangerous strict equality:
+	- g.crystals == 0
+CrystalDeposit.endRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#236-245) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == false)
+CrystalDeposit.startRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234) uses a dangerous strict equality:
+	- require(bool)(games[round].ended == true)
+	- crystalsLastRound == 0
+CrystalDeposit.updateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295-312) uses a dangerous strict equality:
+	- games[p.currentRound].ended == true && p.lastRound < p.currentRound
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272):
+	External calls:
+	- MiningWar.subCrystal(msg.sender,_value) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#254-255)
+	- endRound() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)
+	State variables written after the call(s):
+	- games (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)
+	- games (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#261-264)
+	- round (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)
+Reentrancy in CrystalDeposit.startRound (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#206-234):
+	External calls:
+	- engineerPrizePool = getEngineerPrizePool() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#222)
+	- Engineer.claimPrizePool(address(this),prizePool) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#224-226)
+	State variables written after the call(s):
+	- games (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#231-234)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in CrystalDeposit.constructor (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#125-133):
+	External calls:
+	- setMiningWarInterface(0x1b002cd1ba79dfad65e8abfbb3a97826e4960fe5) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#126-130)
+	- setEngineerInterface(0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#132-133)
+	State variables written after the call(s):
+	- Engineer (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#132-133)
+Reentrancy in CrystalDeposit.setContractsMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150-158):
+	External calls:
+	- MiniGame.isContractMiniGame() == false (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#155-156)
+	State variables written after the call(s):
+	- miniGames (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#158)
+Reentrancy in CrystalDeposit.setEngineerInterface (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#184-195):
+	External calls:
+	- require(bool)(engineerInterface.isEngineerContract() == true) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#191-193)
+	State variables written after the call(s):
+	- Engineer (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#195)
+Reentrancy in CrystalDeposit.setMiningWarInterface (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#174-184):
+	External calls:
+	- require(bool)(miningWarInterface.isMiningWarContract() == true) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#180-181)
+	State variables written after the call(s):
+	- MiningWar (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#182-183)
+	- miningWarAddress (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#182)
+Reentrancy in CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272):
+	External calls:
+	- MiningWar.subCrystal(msg.sender,_value) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#254-255)
+	- endRound() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#256)
+	State variables written after the call(s):
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#257)
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#266)
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#268)
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#269-270)
+Reentrancy in CrystalDeposit.startGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#199-206):
+	External calls:
+	- miningWarDeadline = MiningWar.deadline() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#203-205)
+	State variables written after the call(s):
+	- games (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#205-206)
+Reentrancy in CrystalDeposit.withdrawReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295):
+	External calls:
+	- endRound() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#284)
+	State variables written after the call(s):
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#286-287)
+Reentrancy in CrystalDeposit.withdrawReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295):
+	External calls:
+	- endRound() (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#284)
+	External calls sending eth:
+	- _addr.transfer(balance) (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#293)
+	State variables written after the call(s):
+	- players (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+CryptoEngineerInterface.prizePool should be constant (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#57)
+CryptoMiningWarInterface.deadline should be constant (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#64)
+CrystalDeposit.HALF_TIME should be constant (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#76-77)
+CrystalDeposit.MIN_TIME_WITH_DEADLINE should be constant (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#77-78)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+CryptoEngineerInterface.subVirus (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#57-58) should be declared external
+CryptoEngineerInterface.claimPrizePool (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58-59) should be declared external
+CryptoEngineerInterface.isContractMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59-60) should be declared external
+CryptoMiningWarInterface.subCrystal (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#64-65) should be declared external
+CrystalDeposit.fallback (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#134-135) should be declared external
+CrystalDeposit.isContractMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#139-143) should be declared external
+CrystalDeposit.isDepositContract (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#143-147) should be declared external
+CrystalDeposit.upgrade (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#147-149) should be declared external
+CrystalDeposit.setContractsMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150-158) should be declared external
+CrystalDeposit.removeContractMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#163-165) should be declared external
+CrystalDeposit.setupMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#168-174) should be declared external
+CrystalDeposit.startGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#199-206) should be declared external
+CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249-272) should be declared external
+CrystalDeposit.getCurrentReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#272-280) should be declared external
+CrystalDeposit.withdrawReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#280-295) should be declared external
+CrystalDeposit.getData (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#312-324) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '' of CryptoEngineerInterface.subVirus (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58) is not in mixedCase
+Parameter '_scope_0' of CryptoEngineerInterface.subVirus (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#58) is not in mixedCase
+Parameter '' of CryptoEngineerInterface.claimPrizePool (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59) is not in mixedCase
+Parameter '_scope_0' of CryptoEngineerInterface.claimPrizePool (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#59) is not in mixedCase
+Parameter '' of CryptoMiningWarInterface.subCrystal (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#65) is not in mixedCase
+Parameter '_scope_0' of CryptoMiningWarInterface.subCrystal (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#65) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.setContractsMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#150) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.removeContractMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#164-165) is not in mixedCase
+Parameter '' of CrystalDeposit.setupMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#168) is not in mixedCase
+Parameter '_miningWarDeadline' of CrystalDeposit.setupMiniGame (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#170) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.setMiningWarInterface (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#174) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.setEngineerInterface (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#184) is not in mixedCase
+Parameter '_value' of CrystalDeposit.share (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#249) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.getCurrentReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#273-274) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.withdrawReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#281) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.updateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#295-296) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.getData (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#312) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325) is not in mixedCase
+Parameter '_round' of CrystalDeposit.calculateReward (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#325) is not in mixedCase
+Parameter '_addr' of CrystalDeposit.getPlayerData (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#342) is not in mixedCase
+Variable 'CrystalDeposit.HALF_TIME' (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#76-77) is not in mixedCase
+Variable 'CrystalDeposit.MIN_TIME_WITH_DEADLINE' (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#77-78) is not in mixedCase
+Variable 'CrystalDeposit.Engineer' (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#79-81) is not in mixedCase
+Variable 'CrystalDeposit.MiningWar' (/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol#81-82) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x43d2b8827218752ffe5a35cefc3bbe50ca79af47.sol analyzed (5 contracts), 57 result(s) found

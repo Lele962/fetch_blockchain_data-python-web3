@@ -1,0 +1,44 @@
+{
+    "errors": [
+        "EXIT_CODE_3"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "KingOfTheHillCards",
+            "filename": "output/0xd8cd3272d823136ae6874686bc92a51813367d7a.sol",
+            "function": "add",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 23,
+            "message": "KingOfTheHillCards.add (0xd8cd3272d823136ae6874686bc92a51813367d7a.sol#15-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfTheHillCards",
+            "filename": "output/0xd8cd3272d823136ae6874686bc92a51813367d7a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 27,
+            "message": "KingOfTheHillCards.transfer (0xd8cd3272d823136ae6874686bc92a51813367d7a.sol#23-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8cd3272d823136ae6874686bc92a51813367d7a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd8cd3272d823136ae6874686bc92a51813367d7a.sol:\n\t- pragma solidity>=0.4.22<0.6.0 (0xd8cd3272d823136ae6874686bc92a51813367d7a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

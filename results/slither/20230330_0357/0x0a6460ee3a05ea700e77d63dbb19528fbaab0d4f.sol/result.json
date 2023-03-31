@@ -1,0 +1,522 @@
+{
+    "errors": [
+        "EXIT_CODE_55"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "finishMinting",
+            "impact": "Medium",
+            "message": "TokenController.finishMinting (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) does not use the value returned by external calls:\n\t-token.finishMinting() (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 163,
+            "message": "ERC20.totalSupply (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#162-163) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 119,
+            "message": "IERC20.totalSupply (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#117-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 172,
+            "message": "ERC20.balanceOf (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#170-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 121,
+            "message": "IERC20.balanceOf (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#119-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 184,
+            "message": "ERC20.allowance (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#180-184) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 123,
+            "message": "IERC20.allowance (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#121-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 324,
+            "message": "MinterRole.addMinter (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#322-324) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "renounceMinter",
+            "impact": "Informational",
+            "line": 324,
+            "line_end": 329,
+            "message": "MinterRole.renounceMinter (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#324-329) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 370,
+            "message": "PauserRole.addPauser (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#362-370) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PauserRole",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "renouncePauser",
+            "impact": "Informational",
+            "line": 370,
+            "line_end": 371,
+            "message": "PauserRole.renouncePauser (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#370-371) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "paused",
+            "impact": "Informational",
+            "line": 402,
+            "line_end": 407,
+            "message": "Pausable.paused (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#402-407) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 428,
+            "line_end": 429,
+            "message": "Pausable.pause (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#428-429) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 433,
+            "line_end": 434,
+            "message": "Pausable.unpause (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#433-434) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 486,
+            "line_end": 491,
+            "message": "MintableToken.mint (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#486-491) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MintableToken",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 494,
+            "line_end": 497,
+            "message": "MintableToken.finishMinting (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#494-497) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "multiowned",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "getOwners",
+            "impact": "Informational",
+            "line": 719,
+            "line_end": 725,
+            "message": "multiowned.getOwners (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#719-725) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "message": "TokenController.mint (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "message": "TokenController.pause (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "message": "TokenController.unpause (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "message": "TokenController.addMinter (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "addPauser",
+            "impact": "Informational",
+            "message": "TokenController.addPauser (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "message": "TokenController.finishMinting (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol:\n\t- pragma solidity^0.5.6 (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 275,
+            "message": "Function 'ERC20._transfer' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#271-275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 300,
+            "message": "Function 'ERC20._mint' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#288-300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 331,
+            "line_end": 334,
+            "message": "Function 'MinterRole._addMinter' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#331-334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 341,
+            "message": "Function 'MinterRole._removeMinter' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#336-341) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 371,
+            "line_end": 375,
+            "message": "Function 'PauserRole._addPauser' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#371-375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 377,
+            "line_end": 384,
+            "message": "Function 'PauserRole._removePauser' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#377-384) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 925,
+            "message": "Contract 'multiowned' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#532-925) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 607,
+            "message": "Parameter '_owners' of multiowned. (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#607) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 607,
+            "line_end": 608,
+            "message": "Parameter '_required' of multiowned. (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#607-608) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 640,
+            "line_end": 641,
+            "message": "Parameter '_from' of multiowned.changeOwner (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#640-641) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 641,
+            "message": "Parameter '_to' of multiowned.changeOwner (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#641) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 663,
+            "message": "Parameter '_owner' of multiowned.addOwner (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 680,
+            "message": "Parameter '_owner' of multiowned.removeOwner (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#680) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 702,
+            "line_end": 703,
+            "message": "Parameter '_newRequired' of multiowned.changeRequirement (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#702-703) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 731,
+            "message": "Parameter '_addr' of multiowned.isOwner (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#731) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 747,
+            "message": "Parameter '_operation' of multiowned.revoke (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#747) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 768,
+            "message": "Parameter '_operation' of multiowned.hasConfirmed (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#768) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 768,
+            "message": "Parameter '_owner' of multiowned.hasConfirmed (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#768) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 774,
+            "message": "Parameter '_operation' of multiowned.confirmAndCheck (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#774) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 875,
+            "line_end": 876,
+            "message": "Parameter '_operation' of multiowned.isOperationActive (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#875-876) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 887,
+            "message": "Parameter '_operation' of multiowned.assertOperationIsConsistent (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#887) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 897,
+            "line_end": 898,
+            "message": "Constant 'multiowned.c_maxOwners' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#897-898) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 902,
+            "message": "Variable 'multiowned.m_multiOwnedRequired' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#902) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 903,
+            "line_end": 904,
+            "message": "Variable 'multiowned.m_numOwners' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#903-904) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 912,
+            "line_end": 913,
+            "message": "Variable 'multiowned.m_owners' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#912-913) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 917,
+            "line_end": 920,
+            "message": "Variable 'multiowned.m_ownerIndex' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#917-920) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 920,
+            "line_end": 924,
+            "message": "Variable 'multiowned.m_multiOwnedPending' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#920-924) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "line": 924,
+            "message": "Variable 'multiowned.m_multiOwnedPendingIndex' (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol#924) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenAddress' of TokenController. (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_to' of TokenController.mint (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of TokenController.mint (0x0a6460ee3a05ea700e77d63dbb19528fbaab0d4f.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

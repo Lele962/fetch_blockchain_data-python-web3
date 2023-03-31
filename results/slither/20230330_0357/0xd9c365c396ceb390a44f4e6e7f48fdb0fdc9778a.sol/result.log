@@ -1,0 +1,110 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol:
+/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol:174:31: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0xe4ed7E14E961550C0ce7571Df8a5B11deC9F7F52'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+    address public kvtOwner = 0xe4ed7e14e961550c0ce7571df8a5b11dec9f7f52;
+                              ^----------------------------------------^
+
+INFO:Detectors:[93m
+Reentrancy in KvantorSaleToken.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218):
+	External calls:
+	- require(bool)(kvtToken.transfer(msg.sender,_value)) (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#203-205)
+	State variables written after the call(s):
+	- balances (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#205)
+Reentrancy in KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237):
+	External calls:
+	- require(bool)(kvtToken.transfer(_from,_value)) (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)
+	State variables written after the call(s):
+	- allowed (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#235-236)
+	- balances (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in KvantorSaleToken.returnKVTToSomeone (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#306-318):
+	External calls:
+	- require(bool)(kvtToken.transfer(_to,tokens)) (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#314-316)
+	State variables written after the call(s):
+	- balances (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#318)
+	- totalSupply_ (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#318)
+Reentrancy in KvantorSaleToken.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218):
+	External calls:
+	- require(bool)(kvtToken.transfer(msg.sender,_value)) (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#203-205)
+	State variables written after the call(s):
+	- totalSupply_ (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#205)
+Reentrancy in KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237):
+	External calls:
+	- require(bool)(kvtToken.transfer(_from,_value)) (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)
+	State variables written after the call(s):
+	- totalSupply_ (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#228)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+KvantorSaleToken.crowdsaleFinishTime should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#175-177)
+KvantorSaleToken.crowdsaleStartTime should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#175)
+KvantorSaleToken.decimals should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#174)
+KvantorSaleToken.kvtOwner should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#177-179)
+KvantorSaleToken.name should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#171-174)
+KvantorSaleToken.symbol should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#174)
+KvantorSaleToken.wallet should be constant (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#194-195)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Ownable.renounceOwnership (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#42-48) should be declared external
+Ownable.transferOwnership (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#51-56) should be declared external
+KvantorSaleToken.totalSupply (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#358-363) should be declared external
+ERC20.totalSupply (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#139-140) should be declared external
+ERC20.balanceOf (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#140-142) should be declared external
+KvantorSaleToken.balanceOf (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#366-369) should be declared external
+ERC20.allowance (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#142-145) should be declared external
+KvantorSaleToken.allowance (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#381-383) should be declared external
+ERC20.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#145-147) should be declared external
+KvantorSaleToken.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199-218) should be declared external
+ERC20.approve (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#147-151) should be declared external
+KvantorSaleToken.approve (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398-402) should be declared external
+KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#218-237) should be declared external
+ERC20.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#151-157) should be declared external
+KvantorSaleToken.returnKVTToOwner (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#297-306) should be declared external
+KvantorSaleToken.returnKVTToSomeone (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#306-318) should be declared external
+KvantorSaleToken.finishHim (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#319-321) should be declared external
+KvantorSaleToken.setRate (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#321-323) should be declared external
+KvantorSaleToken.setTokenCap (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#323-327) should be declared external
+KvantorSaleToken.increaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#418-424) should be declared external
+KvantorSaleToken.decreaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#439-452) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Ownable.transferOwnership (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#52) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#60-68) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#60-61) is not in mixedCase
+Parameter '_a' of SafeMath.mul (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#76) is not in mixedCase
+Parameter '_b' of SafeMath.mul (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#76) is not in mixedCase
+Parameter '_a' of SafeMath.div (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#93) is not in mixedCase
+Parameter '_b' of SafeMath.div (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#93) is not in mixedCase
+Parameter '_a' of SafeMath.sub (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#105) is not in mixedCase
+Parameter '_b' of SafeMath.sub (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#106-107) is not in mixedCase
+Parameter '_a' of SafeMath.add (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#115-117) is not in mixedCase
+Parameter '_b' of SafeMath.add (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#117-118) is not in mixedCase
+Parameter '_owner' of KvantorSaleToken.balanceOf (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#366) is not in mixedCase
+Parameter '_owner' of KvantorSaleToken.allowance (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#381-382) is not in mixedCase
+Parameter '_spender' of KvantorSaleToken.allowance (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#382) is not in mixedCase
+Parameter '_to' of KvantorSaleToken.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199) is not in mixedCase
+Parameter '_value' of KvantorSaleToken.transfer (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#199) is not in mixedCase
+Parameter '_spender' of KvantorSaleToken.approve (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398) is not in mixedCase
+Parameter '_value' of KvantorSaleToken.approve (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#398) is not in mixedCase
+Parameter '_from' of KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#219) is not in mixedCase
+Parameter '_to' of KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#219-220) is not in mixedCase
+Parameter '_value' of KvantorSaleToken.transferFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#221) is not in mixedCase
+Parameter '_weiAmount' of KvantorSaleToken.calculateTokens (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#239) is not in mixedCase
+Parameter '_beneficiary' of KvantorSaleToken.buyTokens (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#270-271) is not in mixedCase
+Parameter '_to' of KvantorSaleToken.returnKVTToSomeone (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#307) is not in mixedCase
+Parameter '_rate' of KvantorSaleToken.setRate (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#322) is not in mixedCase
+Parameter '_tokenCap' of KvantorSaleToken.setTokenCap (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#324) is not in mixedCase
+Parameter '_spender' of KvantorSaleToken.increaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#419) is not in mixedCase
+Parameter '_addedValue' of KvantorSaleToken.increaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#419) is not in mixedCase
+Parameter '_spender' of KvantorSaleToken.decreaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#439-440) is not in mixedCase
+Parameter '_subtractedValue' of KvantorSaleToken.decreaseApproval (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#441-444) is not in mixedCase
+Function 'KvantorSaleToken._mint' (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#461-468) is not in mixedCase
+Parameter '_account' of KvantorSaleToken._mint (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#461-462) is not in mixedCase
+Parameter '_amount' of KvantorSaleToken._mint (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#462-463) is not in mixedCase
+Function 'KvantorSaleToken._burn' (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#474-482) is not in mixedCase
+Parameter '_account' of KvantorSaleToken._burn (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#475) is not in mixedCase
+Parameter '_amount' of KvantorSaleToken._burn (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol#475-476) is not in mixedCase
+Function 'KvantorSaleToken._burnFrom' (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase
+Parameter '_account' of KvantorSaleToken._burnFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase
+Parameter '_amount' of KvantorSaleToken._burnFrom (/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd9c365c396ceb390a44f4e6e7f48fdb0fdc9778a.sol analyzed (4 contracts), 66 result(s) found

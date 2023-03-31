@@ -1,0 +1,91 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol:
+/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol:498:45: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function validPurchase(address _sender, uint256 _amount, uint256 _token) internal {
+                                            ^-------------^
+/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol:67:5: Warning: Function state mutability can be restricted to view
+    function existManager(address _to) private returns (bool, uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol:498:5: Warning: Function state mutability can be restricted to view
+    function validPurchase(address _sender, uint256 _amount, uint256 _token) internal {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+ERC20 (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#141-146) has incorrect ERC20 function interface(s):
+	-transfer (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#143-145)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[92m
+HenaSale.buyToken.isWithdrawable (local variable @ /sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#542-543) shadows:
+	- Withdrawable.isWithdrawable (function @ /sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#136-141)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+HenaSale.oneEther should be constant (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#434-438)
+HenaSale.tokenDecimal should be constant (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#430-433)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#41-51) should be declared external
+Manager.getManagers (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#63-67) should be declared external
+Pausable.pause (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#106-110) should be declared external
+Pausable.unpause (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#112-118) should be declared external
+Withdrawable.pauseWithdraw (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#125-129) should be declared external
+Withdrawable.unpauseWithdraw (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#130-136) should be declared external
+SaleRecord.getPropertyKeyCount (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#190-192) should be declared external
+SaleRecord.getPropertyInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#192-230) should be declared external
+SaleRecord.getPropertyValue (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#230-248) should be declared external
+PageViewRecord.setPage (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#261-263) should be declared external
+PageViewRecord.getPageItemValue (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#271-300) should be declared external
+PageViewRecord.getPageItemInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#311-351) should be declared external
+PageViewRecord.getPageNotWithdrawCount (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#352-366) should be declared external
+PageViewRecord.getPageNotWithdrawInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#366-425) should be declared external
+HenaSale.withdrawEther (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#556-560) should be declared external
+HenaSale.withdrawToken (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#560-564) should be declared external
+HenaSale.setTime (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#565-566) should be declared external
+HenaSale.setPriceTokenEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#566-587) should be declared external
+HenaSale.setEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#590-591) should be declared external
+HenaSale.setCapMaximumToken (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#592-596) should be declared external
+HenaSale.setWithdrawTokens (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#596-604) should be declared external
+HenaSale.getRemainWithdrawEth (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#605-607) should be declared external
+HenaSale.getPriceTokenEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#607-613) should be declared external
+HenaSale.getCapToken (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#613-614) should be declared external
+HenaSale.getTokenToEth (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#614-627) should be declared external
+HenaSale.getTokenInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) should be declared external
+HenaSale.getTimeICO (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_to' of Manager.existManager (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#68) is not in mixedCase
+Parameter '_to' of Manager.addManager (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#77-78) is not in mixedCase
+Struct 'SaleRecord.sProperty' (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#148-156) is not in CapWords
+Parameter '_sender' of SaleRecord.recordPropertyWithdraw (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#158) is not in mixedCase
+Parameter '_token' of SaleRecord.recordPropertyWithdraw (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#158) is not in mixedCase
+Parameter '_sender' of SaleRecord.recordProperty (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166) is not in mixedCase
+Parameter '_amount' of SaleRecord.recordProperty (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166) is not in mixedCase
+Parameter '_token' of SaleRecord.recordProperty (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#166-167) is not in mixedCase
+Parameter '_priceToken' of SaleRecord.recordProperty (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#167) is not in mixedCase
+Parameter '_withdraw' of SaleRecord.recordProperty (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#167-168) is not in mixedCase
+Parameter '_addr' of SaleRecord.contains (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#179-180) is not in mixedCase
+Parameter '_addr' of SaleRecord.getPropertyInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#192-193) is not in mixedCase
+Parameter '_addr' of SaleRecord.getPropertyValue (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#230-232) is not in mixedCase
+Parameter '_itemCount' of PageViewRecord.setPage (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#261-262) is not in mixedCase
+Parameter '_pageIndex' of PageViewRecord.getPageItemValue (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#271-272) is not in mixedCase
+Parameter '_pageIndex' of PageViewRecord.getPageItemInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#311) is not in mixedCase
+Parameter '_pageIndex' of PageViewRecord.getPageNotWithdrawInfo (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#367) is not in mixedCase
+Parameter '_tokenAddress' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#461-463) is not in mixedCase
+Parameter '_priceTokenUSD' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#463-465) is not in mixedCase
+Parameter '_priceTokenSaleCount' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#465-467) is not in mixedCase
+Parameter '_priceEthUSD' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#467-469) is not in mixedCase
+Parameter '_capMaximumToken' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#471) is not in mixedCase
+Parameter '_timeEnd' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#472-473) is not in mixedCase
+Parameter '_managers' of HenaSale. (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#473-475) is not in mixedCase
+Parameter '_sender' of HenaSale.validPurchase (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#514-515) is not in mixedCase
+Parameter '_token' of HenaSale.validPurchase (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#515) is not in mixedCase
+Parameter '_amountToken' of HenaSale.withdrawToken (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#561-562) is not in mixedCase
+Parameter '_timeEnd' of HenaSale.setTime (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#565) is not in mixedCase
+Parameter '_priceTokenUSD' of HenaSale.setPriceTokenEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#566-568) is not in mixedCase
+Parameter '_priceTokenSaleCount' of HenaSale.setPriceTokenEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#568-569) is not in mixedCase
+Parameter '_priceEthUSD' of HenaSale.setPriceTokenEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#569-570) is not in mixedCase
+Parameter '_priceEthUSD' of HenaSale.setEthUSD (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#590) is not in mixedCase
+Parameter '_capMaximumToken' of HenaSale.setCapMaximumToken (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#594-595) is not in mixedCase
+Parameter '_user' of HenaSale.setWithdrawTokens (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#599) is not in mixedCase
+Parameter '_token' of HenaSale.setWithdrawTokens (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol#599) is not in mixedCase
+Parameter '_priceUSD' of HenaSale.getOneTokenToEth (/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x1c2f44ac1b7a837edbb3f32b81832f0eed0151ef.sol analyzed (9 contracts), 66 result(s) found

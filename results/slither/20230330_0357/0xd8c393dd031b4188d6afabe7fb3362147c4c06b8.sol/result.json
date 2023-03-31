@@ -1,0 +1,314 @@
+{
+    "errors": [
+        "EXIT_CODE_33"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 26,
+            "line_end": 138,
+            "message": "TokenERC20 (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#26-138) has incorrect ERC20 function interface(s):\n\t-transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#86-92)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 184,
+            "line_end": 186,
+            "message": "Contract locking ether found in 0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol:\n\tContract ATN has payable functions:\n\t - fallback (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#184-186)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 32,
+            "message": "TokenERC20.decimals should be constant (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#32)\nTokenERC20.name should be constant (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#29-30)\nTokenERC20.symbol should be constant (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#30-31)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 26,
+            "message": "Owned.transferOwnership (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#21-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 92,
+            "message": "TokenERC20.transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#86-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 108,
+            "message": "TokenERC20.transferFrom (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#98-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 124,
+            "message": "TokenERC20.approve (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#114-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 170,
+            "message": "MyAdvancedToken.mintToken (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#162-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 184,
+            "message": "MyAdvancedToken.freezeAccount (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#176-184) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 186,
+            "message": "MyAdvancedToken.fallback (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#184-186) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ATN",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "function": "lockTokenDays",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 227,
+            "message": "ATN.lockTokenDays (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#222-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 80,
+            "message": "Function 'TokenERC20._transfer' (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#59-80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_from' of TokenERC20._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_to' of TokenERC20._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_value' of TokenERC20._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 89,
+            "message": "Parameter '_to' of TokenERC20.transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#87-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_value' of TokenERC20.transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_from' of TokenERC20.transferFrom (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_to' of TokenERC20.transferFrom (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_value' of TokenERC20.transferFrom (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 115,
+            "message": "Parameter '_spender' of TokenERC20.approve (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#114-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Parameter '_value' of TokenERC20.approve (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 127,
+            "message": "Parameter '_value' of TokenERC20.burn (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 158,
+            "message": "Function 'MyAdvancedToken._transfer' (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#151-158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_from' of MyAdvancedToken._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_to' of MyAdvancedToken._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_value' of MyAdvancedToken._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 209,
+            "message": "Function 'ATN._transfer' (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#201-209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 201,
+            "message": "Parameter '_from' of ATN._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#201) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 201,
+            "message": "Parameter '_to' of ATN._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#201) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 201,
+            "message": "Parameter '_value' of ATN._transfer (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#201) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_value' of ATN.burn (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 224,
+            "message": "Parameter '_days' of ATN.lockTokenDays (0xd8c393dd031b4188d6afabe7fb3362147c4c06b8.sol#223-224) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

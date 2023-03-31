@@ -1,0 +1,665 @@
+{
+    "errors": [
+        "EXIT_CODE_67"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "totalSupply",
+            "impact": "High",
+            "line": 227,
+            "line_end": 228,
+            "message": "BasicToken.totalSupply_ (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#227-228) is never initialized. It is used in:\n\t- totalSupply (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#229-231)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "High",
+            "line": 182,
+            "message": "ICrowdsaleProcessor.endTimestamp (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#182) is never initialized. It is used in:\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintTokenRewards",
+            "impact": "Medium",
+            "line": 452,
+            "line_end": 464,
+            "message": "Bridge.mintTokenRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#452-464) does not use the value returned by external calls:\n\t-token.transfer(_contract,_amount) (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#461-462)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "start",
+            "impact": "Low",
+            "line": 319,
+            "line_end": 355,
+            "message": "BasicCrowdsale.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#319-355) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(_startTimestamp >= block.timestamp) (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#331-333)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "isFailed",
+            "impact": "Low",
+            "line": 359,
+            "line_end": 373,
+            "message": "BasicCrowdsale.isFailed (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#359-373) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (started && block.timestamp >= endTimestamp && totalCollected < minimalGoal) (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#362-373)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "isActive",
+            "impact": "Low",
+            "line": 378,
+            "line_end": 389,
+            "message": "BasicCrowdsale.isActive (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#378-389) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (started && totalCollected < hardCap && block.timestamp >= startTimestamp && block.timestamp < endTimestamp) (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#380-389)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "isSuccessful",
+            "impact": "Low",
+            "line": 396,
+            "line_end": 413,
+            "message": "BasicCrowdsale.isSuccessful (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#396-413) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (totalCollected >= hardCap || (block.timestamp >= endTimestamp && totalCollected >= minimalGoal)) (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#398-412)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 228,
+            "message": "BasicToken.totalSupply_ should be constant (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#227-228)\nIWingsController.ethRewardPart should be constant (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#70-72)\nIWingsController.tokenRewardPart should be constant (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#72-75)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "HasManager",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "transferManager",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 60,
+            "message": "HasManager.transferManager (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#53-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 231,
+            "message": "BasicToken.totalSupply (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#229-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 61,
+            "message": "ERC20Basic.totalSupply (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "ERC20Basic.balanceOf (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#61-62) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 263,
+            "message": "BasicToken.balanceOf (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#259-263) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 63,
+            "message": "ERC20Basic.transfer (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#62-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 247,
+            "message": "BasicToken.transfer (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#236-247) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 108,
+            "message": "Ownable.transferOwnership (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#99-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 185,
+            "message": "ICrowdsaleProcessor.deposit (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "getToken",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 445,
+            "message": "Bridge.getToken (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#442-445) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "getToken",
+            "impact": "Informational",
+            "line": 186,
+            "line_end": 188,
+            "message": "ICrowdsaleProcessor.getToken (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#186-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintETHRewards",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 307,
+            "message": "BasicCrowdsale.mintETHRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#295-307) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintETHRewards",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 191,
+            "message": "ICrowdsaleProcessor.mintETHRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#189-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintTokenRewards",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 194,
+            "message": "ICrowdsaleProcessor.mintTokenRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#192-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintTokenRewards",
+            "impact": "Informational",
+            "line": 452,
+            "line_end": 464,
+            "message": "Bridge.mintTokenRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#452-464) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "releaseTokens",
+            "impact": "Informational",
+            "line": 464,
+            "line_end": 466,
+            "message": "Bridge.releaseTokens (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#464-466) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "releaseTokens",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 196,
+            "message": "ICrowdsaleProcessor.releaseTokens (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#195-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "stop",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 201,
+            "message": "ICrowdsaleProcessor.stop (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#200-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "stop",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 315,
+            "message": "BasicCrowdsale.stop (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#307-315) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "start",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 355,
+            "message": "BasicCrowdsale.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#319-355) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "start",
+            "impact": "Informational",
+            "line": 495,
+            "line_end": 519,
+            "message": "Bridge.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#495-519) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICrowdsaleProcessor",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "start",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 206,
+            "message": "ICrowdsaleProcessor.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#202-206) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 470,
+            "line_end": 471,
+            "message": "Bridge.fallback (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#470-471) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "notifySale",
+            "impact": "Informational",
+            "line": 475,
+            "line_end": 490,
+            "message": "Bridge.notifySale (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#475-490) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "finish",
+            "impact": "Informational",
+            "line": 522,
+            "line_end": 524,
+            "message": "Bridge.finish (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#522-524) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "calculateRewards",
+            "impact": "Informational",
+            "line": 533,
+            "line_end": 539,
+            "message": "Bridge.calculateRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#533-539) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Bridge",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "changeToken",
+            "impact": "Informational",
+            "message": "Bridge.changeToken (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol:\n\t- pragma solidity^0.4.13 (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicCrowdsale",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "function": "mintETHRewards",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 307,
+            "message": "Low level call in BasicCrowdsale.mintETHRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#295-307):\n\t-require(bool)(_contract.call.value(_amount)()) 0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#304-307\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_newManager' of HasManager.transferManager (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 89,
+            "message": "Function 'Ownable.Ownable' (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#87-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 259,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 236,
+            "message": "Parameter '_to' of BasicToken.transfer (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 237,
+            "message": "Parameter '_value' of BasicToken.transfer (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#236-237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 267,
+            "line_end": 269,
+            "message": "Parameter '_name' of DefaultToken. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#267-269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 269,
+            "message": "Parameter '_symbol' of DefaultToken. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 269,
+            "message": "Parameter '_decimals' of DefaultToken. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 279,
+            "line_end": 283,
+            "message": "Event 'BasicCrowdsale.CROWDSALE_START' (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#279-283) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 298,
+            "message": "Parameter '_contract' of BasicCrowdsale.mintETHRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#298) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 298,
+            "line_end": 299,
+            "message": "Parameter '_amount' of BasicCrowdsale.mintETHRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#298-299) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_startTimestamp' of BasicCrowdsale.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 321,
+            "line_end": 322,
+            "message": "Parameter '_endTimestamp' of BasicCrowdsale.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#321-322) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 322,
+            "message": "Parameter '_fundingAddress' of BasicCrowdsale.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#322) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 288,
+            "message": "Function 'BasicCrowdsale.BasicCrowdsale' (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#285-288) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 285,
+            "message": "Parameter '_owner' of BasicCrowdsale.BasicCrowdsale (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#285) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 286,
+            "message": "Parameter '_manager' of BasicCrowdsale.BasicCrowdsale (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#285-286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 415,
+            "line_end": 417,
+            "message": "Event 'Bridge.CUSTOM_CROWDSALE_TOKEN_ADDED' (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#415-417) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 417,
+            "line_end": 421,
+            "message": "Event 'Bridge.CUSTOM_CROWDSALE_FINISH' (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#417-421) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 453,
+            "message": "Parameter '_contract' of Bridge.mintTokenRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#453) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 453,
+            "line_end": 456,
+            "message": "Parameter '_amount' of Bridge.mintTokenRewards (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#453-456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 498,
+            "line_end": 500,
+            "message": "Parameter '_startTimestamp' of Bridge.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#498-500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 501,
+            "line_end": 502,
+            "message": "Parameter '_endTimestamp' of Bridge.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#501-502) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 503,
+            "line_end": 506,
+            "message": "Parameter '_fundingAddress' of Bridge.start (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#503-506) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 429,
+            "line_end": 432,
+            "message": "Parameter '_minimalGoal' of Bridge. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#429-432) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 432,
+            "message": "Parameter '_hardCap' of Bridge. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#432) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 432,
+            "message": "Parameter '_token' of Bridge. (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#432) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 476,
+            "line_end": 477,
+            "message": "Parameter '_ethAmount' of Bridge.notifySale (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#476-477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "line": 477,
+            "line_end": 478,
+            "message": "Parameter '_tokensAmount' of Bridge.notifySale (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol#477-478) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newToken' of Bridge.changeToken (0x1b85e0f97c5b3f5f815475f67d9df162cf35d3dc.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,1316 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_RECEIVED_SIGNAL_16"
+    ],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "core",
+            "impact": "High",
+            "line": 974,
+            "line_end": 1090,
+            "message": "Reentrancy in F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#974-1090):\n\tExternal calls:\n\t- _eventData_ = distributeExternal(_rID,_pID,_eth,_affID,_team,_eventData_) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1077-1079)\n\tState variables written after the call(s):\n\t- airDropPot_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1079-1082)\n\t- plyrRnds_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1079-1082)\n\t- round_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1079-1082)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Medium",
+            "line": 1827,
+            "line_end": 1926,
+            "message": "NameFilter.nameFilter (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1827-1926) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXaddr",
+            "impact": "Medium",
+            "line": 303,
+            "line_end": 346,
+            "message": "Reentrancy in F3DClick.buyXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#303-346):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#311-313)\n\tState variables written after the call(s):\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#339-340)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXid",
+            "impact": "Medium",
+            "line": 270,
+            "line_end": 303,
+            "message": "Reentrancy in F3DClick.buyXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#270-303):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#277-279)\n\tState variables written after the call(s):\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#297-298)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXname",
+            "impact": "Medium",
+            "line": 346,
+            "line_end": 383,
+            "message": "Reentrancy in F3DClick.buyXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#346-383):\n\tExternal calls:\n\t- _eventData_ = determinePID(_eventData_) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#352-355)\n\tState variables written after the call(s):\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#380)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "determinePID",
+            "impact": "Medium",
+            "line": 1194,
+            "line_end": 1233,
+            "message": "Reentrancy in F3DClick.determinePID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1194-1233):\n\tExternal calls:\n\t- _pID = PlayerBook.getPlayerID(msg.sender) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1210)\n\t- _name = PlayerBook.getPlayerName(_pID) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1211-1212)\n\t- _laff = PlayerBook.getPlayerLAff(_pID) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1212-1214)\n\tState variables written after the call(s):\n\t- pIDxAddr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1216)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 539,
+            "line_end": 541,
+            "message": "_eventData_ in F3DClick.withdraw (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#539-541) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "distributeExternal",
+            "impact": "Medium",
+            "line": 1408,
+            "message": "_p3d in F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1408) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "core",
+            "impact": "Medium",
+            "line": 1017,
+            "message": "_prize in F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1017) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXaddr",
+            "impact": "Medium",
+            "line": 439,
+            "line_end": 440,
+            "message": "_eventData_ in F3DClick.reLoadXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#439-440) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXid",
+            "impact": "Medium",
+            "line": 406,
+            "message": "_eventData_ in F3DClick.reLoadXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#406) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXname",
+            "impact": "Medium",
+            "line": 480,
+            "line_end": 481,
+            "message": "_eventData_ in F3DClick.reLoadXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#480-481) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "determinePID",
+            "impact": "Low",
+            "line": 1194,
+            "line_end": 1233,
+            "message": "Reentrancy in F3DClick.determinePID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1194-1233):\n\tExternal calls:\n\t- _pID = PlayerBook.getPlayerID(msg.sender) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1210)\n\t- _name = PlayerBook.getPlayerName(_pID) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1211-1212)\n\t- _laff = PlayerBook.getPlayerLAff(_pID) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1212-1214)\n\tState variables written after the call(s):\n\t- pIDxName_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1218-1219)\n\t- plyrNames_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1221-1222)\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1216-1217)\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1219-1221)\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1225)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "distributeExternal",
+            "impact": "Low",
+            "line": 1394,
+            "line_end": 1458,
+            "message": "Reentrancy in F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1394-1458):\n\tExternal calls:\n\t- ! address(coin_base).call.value(_com)() (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1408-1431)\n\tState variables written after the call(s):\n\t- plyr_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1439-1440)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "distributeExternal",
+            "impact": "Low",
+            "line": 1394,
+            "line_end": 1458,
+            "message": "Reentrancy in F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1394-1458):\n\tExternal calls:\n\t- ! address(coin_base).call.value(_com)() (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1408-1431)\n\tExternal calls sending eth:\n\t- ! address(coin_base).call.value(_com)() (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1408-1431)\n\t- coin_base.transfer(_p3d.sub(_potAmount)) (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1450-1451)\n\tState variables written after the call(s):\n\t- round_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1451-1454)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "airdrop",
+            "impact": "Low",
+            "line": 1379,
+            "line_end": 1394,
+            "message": "F3DClick.airdrop (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1379-1394) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (seed - ((seed / 1000) * 1000)) < airDropTracker_ (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1392-1394)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "line": 1827,
+            "line_end": 1926,
+            "message": "NameFilter.nameFilter uses assembly (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1827-1926)\n\t- 0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 137,
+            "message": "F3DClick.admin should be constant (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#135-137)\nF3DClick.coin_base should be constant (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#137-138)\nF3DClick.rndExtra_ should be constant (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#139-140)\nF3DClick.rndGap_ should be constant (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#140)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 245,
+            "line_end": 259,
+            "message": "F3DClick.fallback (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#245-259) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXid",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 303,
+            "message": "F3DClick.buyXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#270-303) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXaddr",
+            "impact": "Informational",
+            "line": 303,
+            "line_end": 346,
+            "message": "F3DClick.buyXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#303-346) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "buyXname",
+            "impact": "Informational",
+            "line": 346,
+            "line_end": 383,
+            "message": "F3DClick.buyXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#346-383) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXid",
+            "impact": "Informational",
+            "line": 400,
+            "line_end": 433,
+            "message": "F3DClick.reLoadXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#400-433) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXaddr",
+            "impact": "Informational",
+            "line": 433,
+            "line_end": 473,
+            "message": "F3DClick.reLoadXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#433-473) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "reLoadXname",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 520,
+            "message": "F3DClick.reLoadXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#473-520) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 522,
+            "line_end": 581,
+            "message": "F3DClick.withdraw (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#522-581) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "registerNameXID",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 627,
+            "message": "F3DClick.registerNameXID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#611-627) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "registerNameXaddr",
+            "impact": "Informational",
+            "line": 627,
+            "line_end": 642,
+            "message": "F3DClick.registerNameXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#627-642) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "registerNameXname",
+            "impact": "Informational",
+            "line": 642,
+            "line_end": 662,
+            "message": "F3DClick.registerNameXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#642-662) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "getBuyPrice",
+            "impact": "Informational",
+            "line": 671,
+            "line_end": 696,
+            "message": "F3DClick.getBuyPrice (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#671-696) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "getTimeLeft",
+            "impact": "Informational",
+            "line": 702,
+            "line_end": 717,
+            "message": "F3DClick.getTimeLeft (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#702-717) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "getPlayerVaults",
+            "impact": "Informational",
+            "line": 719,
+            "line_end": 763,
+            "message": "F3DClick.getPlayerVaults (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#719-763) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Informational",
+            "line": 791,
+            "line_end": 827,
+            "message": "F3DClick.getCurrentRoundInfo (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#791-827) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "getPlayerInfoByAddress",
+            "impact": "Informational",
+            "line": 838,
+            "line_end": 856,
+            "message": "F3DClick.getPlayerInfoByAddress (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#838-856) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "calcKeysReceived",
+            "impact": "Informational",
+            "line": 1116,
+            "line_end": 1127,
+            "message": "F3DClick.calcKeysReceived (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1116-1127) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "iWantXKeys",
+            "impact": "Informational",
+            "line": 1133,
+            "line_end": 1151,
+            "message": "F3DClick.iWantXKeys (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1133-1151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 1602,
+            "line_end": 1613,
+            "message": "F3DClick.activate (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1602-1613) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "F3DClick",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "function": "distributeExternal",
+            "impact": "Informational",
+            "line": 1394,
+            "line_end": 1458,
+            "message": "Low level call in F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1394-1458):\n\t-! address(coin_base).call.value(_com)() 0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1408-1431\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 18,
+            "message": "Event 'F3Devents.onNewName' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#5-18) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 37,
+            "message": "Event 'F3Devents.onEndTx' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#20-37) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 47,
+            "message": "Event 'F3Devents.onWithdraw' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#40-47) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 63,
+            "message": "Event 'F3Devents.onWithdrawAndDistribute' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#50-63) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 80,
+            "message": "Event 'F3Devents.onBuyAndDistribute' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#68-80) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 99,
+            "message": "Event 'F3Devents.onReLoadAndDistribute' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#85-99) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 112,
+            "message": "Event 'F3Devents.onAffiliatePayout' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#100-112) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 117,
+            "message": "Event 'F3Devents.onPotSwapDeposit' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#116-117) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 126,
+            "message": "Contract 'modularShort' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#125-126) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 270,
+            "message": "Parameter '_affCode' of F3DClick.buyXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 270,
+            "message": "Parameter '_team' of F3DClick.buyXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 303,
+            "line_end": 305,
+            "message": "Parameter '_affCode' of F3DClick.buyXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#303-305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_team' of F3DClick.buyXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 347,
+            "message": "Parameter '_affCode' of F3DClick.buyXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 347,
+            "message": "Parameter '_team' of F3DClick.buyXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#347) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 400,
+            "message": "Parameter '_affCode' of F3DClick.reLoadXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#400) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 400,
+            "message": "Parameter '_team' of F3DClick.reLoadXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#400) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 400,
+            "line_end": 401,
+            "message": "Parameter '_eth' of F3DClick.reLoadXid (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#400-401) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 433,
+            "message": "Parameter '_affCode' of F3DClick.reLoadXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 433,
+            "line_end": 434,
+            "message": "Parameter '_team' of F3DClick.reLoadXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#433-434) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 434,
+            "message": "Parameter '_eth' of F3DClick.reLoadXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#434) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_affCode' of F3DClick.reLoadXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_team' of F3DClick.reLoadXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_eth' of F3DClick.reLoadXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 611,
+            "message": "Parameter '_nameString' of F3DClick.registerNameXID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#611) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 612,
+            "message": "Parameter '_affCode' of F3DClick.registerNameXID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#611-612) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 612,
+            "message": "Parameter '_all' of F3DClick.registerNameXID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#612) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 627,
+            "message": "Parameter '_nameString' of F3DClick.registerNameXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#627) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 627,
+            "line_end": 628,
+            "message": "Parameter '_affCode' of F3DClick.registerNameXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#627-628) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 628,
+            "message": "Parameter '_all' of F3DClick.registerNameXaddr (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#628) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 642,
+            "line_end": 643,
+            "message": "Parameter '_nameString' of F3DClick.registerNameXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#642-643) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 643,
+            "message": "Parameter '_affCode' of F3DClick.registerNameXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#643) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 643,
+            "line_end": 644,
+            "message": "Parameter '_all' of F3DClick.registerNameXname (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#643-644) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 720,
+            "message": "Parameter '_pID' of F3DClick.getPlayerVaults (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#720) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 765,
+            "message": "Parameter '_pID' of F3DClick.getPlayerVaultsHelper (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#765) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 765,
+            "line_end": 766,
+            "message": "Parameter '_rID' of F3DClick.getPlayerVaultsHelper (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#765-766) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 838,
+            "message": "Parameter '_addr' of F3DClick.getPlayerInfoByAddress (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#838) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 870,
+            "message": "Parameter '_pID' of F3DClick.buyCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#870) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 870,
+            "message": "Parameter '_affID' of F3DClick.buyCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#870) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 871,
+            "message": "Parameter '_team' of F3DClick.buyCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#871) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 871,
+            "message": "Parameter '_eventData_' of F3DClick.buyCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#871) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 921,
+            "message": "Parameter '_pID' of F3DClick.reLoadCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#921) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 921,
+            "line_end": 922,
+            "message": "Parameter '_affID' of F3DClick.reLoadCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#921-922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_team' of F3DClick.reLoadCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_eth' of F3DClick.reLoadCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 922,
+            "line_end": 923,
+            "message": "Parameter '_eventData_' of F3DClick.reLoadCore (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#922-923) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 974,
+            "message": "Parameter '_rID' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#974) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 974,
+            "line_end": 975,
+            "message": "Parameter '_pID' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#974-975) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 975,
+            "message": "Parameter '_eth' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#975) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 975,
+            "message": "Parameter '_affID' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#975) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 975,
+            "line_end": 976,
+            "message": "Parameter '_team' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#975-976) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 976,
+            "line_end": 979,
+            "message": "Parameter '_eventData_' of F3DClick.core (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#976-979) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1100,
+            "message": "Parameter '_pID' of F3DClick.calcUnMaskedEarnings (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1100,
+            "message": "Parameter '_rIDlast' of F3DClick.calcUnMaskedEarnings (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1116,
+            "message": "Parameter '_rID' of F3DClick.calcKeysReceived (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1116,
+            "line_end": 1117,
+            "message": "Parameter '_eth' of F3DClick.calcKeysReceived (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1116-1117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1133,
+            "line_end": 1134,
+            "message": "Parameter '_keys' of F3DClick.iWantXKeys (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1133-1134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1160,
+            "message": "Parameter '_pID' of F3DClick.receivePlayerInfo (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1160,
+            "message": "Parameter '_addr' of F3DClick.receivePlayerInfo (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1160,
+            "message": "Parameter '_name' of F3DClick.receivePlayerInfo (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1160,
+            "message": "Parameter '_laff' of F3DClick.receivePlayerInfo (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1181,
+            "message": "Parameter '_pID' of F3DClick.receivePlayerNameList (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1181,
+            "message": "Parameter '_name' of F3DClick.receivePlayerNameList (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1195,
+            "line_end": 1197,
+            "message": "Parameter '_eventData_' of F3DClick.determinePID (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1195-1197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1238,
+            "message": "Parameter '_team' of F3DClick.verifyTeam (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1249,
+            "line_end": 1250,
+            "message": "Parameter '_pID' of F3DClick.managePlayer (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1249-1250) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1250,
+            "line_end": 1251,
+            "message": "Parameter '_eventData_' of F3DClick.managePlayer (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1250-1251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1268,
+            "line_end": 1269,
+            "message": "Parameter '_eventData_' of F3DClick.endRound (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1268-1269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1338,
+            "message": "Parameter '_pID' of F3DClick.updateGenVault (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1338) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1338,
+            "line_end": 1339,
+            "message": "Parameter '_rIDlast' of F3DClick.updateGenVault (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1338-1339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1356,
+            "message": "Parameter '_keys' of F3DClick.updateTimer (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1356,
+            "line_end": 1357,
+            "message": "Parameter '_rID' of F3DClick.updateTimer (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1356-1357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1395,
+            "line_end": 1396,
+            "message": "Parameter '_rID' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1395-1396) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1396,
+            "message": "Parameter '_pID' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1396) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1396,
+            "line_end": 1397,
+            "message": "Parameter '_eth' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1396-1397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1397,
+            "line_end": 1399,
+            "message": "Parameter '_affID' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1397-1399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1399,
+            "message": "Parameter '_team' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1400,
+            "message": "Parameter '_eventData_' of F3DClick.distributeExternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1400) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "message": "Parameter '_rID' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "message": "Parameter '_pID' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "message": "Parameter '_eth' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "message": "Parameter '_team' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "message": "Parameter '_keys' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1473,
+            "line_end": 1474,
+            "message": "Parameter '_eventData_' of F3DClick.distributeInternal (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1473-1474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1498,
+            "line_end": 1500,
+            "message": "Parameter '_rID' of F3DClick.updateMasks (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1498-1500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1500,
+            "message": "Parameter '_pID' of F3DClick.updateMasks (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1500,
+            "message": "Parameter '_gen' of F3DClick.updateMasks (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1500,
+            "line_end": 1501,
+            "message": "Parameter '_keys' of F3DClick.updateMasks (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1500-1501) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1546,
+            "message": "Parameter '_pID' of F3DClick.withdrawEarnings (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1546) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1558,
+            "line_end": 1561,
+            "message": "Parameter '_pID' of F3DClick.endTx (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1558-1561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1561,
+            "message": "Parameter '_team' of F3DClick.endTx (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1561) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1561,
+            "line_end": 1562,
+            "message": "Parameter '_eth' of F3DClick.endTx (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1561-1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1562,
+            "message": "Parameter '_keys' of F3DClick.endTx (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1562,
+            "message": "Parameter '_eventData_' of F3DClick.endTx (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 132,
+            "message": "Constant 'F3DClick.PlayerBook' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#130-132) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "Variable 'F3DClick.coin_base' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#137-138) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Constant 'F3DClick.rndInit_' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#141) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 142,
+            "message": "Constant 'F3DClick.rndInc_' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#142) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 144,
+            "message": "Constant 'F3DClick.rndMax_' (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#143-144) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1711,
+            "line_end": 1712,
+            "message": "Parameter '_curEth' of F3DKeysCalcShort.keysRec (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1711-1712) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1712,
+            "message": "Parameter '_newEth' of F3DKeysCalcShort.keysRec (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1712) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1719,
+            "message": "Parameter '_curKeys' of F3DKeysCalcShort.ethRec (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1719) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1719,
+            "line_end": 1720,
+            "message": "Parameter '_sellKeys' of F3DKeysCalcShort.ethRec (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1719-1720) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1722,
+            "message": "Parameter '_eth' of F3DKeysCalcShort.keys (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1722) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1733,
+            "message": "Parameter '_keys' of F3DKeysCalcShort.eth (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1733) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol",
+            "impact": "Informational",
+            "line": 1828,
+            "message": "Parameter '_input' of NameFilter.nameFilter (0x0a3ed956f14d3c725f2a04117e2f25b12dd3dec3.sol#1828) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

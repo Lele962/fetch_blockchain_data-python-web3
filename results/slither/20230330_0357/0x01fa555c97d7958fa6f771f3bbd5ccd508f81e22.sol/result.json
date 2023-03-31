@@ -1,0 +1,858 @@
+{
+    "errors": [
+        "EXIT_CODE_86"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Medium",
+            "line": 450,
+            "line_end": 491,
+            "message": "ECRecovery.recover (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#450-491) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CivilTokenController",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "constructor",
+            "impact": "Medium",
+            "line": 864,
+            "line_end": 874,
+            "message": "CivilTokenController.constructor (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#864-874) does not use the value returned by external calls:\n\t-messagesAndCodes.addMessage(SUCCESS_CODE,SUCCESS_MESSAGE) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#864-865)\n\t-messagesAndCodes.addMessage(MUST_BE_A_CIVILIAN_CODE,MUST_BE_A_CIVILIAN_ERROR) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#866-868)\n\t-messagesAndCodes.addMessage(MUST_BE_UNLOCKED_CODE,MUST_BE_UNLOCKED_ERROR) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#868-870)\n\t-messagesAndCodes.addMessage(MUST_BE_VERIFIED_CODE,MUST_BE_VERIFIED_ERROR) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#870-873)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 1228,
+            "message": "ERC20Detailed.constructor.name (local variable @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1228) shadows:\n\t- ERC20Detailed.name (function @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1236-1237)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "symbol",
+            "impact": "Low",
+            "line": 1228,
+            "message": "ERC20Detailed.constructor.symbol (local variable @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1228) shadows:\n\t- ERC20Detailed.symbol (function @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1239-1242)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "decimals",
+            "impact": "Low",
+            "line": 1228,
+            "message": "ERC20Detailed.constructor.decimals (local variable @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1228) shadows:\n\t- ERC20Detailed.decimals (function @ 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1242-1246)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NewsroomFactory",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "create",
+            "impact": "Low",
+            "line": 827,
+            "line_end": 838,
+            "message": "Reentrancy in NewsroomFactory.create (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#827-838):\n\tExternal calls:\n\t- wallet = multisigFactory.create(initialOwners,initialRequired) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#832-834)\n\t- newsroom.addEditor(msg.sender) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#835-837)\n\t- newsroom.transferOwnership(wallet) (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#837)\n\tState variables written after the call(s):\n\t- instantiations (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#838)\n\t- isInstantiation (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#838)\n\t- multisigNewsrooms (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#838)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ECRecovery",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "recover",
+            "impact": "Informational",
+            "line": 450,
+            "line_end": 491,
+            "message": "ECRecovery.recover uses assembly (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#450-491)\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#467-478\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Different versions of Solidity is used in 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol:\n\t- Version used: ['^0.4.19', '^0.4.23', '^0.4.24']\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#3-5 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#74 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#112 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#194 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#213-214 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#320-322 declares pragma solidity^0.4.19\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#363 declares pragma solidity^0.4.19\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#365 declares pragma solidity^0.4.19\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#430 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#504 declares pragma solidity^0.4.19\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#795-796 declares pragma solidity^0.4.19\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#841 declares pragma solidity^0.4.23\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#845 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#934 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#961-964 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1021 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1216-1218 declares pragma solidity^0.4.24\n\t- 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1248-1249 declares pragma solidity^0.4.24\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 50,
+            "message": "Ownable.renounceOwnership (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#44-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 58,
+            "message": "Ownable.transferOwnership (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#53-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Managed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addManager",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 102,
+            "message": "Managed.addManager (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#98-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Managed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeManager",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 111,
+            "message": "Managed.removeManager (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#102-111) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addToCore",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 131,
+            "message": "ManagedWhitelist.addToCore (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#130-131) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromCore",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "ManagedWhitelist.removeFromCore (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#135-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addToCivilians",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 141,
+            "message": "ManagedWhitelist.addToCivilians (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#140-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromCivilians",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 145,
+            "message": "ManagedWhitelist.removeFromCivilians (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#144-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromUnlocked",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 156,
+            "message": "ManagedWhitelist.removeFromUnlocked (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#154-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addToVerified",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 159,
+            "message": "ManagedWhitelist.addToVerified (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#158-159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromVerified",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 165,
+            "message": "ManagedWhitelist.removeFromVerified (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#163-165) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addToStorefront",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 168,
+            "message": "ManagedWhitelist.addToStorefront (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#167-168) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromStorefront",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 173,
+            "message": "ManagedWhitelist.removeFromStorefront (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#172-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "addToNewsroomMultisigs",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 177,
+            "message": "ManagedWhitelist.addToNewsroomMultisigs (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#176-177) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeFromNewsroomMultisigs",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 192,
+            "message": "ManagedWhitelist.removeFromNewsroomMultisigs (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#181-192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ManagedWhitelist",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "checkProofOfUse",
+            "impact": "Informational",
+            "line": 192,
+            "message": "ManagedWhitelist.checkProofOfUse (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CVLToken",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "detectTransferRestriction",
+            "impact": "Informational",
+            "message": "CVLToken.detectTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CivilTokenController",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "detectTransferRestriction",
+            "impact": "Informational",
+            "line": 874,
+            "line_end": 920,
+            "message": "CivilTokenController.detectTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#874-920) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC1404",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "detectTransferRestriction",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 202,
+            "message": "ERC1404.detectTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#201-202) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CivilTokenController",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "messageForTransferRestriction",
+            "impact": "Informational",
+            "line": 920,
+            "line_end": 924,
+            "message": "CivilTokenController.messageForTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#920-924) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC1404",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "messageForTransferRestriction",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 213,
+            "message": "ERC1404.messageForTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#211-213) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CVLToken",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "messageForTransferRestriction",
+            "impact": "Informational",
+            "message": "CVLToken.messageForTransferRestriction (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MessagesAndCodes",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "autoAddMessage",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 274,
+            "message": "MessagesAndCodes.autoAddMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#258-274) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MessagesAndCodes",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "removeMessage",
+            "impact": "Informational",
+            "line": 275,
+            "line_end": 297,
+            "message": "MessagesAndCodes.removeMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#275-297) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MessagesAndCodes",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "updateMessage",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 317,
+            "message": "MessagesAndCodes.updateMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#297-317) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Factory",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "getInstantiationCount",
+            "impact": "Informational",
+            "line": 338,
+            "line_end": 343,
+            "message": "Factory.getInstantiationCount (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#338-343) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IMultiSigWalletFactory",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "create",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 365,
+            "message": "IMultiSigWalletFactory.create (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#364-365) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Newsroom",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "isContentSigned",
+            "impact": "Informational",
+            "line": 597,
+            "line_end": 600,
+            "message": "Newsroom.isContentSigned (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#597-600) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NewsroomFactory",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "create",
+            "impact": "Informational",
+            "line": 827,
+            "line_end": 838,
+            "message": "NewsroomFactory.create (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#827-838) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 1035,
+            "line_end": 1037,
+            "message": "ERC20.totalSupply (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1035-1037) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 941,
+            "line_end": 942,
+            "message": "IERC20.totalSupply (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#941-942) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 1042,
+            "line_end": 1043,
+            "message": "ERC20.balanceOf (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1042-1043) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 942,
+            "message": "IERC20.balanceOf (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#942) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 1049,
+            "line_end": 1052,
+            "message": "ERC20.allowance (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1049-1052) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 943,
+            "line_end": 944,
+            "message": "IERC20.allowance (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#943-944) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 1075,
+            "line_end": 1079,
+            "message": "ERC20.approve (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1075-1079) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 949,
+            "line_end": 955,
+            "message": "IERC20.approve (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#949-955) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "increaseAllowance",
+            "impact": "Informational",
+            "line": 1103,
+            "line_end": 1112,
+            "message": "ERC20.increaseAllowance (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1103-1112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "decreaseAllowance",
+            "impact": "Informational",
+            "line": 1124,
+            "line_end": 1134,
+            "message": "ERC20.decreaseAllowance (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1124-1134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 1236,
+            "line_end": 1237,
+            "message": "ERC20Detailed.name (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1236-1237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 1239,
+            "line_end": 1242,
+            "message": "ERC20Detailed.symbol (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1239-1242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Detailed",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 1242,
+            "line_end": 1246,
+            "message": "ERC20Detailed.decimals (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1242-1246) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CVLToken",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "function": "changeController",
+            "impact": "Informational",
+            "message": "CVLToken.changeController (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 322,
+            "message": "Detected issues with version pragma in 0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol:\n\t- pragma solidity^0.4.19 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#320-322): it allows old versions\n\t- pragma solidity^0.4.19 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#363): it allows old versions\n\t- pragma solidity^0.4.19 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#365): it allows old versions\n\t- pragma solidity^0.4.19 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#504): it allows old versions\n\t- pragma solidity^0.4.19 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#795-796): it allows old versions\n\t- pragma solidity^0.4.23 (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#841): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 70,
+            "message": "Function 'Ownable._transferOwnership' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#62-70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 63,
+            "message": "Parameter '_newOwner' of Ownable._transferOwnership (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#62-63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 232,
+            "message": "Parameter '_message' of MessagesAndCodes.messageIsEmpty (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_code' of MessagesAndCodes.messageExists (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_code' of MessagesAndCodes.addMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 245,
+            "message": "Parameter '_message' of MessagesAndCodes.addMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#244-245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 262,
+            "message": "Parameter '_message' of MessagesAndCodes.autoAddMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#260-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 278,
+            "message": "Parameter '_code' of MessagesAndCodes.removeMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#278) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 302,
+            "message": "Parameter '_code' of MessagesAndCodes.updateMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#299-302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 302,
+            "message": "Parameter '_message' of MessagesAndCodes.updateMessage (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 388,
+            "line_end": 392,
+            "message": "Function 'ACL.ACL' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#388-392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 414,
+            "line_end": 421,
+            "message": "Function 'ACL._addRole' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#414-421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 421,
+            "line_end": 423,
+            "message": "Function 'ACL._removeRole' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#421-423) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 450,
+            "line_end": 451,
+            "message": "Parameter '_hash' of ECRecovery.recover (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#450-451) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 451,
+            "message": "Parameter '_sig' of ECRecovery.recover (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#451) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 498,
+            "message": "Parameter '_hash' of ECRecovery.toEthSignedMessageHash (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#498) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 555,
+            "line_end": 559,
+            "message": "Function 'Newsroom.Newsroom' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#555-559) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 812,
+            "line_end": 818,
+            "message": "Function 'NewsroomFactory.NewsroomFactory' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#812-818) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 969,
+            "message": "Parameter '_a' of SafeMath.mul (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#969) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 969,
+            "line_end": 972,
+            "message": "Parameter '_b' of SafeMath.mul (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#969-972) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 993,
+            "message": "Parameter '_a' of SafeMath.div (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#993) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 993,
+            "message": "Parameter '_b' of SafeMath.div (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#993) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1007,
+            "message": "Parameter '_a' of SafeMath.sub (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1007) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1007,
+            "message": "Parameter '_b' of SafeMath.sub (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1007) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1014,
+            "message": "Parameter '_a' of SafeMath.add (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1014) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1014,
+            "message": "Parameter '_b' of SafeMath.add (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1014) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1139,
+            "line_end": 1147,
+            "message": "Function 'ERC20._transfer' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1139-1147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1154,
+            "line_end": 1161,
+            "message": "Function 'ERC20._mint' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1154-1161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1169,
+            "line_end": 1177,
+            "message": "Function 'ERC20._burn' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1169-1177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1194,
+            "line_end": 1215,
+            "message": "Function 'ERC20._burnFrom' (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1194-1215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1259,
+            "line_end": 1262,
+            "message": "Parameter '_initialAmount' of CVLToken. (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1259-1262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "line": 1262,
+            "line_end": 1263,
+            "message": "Parameter '_controller' of CVLToken. (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol#1262-1263) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol",
+            "impact": "Informational",
+            "message": "Parameter '_controller' of CVLToken.changeController (0x01fa555c97d7958fa6f771f3bbd5ccd508f81e22.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

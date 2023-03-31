@@ -1,0 +1,52 @@
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol:
+	Contract AdvancedToken has payable functions:
+	 - fallback (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[92m
+AdvancedToken.decimals should be constant (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#311-314)
+AdvancedToken.name should be constant (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#310)
+AdvancedToken.symbol should be constant (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#311)
+AdvancedToken.version should be constant (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#311)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20Basic.balanceOf (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#40-41) should be declared external
+BasicToken.balanceOf (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#75-82) should be declared external
+StandardToken.allowance (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#148-152) should be declared external
+ERC20.allowance (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#85-86) should be declared external
+Ownable.transferOwnership (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#192-199) should be declared external
+Pausable.pause (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#230-238) should be declared external
+Pausable.unpause (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#241-243) should be declared external
+PausableToken.batchTransfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#265-282) should be declared external
+PausableToken.freezeAccount (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#283-292) should be declared external
+PausableToken.batchFreeze (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#292-297) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol:
+	- pragma solidity0.4.16 (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#76) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#60) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#60-61) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#150-151) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#151) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#112) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#112) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#112) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#134-135) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#135-136) is not in mixedCase
+Function 'Ownable.Ownable' (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#174-180) is not in mixedCase
+Parameter '_to' of PausableToken.transfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#250) is not in mixedCase
+Parameter '_value' of PausableToken.transfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#250-251) is not in mixedCase
+Parameter '_from' of PausableToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#255) is not in mixedCase
+Parameter '_to' of PausableToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#255-256) is not in mixedCase
+Parameter '_value' of PausableToken.transferFrom (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#256) is not in mixedCase
+Parameter '_spender' of PausableToken.approve (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#260) is not in mixedCase
+Parameter '_value' of PausableToken.approve (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#260) is not in mixedCase
+Parameter '_receivers' of PausableToken.batchTransfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#265) is not in mixedCase
+Parameter '_value' of PausableToken.batchTransfer (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol#265-266) is not in mixedCase
+Function 'AdvancedToken.AdvancedToken' (/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x5d3d1598e70a2fce9ebe13ac613185da05febbe8.sol analyzed (9 contracts), 34 result(s) found

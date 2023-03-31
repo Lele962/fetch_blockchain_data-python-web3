@@ -1,0 +1,1937 @@
+{
+    "errors": [
+        "EXIT_CODE_207"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildDown",
+            "impact": "Medium",
+            "line": 2072,
+            "line_end": 2109,
+            "message": "Reentrancy in KingOfEthRoads.buildDown (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2072-2109):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2085-2086)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2092)\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2093-2109)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildDown",
+            "impact": "Medium",
+            "line": 2072,
+            "line_end": 2109,
+            "message": "Reentrancy in KingOfEthRoads.buildDown (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2072-2109):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2085-2086)\n\t- require(bool)(_housesContract.ownerOf(_x,_y + _i) == 0x0 || _housesContract.ownerOf(_x,_y + _i) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2102-2106)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2107-2109)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildLeft",
+            "impact": "Medium",
+            "line": 2113,
+            "line_end": 2155,
+            "message": "Reentrancy in KingOfEthRoads.buildLeft (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2113-2155):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2126-2127)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2133-2136)\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2136-2154)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildLeft",
+            "impact": "Medium",
+            "line": 2113,
+            "line_end": 2155,
+            "message": "Reentrancy in KingOfEthRoads.buildLeft (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2113-2155):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2126-2127)\n\t- require(bool)(_housesContract.ownerOf(_x - _i,_y) == 0x0 || _housesContract.ownerOf(_x - _i,_y) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2148-2152)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2153-2154)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildRight",
+            "impact": "Medium",
+            "line": 2030,
+            "line_end": 2068,
+            "message": "Reentrancy in KingOfEthRoads.buildRight (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2030-2068):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2042-2044)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2050-2051)\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2051-2067)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildRight",
+            "impact": "Medium",
+            "line": 2030,
+            "line_end": 2068,
+            "message": "Reentrancy in KingOfEthRoads.buildRight (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2030-2068):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2042-2044)\n\t- require(bool)(_housesContract.ownerOf(_x + _i,_y) == 0x0 || _housesContract.ownerOf(_x + _i,_y) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2061-2065)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2066)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildUp",
+            "impact": "Medium",
+            "line": 2164,
+            "line_end": 2208,
+            "message": "Reentrancy in KingOfEthRoads.buildUp (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2164-2208):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2180)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2192-2193)\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2193-2208)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildUp",
+            "impact": "Medium",
+            "line": 2164,
+            "line_end": 2208,
+            "message": "Reentrancy in KingOfEthRoads.buildUp (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2164-2208):\n\tExternal calls:\n\t- _houseOwner = _housesContract.ownerOf(_x,_y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2180)\n\t- require(bool)(_housesContract.ownerOf(_x,_y - _i) == 0x0 || _housesContract.ownerOf(_x,_y - _i) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2202-2206)\n\tState variables written after the call(s):\n\t- owners (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2207)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildRight",
+            "impact": "Low",
+            "line": 2061,
+            "line_end": 2065,
+            "message": "KingOfEthRoads.buildRight has external calls inside a loop:\n\t- require(bool)(_housesContract.ownerOf(_x + _i,_y) == 0x0 || _housesContract.ownerOf(_x + _i,_y) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2061-2065)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildDown",
+            "impact": "Low",
+            "line": 2102,
+            "line_end": 2106,
+            "message": "KingOfEthRoads.buildDown has external calls inside a loop:\n\t- require(bool)(_housesContract.ownerOf(_x,_y + _i) == 0x0 || _housesContract.ownerOf(_x,_y + _i) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2102-2106)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildLeft",
+            "impact": "Low",
+            "line": 2148,
+            "line_end": 2152,
+            "message": "KingOfEthRoads.buildLeft has external calls inside a loop:\n\t- require(bool)(_housesContract.ownerOf(_x - _i,_y) == 0x0 || _housesContract.ownerOf(_x - _i,_y) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2148-2152)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildUp",
+            "impact": "Low",
+            "line": 2202,
+            "line_end": 2206,
+            "message": "KingOfEthRoads.buildUp has external calls inside a loop:\n\t- require(bool)(_housesContract.ownerOf(_x,_y - _i) == 0x0 || _housesContract.ownerOf(_x,_y - _i) == msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2202-2206)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildRoads",
+            "impact": "Low",
+            "line": 2256,
+            "line_end": 2284,
+            "message": "Reentrancy in KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2256-2284):\n\tExternal calls:\n\t- require(bool)(_boardContract.boundX1() <= _x) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2271-2272)\n\t- require(bool)(_boardContract.boundY1() <= _y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2273-2275)\n\t- require(bool)(_boardContract.boundX2() > _x) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2275-2276)\n\t- require(bool)(_boardContract.boundY2() > _y) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2276-2277)\n\t- KingOfEthResourcesInterface(interfaceContract).burnRoadCosts(_length,msg.sender) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2282-2284)\n\t- require(bool)(_boardContract.boundX2() > _x + _length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- buildRight(_x,_y,_length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- require(bool)(_boardContract.boundY2() > _y + _length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- buildDown(_x,_y,_length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- require(bool)(_boardContract.boundX1() < _x - _length - 1) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- buildLeft(_x,_y,_length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- require(bool)(_boardContract.boundY1() < _y - _length - 1) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\t- buildUp(_x,_y,_length) (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n\tState variables written after the call(s):\n\t- roadCounts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 104,
+            "message": "KingOfEthAbstractInterface.king should be constant (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#102-104)\nKingOfEthAbstractInterface.wayfarer should be constant (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#106-108)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "GodMode",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godChangeGod",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 63,
+            "message": "GodMode.godChangeGod (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#58-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GodMode",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godPause",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 71,
+            "message": "GodMode.godPause (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#65-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "payTaxes",
+            "impact": "Informational",
+            "line": 110,
+            "message": "KingOfEthAbstractInterface.payTaxes (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBlindAuctionsReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetBlindAuctionsContract",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 153,
+            "message": "KingOfEthBlindAuctionsReferencer.godSetBlindAuctionsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#145-153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthOpenAuctionsReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetOpenAuctionsContract",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 194,
+            "message": "KingOfEthOpenAuctionsReferencer.godSetOpenAuctionsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#188-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetKingOfEthContract",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 268,
+            "message": "KingOfEthReferencer.godSetKingOfEthContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#265-268) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godStartGame",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 483,
+            "message": "KingOfEthBoard.godStartGame (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#479-483) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "auctionsDecrementAuctionsRemaining",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 494,
+            "message": "KingOfEthBoard.auctionsDecrementAuctionsRemaining (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#489-494) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "auctionsIncrementAuctionsRemaining",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 505,
+            "message": "KingOfEthBoard.auctionsIncrementAuctionsRemaining (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#500-505) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "kingIncreaseBoard",
+            "impact": "Informational",
+            "line": 506,
+            "line_end": 515,
+            "message": "KingOfEthBoard.kingIncreaseBoard (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#506-515) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "wayfarerIncreaseBoard",
+            "impact": "Informational",
+            "line": 518,
+            "line_end": 528,
+            "message": "KingOfEthBoard.wayfarerIncreaseBoard (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#518-528) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoard",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "plebIncreaseBoard",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 538,
+            "message": "KingOfEthBoard.plebIncreaseBoard (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#529-538) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthBoardReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetBoardContract",
+            "impact": "Informational",
+            "line": 572,
+            "line_end": 577,
+            "message": "KingOfEthBoardReferencer.godSetBoardContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#572-577) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthHousesAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "ownerOf",
+            "impact": "Informational",
+            "line": 596,
+            "line_end": 598,
+            "message": "KingOfEthHousesAbstractInterface.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#596-598) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthHousesAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "level",
+            "impact": "Informational",
+            "line": 602,
+            "line_end": 603,
+            "message": "KingOfEthHousesAbstractInterface.level (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#602-603) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthHousesAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "auctionsSetOwner",
+            "impact": "Informational",
+            "line": 615,
+            "line_end": 617,
+            "message": "KingOfEthHousesAbstractInterface.auctionsSetOwner (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#615-617) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthHousesAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "houseRealtyTransferOwnership",
+            "impact": "Informational",
+            "line": 627,
+            "line_end": 629,
+            "message": "KingOfEthHousesAbstractInterface.houseRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#627-629) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthHousesReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetHousesContract",
+            "impact": "Informational",
+            "line": 667,
+            "line_end": 670,
+            "message": "KingOfEthHousesReferencer.godSetHousesContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#667-670) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthEthExchangeReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetEthExchangeContract",
+            "impact": "Informational",
+            "line": 708,
+            "line_end": 712,
+            "message": "KingOfEthEthExchangeReferencer.godSetEthExchangeContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#708-712) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourceExchangeReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetResourceExchangeContract",
+            "impact": "Informational",
+            "line": 752,
+            "line_end": 757,
+            "message": "KingOfEthResourceExchangeReferencer.godSetResourceExchangeContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#752-757) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterfaceReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetInterfaceContract",
+            "impact": "Informational",
+            "line": 832,
+            "line_end": 834,
+            "message": "KingOfEthResourcesInterfaceReferencer.godSetInterfaceContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#832-834) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 899,
+            "line_end": 901,
+            "message": "KingOfEthResource.totalSupply (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#899-901) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 845,
+            "line_end": 848,
+            "message": "ERC20Interface.totalSupply (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#845-848) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 906,
+            "line_end": 911,
+            "message": "KingOfEthResource.balanceOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#906-911) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 848,
+            "line_end": 851,
+            "message": "ERC20Interface.balanceOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#848-851) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 851,
+            "line_end": 856,
+            "message": "ERC20Interface.allowance (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#851-856) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 928,
+            "line_end": 936,
+            "message": "KingOfEthResource.allowance (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#928-936) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 856,
+            "line_end": 859,
+            "message": "ERC20Interface.transfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#856-859) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 1060,
+            "line_end": 1076,
+            "message": "KingOfEthResource.transfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1060-1076) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 859,
+            "line_end": 860,
+            "message": "ERC20Interface.approve (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#859-860) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 1080,
+            "line_end": 1087,
+            "message": "KingOfEthResource.approve (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1080-1087) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 860,
+            "line_end": 863,
+            "message": "ERC20Interface.transferFrom (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#860-863) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 1093,
+            "line_end": 1114,
+            "message": "KingOfEthResource.transferFrom (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1093-1114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "frozenTokens",
+            "impact": "Informational",
+            "line": 914,
+            "line_end": 920,
+            "message": "KingOfEthResource.frozenTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#914-920) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceBurnTokens",
+            "impact": "Informational",
+            "line": 970,
+            "line_end": 981,
+            "message": "KingOfEthResource.interfaceBurnTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#970-981) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceMintTokens",
+            "impact": "Informational",
+            "line": 985,
+            "line_end": 994,
+            "message": "KingOfEthResource.interfaceMintTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#985-994) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceFreezeTokens",
+            "impact": "Informational",
+            "line": 1001,
+            "line_end": 1008,
+            "message": "KingOfEthResource.interfaceFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1001-1008) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceThawTokens",
+            "impact": "Informational",
+            "line": 1011,
+            "line_end": 1016,
+            "message": "KingOfEthResource.interfaceThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1011-1016) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceTransfer",
+            "impact": "Informational",
+            "line": 1024,
+            "line_end": 1034,
+            "message": "KingOfEthResource.interfaceTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1024-1034) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResource",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "interfaceFrozenTransfer",
+            "impact": "Informational",
+            "line": 1042,
+            "line_end": 1057,
+            "message": "KingOfEthResource.interfaceFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1042-1057) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadsReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetRoadsContract",
+            "impact": "Informational",
+            "line": 1184,
+            "line_end": 1190,
+            "message": "KingOfEthRoadsReferencer.godSetRoadsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1184-1190) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "lookupResourcePoints",
+            "impact": "Informational",
+            "line": 1366,
+            "line_end": 1385,
+            "message": "KingOfEthResourcesInterface.lookupResourcePoints (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1366-1385) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "burnUpgradeCosts",
+            "impact": "Informational",
+            "line": 1417,
+            "line_end": 1464,
+            "message": "KingOfEthResourcesInterface.burnUpgradeCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1417-1464) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "distributeResources",
+            "impact": "Informational",
+            "line": 1476,
+            "line_end": 1506,
+            "message": "KingOfEthResourcesInterface.distributeResources (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1476-1506) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "burnRoadCosts",
+            "impact": "Informational",
+            "line": 1509,
+            "line_end": 1520,
+            "message": "KingOfEthResourcesInterface.burnRoadCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1509-1520) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "exchangeFreezeTokens",
+            "impact": "Informational",
+            "line": 1523,
+            "line_end": 1532,
+            "message": "KingOfEthResourcesInterface.exchangeFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1523-1532) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "exchangeThawTokens",
+            "impact": "Informational",
+            "line": 1537,
+            "line_end": 1545,
+            "message": "KingOfEthResourcesInterface.exchangeThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1537-1545) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "exchangeTransfer",
+            "impact": "Informational",
+            "line": 1550,
+            "line_end": 1554,
+            "message": "KingOfEthResourcesInterface.exchangeTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1550-1554) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthResourcesInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "exchangeFrozenTransfer",
+            "impact": "Informational",
+            "line": 1560,
+            "line_end": 1571,
+            "message": "KingOfEthResourcesInterface.exchangeFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1560-1571) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadsAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "ownerOf",
+            "impact": "Informational",
+            "line": 1604,
+            "line_end": 1607,
+            "message": "KingOfEthRoadsAbstractInterface.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1604-1607) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "ownerOf",
+            "impact": "Informational",
+            "line": 2003,
+            "line_end": 2009,
+            "message": "KingOfEthRoads.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2003-2009) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "roadRealtyTransferOwnership",
+            "impact": "Informational",
+            "line": 2228,
+            "line_end": 2244,
+            "message": "KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2228-2244) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadsAbstractInterface",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "roadRealtyTransferOwnership",
+            "impact": "Informational",
+            "line": 1620,
+            "line_end": 1629,
+            "message": "KingOfEthRoadsAbstractInterface.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1620-1629) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealty",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "roadsCancelRoadSale",
+            "impact": "Informational",
+            "line": 1739,
+            "line_end": 1752,
+            "message": "KingOfEthRoadRealty.roadsCancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1739-1752) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealty",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "startRoadSale",
+            "impact": "Informational",
+            "line": 1761,
+            "line_end": 1776,
+            "message": "KingOfEthRoadRealty.startRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1761-1776) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealty",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "changeRoadPrice",
+            "impact": "Informational",
+            "line": 1788,
+            "line_end": 1807,
+            "message": "KingOfEthRoadRealty.changeRoadPrice (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1788-1807) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealty",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "purchaseRoad",
+            "impact": "Informational",
+            "line": 1814,
+            "line_end": 1859,
+            "message": "KingOfEthRoadRealty.purchaseRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1814-1859) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealty",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "cancelRoadSale",
+            "impact": "Informational",
+            "line": 1865,
+            "line_end": 1889,
+            "message": "KingOfEthRoadRealty.cancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1865-1889) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoadRealtyReferencer",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godSetRoadRealtyContract",
+            "impact": "Informational",
+            "line": 1919,
+            "line_end": 1924,
+            "message": "KingOfEthRoadRealtyReferencer.godSetRoadRealtyContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1919-1924) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "numberOfRoads",
+            "impact": "Informational",
+            "line": 2013,
+            "line_end": 2018,
+            "message": "KingOfEthRoads.numberOfRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2013-2018) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "godChangeRoadCost",
+            "impact": "Informational",
+            "line": 2213,
+            "line_end": 2216,
+            "message": "KingOfEthRoads.godChangeRoadCost (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2213-2216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "buildRoads",
+            "impact": "Informational",
+            "line": 2256,
+            "line_end": 2284,
+            "message": "KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2256-2284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KingOfEthRoads",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "function": "sendRoad",
+            "impact": "Informational",
+            "message": "KingOfEthRoads.sendRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 62,
+            "message": "Parameter '_newGod' of GodMode.godChangeGod (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#59-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_blindAuctionsContract' of KingOfEthBlindAuctionsReferencer.godSetBlindAuctionsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 190,
+            "message": "Parameter '_openAuctionsContract' of KingOfEthOpenAuctionsReferencer.godSetOpenAuctionsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#188-190) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 267,
+            "message": "Parameter '_kingOfEthContract' of KingOfEthReferencer.godSetKingOfEthContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#265-267) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 309,
+            "line_end": 311,
+            "message": "Constant 'KingOfEthBoard.auctionsAvailableDivisor' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#309-311) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 312,
+            "line_end": 313,
+            "message": "Constant 'KingOfEthBoard.kingTimeBetweenIncrease' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#312-313) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 318,
+            "message": "Constant 'KingOfEthBoard.wayfarerTimeBetweenIncrease' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#316-318) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 323,
+            "message": "Constant 'KingOfEthBoard.plebTimeBetweenIncrease' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#322-323) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 574,
+            "line_end": 576,
+            "message": "Parameter '_boardContract' of KingOfEthBoardReferencer.godSetBoardContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#574-576) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 668,
+            "message": "Parameter '_housesContract' of KingOfEthHousesReferencer.godSetHousesContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#668) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 709,
+            "line_end": 710,
+            "message": "Parameter '_ethExchangeContract' of KingOfEthEthExchangeReferencer.godSetEthExchangeContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#709-710) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 753,
+            "message": "Parameter '_resourceExchangeContract' of KingOfEthResourceExchangeReferencer.godSetResourceExchangeContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#753) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 832,
+            "line_end": 833,
+            "message": "Parameter '_interfaceContract' of KingOfEthResourcesInterfaceReferencer.godSetInterfaceContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#832-833) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 909,
+            "message": "Parameter '_tokenOwner' of KingOfEthResource.balanceOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#909) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 930,
+            "message": "Parameter '_tokenOwner' of KingOfEthResource.allowance (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#930) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 930,
+            "line_end": 931,
+            "message": "Parameter '_spender' of KingOfEthResource.allowance (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#930-931) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1062,
+            "message": "Parameter '_to' of KingOfEthResource.transfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1062) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1062,
+            "message": "Parameter '_tokens' of KingOfEthResource.transfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1062) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1080,
+            "line_end": 1081,
+            "message": "Parameter '_spender' of KingOfEthResource.approve (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1080-1081) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1081,
+            "message": "Parameter '_tokens' of KingOfEthResource.approve (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1081) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1093,
+            "line_end": 1094,
+            "message": "Parameter '_from' of KingOfEthResource.transferFrom (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1093-1094) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1094,
+            "message": "Parameter '_to' of KingOfEthResource.transferFrom (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1094) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1094,
+            "line_end": 1095,
+            "message": "Parameter '_tokens' of KingOfEthResource.transferFrom (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1094-1095) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 918,
+            "message": "Parameter '_tokenOwner' of KingOfEthResource.frozenTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#918) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 971,
+            "message": "Parameter '_owner' of KingOfEthResource.interfaceBurnTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#971) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 971,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceBurnTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#971) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 987,
+            "message": "Parameter '_owner' of KingOfEthResource.interfaceMintTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#987) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 987,
+            "line_end": 988,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceMintTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#987-988) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1003,
+            "message": "Parameter '_owner' of KingOfEthResource.interfaceFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1003) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1003,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1003) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1012,
+            "line_end": 1013,
+            "message": "Parameter '_owner' of KingOfEthResource.interfaceThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1012-1013) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1013,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1013) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1025,
+            "message": "Parameter '_from' of KingOfEthResource.interfaceTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1025) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1025,
+            "message": "Parameter '_to' of KingOfEthResource.interfaceTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1025) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1025,
+            "line_end": 1026,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1025-1026) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1042,
+            "line_end": 1043,
+            "message": "Parameter '_from' of KingOfEthResource.interfaceFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1042-1043) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1043,
+            "line_end": 1044,
+            "message": "Parameter '_to' of KingOfEthResource.interfaceFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1043-1044) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1044,
+            "message": "Parameter '_tokens' of KingOfEthResource.interfaceFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1044) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1185,
+            "message": "Parameter '_roadsContract' of KingOfEthRoadsReferencer.godSetRoadsContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1256,
+            "message": "Parameter '_bronzeContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1257,
+            "line_end": 1258,
+            "message": "Parameter '_cornContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1257-1258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1258,
+            "line_end": 1259,
+            "message": "Parameter '_goldContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1258-1259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1260,
+            "message": "Parameter '_oilContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1262,
+            "message": "Parameter '_oreContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1262,
+            "line_end": 1264,
+            "message": "Parameter '_steelContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1262-1264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1264,
+            "line_end": 1265,
+            "message": "Parameter '_uraniumContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1264-1265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1266,
+            "message": "Parameter '_woodContract' of KingOfEthResourcesInterface. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1286,
+            "line_end": 1287,
+            "message": "Parameter '_type' of KingOfEthResourcesInterface.contractFor (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1286-1287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1336,
+            "message": "Parameter '_x' of KingOfEthResourcesInterface.resourceType (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1336,
+            "message": "Parameter '_y' of KingOfEthResourcesInterface.resourceType (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1369,
+            "message": "Parameter '_player' of KingOfEthResourcesInterface.lookupResourcePoints (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1369) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1392,
+            "message": "Parameter '_count' of KingOfEthResourcesInterface.burnHouseCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1392,
+            "line_end": 1393,
+            "message": "Parameter '_player' of KingOfEthResourcesInterface.burnHouseCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1392-1393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1418,
+            "line_end": 1419,
+            "message": "Parameter '_currentLevel' of KingOfEthResourcesInterface.burnUpgradeCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1418-1419) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1419,
+            "line_end": 1420,
+            "message": "Parameter '_player' of KingOfEthResourcesInterface.burnUpgradeCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1419-1420) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1476,
+            "line_end": 1477,
+            "message": "Parameter '_owner' of KingOfEthResourcesInterface.distributeResources (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1476-1477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1477,
+            "message": "Parameter '_x' of KingOfEthResourcesInterface.distributeResources (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1477,
+            "line_end": 1478,
+            "message": "Parameter '_y' of KingOfEthResourcesInterface.distributeResources (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1477-1478) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1478,
+            "message": "Parameter '_level' of KingOfEthResourcesInterface.distributeResources (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1478) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1509,
+            "message": "Parameter '_length' of KingOfEthResourcesInterface.burnRoadCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1509) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1509,
+            "message": "Parameter '_player' of KingOfEthResourcesInterface.burnRoadCosts (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1509) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1525,
+            "message": "Parameter '_type' of KingOfEthResourcesInterface.exchangeFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1525) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1525,
+            "message": "Parameter '_owner' of KingOfEthResourcesInterface.exchangeFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1525) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1525,
+            "message": "Parameter '_tokens' of KingOfEthResourcesInterface.exchangeFreezeTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1525) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1538,
+            "message": "Parameter '_type' of KingOfEthResourcesInterface.exchangeThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1538) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1538,
+            "message": "Parameter '_owner' of KingOfEthResourcesInterface.exchangeThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1538) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1538,
+            "line_end": 1540,
+            "message": "Parameter '_tokens' of KingOfEthResourcesInterface.exchangeThawTokens (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1538-1540) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "message": "Parameter '_type' of KingOfEthResourcesInterface.exchangeTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "message": "Parameter '_from' of KingOfEthResourcesInterface.exchangeTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "message": "Parameter '_to' of KingOfEthResourcesInterface.exchangeTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "line_end": 1552,
+            "message": "Parameter '_tokens' of KingOfEthResourcesInterface.exchangeTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1551-1552) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1561,
+            "line_end": 1562,
+            "message": "Parameter '_type' of KingOfEthResourcesInterface.exchangeFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1561-1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1562,
+            "message": "Parameter '_from' of KingOfEthResourcesInterface.exchangeFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1562,
+            "message": "Parameter '_to' of KingOfEthResourcesInterface.exchangeFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1562) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1562,
+            "line_end": 1563,
+            "message": "Parameter '_tokens' of KingOfEthResourcesInterface.exchangeFrozenTransfer (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1562-1563) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1213,
+            "line_end": 1214,
+            "message": "Constant 'KingOfEthResourcesInterface.resourcesPerHouse' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1213-1214) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1727,
+            "line_end": 1728,
+            "message": "Parameter '_kingOfEthContract' of KingOfEthRoadRealty. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1727-1728) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1740,
+            "message": "Parameter '_x' of KingOfEthRoadRealty.roadsCancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1740) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1740,
+            "message": "Parameter '_y' of KingOfEthRoadRealty.roadsCancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1740) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1740,
+            "line_end": 1742,
+            "message": "Parameter '_direction' of KingOfEthRoadRealty.roadsCancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1740-1742) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1762,
+            "message": "Parameter '_x' of KingOfEthRoadRealty.startRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1762,
+            "message": "Parameter '_y' of KingOfEthRoadRealty.startRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1762,
+            "message": "Parameter '_direction' of KingOfEthRoadRealty.startRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1762) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1764,
+            "line_end": 1765,
+            "message": "Parameter '_askingPrice' of KingOfEthRoadRealty.startRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1764-1765) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1790,
+            "message": "Parameter '_x' of KingOfEthRoadRealty.changeRoadPrice (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1790) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1791,
+            "message": "Parameter '_y' of KingOfEthRoadRealty.changeRoadPrice (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1791) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1792,
+            "line_end": 1793,
+            "message": "Parameter '_direction' of KingOfEthRoadRealty.changeRoadPrice (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1792-1793) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1793,
+            "line_end": 1794,
+            "message": "Parameter '_askingPrice' of KingOfEthRoadRealty.changeRoadPrice (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1793-1794) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1817,
+            "message": "Parameter '_x' of KingOfEthRoadRealty.purchaseRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1817) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1817,
+            "message": "Parameter '_y' of KingOfEthRoadRealty.purchaseRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1817) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1817,
+            "message": "Parameter '_direction' of KingOfEthRoadRealty.purchaseRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1817) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1865,
+            "message": "Parameter '_x' of KingOfEthRoadRealty.cancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1865) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1865,
+            "line_end": 1866,
+            "message": "Parameter '_y' of KingOfEthRoadRealty.cancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1865-1866) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1866,
+            "message": "Parameter '_direction' of KingOfEthRoadRealty.cancelRoadSale (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1866) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1655,
+            "line_end": 1656,
+            "message": "Constant 'KingOfEthRoadRealty.taxDivisor' (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1655-1656) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1919,
+            "line_end": 1920,
+            "message": "Parameter '_roadRealtyContract' of KingOfEthRoadRealtyReferencer.godSetRoadRealtyContract (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1919-1920) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2003,
+            "message": "Parameter '_x' of KingOfEthRoads.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2003) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2003,
+            "message": "Parameter '_y' of KingOfEthRoads.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2003) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2003,
+            "message": "Parameter '_direction' of KingOfEthRoads.ownerOf (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2003) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2229,
+            "message": "Parameter '_x' of KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2229) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2229,
+            "line_end": 2230,
+            "message": "Parameter '_y' of KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2229-2230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2231,
+            "message": "Parameter '_direction' of KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2231,
+            "message": "Parameter '_from' of KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2232,
+            "message": "Parameter '_to' of KingOfEthRoads.roadRealtyTransferOwnership (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1978,
+            "message": "Parameter '_boardContract' of KingOfEthRoads. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1978) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1978,
+            "message": "Parameter '_roadRealtyContract' of KingOfEthRoads. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1978) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1979,
+            "message": "Parameter '_kingOfEthContract' of KingOfEthRoads. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1979) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 1979,
+            "message": "Parameter '_interfaceContract' of KingOfEthRoads. (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#1979) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2013,
+            "line_end": 2014,
+            "message": "Parameter '_player' of KingOfEthRoads.numberOfRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2013-2014) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2030,
+            "line_end": 2031,
+            "message": "Parameter '_x' of KingOfEthRoads.buildRight (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2030-2031) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2031,
+            "message": "Parameter '_y' of KingOfEthRoads.buildRight (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2031) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2031,
+            "message": "Parameter '_length' of KingOfEthRoads.buildRight (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2031) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2072,
+            "message": "Parameter '_x' of KingOfEthRoads.buildDown (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2072) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2072,
+            "message": "Parameter '_y' of KingOfEthRoads.buildDown (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2072) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2073,
+            "message": "Parameter '_length' of KingOfEthRoads.buildDown (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2073) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2114,
+            "message": "Parameter '_x' of KingOfEthRoads.buildLeft (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2114,
+            "message": "Parameter '_y' of KingOfEthRoads.buildLeft (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2114,
+            "message": "Parameter '_length' of KingOfEthRoads.buildLeft (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2166,
+            "message": "Parameter '_x' of KingOfEthRoads.buildUp (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2166,
+            "message": "Parameter '_y' of KingOfEthRoads.buildUp (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2166,
+            "message": "Parameter '_length' of KingOfEthRoads.buildUp (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2215,
+            "message": "Parameter '_newRoadCost' of KingOfEthRoads.godChangeRoadCost (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2259,
+            "message": "Parameter '_x' of KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2259,
+            "message": "Parameter '_y' of KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2260,
+            "message": "Parameter '_direction' of KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "line": 2260,
+            "message": "Parameter '_length' of KingOfEthRoads.buildRoads (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol#2260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "message": "Parameter '_x' of KingOfEthRoads.sendRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "message": "Parameter '_y' of KingOfEthRoads.sendRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "message": "Parameter '_direction' of KingOfEthRoads.sendRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xc8e072145f8aa3507a291141beae1109070a6fb8.sol",
+            "impact": "Informational",
+            "message": "Parameter '_to' of KingOfEthRoads.sendRoad (0xc8e072145f8aa3507a291141beae1109070a6fb8.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

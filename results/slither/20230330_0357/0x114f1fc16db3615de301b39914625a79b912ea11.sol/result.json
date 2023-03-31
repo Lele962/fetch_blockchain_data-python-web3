@@ -1,0 +1,458 @@
+{
+    "errors": [
+        "EXIT_CODE_52"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "UHCToken",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "function": "constructor",
+            "impact": "Medium",
+            "line": 133,
+            "line_end": 155,
+            "message": "UHCToken.constructor (0x114f1fc16db3615de301b39914625a79b912ea11.sol#133-155) does not use the value returned by external calls:\n\t-holders.push(msg.sender) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#143-144)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UHCToken",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "function": "serviceClaimOwnership",
+            "impact": "Medium",
+            "line": 192,
+            "line_end": 211,
+            "message": "UHCToken.serviceClaimOwnership (0x114f1fc16db3615de301b39914625a79b912ea11.sol#192-211) does not use the value returned by external calls:\n\t-holders.remove(owner) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#198-200)\n\t-holders.push(msg.sender) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#202)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UHCToken",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "function": "backendRefund",
+            "impact": "Medium",
+            "line": 291,
+            "line_end": 308,
+            "message": "UHCToken.backendRefund (0x114f1fc16db3615de301b39914625a79b912ea11.sol#291-308) does not use the value returned by external calls:\n\t-holders.remove(_from) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#304-305)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UHCToken",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "function": "_transfer",
+            "impact": "Medium",
+            "line": 332,
+            "line_end": 369,
+            "message": "UHCToken._transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332-369) does not use the value returned by external calls:\n\t-holders.remove(_from) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#353-355)\n\t-holders.push(_to) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#356)\n\t-holders.push(accounts[_from].referer) (0x114f1fc16db3615de301b39914625a79b912ea11.sol#365)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UHCToken",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "function": "userMigration",
+            "impact": "Medium",
+            "line": 427,
+            "line_end": 431,
+            "message": "UHCToken.userMigration (0x114f1fc16db3615de301b39914625a79b912ea11.sol#427-431) does not use the value returned by external calls:\n\t-holders.remove(msg.sender) (0x114f1fc16db3615de301b39914625a79b912ea11.sol)\n\t-holders.push(owner) (0x114f1fc16db3615de301b39914625a79b912ea11.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 114,
+            "message": "Struct 'UHCToken.account' (0x114f1fc16db3615de301b39914625a79b912ea11.sol#108-114) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 128,
+            "message": "Struct 'UHCToken.groupPolicy' (0x114f1fc16db3615de301b39914625a79b912ea11.sol#124-128) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 407,
+            "message": "Parameter '_owner' of UHCToken.balanceOf (0x114f1fc16db3615de301b39914625a79b912ea11.sol#407) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 328,
+            "message": "Parameter '_to' of UHCToken.transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#328) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 328,
+            "message": "Parameter '_value' of UHCToken.transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#328) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 329,
+            "message": "Parameter '_from' of UHCToken.transferFrom (0x114f1fc16db3615de301b39914625a79b912ea11.sol#329) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 329,
+            "message": "Parameter '_to' of UHCToken.transferFrom (0x114f1fc16db3615de301b39914625a79b912ea11.sol#329) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 330,
+            "message": "Parameter '_value' of UHCToken.transferFrom (0x114f1fc16db3615de301b39914625a79b912ea11.sol#329-330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 372,
+            "message": "Parameter '_spender' of UHCToken.approve (0x114f1fc16db3615de301b39914625a79b912ea11.sol#372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 372,
+            "message": "Parameter '_value' of UHCToken.approve (0x114f1fc16db3615de301b39914625a79b912ea11.sol#372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 403,
+            "message": "Parameter '_owner' of UHCToken.allowance (0x114f1fc16db3615de301b39914625a79b912ea11.sol#403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 403,
+            "message": "Parameter '_spender' of UHCToken.allowance (0x114f1fc16db3615de301b39914625a79b912ea11.sol#403) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_name' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_symbol' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_decimals' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 135,
+            "message": "Parameter '_summarySupply' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#134-135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 137,
+            "message": "Parameter '_transferFeePercent' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#135-137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 137,
+            "message": "Parameter '_refererFeePercent' of UHCToken. (0x114f1fc16db3615de301b39914625a79b912ea11.sol#137) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 171,
+            "message": "Parameter '_address' of UHCToken.serviceGroupChange (0x114f1fc16db3615de301b39914625a79b912ea11.sol#171) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 173,
+            "message": "Parameter '_group' of UHCToken.serviceGroupChange (0x114f1fc16db3615de301b39914625a79b912ea11.sol#171-173) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 212,
+            "message": "Parameter '_address' of UHCToken.serviceSwitchTransferAbility (0x114f1fc16db3615de301b39914625a79b912ea11.sol#211-212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 233,
+            "message": "Parameter '_address' of UHCToken.serviceSetPromo (0x114f1fc16db3615de301b39914625a79b912ea11.sol#233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_address' of UHCToken.serviceAccountTransferFee (0x114f1fc16db3615de301b39914625a79b912ea11.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Parameter '_withoutTransferFee' of UHCToken.serviceAccountTransferFee (0x114f1fc16db3615de301b39914625a79b912ea11.sol#246-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 253,
+            "message": "Parameter '_address' of UHCToken.backendSetStatus (0x114f1fc16db3615de301b39914625a79b912ea11.sol#253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_referal' of UHCToken.backendSetReferer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_referer' of UHCToken.backendSetReferer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 279,
+            "message": "Parameter '_to' of UHCToken.backendSendBonus (0x114f1fc16db3615de301b39914625a79b912ea11.sol#278-279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 279,
+            "message": "Parameter '_value' of UHCToken.backendSendBonus (0x114f1fc16db3615de301b39914625a79b912ea11.sol#279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 292,
+            "message": "Parameter '_from' of UHCToken.backendRefund (0x114f1fc16db3615de301b39914625a79b912ea11.sol#291-292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 292,
+            "message": "Parameter '_value' of UHCToken.backendRefund (0x114f1fc16db3615de301b39914625a79b912ea11.sol#292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 309,
+            "message": "Parameter '_check' of UHCToken.getGroup (0x114f1fc16db3615de301b39914625a79b912ea11.sol#309) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 317,
+            "message": "Parameter '_index' of UHCToken.getHolderByIndex (0x114f1fc16db3615de301b39914625a79b912ea11.sol#317) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 321,
+            "message": "Parameter '_promo' of UHCToken.getPromoAddress (0x114f1fc16db3615de301b39914625a79b912ea11.sol#321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_check' of UHCToken.getAddressTransferAbility (0x114f1fc16db3615de301b39914625a79b912ea11.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 332,
+            "line_end": 369,
+            "message": "Function 'UHCToken._transfer' (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332-369) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 332,
+            "message": "Parameter '_from' of UHCToken._transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 332,
+            "message": "Parameter '_to' of UHCToken._transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 332,
+            "message": "Parameter '_allow' of UHCToken._transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 332,
+            "message": "Parameter '_value' of UHCToken._transfer (0x114f1fc16db3615de301b39914625a79b912ea11.sol#332) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 379,
+            "message": "Parameter '_spender' of UHCToken.increaseApproval (0x114f1fc16db3615de301b39914625a79b912ea11.sol#379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 379,
+            "message": "Parameter '_addedValue' of UHCToken.increaseApproval (0x114f1fc16db3615de301b39914625a79b912ea11.sol#379) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_spender' of UHCToken.decreaseApproval (0x114f1fc16db3615de301b39914625a79b912ea11.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_subtractedValue' of UHCToken.decreaseApproval (0x114f1fc16db3615de301b39914625a79b912ea11.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 411,
+            "message": "Parameter '_owner' of UHCToken.statusOf (0x114f1fc16db3615de301b39914625a79b912ea11.sol#411) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 415,
+            "line_end": 418,
+            "message": "Parameter '_owner' of UHCToken.refererOf (0x114f1fc16db3615de301b39914625a79b912ea11.sol#415-418) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x114f1fc16db3615de301b39914625a79b912ea11.sol",
+            "impact": "Informational",
+            "line": 427,
+            "line_end": 428,
+            "message": "Parameter '_secret' of UHCToken.userMigration (0x114f1fc16db3615de301b39914625a79b912ea11.sol#427-428) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,268 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Medium",
+            "line": 96,
+            "line_end": 97,
+            "message": "ZYL.totalSupply (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#96-97) shadows:\n\t- ERC20Basic.totalSupply (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#4-5)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "ERC20Basic.totalSupply should be constant (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#4-5)\nZYL.symbol should be constant (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#91-92)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Basic.balanceOf (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZYL",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 139,
+            "message": "ZYL.balanceOf (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#136-139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZYL",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 136,
+            "message": "ZYL.transfer (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#124-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "ERC20Basic.transfer (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#6-7) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "ERC20.allowance (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#12-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZYL",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "message": "ZYL.allowance (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZYL",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 151,
+            "message": "ZYL.transferFrom (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#139-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "ERC20.transferFrom (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#13-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "ERC20.approve (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#14-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZYL",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 160,
+            "message": "ZYL.approve (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#151-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 61,
+            "message": "Ownable.transferOwnership (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#50-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol:\n\t- pragma solidity^0.4.18 (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 38,
+            "message": "Function 'Ownable.Ownable' (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#33-38) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 136,
+            "message": "Parameter '_owner' of ZYL.balanceOf (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_to' of ZYL.transfer (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "Parameter '_value' of ZYL.transfer (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#124-125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of ZYL.allowance (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of ZYL.allowance (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 139,
+            "message": "Parameter '_from' of ZYL.transferFrom (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 141,
+            "message": "Parameter '_to' of ZYL.transferFrom (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#139-141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_value' of ZYL.transferFrom (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 152,
+            "message": "Parameter '_spender' of ZYL.approve (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#151-152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 155,
+            "message": "Parameter '_value' of ZYL.approve (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#152-155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 114,
+            "message": "Function 'ZYL.ZYL' (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#105-114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 94,
+            "message": "Constant 'ZYL.version' (0xd7de419b6331c160eaa33ae32b635f6aa54e0e61.sol#92-94) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

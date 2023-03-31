@@ -1,0 +1,70 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:
+/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:105:22: Warning: This declaration shadows an existing declaration.
+  function balanceOf(address owner) public view returns (uint256) {
+                     ^-----------^
+/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:89:3: The shadowed declaration is here:
+  address owner;
+  ^-----------^
+/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:108:22: Warning: This declaration shadows an existing declaration.
+  function allowance(address owner, address spender) public view returns (uint256) {
+                     ^-----------^
+/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:89:3: The shadowed declaration is here:
+  address owner;
+  ^-----------^
+
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:
+	Contract ClaymoreToken has payable functions:
+	 - constructor (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#94-101)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[92m
+ERC20Detailed.constructor.name (local variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#58-60) shadows:
+	- ERC20Detailed.name (function @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#67-71)
+ERC20Detailed.constructor.symbol (local variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#60) shadows:
+	- ERC20Detailed.symbol (function @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#71-75)
+ERC20Detailed.constructor.decimals (local variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#60-61) shadows:
+	- ERC20Detailed.decimals (function @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#75-80)
+ClaymoreToken.balanceOf.owner (local variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#108) shadows:
+	- ClaymoreToken.owner (state variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#93)
+ClaymoreToken.allowance.owner (local variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#111) shadows:
+	- ClaymoreToken.owner (state variable @ /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#93)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+ERC20Detailed.name (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#67-71) should be declared external
+ERC20Detailed.symbol (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#71-75) should be declared external
+ERC20Detailed.decimals (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#75-80) should be declared external
+IERC20.totalSupply (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#8-9) should be declared external
+ClaymoreToken.totalSupply (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#101-105) should be declared external
+IERC20.balanceOf (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#9-10) should be declared external
+ClaymoreToken.balanceOf (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#106-109) should be declared external
+IERC20.allowance (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#10-11) should be declared external
+ClaymoreToken.allowance (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#109-114) should be declared external
+ClaymoreToken.approve (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#148-155) should be declared external
+IERC20.approve (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#12-13) should be declared external
+IERC20.transferFrom (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#13-15) should be declared external
+ClaymoreToken.transferFrom (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#155-176) should be declared external
+ClaymoreToken.totalBurned (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#105-106) should be declared external
+ClaymoreToken.unlockFullSupply (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#115-122) should be declared external
+ClaymoreToken.multiTransfer (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#142-148) should be declared external
+ClaymoreToken.increaseAllowance (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#176-183) should be declared external
+ClaymoreToken.decreaseAllowance (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#183-191) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol:
+	- pragma solidity^0.5.0 (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#5-7): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'ClaymoreToken._mint' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#191-200) is not in mixedCase
+Function 'ClaymoreToken._burn' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#202-209) is not in mixedCase
+Constant 'ClaymoreToken.tokenName' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#85-86) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'ClaymoreToken.tokenSymbol' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#86) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'ClaymoreToken.tokenDecimals' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#86-87) is not in UPPER_CASE_WITH_UNDERSCORES
+Variable 'ClaymoreToken._totalSupply' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#87-93) is not in mixedCase
+Variable 'ClaymoreToken._totalBurned' (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#93) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+ClaymoreToken.tokenName (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#85-86) is never used in ClaymoreToken
+ClaymoreToken.tokenSymbol (/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol#86) is never used in ClaymoreToken
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/sb/0x0ed8343dfdee32e38b4c4ce15a3b00a59e90f3db.sol analyzed (4 contracts), 33 result(s) found

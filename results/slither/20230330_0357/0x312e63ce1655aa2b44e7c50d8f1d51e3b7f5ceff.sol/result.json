@@ -1,0 +1,287 @@
+{
+    "errors": [
+        "EXIT_CODE_30"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 5,
+            "line_end": 103,
+            "message": "EasyCoin (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#5-103) has incorrect ERC20 function interface(s):\n\t-transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#47-52)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 11,
+            "message": "EasyCoin.decimals should be constant (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#10-11)\nEasyCoin.version should be constant (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#9-10)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 3,
+            "message": "tokenRecipient.receiveApproval (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#3) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 52,
+            "message": "EasyCoin.transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#47-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 60,
+            "message": "EasyCoin.transferFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#52-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 79,
+            "message": "EasyCoin.approveAndCall (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#67-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 86,
+            "message": "EasyCoin.burn (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#79-86) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 97,
+            "message": "EasyCoin.burnFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#87-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EasyCoin",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 103,
+            "message": "EasyCoin.mint (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#97-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol:\n\t- pragma solidity0.4.18 (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Contract 'tokenRecipient' (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#3-5) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 34,
+            "message": "Function 'EasyCoin.EasyCoin' (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#23-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 47,
+            "message": "Function 'EasyCoin._transfer' (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#34-47) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 34,
+            "message": "Parameter '_from' of EasyCoin._transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 35,
+            "message": "Parameter '_to' of EasyCoin._transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#34-35) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 36,
+            "message": "Parameter '_value' of EasyCoin._transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 48,
+            "message": "Parameter '_to' of EasyCoin.transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 48,
+            "message": "Parameter '_value' of EasyCoin.transfer (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_from' of EasyCoin.transferFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 53,
+            "message": "Parameter '_to' of EasyCoin.transferFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#52-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 53,
+            "message": "Parameter '_value' of EasyCoin.transferFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "Parameter '_spender' of EasyCoin.approve (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#61-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_value' of EasyCoin.approve (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 69,
+            "message": "Parameter '_spender' of EasyCoin.approveAndCall (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#68-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 69,
+            "message": "Parameter '_value' of EasyCoin.approveAndCall (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_extraData' of EasyCoin.approveAndCall (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 79,
+            "message": "Parameter '_value' of EasyCoin.burn (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#79) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 87,
+            "message": "Parameter '_from' of EasyCoin.burnFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#87) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 88,
+            "message": "Parameter '_value' of EasyCoin.burnFrom (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#87-88) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 98,
+            "message": "Parameter '_value' of EasyCoin.mint (0x312e63ce1655aa2b44e7c50d8f1d51e3b7f5ceff.sol#97-98) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,277 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "tokenWithdraw",
+            "impact": "Medium",
+            "line": 143,
+            "line_end": 146,
+            "message": "XRRsale.tokenWithdraw (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#143-146) does not use the value returned by external calls:\n\t-token.transfer(owner,tokenTosale()) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#145-146)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 148,
+            "line_end": 160,
+            "message": "XRRsale.fallback (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#148-160) does not use the value returned by external calls:\n\t-token.transfer(msg.sender,tokens) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#158-159)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "sendTokens",
+            "impact": "Medium",
+            "line": 160,
+            "line_end": 172,
+            "message": "XRRsale.sendTokens (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#160-172) does not use the value returned by external calls:\n\t-token.transfer(_to,_value) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#171-172)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "finishSale",
+            "impact": "Medium",
+            "line": 172,
+            "line_end": 175,
+            "message": "XRRsale.finishSale (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#172-175) does not use the value returned by external calls:\n\t-token.transfer(frozenVaults,tokensToFrozen) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "fallback",
+            "impact": "Low",
+            "line": 148,
+            "line_end": 160,
+            "message": "Reentrancy in XRRsale.fallback (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#148-160):\n\tExternal calls:\n\t- require(bool)(tokens <= tokenTosale()) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#154-155)\n\tState variables written after the call(s):\n\t- totalTokenRaiseWei (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#157)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "sendTokens",
+            "impact": "Low",
+            "line": 160,
+            "line_end": 172,
+            "message": "Reentrancy in XRRsale.sendTokens (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#160-172):\n\tExternal calls:\n\t- require(bool)(_value <= tokenTosale()) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#163-164)\n\t- require(bool)(tokenTosale() >= _value) (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#165)\n\tState variables written after the call(s):\n\t- totalRaiseWei (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#169-170)\n\t- totalTokenRaiseWei (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#170-171)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "XRRsale.ICO1 should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#107-108)\nXRRsale.ICO2 should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#108-110)\nXRRsale.ICO3 should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#110-114)\nXRRsale.ICO4 should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#114)\nXRRsale.ICOend should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#114-115)\nXRRsale.PreSaleEnd should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#104-105)\nXRRsale.PreSaleStart should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#103)\nXRRsale.frozenVaults should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#94-97)\nXRRsale.wallet should be constant (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#91-92)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 82,
+            "message": "Ownable.transferOwnership (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#74-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRtoken",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 87,
+            "message": "XRRtoken.balanceOf (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#84-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRtoken",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 90,
+            "message": "XRRtoken.transfer (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#87-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "tokenWithdraw",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 146,
+            "message": "XRRsale.tokenWithdraw (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#143-146) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 160,
+            "message": "XRRsale.fallback (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#148-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "sendTokens",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 172,
+            "message": "XRRsale.sendTokens (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#160-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "XRRsale",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "function": "finishSale",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 175,
+            "message": "XRRsale.finishSale (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#172-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol:\n\t- pragma solidity^0.4.18 (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 62,
+            "message": "Function 'Ownable.Ownable' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#59-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 115,
+            "message": "Function 'XRRsale.XRRsale' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#115) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 126,
+            "message": "Parameter '_amount' of XRRsale.checkAmount (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#125-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_to' of XRRsale.sendTokens (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_value' of XRRsale.sendTokens (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 103,
+            "message": "Variable 'XRRsale.PreSaleStart' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "Variable 'XRRsale.PreSaleEnd' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#104-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "Variable 'XRRsale.ICO1' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#107-108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 110,
+            "message": "Variable 'XRRsale.ICO2' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#108-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 114,
+            "message": "Variable 'XRRsale.ICO3' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#110-114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "Variable 'XRRsale.ICO4' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 115,
+            "message": "Variable 'XRRsale.ICOend' (0xb8f35a92d4df97b7647aebf99da7627064371e1a.sol#114-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

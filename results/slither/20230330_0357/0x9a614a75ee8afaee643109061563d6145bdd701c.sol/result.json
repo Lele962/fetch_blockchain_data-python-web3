@@ -1,0 +1,735 @@
+{
+    "errors": [
+        "EXIT_CODE_80"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 478,
+            "message": "tokensPurchased in TALLY.fallback (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#478) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 475,
+            "line_end": 506,
+            "message": "TALLY.fallback (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#475-506) does not use the value returned by external calls:\n\t-this.transfer(msg.sender,tokensPurchased) (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#506)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "moveUnsoldTokensToFoundation",
+            "impact": "Medium",
+            "line": 579,
+            "line_end": 583,
+            "message": "TALLY.moveUnsoldTokensToFoundation (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#579-583) does not use the value returned by external calls:\n\t-this.transfer(foundationAddress,balances[this]) (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#581-583)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 435,
+            "line_end": 437,
+            "message": "TALLY.minimumAmountToParticipate should be constant (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#435-437)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 116,
+            "message": "BasicToken.totalSupply (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#114-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "ERC20Basic.totalSupply (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#14-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 16,
+            "message": "ERC20Basic.balanceOf (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#15-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 145,
+            "message": "BasicToken.balanceOf (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#142-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "ERC20.allowance (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#26-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 198,
+            "line_end": 201,
+            "message": "StandardToken.allowance (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#198-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 275,
+            "message": "ERC827Token.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#272-275) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 42,
+            "message": "ERC827.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#41-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 334,
+            "message": "ERC827Token.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#329-334) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 356,
+            "line_end": 367,
+            "message": "ERC827Token.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#356-367) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 402,
+            "line_end": 407,
+            "message": "Ownable.transferOwnership (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#402-407) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setPreSaleTLYperETH",
+            "impact": "Informational",
+            "line": 583,
+            "line_end": 586,
+            "message": "TALLY.setPreSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#583-586) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setPreSaleStartAndEndTime",
+            "impact": "Informational",
+            "line": 586,
+            "line_end": 594,
+            "message": "TALLY.setPreSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#586-594) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setPreferredSaleTLYperETH",
+            "impact": "Informational",
+            "line": 594,
+            "line_end": 599,
+            "message": "TALLY.setPreferredSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#594-599) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setPreferredSaleStartAndEndTime",
+            "impact": "Informational",
+            "message": "TALLY.setPreferredSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setMainSaleTLYperETH",
+            "impact": "Informational",
+            "message": "TALLY.setMainSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TALLY",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "setMainSaleStartAndEndTime",
+            "impact": "Informational",
+            "message": "TALLY.setMainSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 8,
+            "message": "Detected issues with version pragma in 0x9a614a75ee8afaee643109061563d6145bdd701c.sol:\n\t- pragma solidity^0.4.19 (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#6-8): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 275,
+            "message": "Low level call in ERC827Token.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#272-275):\n\t-require(bool)(_spender.call(_data)) 0x9a614a75ee8afaee643109061563d6145bdd701c.sol#274-275\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 289,
+            "line_end": 293,
+            "message": "Low level call in ERC827Token.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#289-293):\n\t-require(bool)(_to.call(_data)) 0x9a614a75ee8afaee643109061563d6145bdd701c.sol#292\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 311,
+            "message": "Low level call in ERC827Token.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#307-311):\n\t-require(bool)(_to.call(_data)) 0x9a614a75ee8afaee643109061563d6145bdd701c.sol#311\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 334,
+            "message": "Low level call in ERC827Token.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#329-334):\n\t-require(bool)(_spender.call(_data)) 0x9a614a75ee8afaee643109061563d6145bdd701c.sol#333\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC827Token",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 356,
+            "line_end": 367,
+            "message": "Low level call in ERC827Token.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#356-367):\n\t-require(bool)(_spender.call(_data)) 0x9a614a75ee8afaee643109061563d6145bdd701c.sol#363\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#144) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_to' of BasicToken.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "Parameter '_value' of BasicToken.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#121-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 199,
+            "line_end": 200,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#199-200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 162,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 162,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#162) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 164,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#162-164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 188,
+            "message": "Parameter '_spender' of StandardToken.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 188,
+            "message": "Parameter '_value' of StandardToken.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 210,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#209-210) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 214,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#210-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 228,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#228) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 228,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#228) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_spender' of ERC827Token.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 273,
+            "message": "Parameter '_value' of ERC827Token.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#272-273) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 273,
+            "message": "Parameter '_data' of ERC827Token.approve (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#273) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_to' of ERC827Token.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_value' of ERC827Token.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_data' of ERC827Token.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 307,
+            "line_end": 308,
+            "message": "Parameter '_from' of ERC827Token.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#307-308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Parameter '_to' of ERC827Token.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Parameter '_value' of ERC827Token.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 308,
+            "message": "Parameter '_data' of ERC827Token.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 330,
+            "message": "Parameter '_spender' of ERC827Token.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 330,
+            "message": "Parameter '_addedValue' of ERC827Token.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 330,
+            "message": "Parameter '_data' of ERC827Token.increaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 356,
+            "line_end": 357,
+            "message": "Parameter '_spender' of ERC827Token.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#356-357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 357,
+            "message": "Parameter '_subtractedValue' of ERC827Token.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 357,
+            "message": "Parameter '_data' of ERC827Token.decreaseApproval (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#357) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 386,
+            "message": "Function 'Ownable.Ownable' (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#386) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 536,
+            "line_end": 537,
+            "message": "Parameter '_to' of TALLY.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#536-537) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 537,
+            "message": "Parameter '_value' of TALLY.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#537) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 546,
+            "line_end": 547,
+            "message": "Parameter '_from' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#546-547) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 547,
+            "message": "Parameter '_to' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#547) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 547,
+            "message": "Parameter '_value' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#547) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 540,
+            "message": "Parameter '_to' of TALLY.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#540) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 540,
+            "message": "Parameter '_value' of TALLY.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#540) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 540,
+            "line_end": 542,
+            "message": "Parameter '_data' of TALLY.transfer (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#540-542) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 555,
+            "message": "Parameter '_from' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#555) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 556,
+            "line_end": 557,
+            "message": "Parameter '_to' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#556-557) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 557,
+            "message": "Parameter '_value' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#557) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 557,
+            "message": "Parameter '_data' of TALLY.transferFrom (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#557) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 440,
+            "line_end": 475,
+            "message": "Function 'TALLY.TALLY' (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#440-475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 583,
+            "line_end": 585,
+            "message": "Parameter '_newTLYperETH' of TALLY.setPreSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#583-585) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 589,
+            "line_end": 590,
+            "message": "Parameter '_newStartTime' of TALLY.setPreSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#589-590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 590,
+            "message": "Parameter '_newEndTime' of TALLY.setPreSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "line": 595,
+            "line_end": 596,
+            "message": "Parameter '_newTLYperETH' of TALLY.setPreferredSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol#595-596) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newStartTime' of TALLY.setPreferredSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newEndTime' of TALLY.setPreferredSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newTLYperETH' of TALLY.setMainSaleTLYperETH (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newStartTime' of TALLY.setMainSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a614a75ee8afaee643109061563d6145bdd701c.sol",
+            "impact": "Informational",
+            "message": "Parameter '_newEndTime' of TALLY.setMainSaleStartAndEndTime (0x9a614a75ee8afaee643109061563d6145bdd701c.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

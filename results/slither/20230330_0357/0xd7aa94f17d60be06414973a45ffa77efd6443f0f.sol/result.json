@@ -1,0 +1,345 @@
+{
+    "errors": [
+        "EXIT_CODE_35"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "airDropJoin",
+            "impact": "Medium",
+            "line": 102,
+            "line_end": 118,
+            "message": "Reentrancy in BitcoinQuick.airDropJoin (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#102-118):\n\tExternal calls:\n\t- require(bool)(! airDropMembers[msg.sender] && airDrop(airDropVerify).verify(msg.sender,_secret) && airDropHeight > 0 && airDropAmount > 0 && accounts[owner] >= airDropAmount) (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#103-106)\n\tState variables written after the call(s):\n\t- accounts (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#107-108)\n\t- accounts (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#108-109)\n\t- airDropHeight (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#112)\n\t- airDropMembers (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#109-110)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "BitcoinQuick._totalSupply should be constant (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#16-18)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "airDrop",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "verify",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 8,
+            "message": "airDrop.verify (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#5-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 50,
+            "message": "BitcoinQuick.totalSupply (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#46-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 54,
+            "message": "BitcoinQuick.balanceOf (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#50-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 58,
+            "message": "BitcoinQuick.allowance (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#54-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 66,
+            "message": "BitcoinQuick.transfer (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#58-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 75,
+            "message": "BitcoinQuick.transferFrom (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#66-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 82,
+            "message": "BitcoinQuick.approve (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#75-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "purchase",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 102,
+            "message": "BitcoinQuick.purchase (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#82-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "airDropJoin",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 118,
+            "message": "BitcoinQuick.airDropJoin (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#102-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "airDropSetup",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 126,
+            "message": "BitcoinQuick.airDropSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#118-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "crowdsaleSetup",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 133,
+            "message": "BitcoinQuick.crowdsaleSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#126-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BitcoinQuick",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "function": "withdrawFunds",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 137,
+            "message": "BitcoinQuick.withdrawFunds (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#133-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol:\n\t- pragma solidity^0.4.16 (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 9,
+            "message": "Contract 'airDrop' (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#4-9) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 46,
+            "message": "Function 'BitcoinQuick.BitcoinQuick' (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#41-46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "Parameter '_account' of BitcoinQuick.balanceOf (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#50-51) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 54,
+            "message": "Parameter '_account' of BitcoinQuick.allowance (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 55,
+            "message": "Parameter '_spender' of BitcoinQuick.allowance (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#54-55) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 59,
+            "message": "Parameter '_to' of BitcoinQuick.transfer (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#58-59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_amount' of BitcoinQuick.transfer (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 67,
+            "message": "Parameter '_from' of BitcoinQuick.transferFrom (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#66-67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_to' of BitcoinQuick.transferFrom (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_amount' of BitcoinQuick.transferFrom (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_spender' of BitcoinQuick.approve (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Parameter '_amount' of BitcoinQuick.approve (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 103,
+            "message": "Parameter '_secret' of BitcoinQuick.airDropJoin (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#102-103) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 119,
+            "message": "Parameter '_contract' of BitcoinQuick.airDropSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#118-119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 119,
+            "message": "Parameter '_height' of BitcoinQuick.airDropSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_units' of BitcoinQuick.airDropSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_supply' of BitcoinQuick.crowdsaleSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "Parameter '_perEther' of BitcoinQuick.crowdsaleSetup (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#126-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_amount' of BitcoinQuick.withdrawFunds (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "Variable 'BitcoinQuick._totalSupply' (0xd7aa94f17d60be06414973a45ffa77efd6443f0f.sol#16-18) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

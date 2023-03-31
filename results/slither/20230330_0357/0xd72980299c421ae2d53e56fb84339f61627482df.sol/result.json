@@ -1,0 +1,657 @@
+{
+    "errors": [
+        "EXIT_CODE_69"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "readAllUsers",
+            "impact": "Medium",
+            "line": 396,
+            "line_end": 408,
+            "message": "TokenNWTC.readAllUsers (0xd72980299c421ae2d53e56fb84339f61627482df.sol#396-408) is declared view but changes state variables:\n\t- TokenNWTC.users1\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "readAllFrzAcc",
+            "impact": "Medium",
+            "line": 408,
+            "line_end": 416,
+            "message": "TokenNWTC.readAllFrzAcc (0xd72980299c421ae2d53e56fb84339f61627482df.sol#408-416) is declared view but changes state variables:\n\t- TokenNWTC.frzAcc1\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 22,
+            "line_end": 160,
+            "message": "TokenERC20 (0xd72980299c421ae2d53e56fb84339f61627482df.sol#22-160) has incorrect ERC20 function interface(s):\n\t-transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#81-86)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 20,
+            "message": "owned.transferOwnership (0xd72980299c421ae2d53e56fb84339f61627482df.sol#15-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "tokenRecipient.receiveApproval (0xd72980299c421ae2d53e56fb84339f61627482df.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 86,
+            "message": "TokenERC20.transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#81-86) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 100,
+            "message": "TokenERC20.transferFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#91-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 129,
+            "message": "TokenERC20.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#119-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 485,
+            "message": "TokenNWTC.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#479-485) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 142,
+            "message": "TokenERC20.burn (0xd72980299c421ae2d53e56fb84339f61627482df.sol#132-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 491,
+            "line_end": 497,
+            "message": "TokenNWTC.burn (0xd72980299c421ae2d53e56fb84339f61627482df.sol#491-497) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 160,
+            "message": "TokenERC20.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#146-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 500,
+            "line_end": 523,
+            "message": "TokenNWTC.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#500-523) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 294,
+            "message": "TokenNWTC.mintToken (0xd72980299c421ae2d53e56fb84339f61627482df.sol#268-294) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 299,
+            "line_end": 320,
+            "message": "TokenNWTC.freezeAccount (0xd72980299c421ae2d53e56fb84339f61627482df.sol#299-320) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "freezeAllAccountInEmergency",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 321,
+            "message": "TokenNWTC.freezeAllAccountInEmergency (0xd72980299c421ae2d53e56fb84339f61627482df.sol#320-321) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 330,
+            "line_end": 340,
+            "message": "TokenNWTC.setPrices (0xd72980299c421ae2d53e56fb84339f61627482df.sol#330-340) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 374,
+            "message": "TokenNWTC.buy (0xd72980299c421ae2d53e56fb84339f61627482df.sol#342-374) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 376,
+            "line_end": 396,
+            "message": "TokenNWTC.sell (0xd72980299c421ae2d53e56fb84339f61627482df.sol#376-396) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "readAllUsers",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 408,
+            "message": "TokenNWTC.readAllUsers (0xd72980299c421ae2d53e56fb84339f61627482df.sol#396-408) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "readAllFrzAcc",
+            "impact": "Informational",
+            "line": 408,
+            "line_end": 416,
+            "message": "TokenNWTC.readAllFrzAcc (0xd72980299c421ae2d53e56fb84339f61627482df.sol#408-416) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "readSellTokenAmount",
+            "impact": "Informational",
+            "line": 417,
+            "line_end": 418,
+            "message": "TokenNWTC.readSellTokenAmount (0xd72980299c421ae2d53e56fb84339f61627482df.sol#417-418) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "getTokenName",
+            "impact": "Informational",
+            "line": 524,
+            "line_end": 529,
+            "message": "TokenNWTC.getTokenName (0xd72980299c421ae2d53e56fb84339f61627482df.sol#524-529) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "getTokenSymbol",
+            "impact": "Informational",
+            "message": "TokenNWTC.getTokenSymbol (0xd72980299c421ae2d53e56fb84339f61627482df.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "getSpecifiedDecimal",
+            "impact": "Informational",
+            "message": "TokenNWTC.getSpecifiedDecimal (0xd72980299c421ae2d53e56fb84339f61627482df.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenNWTC",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "function": "getTotalSupply",
+            "impact": "Informational",
+            "message": "TokenNWTC.getTotalSupply (0xd72980299c421ae2d53e56fb84339f61627482df.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd72980299c421ae2d53e56fb84339f61627482df.sol:\n\t- pragma solidity^0.4.11 (0xd72980299c421ae2d53e56fb84339f61627482df.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Contract 'tokenRecipient' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#20-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 59,
+            "message": "Function 'TokenERC20.TokenERC20' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#46-59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 76,
+            "message": "Function 'TokenERC20._transfer' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#61-76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_from' of TokenERC20._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_to' of TokenERC20._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_value' of TokenERC20._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 84,
+            "message": "Parameter '_to' of TokenERC20.transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#81-84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 85,
+            "message": "Parameter '_value' of TokenERC20.transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#84-85) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_from' of TokenERC20.transferFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_to' of TokenERC20.transferFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_value' of TokenERC20.transferFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 106,
+            "message": "Parameter '_spender' of TokenERC20.approve (0xd72980299c421ae2d53e56fb84339f61627482df.sol#106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "Parameter '_value' of TokenERC20.approve (0xd72980299c421ae2d53e56fb84339f61627482df.sol#106-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 119,
+            "message": "Parameter '_spender' of TokenERC20.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_value' of TokenERC20.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_extraData' of TokenERC20.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "Parameter '_value' of TokenERC20.burn (0xd72980299c421ae2d53e56fb84339f61627482df.sol#132-133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 146,
+            "message": "Parameter '_from' of TokenERC20.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 147,
+            "message": "Parameter '_value' of TokenERC20.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#146-147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 200,
+            "message": "Contract 'utility' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#163-200) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 165,
+            "message": "Event 'utility.check1' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#165) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 168,
+            "message": "Parameter '_decimalValue' of utility.calculateEthers (0xd72980299c421ae2d53e56fb84339f61627482df.sol#167-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_amount' of utility.calculateTokens (0xd72980299c421ae2d53e56fb84339f61627482df.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 175,
+            "message": "Parameter '_rate' of utility.calculateTokens (0xd72980299c421ae2d53e56fb84339f61627482df.sol#174-175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 175,
+            "message": "Parameter '_decimalValue' of utility.calculateTokens (0xd72980299c421ae2d53e56fb84339f61627482df.sol#175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_amount' of utility.decimalAdjustment (0xd72980299c421ae2d53e56fb84339f61627482df.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 186,
+            "message": "Parameter '_decimalPlaces' of utility.decimalAdjustment (0xd72980299c421ae2d53e56fb84339f61627482df.sol#185-186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 209,
+            "line_end": 211,
+            "message": "Event 'TokenNWTC.check' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#209-211) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 262,
+            "message": "Function 'TokenNWTC._transfer' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#230-262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_from' of TokenNWTC._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_to' of TokenNWTC._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 231,
+            "message": "Parameter '_value' of TokenNWTC._transfer (0xd72980299c421ae2d53e56fb84339f61627482df.sol#230-231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 465,
+            "message": "Parameter '_spender' of TokenNWTC.approve (0xd72980299c421ae2d53e56fb84339f61627482df.sol#465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 465,
+            "message": "Parameter '_value' of TokenNWTC.approve (0xd72980299c421ae2d53e56fb84339f61627482df.sol#465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 481,
+            "message": "Parameter '_spender' of TokenNWTC.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#481) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 481,
+            "message": "Parameter '_value' of TokenNWTC.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#481) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 481,
+            "message": "Parameter '_extraData' of TokenNWTC.approveAndCall (0xd72980299c421ae2d53e56fb84339f61627482df.sol#481) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 491,
+            "line_end": 492,
+            "message": "Parameter '_value' of TokenNWTC.burn (0xd72980299c421ae2d53e56fb84339f61627482df.sol#491-492) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 500,
+            "message": "Parameter '_from' of TokenNWTC.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 500,
+            "message": "Parameter '_value' of TokenNWTC.burnFrom (0xd72980299c421ae2d53e56fb84339f61627482df.sol#500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd72980299c421ae2d53e56fb84339f61627482df.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 229,
+            "message": "Function 'TokenNWTC.TokenNWTC' (0xd72980299c421ae2d53e56fb84339f61627482df.sol#227-229) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

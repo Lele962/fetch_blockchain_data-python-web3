@@ -1,0 +1,132 @@
+{
+    "errors": [
+        "EXIT_CODE_12"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3,
+            "line_end": 7,
+            "message": "token (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#3-7) has incorrect ERC20 function interface(s):\n\t-transfer (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#4-6)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ZenswapDistribution",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "distributeToken",
+            "impact": "Low",
+            "line": 52,
+            "line_end": 57,
+            "message": "ZenswapDistribution.distributeToken has external calls inside a loop:\n\t- tokenReward.transfer(_addresses[i],_tokensAmount) (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#52-57)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 25,
+            "message": "Ownable.transferOwnership (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#20-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZenswapDistribution",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "distributeToken",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 57,
+            "message": "ZenswapDistribution.distributeToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#44-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZenswapDistribution",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "withdrawToken",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 69,
+            "message": "ZenswapDistribution.withdrawToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#60-69) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZenswapDistribution",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "function": "setTokenReward",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 75,
+            "message": "ZenswapDistribution.setTokenReward (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#71-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 7,
+            "message": "Contract 'token' (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#3-7) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 45,
+            "message": "Parameter '_addresses' of ZenswapDistribution.distributeToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#44-45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 46,
+            "message": "Parameter '_amount' of ZenswapDistribution.distributeToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "Parameter '_address' of ZenswapDistribution.withdrawToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#61-62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_amount' of ZenswapDistribution.withdrawToken (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x1c3a7bafd90133756ac63fee437844c47f707420.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 73,
+            "message": "Parameter '_address' of ZenswapDistribution.setTokenReward (0x1c3a7bafd90133756ac63fee437844c47f707420.sol#72-73) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

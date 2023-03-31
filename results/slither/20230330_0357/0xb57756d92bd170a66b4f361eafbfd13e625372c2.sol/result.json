@@ -1,0 +1,817 @@
+{
+    "errors": [
+        "EXIT_CODE_94"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Medium",
+            "line": 410,
+            "line_end": 431,
+            "message": "AddressUtils.isContract (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#410-431) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 56,
+            "line_end": 225,
+            "message": "ERC721 (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#56-225) has incorrect ERC20 function interface(s):\n\t-transferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#165-166)\n\t-approve (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#178-180)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "NFToken",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 506,
+            "line_end": 970,
+            "message": "NFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#506-970) has incorrect ERC20 function interface(s):\n\t-transferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#718-733)\n\t-approve (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#739-752)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Low",
+            "line": 353,
+            "message": "PausableXcert.canTransfer.owner (local variable @ 0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol) shadows:\n\t- Ownable.owner (state variable @ 0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#353)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "AddressUtils",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 410,
+            "line_end": 431,
+            "message": "AddressUtils.isContract uses assembly (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#410-431)\n\t- 0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#428-431\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 394,
+            "line_end": 406,
+            "message": "Ownable.transferOwnership (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#394-406) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Xcert",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "function": "tokenDataValue",
+            "impact": "Informational",
+            "line": 1442,
+            "line_end": 1452,
+            "message": "Xcert.tokenDataValue (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1442-1452) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 278,
+            "message": "Parameter '_a' of SafeMath.mul (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#277-278) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 278,
+            "message": "Parameter '_b' of SafeMath.mul (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#278) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 296,
+            "message": "Parameter '_a' of SafeMath.div (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#295-296) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 296,
+            "message": "Parameter '_b' of SafeMath.div (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#296) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 323,
+            "message": "Parameter '_a' of SafeMath.sub (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#322-323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 324,
+            "message": "Parameter '_b' of SafeMath.sub (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#323-324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 336,
+            "message": "Parameter '_a' of SafeMath.add (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 336,
+            "message": "Parameter '_b' of SafeMath.add (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#336) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 394,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#394) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 496,
+            "message": "Parameter '_interfaceID' of SupportsInterface.supportsInterface (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#496) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 645,
+            "message": "Parameter '_owner' of NFToken.balanceOf (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#645) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 649,
+            "message": "Parameter '_tokenId' of NFToken.ownerOf (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#649) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 682,
+            "line_end": 685,
+            "message": "Parameter '_from' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#682-685) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 685,
+            "message": "Parameter '_to' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#685) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 685,
+            "message": "Parameter '_tokenId' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#685) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 685,
+            "message": "Parameter '_data' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#685) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 695,
+            "message": "Parameter '_from' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#695) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 696,
+            "message": "Parameter '_to' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#696) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 697,
+            "message": "Parameter '_tokenId' of NFToken.safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#697) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 719,
+            "line_end": 720,
+            "message": "Parameter '_from' of NFToken.transferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#719-720) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 721,
+            "line_end": 722,
+            "message": "Parameter '_to' of NFToken.transferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#721-722) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 722,
+            "line_end": 723,
+            "message": "Parameter '_tokenId' of NFToken.transferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#722-723) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 739,
+            "line_end": 740,
+            "message": "Parameter '_approved' of NFToken.approve (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#739-740) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 740,
+            "line_end": 741,
+            "message": "Parameter '_tokenId' of NFToken.approve (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#740-741) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 769,
+            "line_end": 770,
+            "message": "Parameter '_operator' of NFToken.setApprovalForAll (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#769-770) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 771,
+            "message": "Parameter '_approved' of NFToken.setApprovalForAll (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#771) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 788,
+            "line_end": 789,
+            "message": "Parameter '_tokenId' of NFToken.getApproved (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#788-789) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 805,
+            "message": "Parameter '_owner' of NFToken.isApprovedForAll (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#805) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 805,
+            "line_end": 807,
+            "message": "Parameter '_operator' of NFToken.isApprovedForAll (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#805-807) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 825,
+            "line_end": 840,
+            "message": "Function 'NFToken._safeTransferFrom' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#825-840) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 827,
+            "message": "Parameter '_from' of NFToken._safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#827) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 827,
+            "line_end": 828,
+            "message": "Parameter '_to' of NFToken._safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#827-828) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 828,
+            "message": "Parameter '_tokenId' of NFToken._safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#828) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 829,
+            "message": "Parameter '_data' of NFToken._safeTransferFrom (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#829) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 850,
+            "line_end": 860,
+            "message": "Function 'NFToken._transfer' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#850-860) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 852,
+            "message": "Parameter '_to' of NFToken._transfer (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#852) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 854,
+            "message": "Parameter '_tokenId' of NFToken._transfer (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#854) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 875,
+            "line_end": 888,
+            "message": "Function 'NFToken._mint' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#875-888) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 878,
+            "message": "Parameter '_to' of NFToken._mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#878) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 878,
+            "message": "Parameter '_tokenId' of NFToken._mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#878) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 901,
+            "line_end": 910,
+            "message": "Function 'NFToken._burn' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#901-910) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 903,
+            "message": "Parameter '_owner' of NFToken._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#903) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 903,
+            "line_end": 904,
+            "message": "Parameter '_tokenId' of NFToken._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#903-904) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 913,
+            "message": "Parameter '_owner' of NFToken.clearApproval (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#913) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 913,
+            "message": "Parameter '_tokenId' of NFToken.clearApproval (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#913) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 932,
+            "line_end": 934,
+            "message": "Parameter '_from' of NFToken.removeNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#932-934) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 934,
+            "line_end": 935,
+            "message": "Parameter '_tokenId' of NFToken.removeNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#934-935) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 960,
+            "message": "Parameter '_to' of NFToken.addNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#960) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 960,
+            "line_end": 962,
+            "message": "Parameter '_tokenId' of NFToken.addNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#960-962) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1016,
+            "line_end": 1018,
+            "message": "Function 'NFTokenEnumerable._mint' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1016-1018) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1017,
+            "message": "Parameter '_to' of NFTokenEnumerable._mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1017) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1017,
+            "message": "Parameter '_tokenId' of NFTokenEnumerable._mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1017) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1031,
+            "line_end": 1045,
+            "message": "Function 'NFTokenEnumerable._burn' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1031-1045) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_owner' of NFTokenEnumerable._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1032,
+            "message": "Parameter '_tokenId' of NFTokenEnumerable._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1032) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1061,
+            "message": "Parameter '_from' of NFTokenEnumerable.removeNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1061) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1061,
+            "message": "Parameter '_tokenId' of NFTokenEnumerable.removeNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1061) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1100,
+            "message": "Parameter '_to' of NFTokenEnumerable.addNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1100) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1100,
+            "line_end": 1105,
+            "message": "Parameter '_tokenId' of NFTokenEnumerable.addNFToken (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1100-1105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1127,
+            "message": "Parameter '_index' of NFTokenEnumerable.tokenByIndex (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1141,
+            "message": "Parameter '_owner' of NFTokenEnumerable.tokenOfOwnerByIndex (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1141,
+            "message": "Parameter '_index' of NFTokenEnumerable.tokenOfOwnerByIndex (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1240,
+            "line_end": 1257,
+            "message": "Function 'NFTokenMetadata._burn' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1240-1257) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1241,
+            "line_end": 1242,
+            "message": "Parameter '_owner' of NFTokenMetadata._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1241-1242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1242,
+            "line_end": 1244,
+            "message": "Parameter '_tokenId' of NFTokenMetadata._burn (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1242-1244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1293,
+            "message": "Parameter '_tokenId' of NFTokenMetadata.tokenURI (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1272,
+            "line_end": 1279,
+            "message": "Function 'NFTokenMetadata._setTokenUri' (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1272-1279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1272,
+            "line_end": 1274,
+            "message": "Parameter '_tokenId' of NFTokenMetadata._setTokenUri (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1272-1274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1275,
+            "message": "Parameter '_uri' of NFTokenMetadata._setTokenUri (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1394,
+            "message": "Parameter '_to' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1394) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1394,
+            "line_end": 1395,
+            "message": "Parameter '_id' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1394-1395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1395,
+            "message": "Parameter '_uri' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1395,
+            "message": "Parameter '_proof' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1395,
+            "line_end": 1396,
+            "message": "Parameter '_config' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1395-1396) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1397,
+            "message": "Parameter '_data' of Xcert.mint (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1426,
+            "line_end": 1427,
+            "message": "Parameter '_tokenId' of Xcert.tokenProof (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1426-1427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1445,
+            "message": "Parameter '_tokenId' of Xcert.tokenDataValue (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1445) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1445,
+            "message": "Parameter '_index' of Xcert.tokenDataValue (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1445) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1461,
+            "message": "Parameter '_tokenId' of Xcert.tokenExpirationTime (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1461) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1476,
+            "line_end": 1477,
+            "message": "Parameter '_target' of Xcert.setAuthorizedAddress (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1476-1477) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1477,
+            "line_end": 1478,
+            "message": "Parameter '_authorized' of Xcert.setAuthorizedAddress (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1477-1478) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1496,
+            "line_end": 1497,
+            "message": "Parameter '_target' of Xcert.isAuthorizedAddress (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1496-1497) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "message": "Parameter '_tokenId' of MutableXcert.setTokenData (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 1551,
+            "message": "Parameter '_data' of MutableXcert.setTokenData (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#1551) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "message": "Parameter '_isPaused' of PausableXcert.setPause (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenId' of RevokableXcert.revoke (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol",
+            "impact": "Informational",
+            "line": 983,
+            "line_end": 987,
+            "message": "NFTokenEnumerable.idToIndex (0xb57756d92bd170a66b4f361eafbfd13e625372c2.sol#983-987) is never used in KycToken\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

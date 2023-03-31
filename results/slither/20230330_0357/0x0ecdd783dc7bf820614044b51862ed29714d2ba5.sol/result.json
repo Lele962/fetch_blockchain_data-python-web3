@@ -1,0 +1,450 @@
+{
+    "errors": [
+        "EXIT_CODE_43"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "constructor",
+            "impact": "High",
+            "line": 317,
+            "line_end": 328,
+            "message": "UpgradeabilityProxy.constructor (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#317-328) uses delegatecall to a input-controlled function id\n\trequire(bool)(_implementation.delegatecall(_data)) (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#323-328)\n",
+            "name": "controlled-delegatecall"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AdminUpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "upgradeToAndCall",
+            "impact": "High",
+            "line": 454,
+            "line_end": 465,
+            "message": "AdminUpgradeabilityProxy.upgradeToAndCall (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#454-465) uses delegatecall to a input-controlled function id\n\trequire(bool)(newImplementation.delegatecall(data)) (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#459-464)\n",
+            "name": "controlled-delegatecall"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Medium",
+            "line": 76,
+            "line_end": 91,
+            "message": "ZOSLibAddress.isContract (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#76-91) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Medium",
+            "line": 331,
+            "line_end": 337,
+            "message": "UpgradeabilityProxy._implementation (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#331-337) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Medium",
+            "line": 465,
+            "line_end": 468,
+            "message": "AdminUpgradeabilityProxy._admin (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#465-468) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_implementation",
+            "impact": "Low",
+            "line": 317,
+            "line_end": 318,
+            "message": "UpgradeabilityProxy.constructor._implementation (local variable @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#317-318) shadows:\n\t- UpgradeabilityProxy._implementation (function @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#331-337)\n\t- Proxy._implementation (function @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#19-22)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_implementation",
+            "impact": "Low",
+            "line": 402,
+            "line_end": 403,
+            "message": "AdminUpgradeabilityProxy.constructor._implementation (local variable @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#402-403) shadows:\n\t- UpgradeabilityProxy._implementation (function @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#331-337)\n\t- Proxy._implementation (function @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#19-22)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminUpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_admin",
+            "impact": "Low",
+            "line": 403,
+            "line_end": 404,
+            "message": "AdminUpgradeabilityProxy.constructor._admin (local variable @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#403-404) shadows:\n\t- AdminUpgradeabilityProxy._admin (function @ 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#465-468)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "App",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "setPackage",
+            "impact": "Low",
+            "line": 545,
+            "line_end": 552,
+            "message": "Reentrancy in App.setPackage (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#545-552):\n\tExternal calls:\n\t- require(bool,string)(package.hasVersion(version),The requested version must be registered in the given package) (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#546-548)\n\tState variables written after the call(s):\n\t- providers (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#548-552)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Proxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_delegate",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 49,
+            "message": "Proxy._delegate uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#27-49)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#29-49\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZOSLibAddress",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 91,
+            "message": "ZOSLibAddress.isContract uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#76-91)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#89-91\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_implementation",
+            "impact": "Informational",
+            "line": 331,
+            "line_end": 337,
+            "message": "UpgradeabilityProxy._implementation uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#331-337)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#334-337\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_setImplementation",
+            "impact": "Informational",
+            "line": 351,
+            "line_end": 360,
+            "message": "UpgradeabilityProxy._setImplementation uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#351-360)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#357-360\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminUpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_admin",
+            "impact": "Informational",
+            "line": 465,
+            "line_end": 468,
+            "message": "AdminUpgradeabilityProxy._admin uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#465-468)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#468\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminUpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "_setAdmin",
+            "impact": "Informational",
+            "line": 476,
+            "line_end": 481,
+            "message": "AdminUpgradeabilityProxy._setAdmin uses assembly (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#476-481)\n\t- 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#478-481\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "ImplementationProvider",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "getImplementation",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 103,
+            "message": "ImplementationProvider.getImplementation (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#99-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZOSLibOwnable",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 127,
+            "message": "ZOSLibOwnable.owner (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#124-127) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZOSLibOwnable",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 150,
+            "line_end": 151,
+            "message": "ZOSLibOwnable.renounceOwnership (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#150-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZOSLibOwnable",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 161,
+            "message": "ZOSLibOwnable.transferOwnership (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#158-161) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Package",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "getVersion",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 199,
+            "message": "Package.getVersion (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#192-199) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Package",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "getContract",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 211,
+            "message": "Package.getContract (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#204-211) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Package",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "addVersion",
+            "impact": "Informational",
+            "line": 217,
+            "line_end": 249,
+            "message": "Package.addVersion (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#217-249) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Package",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "getLatest",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 267,
+            "message": "Package.getLatest (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#266-267) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "App",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "getPackage",
+            "impact": "Informational",
+            "line": 532,
+            "line_end": 535,
+            "message": "App.getPackage (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#532-535) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "App",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "setPackage",
+            "impact": "Informational",
+            "line": 545,
+            "line_end": 552,
+            "message": "App.setPackage (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#545-552) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "App",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "unsetPackage",
+            "impact": "Informational",
+            "line": 555,
+            "line_end": 560,
+            "message": "App.unsetPackage (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#555-560) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "App",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "create",
+            "impact": "Informational",
+            "message": "App.create (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "constructor",
+            "impact": "Informational",
+            "line": 317,
+            "line_end": 328,
+            "message": "Low level call in UpgradeabilityProxy.constructor (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#317-328):\n\t-require(bool)(_implementation.delegatecall(_data)) 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#323-328\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminUpgradeabilityProxy",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "function": "upgradeToAndCall",
+            "impact": "Informational",
+            "line": 454,
+            "line_end": 465,
+            "message": "Low level call in AdminUpgradeabilityProxy.upgradeToAndCall (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#454-465):\n\t-require(bool)(newImplementation.delegatecall(data)) 0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#459-464\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 22,
+            "message": "Function 'Proxy._implementation' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#19-22) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 49,
+            "message": "Function 'Proxy._delegate' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#27-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "Function 'Proxy._willFallback' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#57-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 69,
+            "message": "Function 'Proxy._fallback' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#62-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 171,
+            "message": "Function 'ZOSLibOwnable._transferOwnership' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#164-171) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 331,
+            "line_end": 337,
+            "message": "Function 'UpgradeabilityProxy._implementation' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#331-337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 317,
+            "line_end": 318,
+            "message": "Parameter '_implementation' of UpgradeabilityProxy. (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#317-318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_data' of UpgradeabilityProxy. (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 340,
+            "line_end": 343,
+            "message": "Function 'UpgradeabilityProxy._upgradeTo' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#340-343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 351,
+            "line_end": 360,
+            "message": "Function 'UpgradeabilityProxy._setImplementation' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#351-360) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 482,
+            "line_end": 486,
+            "message": "Function 'AdminUpgradeabilityProxy._willFallback' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#482-486) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 403,
+            "line_end": 404,
+            "message": "Parameter '_admin' of AdminUpgradeabilityProxy. (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#403-404) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 465,
+            "line_end": 468,
+            "message": "Function 'AdminUpgradeabilityProxy._admin' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#465-468) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol",
+            "impact": "Informational",
+            "line": 476,
+            "line_end": 481,
+            "message": "Function 'AdminUpgradeabilityProxy._setAdmin' (0x0ecdd783dc7bf820614044b51862ed29714d2ba5.sol#476-481) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

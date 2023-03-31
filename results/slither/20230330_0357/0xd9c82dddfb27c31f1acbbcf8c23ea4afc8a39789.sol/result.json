@@ -1,0 +1,93 @@
+{
+    "errors": [
+        "EXIT_CODE_8"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 8,
+            "line_end": 13,
+            "message": "token (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#8-13) has incorrect ERC20 function interface(s):\n\t-transfer (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#9-13)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Crowdsale",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "function": "withdrawTokens",
+            "impact": "Medium",
+            "line": 135,
+            "line_end": 141,
+            "message": "Crowdsale.withdrawTokens (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#135-141) does not use the value returned by external calls:\n\t-tc.transfer(owner,tc.balanceOf(this)) (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#139-141)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 13,
+            "message": "token.transfer (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#9-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Crowdsale",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 132,
+            "message": "Crowdsale.fallback (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#105-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol:\n\t- pragma solidity^0.4.19 (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 13,
+            "message": "Contract 'token' (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#8-13) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 21,
+            "message": "Contract 'withdrawToken' (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#15-21) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 101,
+            "message": "Function 'Crowdsale.Crowdsale' (0xd9c82dddfb27c31f1acbbcf8c23ea4afc8a39789.sol#82-101) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

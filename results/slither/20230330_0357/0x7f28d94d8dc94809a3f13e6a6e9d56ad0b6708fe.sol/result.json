@@ -1,0 +1,492 @@
+{
+    "errors": [
+        "EXIT_CODE_51"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Medium",
+            "line": 62,
+            "line_end": 80,
+            "message": "Ownable.isContract (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#62-80) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NATEE_WARRANT",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transferWallet",
+            "impact": "Medium",
+            "line": 269,
+            "line_end": 286,
+            "message": "NATEE_WARRANT.transferWallet (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#269-286) does not use the value returned by external calls:\n\t-sgds.useSGDS(_from,transFee) (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#280-282)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "NATEE_WARRANT",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transferWallet",
+            "impact": "Low",
+            "line": 269,
+            "line_end": 286,
+            "message": "Reentrancy in NATEE_WARRANT.transferWallet (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#269-286):\n\tExternal calls:\n\t- require(bool)(sgds.getCanControl(_from) == false) (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#274-277)\n\t- require(bool)(sgds.balanceOf(_from) >= transFee) (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#277)\n\tState variables written after the call(s):\n\t- balance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#278-279)\n\t- balance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#279-280)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 80,
+            "message": "Ownable.isContract uses assembly (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#62-80)\n\t- 0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#68-75\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 215,
+            "message": "NATEE_WARRANT.INITIAL_SUPPLY should be constant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#213-215)\nNATEE_WARRANT.decimals should be constant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#211-213)\nNATEE_WARRANT.name should be constant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#208-209)\nNATEE_WARRANT.symbol should be constant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#209-210)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 82,
+            "line_end": 93,
+            "message": "Ownable.transferOwnership (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#82-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "addOwner",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 104,
+            "message": "Ownable.addOwner (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#97-104) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "removeOwner",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 113,
+            "message": "Ownable.removeOwner (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#104-113) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "isOwner",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 114,
+            "message": "Ownable.isOwner (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#113-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 151,
+            "message": "StandardERC20.totalSupply (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#148-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 118,
+            "message": "ERC20.totalSupply (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 155,
+            "message": "StandardERC20.balanceOf (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#151-155) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "ERC20.balanceOf (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#119-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 159,
+            "message": "StandardERC20.allowance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#156-159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 123,
+            "message": "ERC20.allowance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#121-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 173,
+            "message": "StandardERC20.transfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#160-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 123,
+            "message": "ERC20.transfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 179,
+            "message": "StandardERC20.approve (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#173-179) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 132,
+            "message": "ERC20.approve (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#126-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 134,
+            "message": "ERC20.transferFrom (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#132-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardERC20",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 196,
+            "message": "StandardERC20.transferFrom (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#179-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SGDSInterface",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 197,
+            "message": "SGDSInterface.balanceOf (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NATEE_WARRANT",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "setUserControl",
+            "impact": "Informational",
+            "line": 301,
+            "line_end": 306,
+            "message": "NATEE_WARRANT.setUserControl (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#301-306) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NATEE_WARRANT",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "function": "setTransFee",
+            "impact": "Informational",
+            "message": "NATEE_WARRANT.setTransFee (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 107,
+            "message": "Parameter '_owner' of Ownable.removeOwner (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 114,
+            "message": "Parameter '_owner' of Ownable.isOwner (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#113-114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 152,
+            "message": "Parameter '_walletAddress' of StandardERC20.balanceOf (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 156,
+            "message": "Parameter '_owner' of StandardERC20.allowance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#156) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 157,
+            "message": "Parameter '_spender' of StandardERC20.allowance (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#156-157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 160,
+            "message": "Parameter '_to' of StandardERC20.transfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 160,
+            "message": "Parameter '_value' of StandardERC20.transfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 175,
+            "message": "Parameter '_spender' of StandardERC20.approve (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 175,
+            "message": "Parameter '_value' of StandardERC20.approve (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_from' of StandardERC20.transferFrom (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_to' of StandardERC20.transferFrom (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 181,
+            "message": "Parameter '_value' of StandardERC20.transferFrom (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#181) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 310,
+            "message": "Contract 'NATEE_WARRANT' (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#207-310) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_to' of NATEE_WARRANT.sendWarrant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_value' of NATEE_WARRANT.sendWarrant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 251,
+            "line_end": 252,
+            "message": "Parameter '_from' of NATEE_WARRANT.intTransfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#251-252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 252,
+            "message": "Parameter '_to' of NATEE_WARRANT.intTransfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 252,
+            "line_end": 254,
+            "message": "Parameter '_value' of NATEE_WARRANT.intTransfer (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#252-254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 271,
+            "message": "Parameter '_from' of NATEE_WARRANT.transferWallet (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#269-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 271,
+            "message": "Parameter '_to' of NATEE_WARRANT.transferWallet (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_from' of NATEE_WARRANT.redeemWarrant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 290,
+            "message": "Parameter '_value' of NATEE_WARRANT.redeemWarrant (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#290) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 302,
+            "message": "Parameter '_control' of NATEE_WARRANT.setUserControl (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#302) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 308,
+            "line_end": 310,
+            "message": "Parameter '_addr' of NATEE_WARRANT.getUserControl (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#308-310) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "message": "Parameter '_fee' of NATEE_WARRANT.setTransFee (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 215,
+            "message": "Variable 'NATEE_WARRANT.INITIAL_SUPPLY' (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#213-215) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol",
+            "impact": "Informational",
+            "line": 217,
+            "message": "Variable 'NATEE_WARRANT.NATEE_CONTRACT' (0x7f28d94d8dc94809a3f13e6a6e9d56ad0b6708fe.sol#217) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

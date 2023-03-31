@@ -1,0 +1,1064 @@
+{
+    "errors": [
+        "EXIT_CODE_113"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "multiMint",
+            "impact": "Low",
+            "line": 318,
+            "line_end": 319,
+            "message": "Ledger.multiMint has external calls inside a loop:\n\t- controller.ledgerTransfer(0,a,value) (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#318-319)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 43,
+            "message": "Owned.changeOwner (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#38-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 43,
+            "line_end": 50,
+            "message": "Owned.acceptOwnership (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#43-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 58,
+            "message": "Pausable.pause (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#56-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 66,
+            "message": "Pausable.unpause (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#60-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Finalizable",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "finalize",
+            "impact": "Informational",
+            "line": 73,
+            "line_end": 79,
+            "message": "Finalizable.finalize (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#73-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IToken",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 84,
+            "message": "IToken.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#81-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IToken",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 85,
+            "message": "IToken.balanceOf (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#84-85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenReceivable",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "claimTokens",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 92,
+            "message": "TokenReceivable.claimTokens (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#86-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "setMotd",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 117,
+            "message": "Token.setMotd (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#113-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "setController",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 120,
+            "message": "Token.setController (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#117-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 127,
+            "message": "Token.balanceOf (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#123-127) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 128,
+            "message": "Token.totalSupply (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#127-128) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 132,
+            "message": "Token.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#128-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 140,
+            "message": "Token.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#132-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 149,
+            "message": "Token.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#140-149) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 157,
+            "message": "Token.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#149-157) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 166,
+            "message": "Token.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#157-166) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 180,
+            "message": "Token.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#166-180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 186,
+            "line_end": 191,
+            "message": "Token.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#186-191) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "controllerTransfer",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 201,
+            "message": "Token.controllerTransfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#195-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "controllerApprove",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 209,
+            "message": "Token.controllerApprove (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#201-209) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "setToken",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 223,
+            "message": "Controller.setToken (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#218-223) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "setLedger",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 229,
+            "message": "Controller.setLedger (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#223-229) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 241,
+            "message": "Controller.totalSupply (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#237-241) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 243,
+            "message": "Controller.balanceOf (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#241-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 249,
+            "message": "Controller.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#243-249) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "ledgerTransfer",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 253,
+            "message": "Controller.ledgerTransfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#249-253) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 257,
+            "message": "Controller.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#253-257) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 261,
+            "message": "Controller.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#257-261) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 265,
+            "message": "Controller.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#261-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 270,
+            "message": "Controller.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#265-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 277,
+            "message": "Controller.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#270-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controller",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 280,
+            "message": "Controller.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#277-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "setController",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 301,
+            "message": "Ledger.setController (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#297-301) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "stopMinting",
+            "impact": "Informational",
+            "line": 301,
+            "line_end": 303,
+            "message": "Ledger.stopMinting (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#301-303) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 326,
+            "line_end": 333,
+            "message": "Ledger.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#326-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 348,
+            "message": "Ledger.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#333-348) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 348,
+            "line_end": 354,
+            "message": "Ledger.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#348-354) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 354,
+            "line_end": 364,
+            "message": "Ledger.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#354-364) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 368,
+            "message": "Ledger.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#364-368) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ledger",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "message": "Ledger.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 2,
+            "line_end": 3,
+            "message": "Detected issues with version pragma in 0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol:\n\t- pragma solidity>=0.4.10 (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#2-3): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 34,
+            "message": "Function 'Owned.Owned' (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#30-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_newOwner' of Owned.changeOwner (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 87,
+            "message": "Parameter '_token' of TokenReceivable.claimTokens (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#86-87) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 87,
+            "message": "Parameter '_to' of TokenReceivable.claimTokens (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#87) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 114,
+            "message": "Parameter '_m' of Token.setMotd (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#113-114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 119,
+            "message": "Parameter '_c' of Token.setController (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#117-119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 131,
+            "message": "Parameter '_owner' of Token.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 131,
+            "message": "Parameter '_spender' of Token.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 133,
+            "message": "Parameter '_to' of Token.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#132-133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 133,
+            "message": "Parameter '_value' of Token.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 140,
+            "message": "Parameter '_from' of Token.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 141,
+            "message": "Parameter '_to' of Token.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#140-141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_value' of Token.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_spender' of Token.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 149,
+            "line_end": 150,
+            "message": "Parameter '_value' of Token.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#149-150) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 158,
+            "message": "Parameter '_spender' of Token.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#157-158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 158,
+            "message": "Parameter '_addedValue' of Token.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#158) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 166,
+            "line_end": 167,
+            "message": "Parameter '_spender' of Token.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#166-167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 167,
+            "message": "Parameter '_subtractedValue' of Token.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 186,
+            "line_end": 187,
+            "message": "Parameter '_amount' of Token.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#186-187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_from' of Token.controllerTransfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_to' of Token.controllerTransfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 199,
+            "message": "Parameter '_value' of Token.controllerTransfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#196-199) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 204,
+            "message": "Parameter '_owner' of Token.controllerApprove (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#202-204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 207,
+            "message": "Parameter '_spender' of Token.controllerApprove (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#204-207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 207,
+            "message": "Parameter '_value' of Token.controllerApprove (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 214,
+            "line_end": 217,
+            "message": "Function 'Controller.Controller' (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#214-217) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 220,
+            "line_end": 222,
+            "message": "Parameter '_token' of Controller.setToken (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#220-222) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_ledger' of Controller.setLedger (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_a' of Controller.balanceOf (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_owner' of Controller.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_spender' of Controller.allowance (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 254,
+            "message": "Parameter '_from' of Controller.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 254,
+            "message": "Parameter '_to' of Controller.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 254,
+            "message": "Parameter '_value' of Controller.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Parameter '_spender' of Controller.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#257-258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_from' of Controller.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 258,
+            "message": "Parameter '_to' of Controller.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 259,
+            "message": "Parameter '_value' of Controller.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#258-259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_owner' of Controller.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_spender' of Controller.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_value' of Controller.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 265,
+            "message": "Parameter '_owner' of Controller.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 266,
+            "message": "Parameter '_spender' of Controller.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 266,
+            "message": "Parameter '_addedValue' of Controller.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 274,
+            "message": "Parameter '_owner' of Controller.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 274,
+            "message": "Parameter '_spender' of Controller.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 274,
+            "message": "Parameter '_subtractedValue' of Controller.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 277,
+            "message": "Parameter '_owner' of Controller.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#277) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 278,
+            "message": "Parameter '_amount' of Controller.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#277-278) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 297,
+            "message": "Function 'Ledger.Ledger' (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#296-297) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 298,
+            "message": "Parameter '_controller' of Ledger.setController (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#297-298) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_from' of Ledger.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_to' of Ledger.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_value' of Ledger.transfer (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 334,
+            "message": "Parameter '_spender' of Ledger.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#333-334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 334,
+            "message": "Parameter '_from' of Ledger.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 334,
+            "message": "Parameter '_to' of Ledger.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 334,
+            "message": "Parameter '_value' of Ledger.transferFrom (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 348,
+            "message": "Parameter '_owner' of Ledger.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 348,
+            "message": "Parameter '_spender' of Ledger.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 348,
+            "message": "Parameter '_value' of Ledger.approve (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#348) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 355,
+            "message": "Parameter '_owner' of Ledger.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#355) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 355,
+            "message": "Parameter '_spender' of Ledger.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#355) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 355,
+            "line_end": 356,
+            "message": "Parameter '_addedValue' of Ledger.increaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#355-356) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 364,
+            "message": "Parameter '_owner' of Ledger.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 365,
+            "message": "Parameter '_spender' of Ledger.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#364-365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "line": 365,
+            "message": "Parameter '_subtractedValue' of Ledger.decreaseApproval (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol#365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of Ledger.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of Ledger.burn (0x0e2d93f7d50844a5203eb3dc9c5860f970ba5664.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

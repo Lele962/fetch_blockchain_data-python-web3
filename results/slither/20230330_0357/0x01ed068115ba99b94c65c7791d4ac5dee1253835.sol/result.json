@@ -1,0 +1,378 @@
+{
+    "errors": [
+        "EXIT_CODE_37"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Medium",
+            "line": 330,
+            "line_end": 351,
+            "message": "Address.isContract (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#330-351) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 179,
+            "line_end": 222,
+            "message": "IERC721 (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#179-222) has incorrect ERC20 function interface(s):\n\t-approve (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#196-197)\n\t-transferFrom (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#205-210)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 355,
+            "line_end": 694,
+            "message": "ERC721 (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#355-694) has incorrect ERC20 function interface(s):\n\t-approve (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#429-438)\n\t-transferFrom (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#493-500)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 732,
+            "message": "ERC721Metadata.constructor.name (local variable @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#732) shadows:\n\t- ERC721Metadata.name (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#742-745)\n\t- IERC721Metadata.name (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#704-705)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "symbol",
+            "impact": "Low",
+            "line": 732,
+            "line_end": 734,
+            "message": "ERC721Metadata.constructor.symbol (local variable @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#732-734) shadows:\n\t- ERC721Metadata.symbol (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#747-751)\n\t- IERC721Metadata.symbol (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#705-709)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721Metadata",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "tokenURI",
+            "impact": "Low",
+            "line": 756,
+            "line_end": 760,
+            "message": "ERC721MetadataMintable.mintWithTokenURI.tokenURI (local variable @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol) shadows:\n\t- ERC721Metadata.tokenURI (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#756-760)\n\t- IERC721Metadata.tokenURI (function @ 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#709-710)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Address",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 330,
+            "line_end": 351,
+            "message": "Address.isContract uses assembly (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#330-351)\n\t- 0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#351\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "addMinter",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 148,
+            "message": "MinterRole.addMinter (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#144-148) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MinterRole",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "renounceMinter",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 152,
+            "message": "MinterRole.renounceMinter (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#148-152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 192,
+            "line_end": 194,
+            "message": "IERC721.balanceOf (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#192-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 403,
+            "line_end": 410,
+            "message": "ERC721.balanceOf (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#403-410) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 197,
+            "message": "IERC721.approve (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#196-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 429,
+            "line_end": 438,
+            "message": "ERC721.approve (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#429-438) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 201,
+            "message": "IERC721.setApprovalForAll (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#200-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "setApprovalForAll",
+            "impact": "Informational",
+            "line": 453,
+            "line_end": 463,
+            "message": "ERC721.setApprovalForAll (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#453-463) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 518,
+            "line_end": 522,
+            "message": "ERC721.safeTransferFrom (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#518-522) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "safeTransferFrom",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 217,
+            "message": "IERC721.safeTransferFrom (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#213-217) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IERC721Receiver",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "onERC721Received",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 256,
+            "message": "IERC721Receiver.onERC721Received (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#250-256) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721MetadataMintable",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "function": "mintWithTokenURI",
+            "impact": "Informational",
+            "message": "ERC721MetadataMintable.mintWithTokenURI (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 113,
+            "line_end": 122,
+            "message": "Function 'ERC165._registerInterface' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#113-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 77,
+            "message": "Constant 'ERC165._InterfaceId_ERC165' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#76-77) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 152,
+            "line_end": 168,
+            "message": "Function 'MinterRole._addMinter' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#152-168) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 168,
+            "line_end": 170,
+            "message": "Function 'MinterRole._removeMinter' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#168-170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 550,
+            "message": "Parameter '_data' of ERC721.safeTransferFrom (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#550) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 558,
+            "line_end": 566,
+            "message": "Function 'ERC721._exists' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#558-566) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 578,
+            "line_end": 590,
+            "message": "Function 'ERC721._isApprovedOrOwner' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#578-590) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 599,
+            "line_end": 601,
+            "message": "Function 'ERC721._mint' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#599-601) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 603,
+            "line_end": 608,
+            "message": "Function 'ERC721._burn' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#603-608) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 617,
+            "line_end": 620,
+            "message": "Function 'ERC721._addTokenTo' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#617-620) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 631,
+            "line_end": 640,
+            "message": "Function 'ERC721._removeTokenFrom' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#631-640) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 657,
+            "line_end": 673,
+            "message": "Function 'ERC721._checkOnERC721Received' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#657-673) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 659,
+            "message": "Parameter '_data' of ERC721._checkOnERC721Received (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 685,
+            "line_end": 694,
+            "message": "Function 'ERC721._clearApproval' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#685-694) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 376,
+            "message": "Constant 'ERC721._InterfaceId_ERC721' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#375-376) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 789,
+            "line_end": 800,
+            "message": "Function 'ERC721Metadata._burn' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#789-800) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 777,
+            "line_end": 780,
+            "message": "Function 'ERC721Metadata._setTokenURI' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#777-780) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol",
+            "impact": "Informational",
+            "line": 723,
+            "line_end": 725,
+            "message": "Constant 'ERC721Metadata.InterfaceId_ERC721Metadata' (0x01ed068115ba99b94c65c7791d4ac5dee1253835.sol#723-725) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

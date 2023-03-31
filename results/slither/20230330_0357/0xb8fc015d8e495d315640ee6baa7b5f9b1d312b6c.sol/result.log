@@ -1,0 +1,82 @@
+INFO:Detectors:[93m
+Reentrancy in TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354):
+	External calls:
+	- require(bool)(token.balanceOf(address(this)) >= _amount) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#333-337)
+	State variables written after the call(s):
+	- distributedTokens (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#340-341)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354):
+	External calls:
+	- require(bool)(token.balanceOf(address(this)) >= _amount) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#333-337)
+	State variables written after the call(s):
+	- beneficiaries (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#338)
+	- beneficiaryDistributionContracts (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#349-350)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+TokenTimelock.constructor (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#220-232) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(_releaseTime > block.timestamp) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#228-229)
+TokenTimelock.release (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#235-247) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(block.timestamp >= releaseTime) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#240-241)
+TokenTimelockPool.constructor (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#291-302) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(_releaseDate > block.timestamp) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#299-300)
+TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(block.timestamp < releaseDate) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#326-328)
+TokenTimelockPool.reclaim (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#364-370) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(block.timestamp > releaseDate) (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#365)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+ERC20Basic.totalSupply (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#50-51) should be declared external
+ERC20Basic.balanceOf (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#51-52) should be declared external
+ERC20Basic.transfer (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#52-53) should be declared external
+ERC20.allowance (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#62-64) should be declared external
+ERC20.transferFrom (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#64-67) should be declared external
+ERC20.approve (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#67-70) should be declared external
+Ownable.renounceOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#147-148) should be declared external
+Ownable.transferOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#155-158) should be declared external
+Claimable.transferOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#192-193) should be declared external
+Claimable.claimOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#199-206) should be declared external
+TokenTimelock.release (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#235-247) should be declared external
+TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-354) should be declared external
+TokenTimelockPool.reclaim (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#364-370) should be declared external
+TokenTimelockPool.getDistributionContracts (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#377-382) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '_a' of SafeMath.mul (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#8) is not in mixedCase
+Parameter '_b' of SafeMath.mul (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#8) is not in mixedCase
+Parameter '_a' of SafeMath.div (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#24) is not in mixedCase
+Parameter '_b' of SafeMath.div (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#24) is not in mixedCase
+Parameter '_a' of SafeMath.sub (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#34) is not in mixedCase
+Parameter '_b' of SafeMath.sub (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#34) is not in mixedCase
+Parameter '_a' of SafeMath.add (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#42) is not in mixedCase
+Parameter '_b' of SafeMath.add (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#42-43) is not in mixedCase
+Parameter '_token' of SafeERC20.safeTransfer (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransfer (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransfer (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#83-86) is not in mixedCase
+Parameter '_token' of SafeERC20.safeTransferFrom (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#93-94) is not in mixedCase
+Parameter '_from' of SafeERC20.safeTransferFrom (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransferFrom (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransferFrom (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#94-97) is not in mixedCase
+Parameter '_token' of SafeERC20.safeApprove (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#104) is not in mixedCase
+Parameter '_spender' of SafeERC20.safeApprove (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#104-108) is not in mixedCase
+Parameter '_value' of SafeERC20.safeApprove (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#108-109) is not in mixedCase
+Parameter '_newOwner' of Ownable.transferOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#156) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#161-168) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#166-167) is not in mixedCase
+Parameter '_token' of TokenTimelock. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#220-221) is not in mixedCase
+Parameter '_beneficiary' of TokenTimelock. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#221-222) is not in mixedCase
+Parameter '_releaseTime' of TokenTimelock. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#222-225) is not in mixedCase
+Parameter '_token' of TokenTimelockPool. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#291-292) is not in mixedCase
+Parameter '_totalFunds' of TokenTimelockPool. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#292-293) is not in mixedCase
+Parameter '_releaseDate' of TokenTimelockPool. (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#293-296) is not in mixedCase
+Parameter '_beneficiary' of TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320) is not in mixedCase
+Parameter '_amount' of TokenTimelockPool.addBeneficiary (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#320-321) is not in mixedCase
+Parameter '_beneficiary' of TokenTimelockPool.getDistributionContracts (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol#377-379) is not in mixedCase
+Parameter '_beneficiary' of TokenTimelockPool.beneficiaryExists (/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xb8fc015d8e495d315640ee6baa7b5f9b1d312b6c.sol analyzed (8 contracts), 52 result(s) found

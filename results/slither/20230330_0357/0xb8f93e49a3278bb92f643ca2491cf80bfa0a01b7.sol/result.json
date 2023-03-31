@@ -1,0 +1,1100 @@
+{
+    "errors": [
+        "EXIT_CODE_114"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Medium",
+            "line": 1129,
+            "line_end": 1194,
+            "message": "NameFilter.nameFilter (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1129-1194) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 59,
+            "line_end": 73,
+            "message": "ERC721 (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#59-73) has incorrect ERC20 function interface(s):\n\t-approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#63-64)\n\t-transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#65)\n\t-transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#65-67)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 73,
+            "line_end": 1091,
+            "message": "FairBank (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#73-1091) has incorrect ERC20 function interface(s):\n\t-approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1013-1027)\n\t-transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1043-1073)\n\t-transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1073-1091)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyAnalysis",
+            "impact": "Medium",
+            "line": 456,
+            "line_end": 525,
+            "message": "Reentrancy in FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#456-525):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#460-461)\n\tState variables written after the call(s):\n\t- rId (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#476-477)\n\t- sId (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#476-477)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyAnalysis",
+            "impact": "Medium",
+            "line": 456,
+            "line_end": 525,
+            "message": "Reentrancy in FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#456-525):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#460-461)\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#480-481)\n\t- buyDataRecord(_rId,_sId,_targetAmount,msg.value,_stepSize,_protectRatio) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#497-500)\n\tState variables written after the call(s):\n\t- round (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#497-500)\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#497-500)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyAnalysis",
+            "impact": "Medium",
+            "line": 456,
+            "line_end": 525,
+            "message": "Reentrancy in FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#456-525):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#460-461)\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#480-481)\n\t- multiStake(msg.value,_stepSize,_protectRatio,_targetAmount,_stageTargetBalance) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#502-505)\n\tState variables written after the call(s):\n\t- round (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#502-505)\n\t- sId (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#502-505)\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#502-505)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "multiStake",
+            "impact": "Medium",
+            "line": 526,
+            "line_end": 601,
+            "message": "Reentrancy in FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#526-601):\n\tExternal calls:\n\t- buyStageDataRecord(_rId,_sId,_targetAmount,_stageTargetBalance,_sId.add(_stepSize),_protectRatio) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#550-554)\n\t- buyStageDataRecord(_rId,_sId,_targetAmount,_amount,_sId.add(_stepSize),_protectRatio) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#575-581)\n\t- stage[_rId][_sId].dividendAmount <= getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#562-569)\n\t- _targetAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#562-569)\n\tState variables written after the call(s):\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#582-591)\n\t- playerGoodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#582-591)\n\t- round (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#597-598)\n\t- round (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#598-600)\n\t- sId (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#595)\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#575-581)\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#594-595)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 323,
+            "line_end": 360,
+            "message": "Reentrancy in FairBank.withdraw (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#323-360):\n\tExternal calls:\n\t- (_amount,_withdrawSid,_reachAmount,_finish) = getEarningsAmountByGoodsIndex(_playerGoodsList[i]) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#338-339)\n\tState variables written after the call(s):\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#345-349)\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#349-351)\n\t- playerGoodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#351-353)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdrawByGid",
+            "impact": "Medium",
+            "line": 363,
+            "line_end": 395,
+            "message": "Reentrancy in FairBank.withdrawByGid (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#363-395):\n\tExternal calls:\n\t- (_amount,_withdrawSid,_reachAmount,_finish) = getEarningsAmountByGoodsIndex(_gId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#371-373)\n\tState variables written after the call(s):\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#393)\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#393-395)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "getEarningsAmountByGoodsIndex",
+            "impact": "Medium",
+            "line": 761,
+            "line_end": 762,
+            "message": "_amount in FairBank.getEarningsAmountByGoodsIndex (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#761-762) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "constructor",
+            "impact": "Medium",
+            "line": 169,
+            "line_end": 170,
+            "message": "i in FairBank.constructor (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#169-170) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "playerDataRecord",
+            "impact": "Medium",
+            "line": 669,
+            "message": "_goods in FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#669) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyDataRecord",
+            "impact": "Medium",
+            "line": 629,
+            "line_end": 630,
+            "message": "_goods in FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#629-630) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "balanceOf",
+            "impact": "Medium",
+            "line": 997,
+            "message": "_count in FairBank.balanceOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#997) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdraw",
+            "impact": "Medium",
+            "line": 335,
+            "line_end": 336,
+            "message": "i in FairBank.withdraw (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#335-336) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyAnalysis",
+            "impact": "Low",
+            "line": 456,
+            "line_end": 525,
+            "message": "Reentrancy in FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#456-525):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#460-461)\n\tState variables written after the call(s):\n\t- round (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#476-477)\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#478)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyDataRecord",
+            "impact": "Low",
+            "line": 601,
+            "line_end": 633,
+            "message": "Reentrancy in FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#601-633):\n\tExternal calls:\n\t- stage[_rId][_expectEndSid].dividendAmount = stage[_rId][_expectEndSid].dividendAmount.add(computeEarningsAmount(_sId,_amount,_targetAmount,_expectEndSid,100 - _protectRatio)) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#618-628)\n\tState variables written after the call(s):\n\t- goodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#632-633)\n\t- playerGoodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#632-633)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "reduceTime",
+            "impact": "Low",
+            "line": 426,
+            "line_end": 455,
+            "message": "Reentrancy in FairBank.reduceTime (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#426-455):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#431-432)\n\tState variables written after the call(s):\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#448-451)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "resetTime",
+            "impact": "Low",
+            "line": 396,
+            "line_end": 426,
+            "message": "Reentrancy in FairBank.resetTime (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#396-426):\n\tExternal calls:\n\t- _targetExpectedAmount = getStageTargetAmount(_sId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#401-402)\n\tState variables written after the call(s):\n\t- stage (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#421-422)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdraw",
+            "impact": "Low",
+            "line": 323,
+            "line_end": 360,
+            "message": "Reentrancy in FairBank.withdraw (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#323-360):\n\tExternal calls:\n\t- (_amount,_withdrawSid,_reachAmount,_finish) = getEarningsAmountByGoodsIndex(_playerGoodsList[i]) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#338-339)\n\tState variables written after the call(s):\n\t- playerWithdrawList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#342-344)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdrawByGid",
+            "impact": "Low",
+            "line": 363,
+            "line_end": 395,
+            "message": "Reentrancy in FairBank.withdrawByGid (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#363-395):\n\tExternal calls:\n\t- (_amount,_withdrawSid,_reachAmount,_finish) = getEarningsAmountByGoodsIndex(_gId) (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#371-373)\n\tState variables written after the call(s):\n\t- playerGoodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#385-390)\n\t- playerGoodsList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#391-392)\n\t- playerWithdrawList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#382-385)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "NameFilter",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "nameFilter",
+            "impact": "Informational",
+            "line": 1129,
+            "line_end": 1194,
+            "message": "NameFilter.nameFilter uses assembly (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1129-1194)\n\t- 0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1191-1194\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 80,
+            "message": "FairBank.name should be constant (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#77-80)\nFairBank.symbol should be constant (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#80)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 60,
+            "message": "ERC721.totalSupply (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 991,
+            "line_end": 992,
+            "message": "FairBank.totalSupply (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#991-992) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "ERC721.balanceOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#60-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 993,
+            "line_end": 1005,
+            "message": "FairBank.balanceOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#993-1005) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "ownerOf",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 63,
+            "message": "ERC721.ownerOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#61-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "ownerOf",
+            "impact": "Informational",
+            "line": 1005,
+            "line_end": 1011,
+            "message": "FairBank.ownerOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1005-1011) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 1013,
+            "line_end": 1027,
+            "message": "FairBank.approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1013-1027) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 64,
+            "message": "ERC721.approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#63-64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "takeOwnership",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "ERC721.takeOwnership (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#64-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "takeOwnership",
+            "impact": "Informational",
+            "line": 1027,
+            "line_end": 1043,
+            "message": "FairBank.takeOwnership (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1027-1043) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 1043,
+            "line_end": 1073,
+            "message": "FairBank.transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1043-1073) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 65,
+            "message": "ERC721.transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 67,
+            "message": "ERC721.transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#65-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 1073,
+            "line_end": 1091,
+            "message": "FairBank.transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1073-1091) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "registered",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 197,
+            "message": "FairBank.registered (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#180-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 200,
+            "line_end": 213,
+            "message": "FairBank.activate (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#200-213) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "openModifyCountdown",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 224,
+            "message": "FairBank.openModifyCountdown (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#213-224) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "closeModifyCountdown",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 237,
+            "message": "FairBank.closeModifyCountdown (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#225-237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "purchaseCard",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 273,
+            "message": "FairBank.purchaseCard (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#237-273) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 288,
+            "message": "FairBank.fallback (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#280-288) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 303,
+            "message": "FairBank.buy (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#288-303) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "buyXname",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 321,
+            "message": "FairBank.buyXname (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#304-321) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 323,
+            "line_end": 360,
+            "message": "FairBank.withdraw (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#323-360) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "withdrawByGid",
+            "impact": "Informational",
+            "line": 363,
+            "line_end": 395,
+            "message": "FairBank.withdrawByGid (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#363-395) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "resetTime",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 426,
+            "message": "FairBank.resetTime (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#396-426) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "reduceTime",
+            "impact": "Informational",
+            "line": 426,
+            "line_end": 455,
+            "message": "FairBank.reduceTime (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#426-455) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "getHeadInfo",
+            "impact": "Informational",
+            "line": 950,
+            "line_end": 986,
+            "message": "FairBank.getHeadInfo (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#950-986) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FairBank",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "getPlayerGoodList",
+            "impact": "Informational",
+            "line": 986,
+            "line_end": 991,
+            "message": "FairBank.getPlayerGoodList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#986-991) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 993,
+            "message": "Parameter '_owner' of FairBank.balanceOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#993) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1005,
+            "line_end": 1007,
+            "message": "Parameter '_tokenId' of FairBank.ownerOf (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1005-1007) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1013,
+            "message": "Parameter '_to' of FairBank.approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1013) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1013,
+            "message": "Parameter '_tokenId' of FairBank.approve (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1013) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1028,
+            "line_end": 1029,
+            "message": "Parameter '_tokenId' of FairBank.takeOwnership (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1028-1029) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1043,
+            "line_end": 1044,
+            "message": "Parameter '_to' of FairBank.transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1043-1044) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1044,
+            "line_end": 1048,
+            "message": "Parameter '_tokenId' of FairBank.transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1044-1048) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1074,
+            "line_end": 1075,
+            "message": "Parameter '_from' of FairBank.transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1074-1075) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1075,
+            "message": "Parameter '_to' of FairBank.transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1075) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1075,
+            "line_end": 1076,
+            "message": "Parameter '_tokenId' of FairBank.transferFrom (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1075-1076) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 180,
+            "message": "Parameter '_playerName' of FairBank.registered (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 237,
+            "message": "Parameter '_cId' of FairBank.purchaseCard (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 289,
+            "message": "Parameter '_stepSize' of FairBank.buy (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 289,
+            "message": "Parameter '_protectRatio' of FairBank.buy (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 289,
+            "message": "Parameter '_recommendAddr' of FairBank.buy (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 304,
+            "message": "Parameter '_stepSize' of FairBank.buyXname (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#304) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 304,
+            "message": "Parameter '_protectRatio' of FairBank.buyXname (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#304) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 305,
+            "message": "Parameter '_recommendName' of FairBank.buyXname (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#304-305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 364,
+            "line_end": 365,
+            "message": "Parameter '_gId' of FairBank.withdrawByGid (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#364-365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 457,
+            "message": "Parameter '_stepSize' of FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#457) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 457,
+            "line_end": 458,
+            "message": "Parameter '_protectRatio' of FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#457-458) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 458,
+            "message": "Parameter '_recommendAddr' of FairBank.buyAnalysis (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#458) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 526,
+            "message": "Parameter '_amount' of FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#526) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 526,
+            "line_end": 527,
+            "message": "Parameter '_stepSize' of FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#526-527) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 527,
+            "line_end": 528,
+            "message": "Parameter '_protectRatio' of FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#527-528) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 528,
+            "message": "Parameter '_targetAmount' of FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#528) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 528,
+            "line_end": 529,
+            "message": "Parameter '_stageTargetBalance' of FairBank.multiStake (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#528-529) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 601,
+            "message": "Parameter '_rId' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#601) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 601,
+            "line_end": 602,
+            "message": "Parameter '_sId' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#601-602) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 602,
+            "message": "Parameter '_targetAmount' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#602) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 602,
+            "message": "Parameter '_amount' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#602) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 602,
+            "line_end": 603,
+            "message": "Parameter '_stepSize' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#602-603) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 603,
+            "message": "Parameter '_protectRatio' of FairBank.buyDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#603) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 635,
+            "line_end": 636,
+            "message": "Parameter '_rId' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#635-636) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 636,
+            "message": "Parameter '_sId' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#636) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 636,
+            "line_end": 637,
+            "message": "Parameter '_targetAmount' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#636-637) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 637,
+            "message": "Parameter '_amount' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#637) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 638,
+            "message": "Parameter '_expectEndSid' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#638) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 638,
+            "line_end": 639,
+            "message": "Parameter '_protectRatio' of FairBank.buyStageDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#638-639) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 662,
+            "message": "Parameter '_rId' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#662) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 662,
+            "message": "Parameter '_sId' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#662) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 662,
+            "line_end": 663,
+            "message": "Parameter '_totalAmount' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#662-663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 663,
+            "message": "Parameter '_stageBuyAmount' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 663,
+            "message": "Parameter '_stepSize' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#663) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 663,
+            "line_end": 664,
+            "message": "Parameter '_protectRatio' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#663-664) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 664,
+            "message": "Parameter '_crossStageNum' of FairBank.playerDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#664) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 687,
+            "line_end": 688,
+            "message": "Parameter '_recommendAddr' of FairBank.bankerFeeDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#687-688) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 688,
+            "message": "Parameter '_amount' of FairBank.bankerFeeDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#688) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 688,
+            "message": "Parameter '_protectRatio' of FairBank.bankerFeeDataRecord (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#688) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 718,
+            "line_end": 720,
+            "message": "Parameter '_rId' of FairBank.endRound (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#718-720) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 720,
+            "message": "Parameter '_sId' of FairBank.endRound (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#720) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 749,
+            "message": "Parameter '_sId' of FairBank.getStageTargetAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#749) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 753,
+            "message": "Parameter '_sId' of FairBank.computeEarningsAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#753) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 753,
+            "line_end": 754,
+            "message": "Parameter '_amount' of FairBank.computeEarningsAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#753-754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 754,
+            "message": "Parameter '_currentTargetAmount' of FairBank.computeEarningsAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 754,
+            "message": "Parameter '_expectEndSid' of FairBank.computeEarningsAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 754,
+            "message": "Parameter '_ratio' of FairBank.computeEarningsAmount (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#754) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 757,
+            "line_end": 758,
+            "message": "Parameter '_goodsIndex' of FairBank.getEarningsAmountByGoodsIndex (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#757-758) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 938,
+            "line_end": 939,
+            "message": "Parameter '_rId' of FairBank.getRoundJackpot (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#938-939) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 986,
+            "line_end": 987,
+            "message": "Parameter '_player' of FairBank.getPlayerGoodList (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#986-987) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 107,
+            "message": "Constant 'FairBank.bankCompute' (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#102-107) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "impact": "Informational",
+            "line": 1129,
+            "message": "Parameter '_input' of NameFilter.nameFilter (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#1129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC721",
+            "filename": "output/0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol",
+            "function": "Approval",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 73,
+            "message": "ERC721 (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#59-73) does not mark important ERC20 parameters as 'indexed':\n\t-Transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#68) does not index parameter 'from'\n\t-Transfer (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#68) does not index parameter 'to'\n\t-Approval (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#71-73) does not index parameter 'owner'\n\t-Approval (0xb8f93e49a3278bb92f643ca2491cf80bfa0a01b7.sol#71-73) does not index parameter 'approved'\n",
+            "name": "erc20-indexed"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

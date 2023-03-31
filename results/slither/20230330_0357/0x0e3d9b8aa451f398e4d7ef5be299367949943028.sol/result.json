@@ -1,0 +1,128 @@
+{
+    "errors": [
+        "EXIT_CODE_12"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "VNETAirdrop",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 164,
+            "line_end": 185,
+            "message": "Reentrancy in VNETAirdrop.fallback (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#164-185):\n\tExternal calls:\n\t- balance = vnetToken.balanceOf(address(this)) (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#167)\n\t- assert(bool)(vnetToken.transfer(msg.sender,vnetAmount)) (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#175-177)\n\t- assert(bool)(vnetToken.transfer(msg.sender,balance)) (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#180-182)\n\tState variables written after the call(s):\n\t- airdopped (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#184-185)\n\t- randNonce (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#184)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 21,
+            "message": "ERC20Basic.totalSupply (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#20-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 22,
+            "message": "ERC20Basic.balanceOf (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#21-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "ERC20Basic.transfer (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#22-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 67,
+            "message": "Ownable.transferOwnership (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#59-67) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "VNETAirdrop",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 185,
+            "message": "VNETAirdrop.fallback (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#164-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol:\n\t- pragma solidity^0.4.21 (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_newOwner' of Ownable.transferOwnership (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "line": 71,
+            "message": "Parameter '_token' of Ownable.rescueTokens (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_vnetToken' of VNETAirdrop. (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "line": 159,
+            "line_end": 161,
+            "message": "Parameter '_description' of VNETAirdrop. (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol#159-161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol",
+            "impact": "Informational",
+            "message": "Parameter '_description' of VNETAirdrop.setDescription (0x0e3d9b8aa451f398e4d7ef5be299367949943028.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,25 @@
+INFO:Detectors:[92m
+DepositorRole.addDepositor (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#170-175) should be declared external
+DepositorRole.renounceDepositor (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#175-178) should be declared external
+TraderRole.addTrader (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#214-219) should be declared external
+TraderRole.renounceTrader (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#219-221) should be declared external
+Ownable.owner (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#261-263) should be declared external
+Ownable.renounceOwnership (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#280-284) should be declared external
+Ownable.transferOwnership (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#290-292) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xa2979531480d746c1378355269130b4729de2d4d.sol:
+	- pragma solidity^0.5.0 (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'DepositorRole._addDepositor' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#178-186) is not in mixedCase
+Function 'DepositorRole._removeDepositor' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#186-191) is not in mixedCase
+Function 'TraderRole._addTrader' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#221-228) is not in mixedCase
+Function 'TraderRole._removeTrader' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#228-232) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#302-308) is not in mixedCase
+Function 'TokenBank._withdraw' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#547-558) is not in mixedCase
+Function 'TokenBank._verifyWithdrawSigner' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#628-657) is not in mixedCase
+Function 'TokenBank._transfer' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#736-756) is not in mixedCase
+Function 'TokenBank._verifyTransferSigner' (/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol#774-778) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xa2979531480d746c1378355269130b4729de2d4d.sol analyzed (9 contracts), 17 result(s) found

@@ -1,0 +1,80 @@
+{
+    "errors": [
+        "EXIT_CODE_6"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "multiSendEth",
+            "impact": "High",
+            "line": 11,
+            "line_end": 22,
+            "message": "MultiEthSender.multiSendEth (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#11-22) sends eth to arbitrary user\n\tDangerous calls:\n\t- list[i].transfer(amount) (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#15-16)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "multiSendEth",
+            "impact": "Medium",
+            "line": 11,
+            "line_end": 22,
+            "message": "MultiEthSender.multiSendEth (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#11-22) uses a dangerous strict equality:\n\t- assert(bool)(address(this).balance == balanceBeforeTransfer - amount * list.length)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "multiSendEth",
+            "impact": "Low",
+            "line": 15,
+            "line_end": 16,
+            "message": "MultiEthSender.multiSendEth has external calls inside a loop:\n\t- list[i].transfer(amount) (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#15-16)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "multiSendEth",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 22,
+            "message": "MultiEthSender.multiSendEth (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#11-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "getBalance",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 26,
+            "message": "MultiEthSender.getBalance (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#22-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MultiEthSender",
+            "filename": "output/0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 30,
+            "message": "MultiEthSender.fallback (0xb52323c98e75974d2139e65d3cba06c43a53cae4.sol#26-30) should be declared external\n",
+            "name": "external-function"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

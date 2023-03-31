@@ -1,0 +1,1549 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_RECEIVED_SIGNAL_39"
+    ],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "balanceOfAt",
+            "impact": "High",
+            "line": 329,
+            "line_end": 330,
+            "message": "MiniMeToken.balances (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#329-330) is never initialized. It is used in:\n\t- doTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#426-462)\n\t- balanceOfAt (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541-562)\n\t- generateTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#637-648)\n\t- destroyTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659-670)\n",
+            "name": "uninitialized-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Medium",
+            "line": 119,
+            "line_end": 150,
+            "message": "Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) uses a dangerous strict equality:\n\t- require(bool)(grants[_to].value == 0)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "unlockVestedTokens",
+            "impact": "Medium",
+            "line": 119,
+            "line_end": 150,
+            "message": "Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) uses a dangerous strict equality:\n\t- require(bool)(grants[_to].value == 0)\nTrustee.unlockVestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) uses a dangerous strict equality:\n\t- vested == 0\n\t- transferable == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 473,
+            "line_end": 495,
+            "message": "Reentrancy in MiniMeToken.approve (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#473-495):\n\tExternal calls:\n\t- require(bool)(TokenController(controller).onApprove(msg.sender,_spender,_amount)) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#488-490)\n\tState variables written after the call(s):\n\t- allowed (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#490-491)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Medium",
+            "line": 119,
+            "line_end": 150,
+            "message": "Reentrancy in Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150):\n\tExternal calls:\n\t- require(bool)(totalVesting.add(_value) <= shp.balanceOf(address(this))) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#134-136)\n\tState variables written after the call(s):\n\t- grants (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#138-145)\n\t- totalVesting (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#148-149)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "revoke",
+            "impact": "Medium",
+            "line": 155,
+            "line_end": 169,
+            "message": "Trustee.revoke (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-169) does not use the value returned by external calls:\n\t-shp.transfer(msg.sender,refund) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#167-168)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "unlockVestedTokens",
+            "impact": "Medium",
+            "line": 220,
+            "line_end": 242,
+            "message": "Trustee.unlockVestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) does not use the value returned by external calls:\n\t-shp.transfer(msg.sender,transferable) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#241)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "claimTokens",
+            "impact": "Medium",
+            "line": 766,
+            "line_end": 781,
+            "message": "MiniMeToken.claimTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#766-781) does not use the value returned by external calls:\n\t-token.transfer(controller,balance) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#779-781)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "doBuy",
+            "impact": "Medium",
+            "line": 1023,
+            "line_end": 1047,
+            "message": "TokenSale.doBuy (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1023-1047) does not use the value returned by external calls:\n\t-shp.generateTokens(_caller,callerTokensWithDiscount) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1040)\n\t-shp.generateTokens(bountyAddress,bountyTokens) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1040-1041)\n\t-shp.generateTokens(trusteeAddress,vestingTokens) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1041-1042)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "payAffiliate",
+            "impact": "Medium",
+            "line": 1087,
+            "line_end": 1101,
+            "message": "TokenSale.payAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1087-1101) does not use the value returned by external calls:\n\t-shp.generateTokens(affiliate,affiliateBonus) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1095-1097)\n\t-shp.generateTokens(_caller,contributorBonus) (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1097-1100)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Low",
+            "line": 156,
+            "message": "Trustee.revoke.grant (local variable @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#156) shadows:\n\t- Trustee.grant (function @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Low",
+            "line": 180,
+            "message": "Trustee.vestedTokens.grant (local variable @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#180) shadows:\n\t- Trustee.grant (function @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Low",
+            "line": 221,
+            "line_end": 222,
+            "message": "Trustee.unlockVestedTokens.grant (local variable @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#221-222) shadows:\n\t- Trustee.grant (function @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "min",
+            "impact": "Low",
+            "line": 702,
+            "message": "MiniMeToken.getValueAt.min (local variable @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#702) shadows:\n\t- MiniMeToken.min (function @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#743-745)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "SharpePresale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "honourWhitelist",
+            "impact": "Low",
+            "line": 1298,
+            "line_end": 1299,
+            "message": "SharpePresale.honourWhitelist.honourWhitelist (local variable @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1298-1299) shadows:\n\t- SharpePresale.honourWhitelist (function @ 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1295-1304)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 734,
+            "line_end": 742,
+            "message": "MiniMeToken.isContract uses assembly (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#734-742)\n\t- 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#741-742\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 1132,
+            "line_end": 1136,
+            "message": "TokenSale.isContract uses assembly (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1132-1136)\n\t- 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1135-1136\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "MiniMeToken.version should be constant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#300)\nOwned.newOwner should be constant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#21-23)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 34,
+            "message": "Owned.changeOwner (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#25-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "grant",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 150,
+            "message": "Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "revoke",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 169,
+            "message": "Trustee.revoke (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "vestedTokens",
+            "impact": "Informational",
+            "line": 174,
+            "line_end": 183,
+            "message": "Trustee.vestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#174-183) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Trustee",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "unlockVestedTokens",
+            "impact": "Informational",
+            "line": 220,
+            "line_end": 242,
+            "message": "Trustee.unlockVestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "proxyPayment",
+            "impact": "Informational",
+            "line": 1151,
+            "line_end": 1153,
+            "message": "TokenSale.proxyPayment (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1151-1153) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "proxyPayment",
+            "impact": "Informational",
+            "line": 249,
+            "line_end": 250,
+            "message": "TokenController.proxyPayment (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#249-250) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "onTransfer",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "TokenController.onTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#257-258) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "onTransfer",
+            "impact": "Informational",
+            "line": 1153,
+            "line_end": 1156,
+            "message": "TokenSale.onTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1153-1156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "onApprove",
+            "impact": "Informational",
+            "line": 1156,
+            "line_end": 1159,
+            "message": "TokenSale.onApprove (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1156-1159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenController",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "onApprove",
+            "impact": "Informational",
+            "line": 267,
+            "line_end": 271,
+            "message": "TokenController.onApprove (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#267-271) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Controlled",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "changeController",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 285,
+            "message": "Controlled.changeController (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#284-285) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 289,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#286-289) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 388,
+            "line_end": 391,
+            "message": "MiniMeToken.transfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#388-391) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 414,
+            "message": "MiniMeToken.transferFrom (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#398-414) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 499,
+            "line_end": 501,
+            "message": "MiniMeToken.allowance (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499-501) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 518,
+            "line_end": 529,
+            "message": "MiniMeToken.approveAndCall (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#518-529) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "createCloneToken",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 629,
+            "message": "MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#611-629) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "generateTokens",
+            "impact": "Informational",
+            "line": 637,
+            "line_end": 648,
+            "message": "MiniMeToken.generateTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#637-648) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "destroyTokens",
+            "impact": "Informational",
+            "line": 659,
+            "line_end": 670,
+            "message": "MiniMeToken.destroyTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659-670) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "enableTransfers",
+            "impact": "Informational",
+            "line": 676,
+            "line_end": 678,
+            "message": "MiniMeToken.enableTransfers (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#676-678) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 753,
+            "line_end": 760,
+            "message": "MiniMeToken.fallback (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#753-760) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeToken",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "claimTokens",
+            "impact": "Informational",
+            "line": 766,
+            "line_end": 781,
+            "message": "MiniMeToken.claimTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#766-781) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MiniMeTokenFactory",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "createCloneToken",
+            "impact": "Informational",
+            "line": 821,
+            "line_end": 836,
+            "message": "MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821-836) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateUtility",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "addAffiliate",
+            "impact": "Informational",
+            "line": 885,
+            "line_end": 889,
+            "message": "AffiliateUtility.addAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#885-889) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateUtility",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "applyAffiliate",
+            "impact": "Informational",
+            "line": 898,
+            "line_end": 920,
+            "message": "AffiliateUtility.applyAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#898-920) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AffiliateUtility",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "isAffiliateValid",
+            "impact": "Informational",
+            "line": 931,
+            "line_end": 942,
+            "message": "AffiliateUtility.isAffiliateValid (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#931-942) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "approveAddress",
+            "impact": "Informational",
+            "line": 1014,
+            "line_end": 1017,
+            "message": "TokenSale.approveAddress (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1014-1017) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "setShp",
+            "impact": "Informational",
+            "line": 1103,
+            "line_end": 1107,
+            "message": "TokenSale.setShp (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1103-1107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 1115,
+            "line_end": 1126,
+            "message": "TokenSale.transferOwnership (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1115-1126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "pauseContribution",
+            "impact": "Informational",
+            "line": 1137,
+            "line_end": 1138,
+            "message": "TokenSale.pauseContribution (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1137-1138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "resumeContribution",
+            "impact": "Informational",
+            "line": 1140,
+            "line_end": 1141,
+            "message": "TokenSale.resumeContribution (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1140-1141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SharpePresale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "addToWhitelist",
+            "impact": "Informational",
+            "line": 1263,
+            "line_end": 1270,
+            "message": "SharpePresale.addToWhitelist (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1263-1270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SharpePresale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 1275,
+            "line_end": 1283,
+            "message": "SharpePresale.fallback (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1275-1283) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SharpePresale",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "function": "closeSale",
+            "impact": "Informational",
+            "line": 1409,
+            "line_end": 1410,
+            "message": "SharpePresale.closeSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1409-1410) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:\n\t- pragma solidity0.4.15 (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 21,
+            "message": "Function 'Owned.Owned' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#17-21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 26,
+            "message": "Parameter '_newOwner' of Owned.changeOwner (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#25-26) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 112,
+            "message": "Function 'Trustee.Trustee' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#111-112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 111,
+            "message": "Parameter '_shp' of Trustee.Trustee (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "Parameter '_to' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_value' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "Parameter '_start' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#120-121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 121,
+            "message": "Parameter '_cliff' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 123,
+            "message": "Parameter '_end' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#121-123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_revokable' of Trustee.grant (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 156,
+            "message": "Parameter '_holder' of Trustee.revoke (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-156) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 175,
+            "line_end": 177,
+            "message": "Parameter '_holder' of Trustee.vestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#175-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Parameter '_time' of Trustee.vestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 204,
+            "message": "Parameter '_grant' of Trustee.calculateVestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 204,
+            "message": "Parameter '_time' of Trustee.calculateVestedTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 276,
+            "line_end": 280,
+            "message": "Function 'Controlled.Controlled' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#276-280) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 285,
+            "message": "Parameter '_newController' of Controlled.changeController (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#284-285) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 380,
+            "message": "Function 'MiniMeToken.MiniMeToken' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#362-380) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 363,
+            "message": "Parameter '_tokenFactory' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 363,
+            "message": "Parameter '_parentToken' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 363,
+            "line_end": 364,
+            "message": "Parameter '_parentSnapShotBlock' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363-364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 364,
+            "message": "Parameter '_tokenName' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 364,
+            "message": "Parameter '_decimalUnits' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#364) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 365,
+            "message": "Parameter '_tokenSymbol' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#365) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 365,
+            "line_end": 366,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.MiniMeToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#365-366) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 388,
+            "line_end": 389,
+            "message": "Parameter '_to' of MiniMeToken.transfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#388-389) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 389,
+            "message": "Parameter '_amount' of MiniMeToken.transfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#389) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 398,
+            "line_end": 399,
+            "message": "Parameter '_from' of MiniMeToken.transferFrom (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#398-399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 399,
+            "message": "Parameter '_to' of MiniMeToken.transferFrom (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#399) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 399,
+            "line_end": 401,
+            "message": "Parameter '_amount' of MiniMeToken.transferFrom (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#399-401) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_from' of MiniMeToken.doTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_to' of MiniMeToken.doTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 427,
+            "message": "Parameter '_amount' of MiniMeToken.doTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 465,
+            "message": "Parameter '_owner' of MiniMeToken.balanceOf (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#465) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 475,
+            "message": "Parameter '_spender' of MiniMeToken.approve (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#473-475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 475,
+            "message": "Parameter '_amount' of MiniMeToken.approve (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#475) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 499,
+            "message": "Parameter '_owner' of MiniMeToken.allowance (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 499,
+            "line_end": 500,
+            "message": "Parameter '_spender' of MiniMeToken.allowance (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499-500) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 519,
+            "message": "Parameter '_spender' of MiniMeToken.approveAndCall (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#519) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 519,
+            "line_end": 521,
+            "message": "Parameter '_amount' of MiniMeToken.approveAndCall (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#519-521) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 523,
+            "message": "Parameter '_extraData' of MiniMeToken.approveAndCall (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#523) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 541,
+            "message": "Parameter '_owner' of MiniMeToken.balanceOfAt (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 541,
+            "line_end": 542,
+            "message": "Parameter '_blockNumber' of MiniMeToken.balanceOfAt (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541-542) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 567,
+            "message": "Parameter '_blockNumber' of MiniMeToken.totalSupplyAt (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#567) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 611,
+            "line_end": 612,
+            "message": "Parameter '_cloneTokenName' of MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#611-612) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 612,
+            "message": "Parameter '_cloneDecimalUnits' of MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#612) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 612,
+            "line_end": 613,
+            "message": "Parameter '_cloneTokenSymbol' of MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#612-613) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 613,
+            "line_end": 615,
+            "message": "Parameter '_snapshotBlock' of MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#613-615) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 616,
+            "line_end": 617,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#616-617) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 638,
+            "message": "Parameter '_owner' of MiniMeToken.generateTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#638) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 638,
+            "message": "Parameter '_amount' of MiniMeToken.generateTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#638) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 659,
+            "message": "Parameter '_owner' of MiniMeToken.destroyTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 659,
+            "message": "Parameter '_amount' of MiniMeToken.destroyTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 676,
+            "line_end": 677,
+            "message": "Parameter '_transfersEnabled' of MiniMeToken.enableTransfers (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#676-677) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 692,
+            "message": "Parameter '_block' of MiniMeToken.getValueAt (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#692) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 715,
+            "message": "Parameter '_value' of MiniMeToken.updateValueAtNow (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#715) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 734,
+            "message": "Parameter '_addr' of MiniMeToken.isContract (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#734) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 767,
+            "line_end": 772,
+            "message": "Parameter '_token' of MiniMeToken.claimTokens (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#767-772) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 821,
+            "message": "Parameter '_parentToken' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 821,
+            "line_end": 822,
+            "message": "Parameter '_snapshotBlock' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821-822) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 822,
+            "message": "Parameter '_tokenName' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#822) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 822,
+            "message": "Parameter '_decimalUnits' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#822) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 823,
+            "message": "Parameter '_tokenSymbol' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#823) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 823,
+            "line_end": 824,
+            "message": "Parameter '_transfersEnabled' of MiniMeTokenFactory.createCloneToken (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#823-824) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 839,
+            "line_end": 855,
+            "message": "Function 'SHP.SHP' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#839-855) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 867,
+            "line_end": 869,
+            "message": "Function 'AffiliateUtility.AffiliateUtility' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#867-869) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 868,
+            "message": "Parameter '_tierTwoMin' of AffiliateUtility.AffiliateUtility (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#868) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 868,
+            "line_end": 869,
+            "message": "Parameter '_tierThreeMin' of AffiliateUtility.AffiliateUtility (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#868-869) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 873,
+            "line_end": 874,
+            "message": "Parameter '_tierTwoMin' of AffiliateUtility.setTiers (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#873-874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 874,
+            "message": "Parameter '_tierThreeMin' of AffiliateUtility.setTiers (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#874) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 887,
+            "message": "Parameter '_investor' of AffiliateUtility.addAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#887) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 887,
+            "line_end": 888,
+            "message": "Parameter '_affiliate' of AffiliateUtility.addAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#887-888) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 899,
+            "message": "Parameter '_investor' of AffiliateUtility.applyAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#899) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 899,
+            "message": "Parameter '_contributorTokens' of AffiliateUtility.applyAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#899) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 900,
+            "message": "Parameter '_contributionValue' of AffiliateUtility.applyAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#900) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 923,
+            "message": "Parameter '_investor' of AffiliateUtility.getAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#923) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 933,
+            "message": "Parameter '_investor' of AffiliateUtility.isAffiliateValid (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#933) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 943,
+            "line_end": 957,
+            "message": "Function 'SCD.SCD' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#943-957) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1152,
+            "message": "Parameter '' of TokenSale.proxyPayment (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1154,
+            "line_end": 1155,
+            "message": "Parameter '' of TokenSale.onTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1154-1155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1155,
+            "message": "Parameter '_scope_0' of TokenSale.onTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1155,
+            "message": "Parameter '_scope_1' of TokenSale.onTransfer (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1156,
+            "line_end": 1157,
+            "message": "Parameter '' of TokenSale.onApprove (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1156-1157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1157,
+            "message": "Parameter '_scope_0' of TokenSale.onApprove (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1157,
+            "message": "Parameter '_scope_1' of TokenSale.onApprove (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1157) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1014,
+            "line_end": 1015,
+            "message": "Parameter '_addr' of TokenSale.approveAddress (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1014-1015) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1023,
+            "line_end": 1024,
+            "message": "Parameter '_caller' of TokenSale.doBuy (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1023-1024) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "line_end": 1082,
+            "message": "Function 'TokenSale.TokenSale' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069-1082) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "message": "Parameter '_etherEscrowAddress' of TokenSale.TokenSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "message": "Parameter '_bountyAddress' of TokenSale.TokenSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1069,
+            "line_end": 1070,
+            "message": "Parameter '_trusteeAddress' of TokenSale.TokenSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069-1070) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1070,
+            "line_end": 1071,
+            "message": "Parameter '_affiliateUtilityAddress' of TokenSale.TokenSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1070-1071) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1071,
+            "message": "Parameter '_apiAddress' of TokenSale.TokenSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1071) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1088,
+            "message": "Parameter '_tokens' of TokenSale.payAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1088) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1088,
+            "line_end": 1089,
+            "message": "Parameter '_etherValue' of TokenSale.payAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1088-1089) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1089,
+            "message": "Parameter '_caller' of TokenSale.payAffiliate (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1089) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1106,
+            "message": "Parameter '_shp' of TokenSale.setShp (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1116,
+            "message": "Parameter '_tokenController' of TokenSale.transferOwnership (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1116,
+            "line_end": 1117,
+            "message": "Parameter '_trusteeOwner' of TokenSale.transferOwnership (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1116-1117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "message": "Parameter '_etherAmount' of SharpePresale.applyDiscount (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "message": "Parameter '_contributorTokens' of SharpePresale.applyDiscount (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "message": "Parameter '_etherAmount' of SharpePresale.updateCounters (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1227,
+            "line_end": 1258,
+            "message": "Function 'SharpePresale.SharpePresale' (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1227-1258) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1232,
+            "line_end": 1233,
+            "message": "Parameter '_firstTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1232-1233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1233,
+            "line_end": 1235,
+            "message": "Parameter '_secondTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1233-1235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1235,
+            "line_end": 1236,
+            "message": "Parameter '_thirdTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1235-1236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1236,
+            "message": "Parameter '_minPresaleContributionEther' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1236,
+            "message": "Parameter '_maxPresaleContributionEther' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1236) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1239,
+            "message": "Parameter '_preSaleCap' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1239,
+            "message": "Parameter '_honourWhitelistEnd' of SharpePresale.SharpePresale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1264,
+            "line_end": 1265,
+            "message": "Parameter '_sender' of SharpePresale.addToWhitelist (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1264-1265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1265,
+            "line_end": 1268,
+            "message": "Parameter '_plannedContribution' of SharpePresale.addToWhitelist (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1265-1268) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol",
+            "impact": "Informational",
+            "line": 1284,
+            "message": "Parameter '_caller' of SharpePresale.processPreSale (0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1284) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

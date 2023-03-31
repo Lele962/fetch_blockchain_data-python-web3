@@ -1,0 +1,1703 @@
+{
+    "errors": [],
+    "fails": [
+        "DOCKER_RECEIVED_SIGNAL_58"
+    ],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferEth",
+            "impact": "High",
+            "line": 864,
+            "line_end": 868,
+            "message": "AOIonInterface.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-868) sends eth to arbitrary user\n\tDangerous calls:\n\t- _recipient.transfer(_amount) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#867)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TAO",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferERC20",
+            "impact": "Medium",
+            "line": 342,
+            "line_end": 344,
+            "message": "TAO.transferERC20 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#342-344) does not use the value returned by external calls:\n\t-_erc20.transfer(_recipient,_amount) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#344)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 784,
+            "line_end": 799,
+            "message": "Reentrancy in AOIonInterface.constructor (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-799):\n\tExternal calls:\n\t- setNameTAOPositionAddress(_nameTAOPositionAddress) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#789-790)\n\t- setNamePublicKeyAddress(_namePublicKeyAddress) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)\n\tState variables written after the call(s):\n\t- _namePublicKey (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 784,
+            "line_end": 799,
+            "message": "Reentrancy in AOIonInterface.constructor (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-799):\n\tExternal calls:\n\t- setNameTAOPositionAddress(_nameTAOPositionAddress) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#789-790)\n\t- setNamePublicKeyAddress(_namePublicKeyAddress) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#790-794)\n\t- setNameAccountRecoveryAddress(_nameAccountRecoveryAddress) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795)\n\tState variables written after the call(s):\n\t- _nameAccountRecovery (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795)\n\t- decimals (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#799)\n\t- name (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#795-796)\n\t- powerOfTen (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#799)\n\t- symbol (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#797)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferBetweenPublicKeys",
+            "impact": "Low",
+            "line": 1038,
+            "line_end": 1049,
+            "message": "Reentrancy in AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1038-1049):\n\tExternal calls:\n\t- require(bool)(_nameTAOPosition.senderIsAdvocate(msg.sender,_nameId)) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1042-1043)\n\t- require(bool)(! _nameAccountRecovery.isCompromised(_nameId)) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1044)\n\t- require(bool)(_namePublicKey.isKeyExist(_nameId,_from)) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1046)\n\t- require(bool)(_namePublicKey.isKeyExist(_nameId,_to)) (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1047-1048)\n\tState variables written after the call(s):\n\t- balanceOf (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1048-1049)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 107,
+            "message": "TokenERC20.decimals should be constant (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#105-107)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 172,
+            "message": "TokenERC20.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#167-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 188,
+            "message": "TokenERC20.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 221,
+            "message": "TokenERC20.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208-221) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 236,
+            "message": "TokenERC20.burn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#223-236) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenERC20",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 256,
+            "message": "TokenERC20.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#238-256) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TAO",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferEth",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 326,
+            "message": "TAO.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#322-326) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TAO",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferERC20",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 344,
+            "message": "TAO.transferERC20 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#342-344) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "isValidERC20TokenAddress",
+            "impact": "Informational",
+            "line": 395,
+            "line_end": 401,
+            "message": "AOLibrary.isValidERC20TokenAddress (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#395-401) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "isTheAO",
+            "impact": "Informational",
+            "line": 412,
+            "line_end": 422,
+            "message": "AOLibrary.isTheAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#412-422) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "PERCENTAGE_DIVISOR",
+            "impact": "Informational",
+            "line": 431,
+            "line_end": 433,
+            "message": "AOLibrary.PERCENTAGE_DIVISOR (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#431-433) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "MULTIPLIER_DIVISOR",
+            "impact": "Informational",
+            "line": 436,
+            "line_end": 439,
+            "message": "AOLibrary.MULTIPLIER_DIVISOR (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#436-439) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "deployTAO",
+            "impact": "Informational",
+            "line": 453,
+            "line_end": 460,
+            "message": "AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#453-460) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "deployName",
+            "impact": "Informational",
+            "line": 472,
+            "line_end": 476,
+            "message": "AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472-476) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculateWeightedMultiplier",
+            "impact": "Informational",
+            "line": 482,
+            "line_end": 500,
+            "message": "AOLibrary.calculateWeightedMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#482-500) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculatePrimordialMultiplier",
+            "impact": "Informational",
+            "line": 514,
+            "line_end": 544,
+            "message": "AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514-544) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculateNetworkBonusAmount",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 607,
+            "message": "AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#590-607) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculateMaximumBurnAmount",
+            "impact": "Informational",
+            "line": 620,
+            "line_end": 624,
+            "message": "AOLibrary.calculateMaximumBurnAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#620-624) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculateMultiplierAfterBurn",
+            "impact": "Informational",
+            "line": 637,
+            "line_end": 641,
+            "message": "AOLibrary.calculateMultiplierAfterBurn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#637-641) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "calculateMultiplierAfterConversion",
+            "impact": "Informational",
+            "line": 664,
+            "line_end": 677,
+            "message": "AOLibrary.calculateMultiplierAfterConversion (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#664-677) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOLibrary",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "numDigits",
+            "impact": "Informational",
+            "line": 684,
+            "line_end": 689,
+            "message": "AOLibrary.numDigits (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#684-689) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TheAO",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 715,
+            "line_end": 721,
+            "message": "TheAO.transferOwnership (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#715-721) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 811,
+            "line_end": 816,
+            "message": "AOIonInterface.transferOwnership (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#811-816) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TheAO",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "setWhitelist",
+            "impact": "Informational",
+            "line": 726,
+            "line_end": 734,
+            "message": "TheAO.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#726-734) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "setWhitelist",
+            "impact": "Informational",
+            "line": 820,
+            "line_end": 826,
+            "message": "AOIonInterface.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#820-826) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferEth",
+            "impact": "Informational",
+            "line": 864,
+            "line_end": 868,
+            "message": "AOIonInterface.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-868) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 871,
+            "line_end": 878,
+            "message": "AOIonInterface.freezeAccount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#871-878) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 883,
+            "line_end": 885,
+            "message": "AOIonInterface.setPrices (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#883-885) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 894,
+            "line_end": 897,
+            "message": "AOIonInterface.mint (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#894-897) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "stakeFrom",
+            "impact": "Informational",
+            "line": 899,
+            "line_end": 911,
+            "message": "AOIonInterface.stakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899-911) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "unstakeFrom",
+            "impact": "Informational",
+            "line": 913,
+            "line_end": 924,
+            "message": "AOIonInterface.unstakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913-924) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "escrowFrom",
+            "impact": "Informational",
+            "line": 929,
+            "line_end": 939,
+            "message": "AOIonInterface.escrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#929-939) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "mintEscrow",
+            "impact": "Informational",
+            "line": 945,
+            "line_end": 952,
+            "message": "AOIonInterface.mintEscrow (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#945-952) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "unescrowFrom",
+            "impact": "Informational",
+            "line": 954,
+            "line_end": 969,
+            "message": "AOIonInterface.unescrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#954-969) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "whitelistBurnFrom",
+            "impact": "Informational",
+            "line": 979,
+            "line_end": 995,
+            "message": "AOIonInterface.whitelistBurnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#979-995) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "whitelistTransferFrom",
+            "impact": "Informational",
+            "line": 1000,
+            "line_end": 1007,
+            "message": "AOIonInterface.whitelistTransferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1000-1007) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 1011,
+            "line_end": 1014,
+            "message": "AOIonInterface.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1011-1014) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 1018,
+            "line_end": 1029,
+            "message": "AOIonInterface.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1018-1029) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "transferBetweenPublicKeys",
+            "impact": "Informational",
+            "line": 1038,
+            "line_end": 1049,
+            "message": "AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1038-1049) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 1077,
+            "line_end": 1081,
+            "message": "AOIonInterface.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1077-1081) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 1082,
+            "line_end": 1098,
+            "message": "AOIonInterface.burn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1082-1098) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 1104,
+            "line_end": 1118,
+            "message": "AOIonInterface.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1104-1118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 1119,
+            "line_end": 1121,
+            "message": "AOIonInterface.buy (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1119-1121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AOIonInterface",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 1123,
+            "line_end": 1130,
+            "message": "AOIonInterface.sell (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1123-1130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol:\n\t- pragma solidity>=0.5.4<0.6.0 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Contract 'tokenRecipient' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#3-5) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 159,
+            "message": "Function 'TokenERC20._transfer' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#137-159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 138,
+            "message": "Parameter '_from' of TokenERC20._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#137-138) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 138,
+            "message": "Parameter '_to' of TokenERC20._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#138) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 138,
+            "message": "Parameter '_value' of TokenERC20._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#138) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 169,
+            "message": "Parameter '_to' of TokenERC20.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#167-169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 169,
+            "message": "Parameter '_value' of TokenERC20.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#169) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Parameter '_from' of TokenERC20.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_to' of TokenERC20.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 178,
+            "message": "Parameter '_value' of TokenERC20.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 197,
+            "message": "Parameter '_spender' of TokenERC20.approve (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 197,
+            "message": "Parameter '_value' of TokenERC20.approve (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#197) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_spender' of TokenERC20.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_value' of TokenERC20.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 208,
+            "line_end": 209,
+            "message": "Parameter '_extraData' of TokenERC20.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#208-209) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 223,
+            "message": "Parameter '_value' of TokenERC20.burn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#223) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_from' of TokenERC20.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 239,
+            "message": "Parameter '_value' of TokenERC20.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#239) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 286,
+            "message": "Parameter '_name' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#285-286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_originId' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 289,
+            "message": "Parameter '_datHash' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#288-289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 289,
+            "line_end": 291,
+            "message": "Parameter '_database' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#289-291) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 295,
+            "message": "Parameter '_keyValue' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#291-295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 295,
+            "message": "Parameter '_contentId' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 296,
+            "message": "Parameter '_vaultAddress' of TAO. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#295-296) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 323,
+            "message": "Parameter '_recipient' of TAO.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#322-323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 323,
+            "message": "Parameter '_amount' of TAO.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#323) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 343,
+            "message": "Parameter '_erc20TokenAddress' of TAO.transferERC20 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 343,
+            "message": "Parameter '_recipient' of TAO.transferERC20 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 343,
+            "message": "Parameter '_amount' of TAO.transferERC20 (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 374,
+            "message": "Parameter '_taoId' of AOLibrary.isTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#374) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 382,
+            "line_end": 384,
+            "message": "Parameter '_nameId' of AOLibrary.isName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#382-384) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 395,
+            "message": "Parameter '_tokenAddress' of AOLibrary.isValidERC20TokenAddress (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 413,
+            "message": "Parameter '_sender' of AOLibrary.isTheAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 413,
+            "message": "Parameter '_theAO' of AOLibrary.isTheAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 413,
+            "line_end": 414,
+            "message": "Parameter '_nameTAOPositionAddress' of AOLibrary.isTheAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#413-414) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 431,
+            "line_end": 433,
+            "message": "Function 'AOLibrary.PERCENTAGE_DIVISOR' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#431-433) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 436,
+            "line_end": 439,
+            "message": "Function 'AOLibrary.MULTIPLIER_DIVISOR' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#436-439) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 454,
+            "message": "Parameter '_name' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#454) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 454,
+            "message": "Parameter '_originId' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#454) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 455,
+            "message": "Parameter '_datHash' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#455) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 455,
+            "line_end": 456,
+            "message": "Parameter '_database' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#455-456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_keyValue' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_contentId' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 456,
+            "line_end": 457,
+            "message": "Parameter '_nameTAOVaultAddress' of AOLibrary.deployTAO (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#456-457) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 472,
+            "message": "Parameter '_name' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 472,
+            "message": "Parameter '_originId' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 472,
+            "line_end": 473,
+            "message": "Parameter '_datHash' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#472-473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 473,
+            "message": "Parameter '_database' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 473,
+            "message": "Parameter '_keyValue' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 473,
+            "line_end": 474,
+            "message": "Parameter '_contentId' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#473-474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 474,
+            "message": "Parameter '_nameTAOVaultAddress' of AOLibrary.deployName (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#474) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 483,
+            "line_end": 484,
+            "message": "Parameter '_currentWeightedMultiplier' of AOLibrary.calculateWeightedMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#483-484) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 484,
+            "line_end": 485,
+            "message": "Parameter '_currentPrimordialBalance' of AOLibrary.calculateWeightedMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#484-485) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 485,
+            "line_end": 490,
+            "message": "Parameter '_additionalWeightedMultiplier' of AOLibrary.calculateWeightedMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#485-490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 490,
+            "message": "Parameter '_additionalPrimordialAmount' of AOLibrary.calculateWeightedMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#490) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 514,
+            "message": "Parameter '_purchaseAmount' of AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 514,
+            "line_end": 515,
+            "message": "Parameter '_totalPrimordialMintable' of AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#514-515) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 515,
+            "message": "Parameter '_totalPrimordialMinted' of AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 515,
+            "message": "Parameter '_startingMultiplier' of AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 515,
+            "line_end": 516,
+            "message": "Parameter '_endingMultiplier' of AOLibrary.calculatePrimordialMultiplier (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#515-516) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 558,
+            "message": "Parameter '_purchaseAmount' of AOLibrary.calculateNetworkBonusPercentage (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 558,
+            "message": "Parameter '_totalPrimordialMintable' of AOLibrary.calculateNetworkBonusPercentage (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 558,
+            "line_end": 559,
+            "message": "Parameter '_totalPrimordialMinted' of AOLibrary.calculateNetworkBonusPercentage (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#558-559) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 559,
+            "message": "Parameter '_startingMultiplier' of AOLibrary.calculateNetworkBonusPercentage (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#559) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 559,
+            "message": "Parameter '_endingMultiplier' of AOLibrary.calculateNetworkBonusPercentage (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#559) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 591,
+            "message": "Parameter '_purchaseAmount' of AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#590-591) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 591,
+            "line_end": 595,
+            "message": "Parameter '_totalPrimordialMintable' of AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#591-595) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 595,
+            "message": "Parameter '_totalPrimordialMinted' of AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 595,
+            "message": "Parameter '_startingMultiplier' of AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 595,
+            "line_end": 596,
+            "message": "Parameter '_endingMultiplier' of AOLibrary.calculateNetworkBonusAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#595-596) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 620,
+            "line_end": 621,
+            "message": "Parameter '_primordialBalance' of AOLibrary.calculateMaximumBurnAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#620-621) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 621,
+            "message": "Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMaximumBurnAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#621) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 621,
+            "line_end": 622,
+            "message": "Parameter '_maximumMultiplier' of AOLibrary.calculateMaximumBurnAmount (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#621-622) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 638,
+            "message": "Parameter '_primordialBalance' of AOLibrary.calculateMultiplierAfterBurn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#638) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 638,
+            "line_end": 639,
+            "message": "Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMultiplierAfterBurn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#638-639) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 639,
+            "line_end": 641,
+            "message": "Parameter '_amountToBurn' of AOLibrary.calculateMultiplierAfterBurn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#639-641) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 666,
+            "message": "Parameter '_primordialBalance' of AOLibrary.calculateMultiplierAfterConversion (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#666) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 666,
+            "line_end": 667,
+            "message": "Parameter '_currentWeightedMultiplier' of AOLibrary.calculateMultiplierAfterConversion (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#666-667) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 667,
+            "line_end": 668,
+            "message": "Parameter '_amountToConvert' of AOLibrary.calculateMultiplierAfterConversion (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#667-668) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 716,
+            "message": "Parameter '_theAO' of TheAO.transferOwnership (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#716) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 727,
+            "line_end": 728,
+            "message": "Parameter '_account' of TheAO.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#727-728) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 728,
+            "line_end": 729,
+            "message": "Parameter '_whitelist' of TheAO.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#728-729) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 735,
+            "line_end": 739,
+            "message": "Contract 'ionRecipient' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#735-739) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 811,
+            "line_end": 814,
+            "message": "Parameter '_theAO' of AOIonInterface.transferOwnership (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#811-814) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 820,
+            "line_end": 821,
+            "message": "Parameter '_account' of AOIonInterface.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#820-821) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 821,
+            "message": "Parameter '_whitelist' of AOIonInterface.setWhitelist (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#821) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 784,
+            "message": "Parameter '_name' of AOIonInterface. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 784,
+            "line_end": 786,
+            "message": "Parameter '_symbol' of AOIonInterface. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#784-786) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 786,
+            "message": "Parameter '_nameTAOPositionAddress' of AOIonInterface. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#786) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 786,
+            "line_end": 787,
+            "message": "Parameter '_namePublicKeyAddress' of AOIonInterface. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#786-787) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 787,
+            "line_end": 789,
+            "message": "Parameter '_nameAccountRecoveryAddress' of AOIonInterface. (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#787-789) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 828,
+            "line_end": 829,
+            "message": "Parameter '_nameTAOPositionAddress' of AOIonInterface.setNameTAOPositionAddress (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#828-829) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 839,
+            "message": "Parameter '_namePublicKeyAddress' of AOIonInterface.setNamePublicKeyAddress (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#839) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 850,
+            "line_end": 851,
+            "message": "Parameter '_nameAccountRecoveryAddress' of AOIonInterface.setNameAccountRecoveryAddress (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#850-851) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 864,
+            "line_end": 865,
+            "message": "Parameter '_recipient' of AOIonInterface.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#864-865) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 865,
+            "line_end": 866,
+            "message": "Parameter '_amount' of AOIonInterface.transferEth (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#865-866) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 899,
+            "message": "Parameter '_from' of AOIonInterface.stakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 899,
+            "message": "Parameter '_value' of AOIonInterface.stakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#899) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 913,
+            "message": "Parameter '_from' of AOIonInterface.unstakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 913,
+            "message": "Parameter '_value' of AOIonInterface.unstakeFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#913) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 932,
+            "message": "Parameter '_from' of AOIonInterface.escrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 932,
+            "message": "Parameter '_to' of AOIonInterface.escrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 932,
+            "line_end": 933,
+            "message": "Parameter '_value' of AOIonInterface.escrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#932-933) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 955,
+            "message": "Parameter '_from' of AOIonInterface.unescrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#955) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 955,
+            "message": "Parameter '_value' of AOIonInterface.unescrowFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#955) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 980,
+            "message": "Parameter '_from' of AOIonInterface.whitelistBurnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#980) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 980,
+            "line_end": 981,
+            "message": "Parameter '_value' of AOIonInterface.whitelistBurnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#980-981) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1001,
+            "line_end": 1005,
+            "message": "Parameter '_from' of AOIonInterface.whitelistTransferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1001-1005) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1005,
+            "message": "Parameter '_to' of AOIonInterface.whitelistTransferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1005) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1005,
+            "message": "Parameter '_value' of AOIonInterface.whitelistTransferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1005) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1012,
+            "message": "Parameter '_to' of AOIonInterface.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1012) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1012,
+            "message": "Parameter '_value' of AOIonInterface.transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1012) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1019,
+            "message": "Parameter '_from' of AOIonInterface.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1019) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1019,
+            "line_end": 1020,
+            "message": "Parameter '_to' of AOIonInterface.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1019-1020) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1020,
+            "line_end": 1024,
+            "message": "Parameter '_value' of AOIonInterface.transferFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1020-1024) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_nameId' of AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_from' of AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_to' of AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1040,
+            "message": "Parameter '_value' of AOIonInterface.transferBetweenPublicKeys (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1040) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1062,
+            "message": "Parameter '_spender' of AOIonInterface.approve (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1062) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1062,
+            "message": "Parameter '_value' of AOIonInterface.approve (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1062) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1077,
+            "line_end": 1078,
+            "message": "Parameter '_spender' of AOIonInterface.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1077-1078) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1078,
+            "message": "Parameter '_value' of AOIonInterface.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1078) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1078,
+            "message": "Parameter '_extraData' of AOIonInterface.approveAndCall (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1078) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1083,
+            "message": "Parameter '_value' of AOIonInterface.burn (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1083) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1105,
+            "message": "Parameter '_from' of AOIonInterface.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1105,
+            "message": "Parameter '_value' of AOIonInterface.burnFrom (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1134,
+            "line_end": 1151,
+            "message": "Function 'AOIonInterface._transfer' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1134-1151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1135,
+            "message": "Parameter '_from' of AOIonInterface._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1135,
+            "message": "Parameter '_to' of AOIonInterface._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 1135,
+            "line_end": 1136,
+            "message": "Parameter '_value' of AOIonInterface._transfer (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#1135-1136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "message": "Function 'AOIonInterface._mint' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 743,
+            "line_end": 745,
+            "message": "Variable 'AOIonInterface._nameTAOPosition' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#743-745) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 745,
+            "message": "Variable 'AOIonInterface._namePublicKey' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#745) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol",
+            "impact": "Informational",
+            "line": 745,
+            "line_end": 746,
+            "message": "Variable 'AOIonInterface._nameAccountRecovery' (0x01aaf00b615d97360e80ef1242a3935c8b7d529a.sol#745-746) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

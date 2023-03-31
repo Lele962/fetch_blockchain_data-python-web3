@@ -1,0 +1,157 @@
+{
+    "errors": [
+        "EXIT_CODE_14"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelock",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 36,
+            "line_end": 44,
+            "message": "TokenTimelock.release (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#36-44) does not use the value returned by external calls:\n\t-token.transfer(beneficiary,amount) (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#43-44)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelock",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "constructor",
+            "impact": "Low",
+            "line": 23,
+            "line_end": 33,
+            "message": "TokenTimelock.constructor (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#23-33) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(_releaseTime > block.timestamp) (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#26-27)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenTimelock",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "release",
+            "impact": "Low",
+            "line": 36,
+            "line_end": 44,
+            "message": "TokenTimelock.release (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#36-44) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp >= releaseTime) (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#37-39)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 4,
+            "message": "ERC20Interface.totalSupply (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#3-4) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "ERC20Interface.balanceOf (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Interface.allowance (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "ERC20Interface.transfer (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#6-7) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "ERC20Interface.approve (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 10,
+            "message": "ERC20Interface.transferFrom (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#8-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenTimelock",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 44,
+            "message": "TokenTimelock.release (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#36-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol:\n\t- pragma solidity^0.4.18 (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "impact": "Informational",
+            "line": 23,
+            "message": "Parameter '_token' of TokenTimelock. (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "impact": "Informational",
+            "line": 23,
+            "message": "Parameter '_beneficiary' of TokenTimelock. (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 25,
+            "message": "Parameter '_releaseTime' of TokenTimelock. (0x43d4297f9d6c91d23a3e7e048c80d4f1fe7f2bbe.sol#23-25) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "errors": [
+        "EXIT_CODE_9"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "MetamorphicContractFactory",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "function": "deployMetamorphicContract",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 252,
+            "message": "MetamorphicContractFactory.deployMetamorphicContract uses assembly (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#178-252)\n\t- 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#203-216\n\t- 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#223-238\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "MetamorphicContractFactory",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "function": "deployMetamorphicContractFromExistingImplementation",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 325,
+            "message": "MetamorphicContractFactory.deployMetamorphicContractFromExistingImplementation uses assembly (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#272-325)\n\t- 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#295-311\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "MetamorphicContractFactory",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "function": "deployMetamorphicContractWithConstructor",
+            "impact": "Informational",
+            "line": 343,
+            "line_end": 392,
+            "message": "MetamorphicContractFactory.deployMetamorphicContractWithConstructor uses assembly (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#343-392)\n\t- 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#361-379\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x00000000e82eb0431756271f0d00cfb143685e7b.sol:\n\t- pragma solidity0.5.6 (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "MetamorphicContractFactory",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "function": "deployMetamorphicContract",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 252,
+            "message": "Low level call in MetamorphicContractFactory.deployMetamorphicContract (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#178-252):\n\t-(success) = deployedMetamorphicContract.call.value(msg.value)(data) 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#246-247\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "contract": "MetamorphicContractFactory",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "function": "deployMetamorphicContractFromExistingImplementation",
+            "impact": "Informational",
+            "line": 272,
+            "line_end": 325,
+            "message": "Low level call in MetamorphicContractFactory.deployMetamorphicContractFromExistingImplementation (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#272-325):\n\t-(success) = metamorphicContractAddress.call.value(msg.value)(data) 0x00000000e82eb0431756271f0d00cfb143685e7b.sol#320-322\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "impact": "Informational",
+            "line": 529,
+            "line_end": 552,
+            "message": "Function 'MetamorphicContractFactory._getMetamorphicContractAddress' (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#529-552) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "impact": "Informational",
+            "line": 553,
+            "line_end": 575,
+            "message": "Function 'MetamorphicContractFactory._getTransientContractAddress' (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#553-575) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x00000000e82eb0431756271f0d00cfb143685e7b.sol",
+            "impact": "Informational",
+            "line": 578,
+            "line_end": 600,
+            "message": "Function 'MetamorphicContractFactory._getMetamorphicContractAddressWithConstructor' (0x00000000e82eb0431756271f0d00cfb143685e7b.sol#578-600) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

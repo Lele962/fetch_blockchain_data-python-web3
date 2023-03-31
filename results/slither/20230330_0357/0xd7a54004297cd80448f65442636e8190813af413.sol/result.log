@@ -1,0 +1,50 @@
+INFO:Detectors:[92m
+CBMC_TOKEN.transfer (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#68-79) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(block.timestamp >= 1545102693) (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#73-74)
+CBMC_TOKEN.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#79-93) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(block.timestamp >= 1545102693) (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#85-86)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+CBMC_TOKEN.name should be constant (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#43-45)
+CBMC_TOKEN.symbol should be constant (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#45-46)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+IERC20.balanceOf (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#4-5) should be declared external
+CBMC_TOKEN.balanceOf (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#60-64) should be declared external
+CBMC_TOKEN.allowance (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#64-68) should be declared external
+IERC20.allowance (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#5-6) should be declared external
+IERC20.transfer (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#6-7) should be declared external
+CBMC_TOKEN.transfer (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#68-79) should be declared external
+CBMC_TOKEN.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#79-93) should be declared external
+IERC20.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#7-8) should be declared external
+IERC20.approve (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#8-9) should be declared external
+CBMC_TOKEN.approve (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#93-99) should be declared external
+CBMC_TOKEN.increaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#99-105) should be declared external
+CBMC_TOKEN.decreaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#105-114) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd7a54004297cd80448f65442636e8190813af413.sol:
+	- pragma solidity^0.5.1 (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Contract 'CBMC_TOKEN' (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#41-114) is not in CapWords
+Parameter '_owner' of CBMC_TOKEN.balanceOf (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#61) is not in mixedCase
+Parameter '_owner' of CBMC_TOKEN.allowance (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#64-65) is not in mixedCase
+Parameter '_spender' of CBMC_TOKEN.allowance (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#65) is not in mixedCase
+Parameter '_to' of CBMC_TOKEN.transfer (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#69) is not in mixedCase
+Parameter '_value' of CBMC_TOKEN.transfer (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#69-70) is not in mixedCase
+Parameter '_from' of CBMC_TOKEN.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#80) is not in mixedCase
+Parameter '_to' of CBMC_TOKEN.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#80-81) is not in mixedCase
+Parameter '_value' of CBMC_TOKEN.transferFrom (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#81) is not in mixedCase
+Parameter '_spender' of CBMC_TOKEN.approve (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#93-94) is not in mixedCase
+Parameter '_value' of CBMC_TOKEN.approve (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#94) is not in mixedCase
+Parameter '_spender' of CBMC_TOKEN.increaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#99) is not in mixedCase
+Parameter '_addedValue' of CBMC_TOKEN.increaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#99) is not in mixedCase
+Parameter '_spender' of CBMC_TOKEN.decreaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#105-106) is not in mixedCase
+Parameter '_subtractedValue' of CBMC_TOKEN.decreaseApproval (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#106) is not in mixedCase
+Constant 'CBMC_TOKEN.decimalFactor' (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#46-47) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'CBMC_TOKEN.totalSupply' (/sb/0xd7a54004297cd80448f65442636e8190813af413.sol#47-49) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd7a54004297cd80448f65442636e8190813af413.sol analyzed (3 contracts), 33 result(s) found

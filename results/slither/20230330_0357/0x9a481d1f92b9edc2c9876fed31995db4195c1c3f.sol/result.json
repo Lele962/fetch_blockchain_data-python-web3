@@ -1,0 +1,258 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 219,
+            "message": "Contract locking ether found in 0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol:\n\tContract QINTAR has payable functions:\n\t - fallback (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#219)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "safeMul",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 34,
+            "message": "SafeMath.safeMul (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#30-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SafeMath",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "safeDiv",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 41,
+            "message": "SafeMath.safeDiv (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#34-41) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 134,
+            "message": "QINTAR.totalSupply (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#133-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "ERC20Interface.totalSupply (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#46-47) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20Interface.balanceOf (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 142,
+            "message": "QINTAR.balanceOf (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#141-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20Interface.allowance (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 198,
+            "message": "QINTAR.allowance (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#196-198) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Interface.transfer (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 155,
+            "message": "QINTAR.transfer (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#148-155) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20Interface.approve (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#50-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 172,
+            "message": "QINTAR.approve (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#164-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 180,
+            "line_end": 189,
+            "message": "QINTAR.transferFrom (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#180-189) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 53,
+            "message": "ERC20Interface.transferFrom (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#51-53) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 68,
+            "message": "ApproveAndCallFallBack.receiveApproval (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#64-68) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 91,
+            "message": "Owned.transferOwnership (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#87-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Owned",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "acceptOwnership",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 99,
+            "message": "Owned.acceptOwnership (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#91-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 212,
+            "message": "QINTAR.approveAndCall (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#204-212) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 219,
+            "message": "QINTAR.fallback (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#219) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "QINTAR",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "function": "transferAnyERC20Token",
+            "impact": "Informational",
+            "message": "QINTAR.transferAnyERC20Token (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '_newOwner' of Owned.transferOwnership (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 112,
+            "message": "Variable 'QINTAR._totalSupply' (0x9a481d1f92b9edc2c9876fed31995db4195c1c3f.sol#109-112) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

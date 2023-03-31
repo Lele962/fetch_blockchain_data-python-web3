@@ -1,0 +1,448 @@
+{
+    "errors": [
+        "EXIT_CODE_44"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Medium",
+            "line": 73,
+            "line_end": 74,
+            "message": "ZeroXEth.totalSupply (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#73-74) shadows:\n\t- ERC20Basic.totalSupply (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#41)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 41,
+            "message": "ERC20Basic.totalSupply should be constant (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#41)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ForeignToken.balanceOf (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 40,
+            "message": "ForeignToken.transfer (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#36-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 228,
+            "message": "ZeroXEth.balanceOf (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#224-228) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 42,
+            "message": "ERC20Basic.balanceOf (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#41-42) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 243,
+            "message": "ZeroXEth.transfer (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#233-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "ERC20Basic.transfer (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#42-43) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "ERC20.allowance (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#47-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 270,
+            "message": "ZeroXEth.allowance (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#265-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 255,
+            "message": "ZeroXEth.transferFrom (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#243-255) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "ERC20.transferFrom (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#48-49) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20.approve (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 265,
+            "message": "ZeroXEth.approve (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#255-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "distr",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 55,
+            "message": "Token.distr (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#54-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 56,
+            "message": "Token.totalSupply (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#55-56) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 61,
+            "message": "Token.balanceOf (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#56-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 115,
+            "message": "ZeroXEth.transferOwnership (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#110-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "enableWhitelist",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 121,
+            "message": "ZeroXEth.enableWhitelist (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#115-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "disableWhitelist",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 128,
+            "message": "ZeroXEth.disableWhitelist (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#121-128) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "finishDistribution",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 133,
+            "message": "ZeroXEth.finishDistribution (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#128-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "airdrop",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 163,
+            "message": "ZeroXEth.airdrop (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#148-163) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "distribution",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 178,
+            "message": "ZeroXEth.distribution (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#163-178) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "distributeAmounts",
+            "impact": "Informational",
+            "line": 178,
+            "line_end": 196,
+            "message": "ZeroXEth.distributeAmounts (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#178-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "getTokenBalance",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 277,
+            "message": "ZeroXEth.getTokenBalance (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#271-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 278,
+            "message": "ZeroXEth.withdraw (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#277-278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 294,
+            "message": "ZeroXEth.burn (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#278-294) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroXEth",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "message": "ZeroXEth.withdrawForeignTokens (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x22d1755515bef4afd277d8acd42adbac49c77d43.sol:\n\t- pragma solidity^0.4.19 (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 225,
+            "message": "Parameter '_owner' of ZeroXEth.balanceOf (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#224-225) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 233,
+            "message": "Parameter '_to' of ZeroXEth.transfer (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 234,
+            "message": "Parameter '_amount' of ZeroXEth.transfer (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#233-234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 266,
+            "message": "Parameter '_owner' of ZeroXEth.allowance (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#265-266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 266,
+            "message": "Parameter '_spender' of ZeroXEth.allowance (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#266) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 243,
+            "line_end": 245,
+            "message": "Parameter '_from' of ZeroXEth.transferFrom (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#243-245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_to' of ZeroXEth.transferFrom (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 245,
+            "message": "Parameter '_amount' of ZeroXEth.transferFrom (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#245) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 255,
+            "line_end": 256,
+            "message": "Parameter '_spender' of ZeroXEth.approve (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#255-256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 256,
+            "message": "Parameter '_value' of ZeroXEth.approve (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#256) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 109,
+            "message": "Function 'ZeroXEth.ZeroXEth' (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#105-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_to' of ZeroXEth.distr (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_amount' of ZeroXEth.distr (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "line": 280,
+            "message": "Parameter '_value' of ZeroXEth.burn (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol#280) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x22d1755515bef4afd277d8acd42adbac49c77d43.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of ZeroXEth.withdrawForeignTokens (0x22d1755515bef4afd277d8acd42adbac49c77d43.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

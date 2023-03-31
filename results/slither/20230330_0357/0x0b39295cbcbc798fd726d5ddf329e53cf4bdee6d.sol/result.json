@@ -1,0 +1,344 @@
+{
+    "errors": [
+        "EXIT_CODE_36"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "refundTokens",
+            "impact": "Medium",
+            "line": 365,
+            "line_end": 376,
+            "message": "IHODLToken.refundTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#365-376) does not use the value returned by external calls:\n\t-token.transfer(_refund,_value) (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#371-373)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 236,
+            "message": "IHODLToken.totalSupply (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#233-236) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 56,
+            "line_end": 57,
+            "message": "Token.totalSupply (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#56-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "Token.balanceOf (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#57-58) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AbstractToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 93,
+            "message": "AbstractToken.balanceOf (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#88-93) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "createTokens",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 322,
+            "message": "IHODLToken.createTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#296-322) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 330,
+            "line_end": 336,
+            "message": "IHODLToken.setOwner (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#330-336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "freezeTransfers",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 349,
+            "message": "IHODLToken.freezeTransfers (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#342-349) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "unfreezeTransfers",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 351,
+            "message": "IHODLToken.unfreezeTransfers (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#350-351) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "refundTokens",
+            "impact": "Informational",
+            "line": 365,
+            "line_end": 376,
+            "message": "IHODLToken.refundTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#365-376) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IHODLToken",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 382,
+            "line_end": 396,
+            "message": "IHODLToken.freezeAccount (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#382-396) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 92,
+            "message": "Parameter '_owner' of AbstractToken.balanceOf (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#89-92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 102,
+            "message": "Parameter '_to' of AbstractToken.transfer (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 102,
+            "message": "Parameter '_value' of AbstractToken.transfer (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_from' of AbstractToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_to' of AbstractToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_value' of AbstractToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 146,
+            "message": "Parameter '_spender' of AbstractToken.approve (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#145-146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 147,
+            "message": "Parameter '_value' of AbstractToken.approve (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#146-147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 166,
+            "message": "Parameter '_owner' of AbstractToken.allowance (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 166,
+            "message": "Parameter '_spender' of AbstractToken.allowance (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 83,
+            "message": "Function 'AbstractToken.AbstractToken' (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#81-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 248,
+            "message": "Parameter '_to' of IHODLToken.transfer (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 248,
+            "line_end": 250,
+            "message": "Parameter '_value' of IHODLToken.transfer (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#248-250) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_from' of IHODLToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 264,
+            "message": "Parameter '_to' of IHODLToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#264) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 264,
+            "line_end": 265,
+            "message": "Parameter '_value' of IHODLToken.transferFrom (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#264-265) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 283,
+            "message": "Parameter '_spender' of IHODLToken.approve (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 283,
+            "message": "Parameter '_value' of IHODLToken.approve (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 231,
+            "message": "Function 'IHODLToken.IHODLToken' (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#227-231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 296,
+            "line_end": 297,
+            "message": "Parameter '_value' of IHODLToken.createTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#296-297) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 331,
+            "line_end": 335,
+            "message": "Parameter '_newOwner' of IHODLToken.setOwner (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#331-335) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_token' of IHODLToken.refundTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_refund' of IHODLToken.refundTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 367,
+            "message": "Parameter '_value' of IHODLToken.refundTokens (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#367) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol",
+            "impact": "Informational",
+            "line": 385,
+            "message": "Parameter '_target' of IHODLToken.freezeAccount (0x0b39295cbcbc798fd726d5ddf329e53cf4bdee6d.sol#385) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

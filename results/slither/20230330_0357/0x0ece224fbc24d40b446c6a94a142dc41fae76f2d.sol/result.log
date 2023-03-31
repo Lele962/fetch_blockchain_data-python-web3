@@ -1,0 +1,174 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:
+/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:20:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:[91m
+Expiry.FILE (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5978-5979) shadows:
+	- OnlySolo.FILE (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5940-5942)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[93m
+Require.stringify (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#355-396) is declared view but contains assembly code
+Token.checkSuccess (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1662-1693) is declared view but contains assembly code
+Expiry.parseCallArgs (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol) is declared view but contains assembly code
+Expiry.parseTradeArgs (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+IErc20 (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1496-1565) has incorrect ERC20 function interface(s):
+	-transfer (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1530-1534)
+	-transferFrom (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1535-1540)
+	-approve (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1541-1547)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[93m
+borrowValue in Storage.getAccountValues (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2062-2063) is a local variable never initialiazed
+result in Exchange.exchange (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4789) is a local variable never initialiazed
+result in Types.add (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#806-809) is a local variable never initialiazed
+result in Exchange.getCost (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4768) is a local variable never initialiazed
+result in Types.add (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#686-687) is a local variable never initialiazed
+supplyValue in Storage.getAccountValues (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2059-2060) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+AdminImpl._setInterestSetter (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2761-2782) does not use the value returned by external calls:
+	-interestSetter.getInterestRate(token,0,0) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2771-2773)
+Getters.getAccountValuesInternal (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3730-3750) does not use the value returned by external calls:
+	-cache.addMarket(g_state,m) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3745-3748)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in Expiry.getTradeCostInternal (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6173-6180):
+	External calls:
+	- maxOutputWei = SOLO_MARGIN.getAccountWei(makerAccount,outputMarketId) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	- output = owedWeiToHeldWei(inputWei,outputMarketId,inputMarketId,expiry) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	State variables written after the call(s):
+	- g_expiries (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+Reentrancy in Expiry.getTradeCostInternal (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6173-6180):
+	External calls:
+	- maxOutputWei = SOLO_MARGIN.getAccountWei(makerAccount,outputMarketId) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	- output = heldWeiToOwedWei(inputWei,inputMarketId,outputMarketId,expiry) (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	State variables written after the call(s):
+	- g_expiries (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Require.stringify uses assembly (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#355-396)
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#385-390
+Token.checkSuccess uses assembly (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1662-1693)
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1674-1693
+Expiry.parseCallArgs uses assembly (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol
+Expiry.parseTradeArgs uses assembly (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Getters.FILE should be constant (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3151-3152)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Different versions of Solidity is used in /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:
+	- Version used: ['0.5.7', 'ABIEncoderV2']
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#19-20 declares pragma solidity0.5.7
+	- /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#20-22 declares pragma experimentalABIEncoderV2
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+Ownable.owner (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#117-120) should be declared external
+Ownable.renounceOwnership (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#140-144) should be declared external
+Ownable.transferOwnership (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#151-154) should be declared external
+IAutoTrader.getTradeCost (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#968-988) should be declared external
+Expiry.getTradeCost (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6092-6171) should be declared external
+Expiry.callFunction (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6070-6092) should be declared external
+ICallee.callFunction (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1021-1029) should be declared external
+IPriceOracle.getPrice (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1757-1760) should be declared external
+AdminImpl.ownerWithdrawExcessTokens (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2502-2534) should be declared external
+AdminImpl.ownerWithdrawUnsupportedTokens (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2535-2553) should be declared external
+AdminImpl.ownerAddMarket (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2555-2583) should be declared external
+AdminImpl.ownerSetIsClosing (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2583-2596) should be declared external
+AdminImpl.ownerSetPriceOracle (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2597-2607) should be declared external
+AdminImpl.ownerSetInterestSetter (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2607-2616) should be declared external
+AdminImpl.ownerSetMarginPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2616-2627) should be declared external
+AdminImpl.ownerSetSpreadPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2627-2640) should be declared external
+AdminImpl.ownerSetMarginRatio (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2642-2661) should be declared external
+AdminImpl.ownerSetLiquidationSpread (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2662-2681) should be declared external
+AdminImpl.ownerSetEarningsRate (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2681-2697) should be declared external
+AdminImpl.ownerSetMinBorrowedValue (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2698-2715) should be declared external
+AdminImpl.ownerSetGlobalOperator (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2718-2734) should be declared external
+Admin.ownerWithdrawExcessTokens (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2887-2902) should be declared external
+Admin.ownerWithdrawUnsupportedTokens (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2904-2919) should be declared external
+Admin.ownerAddMarket (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2925-2947) should be declared external
+Admin.ownerSetIsClosing (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2956-2966) should be declared external
+Admin.ownerSetPriceOracle (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2969-2982) should be declared external
+Admin.ownerSetInterestSetter (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2984-2995) should be declared external
+Admin.ownerSetMarginPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3007-3023) should be declared external
+Admin.ownerSetSpreadPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3032-3046) should be declared external
+Admin.ownerSetMarginRatio (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3051-3060) should be declared external
+Admin.ownerSetLiquidationSpread (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3067-3076) should be declared external
+Admin.ownerSetEarningsRate (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3083-3096) should be declared external
+Admin.ownerSetMinBorrowedValue (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3100-3110) should be declared external
+Admin.ownerSetGlobalOperator (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3123-3137) should be declared external
+Getters.getMarginRatio (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3163-3169) should be declared external
+Getters.getLiquidationSpread (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3180-3185) should be declared external
+Getters.getEarningsRate (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3193-3200) should be declared external
+Getters.getMinBorrowedValue (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3209-3216) should be declared external
+Getters.getRiskParams (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3219-3227) should be declared external
+Getters.getRiskLimits (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3232-3237) should be declared external
+Getters.getNumMarkets (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3245-3249) should be declared external
+Getters.getMarketTotalPar (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3270-3280) should be declared external
+Getters.getMarketCachedIndex (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3287-3297) should be declared external
+Getters.getMarketPriceOracle (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3323-3326) should be declared external
+Getters.getMarketInterestSetter (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3333-3342) should be declared external
+Getters.getMarketMarginPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3353-3363) should be declared external
+Getters.getMarketSpreadPremium (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3368-3378) should be declared external
+Getters.getMarketIsClosing (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3391-3393) should be declared external
+Getters.getLiquidationSpreadForPair (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3445-3457) should be declared external
+Getters.getMarketWithInfo (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3488-3496) should be declared external
+Getters.getNumExcessTokens (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3511-3515) should be declared external
+Getters.getAccountStatus (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3558-3568) should be declared external
+Getters.getAccountValues (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3578-3591) should be declared external
+Getters.getAdjustedAccountValues (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3620-3637) should be declared external
+Getters.getAccountBalances (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3649-3676) should be declared external
+Getters.getIsLocalOperator (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3692-3701) should be declared external
+Getters.getIsGlobalOperator (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3711-3716) should be declared external
+OperationImpl.operate (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4819-4840) should be declared external
+Operation.operate (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5839-5845) should be declared external
+Permission.setOperators (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5890-5905) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:
+	- pragma solidity0.5.7 (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#19-20): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Ownable._transferOwnership' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#157-167) is not in mixedCase
+Variable 'State.g_state' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2442-2443) is not in mixedCase
+Function 'AdminImpl._setPriceOracle' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2736-2761) is not in mixedCase
+Function 'AdminImpl._setInterestSetter' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2761-2782) is not in mixedCase
+Function 'AdminImpl._setMarginPremium' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2782-2803) is not in mixedCase
+Function 'AdminImpl._setSpreadPremium' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2803-2820) is not in mixedCase
+Function 'AdminImpl._requireNoMarket' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2820-2846) is not in mixedCase
+Function 'AdminImpl._validateMarketId' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2846-2860) is not in mixedCase
+Function 'Getters._requireValidMarket' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3721-3726) is not in mixedCase
+Variable 'Getters.FILE' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3151-3152) is not in mixedCase
+Function 'OperationImpl._verifyInputs' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4840-4856) is not in mixedCase
+Function 'OperationImpl._runPreprocessing' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4856-4965) is not in mixedCase
+Function 'OperationImpl._updateMarket' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4965-4980) is not in mixedCase
+Function 'OperationImpl._runActions' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4980-5062) is not in mixedCase
+Function 'OperationImpl._verifyFinalState' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5062-5132) is not in mixedCase
+Function 'OperationImpl._deposit' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5134-5175) is not in mixedCase
+Function 'OperationImpl._withdraw' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5175-5206) is not in mixedCase
+Function 'OperationImpl._transfer' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5206-5241) is not in mixedCase
+Function 'OperationImpl._buy' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5241-5292) is not in mixedCase
+Function 'OperationImpl._sell' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5293-5339) is not in mixedCase
+Function 'OperationImpl._trade' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5340-5412) is not in mixedCase
+Function 'OperationImpl._liquidate' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5412-5521) is not in mixedCase
+Function 'OperationImpl._vaporize' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5521-5623) is not in mixedCase
+Function 'OperationImpl._call' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5623-5644) is not in mixedCase
+Function 'OperationImpl._owedWeiToHeldWei' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5646-5652) is not in mixedCase
+Function 'OperationImpl._heldWeiToOwedWei' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5659-5676) is not in mixedCase
+Function 'OperationImpl._vaporizeUsingExcess' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5692-5746) is not in mixedCase
+Function 'OperationImpl._getLiquidationPrices' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5754-5786) is not in mixedCase
+Variable 'OnlySolo.SOLO_MARGIN' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5943-5944) is not in mixedCase
+Parameter '' of Expiry.callFunction (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6071) is not in mixedCase
+Parameter '' of Expiry.getTradeCost (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6097-6098) is not in mixedCase
+Variable 'Expiry.g_expiries' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5991-5993) is not in mixedCase
+Variable 'Expiry.g_expiryRampTime' (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5996-5998) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+Interest.FILE (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1288-1291) is never used in Interest
+Actions.FILE (/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3752) is never used in Actions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/sb/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol analyzed (33 contracts), 118 result(s) found

@@ -1,0 +1,265 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Medium",
+            "line": 95,
+            "line_end": 96,
+            "message": "KEP.totalSupply (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#95-96) shadows:\n\t- ERC20Basic.totalSupply (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#5-6)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Basic.totalSupply should be constant (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#5-6)\nKEP.symbol should be constant (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#90-91)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "ERC20Basic.balanceOf (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#6-7) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KEP",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 137,
+            "message": "KEP.balanceOf (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#134-137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "ERC20Basic.transfer (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KEP",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 134,
+            "message": "KEP.transfer (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#122-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KEP",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "message": "KEP.allowance (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "ERC20.allowance (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#12-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 14,
+            "message": "ERC20.transferFrom (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#13-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KEP",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 137,
+            "line_end": 150,
+            "message": "KEP.transferFrom (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#137-150) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KEP",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 159,
+            "message": "KEP.approve (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#151-159) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "ERC20.approve (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#14-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 55,
+            "message": "Ownable.transferOwnership (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#46-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol:\n\t- pragma solidity^0.4.13 (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 34,
+            "message": "Function 'Ownable.Ownable' (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#28-34) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_owner' of KEP.balanceOf (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_to' of KEP.transfer (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_value' of KEP.transfer (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of KEP.allowance (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of KEP.allowance (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 139,
+            "message": "Parameter '_from' of KEP.transferFrom (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 139,
+            "message": "Parameter '_to' of KEP.transferFrom (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 139,
+            "line_end": 140,
+            "message": "Parameter '_value' of KEP.transferFrom (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#139-140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Parameter '_spender' of KEP.approve (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Parameter '_value' of KEP.approve (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#153) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 113,
+            "message": "Function 'KEP.KEP' (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#104-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 93,
+            "message": "Constant 'KEP.version' (0x0e42d85f2cf1c3f8bd8fef93ad9f16bd3c6d4b34.sol#91-93) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,582 @@
+{
+    "errors": [
+        "EXIT_CODE_59"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Medium",
+            "line": 310,
+            "line_end": 314,
+            "message": "CLIP.isContract (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#310-314) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Medium",
+            "line": 204,
+            "line_end": 206,
+            "message": "CLIP.totalSupply (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#204-206) shadows:\n\t- ERC223.totalSupply (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#77-78)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContractReceiver",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "tokenFallback",
+            "impact": "Medium",
+            "line": 108,
+            "message": "tkn in ContractReceiver.tokenFallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#108) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 301,
+            "message": "empty in CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#301) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 310,
+            "line_end": 314,
+            "message": "CLIP.isContract uses assembly (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#310-314)\n\t- 0xa4480957629da7986efe389ca2be86a9fab7481b.sol#311-313\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 204,
+            "message": "CLIP.decimals should be constant (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#203-204)\nCLIP.name should be constant (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#202)\nCLIP.symbol should be constant (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#203)\nERC223.totalSupply should be constant (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#77-78)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 77,
+            "message": "Ownable.transferOwnership (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#68-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 222,
+            "line_end": 226,
+            "message": "CLIP.name (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#222-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 79,
+            "message": "ERC223.name (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#78-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 80,
+            "message": "ERC223.symbol (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#79-80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 231,
+            "message": "CLIP.symbol (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#226-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "ERC223.decimals (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#80-81) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 235,
+            "message": "CLIP.decimals (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#231-235) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 83,
+            "message": "ERC223.totalSupply (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#81-83) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 241,
+            "message": "CLIP.totalSupply (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#236-241) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 84,
+            "message": "ERC223.balanceOf (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#83-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 241,
+            "line_end": 242,
+            "message": "CLIP.balanceOf (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#241-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 287,
+            "line_end": 305,
+            "message": "CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#287-305) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 84,
+            "message": "ERC223.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 85,
+            "message": "ERC223.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#85) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 284,
+            "message": "CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#270-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 268,
+            "message": "CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#246-268) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 86,
+            "message": "ERC223.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#85-86) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractReceiver",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 130,
+            "message": "ContractReceiver.tokenFallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#105-130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "freezeAccounts",
+            "impact": "Informational",
+            "line": 348,
+            "line_end": 354,
+            "message": "CLIP.freezeAccounts (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#348-354) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "lockupAccounts",
+            "impact": "Informational",
+            "line": 359,
+            "line_end": 372,
+            "message": "CLIP.lockupAccounts (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#359-372) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 384,
+            "message": "CLIP.burn (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#378-384) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "distributeAirdrop",
+            "impact": "Informational",
+            "line": 388,
+            "line_end": 411,
+            "message": "CLIP.distributeAirdrop (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#388-411) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "distributeToken",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 441,
+            "message": "CLIP.distributeToken (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#411-441) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "collectTokens",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 466,
+            "message": "CLIP.collectTokens (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#442-466) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "setDistributeAmount",
+            "impact": "Informational",
+            "line": 466,
+            "line_end": 469,
+            "message": "CLIP.setDistributeAmount (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#466-469) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "CLIP.fallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xa4480957629da7986efe389ca2be86a9fab7481b.sol:\n\t- pragma solidity^0.4.20 (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "CLIP",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 268,
+            "message": "Low level call in CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#246-268):\n\t-assert(bool)(_to.call.value(0)(bytes4(keccak256()(_custom_fallback)),msg.sender,_value,_data)) 0xa4480957629da7986efe389ca2be86a9fab7481b.sol#259-264\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 56,
+            "message": "Function 'Ownable.Ownable' (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#52-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 86,
+            "message": "Parameter 'custom_fallback' of ERC223.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 106,
+            "message": "Parameter '_from' of ContractReceiver.tokenFallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#106) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "Parameter '_value' of ContractReceiver.tokenFallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#106-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 107,
+            "message": "Parameter '_data' of ContractReceiver.tokenFallback (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 241,
+            "message": "Parameter '_owner' of CLIP.balanceOf (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 289,
+            "message": "Parameter '_to' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 289,
+            "message": "Parameter '_value' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 270,
+            "message": "Parameter '_to' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 272,
+            "message": "Parameter '_value' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#270-272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 272,
+            "message": "Parameter '_data' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#272) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 246,
+            "message": "Parameter '_to' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#246) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 246,
+            "line_end": 247,
+            "message": "Parameter '_value' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#246-247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_data' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 247,
+            "line_end": 248,
+            "message": "Parameter '_custom_fallback' of CLIP.transfer (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#247-248) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 222,
+            "message": "Function 'CLIP.CLIP' (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#218-222) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 316,
+            "message": "Parameter '_to' of CLIP.transferToAddress (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 316,
+            "message": "Parameter '_value' of CLIP.transferToAddress (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#316) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 317,
+            "message": "Parameter '_data' of CLIP.transferToAddress (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#316-317) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_to' of CLIP.transferToContract (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_value' of CLIP.transferToContract (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 326,
+            "message": "Parameter '_data' of CLIP.transferToContract (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 378,
+            "message": "Parameter '_from' of CLIP.burn (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#378) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 380,
+            "message": "Parameter '_unitAmount' of CLIP.burn (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#378-380) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa4480957629da7986efe389ca2be86a9fab7481b.sol",
+            "impact": "Informational",
+            "line": 466,
+            "line_end": 467,
+            "message": "Parameter '_unitAmount' of CLIP.setDistributeAmount (0xa4480957629da7986efe389ca2be86a9fab7481b.sol#466-467) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

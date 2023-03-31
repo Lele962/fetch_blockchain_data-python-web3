@@ -1,0 +1,1063 @@
+{
+    "errors": [
+        "EXIT_CODE_112"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "sellTokens",
+            "impact": "High",
+            "line": 863,
+            "line_end": 913,
+            "message": "Reentrancy in TiqpitCrowdsale.sellTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#863-913):\n\tExternal calls:\n\t- token.transferFromIco(msg.sender,tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#903-904)\n\tExternal calls sending eth:\n\t- msg.sender.transfer(overpaidWei) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#901-903)\n\tState variables written after the call(s):\n\t- soldTokensPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n\t- tokensRemainingPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "sellTokens",
+            "impact": "High",
+            "line": 863,
+            "line_end": 913,
+            "message": "Reentrancy in TiqpitCrowdsale.sellTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#863-913):\n\tExternal calls:\n\t- token.transferFromIco(msg.sender,tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#903-904)\n\tExternal calls sending eth:\n\t- msg.sender.transfer(overpaidWei) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#901-903)\n\t- owner.transfer(this.balance) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#905-907)\n\tState variables written after the call(s):\n\t- tokensRemainingIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "burnRemainingTokens",
+            "impact": "Medium",
+            "line": 710,
+            "line_end": 717,
+            "message": "Reentrancy in TiqpitCrowdsale.burnRemainingTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#710-717):\n\tExternal calls:\n\t- token.burnFromAddress(this) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#716-717)\n\tState variables written after the call(s):\n\t- tokensRemainingIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#717)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "initialDistribution",
+            "impact": "Medium",
+            "line": 720,
+            "line_end": 732,
+            "message": "Reentrancy in TiqpitCrowdsale.initialDistribution (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#720-732):\n\tExternal calls:\n\t- token.transferFromIco(bountyWallet,RESERVED_TOKENS_BOUNTY) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#724-725)\n\t- token.transferFromIco(advisorsWallet,RESERVED_TOKENS_ADVISORS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#725-727)\n\t- token.transferFromIco(tiqpitSolutionsWallet,RESERVED_TOKENS_TIQPIT_SOLUTIONS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#727-728)\n\t- lockTokens(foundersWallet,RESERVED_TOKENS_FOUNDERS,220752000) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#728-732)\n\tState variables written after the call(s):\n\t- isInitialDistributionDone (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#732)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Medium",
+            "line": 804,
+            "line_end": 829,
+            "message": "Reentrancy in TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829):\n\tExternal calls:\n\t- token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#813-816)\n\tState variables written after the call(s):\n\t- tokensRemainingPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Medium",
+            "line": 804,
+            "line_end": 829,
+            "message": "Reentrancy in TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829):\n\tExternal calls:\n\t- token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#824)\n\tState variables written after the call(s):\n\t- tokensRemainingIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LockedOutTokens",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "grant",
+            "impact": "Medium",
+            "line": 342,
+            "line_end": 360,
+            "message": "LockedOutTokens.grant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#342-360) does not use the value returned by external calls:\n\t-token.transfer(wallet,trancheSize) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#360)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "initialDistribution",
+            "impact": "Medium",
+            "line": 720,
+            "line_end": 732,
+            "message": "TiqpitCrowdsale.initialDistribution (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#720-732) does not use the value returned by external calls:\n\t-token.transferFromIco(bountyWallet,RESERVED_TOKENS_BOUNTY) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#724-725)\n\t-token.transferFromIco(advisorsWallet,RESERVED_TOKENS_ADVISORS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#725-727)\n\t-token.transferFromIco(tiqpitSolutionsWallet,RESERVED_TOKENS_TIQPIT_SOLUTIONS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#727-728)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Medium",
+            "line": 804,
+            "line_end": 829,
+            "message": "TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829) does not use the value returned by external calls:\n\t-token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#813-816)\n\t-token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#824)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "sellTokens",
+            "impact": "Medium",
+            "line": 863,
+            "line_end": 913,
+            "message": "TiqpitCrowdsale.sellTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#863-913) does not use the value returned by external calls:\n\t-token.transferFromIco(msg.sender,tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#903-904)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "lockTokens",
+            "impact": "Medium",
+            "message": "TiqpitCrowdsale.lockTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) does not use the value returned by external calls:\n\t-token.transferFromIco(locked,_amount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "initialDistribution",
+            "impact": "Low",
+            "line": 720,
+            "line_end": 732,
+            "message": "Reentrancy in TiqpitCrowdsale.initialDistribution (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#720-732):\n\tExternal calls:\n\t- token.transferFromIco(bountyWallet,RESERVED_TOKENS_BOUNTY) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#724-725)\n\t- token.transferFromIco(advisorsWallet,RESERVED_TOKENS_ADVISORS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#725-727)\n\t- token.transferFromIco(tiqpitSolutionsWallet,RESERVED_TOKENS_TIQPIT_SOLUTIONS) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#727-728)\n\t- lockTokens(foundersWallet,RESERVED_TOKENS_FOUNDERS,220752000) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#728-732)\n\tState variables written after the call(s):\n\t- lockedList (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#728-732)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Low",
+            "line": 804,
+            "line_end": 829,
+            "message": "Reentrancy in TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829):\n\tExternal calls:\n\t- token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#813-816)\n\tState variables written after the call(s):\n\t- preIcoPurchases (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n\t- soldTokensPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n\t- soldTokensTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n\t- weiRaisedPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n\t- weiRaisedTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#816)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Low",
+            "line": 804,
+            "line_end": 829,
+            "message": "Reentrancy in TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829):\n\tExternal calls:\n\t- token.transferFromIco(_address,_tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#824)\n\tState variables written after the call(s):\n\t- icoPurchases (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n\t- soldTokensIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n\t- soldTokensTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n\t- weiRaisedIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n\t- weiRaisedTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#825)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "sellTokens",
+            "impact": "Low",
+            "line": 863,
+            "line_end": 913,
+            "message": "Reentrancy in TiqpitCrowdsale.sellTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#863-913):\n\tExternal calls:\n\t- token.transferFromIco(msg.sender,tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#903-904)\n\tExternal calls sending eth:\n\t- msg.sender.transfer(overpaidWei) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#901-903)\n\tState variables written after the call(s):\n\t- preIcoPurchases (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n\t- soldTokensTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n\t- weiRaisedPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n\t- weiRaisedTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#904-905)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "sellTokens",
+            "impact": "Low",
+            "line": 863,
+            "line_end": 913,
+            "message": "Reentrancy in TiqpitCrowdsale.sellTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#863-913):\n\tExternal calls:\n\t- token.transferFromIco(msg.sender,tokensAmount) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#903-904)\n\tExternal calls sending eth:\n\t- msg.sender.transfer(overpaidWei) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#901-903)\n\t- owner.transfer(this.balance) (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#905-907)\n\tState variables written after the call(s):\n\t- icoPurchases (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n\t- soldTokensIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n\t- soldTokensTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n\t- weiRaisedIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n\t- weiRaisedTotal (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#908-910)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 603,
+            "message": "TiqpitCrowdsale.firstRate should be constant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#603)\nTiqpitCrowdsale.preIcoRate should be constant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#598-600)\nTiqpitCrowdsale.secondRate should be constant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#605-606)\nTiqpitCrowdsale.thirdRate should be constant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#607)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 83,
+            "line_end": 87,
+            "message": "BasicToken.totalSupply (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#83-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 60,
+            "message": "ERC20Basic.totalSupply (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "ERC20Basic.balanceOf (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#60-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 116,
+            "message": "BasicToken.balanceOf (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#108-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "ERC20.allowance (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#120-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 187,
+            "message": "StandardToken.allowance (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#184-187) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 125,
+            "message": "ERC20.approve (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#122-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 176,
+            "message": "StandardToken.approve (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#170-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "increaseApproval",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 203,
+            "message": "StandardToken.increaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#195-203) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "decreaseApproval",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 227,
+            "message": "StandardToken.decreaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#212-227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 297,
+            "line_end": 305,
+            "message": "Ownable.transferOwnership (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#297-305) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockedOutTokens",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "grant",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 360,
+            "message": "LockedOutTokens.grant (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#342-360) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 401,
+            "line_end": 403,
+            "message": "Pausable.unpause (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#401-403) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "transferFromIco",
+            "impact": "Informational",
+            "line": 465,
+            "line_end": 470,
+            "message": "TiqpitToken.transferFromIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#465-470) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitToken",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "burnFromAddress",
+            "impact": "Informational",
+            "line": 479,
+            "line_end": 493,
+            "message": "TiqpitToken.burnFromAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#479-493) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Whitelist",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "addWallet",
+            "impact": "Informational",
+            "line": 506,
+            "line_end": 514,
+            "message": "Whitelist.addWallet (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#506-514) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Whitelist",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "removeWallet",
+            "impact": "Informational",
+            "line": 521,
+            "line_end": 525,
+            "message": "Whitelist.removeWallet (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#521-525) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Whitelist",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "setBackendAddress",
+            "impact": "Informational",
+            "line": 543,
+            "line_end": 551,
+            "message": "Whitelist.setBackendAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#543-551) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 695,
+            "line_end": 699,
+            "message": "TiqpitCrowdsale.fallback (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#695-699) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "burnRemainingTokens",
+            "impact": "Informational",
+            "line": 710,
+            "line_end": 717,
+            "message": "TiqpitCrowdsale.burnRemainingTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#710-717) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "initialDistribution",
+            "impact": "Informational",
+            "line": 720,
+            "line_end": 732,
+            "message": "TiqpitCrowdsale.initialDistribution (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#720-732) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "getIcoPurchase",
+            "impact": "Informational",
+            "line": 737,
+            "line_end": 740,
+            "message": "TiqpitCrowdsale.getIcoPurchase (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#737-740) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "getPreIcoPurchase",
+            "impact": "Informational",
+            "line": 745,
+            "line_end": 754,
+            "message": "TiqpitCrowdsale.getPreIcoPurchase (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#745-754) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "refundPreIco",
+            "impact": "Informational",
+            "line": 756,
+            "line_end": 772,
+            "message": "TiqpitCrowdsale.refundPreIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#756-772) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "refundIco",
+            "impact": "Informational",
+            "line": 772,
+            "line_end": 786,
+            "message": "TiqpitCrowdsale.refundIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#772-786) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "burnTokens",
+            "impact": "Informational",
+            "line": 789,
+            "line_end": 796,
+            "message": "TiqpitCrowdsale.burnTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#789-796) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "manualSendTokens",
+            "impact": "Informational",
+            "line": 804,
+            "line_end": 829,
+            "message": "TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#804-829) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "getLockedContractAddress",
+            "impact": "Informational",
+            "line": 829,
+            "line_end": 835,
+            "message": "TiqpitCrowdsale.getLockedContractAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#829-835) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "triggerFailFlags",
+            "impact": "Informational",
+            "line": 839,
+            "line_end": 848,
+            "message": "TiqpitCrowdsale.triggerFailFlags (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#839-848) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TiqpitCrowdsale",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "function": "setBackendAddress",
+            "impact": "Informational",
+            "message": "TiqpitCrowdsale.setBackendAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol:\n\t- pragma solidity^0.4.18 (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 112,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#112) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_to' of BasicToken.transfer (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_value' of BasicToken.transfer (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 185,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#184-185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 186,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#185-186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 148,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 148,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 148,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#148) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 174,
+            "message": "Parameter '_spender' of StandardToken.approve (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#171-174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 174,
+            "message": "Parameter '_value' of StandardToken.approve (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 195,
+            "message": "Parameter '_spender' of StandardToken.increaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#195) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 195,
+            "line_end": 196,
+            "message": "Parameter '_addedValue' of StandardToken.increaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#195-196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 214,
+            "message": "Parameter '_spender' of StandardToken.decreaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#213-214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 214,
+            "message": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#214) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 252,
+            "line_end": 254,
+            "message": "Function 'SimpleToken.SimpleToken' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#252-254) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 281,
+            "message": "Function 'Ownable.Ownable' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#280-281) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 319,
+            "line_end": 342,
+            "message": "Function 'LockedOutTokens.LockedOutTokens' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#319-342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 320,
+            "message": "Parameter '_wallet' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#320) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 320,
+            "line_end": 321,
+            "message": "Parameter '_tokenAddress' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#320-321) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 321,
+            "line_end": 322,
+            "message": "Parameter '_startTimestamp' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#321-322) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 322,
+            "line_end": 324,
+            "message": "Parameter '_tranchesCount' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#322-324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 324,
+            "line_end": 325,
+            "message": "Parameter '_trancheSize' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#324-325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 325,
+            "line_end": 326,
+            "message": "Parameter '_periodSeconds' of LockedOutTokens.LockedOutTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#325-326) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_to' of TiqpitToken.transfer (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_value' of TiqpitToken.transfer (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 457,
+            "line_end": 459,
+            "message": "Parameter '_from' of TiqpitToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#457-459) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 459,
+            "message": "Parameter '_to' of TiqpitToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#459) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 459,
+            "message": "Parameter '_value' of TiqpitToken.transferFrom (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#459) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 430,
+            "line_end": 439,
+            "message": "Function 'TiqpitToken.TiqpitToken' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#430-439) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 430,
+            "message": "Parameter '_ico' of TiqpitToken.TiqpitToken (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#430) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 466,
+            "line_end": 467,
+            "message": "Parameter '_to' of TiqpitToken.transferFromIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#466-467) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 467,
+            "message": "Parameter '_value' of TiqpitToken.transferFromIco (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#467) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 481,
+            "message": "Parameter '_from' of TiqpitToken.burnFromAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#481) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 416,
+            "line_end": 417,
+            "message": "Constant 'TiqpitToken.smallestUnitName' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#416-417) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 507,
+            "message": "Parameter '_wallet' of Whitelist.addWallet (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#507) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 521,
+            "line_end": 522,
+            "message": "Parameter '_wallet' of Whitelist.removeWallet (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#521-522) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 532,
+            "message": "Parameter '_wallet' of Whitelist.isWhitelisted (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#532) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 544,
+            "message": "Parameter '_backendAddress' of Whitelist.setBackendAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#544) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 566,
+            "line_end": 568,
+            "message": "Function 'Whitelistable.Whitelistable' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#566-568) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 648,
+            "line_end": 690,
+            "message": "Function 'TiqpitCrowdsale.TiqpitCrowdsale' (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#648-690) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 650,
+            "line_end": 651,
+            "message": "Parameter '_startTimePreIco' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#650-651) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 651,
+            "message": "Parameter '_endTimePreIco' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#651) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 653,
+            "message": "Parameter '_startTimeIco' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#653) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 654,
+            "message": "Parameter '_endTimeIco' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#654) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 654,
+            "line_end": 656,
+            "message": "Parameter '_foundersWallet' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#654-656) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 656,
+            "message": "Parameter '_advisorsWallet' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#656) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 657,
+            "message": "Parameter '_tiqpitSolutionsWallet' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#657) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 658,
+            "message": "Parameter '_bountyWallet' of TiqpitCrowdsale.TiqpitCrowdsale (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#658) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 737,
+            "message": "Parameter '_address' of TiqpitCrowdsale.getIcoPurchase (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#737) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 746,
+            "line_end": 749,
+            "message": "Parameter '_address' of TiqpitCrowdsale.getPreIcoPurchase (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#746-749) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 789,
+            "message": "Parameter '_address' of TiqpitCrowdsale.burnTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#789) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 805,
+            "message": "Parameter '_address' of TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#805) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 805,
+            "line_end": 809,
+            "message": "Parameter '_tokensAmount' of TiqpitCrowdsale.manualSendTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#805-809) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_address' of TiqpitCrowdsale.addPreIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_amountWei' of TiqpitCrowdsale.addPreIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 922,
+            "message": "Parameter '_amountTokens' of TiqpitCrowdsale.addPreIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#922) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 942,
+            "message": "Parameter '_address' of TiqpitCrowdsale.addIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#942) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 942,
+            "message": "Parameter '_amountWei' of TiqpitCrowdsale.addIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#942) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 942,
+            "message": "Parameter '_amountTokens' of TiqpitCrowdsale.addIcoPurchaseInfo (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#942) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "message": "Parameter '_wallet' of TiqpitCrowdsale.lockTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of TiqpitCrowdsale.lockTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "message": "Parameter '_time' of TiqpitCrowdsale.lockTokens (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "message": "Parameter '_backendAddress' of TiqpitCrowdsale.setBackendAddress (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol",
+            "impact": "Informational",
+            "line": 571,
+            "message": "TiqpitCrowdsale.DECIMALS (0x313df3fac623a824c8e64b4c47cf62fe0b75809e.sol#571) is never used in TiqpitCrowdsale\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

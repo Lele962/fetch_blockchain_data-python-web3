@@ -1,0 +1,92 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:48:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:54:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:60:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:66:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:72:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:78:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:84:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:90:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:99:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:123:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:241:13: Warning: This declaration shadows a builtin symbol.
+            Transaction tx = transactions[transactionId];
+            ^------------^
+/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:241:13: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+            Transaction tx = transactions[transactionId];
+            ^------------^
+
+INFO:Detectors:[92m
+PsyMultiSigWallet.executeTransaction.tx (local variable @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#246-247) shadows built-in symbol "tx"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#builtin-symbol-shadowing[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#130:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#52:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#58:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#64:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#70:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#76:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#83:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#89:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#94-95:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#105:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+PsyMultiSigWallet.fallback (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#108-114) should be declared external
+PsyMultiSigWallet.MultiSigWallet (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#119-132) should be declared external
+PsyMultiSigWallet.addOwner (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#137-146) should be declared external
+PsyMultiSigWallet.removeOwner (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#152-165) should be declared external
+PsyMultiSigWallet.replaceOwner (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#172-185) should be declared external
+PsyMultiSigWallet.submitTransaction (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#204-212) should be declared external
+PsyMultiSigWallet.revokeConfirmation (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#228-237) should be declared external
+PsyMultiSigWallet.getConfirmationCount (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#309-313) should be declared external
+PsyMultiSigWallet.getTransactionCount (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#321-335) should be declared external
+PsyMultiSigWallet.getOwners (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#337-342) should be declared external
+PsyMultiSigWallet.getConfirmations (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#346-361) should be declared external
+PsyMultiSigWallet.getTransactionIds (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#370-380) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol:
+	- pragma solidity0.4.15 (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in PsyMultiSigWallet.executeTransaction (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#241-259):
+	-tx.destination.call.value(tx.value)(tx.data) /sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#252-258
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'PsyMultiSigWallet.MultiSigWallet' (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#119-132) is not in mixedCase
+Parameter '_owners' of PsyMultiSigWallet.MultiSigWallet (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#121) is not in mixedCase
+Parameter '_required' of PsyMultiSigWallet.MultiSigWallet (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#121) is not in mixedCase
+Parameter '_required' of PsyMultiSigWallet.changeRequirement (/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol#194) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x75764e5aed7fe9269d89b7c293727422a0454228.sol analyzed (1 contracts), 29 result(s) found

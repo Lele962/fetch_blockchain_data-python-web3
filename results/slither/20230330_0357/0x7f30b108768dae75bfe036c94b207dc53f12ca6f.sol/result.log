@@ -1,0 +1,66 @@
+INFO:Detectors:[93m
+DutchAuction.setup (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140) uses a dangerous strict equality:
+	- require(bool)(virtuePlayerPoints.balanceOf(this) == MAX_TOKENS_SOLD)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in DutchAuction.timedTransitions (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#93-104):
+	External calls:
+	- finalizeAuction() (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#95-96)
+	State variables written after the call(s):
+	- stage (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#103)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+DutchAuction.claimTokens (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#338-354) does not use the value returned by external calls:
+	-virtuePlayerPoints.transfer(receiver,tokenCount) (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#352-353)
+DutchAuction.finalizeAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#374-377) does not use the value returned by external calls:
+	-virtuePlayerPoints.transfer(wallet,MAX_TOKENS_SOLD - soldTokens) (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in DutchAuction.finalizeAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#374-377):
+	External calls:
+	- virtuePlayerPoints.transfer(wallet,MAX_TOKENS_SOLD - soldTokens) (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)
+	State variables written after the call(s):
+	- endTime (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol)
+Reentrancy in DutchAuction.setup (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140):
+	External calls:
+	- require(bool)(virtuePlayerPoints.balanceOf(this) == MAX_TOKENS_SOLD) (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#138-139)
+	State variables written after the call(s):
+	- stage (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#140)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Token.transfer (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#7-8) should be declared external
+Token.transferFrom (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#8-9) should be declared external
+Token.approve (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#9-11) should be declared external
+Token.balanceOf (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#13-14) should be declared external
+Token.allowance (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#14-16) should be declared external
+DutchAuction.setup (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128-140) should be declared external
+DutchAuction.addArrayToWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#160-169) should be declared external
+DutchAuction.removeFromWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#174-185) should be declared external
+DutchAuction.whitelistEntries (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#218-251) should be declared external
+DutchAuction.startAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#253-256) should be declared external
+DutchAuction.changeSettings (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#266-272) should be declared external
+DutchAuction.calcCurrentTokenPrice (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#277-284) should be declared external
+DutchAuction.updateStage (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#290-295) should be declared external
+DutchAuction.bid (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#298-335) should be declared external
+DutchAuction.claimTokens (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#338-354) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol:
+	- pragma solidity0.4.15 (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#2-3): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'DutchAuction.DutchAuction' (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#110-122) is not in mixedCase
+Parameter '_wallet' of DutchAuction.DutchAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#111) is not in mixedCase
+Parameter '_ceiling' of DutchAuction.DutchAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#111) is not in mixedCase
+Parameter '_priceFactor' of DutchAuction.DutchAuction (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#112) is not in mixedCase
+Parameter '_virtuePlayerPoints' of DutchAuction.setup (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#128) is not in mixedCase
+Parameter '_bidderAddr' of DutchAuction.addToWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#146) is not in mixedCase
+Parameter '_bidderAddrs' of DutchAuction.addArrayToWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#161) is not in mixedCase
+Parameter '_bidderAddr' of DutchAuction.removeFromWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#174) is not in mixedCase
+Parameter '_addr' of DutchAuction.isInWhitelist (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#190-191) is not in mixedCase
+Parameter '_startIdx' of DutchAuction.whitelistEntries (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#219) is not in mixedCase
+Parameter '_count' of DutchAuction.whitelistEntries (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#219) is not in mixedCase
+Parameter '_ceiling' of DutchAuction.changeSettings (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#266-267) is not in mixedCase
+Parameter '_priceFactor' of DutchAuction.changeSettings (/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol#267) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x7f30b108768dae75bfe036c94b207dc53f12ca6f.sol analyzed (2 contracts), 35 result(s) found

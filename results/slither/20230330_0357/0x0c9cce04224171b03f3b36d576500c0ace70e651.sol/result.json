@@ -1,0 +1,548 @@
+{
+    "errors": [
+        "EXIT_CODE_51"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "withdrawFromReserve",
+            "impact": "High",
+            "line": 635,
+            "line_end": 646,
+            "message": "LPCReserveWrapper.withdrawFromReserve (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#635-646) sends eth to arbitrary user\n\tDangerous calls:\n\t- weth.deposit.value(amount)() (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#643-644)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "transferToReserve",
+            "impact": "High",
+            "line": 646,
+            "line_end": 651,
+            "message": "LPCReserveWrapper.transferToReserve (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#646-651) sends eth to arbitrary user\n\tDangerous calls:\n\t- reserve.transfer(amount) (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#649)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSMath",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "mul",
+            "impact": "Medium",
+            "line": 92,
+            "line_end": 96,
+            "message": "DSMath.mul (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#92-96) uses a dangerous strict equality:\n\t- require(bool)(y == 0 || (z = x * y) / y == x)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "pool",
+            "impact": "Medium",
+            "line": 548,
+            "line_end": 558,
+            "message": "SaiLPC.pool (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#548-558) does not use the value returned by external calls:\n\t-gem.transferFrom(msg.sender,this,wad) (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#558)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "exit",
+            "impact": "Medium",
+            "line": 559,
+            "line_end": 574,
+            "message": "SaiLPC.exit (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#559-574) does not use the value returned by external calls:\n\t-gem.transfer(msg.sender,wad) (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#572-573)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "take",
+            "impact": "Medium",
+            "line": 575,
+            "line_end": 587,
+            "message": "SaiLPC.take (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#575-587) does not use the value returned by external calls:\n\t-pay.transferFrom(msg.sender,this,jam) (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#582-585)\n\t-gem.transfer(msg.sender,wad) (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#585-587)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 337,
+            "message": "DSToken.decimals should be constant (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#336-337)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSAuthority",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "canCall",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 23,
+            "message": "DSAuthority.canCall (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#18-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSAuth",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "setOwner",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 45,
+            "message": "DSAuth.setOwner (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#38-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSAuth",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "setAuthority",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 54,
+            "message": "DSAuth.setAuthority (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#45-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSStop",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "stop",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 225,
+            "message": "DSStop.stop (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#224-225) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSStop",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "start",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 226,
+            "message": "DSStop.start (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#225-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 239,
+            "message": "ERC20.totalSupply (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#238-239) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSTokenBase",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 280,
+            "message": "DSTokenBase.totalSupply (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#277-280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSTokenBase",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 280,
+            "line_end": 284,
+            "message": "DSTokenBase.balanceOf (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#280-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 240,
+            "message": "ERC20.balanceOf (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#239-240) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 242,
+            "message": "ERC20.allowance (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#240-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSTokenBase",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 289,
+            "message": "DSTokenBase.allowance (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#284-289) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 247,
+            "line_end": 248,
+            "message": "ERC20.transfer (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#247-248) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSTokenBase",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 289,
+            "line_end": 292,
+            "message": "DSTokenBase.transfer (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#289-292) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 346,
+            "line_end": 350,
+            "message": "DSToken.approve (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#346-350) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "push",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 377,
+            "message": "DSToken.push (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#372-377) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "pull",
+            "impact": "Informational",
+            "line": 377,
+            "line_end": 378,
+            "message": "DSToken.pull (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#377-378) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "move",
+            "impact": "Informational",
+            "line": 378,
+            "line_end": 382,
+            "message": "DSToken.move (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#378-382) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 382,
+            "line_end": 383,
+            "message": "DSToken.mint (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#382-383) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 383,
+            "line_end": 384,
+            "message": "DSToken.burn (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#383-384) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSToken",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "setName",
+            "impact": "Informational",
+            "line": 407,
+            "line_end": 408,
+            "message": "DSToken.setName (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#407-408) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSValue",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "read",
+            "impact": "Informational",
+            "line": 461,
+            "line_end": 463,
+            "message": "DSValue.read (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#461-463) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSValue",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "poke",
+            "impact": "Informational",
+            "line": 463,
+            "line_end": 466,
+            "message": "DSValue.poke (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#463-466) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DSValue",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "void",
+            "impact": "Informational",
+            "line": 466,
+            "line_end": 468,
+            "message": "DSValue.void (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#466-468) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "jump",
+            "impact": "Informational",
+            "line": 527,
+            "line_end": 531,
+            "message": "SaiLPC.jump (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#527-531) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "pool",
+            "impact": "Informational",
+            "line": 548,
+            "line_end": 558,
+            "message": "SaiLPC.pool (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#548-558) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "exit",
+            "impact": "Informational",
+            "line": 559,
+            "line_end": 574,
+            "message": "SaiLPC.exit (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#559-574) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SaiLPC",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "take",
+            "impact": "Informational",
+            "line": 575,
+            "line_end": 587,
+            "message": "SaiLPC.take (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#575-587) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "KyberReserveInterface",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 588,
+            "message": "KyberReserveInterface.fallback (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#588) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "switchLPC",
+            "impact": "Informational",
+            "line": 624,
+            "line_end": 629,
+            "message": "LPCReserveWrapper.switchLPC (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#624-629) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "switchReserve",
+            "impact": "Informational",
+            "line": 629,
+            "line_end": 634,
+            "message": "LPCReserveWrapper.switchReserve (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#629-634) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 634,
+            "message": "LPCReserveWrapper.fallback (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#634) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "approveToken",
+            "impact": "Informational",
+            "line": 651,
+            "line_end": 655,
+            "message": "LPCReserveWrapper.approveToken (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#651-655) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "take",
+            "impact": "Informational",
+            "line": 655,
+            "line_end": 665,
+            "message": "LPCReserveWrapper.take (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#655-665) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LPCReserveWrapper",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "message": "LPCReserveWrapper.withdraw (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0c9cce04224171b03f3b36d576500c0ace70e651.sol:\n\t- pragma solidity^0.4.21 (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 37,
+            "message": "Function 'DSAuth.DSAuth' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#33-37) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 276,
+            "message": "Function 'DSTokenBase.DSTokenBase' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#273-276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 266,
+            "line_end": 270,
+            "message": "Variable 'DSTokenBase._supply' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#266-270) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 271,
+            "message": "Variable 'DSTokenBase._balances' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#270-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 273,
+            "message": "Variable 'DSTokenBase._approvals' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#271-273) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 340,
+            "line_end": 341,
+            "message": "Function 'DSToken.DSToken' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#340-341) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 430,
+            "line_end": 431,
+            "message": "Function 'DSThing.S' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#430-431) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 520,
+            "line_end": 527,
+            "message": "Function 'SaiLPC.SaiLPC' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#520-527) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9cce04224171b03f3b36d576500c0ace70e651.sol",
+            "impact": "Informational",
+            "line": 614,
+            "line_end": 624,
+            "message": "Function 'LPCReserveWrapper.LPCReserveWrapper' (0x0c9cce04224171b03f3b36d576500c0ace70e651.sol#614-624) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

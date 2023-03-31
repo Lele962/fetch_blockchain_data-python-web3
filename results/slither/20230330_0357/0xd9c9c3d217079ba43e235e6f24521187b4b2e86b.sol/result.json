@@ -1,0 +1,390 @@
+{
+    "errors": [
+        "EXIT_CODE_36"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Medium",
+            "line": 78,
+            "line_end": 117,
+            "message": "ECRecovery.recover (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#78-117) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Medium",
+            "line": 506,
+            "line_end": 516,
+            "message": "LavaToken.addressContainsContract (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#506-516) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 213,
+            "line_end": 215,
+            "message": "Contract locking ether found in 0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:\n\tContract LavaToken has payable functions:\n\t - fallback (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#213-215)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transferTokensWithSignature",
+            "impact": "Medium",
+            "line": 390,
+            "line_end": 409,
+            "message": "Reentrancy in LavaToken.transferTokensWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409):\n\tExternal calls:\n\t- require(bool)(_tokenApprovalWithSignature(methodName,relayAuthority,from,to,wallet,tokens,relayerRewardTokens,expires,nonce,sigHash,signature)) (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#404-406)\n\tState variables written after the call(s):\n\t- balances (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#409)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "_tokenApprovalWithSignature",
+            "impact": "Low",
+            "line": 329,
+            "line_end": 375,
+            "message": "Reentrancy in LavaToken._tokenApprovalWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#329-375):\n\tExternal calls:\n\t- require(bool)(relayAuthority == address(0x0) || (! addressContainsContract(relayAuthority) && msg.sender == relayAuthority) || (addressContainsContract(relayAuthority) && msg.sender == RelayAuthorityInterface(relayAuthority).getRelayAuthority())) (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#343-351)\n\tState variables written after the call(s):\n\t- allowance (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#372-373)\n\t- balances (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#371)\n\t- burnedSignatures (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#366-371)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "mutateTokens",
+            "impact": "Low",
+            "line": 222,
+            "line_end": 239,
+            "message": "Reentrancy in LavaToken.mutateTokens (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#222-239):\n\tExternal calls:\n\t- require(bool)(ERC20Interface(masterToken).transferFrom(from,address(this),amount)) (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#230-234)\n\tState variables written after the call(s):\n\t- _totalSupply (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#237)\n\t- balances (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#235-236)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transferTokensWithSignature",
+            "impact": "Low",
+            "line": 390,
+            "line_end": 409,
+            "message": "Reentrancy in LavaToken.transferTokensWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409):\n\tExternal calls:\n\t- require(bool)(_tokenApprovalWithSignature(methodName,relayAuthority,from,to,wallet,tokens,relayerRewardTokens,expires,nonce,sigHash,signature)) (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#404-406)\n\tState variables written after the call(s):\n\t- allowance (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#409)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ECRecovery",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "recover",
+            "impact": "Informational",
+            "line": 78,
+            "line_end": 117,
+            "message": "ECRecovery.recover uses assembly (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#78-117)\n\t- 0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#92-96\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "addressContainsContract",
+            "impact": "Informational",
+            "line": 506,
+            "line_end": 516,
+            "message": "LavaToken.addressContainsContract uses assembly (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#506-516)\n\t- 0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 147,
+            "message": "LavaToken.decimals should be constant (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#147)\nLavaToken.name should be constant (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#146)\nLavaToken.symbol should be constant (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#146-147)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "RelayAuthorityInterface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "getRelayAuthority",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 119,
+            "message": "RelayAuthorityInterface.getRelayAuthority (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#118-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 120,
+            "message": "ERC20Interface.totalSupply (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#119-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "ERC20Interface.balanceOf (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#120-121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "ERC20Interface.allowance (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#121-122) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 123,
+            "message": "ERC20Interface.transfer (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#122-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 125,
+            "message": "ERC20Interface.approve (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#123-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 126,
+            "message": "ERC20Interface.transferFrom (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#125-126) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ApproveAndCallFallBack",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 139,
+            "message": "ApproveAndCallFallBack.receiveApproval (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#135-139) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "getLavaPacketTypehash",
+            "impact": "Informational",
+            "line": 180,
+            "message": "LavaToken.getLavaPacketTypehash (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#180) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "unmutateTokens",
+            "impact": "Informational",
+            "line": 244,
+            "line_end": 259,
+            "message": "LavaToken.unmutateTokens (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#244-259) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 263,
+            "message": "LavaToken.totalSupply (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#262-263) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 265,
+            "line_end": 269,
+            "message": "LavaToken.balanceOf (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#265-269) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "getAllowance",
+            "impact": "Informational",
+            "line": 270,
+            "line_end": 277,
+            "message": "LavaToken.getAllowance (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#270-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 281,
+            "message": "LavaToken.approve (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#277-281) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 289,
+            "message": "LavaToken.transfer (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#285-289) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "approveTokensWithSignature",
+            "impact": "Informational",
+            "line": 375,
+            "line_end": 389,
+            "message": "LavaToken.approveTokensWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#375-389) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "transferTokensWithSignature",
+            "impact": "Informational",
+            "line": 390,
+            "line_end": 409,
+            "message": "LavaToken.transferTokensWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#390-409) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "approveAndCallWithSignature",
+            "impact": "Informational",
+            "line": 413,
+            "line_end": 436,
+            "message": "LavaToken.approveAndCallWithSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#413-436) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "burnSignature",
+            "impact": "Informational",
+            "line": 442,
+            "line_end": 474,
+            "message": "LavaToken.burnSignature (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#442-474) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "signatureHashBurnStatus",
+            "impact": "Informational",
+            "line": 478,
+            "line_end": 489,
+            "message": "LavaToken.signatureHashBurnStatus (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#478-489) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LavaToken",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 495,
+            "line_end": 506,
+            "message": "LavaToken.receiveApproval (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#495-506) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol:\n\t- pragma solidity^0.5.0 (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 307,
+            "message": "Function 'LavaToken._giveRelayerReward' (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#304-307) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 375,
+            "message": "Function 'LavaToken._tokenApprovalWithSignature' (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#329-375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 436,
+            "message": "Function 'LavaToken._sendApproveAndCall' (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#436) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 144,
+            "message": "Constant 'LavaToken.masterToken' (0xd9c9c3d217079ba43e235e6f24521187b4b2e86b.sol#142-144) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

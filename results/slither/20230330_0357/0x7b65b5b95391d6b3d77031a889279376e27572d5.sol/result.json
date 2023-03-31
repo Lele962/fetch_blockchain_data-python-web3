@@ -1,0 +1,435 @@
+{
+    "errors": [
+        "EXIT_CODE_41"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Medium",
+            "line": 207,
+            "message": "ret in strings.len (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Low",
+            "line": 168,
+            "line_end": 169,
+            "message": "strings.memcpy.len (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#168-169) shadows:\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207-231)\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Low",
+            "line": 289,
+            "message": "strings.len.len (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#289) shadows:\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207-231)\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Low",
+            "line": 384,
+            "message": "strings.nextRune.len (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#384) shadows:\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207-231)\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Low",
+            "line": 435,
+            "message": "strings.ord.len (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#435) shadows:\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207-231)\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "count",
+            "impact": "Low",
+            "line": 785,
+            "line_end": 786,
+            "message": "strings.count.count (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#785-786) shadows:\n\t- strings.count (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#785-792)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Low",
+            "line": 207,
+            "line_end": 231,
+            "message": "strings.join.len (local variable @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol) shadows:\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#207-231)\n\t- strings.len (function @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "memcpy",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 186,
+            "message": "strings.memcpy uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#167-186)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#175-177\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#181-186\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "toSlice",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 201,
+            "message": "strings.toSlice uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#194-201)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#198-199\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "toSliceB32",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 250,
+            "message": "strings.toSliceB32 uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#238-250)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#246-250\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "toString",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 272,
+            "message": "strings.toString uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#269-272)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#270-271\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "len",
+            "impact": "Informational",
+            "line": 282,
+            "line_end": 310,
+            "message": "strings.len uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#282-310)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#291-293\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "compare",
+            "impact": "Informational",
+            "line": 327,
+            "line_end": 352,
+            "message": "strings.compare uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#327-352)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#336-341\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "nextRune",
+            "impact": "Informational",
+            "line": 374,
+            "line_end": 409,
+            "message": "strings.nextRune uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#374-409)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#387-389\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "ord",
+            "impact": "Informational",
+            "line": 429,
+            "line_end": 471,
+            "message": "strings.ord uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#429-471)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#440-444\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "keccak",
+            "impact": "Informational",
+            "line": 474,
+            "line_end": 481,
+            "message": "strings.keccak uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#474-481)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#476-481\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "startsWith",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 507,
+            "message": "strings.startsWith uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#489-507)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#497-506\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "beyond",
+            "impact": "Informational",
+            "line": 516,
+            "line_end": 538,
+            "message": "strings.beyond uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#516-538)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#526-531\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "endsWith",
+            "impact": "Informational",
+            "line": 551,
+            "line_end": 565,
+            "message": "strings.endsWith uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#551-565)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#558-565\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "until",
+            "impact": "Informational",
+            "line": 576,
+            "line_end": 590,
+            "message": "strings.until uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#576-590)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#582-589\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "findPtr",
+            "impact": "Informational",
+            "line": 593,
+            "line_end": 629,
+            "message": "strings.findPtr uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#593-629)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#601-618\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#620\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#625-626\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "rfindPtr",
+            "impact": "Informational",
+            "line": 632,
+            "line_end": 675,
+            "message": "strings.rfindPtr uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#632-675)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#641-659\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#662-663\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#667-668\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "concat",
+            "impact": "Informational",
+            "line": 812,
+            "line_end": 822,
+            "message": "strings.concat uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#812-822)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#817-818\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "strings",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "join",
+            "impact": "Informational",
+            "message": "strings.join uses assembly (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol)\n\t- 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 12,
+            "message": "Deprecated standard detected @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#12:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 57,
+            "message": "Deprecated standard detected @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#57:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 75,
+            "line_end": 76,
+            "message": "Deprecated standard detected @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#75-76:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Deprecated standard detected @ 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#123:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "accessControlled",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "owned",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 10,
+            "message": "accessControlled.owned (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#6-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "accessControlled",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 22,
+            "message": "accessControlled.transferOwnership (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#16-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OriginalMyIdRepository",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "checkUserByWallet",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 91,
+            "message": "OriginalMyIdRepository.checkUserByWallet (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#85-91) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OriginalMyIdRepository",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "getLastWallet",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 97,
+            "message": "OriginalMyIdRepository.getLastWallet (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#91-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OriginalMyIdRepository",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "getWalletsFromUser",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 110,
+            "message": "OriginalMyIdRepository.getWalletsFromUser (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#97-110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OriginalMyIdRepository",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "isWalletFromUser",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 118,
+            "message": "OriginalMyIdRepository.isWalletFromUser (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#110-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OriginalMyIdRepository",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 125,
+            "message": "OriginalMyIdRepository.fallback (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#123-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b65b5b95391d6b3d77031a889279376e27572d5.sol:\n\t- pragma solidity^0.4.10 (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#1): it allows old versions\n\t- pragma solidity^0.4.10 (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#164-165): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 22,
+            "message": "Contract 'accessControlled' (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#3-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 40,
+            "message": "Struct 'OriginalMyIdRepository.idRepository' (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#35-40) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 52,
+            "message": "Function 'OriginalMyIdRepository.OriginalMyIdRepository' (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#46-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 831,
+            "message": "Contract 'strings' (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#165-831) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b65b5b95391d6b3d77031a889279376e27572d5.sol",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 167,
+            "message": "Struct 'strings.slice' (0x7b65b5b95391d6b3d77031a889279376e27572d5.sol#165-167) is not in CapWords\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

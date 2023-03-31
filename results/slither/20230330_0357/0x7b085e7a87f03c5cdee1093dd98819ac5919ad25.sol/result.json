@@ -1,0 +1,299 @@
+{
+    "errors": [
+        "EXIT_CODE_30"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "High",
+            "line": 115,
+            "line_end": 116,
+            "message": "NEBlockchain.totalSupply (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#115-116) shadows:\n\t- RegularToken.totalSupply (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#80-82)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "allowance",
+            "impact": "Low",
+            "line": 95,
+            "line_end": 96,
+            "message": "UnboundedRegularToken.transferFrom.allowance (local variable @ 0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#95-96) shadows:\n\t- RegularToken.allowance (function @ 0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#71-76)\n\t- Token.allowance (function @ 0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#34-36)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "NEBlockchain.totalSupply should be constant (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#115-116)\nRegularToken.totalSupply should be constant (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#80-82)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 8,
+            "message": "Token.totalSupply (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#6-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 12,
+            "message": "Token.balanceOf (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#10-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 65,
+            "message": "RegularToken.balanceOf (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#61-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 51,
+            "message": "RegularToken.transfer (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#42-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 18,
+            "message": "Token.transfer (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#16-18) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnboundedRegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 114,
+            "message": "UnboundedRegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#91-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 25,
+            "message": "Token.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#23-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 61,
+            "message": "RegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#51-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 71,
+            "message": "RegularToken.approve (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#65-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 31,
+            "message": "Token.approve (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#29-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 36,
+            "message": "Token.allowance (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#34-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "RegularToken",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 76,
+            "message": "RegularToken.allowance (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#71-76) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol:\n\t- pragma solidity0.4.19 (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 62,
+            "message": "Parameter '_owner' of RegularToken.balanceOf (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#62) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "Parameter '_to' of RegularToken.transfer (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#42-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 43,
+            "message": "Parameter '_value' of RegularToken.transfer (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 52,
+            "message": "Parameter '_from' of RegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#51-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_to' of RegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_value' of RegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Parameter '_spender' of RegularToken.approve (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 66,
+            "message": "Parameter '_value' of RegularToken.approve (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#66) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 72,
+            "message": "Parameter '_owner' of RegularToken.allowance (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#72) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 73,
+            "message": "Parameter '_spender' of RegularToken.allowance (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#72-73) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_from' of UnboundedRegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_to' of UnboundedRegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_value' of UnboundedRegularToken.transferFrom (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 122,
+            "message": "Function 'NEBlockchain.NEBlockchain' (0x7b085e7a87f03c5cdee1093dd98819ac5919ad25.sol#120-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "errors": [
+        "EXIT_CODE_8"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "NoahDividend",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "function": "multiTransfer",
+            "impact": "Low",
+            "line": 56,
+            "line_end": 58,
+            "message": "NoahDividend.multiTransfer has external calls inside a loop:\n\t- result = noahToken.transfer(investors[i],tokenAmounts[i]) (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#56-58)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "NoahToken",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "NoahToken.transfer (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#19-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NoahToken",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 23,
+            "message": "NoahToken.balanceOf (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#20-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NoahDividend",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "function": "balanceOfInvestor",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 45,
+            "message": "NoahDividend.balanceOfInvestor (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#41-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NoahDividend",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "function": "multiTransfer",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 63,
+            "message": "NoahDividend.multiTransfer (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#45-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol:\n\t- pragma solidity^0.4.16 (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 10,
+            "message": "Function 'Ownable.Ownable' (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#6-10) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 33,
+            "message": "Function 'NoahDividend.NoahDividend' (0x0e41c976f456ccb29c04e62ba70094d174f2b503.sol#29-33) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

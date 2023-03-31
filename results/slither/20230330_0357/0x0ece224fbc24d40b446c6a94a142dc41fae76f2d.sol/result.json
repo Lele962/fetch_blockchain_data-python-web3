@@ -1,0 +1,1214 @@
+{
+    "errors": [
+        "EXIT_CODE_118"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "High",
+            "line": 5978,
+            "line_end": 5979,
+            "message": "Expiry.FILE (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5978-5979) shadows:\n\t- OnlySolo.FILE (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5940-5942)\n",
+            "name": "shadowing-state"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Medium",
+            "line": 355,
+            "line_end": 396,
+            "message": "Require.stringify (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#355-396) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Medium",
+            "line": 1662,
+            "line_end": 1693,
+            "message": "Token.checkSuccess (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1662-1693) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Medium",
+            "message": "Expiry.parseCallArgs (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Medium",
+            "message": "Expiry.parseTradeArgs (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IErc20",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 1496,
+            "line_end": 1565,
+            "message": "IErc20 (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1496-1565) has incorrect ERC20 function interface(s):\n\t-transfer (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1530-1534)\n\t-transferFrom (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1535-1540)\n\t-approve (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1541-1547)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Storage",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountValues",
+            "impact": "Medium",
+            "line": 2062,
+            "line_end": 2063,
+            "message": "borrowValue in Storage.getAccountValues (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2062-2063) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Exchange",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "exchange",
+            "impact": "Medium",
+            "line": 4789,
+            "message": "result in Exchange.exchange (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4789) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Types",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "add",
+            "impact": "Medium",
+            "line": 806,
+            "line_end": 809,
+            "message": "result in Types.add (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#806-809) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Exchange",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getCost",
+            "impact": "Medium",
+            "line": 4768,
+            "message": "result in Exchange.getCost (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4768) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Types",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "add",
+            "impact": "Medium",
+            "line": 686,
+            "line_end": 687,
+            "message": "result in Types.add (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#686-687) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Storage",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountValues",
+            "impact": "Medium",
+            "line": 2059,
+            "line_end": 2060,
+            "message": "supplyValue in Storage.getAccountValues (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2059-2060) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "_setInterestSetter",
+            "impact": "Medium",
+            "line": 2761,
+            "line_end": 2782,
+            "message": "AdminImpl._setInterestSetter (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2761-2782) does not use the value returned by external calls:\n\t-interestSetter.getInterestRate(token,0,0) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2771-2773)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountValuesInternal",
+            "impact": "Medium",
+            "line": 3730,
+            "line_end": 3750,
+            "message": "Getters.getAccountValuesInternal (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3730-3750) does not use the value returned by external calls:\n\t-cache.addMarket(g_state,m) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3745-3748)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getTradeCostInternal",
+            "impact": "Low",
+            "line": 6173,
+            "line_end": 6180,
+            "message": "Reentrancy in Expiry.getTradeCostInternal (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6173-6180):\n\tExternal calls:\n\t- maxOutputWei = SOLO_MARGIN.getAccountWei(makerAccount,outputMarketId) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\t- output = owedWeiToHeldWei(inputWei,outputMarketId,inputMarketId,expiry) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\tState variables written after the call(s):\n\t- g_expiries (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getTradeCostInternal",
+            "impact": "Low",
+            "line": 6173,
+            "line_end": 6180,
+            "message": "Reentrancy in Expiry.getTradeCostInternal (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6173-6180):\n\tExternal calls:\n\t- maxOutputWei = SOLO_MARGIN.getAccountWei(makerAccount,outputMarketId) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\t- output = heldWeiToOwedWei(inputWei,inputMarketId,outputMarketId,expiry) (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\tState variables written after the call(s):\n\t- g_expiries (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "Require",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "stringify",
+            "impact": "Informational",
+            "line": 355,
+            "line_end": 396,
+            "message": "Require.stringify uses assembly (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#355-396)\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#385-390\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "checkSuccess",
+            "impact": "Informational",
+            "line": 1662,
+            "line_end": 1693,
+            "message": "Token.checkSuccess uses assembly (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1662-1693)\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1674-1693\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "parseCallArgs",
+            "impact": "Informational",
+            "message": "Expiry.parseCallArgs uses assembly (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "parseTradeArgs",
+            "impact": "Informational",
+            "message": "Expiry.parseTradeArgs uses assembly (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol)\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 3151,
+            "line_end": 3152,
+            "message": "Getters.FILE should be constant (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3151-3152)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "Different versions of Solidity is used in 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:\n\t- Version used: ['0.5.7', 'ABIEncoderV2']\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#19-20 declares pragma solidity0.5.7\n\t- 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#20-22 declares pragma experimentalABIEncoderV2\n",
+            "name": "pragma"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "owner",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 120,
+            "message": "Ownable.owner (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#117-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "renounceOwnership",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 144,
+            "message": "Ownable.renounceOwnership (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#140-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 154,
+            "message": "Ownable.transferOwnership (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#151-154) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IAutoTrader",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getTradeCost",
+            "impact": "Informational",
+            "line": 968,
+            "line_end": 988,
+            "message": "IAutoTrader.getTradeCost (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#968-988) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getTradeCost",
+            "impact": "Informational",
+            "line": 6092,
+            "line_end": 6171,
+            "message": "Expiry.getTradeCost (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6092-6171) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Expiry",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "callFunction",
+            "impact": "Informational",
+            "line": 6070,
+            "line_end": 6092,
+            "message": "Expiry.callFunction (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6070-6092) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ICallee",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "callFunction",
+            "impact": "Informational",
+            "line": 1021,
+            "line_end": 1029,
+            "message": "ICallee.callFunction (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1021-1029) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPriceOracle",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getPrice",
+            "impact": "Informational",
+            "line": 1757,
+            "line_end": 1760,
+            "message": "IPriceOracle.getPrice (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1757-1760) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerWithdrawExcessTokens",
+            "impact": "Informational",
+            "line": 2502,
+            "line_end": 2534,
+            "message": "AdminImpl.ownerWithdrawExcessTokens (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2502-2534) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerWithdrawUnsupportedTokens",
+            "impact": "Informational",
+            "line": 2535,
+            "line_end": 2553,
+            "message": "AdminImpl.ownerWithdrawUnsupportedTokens (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2535-2553) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerAddMarket",
+            "impact": "Informational",
+            "line": 2555,
+            "line_end": 2583,
+            "message": "AdminImpl.ownerAddMarket (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2555-2583) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetIsClosing",
+            "impact": "Informational",
+            "line": 2583,
+            "line_end": 2596,
+            "message": "AdminImpl.ownerSetIsClosing (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2583-2596) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetPriceOracle",
+            "impact": "Informational",
+            "line": 2597,
+            "line_end": 2607,
+            "message": "AdminImpl.ownerSetPriceOracle (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2597-2607) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetInterestSetter",
+            "impact": "Informational",
+            "line": 2607,
+            "line_end": 2616,
+            "message": "AdminImpl.ownerSetInterestSetter (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2607-2616) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMarginPremium",
+            "impact": "Informational",
+            "line": 2616,
+            "line_end": 2627,
+            "message": "AdminImpl.ownerSetMarginPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2616-2627) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetSpreadPremium",
+            "impact": "Informational",
+            "line": 2627,
+            "line_end": 2640,
+            "message": "AdminImpl.ownerSetSpreadPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2627-2640) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMarginRatio",
+            "impact": "Informational",
+            "line": 2642,
+            "line_end": 2661,
+            "message": "AdminImpl.ownerSetMarginRatio (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2642-2661) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetLiquidationSpread",
+            "impact": "Informational",
+            "line": 2662,
+            "line_end": 2681,
+            "message": "AdminImpl.ownerSetLiquidationSpread (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2662-2681) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetEarningsRate",
+            "impact": "Informational",
+            "line": 2681,
+            "line_end": 2697,
+            "message": "AdminImpl.ownerSetEarningsRate (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2681-2697) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMinBorrowedValue",
+            "impact": "Informational",
+            "line": 2698,
+            "line_end": 2715,
+            "message": "AdminImpl.ownerSetMinBorrowedValue (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2698-2715) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "AdminImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetGlobalOperator",
+            "impact": "Informational",
+            "line": 2718,
+            "line_end": 2734,
+            "message": "AdminImpl.ownerSetGlobalOperator (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2718-2734) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerWithdrawExcessTokens",
+            "impact": "Informational",
+            "line": 2887,
+            "line_end": 2902,
+            "message": "Admin.ownerWithdrawExcessTokens (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2887-2902) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerWithdrawUnsupportedTokens",
+            "impact": "Informational",
+            "line": 2904,
+            "line_end": 2919,
+            "message": "Admin.ownerWithdrawUnsupportedTokens (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2904-2919) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerAddMarket",
+            "impact": "Informational",
+            "line": 2925,
+            "line_end": 2947,
+            "message": "Admin.ownerAddMarket (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2925-2947) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetIsClosing",
+            "impact": "Informational",
+            "line": 2956,
+            "line_end": 2966,
+            "message": "Admin.ownerSetIsClosing (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2956-2966) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetPriceOracle",
+            "impact": "Informational",
+            "line": 2969,
+            "line_end": 2982,
+            "message": "Admin.ownerSetPriceOracle (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2969-2982) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetInterestSetter",
+            "impact": "Informational",
+            "line": 2984,
+            "line_end": 2995,
+            "message": "Admin.ownerSetInterestSetter (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2984-2995) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMarginPremium",
+            "impact": "Informational",
+            "line": 3007,
+            "line_end": 3023,
+            "message": "Admin.ownerSetMarginPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3007-3023) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetSpreadPremium",
+            "impact": "Informational",
+            "line": 3032,
+            "line_end": 3046,
+            "message": "Admin.ownerSetSpreadPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3032-3046) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMarginRatio",
+            "impact": "Informational",
+            "line": 3051,
+            "line_end": 3060,
+            "message": "Admin.ownerSetMarginRatio (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3051-3060) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetLiquidationSpread",
+            "impact": "Informational",
+            "line": 3067,
+            "line_end": 3076,
+            "message": "Admin.ownerSetLiquidationSpread (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3067-3076) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetEarningsRate",
+            "impact": "Informational",
+            "line": 3083,
+            "line_end": 3096,
+            "message": "Admin.ownerSetEarningsRate (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3083-3096) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetMinBorrowedValue",
+            "impact": "Informational",
+            "line": 3100,
+            "line_end": 3110,
+            "message": "Admin.ownerSetMinBorrowedValue (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3100-3110) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Admin",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "ownerSetGlobalOperator",
+            "impact": "Informational",
+            "line": 3123,
+            "line_end": 3137,
+            "message": "Admin.ownerSetGlobalOperator (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3123-3137) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarginRatio",
+            "impact": "Informational",
+            "line": 3163,
+            "line_end": 3169,
+            "message": "Getters.getMarginRatio (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3163-3169) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getLiquidationSpread",
+            "impact": "Informational",
+            "line": 3180,
+            "line_end": 3185,
+            "message": "Getters.getLiquidationSpread (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3180-3185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getEarningsRate",
+            "impact": "Informational",
+            "line": 3193,
+            "line_end": 3200,
+            "message": "Getters.getEarningsRate (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3193-3200) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMinBorrowedValue",
+            "impact": "Informational",
+            "line": 3209,
+            "line_end": 3216,
+            "message": "Getters.getMinBorrowedValue (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3209-3216) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getRiskParams",
+            "impact": "Informational",
+            "line": 3219,
+            "line_end": 3227,
+            "message": "Getters.getRiskParams (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3219-3227) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getRiskLimits",
+            "impact": "Informational",
+            "line": 3232,
+            "line_end": 3237,
+            "message": "Getters.getRiskLimits (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3232-3237) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getNumMarkets",
+            "impact": "Informational",
+            "line": 3245,
+            "line_end": 3249,
+            "message": "Getters.getNumMarkets (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3245-3249) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketTotalPar",
+            "impact": "Informational",
+            "line": 3270,
+            "line_end": 3280,
+            "message": "Getters.getMarketTotalPar (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3270-3280) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketCachedIndex",
+            "impact": "Informational",
+            "line": 3287,
+            "line_end": 3297,
+            "message": "Getters.getMarketCachedIndex (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3287-3297) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketPriceOracle",
+            "impact": "Informational",
+            "line": 3323,
+            "line_end": 3326,
+            "message": "Getters.getMarketPriceOracle (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3323-3326) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketInterestSetter",
+            "impact": "Informational",
+            "line": 3333,
+            "line_end": 3342,
+            "message": "Getters.getMarketInterestSetter (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3333-3342) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketMarginPremium",
+            "impact": "Informational",
+            "line": 3353,
+            "line_end": 3363,
+            "message": "Getters.getMarketMarginPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3353-3363) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketSpreadPremium",
+            "impact": "Informational",
+            "line": 3368,
+            "line_end": 3378,
+            "message": "Getters.getMarketSpreadPremium (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3368-3378) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketIsClosing",
+            "impact": "Informational",
+            "line": 3391,
+            "line_end": 3393,
+            "message": "Getters.getMarketIsClosing (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3391-3393) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getLiquidationSpreadForPair",
+            "impact": "Informational",
+            "line": 3445,
+            "line_end": 3457,
+            "message": "Getters.getLiquidationSpreadForPair (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3445-3457) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getMarketWithInfo",
+            "impact": "Informational",
+            "line": 3488,
+            "line_end": 3496,
+            "message": "Getters.getMarketWithInfo (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3488-3496) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getNumExcessTokens",
+            "impact": "Informational",
+            "line": 3511,
+            "line_end": 3515,
+            "message": "Getters.getNumExcessTokens (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3511-3515) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountStatus",
+            "impact": "Informational",
+            "line": 3558,
+            "line_end": 3568,
+            "message": "Getters.getAccountStatus (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3558-3568) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountValues",
+            "impact": "Informational",
+            "line": 3578,
+            "line_end": 3591,
+            "message": "Getters.getAccountValues (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3578-3591) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAdjustedAccountValues",
+            "impact": "Informational",
+            "line": 3620,
+            "line_end": 3637,
+            "message": "Getters.getAdjustedAccountValues (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3620-3637) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getAccountBalances",
+            "impact": "Informational",
+            "line": 3649,
+            "line_end": 3676,
+            "message": "Getters.getAccountBalances (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3649-3676) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getIsLocalOperator",
+            "impact": "Informational",
+            "line": 3692,
+            "line_end": 3701,
+            "message": "Getters.getIsLocalOperator (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3692-3701) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Getters",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "getIsGlobalOperator",
+            "impact": "Informational",
+            "line": 3711,
+            "line_end": 3716,
+            "message": "Getters.getIsGlobalOperator (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3711-3716) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OperationImpl",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "operate",
+            "impact": "Informational",
+            "line": 4819,
+            "line_end": 4840,
+            "message": "OperationImpl.operate (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4819-4840) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Operation",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "operate",
+            "impact": "Informational",
+            "line": 5839,
+            "line_end": 5845,
+            "message": "Operation.operate (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5839-5845) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Permission",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "function": "setOperators",
+            "impact": "Informational",
+            "line": 5890,
+            "line_end": 5905,
+            "message": "Permission.setOperators (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5890-5905) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "Detected issues with version pragma in 0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol:\n\t- pragma solidity0.5.7 (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#19-20): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 157,
+            "line_end": 167,
+            "message": "Function 'Ownable._transferOwnership' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#157-167) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2442,
+            "line_end": 2443,
+            "message": "Variable 'State.g_state' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2442-2443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2736,
+            "line_end": 2761,
+            "message": "Function 'AdminImpl._setPriceOracle' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2736-2761) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2761,
+            "line_end": 2782,
+            "message": "Function 'AdminImpl._setInterestSetter' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2761-2782) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2782,
+            "line_end": 2803,
+            "message": "Function 'AdminImpl._setMarginPremium' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2782-2803) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2803,
+            "line_end": 2820,
+            "message": "Function 'AdminImpl._setSpreadPremium' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2803-2820) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2820,
+            "line_end": 2846,
+            "message": "Function 'AdminImpl._requireNoMarket' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2820-2846) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 2846,
+            "line_end": 2860,
+            "message": "Function 'AdminImpl._validateMarketId' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#2846-2860) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 3721,
+            "line_end": 3726,
+            "message": "Function 'Getters._requireValidMarket' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3721-3726) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 3151,
+            "line_end": 3152,
+            "message": "Variable 'Getters.FILE' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3151-3152) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 4840,
+            "line_end": 4856,
+            "message": "Function 'OperationImpl._verifyInputs' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4840-4856) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 4856,
+            "line_end": 4965,
+            "message": "Function 'OperationImpl._runPreprocessing' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4856-4965) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 4965,
+            "line_end": 4980,
+            "message": "Function 'OperationImpl._updateMarket' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4965-4980) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 4980,
+            "line_end": 5062,
+            "message": "Function 'OperationImpl._runActions' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#4980-5062) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5062,
+            "line_end": 5132,
+            "message": "Function 'OperationImpl._verifyFinalState' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5062-5132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5134,
+            "line_end": 5175,
+            "message": "Function 'OperationImpl._deposit' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5134-5175) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5175,
+            "line_end": 5206,
+            "message": "Function 'OperationImpl._withdraw' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5175-5206) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5206,
+            "line_end": 5241,
+            "message": "Function 'OperationImpl._transfer' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5206-5241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5241,
+            "line_end": 5292,
+            "message": "Function 'OperationImpl._buy' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5241-5292) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5293,
+            "line_end": 5339,
+            "message": "Function 'OperationImpl._sell' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5293-5339) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5340,
+            "line_end": 5412,
+            "message": "Function 'OperationImpl._trade' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5340-5412) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5412,
+            "line_end": 5521,
+            "message": "Function 'OperationImpl._liquidate' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5412-5521) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5521,
+            "line_end": 5623,
+            "message": "Function 'OperationImpl._vaporize' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5521-5623) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5623,
+            "line_end": 5644,
+            "message": "Function 'OperationImpl._call' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5623-5644) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5646,
+            "line_end": 5652,
+            "message": "Function 'OperationImpl._owedWeiToHeldWei' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5646-5652) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5659,
+            "line_end": 5676,
+            "message": "Function 'OperationImpl._heldWeiToOwedWei' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5659-5676) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5692,
+            "line_end": 5746,
+            "message": "Function 'OperationImpl._vaporizeUsingExcess' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5692-5746) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5754,
+            "line_end": 5786,
+            "message": "Function 'OperationImpl._getLiquidationPrices' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5754-5786) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5943,
+            "line_end": 5944,
+            "message": "Variable 'OnlySolo.SOLO_MARGIN' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5943-5944) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 6071,
+            "message": "Parameter '' of Expiry.callFunction (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6071) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 6097,
+            "line_end": 6098,
+            "message": "Parameter '' of Expiry.getTradeCost (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#6097-6098) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5991,
+            "line_end": 5993,
+            "message": "Variable 'Expiry.g_expiries' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5991-5993) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 5996,
+            "line_end": 5998,
+            "message": "Variable 'Expiry.g_expiryRampTime' (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#5996-5998) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 1288,
+            "line_end": 1291,
+            "message": "Interest.FILE (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#1288-1291) is never used in Interest\n",
+            "name": "unused-state"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol",
+            "impact": "Informational",
+            "line": 3752,
+            "message": "Actions.FILE (0x0ece224fbc24d40b446c6a94a142dc41fae76f2d.sol#3752) is never used in Actions\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

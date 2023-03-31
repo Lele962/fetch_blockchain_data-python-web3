@@ -1,0 +1,261 @@
+{
+    "errors": [
+        "EXIT_CODE_23"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getTimeLeft",
+            "impact": "Medium",
+            "line": 47,
+            "line_end": 57,
+            "message": "FoMo3Dlong.getTimeLeft (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#47-57) is declared view but changes state variables:\n\t- FoMo3Dlong.round_\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Medium",
+            "line": 67,
+            "line_end": 98,
+            "message": "FoMo3Dlong.getCurrentRoundInfo (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#67-98) is declared view but changes state variables:\n\t- FoMo3Dlong.round_\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "impact": "Informational",
+            "line": 130,
+            "message": "FoMo3Dlong.activated_ should be constant (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#130)\nFoMo3Dlong.airDropPot_ should be constant (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#8-9)\nFoMo3Dlong.airDropTracker_ should be constant (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#9-10)\nFoMo3Dlong.rID_ should be constant (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#37-38)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "buyXid",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 22,
+            "message": "FoMo3Dlong.buyXid (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#21-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "buyXaddr",
+            "impact": "Informational",
+            "line": 22,
+            "line_end": 23,
+            "message": "FoMo3Dlong.buyXaddr (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#22-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "buyXname",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "FoMo3Dlong.buyXname (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#23-24) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "reLoadXid",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 25,
+            "message": "FoMo3Dlong.reLoadXid (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#24-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "reLoadXaddr",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 26,
+            "message": "FoMo3Dlong.reLoadXaddr (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#25-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "reLoadXname",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "FoMo3Dlong.reLoadXname (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#26-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 31,
+            "message": "FoMo3Dlong.withdraw (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#27-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "registerNameXID",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 32,
+            "message": "FoMo3Dlong.registerNameXID (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#31-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "registerNameXaddr",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "FoMo3Dlong.registerNameXaddr (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "registerNameXname",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 37,
+            "message": "FoMo3Dlong.registerNameXname (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#33-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getBuyPrice",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 46,
+            "message": "FoMo3Dlong.getBuyPrice (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#38-46) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getTimeLeft",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 57,
+            "message": "FoMo3Dlong.getTimeLeft (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#47-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getPlayerVaults",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 66,
+            "message": "FoMo3Dlong.getPlayerVaults (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#58-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getCurrentRoundInfo",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 98,
+            "message": "FoMo3Dlong.getCurrentRoundInfo (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#67-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "getPlayerInfoByAddress",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 115,
+            "message": "FoMo3Dlong.getPlayerInfoByAddress (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#98-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "calcKeysReceived",
+            "impact": "Informational",
+            "line": 116,
+            "line_end": 125,
+            "message": "FoMo3Dlong.calcKeysReceived (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#116-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "iWantXKeys",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 130,
+            "message": "FoMo3Dlong.iWantXKeys (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#125-130) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "activate",
+            "impact": "Informational",
+            "line": 130,
+            "line_end": 136,
+            "message": "FoMo3Dlong.activate (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#130-136) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "FoMo3Dlong",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "function": "setOtherFomo",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 138,
+            "message": "FoMo3Dlong.setOtherFomo (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#136-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_keys' of FoMo3Dlong.iWantXKeys (0x21f3af6fc2acb6b78452b2021fae5adf6f7150a9.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

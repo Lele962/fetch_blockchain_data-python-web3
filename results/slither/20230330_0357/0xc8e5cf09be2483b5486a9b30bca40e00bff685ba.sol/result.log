@@ -1,0 +1,124 @@
+INFO:Detectors:[93m
+Contract locking ether found in /sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol:
+	Contract Works has payable functions:
+	 - fallback (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#220-223)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+Reentrancy in Works.updateDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#693-704):
+	External calls:
+	- debris[_worksID][_debrisID].lastPrice = this.getDebrisPrice(_worksID,_debrisID) (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#695-698)
+	State variables written after the call(s):
+	- debris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#698-699)
+	- debris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#699-700)
+	- debris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#700-701)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+lastPrice in Works.getDebrisPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#536) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Works.isFinish.finish (local variable @ /sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#486-487) shadows:
+	- Works.finish (function @ /sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721-724)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol:
+	- pragma solidity^0.5.0 (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_teamAddress' of Works. (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#210-211) is not in mixedCase
+Parameter '_artistAddress' of Works. (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#211-213) is not in mixedCase
+Parameter '_teamAddress' of Works.upgrade (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#285-287) is not in mixedCase
+Parameter '_artistAddress' of Works.upgrade (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#288-289) is not in mixedCase
+Parameter '_worksID' of Works.addWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#301) is not in mixedCase
+Parameter '_artistID' of Works.addWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#302) is not in mixedCase
+Parameter '_debrisNum' of Works.addWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#302) is not in mixedCase
+Parameter '_price' of Works.addWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#303) is not in mixedCase
+Parameter '_beginTime' of Works.addWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#303-304) is not in mixedCase
+Parameter '_worksID' of Works.initDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#336-337) is not in mixedCase
+Parameter '_price' of Works.initDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#337) is not in mixedCase
+Parameter '_debrisNum' of Works.initDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#337-338) is not in mixedCase
+Parameter '_worksID' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#355-356) is not in mixedCase
+Parameter '_firstBuyLimit' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#357) is not in mixedCase
+Parameter '_freezeGap' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#360-361) is not in mixedCase
+Parameter '_protectGap' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#361) is not in mixedCase
+Parameter '_increaseRatio' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#362-363) is not in mixedCase
+Parameter '_discountGap' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#363-364) is not in mixedCase
+Parameter '_discountRatio' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#364-365) is not in mixedCase
+Parameter '_firstAllot' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#365-366) is not in mixedCase
+Parameter '_againAllot' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#366-367) is not in mixedCase
+Parameter '_lastAllot' of Works.configRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#367-370) is not in mixedCase
+Parameter '_worksID' of Works.publish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#399) is not in mixedCase
+Parameter '_beginTime' of Works.publish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#399) is not in mixedCase
+Parameter '_worksID' of Works.close (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#409-411) is not in mixedCase
+Parameter '_worksID' of Works.getWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#414) is not in mixedCase
+Parameter '_worksID' of Works.getDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#421) is not in mixedCase
+Parameter '_debrisID' of Works.getDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#421) is not in mixedCase
+Parameter '_worksID' of Works.getRule (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#437) is not in mixedCase
+Parameter '_worksID' of Works.hasWorks (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#449) is not in mixedCase
+Parameter '_worksID' of Works.hasDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#453) is not in mixedCase
+Parameter '_debrisID' of Works.hasDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#453) is not in mixedCase
+Parameter '_worksID' of Works.isPublish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#457) is not in mixedCase
+Parameter '_worksID' of Works.isStart (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#461) is not in mixedCase
+Parameter '_worksID' of Works.isProtect (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#462-465) is not in mixedCase
+Parameter '_debrisID' of Works.isProtect (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#465) is not in mixedCase
+Parameter '_worksID' of Works.isSecond (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#473) is not in mixedCase
+Parameter '_debrisID' of Works.isSecond (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#473) is not in mixedCase
+Parameter '_worksID' of Works.isGameOver (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#479-482) is not in mixedCase
+Parameter '_worksID' of Works.isFinish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#483) is not in mixedCase
+Parameter '_unionID' of Works.isFinish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#483-484) is not in mixedCase
+Parameter '_worksID' of Works.hasFirstUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#496) is not in mixedCase
+Parameter '_unionID' of Works.hasFirstUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#497) is not in mixedCase
+Parameter '_worksID' of Works.hasSecondUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#510-511) is not in mixedCase
+Parameter '_unionID' of Works.hasSecondUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#511) is not in mixedCase
+Parameter '_worksID' of Works.getFirstUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#523) is not in mixedCase
+Parameter '_worksID' of Works.getSecondUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#525-526) is not in mixedCase
+Parameter '_worksID' of Works.getPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#528-530) is not in mixedCase
+Parameter '_worksID' of Works.getDebrisPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#531) is not in mixedCase
+Parameter '_debrisID' of Works.getDebrisPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#531) is not in mixedCase
+Parameter '_worksID' of Works.getDebrisStatus (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#565) is not in mixedCase
+Parameter '_debrisID' of Works.getDebrisStatus (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#565) is not in mixedCase
+Parameter '_worksID' of Works.getInitPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#593-594) is not in mixedCase
+Parameter '_debrisID' of Works.getInitPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#595-596) is not in mixedCase
+Parameter '_worksID' of Works.getLastPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#600) is not in mixedCase
+Parameter '_debrisID' of Works.getLastPrice (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#600) is not in mixedCase
+Parameter '_worksID' of Works.getLastBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#604) is not in mixedCase
+Parameter '_debrisID' of Works.getLastBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#604) is not in mixedCase
+Parameter '_worksID' of Works.getLastUnionId (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#609) is not in mixedCase
+Parameter '_debrisID' of Works.getLastUnionId (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#609) is not in mixedCase
+Parameter '_worksID' of Works.getFreezeGap (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#613-614) is not in mixedCase
+Parameter '_worksID' of Works.getFirstBuyLimit (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#617) is not in mixedCase
+Parameter '_worksID' of Works.getArtistId (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#623) is not in mixedCase
+Parameter '_worksID' of Works.getDebrisNum (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#625) is not in mixedCase
+Parameter '_worksID' of Works.getAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#628) is not in mixedCase
+Parameter '_flag' of Works.getAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#628) is not in mixedCase
+Parameter '_worksID' of Works.getAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639) is not in mixedCase
+Parameter '_flag' of Works.getAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639) is not in mixedCase
+Parameter '_element' of Works.getAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#639-640) is not in mixedCase
+Parameter '_worksID' of Works.getPools (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#647) is not in mixedCase
+Parameter '_worksID' of Works.getPoolsAllot (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#650-651) is not in mixedCase
+Parameter '_worksID' of Works.getStartHourglass (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#664) is not in mixedCase
+Parameter '_worksID' of Works.getWorksStatus (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#671) is not in mixedCase
+Parameter '_worksID' of Works.getProtectHourglass (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#676) is not in mixedCase
+Parameter '_debrisID' of Works.getProtectHourglass (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#676) is not in mixedCase
+Parameter '_worksID' of Works.getDiscountHourglass (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#684) is not in mixedCase
+Parameter '_debrisID' of Works.getDiscountHourglass (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#684) is not in mixedCase
+Parameter '_worksID' of Works.updateDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#693-694) is not in mixedCase
+Parameter '_debrisID' of Works.updateDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694) is not in mixedCase
+Parameter '_unionID' of Works.updateDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694) is not in mixedCase
+Parameter '_sender' of Works.updateDebris (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#694-695) is not in mixedCase
+Parameter '_worksID' of Works.updateFirstBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#704-705) is not in mixedCase
+Parameter '_debrisID' of Works.updateFirstBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#705) is not in mixedCase
+Parameter '_unionID' of Works.updateFirstBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#705) is not in mixedCase
+Parameter '_sender' of Works.updateFirstBuyer (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#706) is not in mixedCase
+Parameter '_worksID' of Works.updateBuyNum (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#714-715) is not in mixedCase
+Parameter '_debrisID' of Works.updateBuyNum (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#715) is not in mixedCase
+Parameter '_worksID' of Works.finish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721) is not in mixedCase
+Parameter '_unionID' of Works.finish (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#721) is not in mixedCase
+Parameter '_worksID' of Works.updatePools (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#724-725) is not in mixedCase
+Parameter '_value' of Works.updatePools (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol#726-728) is not in mixedCase
+Parameter '_worksID' of Works.updateFirstUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase
+Parameter '_unionID' of Works.updateFirstUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase
+Parameter '_worksID' of Works.updateSecondUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase
+Parameter '_unionID' of Works.updateSecondUnionIds (/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xc8e5cf09be2483b5486a9b30bca40e00bff685ba.sol analyzed (5 contracts), 100 result(s) found

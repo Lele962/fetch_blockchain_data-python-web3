@@ -1,0 +1,182 @@
+{
+    "errors": [
+        "EXIT_CODE_17"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "lock",
+            "impact": "Medium",
+            "line": 89,
+            "line_end": 97,
+            "message": "Reentrancy in lockEtherPay.lock (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#89-97):\n\tExternal calls:\n\t- require(bool)(tokenBalance() > 0) (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#91-92)\n\tState variables written after the call(s):\n\t- isLocked (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#96)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 103,
+            "line_end": 109,
+            "message": "Reentrancy in lockEtherPay.release (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#103-109):\n\tExternal calls:\n\t- token_amount = tokenBalance() (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#106)\n\t- token_reward.transfer(beneficiary,token_amount) (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#107-109)\n\tState variables written after the call(s):\n\t- isReleased (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "release",
+            "impact": "Medium",
+            "line": 103,
+            "line_end": 109,
+            "message": "lockEtherPay.release (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#103-109) does not use the value returned by external calls:\n\t-token_reward.transfer(beneficiary,token_amount) (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#107-109)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "lock",
+            "impact": "Low",
+            "line": 89,
+            "line_end": 97,
+            "message": "Reentrancy in lockEtherPay.lock (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#89-97):\n\tExternal calls:\n\t- require(bool)(tokenBalance() > 0) (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#91-92)\n\tState variables written after the call(s):\n\t- end_time (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#95-96)\n\t- start_time (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#92-95)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 78,
+            "message": "lockEtherPay.fifty_two_weeks should be constant (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#76-78)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "token.balanceOf (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#32-33) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "token",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 38,
+            "message": "token.transfer (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#33-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 66,
+            "message": "Ownable.transferOwnership (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#58-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "lock",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 97,
+            "message": "lockEtherPay.lock (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#89-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "lockEtherPay",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "function": "release",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 109,
+            "message": "lockEtherPay.release (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#103-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol:\n\t- pragma solidity^0.4.18 (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 38,
+            "message": "Contract 'token' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#32-38) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 66,
+            "line_end": 109,
+            "message": "Contract 'lockEtherPay' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#66-109) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 71,
+            "message": "Variable 'lockEtherPay.token_reward' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#70-71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Variable 'lockEtherPay.start_time' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 76,
+            "message": "Variable 'lockEtherPay.end_time' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#76) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 78,
+            "message": "Variable 'lockEtherPay.fifty_two_weeks' (0xd38407198a4259e769b04d83b1f152ce6c201fa7.sol#76-78) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

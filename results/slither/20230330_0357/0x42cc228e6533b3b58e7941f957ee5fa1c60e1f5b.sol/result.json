@@ -1,0 +1,384 @@
+{
+    "errors": [
+        "EXIT_CODE_40"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 23,
+            "line_end": 176,
+            "message": "TokenSTC (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#23-176) has incorrect ERC20 function interface(s):\n\t-transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#86-92)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "TokenSTC.decimals should be constant (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#26-27)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 20,
+            "message": "owned.transferOwnership (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#15-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "tokenRecipient.receiveApproval (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 92,
+            "message": "TokenSTC.transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#86-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 108,
+            "message": "TokenSTC.transferFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#98-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 143,
+            "message": "TokenSTC.approveAndCall (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#131-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 146,
+            "line_end": 158,
+            "message": "TokenSTC.burn (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#146-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenSTC",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 176,
+            "message": "TokenSTC.burnFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#162-176) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 218,
+            "message": "MyAdvancedToken.mintToken (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#212-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "freezeAccount",
+            "impact": "Informational",
+            "line": 223,
+            "line_end": 225,
+            "message": "MyAdvancedToken.freezeAccount (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#223-225) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "setPrices",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 234,
+            "message": "MyAdvancedToken.setPrices (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#232-234) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 240,
+            "message": "MyAdvancedToken.buy (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#237-240) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "MyAdvancedToken",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "function": "sell",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 244,
+            "message": "MyAdvancedToken.sell (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#242-244) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol:\n\t- pragma solidity^0.4.16 (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Contract 'tokenRecipient' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#20-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 57,
+            "message": "Function 'TokenSTC.TokenSTC' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#46-57) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 80,
+            "message": "Function 'TokenSTC._transfer' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#59-80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_from' of TokenSTC._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_to' of TokenSTC._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_value' of TokenSTC._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 89,
+            "message": "Parameter '_to' of TokenSTC.transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#87-89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_value' of TokenSTC.transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_from' of TokenSTC.transferFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_to' of TokenSTC.transferFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_value' of TokenSTC.transferFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "Parameter '_spender' of TokenSTC.approve (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#115-116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 116,
+            "message": "Parameter '_value' of TokenSTC.approve (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 131,
+            "message": "Parameter '_spender' of TokenSTC.approveAndCall (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#131) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 131,
+            "line_end": 132,
+            "message": "Parameter '_value' of TokenSTC.approveAndCall (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#131-132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 132,
+            "message": "Parameter '_extraData' of TokenSTC.approveAndCall (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 147,
+            "message": "Parameter '_value' of TokenSTC.burn (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#147) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 163,
+            "message": "Parameter '_from' of TokenSTC.burnFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#162-163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 163,
+            "message": "Parameter '_value' of TokenSTC.burnFrom (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#163) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 196,
+            "line_end": 208,
+            "message": "Function 'MyAdvancedToken._transfer' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#196-208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_from' of MyAdvancedToken._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_to' of MyAdvancedToken._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 196,
+            "message": "Parameter '_value' of MyAdvancedToken._transfer (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol",
+            "impact": "Informational",
+            "line": 193,
+            "line_end": 195,
+            "message": "Function 'MyAdvancedToken.MyAdvancedToken' (0x42cc228e6533b3b58e7941f957ee5fa1c60e1f5b.sol#193-195) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

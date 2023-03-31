@@ -1,0 +1,492 @@
+{
+    "errors": [
+        "EXIT_CODE_50"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Medium",
+            "line": 139,
+            "message": "BITTOToken.stakeStartTime (0xb48690d52fdd201895b349bc610fa61028588349.sol#139) shadows:\n\t- PoSTokenStandard.stakeStartTime (0xb48690d52fdd201895b349bc610fa61028588349.sol#121-122)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Medium",
+            "line": 139,
+            "line_end": 140,
+            "message": "BITTOToken.stakeMinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#139-140) shadows:\n\t- PoSTokenStandard.stakeMinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#122)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Medium",
+            "line": 140,
+            "line_end": 141,
+            "message": "BITTOToken.stakeMaxAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#140-141) shadows:\n\t- PoSTokenStandard.stakeMaxAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#122-123)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 137,
+            "message": "BITTOToken.decimals should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#136-137)\nBITTOToken.name should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#135-136)\nBITTOToken.stakeMaxAge should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#140-141)\nBITTOToken.stakeMinAge should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#139-140)\nBITTOToken.symbol should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#136)\nPoSTokenStandard.stakeMaxAge should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#122-123)\nPoSTokenStandard.stakeMinAge should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#122)\nPoSTokenStandard.stakeStartTime should be constant (0xb48690d52fdd201895b349bc610fa61028588349.sol#121-122)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 45,
+            "message": "Ownable.transferOwnership (0xb48690d52fdd201895b349bc610fa61028588349.sol#35-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 204,
+            "line_end": 207,
+            "message": "BITTOToken.totalSupply (0xb48690d52fdd201895b349bc610fa61028588349.sol#204-207) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "ERC20Basic.totalSupply (0xb48690d52fdd201895b349bc610fa61028588349.sol#49-50) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 51,
+            "message": "ERC20Basic.balanceOf (0xb48690d52fdd201895b349bc610fa61028588349.sol#50-51) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 207,
+            "line_end": 210,
+            "message": "BITTOToken.balanceOf (0xb48690d52fdd201895b349bc610fa61028588349.sol#207-210) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 204,
+            "message": "BITTOToken.transfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#188-204) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 51,
+            "line_end": 52,
+            "message": "ERC20Basic.transfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#51-52) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 243,
+            "message": "BITTOToken.allowance (0xb48690d52fdd201895b349bc610fa61028588349.sol#240-243) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 61,
+            "message": "ERC20.allowance (0xb48690d52fdd201895b349bc610fa61028588349.sol#60-61) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 231,
+            "message": "BITTOToken.transferFrom (0xb48690d52fdd201895b349bc610fa61028588349.sol#210-231) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 61,
+            "line_end": 62,
+            "message": "ERC20.transferFrom (0xb48690d52fdd201895b349bc610fa61028588349.sol#61-62) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 240,
+            "message": "BITTOToken.approve (0xb48690d52fdd201895b349bc610fa61028588349.sol#231-240) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 63,
+            "message": "ERC20.approve (0xb48690d52fdd201895b349bc610fa61028588349.sol#62-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "coinAge",
+            "impact": "Informational",
+            "line": 271,
+            "line_end": 272,
+            "message": "BITTOToken.coinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#271-272) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PoSTokenStandard",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "coinAge",
+            "impact": "Informational",
+            "line": 124,
+            "message": "PoSTokenStandard.coinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PoSTokenStandard",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "annualInterest",
+            "impact": "Informational",
+            "line": 128,
+            "line_end": 129,
+            "message": "PoSTokenStandard.annualInterest (0xb48690d52fdd201895b349bc610fa61028588349.sol#128-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "annualInterest",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 286,
+            "message": "BITTOToken.annualInterest (0xb48690d52fdd201895b349bc610fa61028588349.sol#273-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "getBlockNumber",
+            "impact": "Informational",
+            "line": 268,
+            "line_end": 270,
+            "message": "BITTOToken.getBlockNumber (0xb48690d52fdd201895b349bc610fa61028588349.sol#268-270) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "ownerSetStakeStartTime",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 333,
+            "message": "BITTOToken.ownerSetStakeStartTime (0xb48690d52fdd201895b349bc610fa61028588349.sol#329-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "ownerBurnToken",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 347,
+            "message": "BITTOToken.ownerBurnToken (0xb48690d52fdd201895b349bc610fa61028588349.sol#333-347) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 362,
+            "message": "BITTOToken.burn (0xb48690d52fdd201895b349bc610fa61028588349.sol#350-362) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "batchTransfer",
+            "impact": "Informational",
+            "line": 367,
+            "line_end": 386,
+            "message": "BITTOToken.batchTransfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#367-386) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BITTOToken",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "function": "disablePOSReward",
+            "impact": "Informational",
+            "message": "BITTOToken.disablePOSReward (0xb48690d52fdd201895b349bc610fa61028588349.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xb48690d52fdd201895b349bc610fa61028588349.sol:\n\t- pragma solidity^0.4.18 (0xb48690d52fdd201895b349bc610fa61028588349.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 24,
+            "message": "Function 'Ownable.Ownable' (0xb48690d52fdd201895b349bc610fa61028588349.sol#19-24) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 155,
+            "line_end": 156,
+            "message": "Struct 'BITTOToken.transferInStruct' (0xb48690d52fdd201895b349bc610fa61028588349.sol#155-156) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 207,
+            "message": "Parameter '_owner' of BITTOToken.balanceOf (0xb48690d52fdd201895b349bc610fa61028588349.sol#207) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 188,
+            "message": "Parameter '_to' of BITTOToken.transfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 189,
+            "message": "Parameter '_value' of BITTOToken.transfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#188-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 240,
+            "message": "Parameter '_owner' of BITTOToken.allowance (0xb48690d52fdd201895b349bc610fa61028588349.sol#240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 241,
+            "message": "Parameter '_spender' of BITTOToken.allowance (0xb48690d52fdd201895b349bc610fa61028588349.sol#240-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 212,
+            "message": "Parameter '_from' of BITTOToken.transferFrom (0xb48690d52fdd201895b349bc610fa61028588349.sol#212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 212,
+            "message": "Parameter '_to' of BITTOToken.transferFrom (0xb48690d52fdd201895b349bc610fa61028588349.sol#212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 212,
+            "message": "Parameter '_value' of BITTOToken.transferFrom (0xb48690d52fdd201895b349bc610fa61028588349.sol#212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 231,
+            "line_end": 232,
+            "message": "Parameter '_spender' of BITTOToken.approve (0xb48690d52fdd201895b349bc610fa61028588349.sol#231-232) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 235,
+            "message": "Parameter '_value' of BITTOToken.approve (0xb48690d52fdd201895b349bc610fa61028588349.sol#232-235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 188,
+            "message": "Function 'BITTOToken.BITTOToken' (0xb48690d52fdd201895b349bc610fa61028588349.sol#176-188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 289,
+            "message": "Parameter '_address' of BITTOToken.getProofOfStakeReward (0xb48690d52fdd201895b349bc610fa61028588349.sol#288-289) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 311,
+            "line_end": 312,
+            "message": "Parameter '_address' of BITTOToken.getCoinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#311-312) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 312,
+            "message": "Parameter '_now' of BITTOToken.getCoinAge (0xb48690d52fdd201895b349bc610fa61028588349.sol#312) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 334,
+            "message": "Parameter '_value' of BITTOToken.ownerBurnToken (0xb48690d52fdd201895b349bc610fa61028588349.sol#334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 351,
+            "message": "Parameter '_value' of BITTOToken.burn (0xb48690d52fdd201895b349bc610fa61028588349.sol#350-351) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 367,
+            "line_end": 368,
+            "message": "Parameter '_recipients' of BITTOToken.batchTransfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#367-368) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "line": 368,
+            "message": "Parameter '_values' of BITTOToken.batchTransfer (0xb48690d52fdd201895b349bc610fa61028588349.sol#368) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "message": "Parameter '_account' of BITTOToken.disablePOSReward (0xb48690d52fdd201895b349bc610fa61028588349.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xb48690d52fdd201895b349bc610fa61028588349.sol",
+            "impact": "Informational",
+            "message": "Parameter '_enabled' of BITTOToken.disablePOSReward (0xb48690d52fdd201895b349bc610fa61028588349.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

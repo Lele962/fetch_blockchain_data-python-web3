@@ -1,0 +1,158 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol:
+/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol:172:31: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x1b002cD1BA79DfaD65e8abFBb3A97826e4960fe5'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        setMiningWarInterface(0x1b002cd1ba79dfad65e8abfbb3a97826e4960fe5);        
+                              ^----------------------------------------^
+
+INFO:Detectors:[91m
+CryptoEngineer.claimPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-455) sends eth to arbitrary user
+	Dangerous calls:
+	- MiniGame.fallback.value(_value)() (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#454-455)
+CryptoEngineer.addMiningWarPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#584-587) sends eth to arbitrary user
+	Dangerous calls:
+	- MiningWar.fallback.value(_value)() (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#585-587)
+CryptoEngineer.distributedToOwner (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) sends eth to arbitrary user
+	Dangerous calls:
+	- gameSponsor.transfer(_value) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol)
+	- administrator.transfer(_value) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[91m
+Reentrancy in CryptoEngineer.buyBooster (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284):
+	External calls:
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)
+	External calls sending eth:
+	- distributedToOwner(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#272-273)
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)
+	State variables written after the call(s):
+	- boostData (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#281-282)
+Reentrancy in CryptoEngineer.buyEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503):
+	External calls:
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)
+	- MiningWar.subCrystal(msg.sender,priceCrystals) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#499)
+	External calls sending eth:
+	- distributedToOwner(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493)
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)
+	State variables written after the call(s):
+	- players (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#499-501)
+Reentrancy in CryptoEngineer.setupMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-221):
+	External calls:
+	- MiningWar.fallback.value(SafeMath.div(SafeMath.mul(prizePool,5),100))() (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#218-219)
+	State variables written after the call(s):
+	- prizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#220-221)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+CryptoEngineer.setPlayerLastUpdateTime (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#361-368) uses a dangerous strict equality:
+	- require(bool)(players[_addr].endLoadOldData == false)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[92m
+Reentrancy in CryptoEngineer.buyBooster (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284):
+	External calls:
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)
+	External calls sending eth:
+	- distributedToOwner(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#272-273)
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)
+	State variables written after the call(s):
+	- players (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#278)
+	- players (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#278-280)
+	- prizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#276-278)
+Reentrancy in CryptoEngineer.buyEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503):
+	External calls:
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)
+	External calls sending eth:
+	- distributedToOwner(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493)
+	- addMiningWarPrizePool(devFeePrize) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)
+	State variables written after the call(s):
+	- prizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#495-497)
+Reentrancy in CryptoEngineer.setContractsMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#237-246):
+	External calls:
+	- MiniGame.isContractMiniGame() == false (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#243-244)
+	State variables written after the call(s):
+	- miniGames (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#245)
+Reentrancy in CryptoEngineer.setMiningWarInterface (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#225-237):
+	External calls:
+	- require(bool)(miningWarInterface.isMiningWarContract() == true) (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#231-233)
+	State variables written after the call(s):
+	- MiningWar (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#235)
+	- miningWarAddress (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#233-235)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+CryptoEngineer.BASE_PRICE should be constant (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#111-113)
+CryptoEngineer.CRTSTAL_MINING_PERIOD should be constant (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#110-111)
+CryptoEngineer.VIRUS_MINING_PERIOD should be constant (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#107-108)
+CryptoEngineer.numberOfBoosts should be constant (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#103-104)
+CryptoEngineer.numberOfEngineer should be constant (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#102-103)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+PullPayment.withdrawPayments (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#64-77) should be declared external
+CryptoEngineer.isContractMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#203-210) should be declared external
+CryptoEngineer.isEngineerContract (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#210-212) should be declared external
+CryptoEngineer.fallback (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#212-214) should be declared external
+CryptoEngineer.setupMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-221) should be declared external
+CryptoEngineer.setContractsMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#237-246) should be declared external
+CryptoEngineer.removeContractMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#250-254) should be declared external
+CryptoEngineer.upgrade (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#254-257) should be declared external
+CryptoEngineer.buyBooster (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284) should be declared external
+CryptoEngineer.getBoosterData (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#284-292) should be declared external
+CryptoEngineer.becomeGameSponsor (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#308-329) should be declared external
+CryptoEngineer.addEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#329-341) should be declared external
+CryptoEngineer.setBoostData (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#349-357) should be declared external
+CryptoEngineer.setGameSponsorInfo (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#357-360) should be declared external
+CryptoEngineer.setPlayerLastUpdateTime (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#361-368) should be declared external
+CryptoEngineer.setPlayerEngineersCount (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#368-372) should be declared external
+CryptoEngineer.setPlayerResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#372-378) should be declared external
+CryptoEngineer.setPlayerVirusNumber (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380-384) should be declared external
+CryptoEngineer.addResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#384-396) should be declared external
+CryptoEngineer.subResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#396-405) should be declared external
+CryptoEngineer.addVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#411-422) should be declared external
+CryptoEngineer.subVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#426-441) should be declared external
+CryptoEngineer.claimPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-455) should be declared external
+CryptoEngineer.buyEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503) should be declared external
+CryptoEngineer.getPlayerData (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#551-573) should be declared external
+CryptoEngineer.calCurrentCrystals (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#590-592) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Parameter '' of CryptoMiningWarInterface.calCurrentCrystals (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#88) is not in mixedCase
+Parameter '' of CryptoMiningWarInterface.subCrystal (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#89) is not in mixedCase
+Parameter '_scope_0' of CryptoMiningWarInterface.subCrystal (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#90) is not in mixedCase
+Parameter '' of CryptoEngineer.setupMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-216) is not in mixedCase
+Parameter '_scope_0' of CryptoEngineer.setupMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#216) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setMiningWarInterface (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#227) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setContractsMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#239-240) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.removeContractMiniGame (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#252) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.addEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#331) is not in mixedCase
+Parameter '_value' of CryptoEngineer.addEngineer (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#333) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setGameSponsorInfo (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#358) is not in mixedCase
+Parameter '_value' of CryptoEngineer.setGameSponsorInfo (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#358-359) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setPlayerLastUpdateTime (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#362) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setPlayerEngineersCount (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#368) is not in mixedCase
+Parameter '_value' of CryptoEngineer.setPlayerEngineersCount (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#369-370) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setPlayerResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#373-374) is not in mixedCase
+Parameter '_value' of CryptoEngineer.setPlayerResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#374-375) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.setPlayerVirusNumber (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380) is not in mixedCase
+Parameter '_value' of CryptoEngineer.setPlayerVirusNumber (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380-382) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.addResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#386) is not in mixedCase
+Parameter '_value' of CryptoEngineer.addResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#386) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.subResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#396-397) is not in mixedCase
+Parameter '_value' of CryptoEngineer.subResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#397) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.addVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#412) is not in mixedCase
+Parameter '_value' of CryptoEngineer.addVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#412) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.subVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#428-429) is not in mixedCase
+Parameter '_value' of CryptoEngineer.subVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#429) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.claimPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445) is not in mixedCase
+Parameter '_value' of CryptoEngineer.claimPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-446) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.updateVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#505-506) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.calCurrentVirus (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#511) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.updateResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#527-528) is not in mixedCase
+Parameter '_research' of CryptoEngineer.updateResearch (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#528) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.getResearchPerDay (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#536-537) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.getPlayerData (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#552) is not in mixedCase
+Parameter '_value' of CryptoEngineer.addPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#577-579) is not in mixedCase
+Parameter '_value' of CryptoEngineer.addMiningWarPrizePool (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#584) is not in mixedCase
+Parameter '_addr' of CryptoEngineer.calCurrentCrystals (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase
+Parameter '_amount' of CryptoEngineer.devFee (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase
+Parameter '_value' of CryptoEngineer.distributedToOwner (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase
+Variable 'CryptoEngineer.VIRUS_MINING_PERIOD' (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#107-108) is not in mixedCase
+Variable 'CryptoEngineer.CRTSTAL_MINING_PERIOD' (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#110-111) is not in mixedCase
+Variable 'CryptoEngineer.BASE_PRICE' (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#111-113) is not in mixedCase
+Variable 'CryptoEngineer.MiningWar' (/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#114-115) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol analyzed (5 contracts), 82 result(s) found

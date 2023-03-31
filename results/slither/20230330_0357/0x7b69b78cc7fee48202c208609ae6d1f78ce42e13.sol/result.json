@@ -1,0 +1,288 @@
+{
+    "errors": [
+        "EXIT_CODE_30"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 22,
+            "line_end": 113,
+            "message": "GoalToken (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#22-113) has incorrect ERC20 function interface(s):\n\t-transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#52-55)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 27,
+            "message": "GoalToken.decimals should be constant (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#26-27)\nGoalToken.name should be constant (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#24-25)\nGoalToken.symbol should be constant (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#25-26)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "owned",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 14,
+            "message": "owned.changeOwner (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#10-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "tokenRecipient",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "receiveApproval",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "tokenRecipient.receiveApproval (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#20-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 55,
+            "message": "GoalToken.transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#52-55) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 66,
+            "message": "GoalToken.transferFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#59-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 89,
+            "message": "GoalToken.approveAndCall (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#80-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 99,
+            "message": "GoalToken.burn (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#91-99) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "burnFrom",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 109,
+            "message": "GoalToken.burnFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#99-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GoalToken",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "function": "mintToken",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 113,
+            "message": "GoalToken.mintToken (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#109-113) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol:\n\t- pragma solidity^0.4.18 (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 20,
+            "message": "Contract 'owned' (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#3-20) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 22,
+            "message": "Contract 'tokenRecipient' (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#20-22) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 48,
+            "message": "Function 'GoalToken._transfer' (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#39-48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 39,
+            "message": "Parameter '_from' of GoalToken._transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#39) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 40,
+            "message": "Parameter '_to' of GoalToken._transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 40,
+            "message": "Parameter '_value' of GoalToken._transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#40) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 52,
+            "message": "Parameter '_to' of GoalToken.transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 53,
+            "message": "Parameter '_value' of GoalToken.transfer (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#52-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 59,
+            "line_end": 60,
+            "message": "Parameter '_from' of GoalToken.transferFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#59-60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_to' of GoalToken.transferFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "Parameter '_value' of GoalToken.transferFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#60) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 71,
+            "message": "Parameter '_spender' of GoalToken.approve (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 71,
+            "message": "Parameter '_value' of GoalToken.approve (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#71) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 81,
+            "message": "Parameter '_spender' of GoalToken.approveAndCall (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#80-81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Parameter '_value' of GoalToken.approveAndCall (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Parameter '_extraData' of GoalToken.approveAndCall (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_value' of GoalToken.burn (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_from' of GoalToken.burnFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_value' of GoalToken.burnFrom (0x7b69b78cc7fee48202c208609ae6d1f78ce42e13.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

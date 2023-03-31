@@ -1,0 +1,856 @@
+{
+    "errors": [
+        "EXIT_CODE_91"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "transfer_eth_from_contract",
+            "impact": "High",
+            "line": 105,
+            "line_end": 110,
+            "message": "TokenLiquidityMarket.transfer_eth_from_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#105-110) sends eth to arbitrary user\n\tDangerous calls:\n\t- _to.transfer(_amount) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#110)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "complete_sell_exchange",
+            "impact": "High",
+            "line": 202,
+            "line_end": 216,
+            "message": "Reentrancy in TokenLiquidityMarket.complete_sell_exchange (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#202-216):\n\tExternal calls:\n\t- transfer_tokens_through_proxy_to_contract(msg.sender,this,_amount_give) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#207-209)\n\tExternal calls sending eth:\n\t- transfer_eth_from_contract(msg.sender,amount_get_minus_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#209-213)\n\t- transfer_eth_from_contract(platform,platform_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#213-215)\n\tState variables written after the call(s):\n\t- eth_balance (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#213-215)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "complete_sell_exchange",
+            "impact": "High",
+            "line": 202,
+            "line_end": 216,
+            "message": "Reentrancy in TokenLiquidityMarket.complete_sell_exchange (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#202-216):\n\tExternal calls:\n\t- transfer_tokens_through_proxy_to_contract(msg.sender,this,_amount_give) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#207-209)\n\tExternal calls sending eth:\n\t- transfer_eth_from_contract(msg.sender,amount_get_minus_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#209-213)\n\t- transfer_eth_from_contract(platform,platform_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#213-215)\n\t- transfer_eth_from_contract(admin,admin_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#215-216)\n\tState variables written after the call(s):\n\t- eth_balance (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#215-216)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "complete_buy_exchange",
+            "impact": "Medium",
+            "line": 216,
+            "line_end": 233,
+            "message": "Reentrancy in TokenLiquidityMarket.complete_buy_exchange (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#216-233):\n\tExternal calls:\n\t- transfer_tokens_from_contract(msg.sender,amount_get_minus_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#223-227)\n\t- transfer_tokens_from_contract(platform,platform_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#227-229)\n\tState variables written after the call(s):\n\t- traded_token_balance (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#227-229)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "complete_buy_exchange",
+            "impact": "Medium",
+            "line": 216,
+            "line_end": 233,
+            "message": "Reentrancy in TokenLiquidityMarket.complete_buy_exchange (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#216-233):\n\tExternal calls:\n\t- transfer_tokens_from_contract(msg.sender,amount_get_minus_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#223-227)\n\t- transfer_tokens_from_contract(platform,platform_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#227-229)\n\t- transfer_tokens_from_contract(admin,admin_commission_) (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#231-232)\n\tState variables written after the call(s):\n\t- traded_token_balance (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#231-232)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 34,
+            "message": "Token.transferFrom (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#33-34) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 34,
+            "line_end": 38,
+            "message": "Token.transfer (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#34-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "change_admin",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 80,
+            "message": "TokenLiquidityMarket.change_admin (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#77-80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "withdraw_arbitrary_token",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 86,
+            "message": "TokenLiquidityMarket.withdraw_arbitrary_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#80-86) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "withdraw_excess_tokens",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 90,
+            "message": "TokenLiquidityMarket.withdraw_excess_tokens (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#86-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "withdraw_token",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 123,
+            "message": "TokenLiquidityMarket.withdraw_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#119-123) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "withdraw_eth",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 129,
+            "message": "TokenLiquidityMarket.withdraw_eth (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#125-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "seed_traded_token",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 142,
+            "message": "TokenLiquidityMarket.seed_traded_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#136-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "seed_eth",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 151,
+            "message": "TokenLiquidityMarket.seed_eth (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#142-151) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "seed_additional_token",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 156,
+            "message": "TokenLiquidityMarket.seed_additional_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#151-156) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "seed_additional_eth",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 160,
+            "message": "TokenLiquidityMarket.seed_additional_eth (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#156-160) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "deactivate_trading",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 170,
+            "message": "TokenLiquidityMarket.deactivate_trading (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#165-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "reactivate_trading",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 172,
+            "message": "TokenLiquidityMarket.reactivate_trading (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#170-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "activate_admin_commission",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 194,
+            "message": "TokenLiquidityMarket.activate_admin_commission (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#189-194) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "deactivate_admin_comission",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 196,
+            "message": "TokenLiquidityMarket.deactivate_admin_comission (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#194-196) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "change_admin_commission",
+            "impact": "Informational",
+            "line": 197,
+            "line_end": 202,
+            "message": "TokenLiquidityMarket.change_admin_commission (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#197-202) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "sell_tokens",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 241,
+            "message": "TokenLiquidityMarket.sell_tokens (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#233-241) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "TokenLiquidityMarket",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "TokenLiquidityMarket.fallback (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol:\n\t- pragma solidity^0.4.23 (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_traded_token' of TokenLiquidityMarket. (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 67,
+            "message": "Parameter '_eth_seed_amount' of TokenLiquidityMarket. (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#67) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 69,
+            "message": "Parameter '_traded_token_seed_amount' of TokenLiquidityMarket. (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#67-69) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 70,
+            "message": "Parameter '_commission_ratio' of TokenLiquidityMarket. (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#69-70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 80,
+            "message": "Function 'TokenLiquidityMarket.change_admin' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#77-80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Parameter '_newAdmin' of TokenLiquidityMarket.change_admin (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 86,
+            "message": "Function 'TokenLiquidityMarket.withdraw_arbitrary_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#80-86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 81,
+            "message": "Parameter '_token' of TokenLiquidityMarket.withdraw_arbitrary_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#81) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 82,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.withdraw_arbitrary_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#82) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 90,
+            "message": "Function 'TokenLiquidityMarket.withdraw_excess_tokens' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#86-90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 86,
+            "message": "Parameter '_excess' of TokenLiquidityMarket.withdraw_excess_tokens (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 96,
+            "message": "Function 'TokenLiquidityMarket.transfer_tokens_through_proxy_to_contract' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#90-96) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_from' of TokenLiquidityMarket.transfer_tokens_through_proxy_to_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 91,
+            "message": "Parameter '_to' of TokenLiquidityMarket.transfer_tokens_through_proxy_to_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 92,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.transfer_tokens_through_proxy_to_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#92) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 102,
+            "message": "Function 'TokenLiquidityMarket.transfer_tokens_from_contract' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#96-102) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 97,
+            "message": "Parameter '_to' of TokenLiquidityMarket.transfer_tokens_from_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#96-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 97,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.transfer_tokens_from_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "Function 'TokenLiquidityMarket.transfer_eth_to_contract' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#104-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 105,
+            "line_end": 110,
+            "message": "Function 'TokenLiquidityMarket.transfer_eth_from_contract' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#105-110) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 107,
+            "message": "Parameter '_to' of TokenLiquidityMarket.transfer_eth_from_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#106-107) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.transfer_eth_from_contract (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 117,
+            "message": "Function 'TokenLiquidityMarket.deposit_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#110-117) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 113,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.deposit_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#112-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 117,
+            "line_end": 118,
+            "message": "Function 'TokenLiquidityMarket.deposit_eth' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#117-118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 119,
+            "line_end": 123,
+            "message": "Function 'TokenLiquidityMarket.withdraw_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#119-123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 121,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.withdraw_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 129,
+            "message": "Function 'TokenLiquidityMarket.withdraw_eth' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#125-129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.withdraw_eth (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 133,
+            "message": "Function 'TokenLiquidityMarket.set_traded_token_as_seeded' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#129-133) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 136,
+            "message": "Function 'TokenLiquidityMarket.set_eth_as_seeded' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#134-136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 142,
+            "message": "Function 'TokenLiquidityMarket.seed_traded_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#136-142) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 151,
+            "message": "Function 'TokenLiquidityMarket.seed_eth' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#142-151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 156,
+            "message": "Function 'TokenLiquidityMarket.seed_additional_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#151-156) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.seed_additional_token (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 156,
+            "line_end": 160,
+            "message": "Function 'TokenLiquidityMarket.seed_additional_eth' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#156-160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 165,
+            "message": "Function 'TokenLiquidityMarket.market_is_open' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#160-165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 165,
+            "line_end": 170,
+            "message": "Function 'TokenLiquidityMarket.deactivate_trading' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#165-170) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 170,
+            "line_end": 172,
+            "message": "Function 'TokenLiquidityMarket.reactivate_trading' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#170-172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 172,
+            "line_end": 177,
+            "message": "Function 'TokenLiquidityMarket.get_amount_sell' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#172-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 172,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.get_amount_sell (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#172) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 184,
+            "message": "Function 'TokenLiquidityMarket.get_amount_buy' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#177-184) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.get_amount_buy (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 184,
+            "line_end": 189,
+            "message": "Function 'TokenLiquidityMarket.get_amount_minus_commission' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#184-189) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 185,
+            "message": "Parameter '_amount' of TokenLiquidityMarket.get_amount_minus_commission (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#185) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 194,
+            "message": "Function 'TokenLiquidityMarket.activate_admin_commission' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#189-194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 196,
+            "message": "Function 'TokenLiquidityMarket.deactivate_admin_comission' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#194-196) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 197,
+            "line_end": 202,
+            "message": "Function 'TokenLiquidityMarket.change_admin_commission' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#197-202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 200,
+            "message": "Parameter '_new_commission_ratio' of TokenLiquidityMarket.change_admin_commission (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#200) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 216,
+            "message": "Function 'TokenLiquidityMarket.complete_sell_exchange' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#202-216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 203,
+            "message": "Parameter '_amount_give' of TokenLiquidityMarket.complete_sell_exchange (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 233,
+            "message": "Function 'TokenLiquidityMarket.complete_buy_exchange' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#216-233) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 241,
+            "message": "Function 'TokenLiquidityMarket.sell_tokens' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#233-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 235,
+            "message": "Parameter '_amount_give' of TokenLiquidityMarket.sell_tokens (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#234-235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "message": "Function 'TokenLiquidityMarket.buy_tokens' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 46,
+            "line_end": 47,
+            "message": "Variable 'TokenLiquidityMarket.traded_token' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#46-47) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 48,
+            "message": "Variable 'TokenLiquidityMarket.eth_seed_amount' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#47-48) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "Variable 'TokenLiquidityMarket.traded_token_seed_amount' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#48-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 50,
+            "message": "Variable 'TokenLiquidityMarket.commission_ratio' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#49-50) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 50,
+            "line_end": 52,
+            "message": "Variable 'TokenLiquidityMarket.eth_balance' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#50-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 53,
+            "message": "Variable 'TokenLiquidityMarket.traded_token_balance' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#52-53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 54,
+            "message": "Variable 'TokenLiquidityMarket.eth_is_seeded' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#53-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 54,
+            "line_end": 55,
+            "message": "Variable 'TokenLiquidityMarket.traded_token_is_seeded' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#54-55) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 57,
+            "message": "Variable 'TokenLiquidityMarket.trading_deactivated' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#55-57) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 58,
+            "message": "Variable 'TokenLiquidityMarket.admin_commission_activated' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#57-58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 58,
+            "line_end": 63,
+            "message": "Modifier 'TokenLiquidityMarket.only_admin' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#58-63) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol",
+            "impact": "Informational",
+            "line": 63,
+            "line_end": 67,
+            "message": "Modifier 'TokenLiquidityMarket.trading_activated' (0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6.sol#63-67) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

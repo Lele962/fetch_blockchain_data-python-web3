@@ -1,0 +1,303 @@
+{
+    "errors": [
+        "EXIT_CODE_29"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "High",
+            "line": 139,
+            "line_end": 167,
+            "message": "Reentrancy in EtherprisesLLC.createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#139-167):\n\tExternal calls:\n\t- (latestAddress,latestName) = SeriesFactory(seriesFactory).createSeries.value(msg.value)(seriesId,name,shares,industry,symbol,msg.sender,extraContract) (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#146-152)\n\tState variables written after the call(s):\n\t- series (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#159)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "ifSeries",
+            "impact": "Medium",
+            "line": 53,
+            "line_end": 59,
+            "message": "EtherprisesLLC.ifSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#53-59) uses a dangerous strict equality:\n\t- expiresAt[msg.sender] == 0\n\t- expiresAt[msg.sender] == 0\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "contract": "SeriesFactory",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "Medium",
+            "line": 212,
+            "line_end": 221,
+            "message": "Contract locking ether found in 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol:\n\tContract SeriesFactory has payable functions:\n\t - createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#212-221)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SeriesFactory",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "Medium",
+            "message": "_newName in SeriesFactory.createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SeriesFactory",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "Medium",
+            "message": "newSeries in SeriesFactory.createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "addr",
+            "impact": "Low",
+            "line": 70,
+            "line_end": 71,
+            "message": "EtherprisesLLC.isExpired.addr (local variable @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#70-71) shadows:\n\t- EtherprisesLLC.addr (function @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#173-175)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "name",
+            "impact": "Low",
+            "line": 140,
+            "line_end": 141,
+            "message": "EtherprisesLLC.createSeries.name (local variable @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#140-141) shadows:\n\t- EtherprisesLLC.name (function @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#182-185)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "Low",
+            "line": 139,
+            "line_end": 167,
+            "message": "Reentrancy in EtherprisesLLC.createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#139-167):\n\tExternal calls:\n\t- (latestAddress,latestName) = SeriesFactory(seriesFactory).createSeries.value(msg.value)(seriesId,name,shares,industry,symbol,msg.sender,extraContract) (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#146-152)\n\tState variables written after the call(s):\n\t- expiresAt (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#160-161)\n\t- latestSeriesForUser (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#161-163)\n\t- seriesByAddress (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#165)\n\t- seriesByName (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#157-158)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 212,
+            "message": "SeriesFactory.owner should be constant (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#211-212)\nSeriesFactory.seriesFactory should be constant (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#210-211)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 97,
+            "message": "Deprecated standard detected @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#97:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 153,
+            "message": "Deprecated standard detected @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#153:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Deprecated standard detected @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#159:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 51,
+            "message": "Deprecated standard detected @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#51:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Deprecated standard detected @ 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#59:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 65,
+            "message": "EtherprisesLLC.withdraw (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#62-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "isExpired",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 76,
+            "message": "EtherprisesLLC.isExpired (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#70-76) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "addAmendment",
+            "impact": "Informational",
+            "line": 81,
+            "line_end": 89,
+            "message": "EtherprisesLLC.addAmendment (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#81-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "payFee",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 102,
+            "message": "EtherprisesLLC.payFee (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#91-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "setManager",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 111,
+            "message": "EtherprisesLLC.setManager (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#107-111) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "setFactory",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 120,
+            "message": "EtherprisesLLC.setFactory (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#115-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "addr",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 175,
+            "message": "EtherprisesLLC.addr (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#173-175) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 182,
+            "line_end": 185,
+            "message": "EtherprisesLLC.name (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#182-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 199,
+            "message": "EtherprisesLLC.fallback (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#188-199) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SeriesFactory",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "createSeries",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 221,
+            "message": "SeriesFactory.createSeries (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#212-221) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 10,
+            "message": "Detected issues with version pragma in 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol:\n\t- pragma solidity^0.4.9 (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#8-10): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherprisesLLC",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 199,
+            "message": "Low level call in EtherprisesLLC.fallback (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#188-199):\n\t-latestSeriesForUser[msg.sender].call.value(msg.value)() 0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#192-198\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 43,
+            "message": "Function 'EtherprisesLLC.EtherprisesLLC' (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#40-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 173,
+            "line_end": 174,
+            "message": "Parameter '_name' of EtherprisesLLC.addr (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#173-174) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol",
+            "impact": "Informational",
+            "line": 183,
+            "message": "Parameter '_owner' of EtherprisesLLC.name (0x0d47d4aea9da60953fd4ae5c47d2165977c7fbea.sol#183) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,802 @@
+{
+    "errors": [
+        "EXIT_CODE_86"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 118,
+            "line_end": 119,
+            "message": "Contract locking ether found in 0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol:\n\tContract LikerCoin has payable functions:\n\t - fallback (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#118-119)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 39,
+            "line_end": 48,
+            "message": "Ownable.transferOwnership (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#39-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 69,
+            "message": "Pausable.pause (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#64-69) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 75,
+            "message": "Pausable.unpause (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#69-75) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 76,
+            "line_end": 77,
+            "message": "ERC20.totalSupply (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#76-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 208,
+            "message": "Token.totalSupply (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#206-208) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 79,
+            "message": "ERC20.allowance (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#77-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 223,
+            "message": "Token.allowance (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#218-223) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 186,
+            "message": "Token.transfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#177-186) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 80,
+            "message": "ERC20.transfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#79-80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 80,
+            "message": "ERC20.approve (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#80) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 158,
+            "line_end": 164,
+            "message": "Token.approve (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#158-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 82,
+            "message": "ERC20.transferFrom (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#80-82) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 177,
+            "message": "Token.transferFrom (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#164-177) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 119,
+            "message": "Token.fallback (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#118-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "lock",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 134,
+            "message": "Token.lock (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#129-134) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "unlock",
+            "impact": "Informational",
+            "line": 134,
+            "line_end": 140,
+            "message": "Token.unlock (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#134-140) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 147,
+            "message": "Token.burn (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#140-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "distribute",
+            "impact": "Informational",
+            "line": 148,
+            "line_end": 158,
+            "message": "Token.distribute (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#148-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "transferRestore",
+            "impact": "Informational",
+            "line": 187,
+            "line_end": 201,
+            "message": "Token.transferRestore (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#187-201) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "finishRestore",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 205,
+            "message": "Token.finishRestore (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#201-205) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "lockState",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 218,
+            "message": "Token.lockState (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#211-218) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockBalance",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "clearLockUser",
+            "impact": "Informational",
+            "line": 281,
+            "line_end": 284,
+            "message": "LockBalance.clearLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#281-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockBalance",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "addLockDate",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 304,
+            "message": "LockBalance.addLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#285-304) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockBalance",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "deleteLockDate",
+            "impact": "Informational",
+            "line": 305,
+            "line_end": 332,
+            "message": "LockBalance.deleteLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#305-332) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockBalance",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "lockTypeInfoGroup",
+            "impact": "Informational",
+            "line": 332,
+            "line_end": 336,
+            "message": "LockBalance.lockTypeInfoGroup (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#332-336) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LockBalance",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "lockUserInfo",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 354,
+            "message": "LockBalance.lockUserInfo (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#336-354) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LikerCoin",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "function": "setLockUsers",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 401,
+            "message": "LikerCoin.setLockUsers (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#392-401) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol:\n\t- pragma solidity^0.4.18 (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 33,
+            "line_end": 36,
+            "message": "Function 'Ownable.Ownable' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#33-36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 98,
+            "message": "Struct 'Token.sUserInfo' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#91-98) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 210,
+            "message": "Parameter '_owner' of Token.balanceOf (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#210) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 218,
+            "message": "Parameter '_owner' of Token.allowance (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#218) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 218,
+            "line_end": 219,
+            "message": "Parameter '_spender' of Token.allowance (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#218-219) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 177,
+            "message": "Parameter '_to' of Token.transfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 177,
+            "line_end": 178,
+            "message": "Parameter '_value' of Token.transfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#177-178) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_spender' of Token.approve (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 159,
+            "message": "Parameter '_value' of Token.approve (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#159) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 164,
+            "message": "Parameter '_from' of Token.transferFrom (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 164,
+            "message": "Parameter '_to' of Token.transferFrom (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#164) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 164,
+            "line_end": 166,
+            "message": "Parameter '_value' of Token.transferFrom (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#164-166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_from' of Token.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_to' of Token.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 121,
+            "message": "Parameter '_value' of Token.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#120-121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 121,
+            "message": "Parameter '_lockCheck' of Token.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 130,
+            "message": "Parameter '_owner' of Token.lock (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#129-130) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 135,
+            "message": "Parameter '_owner' of Token.unlock (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#135) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 140,
+            "message": "Parameter '_to' of Token.burn (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 140,
+            "message": "Parameter '_value' of Token.burn (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#140) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_to' of Token.distribute (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_value' of Token.distribute (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 187,
+            "message": "Parameter '_from' of Token.transferRestore (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 187,
+            "message": "Parameter '_to' of Token.transferRestore (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#187) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 188,
+            "message": "Parameter '_value' of Token.transferRestore (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#188) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 211,
+            "message": "Parameter '_owner' of Token.lockState (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#211) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 232,
+            "message": "Struct 'LockBalance.sGroupLockDate' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#227-232) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 238,
+            "message": "Struct 'LockBalance.sLockInfo' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#232-238) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 242,
+            "message": "Parameter '_to' of LockBalance.setLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 242,
+            "message": "Parameter '_lockType' of LockBalance.setLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#242) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 244,
+            "message": "Parameter '_value' of LockBalance.setLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#242-244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 244,
+            "message": "Parameter '_endTime' of LockBalance.setLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#244) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 252,
+            "message": "Parameter '_owner' of LockBalance.lockBalanceGroup (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 252,
+            "line_end": 253,
+            "message": "Parameter '_index' of LockBalance.lockBalanceGroup (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#252-253) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 276,
+            "message": "Parameter '_owner' of LockBalance.lockBalanceIndividual (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 276,
+            "message": "Parameter '_index' of LockBalance.lockBalanceIndividual (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#276) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 282,
+            "message": "Parameter '_owner' of LockBalance.clearLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#282) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 282,
+            "message": "Parameter '_index' of LockBalance.clearLockUser (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#282) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 286,
+            "message": "Parameter '_lockType' of LockBalance.addLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#285-286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 286,
+            "message": "Parameter '_second' of LockBalance.addLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#286) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 287,
+            "message": "Parameter '_percent' of LockBalance.addLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#286-287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_lockType' of LockBalance.deleteLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_lockTime' of LockBalance.deleteLockDate (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 334,
+            "message": "Parameter '_type' of LockBalance.lockTypeInfoGroup (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 336,
+            "line_end": 337,
+            "message": "Parameter '_owner' of LockBalance.lockUserInfo (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#336-337) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 354,
+            "message": "Parameter '_owner' of LockBalance.lockBalanceAll (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#354) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 227,
+            "message": "Enum 'LockBalance.eLockType' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#225-227) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_from' of LikerCoin.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_to' of LikerCoin.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 387,
+            "message": "Parameter '_value' of LikerCoin.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#387) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 387,
+            "line_end": 388,
+            "message": "Parameter '_lockCheck' of LikerCoin.validTransfer (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#387-388) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 374,
+            "line_end": 386,
+            "message": "Function 'LikerCoin.LikerCoin' (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#374-386) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 393,
+            "message": "Parameter '_type' of LikerCoin.setLockUsers (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 393,
+            "message": "Parameter '_to' of LikerCoin.setLockUsers (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 393,
+            "message": "Parameter '_value' of LikerCoin.setLockUsers (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#393) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "line": 393,
+            "line_end": 395,
+            "message": "Parameter '_endTime' of LikerCoin.setLockUsers (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol#393-395) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of LikerCoin.useBalanceOf (0x0a3f9678d6b631386c2dd3de8809b48b0d1bbd56.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

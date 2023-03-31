@@ -1,0 +1,21 @@
+INFO:Detectors:[93m
+Registry.get (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[92m
+Registry.storeDataAsContract uses assembly (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#24-35)
+	- /sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#27-31
+Registry.get uses assembly (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58)
+	- /sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#44-58
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Registry.addEntry (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#13-19) should be declared external
+Registry.finalize (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#19-24) should be declared external
+Registry.addChunk (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#35-40) should be declared external
+Registry.get (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#40-58) should be declared external
+Registry.getLen (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#58-61) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol:
+	- pragma solidity^0.5.8 (/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Slither:/sb/0x0e46d03b99aaa8b8cc093ffed5855b92d61f9609.sol analyzed (1 contracts), 9 result(s) found

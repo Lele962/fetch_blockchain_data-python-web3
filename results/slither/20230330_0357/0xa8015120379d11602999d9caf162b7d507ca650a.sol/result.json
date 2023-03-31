@@ -1,0 +1,276 @@
+{
+    "errors": [
+        "EXIT_CODE_27"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "allowance",
+            "impact": "Low",
+            "line": 54,
+            "message": "SynthornToken.transferFrom.allowance (local variable @ 0xa8015120379d11602999d9caf162b7d507ca650a.sol#54) shadows:\n\t- SynthornToken.allowance (function @ 0xa8015120379d11602999d9caf162b7d507ca650a.sol#79-84)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "purchasingAllowed",
+            "impact": "Low",
+            "line": 87,
+            "line_end": 91,
+            "message": "SynthornToken.purchasingAllowed (0xa8015120379d11602999d9caf162b7d507ca650a.sol#87-91) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp <= startTime + 2592000 (0xa8015120379d11602999d9caf162b7d507ca650a.sol#90-91)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "ForeignToken.balanceOf (0xa8015120379d11602999d9caf162b7d507ca650a.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ForeignToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 8,
+            "message": "ForeignToken.transfer (0xa8015120379d11602999d9caf162b7d507ca650a.sol#5-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 19,
+            "line_end": 20,
+            "message": "SynthornToken.name (0xa8015120379d11602999d9caf162b7d507ca650a.sol#19-20) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 20,
+            "line_end": 21,
+            "message": "SynthornToken.symbol (0xa8015120379d11602999d9caf162b7d507ca650a.sol#20-21) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 23,
+            "message": "SynthornToken.decimals (0xa8015120379d11602999d9caf162b7d507ca650a.sol#21-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 25,
+            "message": "SynthornToken.balanceOf (0xa8015120379d11602999d9caf162b7d507ca650a.sol#23-25) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 45,
+            "message": "SynthornToken.transfer (0xa8015120379d11602999d9caf162b7d507ca650a.sol#25-45) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 69,
+            "message": "SynthornToken.transferFrom (0xa8015120379d11602999d9caf162b7d507ca650a.sol#45-69) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 69,
+            "line_end": 79,
+            "message": "SynthornToken.approve (0xa8015120379d11602999d9caf162b7d507ca650a.sol#69-79) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 84,
+            "message": "SynthornToken.allowance (0xa8015120379d11602999d9caf162b7d507ca650a.sol#79-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 100,
+            "message": "SynthornToken.withdrawForeignTokens (0xa8015120379d11602999d9caf162b7d507ca650a.sol#91-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "getStats",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 107,
+            "message": "SynthornToken.getStats (0xa8015120379d11602999d9caf162b7d507ca650a.sol#100-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "SynthornToken",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 117,
+            "message": "SynthornToken.fallback (0xa8015120379d11602999d9caf162b7d507ca650a.sol#107-117) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xa8015120379d11602999d9caf162b7d507ca650a.sol:\n\t- pragma solidity^0.4.10 (0xa8015120379d11602999d9caf162b7d507ca650a.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 23,
+            "message": "Parameter '_owner' of SynthornToken.balanceOf (0xa8015120379d11602999d9caf162b7d507ca650a.sol#23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 25,
+            "message": "Parameter '_to' of SynthornToken.transfer (0xa8015120379d11602999d9caf162b7d507ca650a.sol#25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 25,
+            "message": "Parameter '_value' of SynthornToken.transfer (0xa8015120379d11602999d9caf162b7d507ca650a.sol#25) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 45,
+            "message": "Parameter '_from' of SynthornToken.transferFrom (0xa8015120379d11602999d9caf162b7d507ca650a.sol#45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 46,
+            "message": "Parameter '_to' of SynthornToken.transferFrom (0xa8015120379d11602999d9caf162b7d507ca650a.sol#45-46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 46,
+            "message": "Parameter '_value' of SynthornToken.transferFrom (0xa8015120379d11602999d9caf162b7d507ca650a.sol#46) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_spender' of SynthornToken.approve (0xa8015120379d11602999d9caf162b7d507ca650a.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 70,
+            "message": "Parameter '_value' of SynthornToken.approve (0xa8015120379d11602999d9caf162b7d507ca650a.sol#70) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 80,
+            "message": "Parameter '_owner' of SynthornToken.allowance (0xa8015120379d11602999d9caf162b7d507ca650a.sol#80) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 80,
+            "line_end": 83,
+            "message": "Parameter '_spender' of SynthornToken.allowance (0xa8015120379d11602999d9caf162b7d507ca650a.sol#80-83) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xa8015120379d11602999d9caf162b7d507ca650a.sol",
+            "impact": "Informational",
+            "line": 93,
+            "message": "Parameter '_tokenContract' of SynthornToken.withdrawForeignTokens (0xa8015120379d11602999d9caf162b7d507ca650a.sol#93) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

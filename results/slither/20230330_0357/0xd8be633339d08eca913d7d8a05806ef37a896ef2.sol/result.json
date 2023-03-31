@@ -1,0 +1,426 @@
+{
+    "errors": [
+        "EXIT_CODE_44"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "approve",
+            "impact": "High",
+            "line": 133,
+            "line_end": 144,
+            "message": "NumbersToken2.approve (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144) allows anyone to destruct the contract\n",
+            "name": "suicidal"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "approve",
+            "impact": "Medium",
+            "line": 11,
+            "line_end": 279,
+            "message": "NumbersToken2 (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#11-279) has incorrect ERC20 function interface(s):\n\t-transfer (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124-125)\n\t-transferFrom (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#125-133)\n\t-approve (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 46,
+            "line_end": 47,
+            "message": "NumbersToken2.balanceOf.balance (local variable @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#46-47) shadows:\n\t- NumbersToken2.balance (function @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 54,
+            "message": "NumbersToken2.withdraw.balance (local variable @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#54) shadows:\n\t- NumbersToken2.balance (function @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 62,
+            "message": "NumbersToken2.sellMyTokensDaddy.balance (local variable @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#62) shadows:\n\t- NumbersToken2.balance (function @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "balance",
+            "impact": "Low",
+            "line": 151,
+            "line_end": 154,
+            "message": "NumbersToken2.withdrawOld.balance (local variable @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#151-154) shadows:\n\t- NumbersToken2.balance (function @ 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#157-159)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "POWHclone",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 44,
+            "message": "NumbersToken2.POWHclone (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#41-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "getMeOutOfHere",
+            "impact": "Informational",
+            "line": 67,
+            "line_end": 73,
+            "message": "NumbersToken2.getMeOutOfHere (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#67-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "fund",
+            "impact": "Informational",
+            "line": 74,
+            "line_end": 84,
+            "message": "NumbersToken2.fund (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#74-84) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "buyPrice",
+            "impact": "Informational",
+            "line": 84,
+            "line_end": 88,
+            "message": "NumbersToken2.buyPrice (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#84-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "sellPrice",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 95,
+            "message": "NumbersToken2.sellPrice (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#88-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 125,
+            "message": "NumbersToken2.transfer (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124-125) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 133,
+            "message": "NumbersToken2.transferFrom (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#125-133) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 133,
+            "line_end": 144,
+            "message": "NumbersToken2.approve (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#133-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NumbersToken2",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "NumbersToken2.fallback (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol:\n\t- pragma solidity^0.4.18 (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 44,
+            "message": "Function 'NumbersToken2.POWHclone' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#41-44) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 45,
+            "message": "Parameter '_owner' of NumbersToken2.balanceOf (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_from' of NumbersToken2.transferTokens (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 108,
+            "message": "Parameter '_to' of NumbersToken2.transferTokens (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "Parameter '_value' of NumbersToken2.transferTokens (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#108-109) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_to' of NumbersToken2.transfer (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_value' of NumbersToken2.transfer (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_from' of NumbersToken2.transferFrom (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 126,
+            "line_end": 127,
+            "message": "Parameter '_to' of NumbersToken2.transferFrom (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#126-127) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 128,
+            "message": "Parameter '_value' of NumbersToken2.transferFrom (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#127-128) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_spender' of NumbersToken2.approve (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 134,
+            "message": "Parameter '_value' of NumbersToken2.approve (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#134) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 144,
+            "message": "Parameter '_owner' of NumbersToken2.dividends (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#144) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 225,
+            "message": "Constant 'NumbersToken2.one' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#224-225) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 225,
+            "line_end": 226,
+            "message": "Constant 'NumbersToken2.sqrt2' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#225-226) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 227,
+            "message": "Constant 'NumbersToken2.sqrtdot5' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#226-227) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 227,
+            "line_end": 228,
+            "message": "Constant 'NumbersToken2.ln2' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#227-228) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 228,
+            "line_end": 229,
+            "message": "Constant 'NumbersToken2.ln2_64dot5' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#228-229) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 230,
+            "message": "Constant 'NumbersToken2.c1' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#229-230) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 232,
+            "message": "Constant 'NumbersToken2.c3' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#230-232) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 232,
+            "line_end": 233,
+            "message": "Constant 'NumbersToken2.c5' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#232-233) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 233,
+            "line_end": 236,
+            "message": "Constant 'NumbersToken2.c7' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#233-236) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 236,
+            "line_end": 240,
+            "message": "Constant 'NumbersToken2.c9' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#236-240) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 240,
+            "line_end": 242,
+            "message": "Constant 'NumbersToken2.c11' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#240-242) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 258,
+            "message": "Constant 'NumbersToken2.c2' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#257-258) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 258,
+            "line_end": 259,
+            "message": "Constant 'NumbersToken2.c4' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#258-259) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 260,
+            "message": "Constant 'NumbersToken2.c6' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#259-260) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 261,
+            "message": "Constant 'NumbersToken2.c8' (0xd8be633339d08eca913d7d8a05806ef37a896ef2.sol#260-261) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

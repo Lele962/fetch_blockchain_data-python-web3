@@ -1,0 +1,75 @@
+{
+    "errors": [
+        "EXIT_CODE_6"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "ETHDistributor",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "function": "addReceivers",
+            "impact": "Low",
+            "line": 14,
+            "line_end": 17,
+            "message": "ETHDistributor.addReceivers has external calls inside a loop:\n\t- receivers[i].transfer(balances[i]) (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#14-17)\n",
+            "name": "calls-loop"
+        },
+        {
+            "confidence": "High",
+            "contract": "ETHDistributor",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "function": "addReceivers",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 18,
+            "message": "ETHDistributor.addReceivers (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#11-18) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ETHDistributor",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "function": "refund",
+            "impact": "Informational",
+            "line": 18,
+            "line_end": 23,
+            "message": "ETHDistributor.refund (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#18-23) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ETHDistributor",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 26,
+            "message": "ETHDistributor.fallback (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#23-26) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol:\n\t- pragma solidity0.4.20 (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 11,
+            "message": "Function 'ETHDistributor.ETHDistributor' (0x7b68db88fd49062de18d32df9ad9a46475bac37d.sol#7-11) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

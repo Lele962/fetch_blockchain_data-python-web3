@@ -1,0 +1,239 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ToucheWhoeverFrontRanThat",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "deposit",
+            "impact": "Medium",
+            "line": 153,
+            "line_end": 161,
+            "message": "Contract locking ether found in 0x0cb36c6da5575d486224a6b23b307b7e15782429.sol:\n\tContract ToucheWhoeverFrontRanThat has payable functions:\n\t - deposit (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#153-161)\n\tBut does not have a function to withdraw the ether\n",
+            "name": "locked-ether"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 127,
+            "line_end": 128,
+            "message": "ToucheWhoeverFrontRanThat.receiver should be constant (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#127-128)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 39,
+            "message": "Deprecated standard detected @ 0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#36-39:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 47,
+            "line_end": 49,
+            "message": "Deprecated standard detected @ 0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#47-49:\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "LetsBreakThings",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 15,
+            "message": "LetsBreakThings.deposit (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#11-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LetsBreakThings",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "checkBalanceSendEth",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 88,
+            "message": "LetsBreakThings.checkBalanceSendEth (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#57-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LetsBreakThings",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "verifyBlockHash",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 108,
+            "message": "LetsBreakThings.verifyBlockHash (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#97-108) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "creatorProxy",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "proxyCall",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 120,
+            "message": "creatorProxy.proxyCall (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#111-120) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ToucheWhoeverFrontRanThat",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "breakTheData",
+            "impact": "Informational",
+            "line": 136,
+            "line_end": 152,
+            "message": "ToucheWhoeverFrontRanThat.breakTheData (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#136-152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ToucheWhoeverFrontRanThat",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "function": "deposit",
+            "impact": "Informational",
+            "line": 153,
+            "line_end": 161,
+            "message": "ToucheWhoeverFrontRanThat.deposit (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#153-161) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0cb36c6da5575d486224a6b23b307b7e15782429.sol:\n\t- pragma solidity^0.4.23 (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 23,
+            "line_end": 24,
+            "message": "Event 'LetsBreakThings.txSenderDetails' (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#23-24) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 25,
+            "message": "Event 'LetsBreakThings.gasDetails' (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#24-25) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 25,
+            "line_end": 26,
+            "message": "Event 'LetsBreakThings.balanceLog' (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#25-26) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 26,
+            "line_end": 29,
+            "message": "Event 'LetsBreakThings.blockDetails' (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#26-29) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 17,
+            "message": "Parameter '_proxy' of LetsBreakThings. (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#16-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 30,
+            "message": "Parameter '_blockNumber' of LetsBreakThings.getBlockHash (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#30) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 59,
+            "message": "Parameter '_recipient' of LetsBreakThings.checkBalanceSendEth (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#59) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 91,
+            "message": "Parameter '_target' of LetsBreakThings.checkBalance (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#90-91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 98,
+            "message": "Parameter '_hash' of LetsBreakThings.verifyBlockHash (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 99,
+            "message": "Parameter '_blockNumber' of LetsBreakThings.verifyBlockHash (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#98-99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 120,
+            "message": "Contract 'creatorProxy' (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#111-120) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 116,
+            "message": "Parameter '_target' of creatorProxy.proxyCall (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#111-116) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cb36c6da5575d486224a6b23b307b7e15782429.sol",
+            "impact": "Informational",
+            "line": 116,
+            "message": "Parameter '_contract' of creatorProxy.proxyCall (0x0cb36c6da5575d486224a6b23b307b7e15782429.sol#116) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

@@ -1,0 +1,428 @@
+{
+    "errors": [
+        "EXIT_CODE_45"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Low",
+            "line": 71,
+            "message": "ERC20.allowance.owner (local variable @ 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#71) shadows:\n\t- Ownable.owner (state variable @ 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#46)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "totalSupply",
+            "impact": "Low",
+            "line": 102,
+            "message": "STBIToken.totalSupply.totalSupply (local variable @ 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#102) shadows:\n\t- STBIToken.totalSupply (function @ 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#102-103)\n\t- ERC20Basic.totalSupply (function @ 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#64)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 85,
+            "line_end": 86,
+            "message": "STBIToken.initialSupply should be constant (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#85-86)\nSTBIToken.ownerAddress should be constant (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#89-91)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 63,
+            "message": "Ownable.transferOwnership (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#55-63) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 103,
+            "message": "STBIToken.totalSupply (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#102-103) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 64,
+            "message": "ERC20Basic.totalSupply (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#64) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 97,
+            "line_end": 102,
+            "message": "STBIToken.balanceOf (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#97-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 65,
+            "message": "ERC20Basic.balanceOf (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 65,
+            "line_end": 66,
+            "message": "ERC20Basic.transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#65-66) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 118,
+            "message": "STBIToken.transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#114-118) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 70,
+            "line_end": 71,
+            "message": "ERC20.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#70-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "message": "STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 71,
+            "line_end": 72,
+            "message": "ERC20.transferFrom (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#71-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 124,
+            "message": "STBIToken.transferFrom (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#118-124) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 170,
+            "message": "STBIToken.approve (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#162-170) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 73,
+            "message": "ERC20.approve (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#72-73) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "setCanTransfer",
+            "impact": "Informational",
+            "line": 151,
+            "line_end": 152,
+            "message": "STBIToken.setCanTransfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#151-152) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "airdrop",
+            "impact": "Informational",
+            "line": 154,
+            "line_end": 158,
+            "message": "STBIToken.airdrop (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#154-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "STBIToken",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 160,
+            "line_end": 162,
+            "message": "STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#160-162) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol:\n\t- pragma solidity^0.4.13 (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 52,
+            "message": "Function 'Ownable.Ownable' (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#49-52) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 99,
+            "message": "Parameter '_addr' of STBIToken.balanceOf (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#99) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "Parameter '_to' of STBIToken.transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 114,
+            "message": "Parameter '_value' of STBIToken.transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#114) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_owner' of STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "message": "Parameter '_spender' of STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 118,
+            "message": "Parameter '_from' of STBIToken.transferFrom (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 118,
+            "message": "Parameter '_to' of STBIToken.transferFrom (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#118) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 118,
+            "line_end": 119,
+            "message": "Parameter '_value' of STBIToken.transferFrom (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#118-119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 163,
+            "line_end": 165,
+            "message": "Parameter '_spender' of STBIToken.approve (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#163-165) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 166,
+            "message": "Parameter '_value' of STBIToken.approve (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#166) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 92,
+            "line_end": 97,
+            "message": "Function 'STBIToken.STBIToken' (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#92-97) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 113,
+            "message": "Function 'STBIToken._transfer' (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#103-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 104,
+            "message": "Parameter '_from' of STBIToken._transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#103-104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 104,
+            "message": "Parameter '_to' of STBIToken._transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#104) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "Parameter '_value' of STBIToken._transfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#104-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 124,
+            "line_end": 149,
+            "message": "Function 'STBIToken._transferMultiple' (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#124-149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "message": "Parameter '_from' of STBIToken._transferMultiple (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#125) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 126,
+            "message": "Parameter '_addrs' of STBIToken._transferMultiple (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#125-126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 126,
+            "message": "Parameter '_values' of STBIToken._transferMultiple (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#126) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 151,
+            "message": "Parameter '_canTransfer' of STBIToken.setCanTransfer (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#151) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_addrs' of STBIToken.airdrop (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 155,
+            "message": "Parameter '_values' of STBIToken.airdrop (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#155) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 160,
+            "message": "Parameter '_spender' of STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#160) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol",
+            "impact": "Informational",
+            "line": 160,
+            "message": "Parameter '_value' of STBIToken.allowance (0x0e14ff106b70b807d74190ce2c2d0bb8c865082d.sol#160) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

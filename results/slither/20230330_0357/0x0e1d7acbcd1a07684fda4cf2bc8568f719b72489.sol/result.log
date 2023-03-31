@@ -1,0 +1,97 @@
+INFO:Detectors:[93m
+_amount in Chende.fallback (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#45) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Chende.SetupToken.DistribFundsReceiverAddress (local variable @ /sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#86-87) shadows:
+	- Chende.DistribFundsReceiverAddress (function @ /sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Chende.fallback (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#43-85) should be declared external
+Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85-107) should be declared external
+Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-116) should be declared external
+Chende.SetBonus (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-123) should be declared external
+Chende.SetFreeTokens (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123-124) should be declared external
+Chende.StartDistrib (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#125-135) should be declared external
+Chende.StopDistrib (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#135-153) should be declared external
+Chende.distribution (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#153-175) should be declared external
+Chende.distributeAmounts (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#175-200) should be declared external
+Chende.BurnTokens (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#200-214) should be declared external
+Chende.totalSupply (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#215-218) should be declared external
+Chende.MaxDistribPublicSupply_ (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#218-222) should be declared external
+Chende.OwnerDistribSupply_ (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#222-226) should be declared external
+Chende.CurrentDistribPublicSupply_ (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#226-230) should be declared external
+Chende.RemainingTokensReceiverAddress (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#230-235) should be declared external
+Chende.DistribFundsReceiverAddress (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242) should be declared external
+Chende.Owner (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#242-245) should be declared external
+Chende.SetupDone (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#246-247) should be declared external
+Chende.IsDistribRunningFalg_ (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#247-252) should be declared external
+Chende.IsDistribStarted (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#254-255) should be declared external
+Chende.balanceOf (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#256-258) should be declared external
+Chende.transfer (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259-275) should be declared external
+Chende.transferFrom (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#275-292) should be declared external
+Chende.approve (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#292-295) should be declared external
+Chende.allowance (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol:
+	- pragma solidity0.4.19 (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Chende.Chende' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#39-43) is not in mixedCase
+Function 'Chende.SetupToken' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85-107) is not in mixedCase
+Parameter 'BonusTokensPerETHdonated' of Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase
+Parameter 'MaxDistribPublicSupply' of Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase
+Parameter 'OwnerDistribSupply' of Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#85) is not in mixedCase
+Parameter 'DistribFundsReceiverAddress' of Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#86-87) is not in mixedCase
+Parameter 'FreeTokens' of Chende.SetupToken (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#87) is not in mixedCase
+Function 'Chende.SetupMultipliers' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-116) is not in mixedCase
+Parameter 'Multiplier1inX' of Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107) is not in mixedCase
+Parameter 'Multiplier2inX' of Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107) is not in mixedCase
+Parameter 'LimitMultiplier1inWei' of Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#107-108) is not in mixedCase
+Parameter 'LimitMultiplier2inWei' of Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#108-109) is not in mixedCase
+Parameter 'HighDonateLimitInWei' of Chende.SetupMultipliers (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#109-110) is not in mixedCase
+Function 'Chende.SetBonus' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-123) is not in mixedCase
+Parameter 'BonusTokensPerETHdonated' of Chende.SetBonus (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#116-119) is not in mixedCase
+Function 'Chende.SetFreeTokens' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123-124) is not in mixedCase
+Parameter 'FreeTokens' of Chende.SetFreeTokens (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#123) is not in mixedCase
+Function 'Chende.StartDistrib' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#125-135) is not in mixedCase
+Function 'Chende.StopDistrib' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#135-153) is not in mixedCase
+Parameter '_amount' of Chende.distribution (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#154) is not in mixedCase
+Function 'Chende.BurnTokens' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#200-214) is not in mixedCase
+Function 'Chende.MaxDistribPublicSupply_' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#218-222) is not in mixedCase
+Function 'Chende.OwnerDistribSupply_' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#222-226) is not in mixedCase
+Function 'Chende.CurrentDistribPublicSupply_' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#226-230) is not in mixedCase
+Function 'Chende.RemainingTokensReceiverAddress' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#230-235) is not in mixedCase
+Function 'Chende.DistribFundsReceiverAddress' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#235-242) is not in mixedCase
+Function 'Chende.Owner' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#242-245) is not in mixedCase
+Function 'Chende.SetupDone' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#246-247) is not in mixedCase
+Function 'Chende.IsDistribRunningFalg_' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#247-252) is not in mixedCase
+Function 'Chende.IsDistribStarted' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#254-255) is not in mixedCase
+Parameter '_owner' of Chende.balanceOf (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#256-257) is not in mixedCase
+Parameter '_to' of Chende.transfer (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259) is not in mixedCase
+Parameter '_amount' of Chende.transfer (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#259-260) is not in mixedCase
+Parameter '_from' of Chende.transferFrom (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#275-276) is not in mixedCase
+Parameter '_to' of Chende.transferFrom (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#276) is not in mixedCase
+Parameter '_amount' of Chende.transferFrom (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#276-277) is not in mixedCase
+Parameter '_spender' of Chende.approve (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#292-293) is not in mixedCase
+Parameter '_amount' of Chende.approve (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#293) is not in mixedCase
+Parameter '_owner' of Chende.allowance (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) is not in mixedCase
+Parameter '_spender' of Chende.allowance (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol) is not in mixedCase
+Variable 'Chende._totalSupply' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#7-8) is not in mixedCase
+Variable 'Chende._MaxDistribPublicSupply' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#8-9) is not in mixedCase
+Variable 'Chende._OwnerDistribSupply' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#9-10) is not in mixedCase
+Variable 'Chende._CurrentDistribPublicSupply' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#10-11) is not in mixedCase
+Variable 'Chende._FreeTokens' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#11-12) is not in mixedCase
+Variable 'Chende._Multiplier1' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#12-13) is not in mixedCase
+Variable 'Chende._Multiplier2' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#13-14) is not in mixedCase
+Variable 'Chende._LimitMultiplier1' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#14-15) is not in mixedCase
+Variable 'Chende._LimitMultiplier2' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#15-16) is not in mixedCase
+Variable 'Chende._HighDonateLimit' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#16-17) is not in mixedCase
+Variable 'Chende._BonusTokensPerETHdonated' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#17-18) is not in mixedCase
+Variable 'Chende._DistribFundsReceiverAddress' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#18-19) is not in mixedCase
+Variable 'Chende._remainingTokensReceiverAddress' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#19-20) is not in mixedCase
+Variable 'Chende.IsDistribRunning' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#22-23) is not in mixedCase
+Variable 'Chende.DistribStarted' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#23-25) is not in mixedCase
+Variable 'Chende.Claimed' (/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol#31-34) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0e1d7acbcd1a07684fda4cf2bc8568f719b72489.sol analyzed (1 contracts), 84 result(s) found

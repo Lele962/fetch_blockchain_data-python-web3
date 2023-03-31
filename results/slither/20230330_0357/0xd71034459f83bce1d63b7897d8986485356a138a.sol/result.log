@@ -1,0 +1,90 @@
+INFO:Slither:Compilation warnings/errors on /sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:63:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:172:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function SpaceXToken() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:82:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(owner, newOwner);
+        ^-----------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:185:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, owner, _totalSupply);
+        ^---------------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:223:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, to, tokens);
+        ^------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:242:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, spender, tokens);
+        ^-----------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:265:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(from, to, tokens);
+        ^------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:285:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, spender, tokens);
+        ^-----------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:354:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(fundsWallet, msg.sender, numberOfTokens); // Broadcast a message to the blockchain
+        ^-----------------------------------------------^
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:373:5: Warning: No visibility specified. Defaulting to "public". 
+    function viewCurrentPrice() view returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:398:5: Warning: No visibility specified. Defaulting to "public". 
+    function viewTokensSold() view returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:406:5: Warning: No visibility specified. Defaulting to "public". 
+    function viewTokensRemaining() view returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:416:5: Warning: No visibility specified. Defaulting to "public". 
+    function withdrawBalance(uint256 amount) onlyOwner returns(bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:427:5: Warning: No visibility specified. Defaulting to "public". 
+    function getBalanceContract() constant returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+SpaceXToken.basePrice should be constant (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#151-152)
+SpaceXToken.step1 should be constant (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#153-154)
+SpaceXToken.step2 should be constant (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#155-156)
+SpaceXToken.step3 should be constant (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#156)
+SpaceXToken.version should be constant (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#163)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20Interface.totalSupply (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#33-34) should be declared external
+SpaceXToken.totalSupply (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#201-205) should be declared external
+SpaceXToken.balanceOf (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#211-216) should be declared external
+ERC20Interface.balanceOf (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#34-35) should be declared external
+ERC20Interface.allowance (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#35-36) should be declared external
+SpaceXToken.allowance (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#279-283) should be declared external
+ERC20Interface.transfer (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#36-37) should be declared external
+SpaceXToken.transfer (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#223-234) should be declared external
+SpaceXToken.approve (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#246-253) should be declared external
+ERC20Interface.approve (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#37-38) should be declared external
+SpaceXToken.transferFrom (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#264-276) should be declared external
+ERC20Interface.transferFrom (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#38-40) should be declared external
+ApproveAndCallFallBack.receiveApproval (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#51-57) should be declared external
+Owned.transferOwnership (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#75-80) should be declared external
+Owned.acceptOwnership (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#82-90) should be declared external
+Pausable.pause (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#124-126) should be declared external
+Pausable.unpause (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#136-140) should be declared external
+SpaceXToken.approveAndCall (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#287-295) should be declared external
+SpaceXToken.TokenSale (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#298-365) should be declared external
+SpaceXToken.transferAnyERC20Token (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#376-381) should be declared external
+SpaceXToken.viewCurrentPrice (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#386-411) should be declared external
+SpaceXToken.viewTokensSold (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#415-417) should be declared external
+SpaceXToken.viewTokensRemaining (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#419-427) should be declared external
+SpaceXToken.withdrawBalance (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol) should be declared external
+SpaceXToken.getBalanceContract (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol:
+	- pragma solidity^0.4.10 (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#67-68) is not in mixedCase
+Parameter '_newOwner' of Owned.transferOwnership (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#76-78) is not in mixedCase
+Function 'SpaceXToken.SpaceXToken' (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#177-198) is not in mixedCase
+Function 'SpaceXToken.TokenSale' (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#298-365) is not in mixedCase
+Variable 'SpaceXToken._totalSupply' (/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol#158-159) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0xd71034459f83bce1d63b7897d8986485356a138a.sol analyzed (6 contracts), 32 result(s) found

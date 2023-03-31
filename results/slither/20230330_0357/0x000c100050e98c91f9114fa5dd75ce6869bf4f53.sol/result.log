@@ -1,0 +1,115 @@
+INFO:Detectors:[91m
+Reentrancy in C10Token.updatePrice (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#885-892):
+	External calls:
+	- allocateTokens() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)
+	- processWithdrawals() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)
+	State variables written after the call(s):
+	- _balances (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)
+	- _totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#888)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+C10Token.claimTokens (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#924-932) does not use the value returned by external calls:
+	-token.transfer(owner(),token.balanceOf(address(this))) (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#928-931)
+C10Token.handleAllocation (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1021-1040) does not use the value returned by external calls:
+	-participantAddresses.pop() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1033)
+C10Token.handleWithdrawal (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060) does not use the value returned by external calls:
+	-withdrawals.pop() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ERC20Detailed.constructor.name (local variable @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#50-51) shadows:
+	- ERC20Detailed.name (function @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#60-66)
+ERC20Detailed.constructor.symbol (local variable @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#51-52) shadows:
+	- ERC20Detailed.symbol (function @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#67-72)
+ERC20Detailed.constructor.decimals (local variable @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#52) shadows:
+	- ERC20Detailed.decimals (function @ /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#74-80)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in C10Token.handleAllocation (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1021-1040):
+	External calls:
+	- participantAddresses.pop() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1033)
+	External calls sending eth:
+	- address(uint160(owner())).transfer(feeAmount) (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1035)
+	State variables written after the call(s):
+	- _balances (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1036-1039)
+	- _totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1036-1039)
+Reentrancy in C10Token.handleWithdrawal (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060):
+	External calls:
+	- withdrawals.pop() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+	State variables written after the call(s):
+	- _balances (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+	- _totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+Reentrancy in C10Token.handleWithdrawal (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#1052-1060):
+	External calls:
+	- withdrawals.pop() (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+	External calls sending eth:
+	- participant.send(balance) (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+	State variables written after the call(s):
+	- _balances (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+	- _totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20Detailed.name (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#60-66) should be declared external
+ERC20Detailed.symbol (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#67-72) should be declared external
+ERC20Detailed.decimals (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#74-80) should be declared external
+ERC20.transfer (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#208-209) should be declared external
+IERC20.transfer (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#18-20) should be declared external
+IERC20.approve (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#20-22) should be declared external
+ERC20.approve (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#221-227) should be declared external
+IERC20.transferFrom (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#22-24) should be declared external
+ERC20.transferFrom (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#235-242) should be declared external
+IERC20.totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#24-26) should be declared external
+ERC20.totalSupply (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#180-181) should be declared external
+ERC20.allowance (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#199-202) should be declared external
+IERC20.allowance (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#28-30) should be declared external
+ERC20.increaseAllowance (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#253-261) should be declared external
+ERC20.decreaseAllowance (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#271-281) should be declared external
+ERC20Burnable.burnFrom (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#367-372) should be declared external
+Ownable.renounceOwnership (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#422-427) should be declared external
+Ownable.transferOwnership (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#431-437) should be declared external
+PauserRole.addPauser (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#523-529) should be declared external
+PauserRole.renouncePauser (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#529-532) should be declared external
+Pausable.paused (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#567-570) should be declared external
+Pausable.pause (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#589-595) should be declared external
+Pausable.unpause (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#602-606) should be declared external
+MinterRole.addMinter (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#631-633) should be declared external
+MinterRole.renounceMinter (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#634-636) should be declared external
+WhitelistAdminRole.addWhitelistAdmin (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#678-679) should be declared external
+WhitelistAdminRole.renounceWhitelistAdmin (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#679-680) should be declared external
+WhitelistedRole.removeWhitelisted (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#733-737) should be declared external
+WhitelistedRole.renounceWhitelisted (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#737-739) should be declared external
+InvictusWhitelist.verifyParticipant (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#761-766) should be declared external
+InvictusWhitelist.removeWhitelistAdmin (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#767-771) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol:
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#11-14): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#40-41): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#84): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#154): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#347-350): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#375): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#456-459): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#502-504): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#549): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#610): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#651): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#696): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#755): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#772-773): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'ERC20._transfer' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#290-294) is not in mixedCase
+Function 'ERC20._mint' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#305-311) is not in mixedCase
+Function 'ERC20._burn' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#319-323) is not in mixedCase
+Function 'ERC20._burnFrom' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#333-344) is not in mixedCase
+Function 'Ownable._transferOwnership' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#445-452) is not in mixedCase
+Function 'PauserRole._addPauser' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#532-538) is not in mixedCase
+Function 'PauserRole._removePauser' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#538-544) is not in mixedCase
+Function 'MinterRole._addMinter' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#636-641) is not in mixedCase
+Function 'MinterRole._removeMinter' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#641-646) is not in mixedCase
+Function 'WhitelistAdminRole._addWhitelistAdmin' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#680-685) is not in mixedCase
+Function 'WhitelistAdminRole._removeWhitelistAdmin' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#686-691) is not in mixedCase
+Function 'WhitelistedRole._addWhitelisted' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#739-744) is not in mixedCase
+Function 'WhitelistedRole._removeWhitelisted' (/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol#744-750) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x000c100050e98c91f9114fa5dd75ce6869bf4f53.sol analyzed (14 contracts), 55 result(s) found

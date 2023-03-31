@@ -1,0 +1,109 @@
+{
+    "errors": [
+        "EXIT_CODE_10"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "DgptProxy",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "function": "fallback",
+            "impact": "Medium",
+            "line": 45,
+            "line_end": 48,
+            "message": "DgptProxy.fallback (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#45-48) does not use the value returned by external calls:\n\t-dgt.transfer(msg.sender,1) (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#46-47)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 40,
+            "message": "DgptProxy.DGT_contract should be constant (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#37-40)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 10,
+            "message": "Token.transfer (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#8-10) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 27,
+            "message": "StandardToken.transfer (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#16-27) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "DgptProxy",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 48,
+            "message": "DgptProxy.fallback (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#45-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol:\n\t- pragma solidity^0.4.11 (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 16,
+            "message": "Parameter '_to' of StandardToken.transfer (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 16,
+            "message": "Parameter '_value' of StandardToken.transfer (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 41,
+            "line_end": 45,
+            "message": "Function 'DgptProxy.DgptProxy' (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#41-45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 40,
+            "message": "Variable 'DgptProxy.DGT_contract' (0x0e3f73d56f4c2d0422412c035abccc2df90562f9.sol#37-40) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

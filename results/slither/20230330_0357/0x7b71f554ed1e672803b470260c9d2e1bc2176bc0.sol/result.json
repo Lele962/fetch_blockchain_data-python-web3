@@ -1,0 +1,153 @@
+{
+    "errors": [
+        "EXIT_CODE_15"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "THE_RIDDLE",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "function": "Stop",
+            "impact": "High",
+            "line": 28,
+            "line_end": 32,
+            "message": "THE_RIDDLE.Stop (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#28-32) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#29-32)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "High",
+            "contract": "THE_RIDDLE",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "function": "Start",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 28,
+            "message": "THE_RIDDLE.Start (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#21-28) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "THE_RIDDLE",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "function": "Stop",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 32,
+            "message": "THE_RIDDLE.Stop (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#28-32) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "THE_RIDDLE",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "function": "New",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 37,
+            "message": "THE_RIDDLE.New (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#32-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "THE_RIDDLE",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "THE_RIDDLE.fallback (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 49,
+            "message": "Contract 'THE_RIDDLE' (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#3-49) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 15,
+            "message": "Function 'THE_RIDDLE.Try' (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#5-15) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 5,
+            "message": "Parameter '_response' of THE_RIDDLE.Try (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#5) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 21,
+            "line_end": 28,
+            "message": "Function 'THE_RIDDLE.Start' (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#21-28) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 21,
+            "message": "Parameter '_question' of THE_RIDDLE.Start (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 21,
+            "message": "Parameter '_response' of THE_RIDDLE.Start (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#21) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 32,
+            "message": "Function 'THE_RIDDLE.Stop' (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#28-32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 37,
+            "message": "Function 'THE_RIDDLE.New' (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#32-37) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 32,
+            "message": "Parameter '_question' of THE_RIDDLE.New (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#32) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol",
+            "impact": "Informational",
+            "line": 32,
+            "line_end": 33,
+            "message": "Parameter '_responseHash' of THE_RIDDLE.New (0x7b71f554ed1e672803b470260c9d2e1bc2176bc0.sol#32-33) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

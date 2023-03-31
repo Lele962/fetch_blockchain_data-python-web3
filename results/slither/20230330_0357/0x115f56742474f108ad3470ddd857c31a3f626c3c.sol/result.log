@@ -1,0 +1,107 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol:
+/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol:371:33: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0xA41F4D2797F98ABafb13d98345318Dc33cC1fbfC'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        presaleOne = PreSaleOne(0xa41f4d2797f98abafb13d98345318dc33cc1fbfc);
+                                ^----------------------------------------^
+
+INFO:Detectors:[93m
+PetOwnership (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#258-287) has incorrect ERC20 function interface(s):
+	-transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#262-270)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[93m
+Reentrancy in Migrate.migratePets (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#383-405):
+	External calls:
+	- (birthTime,genes,breedTimeout,quality,owner) = presaleOne.getPet(newPetId) (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#391-394)
+	State variables written after the call(s):
+	- tokensCount (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+Reentrancy in EggPurchase.purchaseEgg (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#323-360):
+	External calls:
+	- (childGenes,childQuality) = geneScience.openEgg(userNumber,quality) (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#345-348)
+	State variables written after the call(s):
+	- tokensCount (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+PetOwnership.ownerOf.owner (local variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#282) shadows:
+	- Ownable.owner (state variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#10-11)
+Migrate.migratePets.breedTimeout (local variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#391) shadows:
+	- PopulationControl.breedTimeout (state variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#109)
+Migrate.migratePets.owner (local variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#392-393) shadows:
+	- Ownable.owner (state variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#10-11)
+PreSaleTwo.getPet.breedTimeout (local variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#448-449) shadows:
+	- PopulationControl.breedTimeout (state variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#109)
+PreSaleTwo.getPet.owner (local variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#450-452) shadows:
+	- Ownable.owner (state variable @ /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#10-11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in Migrate.migratePets (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#383-405):
+	External calls:
+	- (birthTime,genes,breedTimeout,quality,owner) = presaleOne.getPet(newPetId) (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#391-394)
+	State variables written after the call(s):
+	- breedTimeouts (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+	- lastTokenId (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+	- ownershipTokenCount (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+	- petIndexToOwner (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+	- pets (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#402-404)
+Reentrancy in EggPurchase.purchaseEgg (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#323-360):
+	External calls:
+	- (childGenes,childQuality) = geneScience.openEgg(userNumber,quality) (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#345-348)
+	State variables written after the call(s):
+	- breedTimeouts (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+	- lastTokenId (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+	- ownershipTokenCount (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+	- petIndexToOwner (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+	- pets (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#350-354)
+Reentrancy in ExternalContracts.setMixGenAddress (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#91-98):
+	External calls:
+	- require(bool)(candidateContract.isMixGen()) (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#95-97)
+	State variables written after the call(s):
+	- geneScience (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#97-98)
+Reentrancy in PreSaleTwo.unpause (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#465-472):
+	External calls:
+	- presaleOneSupply = presaleOne.totalSupply() (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol)
+	State variables written after the call(s):
+	- lastTokenId (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol)
+	- paused (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol)
+	- tokensCount (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+EggMinting.globalPresaleLimit should be constant (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#294-295)
+EggMinting.uniquePetsCount should be constant (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#291-294)
+PopulationControl.maxTimeout should be constant (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#110)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Pausable.pause (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#63-67) should be declared external
+MixGenInterface.isMixGen (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#77) should be declared external
+MixGenInterface.openEgg (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#77-78) should be declared external
+MixGenInterface.uniquePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#78-82) should be declared external
+PetBase.getGradeByQuailty (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#239-256) should be declared external
+EggMinting.totalSupply (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#303-307) should be declared external
+PreSaleOne.totalSupply (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#374-377) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol:
+	- pragma solidity^0.4.23 (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_address' of ExternalContracts.setMixGenAddress (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#91) is not in mixedCase
+Parameter '_address' of ExternalContracts.setRewardAddress (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#102) is not in mixedCase
+Parameter '_genes' of PetBase.createPet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#154-155) is not in mixedCase
+Parameter '_quality' of PetBase.createPet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#155-156) is not in mixedCase
+Parameter '_owner' of PetBase.createPet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#156) is not in mixedCase
+Function 'PetBase._transfer' (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#180-192) is not in mixedCase
+Parameter '_from' of PetBase._transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#180) is not in mixedCase
+Parameter '_to' of PetBase._transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#180-181) is not in mixedCase
+Parameter '_tokenId' of PetBase._transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#181) is not in mixedCase
+Parameter '_to' of PetOwnership.transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#262) is not in mixedCase
+Parameter '_tokenId' of PetOwnership.transfer (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#265) is not in mixedCase
+Function 'PetOwnership._owns' (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#271-275) is not in mixedCase
+Parameter '_claimant' of PetOwnership._owns (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#271-272) is not in mixedCase
+Parameter '_tokenId' of PetOwnership._owns (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#272) is not in mixedCase
+Parameter '_tokenId' of PetOwnership.ownerOf (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#280) is not in mixedCase
+Parameter '_birthTime' of Migrate.migratePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#411) is not in mixedCase
+Parameter '_genes' of Migrate.migratePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#412-413) is not in mixedCase
+Parameter '_breedTimeout' of Migrate.migratePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#413-414) is not in mixedCase
+Parameter '_quality' of Migrate.migratePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#415) is not in mixedCase
+Parameter '_owner' of Migrate.migratePet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#415-416) is not in mixedCase
+Parameter '_id' of PreSaleTwo.getPet (/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol#446-447) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x115f56742474f108ad3470ddd857c31a3f626c3c.sol analyzed (13 contracts), 42 result(s) found

@@ -1,0 +1,795 @@
+{
+    "errors": [
+        "EXIT_CODE_82"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "claimPrizePool",
+            "impact": "High",
+            "line": 445,
+            "line_end": 455,
+            "message": "CryptoEngineer.claimPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-455) sends eth to arbitrary user\n\tDangerous calls:\n\t- MiniGame.fallback.value(_value)() (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#454-455)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "addMiningWarPrizePool",
+            "impact": "High",
+            "line": 584,
+            "line_end": 587,
+            "message": "CryptoEngineer.addMiningWarPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#584-587) sends eth to arbitrary user\n\tDangerous calls:\n\t- MiningWar.fallback.value(_value)() (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#585-587)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "distributedToOwner",
+            "impact": "High",
+            "message": "CryptoEngineer.distributedToOwner (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) sends eth to arbitrary user\n\tDangerous calls:\n\t- gameSponsor.transfer(_value) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol)\n\t- administrator.transfer(_value) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol)\n",
+            "name": "arbitrary-send"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyBooster",
+            "impact": "High",
+            "line": 262,
+            "line_end": 284,
+            "message": "Reentrancy in CryptoEngineer.buyBooster (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284):\n\tExternal calls:\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)\n\tExternal calls sending eth:\n\t- distributedToOwner(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#272-273)\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)\n\tState variables written after the call(s):\n\t- boostData (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#281-282)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyEngineer",
+            "impact": "High",
+            "line": 459,
+            "line_end": 503,
+            "message": "Reentrancy in CryptoEngineer.buyEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503):\n\tExternal calls:\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)\n\t- MiningWar.subCrystal(msg.sender,priceCrystals) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#499)\n\tExternal calls sending eth:\n\t- distributedToOwner(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493)\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)\n\tState variables written after the call(s):\n\t- players (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#499-501)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setupMiniGame",
+            "impact": "High",
+            "line": 215,
+            "line_end": 221,
+            "message": "Reentrancy in CryptoEngineer.setupMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-221):\n\tExternal calls:\n\t- MiningWar.fallback.value(SafeMath.div(SafeMath.mul(prizePool,5),100))() (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#218-219)\n\tState variables written after the call(s):\n\t- prizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#220-221)\n",
+            "name": "reentrancy-eth"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setPlayerLastUpdateTime",
+            "impact": "Medium",
+            "line": 361,
+            "line_end": 368,
+            "message": "CryptoEngineer.setPlayerLastUpdateTime (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#361-368) uses a dangerous strict equality:\n\t- require(bool)(players[_addr].endLoadOldData == false)\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyBooster",
+            "impact": "Low",
+            "line": 262,
+            "line_end": 284,
+            "message": "Reentrancy in CryptoEngineer.buyBooster (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284):\n\tExternal calls:\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)\n\tExternal calls sending eth:\n\t- distributedToOwner(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#272-273)\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#274-276)\n\tState variables written after the call(s):\n\t- players (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#278)\n\t- players (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#278-280)\n\t- prizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#276-278)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyEngineer",
+            "impact": "Low",
+            "line": 459,
+            "line_end": 503,
+            "message": "Reentrancy in CryptoEngineer.buyEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503):\n\tExternal calls:\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)\n\tExternal calls sending eth:\n\t- distributedToOwner(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493)\n\t- addMiningWarPrizePool(devFeePrize) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#493-495)\n\tState variables written after the call(s):\n\t- prizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#495-497)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setContractsMiniGame",
+            "impact": "Low",
+            "line": 237,
+            "line_end": 246,
+            "message": "Reentrancy in CryptoEngineer.setContractsMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#237-246):\n\tExternal calls:\n\t- MiniGame.isContractMiniGame() == false (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#243-244)\n\tState variables written after the call(s):\n\t- miniGames (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#245)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setMiningWarInterface",
+            "impact": "Low",
+            "line": 225,
+            "line_end": 237,
+            "message": "Reentrancy in CryptoEngineer.setMiningWarInterface (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#225-237):\n\tExternal calls:\n\t- require(bool)(miningWarInterface.isMiningWarContract() == true) (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#231-233)\n\tState variables written after the call(s):\n\t- MiningWar (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#235)\n\t- miningWarAddress (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#233-235)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 113,
+            "message": "CryptoEngineer.BASE_PRICE should be constant (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#111-113)\nCryptoEngineer.CRTSTAL_MINING_PERIOD should be constant (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#110-111)\nCryptoEngineer.VIRUS_MINING_PERIOD should be constant (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#107-108)\nCryptoEngineer.numberOfBoosts should be constant (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#103-104)\nCryptoEngineer.numberOfEngineer should be constant (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#102-103)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "PullPayment",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "withdrawPayments",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 77,
+            "message": "PullPayment.withdrawPayments (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#64-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "isContractMiniGame",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 210,
+            "message": "CryptoEngineer.isContractMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#203-210) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "isEngineerContract",
+            "impact": "Informational",
+            "line": 210,
+            "line_end": 212,
+            "message": "CryptoEngineer.isEngineerContract (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#210-212) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 212,
+            "line_end": 214,
+            "message": "CryptoEngineer.fallback (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#212-214) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setupMiniGame",
+            "impact": "Informational",
+            "line": 215,
+            "line_end": 221,
+            "message": "CryptoEngineer.setupMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-221) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setContractsMiniGame",
+            "impact": "Informational",
+            "line": 237,
+            "line_end": 246,
+            "message": "CryptoEngineer.setContractsMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#237-246) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "removeContractMiniGame",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 254,
+            "message": "CryptoEngineer.removeContractMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#250-254) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "upgrade",
+            "impact": "Informational",
+            "line": 254,
+            "line_end": 257,
+            "message": "CryptoEngineer.upgrade (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#254-257) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyBooster",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 284,
+            "message": "CryptoEngineer.buyBooster (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#262-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "getBoosterData",
+            "impact": "Informational",
+            "line": 284,
+            "line_end": 292,
+            "message": "CryptoEngineer.getBoosterData (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#284-292) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "becomeGameSponsor",
+            "impact": "Informational",
+            "line": 308,
+            "line_end": 329,
+            "message": "CryptoEngineer.becomeGameSponsor (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#308-329) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "addEngineer",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 341,
+            "message": "CryptoEngineer.addEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#329-341) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setBoostData",
+            "impact": "Informational",
+            "line": 349,
+            "line_end": 357,
+            "message": "CryptoEngineer.setBoostData (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#349-357) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setGameSponsorInfo",
+            "impact": "Informational",
+            "line": 357,
+            "line_end": 360,
+            "message": "CryptoEngineer.setGameSponsorInfo (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#357-360) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setPlayerLastUpdateTime",
+            "impact": "Informational",
+            "line": 361,
+            "line_end": 368,
+            "message": "CryptoEngineer.setPlayerLastUpdateTime (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#361-368) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setPlayerEngineersCount",
+            "impact": "Informational",
+            "line": 368,
+            "line_end": 372,
+            "message": "CryptoEngineer.setPlayerEngineersCount (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#368-372) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setPlayerResearch",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 378,
+            "message": "CryptoEngineer.setPlayerResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#372-378) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "setPlayerVirusNumber",
+            "impact": "Informational",
+            "line": 380,
+            "line_end": 384,
+            "message": "CryptoEngineer.setPlayerVirusNumber (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380-384) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "addResearch",
+            "impact": "Informational",
+            "line": 384,
+            "line_end": 396,
+            "message": "CryptoEngineer.addResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#384-396) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "subResearch",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 405,
+            "message": "CryptoEngineer.subResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#396-405) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "addVirus",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 422,
+            "message": "CryptoEngineer.addVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#411-422) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "subVirus",
+            "impact": "Informational",
+            "line": 426,
+            "line_end": 441,
+            "message": "CryptoEngineer.subVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#426-441) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "claimPrizePool",
+            "impact": "Informational",
+            "line": 445,
+            "line_end": 455,
+            "message": "CryptoEngineer.claimPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-455) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "buyEngineer",
+            "impact": "Informational",
+            "line": 459,
+            "line_end": 503,
+            "message": "CryptoEngineer.buyEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#459-503) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "getPlayerData",
+            "impact": "Informational",
+            "line": 551,
+            "line_end": 573,
+            "message": "CryptoEngineer.getPlayerData (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#551-573) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CryptoEngineer",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "function": "calCurrentCrystals",
+            "impact": "Informational",
+            "line": 590,
+            "line_end": 592,
+            "message": "CryptoEngineer.calCurrentCrystals (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#590-592) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 88,
+            "message": "Parameter '' of CryptoMiningWarInterface.calCurrentCrystals (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#88) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '' of CryptoMiningWarInterface.subCrystal (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_scope_0' of CryptoMiningWarInterface.subCrystal (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 215,
+            "line_end": 216,
+            "message": "Parameter '' of CryptoEngineer.setupMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#215-216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 216,
+            "message": "Parameter '_scope_0' of CryptoEngineer.setupMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#216) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 227,
+            "message": "Parameter '_addr' of CryptoEngineer.setMiningWarInterface (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#227) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 239,
+            "line_end": 240,
+            "message": "Parameter '_addr' of CryptoEngineer.setContractsMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#239-240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 252,
+            "message": "Parameter '_addr' of CryptoEngineer.removeContractMiniGame (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 331,
+            "message": "Parameter '_addr' of CryptoEngineer.addEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#331) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 333,
+            "message": "Parameter '_value' of CryptoEngineer.addEngineer (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#333) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 358,
+            "message": "Parameter '_addr' of CryptoEngineer.setGameSponsorInfo (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#358) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 358,
+            "line_end": 359,
+            "message": "Parameter '_value' of CryptoEngineer.setGameSponsorInfo (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#358-359) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 362,
+            "message": "Parameter '_addr' of CryptoEngineer.setPlayerLastUpdateTime (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#362) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 368,
+            "message": "Parameter '_addr' of CryptoEngineer.setPlayerEngineersCount (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#368) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 369,
+            "line_end": 370,
+            "message": "Parameter '_value' of CryptoEngineer.setPlayerEngineersCount (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#369-370) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 373,
+            "line_end": 374,
+            "message": "Parameter '_addr' of CryptoEngineer.setPlayerResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#373-374) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 374,
+            "line_end": 375,
+            "message": "Parameter '_value' of CryptoEngineer.setPlayerResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#374-375) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 380,
+            "message": "Parameter '_addr' of CryptoEngineer.setPlayerVirusNumber (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 380,
+            "line_end": 382,
+            "message": "Parameter '_value' of CryptoEngineer.setPlayerVirusNumber (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#380-382) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 386,
+            "message": "Parameter '_addr' of CryptoEngineer.addResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#386) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 386,
+            "message": "Parameter '_value' of CryptoEngineer.addResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#386) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 396,
+            "line_end": 397,
+            "message": "Parameter '_addr' of CryptoEngineer.subResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#396-397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 397,
+            "message": "Parameter '_value' of CryptoEngineer.subResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#397) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 412,
+            "message": "Parameter '_addr' of CryptoEngineer.addVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#412) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 412,
+            "message": "Parameter '_value' of CryptoEngineer.addVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#412) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 428,
+            "line_end": 429,
+            "message": "Parameter '_addr' of CryptoEngineer.subVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#428-429) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 429,
+            "message": "Parameter '_value' of CryptoEngineer.subVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#429) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 445,
+            "message": "Parameter '_addr' of CryptoEngineer.claimPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 445,
+            "line_end": 446,
+            "message": "Parameter '_value' of CryptoEngineer.claimPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#445-446) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 505,
+            "line_end": 506,
+            "message": "Parameter '_addr' of CryptoEngineer.updateVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#505-506) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 511,
+            "message": "Parameter '_addr' of CryptoEngineer.calCurrentVirus (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#511) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 527,
+            "line_end": 528,
+            "message": "Parameter '_addr' of CryptoEngineer.updateResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#527-528) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 528,
+            "message": "Parameter '_research' of CryptoEngineer.updateResearch (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#528) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 536,
+            "line_end": 537,
+            "message": "Parameter '_addr' of CryptoEngineer.getResearchPerDay (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#536-537) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 552,
+            "message": "Parameter '_addr' of CryptoEngineer.getPlayerData (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#552) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 577,
+            "line_end": 579,
+            "message": "Parameter '_value' of CryptoEngineer.addPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#577-579) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 584,
+            "message": "Parameter '_value' of CryptoEngineer.addMiningWarPrizePool (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#584) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "message": "Parameter '_addr' of CryptoEngineer.calCurrentCrystals (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "message": "Parameter '_amount' of CryptoEngineer.devFee (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "message": "Parameter '_value' of CryptoEngineer.distributedToOwner (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "Variable 'CryptoEngineer.VIRUS_MINING_PERIOD' (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#107-108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 110,
+            "line_end": 111,
+            "message": "Variable 'CryptoEngineer.CRTSTAL_MINING_PERIOD' (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#110-111) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 113,
+            "message": "Variable 'CryptoEngineer.BASE_PRICE' (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#111-113) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 115,
+            "message": "Variable 'CryptoEngineer.MiningWar' (0xd7afbf5141a7f1d6b0473175f7a6b0a7954ed3d2.sol#114-115) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

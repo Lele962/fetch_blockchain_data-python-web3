@@ -1,0 +1,305 @@
+{
+    "errors": [
+        "EXIT_CODE_30"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Medium",
+            "line": 98,
+            "line_end": 113,
+            "message": "OwnerBase.isNormalUser (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#98-113) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "OwnerBase",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "isNormalUser",
+            "impact": "Informational",
+            "line": 98,
+            "line_end": 113,
+            "message": "OwnerBase.isNormalUser uses assembly (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#98-113)\n\t- 0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#110-113\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 206,
+            "line_end": 210,
+            "message": "Partners.masterCut should be constant (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#206-210)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "OwnerBase",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 96,
+            "message": "OwnerBase.unpause (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#90-96) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PartnerHolder",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "isHolder",
+            "impact": "Informational",
+            "line": 167,
+            "line_end": 171,
+            "message": "PartnerHolder.isHolder (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#167-171) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "isHolder",
+            "impact": "Informational",
+            "line": 295,
+            "line_end": 297,
+            "message": "Partners.isHolder (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#295-297) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "bonusAll",
+            "impact": "Informational",
+            "line": 300,
+            "line_end": 333,
+            "message": "Partners.bonusAll (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#300-333) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PartnerHolder",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "bonusAll",
+            "impact": "Informational",
+            "line": 171,
+            "line_end": 172,
+            "message": "PartnerHolder.bonusAll (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#171-172) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "bonusOne",
+            "impact": "Informational",
+            "line": 339,
+            "line_end": 350,
+            "message": "Partners.bonusOne (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#339-350) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "PartnerHolder",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "bonusOne",
+            "impact": "Informational",
+            "line": 173,
+            "message": "PartnerHolder.bonusOne (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "initCasino",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 250,
+            "message": "Partners.initCasino (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#213-250) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 255,
+            "message": "Partners.fallback (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#250-255) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "setCasinoName",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 282,
+            "message": "Partners.setCasinoName (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#273-282) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "isOwner",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 293,
+            "message": "Partners.isOwner (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#285-293) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "userWithdraw",
+            "impact": "Informational",
+            "line": 351,
+            "line_end": 357,
+            "message": "Partners.userWithdraw (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#351-357) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Partners",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "function": "buy",
+            "impact": "Informational",
+            "line": 359,
+            "line_end": 386,
+            "message": "Partners.buy (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#359-386) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0c9a488c025db96ce8a834cd3412661f46833a28.sol:\n\t- pragma solidity^0.4.21 (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 17,
+            "line_end": 23,
+            "message": "Function 'OwnerBase.OwnerBase' (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#17-23) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 44,
+            "message": "Parameter '_newCEO' of OwnerBase.setCEO (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#44) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 53,
+            "message": "Parameter '_newCFO' of OwnerBase.setCFO (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#53) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 61,
+            "message": "Parameter '_newCOO' of OwnerBase.setCOO (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#61) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 211,
+            "line_end": 212,
+            "message": "Function 'Partners.Partners' (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#211-212) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 259,
+            "message": "Parameter '_star' of Partners.addCasino (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#259) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 259,
+            "line_end": 260,
+            "message": "Parameter '_price' of Partners.addCasino (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#259-260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 260,
+            "message": "Parameter '_name' of Partners.addCasino (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#260) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 263,
+            "message": "Parameter '_desc' of Partners.addCasino (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#261-263) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 273,
+            "line_end": 274,
+            "message": "Parameter '_name' of Partners.setCasinoName (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#273-274) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 274,
+            "line_end": 275,
+            "message": "Parameter '_desc' of Partners.setCasinoName (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#274-275) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 360,
+            "line_end": 361,
+            "message": "Parameter '_id' of Partners.buy (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#360-361) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0c9a488c025db96ce8a834cd3412661f46833a28.sol",
+            "impact": "Informational",
+            "line": 388,
+            "line_end": 389,
+            "message": "Parameter '_price' of Partners.calcNextPrice (0x0c9a488c025db96ce8a834cd3412661f46833a28.sol#388-389) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

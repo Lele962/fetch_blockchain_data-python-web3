@@ -1,0 +1,72 @@
+INFO:Detectors:[92m
+CryptoArt.getCanvasInfo.owner (local variable @ /sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#924) shadows:
+	- Ownable.owner (state variable @ /sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#9-11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#35-44) should be declared external
+CanvasFactory.getCanvasPaintedPixelsCount (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#213-220) should be declared external
+CanvasFactory.getPixelAuthor (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#239-242) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol:
+	- pragma solidity0.4.23 (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Parameter '_address' of Withdrawable.getPendingWithdrawal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#72) is not in mixedCase
+Parameter '_address' of Withdrawable.addPendingWithdrawal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#80-81) is not in mixedCase
+Parameter '_amount' of Withdrawable.addPendingWithdrawal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#81) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.setPixel (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#169) is not in mixedCase
+Parameter '_index' of CanvasFactory.setPixel (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#169-170) is not in mixedCase
+Parameter '_color' of CanvasFactory.setPixel (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#170) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.getCanvasBitmap (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#199) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.getCanvasPaintedPixelsCount (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#217-218) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.isCanvasFinished (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#234) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.getPixelAuthor (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#239-240) is not in mixedCase
+Parameter '_pixelIndex' of CanvasFactory.getPixelAuthor (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#241) is not in mixedCase
+Parameter '_address' of CanvasFactory.getPaintedPixelsCountByAddress (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#246-247) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory.getPaintedPixelsCountByAddress (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#247) is not in mixedCase
+Function 'CanvasFactory._isCanvasFinished' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#251-260) is not in mixedCase
+Function 'CanvasFactory._getCanvas' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#260-269) is not in mixedCase
+Parameter '_canvasId' of CanvasFactory._getCanvas (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#261-262) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.makeBid (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#368-369) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.getLastBidForCanvas (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#402) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.getCanvasState (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#411) is not in mixedCase
+Parameter '_state' of BiddableCanvas.getCanvasByState (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#439) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.calculateReward (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#466) is not in mixedCase
+Parameter '_address' of BiddableCanvas.calculateReward (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#466) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.addRewardToPendingWithdrawals (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#490-492) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.calculateCommission (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#515-516) is not in mixedCase
+Parameter '_canvasId' of BiddableCanvas.addCommissionToPendingWithdrawals (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#535-536) is not in mixedCase
+Parameter '_owner' of BiddableCanvas.balanceOf (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#553-554) is not in mixedCase
+Parameter '_amount' of BiddableCanvas.setMinimumBidAmount (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#561) is not in mixedCase
+Function 'BiddableCanvas._calculatePricePerPixel' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#562-569) is not in mixedCase
+Parameter '_totalPrice' of BiddableCanvas._calculatePricePerPixel (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#564) is not in mixedCase
+Function 'BiddableCanvas._calculateCommission' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#569-575) is not in mixedCase
+Parameter '_amount' of BiddableCanvas._calculateCommission (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#571) is not in mixedCase
+Function 'BiddableCanvas._slice' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#586-596) is not in mixedCase
+Parameter '_array' of BiddableCanvas._slice (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#586-587) is not in mixedCase
+Parameter '_start' of BiddableCanvas._slice (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#587) is not in mixedCase
+Parameter '_end' of BiddableCanvas._slice (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#587) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.acceptSellOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#635) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.offerCanvasForSale (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#682) is not in mixedCase
+Parameter '_minPrice' of CanvasMarket.offerCanvasForSale (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#682-684) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.offerCanvasForSaleToAddress (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#691-692) is not in mixedCase
+Parameter '_minPrice' of CanvasMarket.offerCanvasForSaleToAddress (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#692-693) is not in mixedCase
+Parameter '_receiver' of CanvasMarket.offerCanvasForSaleToAddress (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#693) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.cancelSellOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#701) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.makeBuyOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#711-712) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.cancelBuyOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#732) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.acceptBuyOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#752) is not in mixedCase
+Parameter '_minPrice' of CanvasMarket.acceptBuyOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#752) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.getCurrentBuyOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#787) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.getCurrentSellOffer (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#795) is not in mixedCase
+Function 'CanvasMarket._offerCanvasForSaleInternal' (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#804-821) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket._offerCanvasForSaleInternal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805) is not in mixedCase
+Parameter '_minPrice' of CanvasMarket._offerCanvasForSaleInternal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805) is not in mixedCase
+Parameter '_receiver' of CanvasMarket._offerCanvasForSaleInternal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#805-807) is not in mixedCase
+Parameter '_canvasId' of CanvasMarket.cancelSellOfferInternal (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#823) is not in mixedCase
+Parameter '_canvasId' of CryptoArt.getCanvasInfo (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#922) is not in mixedCase
+Parameter '_owner' of CryptoArt.getCanvasByOwner (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol#930) is not in mixedCase
+Parameter '_canvasId' of CryptoArt.getCanvasPainters (/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0c9b5c62e7ddeba23164fefa0ff10676e3b52629.sol analyzed (7 contracts), 61 result(s) found

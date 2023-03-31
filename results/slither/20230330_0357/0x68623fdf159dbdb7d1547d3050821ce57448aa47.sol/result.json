@@ -1,0 +1,613 @@
+{
+    "errors": [
+        "EXIT_CODE_66"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "CATContract",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "withdrawCAT",
+            "impact": "Medium",
+            "line": 253,
+            "line_end": 258,
+            "message": "CATContract.withdrawCAT (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#253-258) does not use the value returned by external calls:\n\t-CAT.transfer(owner,ourTokens) (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#257-258)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CATServicePaymentCollector",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "collectPayment",
+            "impact": "Medium",
+            "line": 291,
+            "line_end": 302,
+            "message": "CATServicePaymentCollector.collectPayment (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#291-302) does not use the value returned by external calls:\n\t-CAT.transferFrom(_fromWho,paymentDestination,_payment) (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#298-301)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "CATServicePaymentCollector",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "withdrawCAT",
+            "impact": "Medium",
+            "line": 311,
+            "line_end": 313,
+            "message": "CATServicePaymentCollector.withdrawCAT (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#311-313) does not use the value returned by external calls:\n\t-CAT.transfer(owner,ourTokens) (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#313)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 213,
+            "line_end": 214,
+            "message": "CATContract.versionIdent should be constant (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#213-214)\nERC20Basic.totalSupply should be constant (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#108)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 55,
+            "line_end": 65,
+            "message": "Ownable.transferOwnership (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#55-65) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "pause",
+            "impact": "Informational",
+            "line": 91,
+            "line_end": 98,
+            "message": "Pausable.pause (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#91-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Pausable",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "unpause",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 107,
+            "message": "Pausable.unpause (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#101-107) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 108,
+            "line_end": 109,
+            "message": "ERC20Basic.balanceOf (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#108-109) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 140,
+            "line_end": 142,
+            "message": "BasicToken.balanceOf (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#140-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 109,
+            "line_end": 112,
+            "message": "ERC20Basic.transfer (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#109-112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "BasicToken",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 123,
+            "line_end": 132,
+            "message": "BasicToken.transfer (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#123-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 142,
+            "line_end": 143,
+            "message": "ERC20.allowance (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#142-143) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 204,
+            "message": "StandardToken.allowance (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#202-204) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 143,
+            "line_end": 144,
+            "message": "ERC20.transferFrom (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#143-144) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 161,
+            "line_end": 173,
+            "message": "StandardToken.transferFrom (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#161-173) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 149,
+            "message": "ERC20.approve (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#144-149) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 192,
+            "message": "StandardToken.approve (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#179-192) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CATServicePaymentCollector",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "enableService",
+            "impact": "Informational",
+            "line": 283,
+            "line_end": 286,
+            "message": "CATServicePaymentCollector.enableService (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#283-286) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CATServicePaymentCollector",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "disableService",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 291,
+            "message": "CATServicePaymentCollector.disableService (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#286-291) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "CATServicePaymentCollector",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "function": "collectPayment",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 302,
+            "message": "CATServicePaymentCollector.collectPayment (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#291-302) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol:\n\t- pragma solidity^0.4.13 (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 38,
+            "line_end": 43,
+            "message": "Function 'Ownable.Ownable' (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#38-43) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 141,
+            "message": "Parameter '_owner' of BasicToken.balanceOf (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#141) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_to' of BasicToken.transfer (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 124,
+            "message": "Parameter '_value' of BasicToken.transfer (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#124) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 202,
+            "message": "Parameter '_owner' of StandardToken.allowance (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#202) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 202,
+            "line_end": 203,
+            "message": "Parameter '_spender' of StandardToken.allowance (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#202-203) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_from' of StandardToken.transferFrom (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_to' of StandardToken.transferFrom (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 161,
+            "message": "Parameter '_value' of StandardToken.transferFrom (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#161) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 179,
+            "message": "Parameter '_spender' of StandardToken.approve (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#179) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 180,
+            "message": "Parameter '_value' of StandardToken.approve (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#179-180) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 237,
+            "message": "Function 'CATContract.CATContract' (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#234-237) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 234,
+            "message": "Parameter '_catPaymentCollector' of CATContract.CATContract (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#234) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 234,
+            "line_end": 235,
+            "message": "Parameter '_contractName' of CATContract.CATContract (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#234-235) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 240,
+            "message": "Parameter '_newFee' of CATContract.changeContractFee (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#240) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 247,
+            "message": "Parameter '_newLimit' of CATContract.changeEtherTxLimit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#247) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 283,
+            "message": "Function 'CATServicePaymentCollector.CATServicePaymentCollector' (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#278-283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 278,
+            "line_end": 279,
+            "message": "Parameter '_CAT' of CATServicePaymentCollector.CATServicePaymentCollector (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#278-279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 283,
+            "message": "Parameter '_service' of CATServicePaymentCollector.enableService (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#283) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 287,
+            "message": "Parameter '_service' of CATServicePaymentCollector.disableService (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#287) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 294,
+            "message": "Parameter '_fromWho' of CATServicePaymentCollector.collectPayment (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#291-294) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 294,
+            "message": "Parameter '_payment' of CATServicePaymentCollector.collectPayment (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#294) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 308,
+            "message": "Parameter '_newPaymentDest' of CATServicePaymentCollector.changePaymentDestination (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#304-308) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 260,
+            "line_end": 261,
+            "message": "Variable 'CATServicePaymentCollector.CAT' (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#260-261) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 347,
+            "line_end": 349,
+            "message": "Function 'SecurityDeposit.SecurityDeposit' (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#347-349) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 350,
+            "line_end": 352,
+            "message": "Parameter '_ownerNote' of SecurityDeposit.createNewSecurityDeposit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#350-352) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 352,
+            "line_end": 353,
+            "message": "Parameter '_depositPurpose' of SecurityDeposit.createNewSecurityDeposit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#352-353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 353,
+            "message": "Parameter '_depositAmount' of SecurityDeposit.createNewSecurityDeposit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#353) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 372,
+            "message": "Parameter '_instId' of SecurityDeposit.deposit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#372) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 373,
+            "message": "Parameter '_note' of SecurityDeposit.deposit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#373) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 391,
+            "message": "Parameter '_instId' of SecurityDeposit.claim (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#391) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 391,
+            "message": "Parameter '_whoToClaim' of SecurityDeposit.claim (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#391) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 406,
+            "message": "Parameter '_instId' of SecurityDeposit.refund (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#406) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 406,
+            "line_end": 407,
+            "message": "Parameter '_whoToRefund' of SecurityDeposit.refund (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#406-407) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 420,
+            "line_end": 421,
+            "message": "Parameter '_instId' of SecurityDeposit.claimFromSeveral (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#420-421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 421,
+            "message": "Parameter '_toClaim' of SecurityDeposit.claimFromSeveral (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#421) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 428,
+            "message": "Parameter '_instId' of SecurityDeposit.refundFromSeveral (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#428) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 428,
+            "message": "Parameter '_toRefund' of SecurityDeposit.refundFromSeveral (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#428) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 434,
+            "message": "Parameter '_instId' of SecurityDeposit.claimAll (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#434) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 443,
+            "message": "Parameter '_instId' of SecurityDeposit.refundAll (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#443) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 451,
+            "message": "Parameter '_newLimit' of SecurityDeposit.changeDepositorLimit (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#451) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 456,
+            "message": "Parameter '_instId' of SecurityDeposit.getInstanceMetadata (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#456) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "line": 466,
+            "message": "Parameter '_instId' of SecurityDeposit.getAllDepositors (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol#466) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "message": "Parameter '_instId' of SecurityDeposit.checkInfo (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol",
+            "impact": "Informational",
+            "message": "Parameter '_depositor' of SecurityDeposit.checkInfo (0x68623fdf159dbdb7d1547d3050821ce57448aa47.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

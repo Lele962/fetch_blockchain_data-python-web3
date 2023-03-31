@@ -1,0 +1,295 @@
+{
+    "errors": [
+        "EXIT_CODE_29"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "totalSupply",
+            "impact": "Low",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Interface.totalSupply.totalSupply (local variable @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#5-6) shadows:\n\t- ERC20Interface.totalSupply (function @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#5-6)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "totalSupply",
+            "impact": "Low",
+            "line": 50,
+            "line_end": 51,
+            "message": "NPC.totalSupply.totalSupply (local variable @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#50-51) shadows:\n\t- NPC.totalSupply (function @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#49-53)\n\t- ERC20Interface.totalSupply (function @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#5-6)\n",
+            "name": "shadowing-local"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 29,
+            "message": "NPC._totalSupply should be constant (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#27-29)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 42,
+            "line_end": 43,
+            "message": "Deprecated standard detected @ 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#42-43:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Interface.totalSupply (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 49,
+            "line_end": 53,
+            "message": "NPC.totalSupply (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#49-53) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 8,
+            "message": "ERC20Interface.balanceOf (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#7-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 57,
+            "message": "NPC.balanceOf (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#53-57) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 57,
+            "line_end": 72,
+            "message": "NPC.transfer (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#57-72) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "ERC20Interface.transfer (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#9-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 72,
+            "line_end": 90,
+            "message": "NPC.transferFrom (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#72-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 11,
+            "line_end": 13,
+            "message": "ERC20Interface.transferFrom (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#11-13) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 15,
+            "message": "ERC20Interface.approve (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#13-15) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 95,
+            "message": "NPC.approve (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#90-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Interface",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 17,
+            "message": "ERC20Interface.allowance (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#15-17) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "NPC",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 98,
+            "message": "NPC.allowance (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#96-98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol:\n\t- pragma solidity^0.4.8 (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 53,
+            "line_end": 54,
+            "message": "Parameter '_owner' of NPC.balanceOf (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#53-54) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Parameter '_to' of NPC.transfer (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 58,
+            "message": "Parameter '_amount' of NPC.transfer (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#58) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 74,
+            "message": "Parameter '_from' of NPC.transferFrom (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#74) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 75,
+            "message": "Parameter '_to' of NPC.transferFrom (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#75) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 75,
+            "message": "Parameter '_amount' of NPC.transferFrom (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#75) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 90,
+            "message": "Parameter '_spender' of NPC.approve (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#90) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 90,
+            "line_end": 91,
+            "message": "Parameter '_amount' of NPC.approve (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#90-91) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 96,
+            "message": "Parameter '_owner' of NPC.allowance (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#96) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 96,
+            "line_end": 98,
+            "message": "Parameter '_spender' of NPC.allowance (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#96-98) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 45,
+            "line_end": 49,
+            "message": "Function 'NPC.NPC' (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#45-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol",
+            "impact": "Informational",
+            "line": 27,
+            "line_end": 29,
+            "message": "Variable 'NPC._totalSupply' (0x0cc06a72f686662adfb7d29c25c40f9b1725fc76.sol#27-29) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

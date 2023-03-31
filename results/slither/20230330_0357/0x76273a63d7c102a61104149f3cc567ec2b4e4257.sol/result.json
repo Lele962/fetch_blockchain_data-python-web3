@@ -1,0 +1,650 @@
+{
+    "errors": [
+        "EXIT_CODE_68"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 3,
+            "line_end": 9,
+            "message": "ERC20Token (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#3-9) has incorrect ERC20 function interface(s):\n\t-transferFrom (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#6-7)\n\t-transfer (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#7-9)\n",
+            "name": "erc20-interface"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "completeBooking",
+            "impact": "Medium",
+            "line": 185,
+            "line_end": 224,
+            "message": "Reentrancy in UnicornRanch.completeBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#185-224):\n\tExternal calls:\n\t- availableUnicorns = cardboardUnicorns.balanceOf(address(this)) - visitingUnicorns (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#206-209)\n\tState variables written after the call(s):\n\t- bookings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#215)\n\t- bookings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#216-217)\n\t- visitingUnicorns (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#218-221)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "addBooking",
+            "impact": "Low",
+            "line": 147,
+            "line_end": 185,
+            "message": "Reentrancy in UnicornRanch.addBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#147-185):\n\tExternal calls:\n\t- cardboardUnicorns.transferFrom(msg.sender,address(this),_unicornCount) (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#153-154)\n\tState variables written after the call(s):\n\t- bookingMetadataForKey (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#174-176)\n\t- bookings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#164-167)\n\t- visitingUnicorns (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#154-156)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "ERC20Token.balanceOf (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "ERC20Token.allowance (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 7,
+            "message": "ERC20Token.transferFrom (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#6-7) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Token",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 7,
+            "line_end": 9,
+            "message": "ERC20Token.transfer (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#7-9) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "GroveAPI",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "insert",
+            "impact": "Informational",
+            "line": 10,
+            "line_end": 14,
+            "message": "GroveAPI.insert (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#10-14) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "getBookingCount",
+            "impact": "Informational",
+            "line": 121,
+            "message": "UnicornRanch.getBookingCount (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#121) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "getBooking",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 129,
+            "message": "UnicornRanch.getBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#121-129) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookSpaVisit",
+            "impact": "Informational",
+            "line": 129,
+            "line_end": 132,
+            "message": "UnicornRanch.bookSpaVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#129-132) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookAfternoonVisit",
+            "impact": "Informational",
+            "line": 132,
+            "line_end": 135,
+            "message": "UnicornRanch.bookAfternoonVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#132-135) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookDayVisit",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 138,
+            "message": "UnicornRanch.bookDayVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#135-138) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookOvernightVisit",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 141,
+            "message": "UnicornRanch.bookOvernightVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#138-141) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookWeekVisit",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 145,
+            "message": "UnicornRanch.bookWeekVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#141-145) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "bookExtendedVisit",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 147,
+            "message": "UnicornRanch.bookExtendedVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#145-147) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "completeBooking",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 224,
+            "message": "UnicornRanch.completeBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#185-224) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "repossessBooking",
+            "impact": "Informational",
+            "line": 224,
+            "line_end": 255,
+            "message": "UnicornRanch.repossessBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#224-255) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "line": 275,
+            "line_end": 277,
+            "message": "UnicornRanch.fallback (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#275-277) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeOwner",
+            "impact": "Informational",
+            "line": 291,
+            "line_end": 294,
+            "message": "UnicornRanch.changeOwner (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#291-294) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeCardboardUnicornTokenAddress",
+            "impact": "Informational",
+            "line": 298,
+            "line_end": 300,
+            "message": "UnicornRanch.changeCardboardUnicornTokenAddress (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#298-300) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeGroveAddress",
+            "impact": "Informational",
+            "line": 300,
+            "line_end": 302,
+            "message": "UnicornRanch.changeGroveAddress (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#300-302) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeVisitLengths",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 315,
+            "message": "UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#304-315) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeVisitCosts",
+            "impact": "Informational",
+            "line": 316,
+            "line_end": 331,
+            "message": "UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#316-331) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeRepoSettings",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 340,
+            "message": "UnicornRanch.changeRepoSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#333-340) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "changeBirthSettings",
+            "impact": "Informational",
+            "line": 340,
+            "line_end": 344,
+            "message": "UnicornRanch.changeBirthSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#340-344) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "line": 344,
+            "line_end": 347,
+            "message": "UnicornRanch.withdraw (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#344-347) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "UnicornRanch",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "function": "withdrawForeignTokens",
+            "impact": "Informational",
+            "message": "UnicornRanch.withdrawForeignTokens (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol:\n\t- pragma solidity^0.4.11 (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 121,
+            "message": "Function 'UnicornRanch.UnicornRanch' (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#103-121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 121,
+            "message": "Parameter '_who' of UnicornRanch.getBookingCount (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 121,
+            "message": "Parameter '_who' of UnicornRanch.getBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#121) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 122,
+            "message": "Parameter '_index' of UnicornRanch.getBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#121-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 129,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookSpaVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#129) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 132,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookAfternoonVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#132) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 135,
+            "line_end": 136,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookDayVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#135-136) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 138,
+            "line_end": 139,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookOvernightVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#138-139) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 141,
+            "line_end": 142,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookWeekVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#141-142) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 145,
+            "message": "Parameter '_unicornCount' of UnicornRanch.bookExtendedVisit (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#145) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 147,
+            "line_end": 149,
+            "message": "Parameter '_type' of UnicornRanch.addBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#147-149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 149,
+            "message": "Parameter '_unicornCount' of UnicornRanch.addBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#149) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 186,
+            "message": "Parameter '_index' of UnicornRanch.completeBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#186) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 224,
+            "message": "Parameter '_who' of UnicornRanch.repossessBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#224) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 224,
+            "message": "Parameter '_index' of UnicornRanch.repossessBooking (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#224) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 257,
+            "message": "Parameter '_who' of UnicornRanch.availableBalance (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#257) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 277,
+            "line_end": 279,
+            "message": "Parameter '_unicornCount' of UnicornRanch.donateUnicorns (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#277-279) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 293,
+            "message": "Parameter '_newOwner' of UnicornRanch.changeOwner (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#293) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 300,
+            "message": "Parameter '_newTokenAddress' of UnicornRanch.changeCardboardUnicornTokenAddress (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#300) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 301,
+            "message": "Parameter '_newAddress' of UnicornRanch.changeGroveAddress (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#301) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 305,
+            "message": "Parameter '_spa' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#304-305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_afternoon' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_day' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 305,
+            "line_end": 306,
+            "message": "Parameter '_overnight' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#305-306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_week' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 306,
+            "message": "Parameter '_extended' of UnicornRanch.changeVisitLengths (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#306) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 317,
+            "message": "Parameter '_spa' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#317) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 317,
+            "message": "Parameter '_afternoon' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#317) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 317,
+            "line_end": 318,
+            "message": "Parameter '_day' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#317-318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_overnight' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_week' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 318,
+            "message": "Parameter '_extended' of UnicornRanch.changeVisitCosts (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#318) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 333,
+            "message": "Parameter '_repoBlocks' of UnicornRanch.changeRepoSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#333) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 333,
+            "message": "Parameter '_repoPerTen' of UnicornRanch.changeRepoSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#333) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 333,
+            "line_end": 334,
+            "message": "Parameter '_repoPerHundred' of UnicornRanch.changeRepoSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#333-334) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_birthBlocks' of UnicornRanch.changeBirthSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 342,
+            "message": "Parameter '_birthPerTen' of UnicornRanch.changeBirthSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#342) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "line": 342,
+            "line_end": 343,
+            "message": "Parameter '_birthPerHundred' of UnicornRanch.changeBirthSettings (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol#342-343) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol",
+            "impact": "Informational",
+            "message": "Parameter '_tokenContract' of UnicornRanch.withdrawForeignTokens (0x76273a63d7c102a61104149f3cc567ec2b4e4257.sol) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

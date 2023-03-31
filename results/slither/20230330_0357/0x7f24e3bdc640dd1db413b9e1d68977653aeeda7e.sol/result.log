@@ -1,0 +1,461 @@
+INFO:Detectors:[91m
+Reputation.balances (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#247) is never initialized. It is used in:
+	- balanceOfAt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279-288)
+	- mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306-315)
+	- burn (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321-332)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Address.isContract (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#733-744) is declared view but contains assembly code
+ECDSA.recover (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1231-1262) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+GenesisProtocolLogic._isVotable (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162-2169) uses a dangerous strict equality:
+	- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))
+	- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))
+	- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))
+	- ((pState == ProposalState.PreBoosted) || (pState == ProposalState.Boosted) || (pState == ProposalState.QuietEndingPeriod) || (pState == ProposalState.Queued))
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in GenesisProtocolLogic._execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):
+	External calls:
+	- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1933)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1938)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1939)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1945)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1947)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1948)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1991)
+Reentrancy in GenesisProtocolLogic._execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):
+	External calls:
+	- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)
+	- ProposalExecuteInterface(proposal.callbacks).executeProposal(_proposalId,int256(proposal.winningVote)) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2018)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2019)
+Reentrancy in GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074):
+	External calls:
+	- require(bool,string)(stakingToken.transferFrom(_staker,address(this),amount),fail transfer from staker) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2057)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2058)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2071)
+Reentrancy in GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074):
+	External calls:
+	- require(bool,string)(stakingToken.transferFrom(_staker,address(this),amount),fail transfer from staker) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2057)
+	- _execute(_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)
+	State variables written after the call(s):
+	- averagesDownstakesOfBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)
+	- orgBoostedProposalsCnt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2073)
+Reentrancy in GenesisProtocolLogic.executeBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1626-1640):
+	External calls:
+	- require(bool,string)(_execute(_proposalId),proposal need to expire) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1630)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1632-1634)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1637)
+Reentrancy in GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143):
+	External calls:
+	- reputation = VotingMachineCallbacksInterface(proposal.callbacks).reputationOf(_voter,_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2098)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2110)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2122)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2123)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2127)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2129)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2131-2135)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2137)
+Reentrancy in GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143):
+	External calls:
+	- reputation = VotingMachineCallbacksInterface(proposal.callbacks).reputationOf(_voter,_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2098)
+	- VotingMachineCallbacksInterface(proposal.callbacks).burnReputation(reputationDeposit,_voter,_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2139)
+	- _execute(_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)
+	State variables written after the call(s):
+	- averagesDownstakesOfBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)
+	- orgBoostedProposalsCnt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2142)
+Reentrancy in ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):
+	External calls:
+	- reputationReward = redeemReputation(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)
+	- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)
+Reentrancy in ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):
+	External calls:
+	- reputationReward = redeemReputation(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)
+	- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)
+	- etherReward = redeemEther(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)
+Reentrancy in ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894):
+	External calls:
+	- reputationReward = redeemReputation(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2880)
+	- nativeTokenReward = redeemNativeToken(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2884)
+	- etherReward = redeemEther(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2888)
+	- externalTokenReward = redeemExternalToken(_proposalId,_avatar) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2892)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2892)
+Reentrancy in GenesisProtocolLogic.redeemDaoBounty (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804-1830):
+	External calls:
+	- (potentialAmount != 0) && (VotingMachineCallbacksInterface(proposal.callbacks).balanceOfStakingToken(stakingToken,_proposalId) >= potentialAmount) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1819-1829)
+	State variables written after the call(s):
+	- proposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1823)
+Reentrancy in ContributionReward.redeemEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813-2831):
+	External calls:
+	- require(bool)(ControllerInterface(_avatar.owner()).sendEther(amount,_proposal.beneficiary,_avatar)) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2824)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2825)
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2830)
+Reentrancy in ContributionReward.redeemExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839-2861):
+	External calls:
+	- require(bool)(ControllerInterface(_avatar.owner()).externalTokenTransfer(_proposal.externalToken,_proposal.beneficiary,amount,_avatar)) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2851-2854)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2855)
+Reentrancy in ContributionReward.redeemNativeToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787-2805):
+	External calls:
+	- require(bool)(ControllerInterface(_avatar.owner()).mintTokens(amount,_proposal.beneficiary,address(_avatar))) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2798)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2799)
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2804)
+Reentrancy in ContributionReward.redeemReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754-2779):
+	External calls:
+	- require(bool)(ControllerInterface(_avatar.owner()).mintReputation(uint256(reputation),_proposal.beneficiary,address(_avatar))) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2765-2767)
+	- require(bool)(ControllerInterface(_avatar.owner()).burnReputation(uint256(reputation * (- 1)),_proposal.beneficiary,address(_avatar))) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2769-2771)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2774)
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2778)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+proposal in GenesisProtocolLogic.propose (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1589) is a local variable never initialiazed
+periodsFromExecution in ContributionReward.getPeriodsToPay (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2913) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+GenesisProtocolLogic.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715-1793) does not use the value returned by external calls:
+	-VotingMachineCallbacksInterface(proposal.callbacks).mintReputation(rewards[1].add(rewards[2]),_beneficiary,_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1784-1785)
+GenesisProtocolLogic._execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025) does not use the value returned by external calls:
+	-ProposalExecuteInterface(proposal.callbacks).executeProposal(_proposalId,int256(proposal.winningVote)) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2018)
+GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088-2143) does not use the value returned by external calls:
+	-VotingMachineCallbacksInterface(proposal.callbacks).burnReputation(reputationDeposit,_voter,_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2139)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reputation.balanceOf._owner (local variable @ /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#271) shadows:
+	- Ownable._owner (state variable @ /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#144)
+Reputation.balanceOfAt._owner (local variable @ /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) shadows:
+	- Ownable._owner (state variable @ /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#144)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in GenesisProtocolLogic._execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025):
+	External calls:
+	- totalReputation = VotingMachineCallbacksInterface(proposal.callbacks).getTotalReputationSupply(_proposalId) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1916-1917)
+	State variables written after the call(s):
+	- averagesDownstakesOfBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1967-1970)
+	- averagesDownstakesOfBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2004)
+	- averagesDownstakesOfBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2007-2008)
+	- orgBoostedProposalsCnt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1963)
+	- orgBoostedProposalsCnt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1999-2000)
+Reentrancy in ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2690-2746):
+	External calls:
+	- controllerParams = parameters[getParametersFromController(_avatar)] (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2702)
+	- contributionId = controllerParams.intVote.propose(2,controllerParams.voteApproveParams,msg.sender,address(_avatar)) (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2704-2709)
+	State variables written after the call(s):
+	- organizationsProposals (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2728)
+	- proposalsInfo (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2741-2744)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Address.isContract uses assembly (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#733-744)
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#742
+ECDSA.recover uses assembly (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1231-1262)
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1245-1249
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Reputation.decimals should be constant (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#226)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Different versions of Solidity is used in /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol:
+	- Version used: ['^0.5.0', '^0.5.4']
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#4 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#92 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#118 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#136 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#211 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#388 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#456 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#645 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#673 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#720 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#763 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#823 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#962 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#973 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#991 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1197 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1216 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1278 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1367 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1375 declares pragma solidity^0.5.0
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1409 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2174 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2464 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2551 declares pragma solidity^0.5.4
+	- /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2998 declares pragma solidity^0.5.4
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+Ownable.owner (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#160-162) should be declared external
+Ownable.renounceOwnership (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#185-188) should be declared external
+Ownable.transferOwnership (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#194-196) should be declared external
+Reputation.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306-315) should be declared external
+Reputation.burn (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321-332) should be declared external
+ERC20.transfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#512-515) should be declared external
+IERC20.transfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#99) should be declared external
+ERC20.approve (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#526-532) should be declared external
+IERC20.approve (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#101) should be declared external
+IERC20.transferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#103) should be declared external
+ERC20.transferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#542-547) should be declared external
+ERC20.balanceOf (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#493-495) should be declared external
+IERC20.balanceOf (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#107) should be declared external
+ERC20.allowance (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#503-505) should be declared external
+IERC20.allowance (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#109) should be declared external
+ERC20.increaseAllowance (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#559-565) should be declared external
+ERC20.decreaseAllowance (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#577-583) should be declared external
+ERC20Burnable.burn (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#657-659) should be declared external
+ERC20Burnable.burnFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#666-668) should be declared external
+DAOToken.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710-715) should be declared external
+Avatar.genericCall (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874-881) should be declared external
+Avatar.sendEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889-893) should be declared external
+Avatar.externalTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902-908) should be declared external
+Avatar.externalTokenTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#918-929) should be declared external
+Avatar.externalTokenApproval (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939-945) should be declared external
+Avatar.metaData (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#952-955) should be declared external
+GlobalConstraintInterface.pre (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#980) should be declared external
+GlobalConstraintInterface.post (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#981) should be declared external
+GlobalConstraintInterface.when (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#986) should be declared external
+GenesisProtocolLogic.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715-1793) should be declared external
+GenesisProtocolLogic.redeemDaoBounty (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804-1830) should be declared external
+GenesisProtocolLogic.shouldBoost (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1849-1852) should be declared external
+GenesisProtocol.score (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2457-2459) should be declared external
+ContributionReward.setParameters (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2648-2660) should be declared external
+ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2690-2746) should be declared external
+ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874-2894) should be declared external
+ContributionReward.getRedeemedPeriods (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938-2943) should be declared external
+ContributionReward.getProposalEthReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945-2947) should be declared external
+ContributionReward.getProposalExternalTokenReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949-2951) should be declared external
+ContributionReward.getProposalExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953-2955) should be declared external
+ContributionReward.getProposalExecutionTime (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957-2959) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol:
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#4): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#92): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#118): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#136): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#211): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#388): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#456): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#645): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#673): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#720): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#763): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#823): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#962): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#973): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#991): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1197): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1216): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1278): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1367): it allows old versions
+	- pragma solidity^0.5.0 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1375): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1409): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2174): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2464): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2551): it allows old versions
+	- pragma solidity^0.5.4 (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2998): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in SafeERC20.safeTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774-786):
+	-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(TRANSFER_SELECTOR,_to,_value)) /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#779-781
+Low level call in SafeERC20.safeTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788-800):
+	-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(TRANSFERFROM_SELECTOR,_from,_to,_value)) /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#793-795
+Low level call in SafeERC20.safeApprove (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802-818):
+	-(success,returnValue) = _erc20Addr.call(abi.encodeWithSelector(APPROVE_SELECTOR,_spender,_value)) /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#811-813
+Low level call in Avatar.genericCall (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874-881):
+	-(success,returnValue) = _contract.call.value(_value)(_data) /sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#879
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable._transferOwnership' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#202-206) is not in mixedCase
+Parameter '_owner' of Reputation.balanceOf (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#271) is not in mixedCase
+Parameter '_owner' of Reputation.balanceOfAt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) is not in mixedCase
+Parameter '_blockNumber' of Reputation.balanceOfAt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#279) is not in mixedCase
+Parameter '_blockNumber' of Reputation.totalSupplyAt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#293) is not in mixedCase
+Parameter '_user' of Reputation.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306) is not in mixedCase
+Parameter '_amount' of Reputation.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#306) is not in mixedCase
+Parameter '_user' of Reputation.burn (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321) is not in mixedCase
+Parameter '_amount' of Reputation.burn (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#321) is not in mixedCase
+Parameter '_block' of Reputation.getValueAt (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#342) is not in mixedCase
+Parameter '_value' of Reputation.updateValueAtNow (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#373) is not in mixedCase
+Function 'ERC20._transfer' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#591-597) is not in mixedCase
+Function 'ERC20._mint' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#606-612) is not in mixedCase
+Function 'ERC20._burn' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#620-626) is not in mixedCase
+Function 'ERC20._burnFrom' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#636-640) is not in mixedCase
+Parameter '_name' of DAOToken. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase
+Parameter '_symbol' of DAOToken. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase
+Parameter '_cap' of DAOToken. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#698) is not in mixedCase
+Parameter '_to' of DAOToken.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710) is not in mixedCase
+Parameter '_amount' of DAOToken.mint (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#710) is not in mixedCase
+Parameter '_erc20Addr' of SafeERC20.safeTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#774) is not in mixedCase
+Parameter '_erc20Addr' of SafeERC20.safeTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase
+Parameter '_from' of SafeERC20.safeTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase
+Parameter '_to' of SafeERC20.safeTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase
+Parameter '_value' of SafeERC20.safeTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#788) is not in mixedCase
+Parameter '_erc20Addr' of SafeERC20.safeApprove (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase
+Parameter '_spender' of SafeERC20.safeApprove (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase
+Parameter '_value' of SafeERC20.safeApprove (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#802) is not in mixedCase
+Parameter '_orgName' of Avatar. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase
+Parameter '_nativeToken' of Avatar. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase
+Parameter '_nativeReputation' of Avatar. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#853) is not in mixedCase
+Parameter '_contract' of Avatar.genericCall (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase
+Parameter '_data' of Avatar.genericCall (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase
+Parameter '_value' of Avatar.genericCall (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#874) is not in mixedCase
+Parameter '_amountInWei' of Avatar.sendEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889) is not in mixedCase
+Parameter '_to' of Avatar.sendEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#889) is not in mixedCase
+Parameter '_externalToken' of Avatar.externalTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase
+Parameter '_to' of Avatar.externalTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase
+Parameter '_value' of Avatar.externalTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#902) is not in mixedCase
+Parameter '_externalToken' of Avatar.externalTokenTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#919) is not in mixedCase
+Parameter '_from' of Avatar.externalTokenTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#920) is not in mixedCase
+Parameter '_to' of Avatar.externalTokenTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#921) is not in mixedCase
+Parameter '_value' of Avatar.externalTokenTransferFrom (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#922) is not in mixedCase
+Parameter '_externalToken' of Avatar.externalTokenApproval (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase
+Parameter '_spender' of Avatar.externalTokenApproval (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase
+Parameter '_value' of Avatar.externalTokenApproval (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#939) is not in mixedCase
+Parameter '_metaData' of Avatar.metaData (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#952) is not in mixedCase
+Parameter '_avatar' of UniversalScheme.getParametersFromController (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1207) is not in mixedCase
+Parameter '' of GenesisProtocolLogic.propose (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase
+Parameter '_paramsHash' of GenesisProtocolLogic.propose (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase
+Parameter '_proposer' of GenesisProtocolLogic.propose (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase
+Parameter '_organization' of GenesisProtocolLogic.propose (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1577) is not in mixedCase
+Parameter '_stakingToken' of GenesisProtocolLogic. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1547) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.executeBoosted (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1626) is not in mixedCase
+Parameter '_params' of GenesisProtocolLogic.setParameters (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1660) is not in mixedCase
+Parameter '_voteOnBehalf' of GenesisProtocolLogic.setParameters (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1661) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715) is not in mixedCase
+Parameter '_beneficiary' of GenesisProtocolLogic.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1715) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.redeemDaoBounty (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804) is not in mixedCase
+Parameter '_beneficiary' of GenesisProtocolLogic.redeemDaoBounty (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1804) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.calcExecuteCallBounty (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1837) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.shouldBoost (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1849) is not in mixedCase
+Parameter '_paramsHash' of GenesisProtocolLogic.threshold (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1862) is not in mixedCase
+Parameter '_organizationId' of GenesisProtocolLogic.threshold (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1862) is not in mixedCase
+Parameter '_params' of GenesisProtocolLogic.getParametersHash (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1877) is not in mixedCase
+Parameter '_voteOnBehalf' of GenesisProtocolLogic.getParametersHash (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1878) is not in mixedCase
+Function 'GenesisProtocolLogic._execute' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912-2025) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic._execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1912) is not in mixedCase
+Function 'GenesisProtocolLogic._stake' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035-2074) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase
+Parameter '_vote' of GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase
+Parameter '_amount' of GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase
+Parameter '_staker' of GenesisProtocolLogic._stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2035) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase
+Parameter '_voter' of GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase
+Parameter '_vote' of GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase
+Parameter '_rep' of GenesisProtocolLogic.internalVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2088) is not in mixedCase
+Function 'GenesisProtocolLogic._score' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2151-2155) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic._score (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2151) is not in mixedCase
+Function 'GenesisProtocolLogic._isVotable' (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162-2169) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocolLogic._isVotable (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2162) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.vote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase
+Parameter '_vote' of GenesisProtocol.vote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase
+Parameter '_amount' of GenesisProtocol.vote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase
+Parameter '_voter' of GenesisProtocol.vote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2286) is not in mixedCase
+Parameter '' of GenesisProtocol.getNumberOfChoices (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2326) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.isVotable (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2366) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.voteStatus (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2357) is not in mixedCase
+Parameter '_choice' of GenesisProtocol.voteStatus (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2357) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase
+Parameter '_vote' of GenesisProtocol.stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase
+Parameter '_amount' of GenesisProtocol.stake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2215) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2234) is not in mixedCase
+Parameter '_vote' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2235) is not in mixedCase
+Parameter '_amount' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2236) is not in mixedCase
+Parameter '_nonce' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2237) is not in mixedCase
+Parameter '_signatureType' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2238) is not in mixedCase
+Parameter '_signature' of GenesisProtocol.stakeWithSignature (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2239) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.execute (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2318) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.getProposalTimes (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2335) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.voteInfo (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2346) is not in mixedCase
+Parameter '_voter' of GenesisProtocol.voteInfo (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2346) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.proposalStatus (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2378) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.getProposalOrganization (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2392) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.getStaker (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2403) is not in mixedCase
+Parameter '_staker' of GenesisProtocol.getStaker (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2403) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.voteStake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2413) is not in mixedCase
+Parameter '_vote' of GenesisProtocol.voteStake (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2413) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.winningVote (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2422) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.state (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2431) is not in mixedCase
+Parameter '_proposalId' of GenesisProtocol.score (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2457) is not in mixedCase
+Parameter '_amount' of VotingMachineCallbacks.mintReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase
+Parameter '_beneficiary' of VotingMachineCallbacks.mintReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.mintReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2484) is not in mixedCase
+Parameter '_amount' of VotingMachineCallbacks.burnReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase
+Parameter '_beneficiary' of VotingMachineCallbacks.burnReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.burnReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2496) is not in mixedCase
+Parameter '_stakingToken' of VotingMachineCallbacks.stakingTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2509) is not in mixedCase
+Parameter '_beneficiary' of VotingMachineCallbacks.stakingTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2510) is not in mixedCase
+Parameter '_amount' of VotingMachineCallbacks.stakingTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2511) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.stakingTokenTransfer (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2512) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.getTotalReputationSupply (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2532) is not in mixedCase
+Parameter '_owner' of VotingMachineCallbacks.reputationOf (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2540) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.reputationOf (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2540) is not in mixedCase
+Parameter '_stakingToken' of VotingMachineCallbacks.balanceOfStakingToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2524) is not in mixedCase
+Parameter '_proposalId' of VotingMachineCallbacks.balanceOfStakingToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2524) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.executeProposal (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2632) is not in mixedCase
+Parameter '_param' of ContributionReward.executeProposal (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2632) is not in mixedCase
+Parameter '_voteApproveParams' of ContributionReward.setParameters (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2649) is not in mixedCase
+Parameter '_intVote' of ContributionReward.setParameters (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2650) is not in mixedCase
+Parameter '_voteApproveParams' of ContributionReward.getParametersHash (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2669) is not in mixedCase
+Parameter '_intVote' of ContributionReward.getParametersHash (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2670) is not in mixedCase
+Parameter '_avatar' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2691) is not in mixedCase
+Parameter '_descriptionHash' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2692) is not in mixedCase
+Parameter '_reputationChange' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2693) is not in mixedCase
+Parameter '_rewards' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2694) is not in mixedCase
+Parameter '_externalToken' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2695) is not in mixedCase
+Parameter '_beneficiary' of ContributionReward.proposeContributionReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2696) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.redeemReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754) is not in mixedCase
+Parameter '_avatar' of ContributionReward.redeemReputation (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2754) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.redeemNativeToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787) is not in mixedCase
+Parameter '_avatar' of ContributionReward.redeemNativeToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2787) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.redeemEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813) is not in mixedCase
+Parameter '_avatar' of ContributionReward.redeemEther (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2813) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.redeemExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839) is not in mixedCase
+Parameter '_avatar' of ContributionReward.redeemExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2839) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase
+Parameter '_avatar' of ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase
+Parameter '_whatToRedeem' of ContributionReward.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2874) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getPeriodsToPay (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getPeriodsToPay (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase
+Parameter '_redeemType' of ContributionReward.getPeriodsToPay (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2908) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getRedeemedPeriods (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getRedeemedPeriods (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase
+Parameter '_redeemType' of ContributionReward.getRedeemedPeriods (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2938) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getProposalEthReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getProposalEthReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2945) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getProposalExternalTokenReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getProposalExternalTokenReward (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2949) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getProposalExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getProposalExternalToken (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2953) is not in mixedCase
+Parameter '_proposalId' of ContributionReward.getProposalExecutionTime (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957) is not in mixedCase
+Parameter '_avatar' of ContributionReward.getProposalExecutionTime (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2957) is not in mixedCase
+Parameter '_reputationChange' of ContributionReward.validateProposalParams (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2973) is not in mixedCase
+Parameter '_rewards' of ContributionReward.validateProposalParams (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#2973) is not in mixedCase
+Parameter '_contributionReward' of Redeemer. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3010) is not in mixedCase
+Parameter '_genesisProtocol' of Redeemer. (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3010) is not in mixedCase
+Parameter '_proposalId' of Redeemer.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase
+Parameter '_avatar' of Redeemer.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase
+Parameter '_beneficiary' of Redeemer.redeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3043) is not in mixedCase
+Parameter '_proposalId' of Redeemer.contributionRewardRedeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3076) is not in mixedCase
+Parameter '_avatar' of Redeemer.contributionRewardRedeem (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#3076) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+RealMath.REAL_BITS (/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol#1296) is never used in RealMath
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/sb/0x7f24e3bdc640dd1db413b9e1d68977653aeeda7e.sol analyzed (25 contracts), 253 result(s) found

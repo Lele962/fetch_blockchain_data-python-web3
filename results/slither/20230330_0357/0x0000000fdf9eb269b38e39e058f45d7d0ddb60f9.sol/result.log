@@ -1,0 +1,27 @@
+INFO:Detectors:[92m
+Ownable.owner (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#35-40) should be declared external
+Ownable.renounceOwnership (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#61-66) should be declared external
+Ownable.transferOwnership (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#70-74) should be declared external
+WhitelistAdminRole.addWhitelistAdmin (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#160-164) should be declared external
+WhitelistAdminRole.renounceWhitelistAdmin (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#165-169) should be declared external
+WhitelistedRole.removeWhitelisted (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#212-216) should be declared external
+WhitelistedRole.renounceWhitelisted (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#216-220) should be declared external
+InvictusWhitelist.verifyParticipant (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#246-250) should be declared external
+InvictusWhitelist.removeWhitelistAdmin (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol:
+	- pragma solidity^0.5.6 (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#11-14): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#90-92): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#133-135): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#182): it allows old versions
+	- pragma solidity^0.5.6 (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#238-239): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Ownable._transferOwnership' (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#78-86) is not in mixedCase
+Function 'WhitelistAdminRole._addWhitelistAdmin' (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#169-175) is not in mixedCase
+Function 'WhitelistAdminRole._removeWhitelistAdmin' (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#175-181) is not in mixedCase
+Function 'WhitelistedRole._addWhitelisted' (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#220-227) is not in mixedCase
+Function 'WhitelistedRole._removeWhitelisted' (/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol#230-235) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0000000fdf9eb269b38e39e058f45d7d0ddb60f9.sol analyzed (5 contracts), 15 result(s) found

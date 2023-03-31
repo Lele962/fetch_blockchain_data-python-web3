@@ -1,0 +1,56 @@
+INFO:Detectors:[93m
+PDOne.fallback (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#122-229) does not use the value returned by external calls:
+	-this.transfer(msg.sender,total_token) (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#228-229)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+PDOne.totalSupply (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#286-291) should be declared external
+ERC20.totalSupply (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#40-41) should be declared external
+ERC20.balanceOf (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#41-42) should be declared external
+PDOne.balanceOf (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#295-297) should be declared external
+PDOne.allowance (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#326-333) should be declared external
+ERC20.allowance (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#42-43) should be declared external
+ERC20.transferFrom (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#43-44) should be declared external
+PDOne.transferFrom (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#297-311) should be declared external
+ERC20.approve (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#44-45) should be declared external
+PDOne.approve (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#313-326) should be declared external
+PDOne.transfer (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#335-344) should be declared external
+ERC20.transfer (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#45-47) should be declared external
+FiatContract.USD (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#54-60) should be declared external
+PDOne.fallback (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#122-229) should be declared external
+PDOne.start_ICO (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#230-244) should be declared external
+PDOne.transferOwnership (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol:
+	- pragma solidity0.4.19 (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#6-8): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'FiatContract.USD' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#54-60) is not in mixedCase
+Parameter '_owner' of PDOne.balanceOf (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#295) is not in mixedCase
+Parameter '_owner' of PDOne.allowance (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#328) is not in mixedCase
+Parameter '_spender' of PDOne.allowance (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#328) is not in mixedCase
+Parameter '_from' of PDOne.transferFrom (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#297-298) is not in mixedCase
+Parameter '_to' of PDOne.transferFrom (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#298-299) is not in mixedCase
+Parameter '_amount' of PDOne.transferFrom (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#299) is not in mixedCase
+Parameter '_spender' of PDOne.approve (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#314-316) is not in mixedCase
+Parameter '_amount' of PDOne.approve (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#316) is not in mixedCase
+Parameter '_to' of PDOne.transfer (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#336) is not in mixedCase
+Parameter '_amount' of PDOne.transfer (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#336) is not in mixedCase
+Function 'PDOne.PDOne' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#113-122) is not in mixedCase
+Function 'PDOne.start_ICO' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#230-244) is not in mixedCase
+Function 'PDOne.StopICO' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#244-251) is not in mixedCase
+Function 'PDOne.end_ICO' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#260-264) is not in mixedCase
+Parameter '_amount' of PDOne.burn (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#264) is not in mixedCase
+Function 'PDOne.set_centralAccount' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#279-284) is not in mixedCase
+Parameter 'central_Acccount' of PDOne.set_centralAccount (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#280-283) is not in mixedCase
+Parameter '_from' of PDOne.transferby (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#345-346) is not in mixedCase
+Parameter '_to' of PDOne.transferby (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#346) is not in mixedCase
+Parameter '_amount' of PDOne.transferby (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#346) is not in mixedCase
+Variable 'PDOne._totalsupply' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#69-71) is not in mixedCase
+Variable 'PDOne.ico_first' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#76) is not in mixedCase
+Variable 'PDOne.ico_second' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#77) is not in mixedCase
+Variable 'PDOne.ico_third' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#78) is not in mixedCase
+Variable 'PDOne.ico_fourth' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#78-79) is not in mixedCase
+Variable 'PDOne.central_account' (/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol#79) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x21fa491fdbbf9f471e09513360563a9798e8f112.sol analyzed (4 contracts), 45 result(s) found

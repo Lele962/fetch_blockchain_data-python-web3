@@ -1,0 +1,259 @@
+{
+    "errors": [
+        "EXIT_CODE_24"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getFreeShrimp",
+            "impact": "Medium",
+            "line": 102,
+            "line_end": 112,
+            "message": "Reentrancy in EtherShrimpFutures.getFreeShrimp (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#102-112):\n\tExternal calls:\n\t- lastHatchPrice[msg.sender] = getPrice() (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#109)\n\tState variables written after the call(s):\n\t- hatcheryShrimp (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#110-111)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "hatchEggs",
+            "impact": "Medium",
+            "line": 31,
+            "line_end": 48,
+            "message": "Reentrancy in EtherShrimpFutures.hatchEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#31-48):\n\tExternal calls:\n\t- lastHatchPrice[msg.sender] = getPrice() (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#41-43)\n\tState variables written after the call(s):\n\t- claimedEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#43-44)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "sellEggs",
+            "impact": "Medium",
+            "line": 48,
+            "line_end": 60,
+            "message": "Reentrancy in EtherShrimpFutures.sellEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#48-60):\n\tExternal calls:\n\t- eggValue = calculateEggSell(hasEggs,msg.sender) (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#50-52)\n\tState variables written after the call(s):\n\t- claimedEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#54-55)\n\t- lastHatch (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#55)\n\t- marketEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#56-57)\n",
+            "name": "reentrancy-no-eth"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getDiff",
+            "impact": "Medium",
+            "line": 133,
+            "message": "diff in EtherShrimpFutures.getDiff (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#133) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "hatchEggs",
+            "impact": "Low",
+            "line": 31,
+            "line_end": 48,
+            "message": "Reentrancy in EtherShrimpFutures.hatchEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#31-48):\n\tExternal calls:\n\t- lastHatchPrice[msg.sender] = getPrice() (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#41-43)\n\tState variables written after the call(s):\n\t- marketEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#45-48)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 13,
+            "message": "EtherShrimpFutures.EGGS_TO_HATCH_1SHRIMP should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#13)\nEtherShrimpFutures.PSN should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#15-16)\nEtherShrimpFutures.PSNH should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#16-17)\nEtherShrimpFutures.STARTING_SHRIMP should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#14-15)\nEtherShrimpFutures.dai should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#11-12)\nEtherShrimpFutures.weth should be constant (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#12-13)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Oasis",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getBestOffer",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "Oasis.getBestOffer (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Oasis",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getOffer",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 8,
+            "message": "Oasis.getOffer (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#5-8) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "hatchEggs",
+            "impact": "Informational",
+            "line": 31,
+            "line_end": 48,
+            "message": "EtherShrimpFutures.hatchEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#31-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "sellEggs",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 60,
+            "message": "EtherShrimpFutures.sellEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#48-60) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "buyEggs",
+            "impact": "Informational",
+            "line": 60,
+            "line_end": 71,
+            "message": "EtherShrimpFutures.buyEggs (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#60-71) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "calculateEggBuySimple",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 92,
+            "message": "EtherShrimpFutures.calculateEggBuySimple (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#89-92) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "seedMarket",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 102,
+            "message": "EtherShrimpFutures.seedMarket (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#95-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getFreeShrimp",
+            "impact": "Informational",
+            "line": 102,
+            "line_end": 112,
+            "message": "EtherShrimpFutures.getFreeShrimp (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#102-112) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getBalance",
+            "impact": "Informational",
+            "line": 112,
+            "line_end": 115,
+            "message": "EtherShrimpFutures.getBalance (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#112-115) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getMyShrimp",
+            "impact": "Informational",
+            "line": 115,
+            "line_end": 116,
+            "message": "EtherShrimpFutures.getMyShrimp (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#115-116) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getLastHatchPrice",
+            "impact": "Informational",
+            "line": 125,
+            "line_end": 128,
+            "message": "EtherShrimpFutures.getLastHatchPrice (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#125-128) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EtherShrimpFutures",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "function": "getPoolAvgHatchPrice",
+            "impact": "Informational",
+            "line": 153,
+            "line_end": 164,
+            "message": "EtherShrimpFutures.getPoolAvgHatchPrice (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#153-164) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 4,
+            "message": "Parameter 'sell_gem' of Oasis.getBestOffer (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#4) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 4,
+            "message": "Parameter 'buy_gem' of Oasis.getBestOffer (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#4) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 13,
+            "message": "Variable 'EtherShrimpFutures.EGGS_TO_HATCH_1SHRIMP' (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#13) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 14,
+            "line_end": 15,
+            "message": "Variable 'EtherShrimpFutures.STARTING_SHRIMP' (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#14-15) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 16,
+            "message": "Variable 'EtherShrimpFutures.PSN' (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#15-16) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol",
+            "impact": "Informational",
+            "line": 16,
+            "line_end": 17,
+            "message": "Variable 'EtherShrimpFutures.PSNH' (0xd8ca5d93f12d9b6ea8c1b19513b26b44d01316c4.sol#16-17) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

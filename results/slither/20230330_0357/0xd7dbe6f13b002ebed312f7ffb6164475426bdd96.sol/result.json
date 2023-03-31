@@ -1,0 +1,169 @@
+{
+    "errors": [
+        "EXIT_CODE_16"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "rescueLostTokens",
+            "impact": "Medium",
+            "line": 503,
+            "line_end": 507,
+            "message": "ZeroGravityToken.rescueLostTokens (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#503-507) does not use the value returned by external calls:\n\t-tokenContract.transfer(rescueAccount,value) (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#504-506)\n",
+            "name": "unused-return"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "approveAndCallViaSignature",
+            "impact": "Low",
+            "line": 432,
+            "line_end": 445,
+            "message": "Reentrancy in ZeroGravityToken.approveAndCallViaSignature (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#432-445):\n\tExternal calls:\n\t- tokenRecipient(spender).receiveApproval(from,value,this,extraData) (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#444-445)\n\tState variables written after the call(s):\n\t- balanceOf (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#445)\n",
+            "name": "reentrancy-benign"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "requireSignature",
+            "impact": "Low",
+            "line": 188,
+            "line_end": 238,
+            "message": "ZeroGravityToken.requireSignature (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#188-238) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(block.timestamp <= deadline && ! usedSigIds[signer][sigId]) (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#201-203)\n",
+            "name": "timestamp"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "requireSignature",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 238,
+            "message": "ZeroGravityToken.requireSignature uses assembly (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#188-238)\n\t- 0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#195-201\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 60,
+            "message": "ZeroGravityToken.decimals should be constant (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#60)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 257,
+            "line_end": 260,
+            "message": "ZeroGravityToken.transfer (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#257-260) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 357,
+            "line_end": 359,
+            "message": "ZeroGravityToken.transferFrom (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#357-359) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ZeroGravityToken",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "function": "approveAndCall",
+            "impact": "Informational",
+            "line": 407,
+            "line_end": 409,
+            "message": "ZeroGravityToken.approveAndCall (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#407-409) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 7,
+            "message": "Contract 'tokenRecipient' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#3-7) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 77,
+            "line_end": 79,
+            "message": "Constant 'ZeroGravityToken.ethSignedMessagePrefix' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#77-79) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 79,
+            "line_end": 87,
+            "message": "Constant 'ZeroGravityToken.sigDestinationTransfer' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#79-87) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 98,
+            "message": "Constant 'ZeroGravityToken.sigDestinationTransferFrom' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#89-98) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 100,
+            "line_end": 109,
+            "message": "Constant 'ZeroGravityToken.sigDestinationApprove' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#100-109) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 111,
+            "line_end": 121,
+            "message": "Constant 'ZeroGravityToken.sigDestinationApproveAndCall' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#111-121) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 75,
+            "message": "Enum 'ZeroGravityToken.sigStandard' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#75) is not in CapWords\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol",
+            "impact": "Informational",
+            "line": 77,
+            "message": "Enum 'ZeroGravityToken.sigDestination' (0xd7dbe6f13b002ebed312f7ffb6164475426bdd96.sol#77) is not in CapWords\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

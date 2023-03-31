@@ -1,0 +1,738 @@
+{
+    "errors": [
+        "EXIT_CODE_75"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "Medium",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Medium",
+            "line": 286,
+            "line_end": 292,
+            "message": "EXSERION.isContract (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#286-292) is declared view but contains assembly code\n",
+            "name": "constant-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Medium",
+            "line": 154,
+            "line_end": 155,
+            "message": "EXSERION.totalSupply (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#154-155) shadows:\n\t- ERC223.totalSupply (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#85)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "ContractReceiver",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "tokenFallback",
+            "impact": "Medium",
+            "line": 124,
+            "message": "tkn in ContractReceiver.tokenFallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#124) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "Medium",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Medium",
+            "line": 279,
+            "message": "empty in EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#279) is a local variable never initialiazed\n",
+            "name": "uninitialized-local"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "isContract",
+            "impact": "Informational",
+            "line": 286,
+            "line_end": 292,
+            "message": "EXSERION.isContract uses assembly (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#286-292)\n\t- 0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#290-292\n",
+            "name": "assembly"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 85,
+            "message": "ERC223.totalSupply should be constant (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#85)\nEXSERION.decimals should be constant (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#152-154)\nEXSERION.name should be constant (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#151)\nEXSERION.symbol should be constant (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#152)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "Ownable",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 77,
+            "message": "Ownable.transferOwnership (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#68-77) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 194,
+            "line_end": 197,
+            "message": "EXSERION.balanceOf (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#194-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 86,
+            "line_end": 87,
+            "message": "ERC223.balanceOf (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#86-87) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 189,
+            "line_end": 193,
+            "message": "EXSERION.totalSupply (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#189-193) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "totalSupply",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 88,
+            "message": "ERC223.totalSupply (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#87-88) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 283,
+            "message": "EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#269-283) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 89,
+            "message": "ERC223.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#88-89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 89,
+            "message": "ERC223.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#89) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 265,
+            "message": "EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#250-265) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 89,
+            "line_end": 90,
+            "message": "ERC223.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#89-90) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 250,
+            "message": "EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#229-250) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 179,
+            "line_end": 181,
+            "message": "EXSERION.name (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#179-181) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "name",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 95,
+            "message": "ERC223.name (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#94-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 97,
+            "message": "ERC223.symbol (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#95-97) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "symbol",
+            "impact": "Informational",
+            "line": 181,
+            "line_end": 185,
+            "message": "EXSERION.symbol (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#181-185) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 185,
+            "line_end": 188,
+            "message": "EXSERION.decimals (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#185-188) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "decimals",
+            "impact": "Informational",
+            "line": 98,
+            "message": "ERC223.decimals (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#98) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 324,
+            "line_end": 341,
+            "message": "EXSERION.transferFrom (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#324-341) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 99,
+            "line_end": 100,
+            "message": "ERC223.transferFrom (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#99-100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 100,
+            "message": "ERC223.approve (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#100) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 349,
+            "line_end": 353,
+            "message": "EXSERION.approve (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#349-353) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC223",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 101,
+            "line_end": 102,
+            "message": "ERC223.allowance (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#101-102) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 366,
+            "message": "EXSERION.allowance (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#362-366) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ContractReceiver",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "tokenFallback",
+            "impact": "Informational",
+            "line": 121,
+            "line_end": 142,
+            "message": "ContractReceiver.tokenFallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#121-142) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "freezeAccounts",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 210,
+            "message": "EXSERION.freezeAccounts (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#201-210) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "lockupAccounts",
+            "impact": "Informational",
+            "line": 216,
+            "line_end": 226,
+            "message": "EXSERION.lockupAccounts (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#216-226) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "burn",
+            "impact": "Informational",
+            "line": 372,
+            "line_end": 382,
+            "message": "EXSERION.burn (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#372-382) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "mint",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 403,
+            "message": "EXSERION.mint (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#392-403) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "finishMinting",
+            "impact": "Informational",
+            "line": 405,
+            "line_end": 409,
+            "message": "EXSERION.finishMinting (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#405-409) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "distributeAirdrop",
+            "impact": "Informational",
+            "line": 411,
+            "line_end": 434,
+            "message": "EXSERION.distributeAirdrop (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#411-434) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "distributeAirdrop",
+            "impact": "Informational",
+            "line": 434,
+            "line_end": 463,
+            "message": "EXSERION.distributeAirdrop (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#434-463) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "collectTokens",
+            "impact": "Informational",
+            "line": 465,
+            "line_end": 488,
+            "message": "EXSERION.collectTokens (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#465-488) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "setDistributeAmount",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 492,
+            "message": "EXSERION.setDistributeAmount (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#489-492) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "EXSERION.fallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xffee4db0f30a43955398776a9524fdff0680dd7f.sol:\n\t- pragma solidity^0.4.18 (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "contract": "EXSERION",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 229,
+            "line_end": 250,
+            "message": "Low level call in EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#229-250):\n\t-assert(bool)(_to.call.value(0)(bytes4(keccak256()(_custom_fallback)),msg.sender,_value,_data)) 0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#242-246\n",
+            "name": "low-level-calls"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 52,
+            "line_end": 56,
+            "message": "Function 'Ownable.Ownable' (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#52-56) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 122,
+            "message": "Parameter '_from' of ContractReceiver.tokenFallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 122,
+            "line_end": 123,
+            "message": "Parameter '_value' of ContractReceiver.tokenFallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#122-123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 123,
+            "message": "Parameter '_data' of ContractReceiver.tokenFallback (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#123) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 194,
+            "message": "Parameter '_owner' of EXSERION.balanceOf (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#194) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 269,
+            "message": "Parameter '_to' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#269) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 269,
+            "line_end": 271,
+            "message": "Parameter '_value' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#269-271) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 250,
+            "line_end": 251,
+            "message": "Parameter '_to' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#250-251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 251,
+            "message": "Parameter '_value' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 251,
+            "message": "Parameter '_data' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#251) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_to' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_value' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 230,
+            "message": "Parameter '_data' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#230) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 230,
+            "line_end": 231,
+            "message": "Parameter '_custom_fallback' of EXSERION.transfer (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#230-231) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 324,
+            "message": "Parameter '_from' of EXSERION.transferFrom (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#324) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 324,
+            "line_end": 325,
+            "message": "Parameter '_to' of EXSERION.transferFrom (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#324-325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 325,
+            "message": "Parameter '_value' of EXSERION.transferFrom (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#325) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 349,
+            "line_end": 350,
+            "message": "Parameter '_spender' of EXSERION.approve (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#349-350) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 350,
+            "message": "Parameter '_value' of EXSERION.approve (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#350) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 362,
+            "message": "Parameter '_owner' of EXSERION.allowance (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#362) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 363,
+            "message": "Parameter '_spender' of EXSERION.allowance (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#362-363) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 176,
+            "line_end": 177,
+            "message": "Function 'EXSERION.EXSERION' (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#176-177) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 294,
+            "line_end": 295,
+            "message": "Parameter '_to' of EXSERION.transferToAddress (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#294-295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 295,
+            "message": "Parameter '_value' of EXSERION.transferToAddress (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 295,
+            "message": "Parameter '_data' of EXSERION.transferToAddress (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#295) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 304,
+            "line_end": 305,
+            "message": "Parameter '_to' of EXSERION.transferToContract (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#304-305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_value' of EXSERION.transferToContract (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 305,
+            "message": "Parameter '_data' of EXSERION.transferToContract (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#305) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 373,
+            "line_end": 376,
+            "message": "Parameter '_from' of EXSERION.burn (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#373-376) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 376,
+            "line_end": 377,
+            "message": "Parameter '_unitAmount' of EXSERION.burn (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#376-377) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 392,
+            "message": "Parameter '_to' of EXSERION.mint (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#392) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 392,
+            "line_end": 394,
+            "message": "Parameter '_unitAmount' of EXSERION.mint (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#392-394) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xffee4db0f30a43955398776a9524fdff0680dd7f.sol",
+            "impact": "Informational",
+            "line": 489,
+            "line_end": 490,
+            "message": "Parameter '_unitAmount' of EXSERION.setDistributeAmount (0xffee4db0f30a43955398776a9524fdff0680dd7f.sol#489-490) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

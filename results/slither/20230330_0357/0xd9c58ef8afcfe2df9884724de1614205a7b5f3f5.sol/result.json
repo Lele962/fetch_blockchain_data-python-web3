@@ -1,0 +1,397 @@
+{
+    "errors": [
+        "EXIT_CODE_40"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "openLottery",
+            "impact": "Medium",
+            "line": 161,
+            "line_end": 242,
+            "message": "LCToken.openLottery (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#161-242) uses a dangerous strict equality:\n\t- balances[msg.sender].lotteryNum >= 0 && balances[msg.sender].lotteryNum <= 9 && balances[msg.sender].indexHash == blockhash[temuint]\n\t- temuint == balances[msg.sender].lotteryNum\n",
+            "name": "incorrect-equality"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Low",
+            "line": 95,
+            "message": "LCToken.blockhash (state variable @ 0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#95) shadows built-in symbol \"blockhash\"\n",
+            "name": "shadowing-builtin"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "LCToken.account_lock should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#84)\nLCToken.account_team should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#86)\nLCToken.val1 should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#64-65)\nLCToken.val2 should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#65)\nLCToken.val3 should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#66-68)\nLCToken.val4 should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#69)\nLCToken.version should be constant (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#63-64)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "Deprecated standard detected @ 0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#107-108:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 162,
+            "line_end": 164,
+            "message": "Deprecated standard detected @ 0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#162-164:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "message": "Deprecated standard detected @ 0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol:\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+            "name": "deprecated-standards"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 328,
+            "line_end": 361,
+            "message": "LCToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#328-361) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 5,
+            "message": "Token.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#4-5) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 24,
+            "line_end": 36,
+            "message": "StandardToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#24-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 40,
+            "message": "StandardToken.balanceOf (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#36-40) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Token",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 5,
+            "line_end": 6,
+            "message": "Token.balanceOf (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#5-6) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "balanceOfEth",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 44,
+            "message": "StandardToken.balanceOfEth (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#40-44) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "balanceOfLockTime",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 48,
+            "message": "StandardToken.balanceOfLockTime (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#44-48) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "StandardToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "balanceOfLotteryNum",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 54,
+            "message": "StandardToken.balanceOfLotteryNum (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#48-54) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "buyLottery",
+            "impact": "Informational",
+            "line": 103,
+            "line_end": 161,
+            "message": "LCToken.buyLottery (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#103-161) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "openLottery",
+            "impact": "Informational",
+            "line": 161,
+            "line_end": 242,
+            "message": "LCToken.openLottery (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#161-242) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "getShare",
+            "impact": "Informational",
+            "line": 242,
+            "line_end": 278,
+            "message": "LCToken.getShare (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#242-278) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "Add_totalLotteryValue",
+            "impact": "Informational",
+            "line": 279,
+            "line_end": 284,
+            "message": "LCToken.Add_totalLotteryValue (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#279-284) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "lockAccount",
+            "impact": "Informational",
+            "line": 285,
+            "line_end": 288,
+            "message": "LCToken.lockAccount (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#285-288) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "unlockAccount",
+            "impact": "Informational",
+            "line": 288,
+            "line_end": 290,
+            "message": "LCToken.unlockAccount (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#288-290) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "clearLC",
+            "impact": "Informational",
+            "line": 312,
+            "line_end": 327,
+            "message": "LCToken.clearLC (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#312-327) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "endThisContact",
+            "impact": "Informational",
+            "line": 362,
+            "line_end": 372,
+            "message": "LCToken.endThisContact (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#362-372) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "LCToken",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "function": "fallback",
+            "impact": "Informational",
+            "message": "LCToken.fallback (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol:\n\t- pragma solidity^0.4.11 (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 24,
+            "message": "Parameter '_to' of StandardToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#24) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 24,
+            "message": "Parameter '_value' of StandardToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#24) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 36,
+            "message": "Parameter '_owner' of StandardToken.balanceOf (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#36) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 40,
+            "line_end": 41,
+            "message": "Parameter '_owner' of StandardToken.balanceOfEth (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#40-41) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 44,
+            "line_end": 45,
+            "message": "Parameter '_owner' of StandardToken.balanceOfLockTime (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#44-45) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 48,
+            "line_end": 49,
+            "message": "Parameter '_owner' of StandardToken.balanceOfLotteryNum (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#48-49) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 329,
+            "line_end": 330,
+            "message": "Parameter '_to' of LCToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#329-330) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 330,
+            "line_end": 331,
+            "message": "Parameter '_value' of LCToken.transfer (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#330-331) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 104,
+            "line_end": 105,
+            "message": "Parameter '_lotteryNum' of LCToken.buyLottery (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#104-105) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 279,
+            "line_end": 284,
+            "message": "Function 'LCToken.Add_totalLotteryValue' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#279-284) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 373,
+            "line_end": 385,
+            "message": "Function 'LCToken.LCToken' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#373-385) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 78,
+            "message": "Constant 'LCToken.AMOUNT_TeamSupport' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#78) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 84,
+            "message": "Variable 'LCToken.account_lock' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#84) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 86,
+            "message": "Variable 'LCToken.account_team' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#86) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 87,
+            "line_end": 91,
+            "message": "Constant 'LCToken.gcExchangeRate' (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#87-91) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol",
+            "impact": "Informational",
+            "line": 64,
+            "line_end": 65,
+            "message": "LCToken.val1 (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#64-65) is never used in LCToken\nLCToken.val2 (0xd9c58ef8afcfe2df9884724de1614205a7b5f3f5.sol#65) is never used in LCToken\n",
+            "name": "unused-state"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

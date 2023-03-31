@@ -1,0 +1,412 @@
+{
+    "errors": [
+        "EXIT_CODE_42"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Medium",
+            "line": 64,
+            "line_end": 65,
+            "message": "IPCoin.totalSupply (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#64-65) shadows:\n\t- ERC20Basic.totalSupply (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#28-29)\n",
+            "name": "shadowing-abstract"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 28,
+            "line_end": 29,
+            "message": "ERC20Basic.totalSupply should be constant (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#28-29)\nIPCoin._Rate should be constant (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#62-64)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 201,
+            "line_end": 207,
+            "message": "IPCoin.balanceOf (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#201-207) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "balanceOf",
+            "impact": "Informational",
+            "line": 29,
+            "line_end": 30,
+            "message": "ERC20Basic.balanceOf (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#29-30) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20Basic",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 30,
+            "line_end": 31,
+            "message": "ERC20Basic.transfer (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#30-31) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "transfer",
+            "impact": "Informational",
+            "line": 226,
+            "line_end": 238,
+            "message": "IPCoin.transfer (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#226-238) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 261,
+            "line_end": 264,
+            "message": "IPCoin.allowance (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#261-264) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "allowance",
+            "impact": "Informational",
+            "line": 35,
+            "line_end": 36,
+            "message": "ERC20.allowance (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#35-36) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 251,
+            "message": "IPCoin.transferFrom (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#238-251) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "transferFrom",
+            "impact": "Informational",
+            "line": 36,
+            "line_end": 37,
+            "message": "ERC20.transferFrom (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#36-37) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 251,
+            "line_end": 261,
+            "message": "IPCoin.approve (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#251-261) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "ERC20",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "approve",
+            "impact": "Informational",
+            "line": 37,
+            "line_end": 38,
+            "message": "ERC20.approve (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#37-38) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "nowInSeconds",
+            "impact": "Informational",
+            "line": 94,
+            "line_end": 95,
+            "message": "IPCoin.nowInSeconds (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#94-95) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "transferOwnership",
+            "impact": "Informational",
+            "line": 95,
+            "line_end": 106,
+            "message": "IPCoin.transferOwnership (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#95-106) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "closeDistribution",
+            "impact": "Informational",
+            "line": 106,
+            "line_end": 114,
+            "message": "IPCoin.closeDistribution (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#106-114) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "Set_per",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 119,
+            "message": "IPCoin.Set_per (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#114-119) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "distribute",
+            "impact": "Informational",
+            "line": 144,
+            "line_end": 158,
+            "message": "IPCoin.distribute (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#144-158) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "freeze",
+            "impact": "Informational",
+            "line": 188,
+            "line_end": 197,
+            "message": "IPCoin.freeze (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#188-197) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "IPCoin",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "function": "withdraw",
+            "impact": "Informational",
+            "message": "IPCoin.withdraw (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in 0xd8c5fa1e1161f947418ae9d436497774d84de301.sol:\n\t- pragma solidity^0.4.20 (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 203,
+            "line_end": 204,
+            "message": "Parameter '_owner' of IPCoin.balanceOf (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#203-204) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_to' of IPCoin.transfer (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 226,
+            "message": "Parameter '_amount' of IPCoin.transfer (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#226) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 262,
+            "message": "Parameter '_owner' of IPCoin.allowance (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#262) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 262,
+            "line_end": 263,
+            "message": "Parameter '_spender' of IPCoin.allowance (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#262-263) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Parameter '_from' of IPCoin.transferFrom (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 238,
+            "message": "Parameter '_to' of IPCoin.transferFrom (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#238) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 238,
+            "line_end": 241,
+            "message": "Parameter '_amount' of IPCoin.transferFrom (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#238-241) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 252,
+            "message": "Parameter '_spender' of IPCoin.approve (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#252) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 253,
+            "line_end": 255,
+            "message": "Parameter '_value' of IPCoin.approve (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#253-255) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 88,
+            "line_end": 94,
+            "message": "Function 'IPCoin.IPCoin' (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#88-94) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 89,
+            "message": "Parameter '_owner' of IPCoin.IPCoin (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#89) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 107,
+            "line_end": 108,
+            "message": "Parameter 'Closed' of IPCoin.closeDistribution (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#107-108) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 114,
+            "line_end": 119,
+            "message": "Function 'IPCoin.Set_per' (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#114-119) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_to' of IPCoin.distr (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 120,
+            "message": "Parameter '_amount' of IPCoin.distr (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#120) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 120,
+            "line_end": 122,
+            "message": "Parameter '_freeday' of IPCoin.distr (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#120-122) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 145,
+            "line_end": 146,
+            "message": "Parameter '_freeday' of IPCoin.distribute (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#145-146) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 198,
+            "message": "Parameter 'B' of IPCoin.freezeAccount (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#198) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 208,
+            "message": "Parameter '_owner' of IPCoin.lockOf (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#208) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 62,
+            "line_end": 64,
+            "message": "Variable 'IPCoin._Rate' (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#62-64) is not in mixedCase\n",
+            "name": "naming-convention"
+        },
+        {
+            "confidence": "High",
+            "filename": "output/0xd8c5fa1e1161f947418ae9d436497774d84de301.sol",
+            "impact": "Informational",
+            "line": 68,
+            "line_end": 70,
+            "message": "Variable 'IPCoin._per' (0xd8c5fa1e1161f947418ae9d436497774d84de301.sol#68-70) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

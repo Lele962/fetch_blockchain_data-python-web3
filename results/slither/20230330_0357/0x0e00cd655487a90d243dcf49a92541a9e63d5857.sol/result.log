@@ -1,0 +1,296 @@
+INFO:Slither:Compilation warnings/errors on /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:151:9: Warning: This declaration shadows an existing declaration.
+        Grant grant = grants[_holder];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:118:5: The shadowed declaration is here:
+    function grant(address _to, uint256 _value, uint256 _start, uint256 _cliff, uint256 _end, bool _revokable)
+    ^
+Spanning multiple lines.
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:172:9: Warning: This declaration shadows an existing declaration.
+        Grant grant = grants[_holder];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:118:5: The shadowed declaration is here:
+    function grant(address _to, uint256 _value, uint256 _start, uint256 _cliff, uint256 _end, bool _revokable)
+    ^
+Spanning multiple lines.
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:216:9: Warning: This declaration shadows an existing declaration.
+        Grant grant = grants[msg.sender];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:118:5: The shadowed declaration is here:
+    function grant(address _to, uint256 _value, uint256 _start, uint256 _cliff, uint256 _end, bool _revokable)
+    ^
+Spanning multiple lines.
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1178:27: Warning: This declaration shadows an existing declaration.
+    event CountersUpdated(uint256 preSaleEtherPaid, uint256 totalContributions);
+                          ^----------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1151:5: The shadowed declaration is here:
+    uint256 public preSaleEtherPaid = 0;
+    ^---------------------------------^
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1178:53: Warning: This declaration shadows an existing declaration.
+    event CountersUpdated(uint256 preSaleEtherPaid, uint256 totalContributions);
+                                                    ^------------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1152:5: The shadowed declaration is here:
+    uint256 public totalContributions = 0;
+    ^-----------------------------------^
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1180:37: Warning: This declaration shadows an existing declaration.
+    event WhitelistedCounterUpdated(uint256 whitelistedPlannedContributions, uint256 usedContributions);
+                                    ^-------------------------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1153:5: The shadowed declaration is here:
+    uint256 public whitelistedPlannedContributions = 0;
+    ^------------------------------------------------^
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1271:9: Warning: This declaration shadows an existing declaration.
+        bool honourWhitelist = true;
+        ^------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1270:5: The shadowed declaration is here:
+    function honourWhitelist() private returns (bool) {
+    ^
+Spanning multiple lines.
+
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:151:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Grant grant = grants[_holder];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:172:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Grant grant = grants[_holder];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:216:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Grant grant = grants[msg.sender];
+        ^---------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1332:56: Warning: Unused local variable
+    function handleAbovePlannedWhitelistedContribution(uint256 allowedContribution, uint256 plannedContribution, uint256 refundAmount) private returns (uint256, uint256) {
+                                                       ^-------------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1332:114: Warning: Unused local variable
+    function handleAbovePlannedWhitelistedContribution(uint256 allowedContribution, uint256 plannedContribution, uint256 refundAmount) private returns (uint256, uint256) {
+                                                                                                                 ^------------------^
+/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:1340:56: Warning: Unused local variable
+    function handleBelowPlannedWhitelistedContribution(uint256 plannedContribution) private returns (uint256, uint256) {    
+                                                       ^-------------------------^
+
+INFO:Detectors:[91m
+MiniMeToken.balances (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#329-330) is never initialized. It is used in:
+	- doTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#426-462)
+	- balanceOfAt (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541-562)
+	- generateTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#637-648)
+	- destroyTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659-670)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) uses a dangerous strict equality:
+	- require(bool)(grants[_to].value == 0)
+Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) uses a dangerous strict equality:
+	- require(bool)(grants[_to].value == 0)
+Trustee.unlockVestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) uses a dangerous strict equality:
+	- vested == 0
+	- transferable == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in MiniMeToken.approve (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#473-495):
+	External calls:
+	- require(bool)(TokenController(controller).onApprove(msg.sender,_spender,_amount)) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#488-490)
+	State variables written after the call(s):
+	- allowed (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#490-491)
+Reentrancy in Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150):
+	External calls:
+	- require(bool)(totalVesting.add(_value) <= shp.balanceOf(address(this))) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#134-136)
+	State variables written after the call(s):
+	- grants (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#138-145)
+	- totalVesting (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#148-149)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+Trustee.revoke (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-169) does not use the value returned by external calls:
+	-shp.transfer(msg.sender,refund) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#167-168)
+Trustee.unlockVestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) does not use the value returned by external calls:
+	-shp.transfer(msg.sender,transferable) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#241)
+MiniMeToken.claimTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#766-781) does not use the value returned by external calls:
+	-token.transfer(controller,balance) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#779-781)
+TokenSale.doBuy (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1023-1047) does not use the value returned by external calls:
+	-shp.generateTokens(_caller,callerTokensWithDiscount) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1040)
+	-shp.generateTokens(bountyAddress,bountyTokens) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1040-1041)
+	-shp.generateTokens(trusteeAddress,vestingTokens) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1041-1042)
+TokenSale.payAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1087-1101) does not use the value returned by external calls:
+	-shp.generateTokens(affiliate,affiliateBonus) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1095-1097)
+	-shp.generateTokens(_caller,contributorBonus) (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1097-1100)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Trustee.revoke.grant (local variable @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#156) shadows:
+	- Trustee.grant (function @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)
+Trustee.vestedTokens.grant (local variable @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#180) shadows:
+	- Trustee.grant (function @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)
+Trustee.unlockVestedTokens.grant (local variable @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#221-222) shadows:
+	- Trustee.grant (function @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150)
+MiniMeToken.getValueAt.min (local variable @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#702) shadows:
+	- MiniMeToken.min (function @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#743-745)
+SharpePresale.honourWhitelist.honourWhitelist (local variable @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1298-1299) shadows:
+	- SharpePresale.honourWhitelist (function @ /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1295-1304)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+MiniMeToken.isContract uses assembly (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#734-742)
+	- /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#741-742
+TokenSale.isContract uses assembly (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1132-1136)
+	- /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1135-1136
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+MiniMeToken.version should be constant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#300)
+Owned.newOwner should be constant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#21-23)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Owned.changeOwner (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#25-34) should be declared external
+Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-150) should be declared external
+Trustee.revoke (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-169) should be declared external
+Trustee.vestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#174-183) should be declared external
+Trustee.unlockVestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#220-242) should be declared external
+TokenSale.proxyPayment (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1151-1153) should be declared external
+TokenController.proxyPayment (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#249-250) should be declared external
+TokenController.onTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#257-258) should be declared external
+TokenSale.onTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1153-1156) should be declared external
+TokenSale.onApprove (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1156-1159) should be declared external
+TokenController.onApprove (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#267-271) should be declared external
+Controlled.changeController (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#284-285) should be declared external
+ApproveAndCallFallBack.receiveApproval (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#286-289) should be declared external
+MiniMeToken.transfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#388-391) should be declared external
+MiniMeToken.transferFrom (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#398-414) should be declared external
+MiniMeToken.allowance (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499-501) should be declared external
+MiniMeToken.approveAndCall (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#518-529) should be declared external
+MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#611-629) should be declared external
+MiniMeToken.generateTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#637-648) should be declared external
+MiniMeToken.destroyTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659-670) should be declared external
+MiniMeToken.enableTransfers (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#676-678) should be declared external
+MiniMeToken.fallback (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#753-760) should be declared external
+MiniMeToken.claimTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#766-781) should be declared external
+MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821-836) should be declared external
+AffiliateUtility.addAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#885-889) should be declared external
+AffiliateUtility.applyAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#898-920) should be declared external
+AffiliateUtility.isAffiliateValid (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#931-942) should be declared external
+TokenSale.approveAddress (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1014-1017) should be declared external
+TokenSale.setShp (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1103-1107) should be declared external
+TokenSale.transferOwnership (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1115-1126) should be declared external
+TokenSale.pauseContribution (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1137-1138) should be declared external
+TokenSale.resumeContribution (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1140-1141) should be declared external
+SharpePresale.addToWhitelist (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1263-1270) should be declared external
+SharpePresale.fallback (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1275-1283) should be declared external
+SharpePresale.closeSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1409-1410) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol:
+	- pragma solidity0.4.15 (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#17-21) is not in mixedCase
+Parameter '_newOwner' of Owned.changeOwner (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#25-26) is not in mixedCase
+Function 'Trustee.Trustee' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#111-112) is not in mixedCase
+Parameter '_shp' of Trustee.Trustee (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#111) is not in mixedCase
+Parameter '_to' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#119-120) is not in mixedCase
+Parameter '_value' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#120) is not in mixedCase
+Parameter '_start' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#120-121) is not in mixedCase
+Parameter '_cliff' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#121) is not in mixedCase
+Parameter '_end' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#121-123) is not in mixedCase
+Parameter '_revokable' of Trustee.grant (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#123) is not in mixedCase
+Parameter '_holder' of Trustee.revoke (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#155-156) is not in mixedCase
+Parameter '_holder' of Trustee.vestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#175-177) is not in mixedCase
+Parameter '_time' of Trustee.vestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#177) is not in mixedCase
+Parameter '_grant' of Trustee.calculateVestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#204) is not in mixedCase
+Parameter '_time' of Trustee.calculateVestedTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#204) is not in mixedCase
+Function 'Controlled.Controlled' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#276-280) is not in mixedCase
+Parameter '_newController' of Controlled.changeController (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#284-285) is not in mixedCase
+Function 'MiniMeToken.MiniMeToken' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#362-380) is not in mixedCase
+Parameter '_tokenFactory' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363) is not in mixedCase
+Parameter '_parentToken' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363) is not in mixedCase
+Parameter '_parentSnapShotBlock' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#363-364) is not in mixedCase
+Parameter '_tokenName' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#364) is not in mixedCase
+Parameter '_decimalUnits' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#364) is not in mixedCase
+Parameter '_tokenSymbol' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#365) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.MiniMeToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#365-366) is not in mixedCase
+Parameter '_to' of MiniMeToken.transfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#388-389) is not in mixedCase
+Parameter '_amount' of MiniMeToken.transfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#389) is not in mixedCase
+Parameter '_from' of MiniMeToken.transferFrom (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#398-399) is not in mixedCase
+Parameter '_to' of MiniMeToken.transferFrom (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#399) is not in mixedCase
+Parameter '_amount' of MiniMeToken.transferFrom (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#399-401) is not in mixedCase
+Parameter '_from' of MiniMeToken.doTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase
+Parameter '_to' of MiniMeToken.doTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase
+Parameter '_amount' of MiniMeToken.doTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#427) is not in mixedCase
+Parameter '_owner' of MiniMeToken.balanceOf (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#465) is not in mixedCase
+Parameter '_spender' of MiniMeToken.approve (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#473-475) is not in mixedCase
+Parameter '_amount' of MiniMeToken.approve (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#475) is not in mixedCase
+Parameter '_owner' of MiniMeToken.allowance (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499) is not in mixedCase
+Parameter '_spender' of MiniMeToken.allowance (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#499-500) is not in mixedCase
+Parameter '_spender' of MiniMeToken.approveAndCall (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#519) is not in mixedCase
+Parameter '_amount' of MiniMeToken.approveAndCall (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#519-521) is not in mixedCase
+Parameter '_extraData' of MiniMeToken.approveAndCall (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#523) is not in mixedCase
+Parameter '_owner' of MiniMeToken.balanceOfAt (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541) is not in mixedCase
+Parameter '_blockNumber' of MiniMeToken.balanceOfAt (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#541-542) is not in mixedCase
+Parameter '_blockNumber' of MiniMeToken.totalSupplyAt (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#567) is not in mixedCase
+Parameter '_cloneTokenName' of MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#611-612) is not in mixedCase
+Parameter '_cloneDecimalUnits' of MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#612) is not in mixedCase
+Parameter '_cloneTokenSymbol' of MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#612-613) is not in mixedCase
+Parameter '_snapshotBlock' of MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#613-615) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#616-617) is not in mixedCase
+Parameter '_owner' of MiniMeToken.generateTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#638) is not in mixedCase
+Parameter '_amount' of MiniMeToken.generateTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#638) is not in mixedCase
+Parameter '_owner' of MiniMeToken.destroyTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659) is not in mixedCase
+Parameter '_amount' of MiniMeToken.destroyTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#659) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeToken.enableTransfers (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#676-677) is not in mixedCase
+Parameter '_block' of MiniMeToken.getValueAt (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#692) is not in mixedCase
+Parameter '_value' of MiniMeToken.updateValueAtNow (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#715) is not in mixedCase
+Parameter '_addr' of MiniMeToken.isContract (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#734) is not in mixedCase
+Parameter '_token' of MiniMeToken.claimTokens (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#767-772) is not in mixedCase
+Parameter '_parentToken' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821) is not in mixedCase
+Parameter '_snapshotBlock' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#821-822) is not in mixedCase
+Parameter '_tokenName' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#822) is not in mixedCase
+Parameter '_decimalUnits' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#822) is not in mixedCase
+Parameter '_tokenSymbol' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#823) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeTokenFactory.createCloneToken (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#823-824) is not in mixedCase
+Function 'SHP.SHP' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#839-855) is not in mixedCase
+Function 'AffiliateUtility.AffiliateUtility' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#867-869) is not in mixedCase
+Parameter '_tierTwoMin' of AffiliateUtility.AffiliateUtility (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#868) is not in mixedCase
+Parameter '_tierThreeMin' of AffiliateUtility.AffiliateUtility (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#868-869) is not in mixedCase
+Parameter '_tierTwoMin' of AffiliateUtility.setTiers (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#873-874) is not in mixedCase
+Parameter '_tierThreeMin' of AffiliateUtility.setTiers (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#874) is not in mixedCase
+Parameter '_investor' of AffiliateUtility.addAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#887) is not in mixedCase
+Parameter '_affiliate' of AffiliateUtility.addAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#887-888) is not in mixedCase
+Parameter '_investor' of AffiliateUtility.applyAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#899) is not in mixedCase
+Parameter '_contributorTokens' of AffiliateUtility.applyAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#899) is not in mixedCase
+Parameter '_contributionValue' of AffiliateUtility.applyAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#900) is not in mixedCase
+Parameter '_investor' of AffiliateUtility.getAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#923) is not in mixedCase
+Parameter '_investor' of AffiliateUtility.isAffiliateValid (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#933) is not in mixedCase
+Function 'SCD.SCD' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#943-957) is not in mixedCase
+Parameter '' of TokenSale.proxyPayment (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1152) is not in mixedCase
+Parameter '' of TokenSale.onTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1154-1155) is not in mixedCase
+Parameter '_scope_0' of TokenSale.onTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1155) is not in mixedCase
+Parameter '_scope_1' of TokenSale.onTransfer (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1155) is not in mixedCase
+Parameter '' of TokenSale.onApprove (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1156-1157) is not in mixedCase
+Parameter '_scope_0' of TokenSale.onApprove (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1157) is not in mixedCase
+Parameter '_scope_1' of TokenSale.onApprove (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1157) is not in mixedCase
+Parameter '_addr' of TokenSale.approveAddress (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1014-1015) is not in mixedCase
+Parameter '_caller' of TokenSale.doBuy (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1023-1024) is not in mixedCase
+Function 'TokenSale.TokenSale' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069-1082) is not in mixedCase
+Parameter '_etherEscrowAddress' of TokenSale.TokenSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069) is not in mixedCase
+Parameter '_bountyAddress' of TokenSale.TokenSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069) is not in mixedCase
+Parameter '_trusteeAddress' of TokenSale.TokenSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1069-1070) is not in mixedCase
+Parameter '_affiliateUtilityAddress' of TokenSale.TokenSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1070-1071) is not in mixedCase
+Parameter '_apiAddress' of TokenSale.TokenSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1071) is not in mixedCase
+Parameter '_tokens' of TokenSale.payAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1088) is not in mixedCase
+Parameter '_etherValue' of TokenSale.payAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1088-1089) is not in mixedCase
+Parameter '_caller' of TokenSale.payAffiliate (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1089) is not in mixedCase
+Parameter '_shp' of TokenSale.setShp (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1106) is not in mixedCase
+Parameter '_tokenController' of TokenSale.transferOwnership (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1116) is not in mixedCase
+Parameter '_trusteeOwner' of TokenSale.transferOwnership (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1116-1117) is not in mixedCase
+Parameter '_etherAmount' of SharpePresale.applyDiscount (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase
+Parameter '_contributorTokens' of SharpePresale.applyDiscount (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase
+Parameter '_etherAmount' of SharpePresale.updateCounters (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol) is not in mixedCase
+Function 'SharpePresale.SharpePresale' (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1227-1258) is not in mixedCase
+Parameter '_firstTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1232-1233) is not in mixedCase
+Parameter '_secondTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1233-1235) is not in mixedCase
+Parameter '_thirdTierDiscountUpperLimitEther' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1235-1236) is not in mixedCase
+Parameter '_minPresaleContributionEther' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1236) is not in mixedCase
+Parameter '_maxPresaleContributionEther' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1236) is not in mixedCase
+Parameter '_preSaleCap' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1239) is not in mixedCase
+Parameter '_honourWhitelistEnd' of SharpePresale.SharpePresale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1239) is not in mixedCase
+Parameter '_sender' of SharpePresale.addToWhitelist (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1264-1265) is not in mixedCase
+Parameter '_plannedContribution' of SharpePresale.addToWhitelist (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1265-1268) is not in mixedCase
+Parameter '_caller' of SharpePresale.processPreSale (/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol#1284) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/sb/0x0e00cd655487a90d243dcf49a92541a9e63d5857.sol analyzed (13 contracts), 167 result(s) found
