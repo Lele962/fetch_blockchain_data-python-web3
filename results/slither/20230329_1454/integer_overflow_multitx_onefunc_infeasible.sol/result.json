@@ -1,0 +1,43 @@
+{
+    "errors": [
+        "EXIT_CODE_3"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_multitx_onefunc_infeasible.sol",
+            "impact": "Informational",
+            "line": 12,
+            "line_end": 13,
+            "message": "IntegerOverflowMultiTxOneFuncInfeasible.initialized should be constant (integer_overflow_multitx_onefunc_infeasible.sol#12-13)\n",
+            "name": "constable-states"
+        },
+        {
+            "confidence": "High",
+            "contract": "IntegerOverflowMultiTxOneFuncInfeasible",
+            "filename": "samples/integer_overflow_multitx_onefunc_infeasible.sol",
+            "function": "run",
+            "impact": "Informational",
+            "line": 15,
+            "line_end": 22,
+            "message": "IntegerOverflowMultiTxOneFuncInfeasible.run (integer_overflow_multitx_onefunc_infeasible.sol#15-22) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_multitx_onefunc_infeasible.sol",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 11,
+            "message": "Detected issues with version pragma in integer_overflow_multitx_onefunc_infeasible.sol:\n\t- pragma solidity^0.4.23 (integer_overflow_multitx_onefunc_infeasible.sol#9-11): it allows old versions\n",
+            "name": "solc-version"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

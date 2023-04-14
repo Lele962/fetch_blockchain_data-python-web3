@@ -1,0 +1,53 @@
+{
+    "errors": [
+        "EXIT_CODE_4"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "Overflow",
+            "filename": "samples/integer_overflow_1.sol",
+            "function": "add",
+            "impact": "Informational",
+            "line": 6,
+            "line_end": 11,
+            "message": "Overflow.add (integer_overflow_1.sol#6-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "contract": "Overflow",
+            "filename": "samples/integer_overflow_1.sol",
+            "function": "safe_add",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 16,
+            "message": "Overflow.safe_add (integer_overflow_1.sol#13-16) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_1.sol",
+            "impact": "Informational",
+            "line": 1,
+            "message": "Detected issues with version pragma in integer_overflow_1.sol:\n\t- pragma solidity^0.4.15 (integer_overflow_1.sol#1): it allows old versions\n",
+            "name": "solc-version"
+        },
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_1.sol",
+            "impact": "Informational",
+            "line": 13,
+            "line_end": 16,
+            "message": "Function 'Overflow.safe_add' (integer_overflow_1.sol#13-16) is not in mixedCase\n",
+            "name": "naming-convention"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

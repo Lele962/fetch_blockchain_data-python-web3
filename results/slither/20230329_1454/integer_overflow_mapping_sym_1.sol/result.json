@@ -1,0 +1,34 @@
+{
+    "errors": [
+        "EXIT_CODE_2"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "IntegerOverflowMappingSym1",
+            "filename": "samples/integer_overflow_mapping_sym_1.sol",
+            "function": "init",
+            "impact": "Informational",
+            "line": 8,
+            "line_end": 11,
+            "message": "IntegerOverflowMappingSym1.init (integer_overflow_mapping_sym_1.sol#8-11) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_mapping_sym_1.sol",
+            "impact": "Informational",
+            "line": 3,
+            "line_end": 5,
+            "message": "Detected issues with version pragma in integer_overflow_mapping_sym_1.sol:\n\t- pragma solidity^0.4.11 (integer_overflow_mapping_sym_1.sol#3-5): it allows old versions\n",
+            "name": "solc-version"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}

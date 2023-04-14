@@ -1,0 +1,34 @@
+{
+    "errors": [
+        "EXIT_CODE_2"
+    ],
+    "fails": [],
+    "findings": [
+        {
+            "confidence": "High",
+            "contract": "IntegerOverflowMul",
+            "filename": "samples/integer_overflow_mul.sol",
+            "function": "run",
+            "impact": "Informational",
+            "line": 9,
+            "line_end": 12,
+            "message": "IntegerOverflowMul.run (integer_overflow_mul.sol#9-12) should be declared external\n",
+            "name": "external-function"
+        },
+        {
+            "confidence": "High",
+            "filename": "samples/integer_overflow_mul.sol",
+            "impact": "Informational",
+            "line": 4,
+            "line_end": 6,
+            "message": "Detected issues with version pragma in integer_overflow_mul.sol:\n\t- pragma solidity^0.4.19 (integer_overflow_mul.sol#4-6): it allows old versions\n",
+            "name": "solc-version"
+        }
+    ],
+    "infos": [],
+    "parser": {
+        "id": "slither",
+        "mode": "solidity",
+        "version": "2022/11/14"
+    }
+}
