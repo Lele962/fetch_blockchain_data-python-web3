@@ -48,3 +48,10 @@ Overall, this script demonstrates how web scraping can be used to retrieve infor
 代码中将获取到的所有合约源代码保存到同一个目录下，因此如果存在同名文件可能会覆盖掉之前获取的文件。
 网络请求的代码中设置了一个访问超时时间，如果访问时间过长，会抛出超时异常。
 每次访问一个合约页面时，只会获取一个合约的源代码，因此对于每个合约，都需要单独保存到文件中。
+
+```bash
+./pre_scripts -t mythril -f samples/*.sol
+./pre_scripts -t slither -f samples/*.sol
+./reparse results
+./results2csv -p results > results.csv
+```
